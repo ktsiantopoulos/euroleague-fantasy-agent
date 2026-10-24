@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.47 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.44 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -66,19 +66,19 @@ learn: hold-out R7 MAE current 6.46 vs candidate 6.45 (w=(0.2, 0.3, 0.5), λ=0.3
 γ=1.0) → kept current
 
 ## top-100
-top-100: 0 roster previews fetched now
-# Top-25 managers — matchdays 1–7
+top-100: 525 roster previews fetched now
+# Top-100 managers — matchdays 1–7
 
-## Ownership in the top 25, matchday 7
+## Ownership in the top 100, matchday 7
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 9.3 | 84 |  | 4 |
-| Theo Maledon | G | RMB | 12.3 | 84 |  | 0 |
-| Andres Feliz | G | RMB | 8.2 | 76 |  | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 68 |  | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 64 |  | 4 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 56 |  | 1 |
+| Aliou Diarra | C | VIR | 9.3 | 91 |  | 7 |
+| Theo Maledon | G | RMB | 12.3 | 81 |  | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 73 |  | 34 |
+| Andres Feliz | G | RMB | 8.2 | 66 |  | 0 |
+| Tomas Masiulis | H | ZAL | 6.3 | 63 |  | 0 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 |  | 8 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  

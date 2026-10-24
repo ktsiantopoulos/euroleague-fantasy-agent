@@ -2073,7 +2073,7 @@
   "face_path": null,
   "avg_pts": 14.23,
   "is_on_fire": false,
-  "popularity": 0.056,
+  "popularity": 0.055,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2178,7 +2178,7 @@
   "face_path": null,
   "avg_pts": 12.43,
   "is_on_fire": false,
-  "popularity": 0.008,
+  "popularity": 0.007,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4768,7 +4768,7 @@
   "face_path": null,
   "avg_pts": 15.6,
   "is_on_fire": true,
-  "popularity": 0.314,
+  "popularity": 0.315,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4803,7 +4803,7 @@
   "face_path": null,
   "avg_pts": 12.36,
   "is_on_fire": false,
-  "popularity": 0.031,
+  "popularity": 0.032,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -7778,7 +7778,7 @@
   "face_path": null,
   "avg_pts": 9.49,
   "is_on_fire": false,
-  "popularity": 0.129,
+  "popularity": 0.128,
   "position": {
    "id": 29,
    "name": "Forward"
