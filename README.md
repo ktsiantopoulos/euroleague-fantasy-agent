@@ -62,6 +62,12 @@ elfa reconcile                     # gate: platform pts == official PIR
 
 ## Dashboard
 
-`app/streamlit_app.py` — Streamlit app over the committed data (recommendation, what-if optimiser,
-projections, DvP, player pages, market, model health). Locally: `pip install -r requirements.txt && streamlit run app/streamlit_app.py`.
-Hosted on Streamlit Community Cloud from this repo (main branch, file `app/streamlit_app.py`).
+Two Streamlit apps share one page library (`app/pages_lib.py`) over the committed data:
+
+| app | file | pages | audience |
+|---|---|---|---|
+| **Fantasy Agent** (private) | `app/streamlit_app.py` | Recommendation, What-if optimiser + all scouting pages | me — shows my squad, credits, trades, pipeline log |
+| **Fantasy Scout** (shareable) | `app/scout_app.py` | Projections, Defence vs position, Player, Top 100 managers, Market & prices, Model health | anyone picking players — never loads my roster/team files |
+
+Locally: `pip install -r requirements.txt && streamlit run app/streamlit_app.py` (or `app/scout_app.py`).
+Both are hosted on Streamlit Community Cloud from this repo (main branch) as two separate apps, one per main file.
