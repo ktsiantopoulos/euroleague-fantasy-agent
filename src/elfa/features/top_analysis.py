@@ -54,18 +54,19 @@ def analyse(df: pd.DataFrame, market: list[dict] | None = None) -> str:
     last = df[df.matchday == mds[-1]]
     own = last.groupby(["player", "pos", "club"]).agg(teams=("team_id", "nunique"), field=("slot", lambda s: (s != "B").sum()),
                                                       captain=("captain", "sum"), price=("quotation", "mean")).reset_index()
-    own["own%"] = (100 * own.teams / n_teams).round(0)
+    own["own_pct"] = (100 * own.teams / n_teams).round(0)
     pop = {}
     if market:
         pop = {f"{m.get('first_name','')} {m.get('last_name','')}".strip(): m.get("popularity") for m in market}
-        own["global%"] = own.player.map(lambda n: round(100 * (pop.get(n) or 0)))
-        own["edge"] = own["own%"] - own["global%"]
+        own["global_pct"] = own.player.map(lambda n: round(100 * (pop.get(n) or 0)))
+        own["edge"] = own["own_pct"] - own["global_pct"]
+    own.to_csv(PROCESSED / "top_ownership.csv", index=False)
     own = own.sort_values("teams", ascending=False)
     lines += [f"## Ownership in the top {n_teams}, matchday {mds[-1]}", "",
               "| player | pos | club | price | top own% | global% | captain # |", "|---|---|---|---|---|---|---|"]
     for r in own.head(20).itertuples():
-        g = getattr(r, "global%", "")
-        lines.append(f"| {r.player} | {r.pos[0]} | {r.club} | {r.price:.1f} | {r._8:.0f} | {g} | {int(r.captain)} |")
+        g = getattr(r, "global_pct", "")
+        lines.append(f"| {r.player} | {r.pos[0]} | {r.club} | {r.price:.1f} | {r.own_pct:.0f} | {g} | {int(r.captain)} |")
     if "edge" in own:
         lines += ["", "**Most over-owned by the elite vs the crowd** (where their edge is): " +
                   ", ".join(f"{r.player} (+{r.edge:.0f} pp)" for r in own.sort_values("edge", ascending=False).head(8).itertuples())]

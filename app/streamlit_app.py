@@ -78,7 +78,7 @@ st.caption(f"{status['deadline']}  ·  {status['generated']}  ·  last run: {sta
 
 page = st.sidebar.radio(
     "Page",
-    ["Recommendation", "What-if optimiser", "Projections", "Defence vs position", "Player", "Market & prices", "Model health"],
+    ["Recommendation", "What-if optimiser", "Projections", "Defence vs position", "Player", "Top 100 managers", "Market & prices", "Model health"],
 )
 
 # ------------------------------------------------------------------------------------------
@@ -218,6 +218,30 @@ elif page == "Player":
             ph = prices[prices.player_id == row.platform_id][["matchday", "quotation", "avg_pts", "popularity"]]
             st.subheader("Price log")
             st.dataframe(ph, hide_index=True)
+
+# ------------------------------------------------------------------------------------------
+elif page == "Top 100 managers":
+    own = _csv("top_ownership.csv")
+    rost = D.load_csv("top_rosters.csv", dtype={"player_id": str})
+    ins = (D.PROCESSED / "top_insights.md")
+    if own.empty or rost.empty:
+        st.warning("Top-100 crawl not run yet.")
+    else:
+        st.subheader("Elite ownership vs the crowd")
+        if "global_pct" in own:
+            ch = alt.Chart(own[own.teams >= 5]).mark_circle(size=80).encode(
+                x=alt.X("global_pct", title="global ownership %"), y=alt.Y("own_pct", title="top-100 ownership %"),
+                color="pos", tooltip=["player", "club", "price", "own_pct", "global_pct", "captain"]).interactive().properties(height=380)
+            st.altair_chart(ch, width="stretch")
+        st.dataframe(own.head(40), width="stretch", hide_index=True)
+        st.subheader("Ownership over time (top 100)")
+        trend = rost.groupby(["matchday", "player"]).team_id.nunique().reset_index(name="teams")
+        top_players = trend.groupby("player").teams.max().nlargest(12).index
+        st.altair_chart(alt.Chart(trend[trend.player.isin(top_players)]).mark_line(point=True).encode(
+            x="matchday:O", y="teams:Q", color="player:N", tooltip=["player", "matchday", "teams"]).properties(height=360), width="stretch")
+        if ins.exists():
+            with st.expander("Full insights"):
+                st.markdown(ins.read_text(encoding="utf-8"))
 
 # ------------------------------------------------------------------------------------------
 elif page == "Market & prices":

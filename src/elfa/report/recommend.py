@@ -18,14 +18,16 @@ from elfa.model.teams import load_schedule, team_ratings, upcoming_rounds
 
 
 def _fmt_squad(sq: pd.DataFrame) -> str:
-    cols = ["slot", "name", "pos", "team", "quotation", "nights", "md_pts", "md_p90", "why"]
+    cols = ["slot", "name", "pos", "team", "quotation", "nights", "md_pts", "md_p90", "elite_own", "why"]
     sq = sq.copy()
     slot_names = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
     sq["slot"] = sq.role.map(slot_names)
     sq["nights"] = sq.games_json.map(lambda j: "/".join(f"T{g['turn']}" for g in json.loads(j)) if isinstance(j, str) else "")
     sq["name"] = sq.apply(lambda r: f"**{r['name']}** (C)" if r.captain else r["name"], axis=1)
     sq["why"] = sq.apply(lambda r: (r["why"] + (f" · ⚠ {r['flags']}" if r["flags"] and r["flags"] != "coach" else "")), axis=1)
-    sq = sq[cols].rename(columns={"quotation": "price", "md_pts": "exp pts", "md_p90": "p90", "why": "justification"})
+    if "elite_own" not in sq:
+        sq["elite_own"] = 0
+    sq = sq[cols].rename(columns={"quotation": "price", "md_pts": "exp pts", "md_p90": "p90", "elite_own": "top100 own%", "why": "justification"})
     head = "| " + " | ".join(sq.columns) + " |\n|" + "---|" * len(sq.columns)
     body = "\n".join("| " + " | ".join(str(v) for v in row) + " |" for row in sq.itertuples(index=False))
     return head + "\n" + body
@@ -67,6 +69,12 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
 
     odds = fetch_odds(schedule, odds_dir())
     proj = project(market, roster_ids, pg, player_map, team_map, dvp, ratings, horizon, odds, params)
+    own_fp = PROCESSED / "top_ownership.csv"
+    if own_fp.exists():
+        own = pd.read_csv(own_fp)
+        proj["elite_own"] = proj.name.map(dict(zip(own.player, own.own_pct))).fillna(0).astype(int)
+    else:
+        proj["elite_own"] = 0
     proj.to_csv(PROCESSED / f"projection_md{md_number:02d}.csv", index=False)
 
     hold = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=True)
@@ -117,7 +125,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     cand = proj[(~proj.in_roster) & (proj.games_md > 0) & (proj.pos != "Head Coach")].sort_values("value", ascending=False)
     for pos_ in ("Guard", "Forward", "Center"):
         top = cand[cand.pos == pos_].head(5)
-        lines.append(f"- {pos_}: " + "; ".join(f"{r.name} {r.team} {r.quotation} → {r.md_pts} ({r.flags or 'ok'})" for r in top.itertuples()))
+        lines.append(f"- {pos_}: " + "; ".join(f"{r.name} {r.team} {r.quotation} → {r.md_pts} (top100 {r.elite_own}%{', ' + r.flags if r.flags else ''})" for r in top.itertuples()))
     lines += [
         "",
         "## Flags",

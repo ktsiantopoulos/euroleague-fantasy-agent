@@ -4,26 +4,26 @@
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 9.3 | 91 |  | 7 |
-| Theo Maledon | G | RMB | 12.3 | 81 |  | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 73 |  | 34 |
-| Andres Feliz | G | RMB | 8.2 | 66 |  | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 63 |  | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 |  | 8 |
-| Arijan Lakic | F | PAR | 4.0 | 40 |  | 0 |
-| Elijah Bryant | G | HTA | 17.4 | 39 |  | 0 |
-| TJ Shorts | G | VBC | 15.5 | 35 |  | 15 |
-| Collin Malcolm | F | EFS | 8.7 | 34 |  | 0 |
-| Zeljko Obradovic | H | PAO | 11.1 | 29 |  | 0 |
-| Yam Madar | G | MTA | 10.3 | 29 |  | 0 |
-| Kevarrius Hayes | C | PAR | 7.5 | 27 |  | 0 |
-| Carlik Jones | G | PAR | 14.2 | 26 |  | 12 |
-| Zach Leday | F | HTA | 13.5 | 20 |  | 20 |
-| Kostas Papanikolaou | F | OLY | 4.2 | 20 |  | 0 |
-| Dejan Davidovac | F | CZV | 4.6 | 19 |  | 0 |
-| Edwin Jackson | F | ASV | 4.5 | 17 |  | 0 |
-| Konstantinos Mitoglou | F | PAO | 6.2 | 16 |  | 0 |
-| Matthew Strazel | G | EFS | 10.5 | 16 |  | 0 |
+| Aliou Diarra | C | VIR | 9.3 | 91 | 37 | 7 |
+| Theo Maledon | G | RMB | 12.3 | 81 | 38 | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 73 | 44 | 34 |
+| Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
+| Tomas Masiulis | H | ZAL | 6.3 | 63 | 22 | 0 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 11 | 8 |
+| Arijan Lakic | F | PAR | 4.0 | 40 | 28 | 0 |
+| Elijah Bryant | G | HTA | 17.4 | 39 | 16 | 0 |
+| TJ Shorts | G | VBC | 15.5 | 35 | 15 | 15 |
+| Collin Malcolm | F | EFS | 8.7 | 34 | 7 | 0 |
+| Zeljko Obradovic | H | PAO | 11.1 | 29 | 16 | 0 |
+| Yam Madar | G | MTA | 10.3 | 29 | 14 | 0 |
+| Kevarrius Hayes | C | PAR | 7.5 | 27 | 9 | 0 |
+| Carlik Jones | G | PAR | 14.2 | 26 | 23 | 12 |
+| Zach Leday | F | HTA | 13.5 | 20 | 8 | 20 |
+| Kostas Papanikolaou | F | OLY | 4.2 | 20 | 17 | 0 |
+| Dejan Davidovac | F | CZV | 4.6 | 19 | 12 | 0 |
+| Edwin Jackson | F | ASV | 4.5 | 17 | 9 | 0 |
+| Konstantinos Mitoglou | F | PAO | 6.2 | 16 | 13 | 0 |
+| Matthew Strazel | G | EFS | 10.5 | 16 | 4 | 0 |
 
 **Most over-owned by the elite vs the crowd** (where their edge is): Aliou Diarra (+54 pp), Theo Maledon (+43 pp), Tomas Masiulis (+41 pp), Andres Feliz (+34 pp), Mfiondu Kabengele (+33 pp), Sasha Vezenkov (+29 pp), Collin Malcolm (+27 pp), Elijah Bryant (+23 pp)
 
