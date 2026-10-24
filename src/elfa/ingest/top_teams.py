@@ -24,16 +24,14 @@ def top_dir(tid: int) -> Path:
 
 def standings(client: FantakingClient, tid: int = GLOBAL_TOURNAMENT, n: int = 100) -> list[dict]:
     out: list[dict] = []
-    page = 1
+    cursor = None
     while len(out) < n:
-        j = client.get(f"/api/v1/tournaments/{tid}/standings", page=page, per_page=100)
+        j = client.get(f"/api/v1/tournaments/{tid}/standings", **({"cursor": cursor} if cursor else {}))
         data = j.get("data", [])
         out.extend(data)
-        meta = j.get("meta") or {}
-        last = meta.get("last_page")
-        if not data or (last is not None and page >= int(last)) or (last is None and len(data) < 25):
+        cursor = (j.get("meta") or {}).get("next_cursor")   # cursor pagination, 25 per page
+        if not data or not cursor:
             break
-        page += 1
     out = out[:n]
     (top_dir(tid) / "standings.json").write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
     return out
