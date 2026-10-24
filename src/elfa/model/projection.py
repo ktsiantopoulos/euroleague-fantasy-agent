@@ -105,6 +105,7 @@ def project(
         code = p2o.get(pid)
         f = form.loc[code] if isinstance(code, str) and code in form.index else None
         flags = []
+        why = []
         md_pts, md_var, horizon_pts, games_md = 0.0, 0.0, 0.0, 0
         min_hat = rate_hat = 0.0
         if pos == "Head Coach":
@@ -119,6 +120,7 @@ def project(
                         md_pts += ev
                         md_var += 12.0 ** 2
                         games_md += 1
+                        why.append(f"{'vs' if home else '@'} {opp}: margin {mu:+.0f}, win {pw:.0%} → EV {ev:+.1f}")
             flags.append("coach")
         else:
             if f is None:
@@ -141,11 +143,16 @@ def project(
                     fp = prob_play * pir * (1 + WIN_BONUS * pw)
                     horizon_pts += p.horizon_weights[h_i] * fp
                     if h_i == 0:
+                        dv = dvp_idx.get((opp, pos), 0.0)
+                        why.append(f"{'vs' if home else '@'} {opp} (DvP {dv:+.1f}, win {pw:.0%}) → {fp:.1f}")
                         md_pts += fp
                         md_var += (prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)
                         games_md += 1
         if games_md == 0 and pos != "Head Coach":
             flags.append("no game this matchday")
+        if f is not None and pos != "Head Coach":
+            trend = "starter" if f.last_starter else "bench"
+            why.insert(0, f"{min_hat:.0f} min proj ({trend}, last {f.last_min:.0f}), {rate_hat:.2f} PIR/min over {int(f.n_games)} g")
         rows.append(
             {
                 "platform_id": pid, "name": f"{m.get('first_name','')} {m.get('last_name','')}".strip(),
@@ -156,7 +163,7 @@ def project(
                 "md_p90": round(md_pts + 1.2816 * float(np.sqrt(md_var)), 2),
                 "horizon_pts": round(horizon_pts, 2),
                 "value": round(md_pts / float(m["quotation"]), 3) if float(m["quotation"]) > 0 else 0.0,
-                "in_roster": pid in roster_ids, "flags": "; ".join(flags),
+                "in_roster": pid in roster_ids, "flags": "; ".join(flags), "why": " · ".join(why),
             }
         )
     return pd.DataFrame(rows)

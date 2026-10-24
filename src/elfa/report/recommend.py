@@ -17,10 +17,13 @@ from elfa.model.teams import load_schedule, team_ratings, upcoming_rounds
 
 
 def _fmt_squad(sq: pd.DataFrame) -> str:
-    cols = ["role", "name", "pos", "team", "quotation", "prob_play", "min_hat", "games_md", "md_pts", "md_p90", "flags"]
+    cols = ["slot", "name", "pos", "team", "quotation", "md_pts", "md_p90", "why"]
     sq = sq.copy()
+    slot_names = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
+    sq["slot"] = sq.role.map(slot_names)
     sq["name"] = sq.apply(lambda r: f"**{r['name']}** (C)" if r.captain else r["name"], axis=1)
-    sq = sq[cols].rename(columns={"quotation": "price", "prob_play": "p_play", "min_hat": "min", "games_md": "g", "md_pts": "exp", "md_p90": "p90"})
+    sq["why"] = sq.apply(lambda r: (r["why"] + (f" · ⚠ {r['flags']}" if r["flags"] and r["flags"] != "coach" else "")), axis=1)
+    sq = sq[cols].rename(columns={"quotation": "price", "md_pts": "exp pts", "md_p90": "p90", "why": "justification"})
     head = "| " + " | ".join(sq.columns) + " |\n|" + "---|" * len(sq.columns)
     body = "\n".join("| " + " | ".join(str(v) for v in row) + " |" for row in sq.itertuples(index=False))
     return head + "\n" + body

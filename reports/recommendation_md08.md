@@ -1,42 +1,42 @@
 # Recommendation — matchday 8 (R8, R9)
 
-Generated 2026-10-24 17:09 UTC · team **UnderTakers86** · budget 105.9 · trades left 4 · odds OFF (model margins)
+Generated 2026-10-24 17:16 UTC · team **UnderTakers86** · budget 105.9 · trades left 4 · odds OFF (model margins)
 
 ## Decision
-- Current squad, best lineup: **276.4 pts** expected this matchday.
-- With trades: **315.8 pts** expected (+39.4), cost 105.8/105.9.
-- Trades: OUT Tomas Masiulis, Arijan Lakic, Mfiondu Kabengele, Kendrick Nunn → IN TJ Shorts, Semi Ojeleye, Kevarrius Hayes, Ibon Navarro
+- Current squad, best lineup: **276.0 pts** expected this matchday.
+- With trades: **314.2 pts** expected (+38.2), cost 105.8/105.9.
+- Trades: OUT Arijan Lakic, Tomas Masiulis, Mfiondu Kabengele, Kendrick Nunn → IN TJ Shorts, Semi Ojeleye, Kevarrius Hayes, Ibon Navarro
 - Captain **Sasha Vezenkov**, coach **Ibon Navarro**.
 
 ## Recommended squad (with trades)
-| role | name | pos | team | price | p_play | min | g | exp | p90 | flags |
-|---|---|---|---|---|---|---|---|---|---|---|
-| starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.4 | 1.0 | 28.0 | 2 | 45.8 | 61.55 |  |
-| starter | TJ Shorts | Guard | VBC | 16.3 | 1.0 | 22.8 | 2 | 36.81 | 48.57 |  |
-| starter | Theo Maledon | Guard | RMB | 11.9 | 1.0 | 22.3 | 2 | 36.0 | 53.72 |  |
-| starter | Aliou Diarra | Center | VIR | 9.8 | 1.0 | 17.1 | 2 | 33.98 | 45.8 |  |
-| starter | Andres Feliz | Guard | RMB | 8.6 | 1.0 | 19.1 | 2 | 27.85 | 44.75 |  |
-| sixth | Semi Ojeleye | Forward | CZV | 9.0 | 1.0 | 26.4 | 2 | 31.57 | 40.87 |  |
-| bench | Mbaye Ndiaye | Forward | OLY | 8.9 | 1.0 | 15.7 | 2 | 24.1 | 42.82 |  |
-| bench | Kevarrius Hayes | Center | PAR | 8.1 | 1.0 | 23.2 | 2 | 23.36 | 36.18 |  |
-| bench | Kostas Papanikolaou | Forward | OLY | 4.1 | 1.0 | 19.5 | 2 | 13.55 | 23.8 |  |
-| bench | Berk Ugurlu | Guard | BJK | 4.0 | 1.0 | 14.7 | 2 | 7.25 | 16.64 |  |
-| coach | Ibon Navarro | Head Coach | CZV | 6.7 | 1.0 | 0.0 | 2 | 23.89 | 45.64 | coach |
+| slot | name | pos | team | price | exp pts | p90 | justification |
+|---|---|---|---|---|---|---|---|
+| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.4 | 45.8 | 61.55 | 28 min proj (starter, last 34), 0.73 PIR/min over 7 g · @ BES (DvP +2.8, win 55%) → 22.1 · vs MIL (DvP +1.6, win 83%) → 23.7 |
+| Starter | TJ Shorts | Guard | VBC | 16.3 | 36.81 | 48.57 | 23 min proj (starter, last 24), 0.77 PIR/min over 7 g · vs ULK (DvP -3.0, win 57%) → 18.6 · @ BAR (DvP -0.1, win 50%) → 18.2 |
+| Starter | Theo Maledon | Guard | RMB | 11.9 | 36.0 | 53.72 | 22 min proj (starter, last 24), 0.77 PIR/min over 7 g · @ BAS (DvP +2.4, win 66%) → 18.5 · vs ULK (DvP -3.0, win 54%) → 17.5 |
+| Starter | Aliou Diarra | Center | VIR | 9.8 | 33.98 | 45.8 | 17 min proj (bench, last 19), 0.89 PIR/min over 7 g · vs ZAL (DvP -1.0, win 61%) → 16.3 · vs BES (DvP +1.1, win 62%) → 17.7 |
+| Starter | Semi Ojeleye | Forward | CZV | 9.0 | 31.57 | 40.87 | 26 min proj (starter, last 34), 0.51 PIR/min over 7 g · vs TEL (DvP +3.7, win 76%) → 16.5 · vs MUN (DvP -0.1, win 76%) → 15.1 |
+| 6th man | Andres Feliz | Guard | RMB | 8.6 | 27.85 | 44.75 | 19 min proj (starter, last 21), 0.69 PIR/min over 7 g · @ BAS (DvP +2.4, win 66%) → 14.3 · vs ULK (DvP -3.0, win 54%) → 13.5 |
+| Bench (50%) | Mbaye Ndiaye | Forward | OLY | 8.9 | 24.1 | 42.82 | 16 min proj (bench, last 8), 0.68 PIR/min over 7 g · @ BES (DvP +2.8, win 55%) → 11.7 · vs MIL (DvP +1.6, win 83%) → 12.4 |
+| Bench (50%) | Kevarrius Hayes | Center | PAR | 8.1 | 23.36 | 36.18 | 23 min proj (bench, last 33), 0.51 PIR/min over 7 g · @ ASV (DvP +0.7, win 56%) → 12.4 · @ ZAL (DvP -1.0, win 41%) → 10.9 |
+| Bench (50%) | Kostas Papanikolaou | Forward | OLY | 4.1 | 13.55 | 23.8 | 19 min proj (starter, last 28), 0.29 PIR/min over 7 g · @ BES (DvP +2.8, win 55%) → 6.6 · vs MIL (DvP +1.6, win 83%) → 6.9 |
+| Bench (50%) | Berk Ugurlu | Guard | BJK | 4.0 | 7.25 | 16.64 | 15 min proj (bench, last 19), 0.26 PIR/min over 7 g · vs OLY (DvP -1.3, win 45%) → 4.0 · @ VIR (DvP -3.6, win 38%) → 3.3 |
+| Coach | Ibon Navarro | Head Coach | CZV | 6.7 | 22.31 | 44.06 | vs TEL: margin +8, win 76% → EV +11.1 · vs MUN: margin +9, win 76% → EV +11.2 |
 
 ## Current squad, best lineup (no trades)
-| role | name | pos | team | price | p_play | min | g | exp | p90 | flags |
-|---|---|---|---|---|---|---|---|---|---|---|
-| starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.4 | 1.0 | 28.0 | 2 | 45.8 | 61.55 |  |
-| starter | Theo Maledon | Guard | RMB | 11.9 | 1.0 | 22.3 | 2 | 36.0 | 53.72 |  |
-| starter | Mfiondu Kabengele | Center | DUB | 15.6 | 1.0 | 21.7 | 2 | 35.85 | 48.78 |  |
-| starter | Aliou Diarra | Center | VIR | 9.8 | 1.0 | 17.1 | 2 | 33.98 | 45.8 |  |
-| starter | Mbaye Ndiaye | Forward | OLY | 8.9 | 1.0 | 15.7 | 2 | 24.1 | 42.82 |  |
-| sixth | Andres Feliz | Guard | RMB | 8.6 | 1.0 | 19.1 | 2 | 27.85 | 44.75 |  |
-| bench | Kostas Papanikolaou | Forward | OLY | 4.1 | 1.0 | 19.5 | 2 | 13.55 | 23.8 |  |
-| bench | Kendrick Nunn | Guard | PAO | 13.7 | 1.0 | 13.1 | 2 | 13.05 | 27.07 | only 1 game(s) |
-| bench | Arijan Lakic | Forward | PAR | 4.0 | 1.0 | 15.0 | 2 | 7.78 | 16.05 |  |
-| bench | Berk Ugurlu | Guard | BJK | 4.0 | 1.0 | 14.7 | 2 | 7.25 | 16.64 |  |
-| coach | Tomas Masiulis | Head Coach | ZAL | 6.6 | 1.0 | 0.0 | 2 | 6.22 | 27.96 | coach |
+| slot | name | pos | team | price | exp pts | p90 | justification |
+|---|---|---|---|---|---|---|---|
+| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.4 | 45.8 | 61.55 | 28 min proj (starter, last 34), 0.73 PIR/min over 7 g · @ BES (DvP +2.8, win 55%) → 22.1 · vs MIL (DvP +1.6, win 83%) → 23.7 |
+| Starter | Theo Maledon | Guard | RMB | 11.9 | 36.0 | 53.72 | 22 min proj (starter, last 24), 0.77 PIR/min over 7 g · @ BAS (DvP +2.4, win 66%) → 18.5 · vs ULK (DvP -3.0, win 54%) → 17.5 |
+| Starter | Mfiondu Kabengele | Center | DUB | 15.6 | 35.85 | 48.78 | 22 min proj (starter, last 26), 0.72 PIR/min over 7 g · vs PRS (DvP +0.8, win 75%) → 17.7 · vs HTA (DvP +2.3, win 56%) → 18.2 |
+| Starter | Aliou Diarra | Center | VIR | 9.8 | 33.98 | 45.8 | 17 min proj (bench, last 19), 0.89 PIR/min over 7 g · vs ZAL (DvP -1.0, win 61%) → 16.3 · vs BES (DvP +1.1, win 62%) → 17.7 |
+| Starter | Mbaye Ndiaye | Forward | OLY | 8.9 | 24.1 | 42.82 | 16 min proj (bench, last 8), 0.68 PIR/min over 7 g · @ BES (DvP +2.8, win 55%) → 11.7 · vs MIL (DvP +1.6, win 83%) → 12.4 |
+| 6th man | Andres Feliz | Guard | RMB | 8.6 | 27.85 | 44.75 | 19 min proj (starter, last 21), 0.69 PIR/min over 7 g · @ BAS (DvP +2.4, win 66%) → 14.3 · vs ULK (DvP -3.0, win 54%) → 13.5 |
+| Bench (50%) | Kostas Papanikolaou | Forward | OLY | 4.1 | 13.55 | 23.8 | 19 min proj (starter, last 28), 0.29 PIR/min over 7 g · @ BES (DvP +2.8, win 55%) → 6.6 · vs MIL (DvP +1.6, win 83%) → 6.9 |
+| Bench (50%) | Kendrick Nunn | Guard | PAO | 13.7 | 13.05 | 27.07 | 13 min proj (bench, last 20), 0.44 PIR/min over 1 g · vs MIL (DvP +4.0, win 90%) → 7.1 · @ IST (DvP +0.4, win 67%) → 6.0 · ⚠ only 1 game(s) |
+| Bench (50%) | Arijan Lakic | Forward | PAR | 4.0 | 7.78 | 16.05 | 15 min proj (bench, last 21), 0.22 PIR/min over 7 g · @ ASV (DvP +5.0, win 56%) → 4.4 · @ ZAL (DvP +0.4, win 41%) → 3.3 |
+| Bench (50%) | Berk Ugurlu | Guard | BJK | 4.0 | 7.25 | 16.64 | 15 min proj (bench, last 19), 0.26 PIR/min over 7 g · vs OLY (DvP -1.3, win 45%) → 4.0 · @ VIR (DvP -3.6, win 38%) → 3.3 |
+| Coach | Tomas Masiulis | Head Coach | ZAL | 6.6 | 5.76 | 27.51 | @ VIR: margin -3, win 39% → EV +0.0 · vs PAR: margin +3, win 59% → EV +5.7 |
 
 ## Defence vs position (this season, shrunk to league mean; +PIR = concedes more)
 ```
@@ -57,7 +57,7 @@ Center   leak PIR to: MUN (+3.8, n=7), HTA (+2.3, n=7), DUB (+1.6, n=7), BAS (+1
 - Kendrick Nunn: only 1 game(s)
 
 ## Assumptions still to confirm
-- Coach: win by 21+ assumed +30 (not yet observed).
+- Coach: win by 21+ set to +25 (user-provided; not yet observed in API data).
 - Starting five constrained to 1–3 players per position (covers the platform's formations).
 - Price-change term inactive (μ = 0) until the price log has two or more matchdays.
 - Optimiser status: Optimal / Optimal.
