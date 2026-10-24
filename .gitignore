@@ -15,7 +15,8 @@ dist/
 
 # data (raw/processed are reproducible; prices are committed)
 data/raw/
-data/processed/
+data/processed/*
+!data/processed/*.csv
 notebooks/.ipynb_checkpoints/
 
 # os / ide

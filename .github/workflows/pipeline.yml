@@ -1,0 +1,91 @@
+name: pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      history:
+        description: "Also pull per-player fantasy-pts history (slow, ~15 min)"
+        type: boolean
+        default: false
+  schedule:
+    # Sundays 06:00 UTC and Tuesdays 06:00 UTC — refresh after each round; deadline runs come later
+    - cron: "0 6 * * 0,2"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      FANTAKING_TOKEN: ${{ secrets.FANTAKING_TOKEN }}
+      FANTASY_TEAM_ID: ${{ vars.FANTASY_TEAM_ID || '2787922' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e ".[dev]"
+
+      - name: Restore raw cache
+        uses: actions/cache@v4
+        with:
+          path: data/raw
+          key: raw-${{ github.run_id }}
+          restore-keys: raw-
+
+      - name: Pull official box scores
+        run: |
+          mkdir -p reports
+          echo "## pull-official" | tee reports/latest.md
+          elfa pull-official 2>&1 | tee -a reports/latest.md
+
+      - name: Pull platform market and team
+        if: env.FANTAKING_TOKEN != ''
+        run: |
+          echo -e "\n## pull-platform" | tee -a reports/latest.md
+          if [ "${{ inputs.history }}" = "true" ]; then
+            elfa pull-platform --history 2>&1 | tee -a reports/latest.md
+          else
+            elfa pull-platform 2>&1 | tee -a reports/latest.md
+          fi
+
+      - name: Platform step skipped
+        if: env.FANTAKING_TOKEN == ''
+        run: echo -e "\n## pull-platform\nSKIPPED - add FANTAKING_TOKEN as a repository secret" | tee -a reports/latest.md
+
+      - name: Build features and maps
+        if: env.FANTAKING_TOKEN != ''
+        run: |
+          echo -e "\n## build" | tee -a reports/latest.md
+          elfa build 2>&1 | tee -a reports/latest.md
+
+      - name: Reconcile (Phase 0 gate)
+        if: env.FANTAKING_TOKEN != ''
+        run: |
+          echo -e "\n## reconcile" | tee -a reports/latest.md
+          elfa reconcile 2>&1 | tee -a reports/latest.md || true
+
+      - name: Job summary
+        if: always()
+        run: |
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          cat reports/latest.md >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "elfa-bot"
+          git config user.email "elfa-bot@users.noreply.github.com"
+          git add -A reports data/prices data/processed/*.csv 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "pipeline: $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_number }}"
+          git push
