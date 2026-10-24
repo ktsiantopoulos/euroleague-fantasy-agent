@@ -160,8 +160,6 @@ jobs:
           git config user.name "elfa-bot"
           git config user.email "elfa-bot@users.noreply.github.com"
           git add -A reports data/prices data/raw
-          ls data/processed/*.csv >/dev/null 2>&1 && git add data/processed/*.csv
-          ls data/processed/*.md >/dev/null 2>&1 && git add data/processed/*.md
-          ls data/processed/*.json >/dev/null 2>&1 && git add data/processed/*.json
+          git add -f data/processed/*.csv data/processed/*.md data/processed/*.json 2>/dev/null || true
           git diff --cached --quiet || git commit -m "pipeline: $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_number }}"
           git push
