@@ -357,6 +357,7 @@ def page_player(proj: pd.DataFrame, mode: str):
         st.dataframe(hist[["round", "game", "minutes", "starter", "pts", "reb", "ast", "stl", "blk", "tov", "pf", "fd", "pir"]].round(1), width="stretch", hide_index=True)
     else:
         st.info("No box-score rows matched this player this season.")
+    st.caption("Game log: 2026-27 season only (earlier seasons are not used anywhere in the model).")
     st.subheader("Upcoming games in this matchday")
     st.table(pd.DataFrame(row.games))
     pr = prices()

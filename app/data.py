@@ -59,21 +59,26 @@ def load_csv(name: str, **kw) -> pd.DataFrame:
 
 
 def load_player_games() -> pd.DataFrame:
-    """Rebuild from the committed raw box scores (the parquet itself is not committed)."""
+    """Current-season box scores only (rebuilt from the committed raw files; the parquet is not committed).
+
+    Older seasons may exist under data/raw (kept solely so players without a game yet can be identity-mapped);
+    they are never used for statistics — the model and every page filter to the latest season.
+    """
     pq = PROCESSED / "player_games.parquet"
     seasons = sorted(p.name for p in (RAW / "euroleague").glob("E*") if (p / "games.json").exists())
     if not seasons:
         return pd.DataFrame()
+    df = pd.DataFrame()
     if pq.exists():
         try:
             df = pd.read_parquet(pq)
-            if len(df):
-                return df
         except Exception:  # noqa: BLE001, S110 - fall through to a rebuild from raw
             pass
-    from elfa.features.boxscores import build_player_games
+    if df.empty:
+        from elfa.features.boxscores import build_player_games
 
-    return build_player_games(seasons)
+        df = build_player_games(seasons[-1:])
+    return df[df.season == df.season.max()].reset_index(drop=True) if "season" in df else df
 
 
 def load_schedule() -> list[dict]:
