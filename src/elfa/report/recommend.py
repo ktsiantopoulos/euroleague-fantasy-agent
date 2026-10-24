@@ -102,7 +102,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         _flags_section(proj),
         "",
         "## Assumptions still to confirm",
-        "- Coach: win by 21+ assumed +30 (not yet observed).",
+        "- Coach: win by 21+ set to +25 (user-provided; not yet observed in API data).",
         "- Starting five constrained to 1–3 players per position (covers the platform's formations).",
         "- Price-change term inactive (μ = 0) until the price log has two or more matchdays.",
         f"- Optimiser status: {best.status} / {hold.status}.",

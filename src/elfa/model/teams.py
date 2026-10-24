@@ -18,8 +18,8 @@ SIGMA = 12.0         # std dev of final margin
 SHRINK_GAMES = 6     # net rating shrinkage toward 0
 
 # coach scoring buckets (verified: win 1-10 +10, win 11-20 +20, loss 1-10 -5, loss 11-20 -10, loss 21+ -20)
-COACH_BUCKETS = [(-999, -20.5, -20), (-20.5, -10.5, -10), (-10.5, 0, -5), (0, 10.5, 10), (10.5, 20.5, 20), (20.5, 999, 30)]
-# NOTE: win by 21+ = +30 is an assumption (not yet observed); the rest are verified.
+COACH_BUCKETS = [(-999, -20.5, -20), (-20.5, -10.5, -10), (-10.5, 0, -5), (0, 10.5, 10), (10.5, 20.5, 20), (20.5, 999, 25)]
+# NOTE: win by 21+ = +25 per the user (not yet observed in API data); the rest are verified from the API.
 
 
 def _phi(x: float) -> float:

@@ -46,7 +46,7 @@
 Base = PIR: `pts +1, reb +1, ast +1, stl +1, blk +1, fouls drawn +1, tov −1, pf −1, fg_missed −1, ft_missed −1, blocks received −1`
 (official API `valuation` matched our recomputation in 11,218 of 11,218 rows).
 **Win bonus: +10% of |PIR| when the player's team wins** (e.g. 19 → 20.9; −5 → −4.5). DNP = 0.
-Coach scoring and bench rule still to verify.
+Coach: margin buckets win 1-10 +10, 11-20 +20, 21+ +25 (user); loss 1-10 −5, 11-20 −10, 21+ −20. Bench slots score 50%; 6th man 100%; no auto-substitution.
 
 ## 4. Official stats API (public, no auth)
 - Base: `https://api-live.euroleague.net/v3`
