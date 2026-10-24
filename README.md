@@ -59,3 +59,9 @@ elfa pull-platform --history       # market + roster + price log; --history adds
 elfa build                         # player_games.parquet, team_map.csv, player_map.csv
 elfa reconcile                     # gate: platform pts == official PIR
 ```
+
+## Dashboard
+
+`app/streamlit_app.py` — Streamlit app over the committed data (recommendation, what-if optimiser,
+projections, DvP, player pages, market, model health). Locally: `pip install -r requirements.txt && streamlit run app/streamlit_app.py`.
+Hosted on Streamlit Community Cloud from this repo (main branch, file `app/streamlit_app.py`).
