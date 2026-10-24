@@ -1,0 +1,68 @@
+{
+ "matchday": {
+  "id": 1529,
+  "number": 2
+ },
+ "round": {
+  "id": 2527,
+  "number": 2
+ },
+ "match": {
+  "id": 11944,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-30T18:15:00.000000Z",
+  "home_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 102
+  },
+  "away_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 79
+  }
+ },
+ "fantasy_pts": null,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

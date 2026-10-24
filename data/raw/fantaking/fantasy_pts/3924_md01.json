@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2525,
+  "number": 2
+ },
+ "match": {
+  "id": 11934,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-25T18:45:00.000000Z",
+  "home_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 92
+  },
+  "away_team": {
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL",
+   "score": 76
+  }
+ },
+ "fantasy_pts": -10,
+ "stats_items": [
+  {
+   "id": 207,
+   "name": "loss_11-20",
+   "value": 1,
+   "fantasy_pts": -10
+  }
+ ],
+ "label": "opponent"
+}

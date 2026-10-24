@@ -1,0 +1,80 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2525,
+  "number": 2
+ },
+ "match": {
+  "id": 11933,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-25T17:45:00.000000Z",
+  "home_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 78
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 68
+  }
+ },
+ "fantasy_pts": 15.4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 12,
+   "fantasy_pts": 12
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 4,
+   "fantasy_pts": -4
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2535,
+  "number": 1
+ },
+ "match": {
+  "id": 11975,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-15T18:30:00.000000Z",
+  "home_team": {
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL",
+   "score": 97
+  },
+  "away_team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "score": 101
+  }
+ },
+ "fantasy_pts": 2.2,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

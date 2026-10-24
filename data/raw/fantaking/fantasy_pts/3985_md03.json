@@ -1,0 +1,44 @@
+{
+ "matchday": {
+  "id": 1530,
+  "number": 3
+ },
+ "round": {
+  "id": 2529,
+  "number": 2
+ },
+ "match": {
+  "id": 11950,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-02T18:00:00.000000Z",
+  "home_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 92
+  },
+  "away_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 105
+  }
+ },
+ "fantasy_pts": 3,
+ "stats_items": [
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  }
+ ],
+ "label": "opponent"
+}

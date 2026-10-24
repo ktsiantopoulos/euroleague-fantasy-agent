@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2533,
+  "number": 1
+ },
+ "match": {
+  "id": 11966,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-13T18:30:00.000000Z",
+  "home_team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "score": 79
+  },
+  "away_team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "score": 93
+  }
+ },
+ "fantasy_pts": 22,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 17,
+   "fantasy_pts": 17
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 4,
+   "fantasy_pts": -4
+  }
+ ],
+ "label": "opponent"
+}

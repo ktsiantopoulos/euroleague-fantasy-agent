@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2539,
+  "number": 3
+ },
+ "match": {
+  "id": 11994,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-23T18:15:00.000000Z",
+  "home_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 61
+  },
+  "away_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 64
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 202,
+   "name": "win_1-10",
+   "value": 1,
+   "fantasy_pts": 10
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2537,
+  "number": 1
+ },
+ "match": {
+  "id": 11985,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-21T16:00:00.000000Z",
+  "home_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 90
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 81
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

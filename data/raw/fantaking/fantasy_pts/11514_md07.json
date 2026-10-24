@@ -1,0 +1,68 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2539,
+  "number": 3
+ },
+ "match": {
+  "id": 11992,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-23T17:00:00.000000Z",
+  "home_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 105
+  },
+  "away_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 85
+  }
+ },
+ "fantasy_pts": 6,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 4,
+   "fantasy_pts": -4
+  }
+ ],
+ "label": "opponent"
+}

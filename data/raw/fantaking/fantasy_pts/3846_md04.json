@@ -1,0 +1,86 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2532,
+  "number": 3
+ },
+ "match": {
+  "id": 11964,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-09T18:15:00.000000Z",
+  "home_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 89
+  },
+  "away_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 66
+  }
+ },
+ "fantasy_pts": 7.7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 4,
+   "fantasy_pts": -4
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

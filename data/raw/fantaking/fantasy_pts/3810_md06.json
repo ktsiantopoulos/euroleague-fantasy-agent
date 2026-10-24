@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2535,
+  "number": 1
+ },
+ "match": {
+  "id": 11976,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-15T18:30:00.000000Z",
+  "home_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 88
+  },
+  "away_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 91
+  }
+ },
+ "fantasy_pts": 15.4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 11,
+   "fantasy_pts": 11
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

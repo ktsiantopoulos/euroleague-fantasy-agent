@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2525,
+  "number": 2
+ },
+ "match": {
+  "id": 11932,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-25T17:00:00.000000Z",
+  "home_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 94
+  },
+  "away_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 96
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

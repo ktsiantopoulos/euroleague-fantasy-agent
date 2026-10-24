@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2533,
+  "number": 1
+ },
+ "match": {
+  "id": 11968,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-13T18:30:00.000000Z",
+  "home_team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "score": 90
+  },
+  "away_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 87
+  }
+ },
+ "fantasy_pts": 9.9,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2531,
+  "number": 2
+ },
+ "match": {
+  "id": 11956,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-08T16:00:00.000000Z",
+  "home_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 97
+  },
+  "away_team": {
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL",
+   "score": 79
+  }
+ },
+ "fantasy_pts": 18.7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 13,
+   "fantasy_pts": 13
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

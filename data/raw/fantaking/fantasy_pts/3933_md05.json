@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2534,
+  "number": 2
+ },
+ "match": {
+  "id": 11974,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-14T18:45:00.000000Z",
+  "home_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 94
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 96
+  }
+ },
+ "fantasy_pts": 4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,86 @@
+{
+ "matchday": {
+  "id": 1530,
+  "number": 3
+ },
+ "round": {
+  "id": 2528,
+  "number": 1
+ },
+ "match": {
+  "id": 11945,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-01T18:00:00.000000Z",
+  "home_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 77
+  },
+  "away_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 72
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

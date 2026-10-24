@@ -1,0 +1,86 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2538,
+  "number": 2
+ },
+ "match": {
+  "id": 11990,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-22T18:45:00.000000Z",
+  "home_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 85
+  },
+  "away_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 82
+  }
+ },
+ "fantasy_pts": 23,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 22,
+   "fantasy_pts": 22
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 7,
+   "fantasy_pts": -7
+  }
+ ],
+ "label": "opponent"
+}

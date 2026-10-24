@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2531,
+  "number": 2
+ },
+ "match": {
+  "id": 11959,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-08T18:45:00.000000Z",
+  "home_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 86
+  },
+  "away_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 76
+  }
+ },
+ "fantasy_pts": 3.3,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 6,
+   "fantasy_pts": 6
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

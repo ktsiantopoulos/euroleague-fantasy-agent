@@ -55,3 +55,10 @@ official_min team_won  expected_pts   status
 20.083333    False          19.0 MISMATCH
        8808         4      014207         38           7.7           5.0     
 19.366667     True           5.5 MISMATCH
+
+## recommend
+- Starting five constrained to 1–3 players per position (covers the platform's 
+formations).
+- Price-change term inactive (μ = 0) until the price log has two or more 
+matchdays.
+- Optimiser status: Optimal / Optimal.

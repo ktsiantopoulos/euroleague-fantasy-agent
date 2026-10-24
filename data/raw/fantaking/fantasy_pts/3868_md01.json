@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2523,
+  "number": 1
+ },
+ "match": {
+  "id": 11931,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-24T18:15:00.000000Z",
+  "home_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 91
+  },
+  "away_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 72
+  }
+ },
+ "fantasy_pts": 20,
+ "stats_items": [
+  {
+   "id": 203,
+   "name": "win_11-20",
+   "value": 1,
+   "fantasy_pts": 20
+  }
+ ],
+ "label": "opponent"
+}

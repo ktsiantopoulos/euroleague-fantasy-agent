@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1530,
+  "number": 3
+ },
+ "round": {
+  "id": 2528,
+  "number": 1
+ },
+ "match": {
+  "id": 11948,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-01T18:45:00.000000Z",
+  "home_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 82
+  },
+  "away_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 78
+  }
+ },
+ "fantasy_pts": 7.7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

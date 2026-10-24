@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2534,
+  "number": 2
+ },
+ "match": {
+  "id": 11972,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-14T16:00:00.000000Z",
+  "home_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 100
+  },
+  "away_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 82
+  }
+ },
+ "fantasy_pts": -10,
+ "stats_items": [
+  {
+   "id": 207,
+   "name": "loss_11-20",
+   "value": 1,
+   "fantasy_pts": -10
+  }
+ ],
+ "label": "opponent"
+}

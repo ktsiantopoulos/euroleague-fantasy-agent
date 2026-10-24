@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2530,
+  "number": 1
+ },
+ "match": {
+  "id": 11955,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-07T18:45:00.000000Z",
+  "home_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 96
+  },
+  "away_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 98
+  }
+ },
+ "fantasy_pts": 27.5,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 19,
+   "fantasy_pts": 19
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

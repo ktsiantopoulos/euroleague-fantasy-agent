@@ -1,0 +1,44 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2531,
+  "number": 2
+ },
+ "match": {
+  "id": 11961,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-08T16:00:00.000000Z",
+  "home_team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "score": 58
+  },
+  "away_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 77
+  }
+ },
+ "fantasy_pts": -1,
+ "stats_items": [
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

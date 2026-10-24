@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1530,
+  "number": 3
+ },
+ "round": {
+  "id": 2529,
+  "number": 2
+ },
+ "match": {
+  "id": 11954,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-02T18:15:00.000000Z",
+  "home_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 90
+  },
+  "away_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 67
+  }
+ },
+ "fantasy_pts": 8,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

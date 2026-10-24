@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2532,
+  "number": 3
+ },
+ "match": {
+  "id": 11963,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-09T18:30:00.000000Z",
+  "home_team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "score": 81
+  },
+  "away_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 88
+  }
+ },
+ "fantasy_pts": -5,
+ "stats_items": [
+  {
+   "id": 206,
+   "name": "loss_1-10",
+   "value": 1,
+   "fantasy_pts": -5
+  }
+ ],
+ "label": "opponent"
+}

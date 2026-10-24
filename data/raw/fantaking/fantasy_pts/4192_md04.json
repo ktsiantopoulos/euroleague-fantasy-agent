@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2532,
+  "number": 3
+ },
+ "match": {
+  "id": 11962,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-09T18:30:00.000000Z",
+  "home_team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "score": 84
+  },
+  "away_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 92
+  }
+ },
+ "fantasy_pts": 1,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

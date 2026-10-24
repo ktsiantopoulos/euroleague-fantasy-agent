@@ -1,0 +1,68 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2523,
+  "number": 1
+ },
+ "match": {
+  "id": 11930,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-24T18:45:00.000000Z",
+  "home_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 84
+  },
+  "away_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 74
+  }
+ },
+ "fantasy_pts": 7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 6,
+   "fantasy_pts": 6
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 5,
+   "fantasy_pts": -5
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 4,
+   "fantasy_pts": -4
+  }
+ ],
+ "label": "opponent"
+}

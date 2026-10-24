@@ -1,0 +1,92 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2539,
+  "number": 3
+ },
+ "match": {
+  "id": 11994,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-23T18:15:00.000000Z",
+  "home_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 61
+  },
+  "away_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 64
+  }
+ },
+ "fantasy_pts": 7.7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 14,
+   "fantasy_pts": 14
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 4,
+   "fantasy_pts": -4
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 10,
+   "fantasy_pts": -10
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

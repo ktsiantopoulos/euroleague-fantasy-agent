@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2533,
+  "number": 1
+ },
+ "match": {
+  "id": 11971,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-13T18:30:00.000000Z",
+  "home_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 55
+  },
+  "away_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 72
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 6,
+   "fantasy_pts": -6
+  }
+ ],
+ "label": "opponent"
+}

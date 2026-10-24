@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1530,
+  "number": 3
+ },
+ "round": {
+  "id": 2528,
+  "number": 1
+ },
+ "match": {
+  "id": 11947,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-01T18:30:00.000000Z",
+  "home_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 96
+  },
+  "away_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 94
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 202,
+   "name": "win_1-10",
+   "value": 1,
+   "fantasy_pts": 10
+  }
+ ],
+ "label": "opponent"
+}

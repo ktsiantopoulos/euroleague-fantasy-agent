@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1530,
+  "number": 3
+ },
+ "round": {
+  "id": 2528,
+  "number": 1
+ },
+ "match": {
+  "id": 11946,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-01T16:00:00.000000Z",
+  "home_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 102
+  },
+  "away_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 98
+  }
+ },
+ "fantasy_pts": 17.6,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 15,
+   "fantasy_pts": 15
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

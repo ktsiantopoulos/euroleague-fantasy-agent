@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2539,
+  "number": 3
+ },
+ "match": {
+  "id": 11993,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-23T18:45:00.000000Z",
+  "home_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 93
+  },
+  "away_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 104
+  }
+ },
+ "fantasy_pts": 13,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,44 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2531,
+  "number": 2
+ },
+ "match": {
+  "id": 11957,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-08T18:00:00.000000Z",
+  "home_team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "score": 87
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 94
+  }
+ },
+ "fantasy_pts": 2,
+ "stats_items": [
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  }
+ ],
+ "label": "opponent"
+}

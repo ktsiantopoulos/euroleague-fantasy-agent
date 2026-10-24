@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2538,
+  "number": 2
+ },
+ "match": {
+  "id": 11987,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-22T18:30:00.000000Z",
+  "home_team": {
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL",
+   "score": 81
+  },
+  "away_team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "score": 89
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 202,
+   "name": "win_1-10",
+   "value": 1,
+   "fantasy_pts": 10
+  }
+ ],
+ "label": "opponent"
+}

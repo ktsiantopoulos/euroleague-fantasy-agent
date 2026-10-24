@@ -1,0 +1,50 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2534,
+  "number": 2
+ },
+ "match": {
+  "id": 11973,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-14T17:30:00.000000Z",
+  "home_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 93
+  },
+  "away_team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "score": 101
+  }
+ },
+ "fantasy_pts": 1,
+ "stats_items": [
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

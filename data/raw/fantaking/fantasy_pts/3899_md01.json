@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2523,
+  "number": 1
+ },
+ "match": {
+  "id": 11925,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-24T18:00:00.000000Z",
+  "home_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 77
+  },
+  "away_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 83
+  }
+ },
+ "fantasy_pts": 4.4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 13,
+   "fantasy_pts": 13
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 7,
+   "fantasy_pts": -7
+  }
+ ],
+ "label": "opponent"
+}

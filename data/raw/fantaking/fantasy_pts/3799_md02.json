@@ -1,0 +1,68 @@
+{
+ "matchday": {
+  "id": 1529,
+  "number": 2
+ },
+ "round": {
+  "id": 2526,
+  "number": 1
+ },
+ "match": {
+  "id": 11936,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-29T18:00:00.000000Z",
+  "home_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 80
+  },
+  "away_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 81
+  }
+ },
+ "fantasy_pts": 14.3,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 12,
+   "fantasy_pts": 12
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 3,
+   "fantasy_pts": -3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

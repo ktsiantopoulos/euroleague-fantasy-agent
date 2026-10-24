@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2538,
+  "number": 2
+ },
+ "match": {
+  "id": 11986,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-22T18:05:00.000000Z",
+  "home_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 99
+  },
+  "away_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 113
+  }
+ },
+ "fantasy_pts": 11,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 6,
+   "fantasy_pts": 6
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

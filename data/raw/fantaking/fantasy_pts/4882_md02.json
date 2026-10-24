@@ -1,0 +1,80 @@
+{
+ "matchday": {
+  "id": 1529,
+  "number": 2
+ },
+ "round": {
+  "id": 2527,
+  "number": 2
+ },
+ "match": {
+  "id": 11943,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-30T18:05:00.000000Z",
+  "home_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 93
+  },
+  "away_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 109
+  }
+ },
+ "fantasy_pts": 14,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

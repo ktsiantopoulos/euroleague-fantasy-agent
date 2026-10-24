@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2536,
+  "number": 2
+ },
+ "match": {
+  "id": 11984,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-16T18:15:00.000000Z",
+  "home_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 81
+  },
+  "away_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 91
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 202,
+   "name": "win_1-10",
+   "value": 1,
+   "fantasy_pts": 10
+  }
+ ],
+ "label": "opponent"
+}

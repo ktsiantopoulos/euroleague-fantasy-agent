@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2535,
+  "number": 1
+ },
+ "match": {
+  "id": 11977,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-15T19:00:00.000000Z",
+  "home_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 111
+  },
+  "away_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 92
+  }
+ },
+ "fantasy_pts": 20,
+ "stats_items": [
+  {
+   "id": 203,
+   "name": "win_11-20",
+   "value": 1,
+   "fantasy_pts": 20
+  }
+ ],
+ "label": "opponent"
+}

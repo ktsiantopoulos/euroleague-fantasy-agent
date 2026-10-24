@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2535,
+  "number": 1
+ },
+ "match": {
+  "id": 11978,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-15T17:45:00.000000Z",
+  "home_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 74
+  },
+  "away_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 65
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

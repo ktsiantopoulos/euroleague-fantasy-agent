@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2536,
+  "number": 2
+ },
+ "match": {
+  "id": 11980,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-16T18:00:00.000000Z",
+  "home_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 90
+  },
+  "away_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 81
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 202,
+   "name": "win_1-10",
+   "value": 1,
+   "fantasy_pts": 10
+  }
+ ],
+ "label": "opponent"
+}

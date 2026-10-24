@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2533,
+  "number": 1
+ },
+ "match": {
+  "id": 11969,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-13T19:00:00.000000Z",
+  "home_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 97
+  },
+  "away_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 102
+  }
+ },
+ "fantasy_pts": 18.7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

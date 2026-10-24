@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1532,
+  "number": 5
+ },
+ "round": {
+  "id": 2533,
+  "number": 1
+ },
+ "match": {
+  "id": 11965,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-13T18:00:00.000000Z",
+  "home_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 82
+  },
+  "away_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 84
+  }
+ },
+ "fantasy_pts": -5,
+ "stats_items": [
+  {
+   "id": 206,
+   "name": "loss_1-10",
+   "value": 1,
+   "fantasy_pts": -5
+  }
+ ],
+ "label": "opponent"
+}

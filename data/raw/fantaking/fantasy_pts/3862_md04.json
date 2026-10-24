@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2531,
+  "number": 2
+ },
+ "match": {
+  "id": 11958,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-08T18:30:00.000000Z",
+  "home_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 93
+  },
+  "away_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 82
+  }
+ },
+ "fantasy_pts": 11,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 10,
+   "fantasy_pts": 10
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

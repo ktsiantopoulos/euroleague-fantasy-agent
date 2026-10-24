@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2523,
+  "number": 1
+ },
+ "match": {
+  "id": 11927,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-24T16:00:00.000000Z",
+  "home_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 84
+  },
+  "away_team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "score": 86
+  }
+ },
+ "fantasy_pts": 7,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 11,
+   "fantasy_pts": 11
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 8,
+   "fantasy_pts": -8
+  }
+ ],
+ "label": "opponent"
+}

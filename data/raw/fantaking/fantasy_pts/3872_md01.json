@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1528,
+  "number": 1
+ },
+ "round": {
+  "id": 2523,
+  "number": 1
+ },
+ "match": {
+  "id": 11926,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-24T16:00:00.000000Z",
+  "home_team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "score": 78
+  },
+  "away_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 77
+  }
+ },
+ "fantasy_pts": -5,
+ "stats_items": [
+  {
+   "id": 206,
+   "name": "loss_1-10",
+   "value": 1,
+   "fantasy_pts": -5
+  }
+ ],
+ "label": "opponent"
+}

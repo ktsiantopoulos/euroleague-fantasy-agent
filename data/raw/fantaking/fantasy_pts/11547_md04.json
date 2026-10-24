@@ -1,0 +1,86 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2531,
+  "number": 2
+ },
+ "match": {
+  "id": 11957,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-08T18:00:00.000000Z",
+  "home_team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "score": 87
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 94
+  }
+ },
+ "fantasy_pts": 30.8,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 20,
+   "fantasy_pts": 20
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 5,
+   "fantasy_pts": -5
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1529,
+  "number": 2
+ },
+ "round": {
+  "id": 2526,
+  "number": 1
+ },
+ "match": {
+  "id": 11937,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-29T16:00:00.000000Z",
+  "home_team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "score": 94
+  },
+  "away_team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "score": 87
+  }
+ },
+ "fantasy_pts": 26.4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 21,
+   "fantasy_pts": 21
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 6,
+   "fantasy_pts": 6
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

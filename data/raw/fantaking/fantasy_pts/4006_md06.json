@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1533,
+  "number": 6
+ },
+ "round": {
+  "id": 2536,
+  "number": 2
+ },
+ "match": {
+  "id": 11981,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-16T17:00:00.000000Z",
+  "home_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 70
+  },
+  "away_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 85
+  }
+ },
+ "fantasy_pts": -10,
+ "stats_items": [
+  {
+   "id": 207,
+   "name": "loss_11-20",
+   "value": 1,
+   "fantasy_pts": -10
+  }
+ ],
+ "label": "opponent"
+}

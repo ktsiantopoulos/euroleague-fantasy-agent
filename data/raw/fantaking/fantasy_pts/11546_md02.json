@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1529,
+  "number": 2
+ },
+ "round": {
+  "id": 2526,
+  "number": 1
+ },
+ "match": {
+  "id": 11940,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-09-29T18:30:00.000000Z",
+  "home_team": {
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL",
+   "score": 87
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 85
+  }
+ },
+ "fantasy_pts": 9,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1531,
+  "number": 4
+ },
+ "round": {
+  "id": 2532,
+  "number": 3
+ },
+ "match": {
+  "id": 11964,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-09T18:15:00.000000Z",
+  "home_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 89
+  },
+  "away_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 66
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}
