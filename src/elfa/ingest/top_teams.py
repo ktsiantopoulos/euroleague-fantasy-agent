@@ -26,9 +26,12 @@ def standings(client: FantakingClient, tid: int = GLOBAL_TOURNAMENT, n: int = 10
     out: list[dict] = []
     page = 1
     while len(out) < n:
-        j = client.get(f"/api/v1/tournaments/{tid}/standings", page=page)
-        out.extend(j["data"])
-        if page >= int(j.get("meta", {}).get("last_page", page)):
+        j = client.get(f"/api/v1/tournaments/{tid}/standings", page=page, per_page=100)
+        data = j.get("data", [])
+        out.extend(data)
+        meta = j.get("meta") or {}
+        last = meta.get("last_page")
+        if not data or (last is not None and page >= int(last)) or (last is None and len(data) < 25):
             break
         page += 1
     out = out[:n]
