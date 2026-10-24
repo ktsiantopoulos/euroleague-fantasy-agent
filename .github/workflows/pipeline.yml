@@ -8,8 +8,8 @@ on:
         type: boolean
         default: false
   schedule:
-    # Sundays 06:00 UTC and Tuesdays 06:00 UTC — refresh after each round; deadline runs come later
-    - cron: "0 6 * * 0,2"
+    # daily 09:00 UTC (12:00 Athens): refreshes injuries, prices and the recommendation before any deadline
+    - cron: "0 9 * * *"
 
 permissions:
   contents: write
