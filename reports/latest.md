@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 67.05 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 65.38 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -7,6 +7,10 @@ pulled ->
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_08
 team: UnderTakers86  credits: 105.9  trades used: 1/4
+
+## pull-external
+  fantasyedge: 365 players, 15 columns kept
+price base: fantasyedge 228, top100_md1 122, first_seen 8
 
 ## build
         games  rows  mismatches
@@ -17,6 +21,10 @@ method
 surname+team    284
 UNMATCHED        54
 coach            20
+team context: 20 clubs · usage: 276 players · FDR: 20 clubs x next 5
+price base: fantasyedge 228, top100_md1 122, first_seen 8
+matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
+T2=2026-10-28
 
 ## reconcile
 player-games compared: 2474

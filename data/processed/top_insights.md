@@ -40,7 +40,7 @@
 - MD1: 0.0, MD2: 3.67, MD3: 3.41, MD4: 3.73, MD5: 3.87, MD6: 3.73, MD7: 6.37
 
 ## Most common moves (count of top teams)
-- MD2: IN Eleftherios Mantzoukas (28), Mathias Lessort (27), Xavier Albert (27), Nikos Rogkavopoulos (22) · OUT Joel Parra (28), Saras Jasikevicius (28), Matteo Spagnolo (16), Jonas Valanciunas (16)
+- MD2: IN Eleftherios Mantzoukas (28), Xavier Albert (27), Mathias Lessort (27), Nikos Rogkavopoulos (22) · OUT Joel Parra (28), Saras Jasikevicius (28), Matteo Spagnolo (16), Jonas Valanciunas (16)
 - MD3: IN Azuolas Tubelis (48), Aliou Diarra (44), Theo Maledon (17), Elijah Bryant (14) · OUT Braxton Key (29), Yam Madar (26), Joel Parra (19), Saras Jasikevicius (17)
 - MD4: IN Aliou Diarra (38), Georgios Bartzokas (29), Nadir Hifi (26), Pedro Martinez (22) · OUT Zeljko Obradovic (41), Xavier Albert (35), Carlik Jones (27), Mathias Lessort (22)
 - MD5: IN Dimitris Itoudis (40), Elijah Bryant (36), Semi Ojeleye (30), Mfiondu Kabengele (23) · OUT Azuolas Tubelis (50), Georgios Bartzokas (30), Nadir Hifi (26), Carlik Jones (19)
