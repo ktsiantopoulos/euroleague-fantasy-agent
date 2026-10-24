@@ -20,6 +20,7 @@ for _p in (str(_ROOT), str(_ROOT / "src")):
         sys.path.insert(0, _p)
 
 from app import data as D
+from app import theme as TH
 
 SLOT = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
 
@@ -104,24 +105,32 @@ def scrub_team(text: str) -> str:
     return re.sub(r"\s{2,}", " ", text).strip()
 
 
+@st.cache_data(ttl=600)
+def rec_json():
+    return D.load_recommendation()
+
+
 def header(mode: str, md: int):
     status = D.pipeline_status()
+    rec = rec_json()
+    deadline = rec.get("deadline_utc")
     if mode == "team":
         tmd, _roster = roster_state()
-        st.title("🏀 EuroLeague Fantasy Agent")
-        c1, c2, c3, c4 = st.columns(4)
-        c1.metric("Matchday", md or "—")
-        c2.metric("Credits", tmd.get("credits", "—"))
-        c3.metric("Trades left", f"{int(tmd.get('max_num_trades_per_matchday', 0)) - int(tmd.get('trades', 0))}" if tmd else "—")
-        c4.metric("Total pts", tmd.get("total_pts", "—"))
-        st.caption(f"{status['deadline']}  ·  {status['generated']}  ·  last run: {status['run_reason']}")
+        TH.md(TH.header("Fantasy Agent", f"{tmd.get('name', '')}  ·  matchday {md or '—'}", deadline))
+        trades_left = f"{int(tmd.get('max_num_trades_per_matchday', 0)) - int(tmd.get('trades', 0))}" if tmd else "—"
+        items = [("Credits", str(tmd.get("credits", "—")), "", "text"), ("Trades left", trades_left, "of 4 · coach counts", "text"),
+                 ("Total pts", str(tmd.get("total_pts", "—")), "", "text")]
+        if rec:
+            h, b = rec["hold"], rec["best"]
+            items += [("Current squad", f"{h['expected']:.1f}", "best lineup, no trades", "muted"),
+                      ("With trades", f"{b['expected']:.1f}", f"▲ +{b['expected'] - h['expected']:.1f} expected", "pos"),
+                      ("Managed in-round", f"{b['inround_gain']:+.1f}", "swaps & captain moves, simulated", "gold")]
+        TH.md(TH.kpis(items))
+        st.caption(f"{status['generated']}  ·  last run: {status['run_reason']}")
     else:
-        st.title("🏀 EuroLeague Fantasy Scout")
+        TH.md(TH.header("Fantasy Scout", f"matchday {md or '—'}  ·  league-wide analytics", deadline, mark="ELS"))
         st.caption("League-wide projections, matchup analytics, elite-manager tendencies and market data for the EuroLeague Fantasy Challenge. "
-                   "Scoring: PIR + 10% if the team wins; starters 100%, bench 50%, captain ×2.")
-        c1, c2 = st.columns([1, 3])
-        c1.metric("Matchday", md or "—")
-        c2.caption(f"{status['deadline']}  ·  {scrub_team(status['generated'])}")
+                   "Scoring: PIR + 10% if the team wins; starters 100%, bench 50%, captain ×2.  ·  " + scrub_team(status["generated"]))
 
 
 # ------------------------------------------------------------------------------------------ team pages
@@ -133,8 +142,42 @@ def _squad_table(sq: pd.DataFrame) -> pd.DataFrame:
     return sq[cols].rename(columns={"quotation": "price", "md_pts": "exp", "md_p90": "p90", "why": "justification"})
 
 
-def page_recommendation():
-    st.markdown(D.load_report("recommendation_latest.md"))
+def page_recommendation(proj: pd.DataFrame, md: int):
+    rec = rec_json()
+    if not rec:
+        st.markdown(D.load_report("recommendation_latest.md"))
+        return
+    b, h = rec["best"], rec["hold"]
+    rounds = " + ".join(f"R{r}" for r in rec.get("rounds", []))
+    nights = " · ".join(f"T{i + 1} = {d[5:]}" for i, d in enumerate(rec.get("nights", [])))
+    odds = TH.chip(f"ODDS ON · {rec['odds_games']} GAMES", "pos") if rec.get("odds_games") else TH.chip("ODDS OFF · MODEL MARGINS", "neg")
+    TH.md(f'<div class="elf-h1">Matchday {rec["matchday"]}</div><div class="elf-sub" style="margin-bottom:10px">{rounds} · {len(rec.get("nights", []))} night(s) · {nights} &nbsp; {odds}</div>')
+    kept = f" · kept by request: {', '.join(rec['kept'])}" if rec.get("kept") else ""
+    TH.md(TH.trades(b["trades_out"], b["trades_in"], f"Cost {b['cost']} / {rec['budget']}  ·  Captain {b['captain'].upper()}  ·  Coach {b['coach'].upper()}  ·  {b['status']}{kept}"))
+    st.write("")
+    left, right = st.columns([2.2, 1])
+    with left:
+        multi = len(rec.get("nights", [])) > 1
+        badges = [TH.chip("NIGHT BALANCE " + ("RELAXED" if "relaxed" in b["status"] else "OK"), "gold" if "relaxed" in b["status"] else "pos")] if multi else []
+        TH.md(TH.lineup_board(b["squad"], "Recommended squad", badges))
+        with st.expander("Current squad, best lineup (no trades)"):
+            TH.md(TH.lineup_board(h["squad"], f"Current squad · {h['expected']:.1f} pts"))
+    with right:
+        plan = [("AFTER T1", n) for n in b.get("plan", [])] or [("INFO", "no frequent swaps — the lineup is mostly set-and-forget")]
+        plan.append(("RULE", "After each night: promote a not-yet-played bench player over a same-position field player whose realised score is below the bench expectation; move the captaincy to the best not-yet-played starter if it beats the captain's realised total."))
+        TH.md(TH.notes(f"In-round plan · simulated gain {b['inround_gain']:+.1f}", plan))
+        st.write("")
+        rows = dvp_targets(proj)
+        TH.md(TH.target_rows("Who to target · this matchday", rows[rows.DvP >= 1.0].head(6).to_dict("records") if len(rows) else []))
+        st.write("")
+        tv = rec.get("top_value", {})
+        items = [(p[0], ", ".join(f"{r['name']} {r['price']} → {r['md_pts']:.0f}" for r in tv.get(p, [])[:4])) for p in ("Guard", "Forward", "Center")]
+        TH.md(TH.notes("Top value outside the squad", items, "info"))
+        if rec.get("flags"):
+            TH.md(TH.notes("Flags", [("⚠", f"{f['name']}: {f['flags']}") for f in rec["flags"]], "gold"))
+    TH.md('<div class="elf-foot">Model: minutes × PIR rate × home/pace/DvP, +10% win bonus (bookmaker odds when available) · elite tilt +4% at 100% top-100 ownership · soft club cap 3 · bench price floor 6.0</div>')
+    with st.expander("Full text report"):
+        st.markdown(D.load_report("recommendation_latest.md"))
 
 
 def page_whatif(proj: pd.DataFrame):
@@ -169,10 +212,14 @@ def page_whatif(proj: pd.DataFrame):
         m2.metric("Cost", f"{sol.cost}/{budget}")
         m3.metric("In-round gain (sim)", plan.gain)
         m4.metric("Status", sol.status)
-        st.write(f"**OUT:** {', '.join(sol.trades_out) or '—'}  →  **IN:** {', '.join(sol.trades_in) or '—'}  ·  Captain **{sol.captain}**, coach **{sol.coach}**")
-        show(_squad_table(sol.squad))
-        for n in plan.notes:
-            st.caption("• " + n)
+        pl = lambda names: [{"name": n, "pos": proj.loc[proj.name == n, "pos"].iloc[0], "price": float(proj.loc[proj.name == n, "quotation"].iloc[0])} for n in names if (proj.name == n).any()]
+        TH.md(TH.trades(pl(sol.trades_out), pl(sol.trades_in), f"Cost {sol.cost} / {budget} · Captain {sol.captain.upper()} · Coach {sol.coach.upper()} · {sol.status}"))
+        st.write("")
+        TH.md(TH.lineup_board(sol.squad.to_dict("records"), "What-if squad"))
+        if plan.notes:
+            TH.md(TH.notes("In-round plan", [("AFTER T1", n) for n in plan.notes]))
+        with st.expander("Table view"):
+            show(_squad_table(sol.squad))
 
 
 # ------------------------------------------------------------------------------------------ league-wide pages
@@ -211,6 +258,30 @@ def page_projections(proj: pd.DataFrame, md: int, mode: str):
     st.altair_chart(ch, width="stretch")
 
 
+def dvp_targets(proj: pd.DataFrame) -> pd.DataFrame:
+    """One row per (team, opponent, night, position) this matchday with the opponent's DvP and the best options."""
+    dvp = csv("dvp.csv")
+    if dvp.empty or proj.empty:
+        return pd.DataFrame(columns=["night", "team", "opponent", "home", "position", "DvP", "rank", "games", "win %", "best options"])
+    dvp_idx = dvp.set_index(["team", "fpos"])
+    rows, seen = [], set()
+    for r in proj[proj.pos != "Head Coach"].itertuples():
+        for g in r.games:
+            key = (r.team_off, g["opp"], g["turn"], r.pos)
+            if key in seen:
+                continue
+            seen.add(key)
+            try:
+                d = dvp_idx.loc[(g["opp"], r.pos)]
+            except KeyError:
+                continue
+            cands = proj[(proj.team_off == r.team_off) & (proj.pos == r.pos)].nlargest(3, "md_pts")
+            rows.append({"night": f"T{g['turn']}", "team": r.team, "opponent": g["opp"], "home": "home" if g["home"] else "away",
+                         "position": r.pos, "DvP": round(float(d.piroe_shrunk), 1), "rank": int(d.rank_weak_to_strong), "games": int(d.games),
+                         "win %": round(100 * g["pw"]), "best options": ", ".join(f"{c.name} ({c.quotation}, {c.md_pts:.0f})" for c in cands.itertuples())})
+    return pd.DataFrame(rows).sort_values("DvP", ascending=False) if rows else pd.DataFrame(columns=["night", "team", "opponent", "home", "position", "DvP", "rank", "games", "win %", "best options"])
+
+
 def page_dvp(proj: pd.DataFrame, md: int):
     dvp = csv("dvp.csv")
     if dvp.empty:
@@ -220,24 +291,7 @@ def page_dvp(proj: pd.DataFrame, md: int):
     st.caption("Each row is a game this matchday where the opponent leaks PIR to a position. Pick players of that position from the listed team. "
                "DvP = PIR over expectation conceded per game (shrunk toward 0 with only a few games played); + means the defence is weak there.")
     if not proj.empty:
-        dvp_idx = dvp.set_index(["team", "fpos"])
-        rows = []
-        seen = set()
-        for r in proj[proj.pos != "Head Coach"].itertuples():
-            for g in r.games:
-                key = (r.team_off, g["opp"], g["turn"], r.pos)
-                if key in seen:
-                    continue
-                seen.add(key)
-                try:
-                    d = dvp_idx.loc[(g["opp"], r.pos)]
-                except KeyError:
-                    continue
-                cands = proj[(proj.team_off == r.team_off) & (proj.pos == r.pos)].nlargest(3, "md_pts")
-                rows.append({"night": f"T{g['turn']}", "team": r.team, "opponent": g["opp"], "home": "home" if g["home"] else "away",
-                             "position": r.pos, "DvP": round(float(d.piroe_shrunk), 1), "rank": int(d.rank_weak_to_strong), "games": int(d.games),
-                             "win %": round(100 * g["pw"]), "best options": ", ".join(f"{c.name} ({c.quotation}, {c.md_pts:.0f})" for c in cands.itertuples())})
-        tgt = pd.DataFrame(rows).sort_values("DvP", ascending=False)
+        tgt = dvp_targets(proj)
         good = tgt[tgt.DvP >= 1.0]
         bad = tgt[tgt.DvP <= -1.5].sort_values("DvP")
         st.markdown("**Target** (opponent leaks to this position):")
@@ -402,6 +456,8 @@ def page_model_health(mode: str):
 
 # ------------------------------------------------------------------------------------------ router
 def render(mode: str):
+    TH.inject_css()
+    TH.altair_theme()
     md, proj = proj_data()
     header(mode, md)
     pages = (TEAM_PAGES + SCOUT_PAGES) if mode == "team" else SCOUT_PAGES
@@ -410,7 +466,7 @@ def render(mode: str):
         st.sidebar.caption("Scouting app — league-wide data only. Updated by the pipeline before each matchday deadline.")
 
     if page == "Recommendation":
-        page_recommendation()
+        page_recommendation(proj, md)
     elif page == "What-if optimiser":
         page_whatif(proj)
     elif page == "Projections":

@@ -151,4 +151,37 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     out.parent.mkdir(exist_ok=True)
     out.write_text("\n".join(lines), encoding="utf-8")
     (ROOT / "reports" / "recommendation_latest.md").write_text("\n".join(lines), encoding="utf-8")
+
+    # structured copy for the dashboard
+    def _records(sq: pd.DataFrame) -> list[dict]:
+        cols = ["role", "name", "pos", "team", "quotation", "md_pts", "md_p90", "md_sd", "elite_own", "why", "flags", "captain", "first_turn", "games_json"]
+        return [{k: (None if pd.isna(v) else (v.item() if hasattr(v, "item") else v)) for k, v in r.items()} for r in sq[[c for c in cols if c in sq]].to_dict("records")]
+
+    def _pl(names: list[str]) -> list[dict]:
+        rows = []
+        for n in names:
+            hit = proj[proj.name == n]
+            if len(hit):
+                r = hit.iloc[0]
+                rows.append({"name": n, "pos": r.pos, "team": r.team, "price": float(r.quotation), "md_pts": float(r.md_pts)})
+            else:
+                rows.append({"name": n})
+        return rows
+
+    top_value = {}
+    for pos_ in ("Guard", "Forward", "Center"):
+        top_value[pos_] = [{"name": r.name, "team": r.team, "price": r.quotation, "md_pts": r.md_pts, "elite_own": int(r.elite_own), "flags": r.flags or ""}
+                           for r in cand[cand.pos == pos_].head(5).itertuples()]
+    payload = {
+        "matchday": md_number, "rounds": sorted({g.round for g in first}), "deadline_utc": (cfg.get("current_round") or {}).get("started_at"),
+        "nights": nights, "generated_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "team": tmd["name"], "budget": budget,
+        "trades_left": trades_left, "odds_games": len(odds), "kept": keep or [],
+        "hold": {"expected": hold.expected_md_pts, "inround_gain": round(plan_hold.gain, 1), "cost": hold.cost, "status": hold.status, "captain": hold.captain, "coach": hold.coach, "squad": _records(hold.squad)},
+        "best": {"expected": best.expected_md_pts, "inround_gain": round(plan_best.gain, 1), "cost": best.cost, "status": best.status, "captain": best.captain, "coach": best.coach,
+                 "trades_out": _pl(best.trades_out), "trades_in": _pl(best.trades_in), "squad": _records(best.squad), "plan": plan_best.notes},
+        "top_value": top_value,
+        "flags": [{"name": r.name, "flags": r.flags} for r in proj[proj.in_roster & proj["flags"].astype(str).str.strip().ne("") & proj["flags"].astype(str).ne("coach")].itertuples()],
+    }
+    (ROOT / "reports" / f"recommendation_md{md_number:02d}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    (ROOT / "reports" / "recommendation_latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     return out

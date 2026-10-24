@@ -48,6 +48,11 @@ def load_report(name: str = "recommendation_latest.md") -> str:
     return p.read_text(encoding="utf-8") if p.exists() else "_no report yet_"
 
 
+def load_recommendation() -> dict:
+    p = REPORTS / "recommendation_latest.json"
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+
 def load_csv(name: str, **kw) -> pd.DataFrame:
     p = PROCESSED / name
     return pd.read_csv(p, **kw) if p.exists() else pd.DataFrame()
