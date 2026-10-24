@@ -310,18 +310,30 @@ def page_whatif(proj: pd.DataFrame):
     mode_r = colF.selectbox("Risk mode", list(RISK), help="Objective = expected pts − λ × uncertainty. Safe (λ = 0.35) prefers steady players — use it for nights you cannot react to; "
                             "Aggressive (λ = −0.15) rewards variance — use it when chasing a rank. Balanced is the model's plain expectation.")
     lam = RISK[mode_r]
+    colG, colH = st.columns(2)
+    horizon_w = colG.slider("Horizon weight", 0.0, 1.0, 0.75, 0.05,
+                            help="Weight of the points expected in the next two matchdays (0.6 / 0.3 of a matchday) on top of this one. "
+                                 "0 = optimise this matchday only; 0.75 = the agent's default three-matchday view. Trades that pay off this week but cost next week appear as you lower it.")
+    cur_coach = proj[proj.in_roster & (proj.pos == "Head Coach")]
+    cur_coach_name = cur_coach.name.iloc[0] if len(cur_coach) else "—"
+    coach_mode = colH.selectbox("Coach", ["Optimiser decides", "Force a coach change", f"Keep {cur_coach_name}"],
+                                help="The coach counts as one of the 4 trades, like any player. Force a change to see the best coach swap and what it costs elsewhere.")
     if st.button("Optimise", type="primary"):
         df = proj[~proj.name.isin(exclude)].copy()
         if lam:
             df["md_pts"] = (df.md_pts - lam * df.md_sd).clip(lower=0)
             df["horizon_pts"] = (df.horizon_pts - lam * df.md_sd).clip(lower=0)
         keep_ids = set(df[df.name.isin(keep)].platform_id)
+        if coach_mode.startswith("Force") and len(cur_coach):
+            df = df[~df.platform_id.isin(cur_coach.platform_id)]
+        elif coach_mode.startswith("Keep") and len(cur_coach):
+            keep_ids |= set(cur_coach.platform_id)
         with st.spinner("solving…"):
-            sol = optimise(df, budget, roster_ids, max_trades=trades, keep_ids=keep_ids, balance=balance)
+            sol = optimise(df, budget, roster_ids, max_trades=trades, keep_ids=keep_ids, balance=balance, future_factor=horizon_w)
             if lam:  # re-score the chosen squad on the plain expectation so the numbers stay comparable
-                sol = optimise(proj, budget, set(sol.squad.platform_id), max_trades=0, lock_squad=True, balance=balance)
+                sol = optimise(proj, budget, set(sol.squad.platform_id), max_trades=0, lock_squad=True, balance=balance, future_factor=horizon_w)
             plan = simulate(sol.squad, n_sims=1500)
-        hold = optimise(proj, budget, roster_ids, max_trades=0, lock_squad=True)
+        hold = optimise(proj, budget, roster_ids, max_trades=0, lock_squad=True, future_factor=horizon_w)
         m1, m2, m3, m4 = st.columns(4)
         m1.metric("Expected pts", sol.expected_md_pts, delta=round(sol.expected_md_pts - hold.expected_md_pts, 1), help="Plain expectation of the chosen squad, whatever the risk mode")
         m2.metric("Cost", f"{sol.cost}/{budget}")
@@ -337,6 +349,23 @@ def page_whatif(proj: pd.DataFrame):
             TH.md(TH.notes("In-round plan", [("AFTER T1", n) for n in plan.notes]))
         with st.expander("Table view"):
             show(_squad_table(sol.squad))
+    st.subheader("Coach options")
+    st.caption("Expected points = win-margin buckets (bookmaker spread when available). Gain = vs your current coach this matchday; the 3-week column is what the horizon weight trades against.")
+    coaches = proj[proj.pos == "Head Coach"].copy()
+    if len(coaches):
+        base_md = float(cur_coach.md_pts.iloc[0]) if len(cur_coach) else 0.0
+        base_q = float(cur_coach.quotation.iloc[0]) if len(cur_coach) else 0.0
+        coaches["gain"] = (coaches.md_pts - base_md).round(1)
+        coaches["extra_cost"] = (coaches.quotation - base_q).round(1)
+        coaches["gain_per_credit"] = (coaches.gain / coaches.extra_cost.where(coaches.extra_cost > 0)).round(2)
+        coaches["mine"] = coaches.in_roster
+        cols = ["name", "team", "quotation", "md_pts", "horizon_pts", "gain", "extra_cost", "gain_per_credit", "why", "mine"]
+        st.dataframe(coaches.sort_values("md_pts", ascending=False)[cols], width="stretch", hide_index=True, height=420, column_config={
+            **{c: COL[c] for c in cols if c in COL},
+            "gain": st.column_config.NumberColumn("Gain vs mine", help="Expected points this matchday minus your current coach's", format="%+.1f"),
+            "extra_cost": st.column_config.NumberColumn("Extra cost", help="Price minus your current coach's price", format="%+.1f"),
+            "gain_per_credit": st.column_config.NumberColumn("Gain / credit", help="This-matchday gain per extra credit (only for dearer coaches)", format="%.2f"),
+            "mine": st.column_config.CheckboxColumn("Mine")})
 
 
 # ------------------------------------------------------------------------------------------ league-wide pages

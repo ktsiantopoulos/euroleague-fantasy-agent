@@ -72,8 +72,12 @@ def optimise(
     lock_squad: bool = False,
     keep_ids: set[str] | None = None,
     balance: bool = True,
+    future_factor: float | None = None,
 ) -> Solution:
+    """`future_factor` weights the points expected beyond this matchday (default FUTURE_FACTOR; 0 = this
+    matchday only). The coach counts as one of the `max_trades` like any player."""
     exp_price_change = exp_price_change or {}
+    ff = FUTURE_FACTOR if future_factor is None else float(future_factor)
     df = proj.copy()
     df = df[df.quotation > 0].reset_index(drop=True)
     ids = list(df.platform_id)
@@ -101,7 +105,7 @@ def optimise(
     prob += (
         pulp.lpSum((s[i] + m[i]) * md[i] + b[i] * bval[i] + c[i] * (md[i] + CAPTAIN_SD_TILT * sd[i]) for i in players)
         + pulp.lpSum(x[i] * md[i] for i in coaches)
-        + pulp.lpSum(x[i] * FUTURE_FACTOR * fut[i] for i in ids)
+        + pulp.lpSum(x[i] * ff * fut[i] for i in ids)
         + mu_price * pulp.lpSum(x[i] * exp_price_change.get(i, 0.0) for i in ids)
         - CLUB_CAP_PENALTY * pulp.lpSum(over[cl] for cl in clubs)
         - BENCH_FLOOR_PENALTY * pulp.lpSum(b[i] * max(BENCH_PRICE_FLOOR - q[i], 0.0) for i in players)
@@ -148,7 +152,7 @@ def optimise(
     prob.solve(pulp.PULP_CBC_CMD(msg=False, timeLimit=60))
     status = pulp.LpStatus[prob.status]
     if status != "Optimal" and balance:
-        return optimise(proj, budget, prev_ids, max_trades, mu_price, exp_price_change, lock_squad, keep_ids, balance=False)
+        return optimise(proj, budget, prev_ids, max_trades, mu_price, exp_price_change, lock_squad, keep_ids, balance=False, future_factor=ff)
 
     chosen = [i for i in ids if x[i].value() and x[i].value() > 0.5]
     role = {}
