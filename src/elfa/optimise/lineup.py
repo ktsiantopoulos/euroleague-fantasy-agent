@@ -38,6 +38,7 @@ def optimise(
     mu_price: float = 0.0,
     exp_price_change: dict[str, float] | None = None,
     lock_squad: bool = False,
+    keep_ids: set[str] | None = None,
 ) -> Solution:
     exp_price_change = exp_price_change or {}
     df = proj.copy()
@@ -89,6 +90,9 @@ def optimise(
             prob += x[i] == (1 if i in prev_ids else 0)
     else:
         prob += new_players + new_coach <= max_trades
+        for i in (keep_ids or set()):
+            if i in x:
+                prob += x[i] == 1
     prob.solve(pulp.PULP_CBC_CMD(msg=False, timeLimit=60))
     status = pulp.LpStatus[prob.status]
 

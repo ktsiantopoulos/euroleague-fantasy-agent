@@ -103,11 +103,14 @@ def backtest(rounds: str = typer.Option("4,5,6,7"), grid: bool = typer.Option(Fa
 
 
 @app.command()
-def recommend(mu_price: float = typer.Option(0.0, help="weight of expected price change (PIR per credit)")):
+def recommend(
+    mu_price: float = typer.Option(0.0, help="weight of expected price change (PIR per credit)"),
+    keep: str = typer.Option("", help="comma-separated player names (substring) that must stay in the squad"),
+):
     """Project, optimise and write reports/recommendation_mdXX.md."""
     from elfa.report.recommend import recommend as _rec
 
-    out = _rec(mu_price=mu_price)
+    out = _rec(mu_price=mu_price, keep=[k.strip() for k in keep.split(",") if k.strip()])
     rprint(out.read_text(encoding="utf-8"))
 
 

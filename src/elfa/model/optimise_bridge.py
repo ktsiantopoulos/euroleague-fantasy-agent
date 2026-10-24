@@ -7,5 +7,5 @@ from elfa.optimise.lineup import Solution, optimise
 
 
 def run_optimiser(proj: pd.DataFrame, budget: float, prev_ids: set[str], max_trades: int,
-                  mu_price: float = 0.0, lock_squad: bool = False) -> Solution:
-    return optimise(proj, budget, prev_ids, max_trades=max_trades, mu_price=mu_price, lock_squad=lock_squad)
+                  mu_price: float = 0.0, lock_squad: bool = False, keep_ids: set[str] | None = None) -> Solution:
+    return optimise(proj, budget, prev_ids, max_trades=max_trades, mu_price=mu_price, lock_squad=lock_squad, keep_ids=keep_ids)

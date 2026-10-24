@@ -35,7 +35,8 @@ def _flags_section(proj: pd.DataFrame) -> str:
     return "\n".join(f"- {r.name}: {r.flags}" for r in f.itertuples()) if len(f) else "- none"
 
 
-def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float = 0.0, params: Params | None = None) -> Path:
+def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float = 0.0, params: Params | None = None,
+              keep: list[str] | None = None) -> Path:
     md_number, market, cfg = load_latest_market()
     md_dir = RAW / "fantaking" / f"md_{md_number:02d}"
     roster = json.loads((md_dir / "roster.json").read_text(encoding="utf-8"))
@@ -67,7 +68,11 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     proj.to_csv(PROCESSED / f"projection_md{md_number:02d}.csv", index=False)
 
     hold = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=True)
-    best = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=False)
+    keep_ids = set()
+    for k in keep or []:
+        hit = proj[proj.name.str.lower().str.contains(k.lower())]
+        keep_ids |= set(hit.platform_id)
+    best = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=False, keep_ids=keep_ids)
 
     rounds_txt = ", ".join(sorted({f"R{g.round}" for g in first}))
     lines = [
@@ -80,7 +85,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         f"- Current squad, best lineup: **{hold.expected_md_pts} pts** expected this matchday.",
         f"- With trades: **{best.expected_md_pts} pts** expected (+{round(best.expected_md_pts - hold.expected_md_pts, 1)}), cost {best.cost}/{budget}.",
         f"- Trades: OUT {', '.join(best.trades_out) or '—'} → IN {', '.join(best.trades_in) or '—'}",
-        f"- Captain **{best.captain}**, coach **{best.coach}**.",
+        f"- Captain **{best.captain}**, coach **{best.coach}**." + (f" Kept by request: {', '.join(keep)}." if keep else ""),
         "",
         "## Recommended squad (with trades)",
         _fmt_squad(best.squad),
