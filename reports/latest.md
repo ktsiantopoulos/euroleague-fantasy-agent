@@ -13,53 +13,50 @@ team: UnderTakers86  credits: 105.9  trades used: 0/4
 season                         
 E2025     402  9540           0
 E2026      70  1678           0
-teams mapped: 20; needs attention: 1
-platform_abbr     platform_name official_code     official_name                 
+teams mapped: 20; needs attention: 0
 method
-          BJK Besiktas Istanbul           BES Besiktas Istanbul name (seed BJK 
-disagreed)
-method
-surname+team    279
-UNMATCHED        79
+surname+team            284
+surname+prior-season     30
+UNMATCHED                24
+coach                    20
 
 ## reconcile
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/bin/elfa", line 6, in <module>
-    sys.exit(app())
-             ^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/main.py", line 1154, in __call__
-    raise e
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/main.py", line 1137, in __call__
-    return get_command(self)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/_click/core.py", line 802, in __call__
-    return self.main(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/core.py", line 1197, in main
-    return _main(
-           ^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/core.py", line 187, in _main
-    rv = self.invoke(ctx)
-         ^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/core.py", line 1119, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/_click/core.py", line 741, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/_click/core.py", line 483, in invoke
-    return callback(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/main.py", line 1524, in wrapper
-    return callback(**use_params)
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/src/elfa/cli.py", line 74, in reconcile
-    rprint(gate_report(_rec()))
-           ^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/src/elfa/model/reconcile.py", line 60, in gate_report
-    counts = df.status.value_counts().to_dict()
-             ^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pandas/core/generic.py", line 6434, in __getattr__
-    return object.__getattribute__(self, name)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'DataFrame' object has no attribute 'status'
+player-games compared: 2474
+exact matches: 1113 (45.0%)
+  MISMATCH: 553
+  no_boxscore_row: 507
+  no_player: 301
+
+first mismatches:
+platform_id  matchday person_code  game_code  platform_pts  official_pir  
+official_min   status
+      11487         2      003112         11          11.0          10.0     
+22.066667 MISMATCH
+      11487         6      003112         57          20.9          19.0     
+27.650000 MISMATCH
+      11487         7      003112         64          18.7          17.0     
+22.116667 MISMATCH
+      11488         7      005368         64          12.1          11.0     
+13.733333 MISMATCH
+      11489         2      014782         16          13.2          12.0     
+16.883333 MISMATCH
+      11492         2      014786         19           5.5           5.0     
+14.866667 MISMATCH
+      11492         4      014786         38          13.2          12.0     
+26.000000 MISMATCH
+      11492         6      014786         55          25.3          23.0     
+24.850000 MISMATCH
+      11494         4      014728         37           5.5           5.0      
+9.650000 MISMATCH
+      11494         6      014728         56           8.8           8.0     
+15.866667 MISMATCH
+      11495         6      010262         56          13.2          12.0     
+14.583333 MISMATCH
+      11498         5      014731         42           8.8           8.0     
+29.400000 MISMATCH
+      11498         6      014731         51           0.0          -1.0     
+11.800000 MISMATCH
+      11499         5      015141         44           7.7           7.0     
+13.816667 MISMATCH
+      11500         1      015139          4           6.6           6.0     
+17.700000 MISMATCH
