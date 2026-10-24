@@ -17,7 +17,7 @@ app = typer.Typer(help="EuroLeague Fantasy Agent", no_args_is_help=True, pretty_
 
 
 @app.command("pull-official")
-def pull_official(seasons: str = typer.Option("E2025,E2026", help="comma-separated season codes")):
+def pull_official(seasons: str = typer.Option("E2026", help="comma-separated season codes")):
     """Fetch schedule + box scores for played games (incremental) from the public EuroLeague API."""
     from elfa.ingest.euroleague import EuroleagueClient, pull_season
 
@@ -47,7 +47,7 @@ def pull_platform(
 
 
 @app.command()
-def build(seasons: str = typer.Option("E2025,E2026")):
+def build(seasons: str = typer.Option("E2026")):
     """Flatten box scores to player_games.parquet and build team/player maps."""
     from elfa.features.boxscores import build_player_games, summary
     from elfa.features.mapping import load_latest_market, map_players, map_teams
