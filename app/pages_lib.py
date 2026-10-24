@@ -152,15 +152,16 @@ def odds_df():
 def current_rounds_and_nights(sched: pd.DataFrame) -> tuple[list[int], list[str]]:
     """Rounds and game-night dates (UTC, YYYY-MM-DD) of the matchday the dashboard is showing.
 
-    Taken from the recommendation when one exists (it knows the platform's matchday → rounds mapping);
-    otherwise the next unplayed round of the schedule.
+    From the committed matchday calendar (data/processed/matchdays.csv, built by `elfa build`), then the
+    recommendation JSON, then the schedule (the matchday's own round, or the next unplayed one).
     """
+    from elfa.features.matchdays import matchday_turns
+
+    rounds, nights = matchday_turns(D.latest_matchday(), csv("matchdays.csv"))
     rec = rec_json()
-    if rec.get("rounds"):
+    if not rounds and rec.get("rounds"):
         rounds = [int(r) for r in rec["rounds"]]
         nights = list(rec.get("nights") or [])
-    else:
-        rounds, nights = [], []
     if not rounds and len(sched):
         # one fantasy matchday == one EuroLeague round; fall back to the next unplayed round if that one is over
         md = D.latest_matchday()

@@ -2,13 +2,13 @@
 
 **Deadline: 2026-10-27 15:59 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-10-24 21:41 UTC · team **UnderTakers86** · budget 105.9 · trades left 3 · odds ON (13 games)
+Generated 2026-10-24 21:45 UTC · team **UnderTakers86** · budget 105.9 · trades left 3 · odds ON (13 games)
 
 ## Decision
 - Game nights: T1=10-27, T2=10-28. Bench players with later nights are swap options; captain can move to a not-yet-played starter.
 - Current squad, best lineup: **145.9 pts** expected; in-round swaps add +0.5 (simulated).
 - With trades: **157.8 pts** expected (+11.9); in-round swaps add +0.6 (simulated); cost 105.8/105.9.
-- Trades: OUT Mfiondu Kabengele, Arijan Lakic, Kendrick Nunn → IN TJ Shorts, Semi Ojeleye, Kevarrius Hayes
+- Trades: OUT Kendrick Nunn, Arijan Lakic, Mfiondu Kabengele → IN TJ Shorts, Semi Ojeleye, Kevarrius Hayes
 - Captain **Sasha Vezenkov**, coach **Ibon Navarro**.
 
 ## Recommended squad (with trades)

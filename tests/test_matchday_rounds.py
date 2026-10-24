@@ -38,3 +38,21 @@ def test_platform_turns_match_game_nights():
 
 def test_turns_empty_without_round_info():
     assert turns_from_market([{"team": {"abbreviation": "OLY"}}], pd.DataFrame({"platform_abbr": ["OLY"], "official_code": ["OLY"]})) == {}
+
+
+def test_matchday_table_one_round_per_matchday_and_platform_turns():
+    from elfa.features.matchdays import build_matchdays
+
+    market = json.loads((RAW / "fantaking" / "md_08" / "market.json").read_text(encoding="utf-8"))
+    cfg = json.loads((RAW / "fantaking" / "md_08" / "league_config.json").read_text(encoding="utf-8"))
+    team_map = pd.read_csv(RAW.parent / "processed" / "team_map.csv")
+    t = build_matchdays(_schedule(), cfg, market, team_map)
+    assert t.matchday.nunique() == 38 and (t.matchday == t["round"]).all()
+    md8 = t[t.matchday == 8]
+    assert md8.turn.tolist() == [1, 2] and md8.date_utc.tolist() == ["2026-10-27", "2026-10-28"]
+    assert (md8.turn_source == "platform").all() and md8.deadline_utc.notna().all()
+    # rebuilding without platform data keeps what the platform once confirmed
+    again = build_matchdays(_schedule(), None, None, None, previous=t)
+    assert again[again.matchday == 8].turn_source.eq("platform").all()
+    assert again[again.matchday == 8].deadline_utc.notna().all()
+    assert int(again[again.matchday == 8].matchday_id.iloc[0]) == 1535

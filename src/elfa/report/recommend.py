@@ -10,6 +10,7 @@ import pandas as pd
 from elfa.config import PROCESSED, RAW, ROOT
 from elfa.features.dvp import attach_positions, compute_dvp, dvp_summary
 from elfa.features.mapping import load_latest_market
+from elfa.features.matchdays import matchday_turns
 from elfa.ingest.odds import fetch_odds, odds_dir
 from elfa.model.inround import simulate
 from elfa.model.optimise_bridge import run_optimiser
@@ -112,6 +113,9 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         if t:
             by_turn[t] = min(by_turn.get(t, g.date_utc[:10]), g.date_utc[:10])
     nights = [by_turn[t] for t in sorted(by_turn)] if by_turn else sorted({g.date_utc[:10] for g in first})
+    _rounds_tbl, nights_tbl = matchday_turns(md_number)
+    if nights_tbl and nights_tbl != nights:
+        print(f"  ! matchdays.csv nights {nights_tbl} differ from the market's {nights} - using the market")
     nights_txt = ", ".join(f"T{i + 1}={d[5:]}" for i, d in enumerate(nights))
     plan_best = simulate(best.squad)
     plan_hold = simulate(hold.squad)

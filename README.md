@@ -26,7 +26,8 @@ src/elfa/
   report/     recommendation report and email
 data/
   raw/        JSON as fetched, one folder per matchday (gitignored)
-  processed/  parquet/SQLite feature tables (gitignored)
+  processed/  parquet feature tables (gitignored) + committed CSVs; matchdays.csv = matchday → round → game nights (turns), with the
+              platform's turn split and deadline once seen (built by `elfa build`; the dashboard and the report read it first)
   prices/     price log, one CSV per matchday (committed — not available historically)
 docs/
   data-sources.md   endpoints, IDs, rules, scoring (verified 24 Oct 2026)

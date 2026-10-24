@@ -63,6 +63,12 @@ def build(seasons: str = typer.Option("E2026")):
         rprint(bad.to_string(index=False))
     pm = map_players(market, df, tm)
     rprint(pm.method.value_counts().to_string())
+    from elfa.features.matchdays import write_matchdays
+
+    mds = write_matchdays(games, cfg, market, tm)
+    cur = mds[mds.deadline_utc.notna()]
+    rprint(f"matchdays: {mds.matchday.nunique()} (one per round) · current "
+           + (f"MD {int(cur.matchday.iloc[0])} = R{int(cur['round'].iloc[0])}, nights " + ", ".join(f"T{int(r.turn)}={r.date_utc}" for r in cur.itertuples()) if len(cur) else "unknown"))
 
 
 @app.command()

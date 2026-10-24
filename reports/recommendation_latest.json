@@ -8,7 +8,7 @@
   "2026-10-27",
   "2026-10-28"
  ],
- "generated_utc": "2026-10-24T21:41:31Z",
+ "generated_utc": "2026-10-24T21:45:00Z",
  "team": "UnderTakers86",
  "budget": 105.9,
  "trades_left": 3,
@@ -209,11 +209,11 @@
   "coach": "Ibon Navarro",
   "trades_out": [
    {
-    "name": "Mfiondu Kabengele",
-    "pos": "Center",
-    "team": "DUB",
-    "price": 15.6,
-    "md_pts": 18.04
+    "name": "Kendrick Nunn",
+    "pos": "Guard",
+    "team": "PAO",
+    "price": 13.7,
+    "md_pts": 7.03
    },
    {
     "name": "Arijan Lakic",
@@ -223,11 +223,11 @@
     "md_pts": 4.48
    },
    {
-    "name": "Kendrick Nunn",
-    "pos": "Guard",
-    "team": "PAO",
-    "price": 13.7,
-    "md_pts": 7.03
+    "name": "Mfiondu Kabengele",
+    "pos": "Center",
+    "team": "DUB",
+    "price": 15.6,
+    "md_pts": 18.04
    }
   ],
   "trades_in": [
