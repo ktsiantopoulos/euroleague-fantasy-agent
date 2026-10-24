@@ -184,7 +184,10 @@ elif page == "Player":
     if proj.empty or pg.empty:
         st.warning("No data yet.")
     else:
-        name = st.selectbox("Player", sorted(proj[proj.pos != "Head Coach"].name.tolist()))
+        names_all = sorted(proj[proj.pos != "Head Coach"].name.tolist())
+        mine = proj[proj.in_roster & (proj.pos != "Head Coach")].sort_values("md_pts", ascending=False).name.tolist()
+        default_ix = names_all.index(mine[0]) if mine else 0
+        name = st.selectbox("Player", names_all, index=default_ix)
         row = proj[proj.name == name].iloc[0]
         code = pm.loc[pm.platform_id.astype(str) == row.platform_id, "person_code"]
         code = str(code.iloc[0]) if len(code) and isinstance(code.iloc[0], str) else None
@@ -194,9 +197,9 @@ elif page == "Player":
         c.metric("p90", row.md_p90)
         d.metric("Proj. minutes", row.min_hat)
         e.metric("PIR / min", row.rate_hat)
-        st.write(row.why)
-        if row.flags:
-            st.warning(row.flags)
+        st.write(row["why"])
+        if isinstance(row["flags"], str) and row["flags"]:
+            st.warning(row["flags"])
         hist = pg[pg.player_code.astype(str) == code].sort_values("date_utc") if code else pd.DataFrame()
         if len(hist):
             hist = hist.assign(game=lambda d: "R" + d["round"].astype(str) + " " + d.apply(lambda r: ("vs " if r.home else "@ ") + r.opponent, axis=1))
