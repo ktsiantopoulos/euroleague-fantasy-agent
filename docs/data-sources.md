@@ -42,9 +42,11 @@
 - Position ids: Guard 28, Forward 29, Center 30, Head Coach 31
 - Open items to verify: bench scoring / auto-substitution rule (`max_auto_substitutions` is null), coach scoring formula, double-round handling (MD 8 has `num_rounds: 2`).
 
-## 3. Scoring (verified from `fantasy-pts` breakdown, Vezenkov MD7)
-Pure PIR: `pts +1, reb +1, ast +1, stl +1, blk +1, fouls drawn +1, tov −1, pf −1, fg_missed −1, ft_missed −1`
-(blocks received presumably −1; verify on a player with that stat).
+## 3. Scoring (verified against official box scores, MD 1-7, 2,474 player-games)
+Base = PIR: `pts +1, reb +1, ast +1, stl +1, blk +1, fouls drawn +1, tov −1, pf −1, fg_missed −1, ft_missed −1, blocks received −1`
+(official API `valuation` matched our recomputation in 11,218 of 11,218 rows).
+**Win bonus: +10% of |PIR| when the player's team wins** (e.g. 19 → 20.9; −5 → −4.5). DNP = 0.
+Coach scoring and bench rule still to verify.
 
 ## 4. Official stats API (public, no auth)
 - Base: `https://api-live.euroleague.net/v3`
