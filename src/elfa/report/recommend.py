@@ -14,7 +14,13 @@ from elfa.ingest.odds import fetch_odds, odds_dir
 from elfa.model.inround import simulate
 from elfa.model.optimise_bridge import run_optimiser
 from elfa.model.projection import Params, project
-from elfa.model.teams import load_schedule, team_ratings, upcoming_rounds
+from elfa.model.teams import (
+    load_schedule,
+    matchday_games,
+    team_ratings,
+    turns_from_market,
+    upcoming_rounds,
+)
 
 ELITE_TILT = 0.04   # 4% at 100% top-100 ownership
 
@@ -62,15 +68,20 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     dvp, _split = compute_dvp(pg)
     ratings = team_ratings(pg, schedule)
 
-    n_rounds_now = int(cfg["current_matchday"].get("num_rounds") or 1)
-    first = upcoming_rounds(schedule, n_rounds_now)
+    # One fantasy matchday == one EuroLeague round. The platform's `num_rounds` is the number of game
+    # nights (turns) inside the matchday — never use it to span several EuroLeague rounds.
+    first = matchday_games(schedule, md_number)
     start_next = (first[-1].round + 1) if first else None
     second = upcoming_rounds(schedule, 1, start_next) if start_next else []
     third = upcoming_rounds(schedule, 1, start_next + 1) if start_next else []
     horizon = [first, second, third]
+    turns = turns_from_market(market, team_map)
+    n_turns = int(cfg["current_matchday"].get("num_rounds") or 0)
+    if n_turns and turns and max(turns.values()) != n_turns:
+        print(f"  ! platform says {n_turns} game night(s) but the market's round numbers go up to {max(turns.values())}")
 
     odds = fetch_odds(schedule, odds_dir())
-    proj = project(market, roster_ids, pg, player_map, team_map, dvp, ratings, horizon, odds, params)
+    proj = project(market, roster_ids, pg, player_map, team_map, dvp, ratings, horizon, odds, params, turns=turns)
     own_fp = PROCESSED / "top_ownership.csv"
     if own_fp.exists():
         own = pd.read_csv(own_fp)
@@ -94,7 +105,13 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
 
     rounds_txt = ", ".join(sorted({f"R{g.round}" for g in first}))
     deadline = (cfg.get("current_round") or {}).get("started_at", "")[:16].replace("T", " ") + " UTC" if cfg.get("current_round") else "unknown"
-    nights = sorted({g.date_utc[:10] for g in first})
+    # night dates in turn order: T1 = earliest date of the games the platform puts in sub-round 1, etc.
+    by_turn: dict[int, str] = {}
+    for g in first:
+        t = turns.get(g.home) or turns.get(g.away)
+        if t:
+            by_turn[t] = min(by_turn.get(t, g.date_utc[:10]), g.date_utc[:10])
+    nights = [by_turn[t] for t in sorted(by_turn)] if by_turn else sorted({g.date_utc[:10] for g in first})
     nights_txt = ", ".join(f"T{i + 1}={d[5:]}" for i, d in enumerate(nights))
     plan_best = simulate(best.squad)
     plan_hold = simulate(hold.squad)

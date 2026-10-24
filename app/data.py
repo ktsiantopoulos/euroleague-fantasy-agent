@@ -112,17 +112,14 @@ def load_schedule_df() -> pd.DataFrame:
 
 
 def load_odds_snapshots() -> pd.DataFrame:
-    """Every committed odds pull, parsed to one row per (snapshot, game) with the bookmaker consensus.
-
-    Same matching and consensus logic as the ingest (elfa.ingest.odds), so the numbers here are the ones the
-    projection used: home win probability with the vig removed, home spread (negative = home favourite), total.
-    """
+    """Every committed odds pull, parsed to one row per (snapshot, game) with the bookmaker consensus —
+    the same numbers the projection used (elfa.ingest.odds.consensus)."""
     files = sorted((RAW / "odds").glob("odds_*.json"))
     if not files:
         return pd.DataFrame()
-    from elfa.ingest.odds import _club_index, _match
+    from elfa.ingest.odds import consensus
 
-    idx = _club_index(load_schedule())
+    schedule = load_schedule()
     rows = []
     for fp in files:
         snap = pd.Timestamp(fp.stem.split("_")[1]).tz_localize("UTC")
@@ -130,30 +127,9 @@ def load_odds_snapshots() -> pd.DataFrame:
             data = json.loads(fp.read_text(encoding="utf-8"))
         except Exception:  # noqa: BLE001, S112 - a half-written pull must not break the page
             continue
-        for ev in data if isinstance(data, list) else []:
-            home, away = _match(ev.get("home_team", ""), idx), _match(ev.get("away_team", ""), idx)
-            if not home or not away:
-                continue
-            ph, spreads, totals = [], [], []
-            for bk in ev.get("bookmakers", []):
-                for m in bk.get("markets", []):
-                    oc = {o["name"]: o for o in m.get("outcomes", [])}
-                    if m["key"] == "h2h" and ev["home_team"] in oc and ev["away_team"] in oc:
-                        a, b = 1 / oc[ev["home_team"]]["price"], 1 / oc[ev["away_team"]]["price"]
-                        ph.append(a / (a + b))
-                    elif m["key"] == "spreads" and ev["home_team"] in oc and "point" in oc[ev["home_team"]]:
-                        spreads.append(float(oc[ev["home_team"]]["point"]))
-                    elif m["key"] == "totals":
-                        pts = [float(o["point"]) for o in m.get("outcomes", []) if "point" in o]
-                        if pts:
-                            totals.append(sum(pts) / len(pts))
-            rows.append({
-                "snapshot": snap, "home": home, "away": away, "commence": pd.Timestamp(ev.get("commence_time")),
-                "home_win_prob": sum(ph) / len(ph) if ph else None,
-                "home_spread": sum(spreads) / len(spreads) if spreads else None,
-                "total": sum(totals) / len(totals) if totals else None,
-                "books": len(ev.get("bookmakers", [])),
-            })
+        for (home, away), rec in consensus(data if isinstance(data, list) else [], schedule).items():
+            rows.append({"snapshot": snap, "home": home, "away": away, "commence": pd.Timestamp(rec.get("commence")),
+                         "home_win_prob": rec["home_win_prob"], "home_spread": rec["home_spread"], "total": rec["total"], "books": rec["books"]})
     return pd.DataFrame(rows)
 
 

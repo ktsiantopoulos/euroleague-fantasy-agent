@@ -14,7 +14,7 @@
   | league_id (EuroLeague) | 10 |
   | players_list_id / competition_id / schedule_id | 49 |
   | My fantasy team id (UnderTakers86, Classic) | 2787922 |
-  | Current matchday (MD 8, double round) | id 1535, deadline 2026-10-27T15:59Z |
+  | Current matchday (MD 8 = EuroLeague R8, 2 game nights) | id 1535, deadline 2026-10-27T15:59Z; sub-rounds (turns) id 2540 = 27 Oct, id 2541 = 28 Oct |
   | Previous matchday (MD 7) | id 1534 |
 
 ### Endpoints verified (all GET)
@@ -40,7 +40,10 @@
 - Trades: 4 per matchday (`max_num_trades_per_matchday`), cost 0, no extra credits
 - Budget: 100 credits at creation; current team sits at 105.9 (price appreciation)
 - Position ids: Guard 28, Forward 29, Center 30, Head Coach 31
-- Open items to verify: bench scoring / auto-substitution rule (`max_auto_substitutions` is null), coach scoring formula, double-round handling (MD 8 has `num_rounds: 2`).
+- **Matchday = EuroLeague round** (38 platform matchdays = 38 RS rounds; MD 1–7 reconciled 1:1 against R1–R7). The platform's `num_rounds`
+  inside a matchday and the market's `round.number` per player are the **game nights (turns)**, not EuroLeague rounds — MD 8 has
+  `num_rounds: 2` because R8 is played over 27 and 28 Oct; R9 (29–30 Oct) is MD 9 with its own deadline. Verified 25 Oct 2026.
+- Open items to verify: bench scoring / auto-substitution rule (`max_auto_substitutions` is null), coach scoring formula.
 
 ## 3. Scoring (verified against official box scores, MD 1-7, 2,474 player-games)
 Base = PIR: `pts +1, reb +1, ast +1, stl +1, blk +1, fouls drawn +1, tov −1, pf −1, fg_missed −1, ft_missed −1, blocks received −1`

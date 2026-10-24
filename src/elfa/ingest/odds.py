@@ -1,7 +1,10 @@
 """Bookmaker odds via the-odds-api.com (sport key `basketball_euroleague`).
 
-Optional: skipped when ODDS_API_KEY is absent. Returns per game: consensus spread (home team
-perspective, negative = home favourite), total, and implied home win probability (vig removed).
+Optional: without ODDS_API_KEY (or when the API fails) the most recent snapshot already on disk is
+used if it is less than MAX_SNAPSHOT_AGE_H old, so a local re-run or a key-less CI run keeps the same
+odds the last pull saw instead of silently falling back to model margins. Returns per game: consensus
+spread (home team perspective, negative = home favourite), total, and implied home win probability
+(vig removed).
 Team names are matched to official club codes by token overlap with the schedule's club names.
 """
 from __future__ import annotations
@@ -38,17 +41,52 @@ def _match(name: str, idx: dict[str, set[str]]) -> str | None:
     return best
 
 
+MAX_SNAPSHOT_AGE_H = 36
+
+
+def latest_snapshot(out_dir: Path, max_age_h: float = MAX_SNAPSHOT_AGE_H) -> tuple[list[dict], str] | None:
+    """Most recent committed odds pull (data, 'YYYYMMDDTHHMM') if it is fresh enough, else None."""
+    files = sorted(out_dir.glob("odds_*.json")) if out_dir.exists() else []
+    if not files:
+        return None
+    stamp = files[-1].stem.split("_", 1)[1]
+    try:
+        pulled = time.mktime(time.strptime(stamp, "%Y%m%dT%H%M")) - time.timezone
+    except ValueError:
+        return None
+    if (time.time() - pulled) / 3600 > max_age_h:
+        return None
+    try:
+        return json.loads(files[-1].read_text(encoding="utf-8")), stamp
+    except (OSError, ValueError):
+        return None
+
+
 def fetch_odds(schedule: list[dict], out_dir: Path) -> dict[tuple[str, str], dict]:
     key = os.getenv("ODDS_API_KEY", "").strip()
-    if not key:
-        return {}
-    r = requests.get(API, params={"apiKey": key, "regions": "eu", "markets": "h2h,spreads,totals", "oddsFormat": "decimal"}, timeout=30)
-    if r.status_code != 200:
-        print(f"  ! odds API {r.status_code}: {r.text[:120]}")
-        return {}
-    data = r.json()
-    out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / f"odds_{time.strftime('%Y%m%dT%H%M', time.gmtime())}.json").write_text(json.dumps(data), encoding="utf-8")
+    data = None
+    if key:
+        try:
+            r = requests.get(API, params={"apiKey": key, "regions": "eu", "markets": "h2h,spreads,totals", "oddsFormat": "decimal"}, timeout=30)
+            if r.status_code == 200:
+                data = r.json()
+                out_dir.mkdir(parents=True, exist_ok=True)
+                (out_dir / f"odds_{time.strftime('%Y%m%dT%H%M', time.gmtime())}.json").write_text(json.dumps(data), encoding="utf-8")
+            else:
+                print(f"  ! odds API {r.status_code}: {r.text[:120]}")
+        except requests.RequestException as e:
+            print(f"  ! odds API {type(e).__name__}")
+    if data is None:
+        snap = latest_snapshot(out_dir)
+        if snap is None:
+            return {}
+        data, stamp = snap
+        print(f"  odds: using committed snapshot {stamp} UTC ({'no ODDS_API_KEY' if not key else 'API failed'})")
+    return consensus(data, schedule)
+
+
+def consensus(data: list[dict], schedule: list[dict]) -> dict[tuple[str, str], dict]:
+    """Per (home, away) official codes: vig-free home win probability, home spread, total, book count."""
     idx = _club_index(schedule)
     out: dict[tuple[str, str], dict] = {}
     for ev in data:

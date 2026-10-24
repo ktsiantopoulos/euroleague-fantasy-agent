@@ -88,6 +88,36 @@ def coach_ev(mu: float, sigma: float = SIGMA) -> float:
     return ev
 
 
+def matchday_games(schedule: list[dict], md_number: int) -> list[Game]:
+    """Games of the fantasy matchday `md_number`.
+
+    A platform matchday is exactly one EuroLeague regular-season round (38 matchdays = 38 rounds; the
+    platform's `num_rounds` inside a matchday counts its game nights, not EuroLeague rounds). If that
+    round is already fully played (stale market), fall back to the next unplayed round.
+    """
+    games = upcoming_rounds(schedule, 1, md_number)
+    if games and any(not g_played(schedule, g.game_code) for g in games):
+        return games
+    return upcoming_rounds(schedule, 1)
+
+
+def g_played(schedule: list[dict], game_code: int) -> bool:
+    return any(g["gameCode"] == game_code and g.get("played") for g in schedule)
+
+
+def turns_from_market(market: list[dict], team_map: pd.DataFrame) -> dict[str, int]:
+    """Game night (turn) per official club code, from the platform's own sub-round number in the market
+    (`round.number`: 1 = first night of the matchday). Empty when the market carries no round info."""
+    t2o = dict(zip(team_map.platform_abbr, team_map.official_code))
+    out: dict[str, int] = {}
+    for m in market:
+        abbr = (m.get("team") or {}).get("abbreviation")
+        n = (m.get("round") or {}).get("number")
+        if abbr in t2o and n:
+            out[t2o[abbr]] = int(n)
+    return out
+
+
 def upcoming_rounds(schedule: list[dict], n_rounds: int, from_round: int | None = None) -> list[Game]:
     played_rounds = {g["round"] for g in schedule if g.get("played")}
     start = from_round or (max(played_rounds) + 1 if played_rounds else 1)

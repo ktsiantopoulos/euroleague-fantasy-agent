@@ -49,7 +49,8 @@ Never commit `.env`. For the scheduled GitHub Actions relay, store `FANTAKING_TO
 
 ## Status
 
-Phase 0 — data foundation. First target: matchday 8 (double round), deadline 2026-10-27 15:59 UTC.
+Phase 0 — data foundation. First target: matchday 8 (= EuroLeague R8, two game nights), deadline 2026-10-27 15:59 UTC.
+One fantasy matchday is one EuroLeague round; the platform's `num_rounds` counts the game nights (turns) inside it.
 
 ## Phase 0 run order (on your PC)
 

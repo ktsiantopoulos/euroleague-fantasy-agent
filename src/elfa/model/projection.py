@@ -89,9 +89,11 @@ def project(
     horizon: list[list[Game]],
     odds: dict | None = None,
     p: Params | None = None,
+    turns: dict[str, int] | None = None,
 ) -> pd.DataFrame:
     p = p or Params.load()
     odds = odds or {}
+    turns = turns or {}
     played = pg[pg.played]
     league_rate = played.pir.sum() / played.minutes.sum()
     league_sd = played.pir.std()
@@ -115,9 +117,13 @@ def project(
             mu, pw = -mu, 1 - pw
         return mu, pw, home, opp
 
-    # turn index = order of game night within the current matchday (1 = first night)
+    # turn = game night within the current matchday (1 = first night). The platform's own sub-round
+    # number per club is authoritative when present; otherwise the order of distinct game dates.
     nights = sorted({g.date_utc[:10] for g in horizon[0]})
-    turn_of = {d: i + 1 for i, d in enumerate(nights)}
+    date_turn = {d: i + 1 for i, d in enumerate(nights)}
+
+    def turn_of_game(g: Game) -> int:
+        return turns.get(g.home) or turns.get(g.away) or date_turn.get(g.date_utc[:10], 1)
 
     rows = []
     for m in market:
@@ -147,7 +153,7 @@ def project(
                         md_pts += ev
                         md_var += 12.0 ** 2
                         games_md += 1
-                        games_detail.append({"turn": turn_of.get(g.date_utc[:10], 1), "opp": opp, "home": home, "fp": round(ev, 2), "sd": 12.0, "pw": round(pw, 3)})
+                        games_detail.append({"turn": turn_of_game(g), "opp": opp, "home": home, "fp": round(ev, 2), "sd": 12.0, "pw": round(pw, 3)})
                         why.append(f"{'vs' if home else '@'} {opp}: margin {mu:+.0f}, win {pw:.0%} → EV {ev:+.1f}")
             flags.append("coach")
         else:
@@ -173,8 +179,8 @@ def project(
                     if h_i == 0:
                         dv = dvp_idx.get((opp, pos), 0.0)
                         g_sd = float(np.sqrt((prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)))
-                        games_detail.append({"turn": turn_of.get(g.date_utc[:10], 1), "opp": opp, "home": home, "fp": round(fp, 2), "sd": round(g_sd, 2), "pw": round(pw, 3)})
-                        why.append(f"T{turn_of.get(g.date_utc[:10], 1)} {'vs' if home else '@'} {opp} (DvP {dv:+.1f}, win {pw:.0%}) → {fp:.1f}")
+                        games_detail.append({"turn": turn_of_game(g), "opp": opp, "home": home, "fp": round(fp, 2), "sd": round(g_sd, 2), "pw": round(pw, 3)})
+                        why.append(f"T{turn_of_game(g)} {'vs' if home else '@'} {opp} (DvP {dv:+.1f}, win {pw:.0%}) → {fp:.1f}")
                         md_pts += fp
                         md_var += (prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)
                         games_md += 1

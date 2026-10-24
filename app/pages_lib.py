@@ -81,7 +81,7 @@ COL = {
     "d_win": st.column_config.NumberColumn("Δ win pp", help="Change in home win probability since the first odds snapshot (percentage points)", format="%+.1f"),
     "d_spread": st.column_config.NumberColumn("Δ spread", help="Change in the home spread since the first snapshot", format="%+.1f"),
     "d_total": st.column_config.NumberColumn("Δ total", help="Change in the total since the first snapshot", format="%+.1f"),
-    "games_md_team": st.column_config.NumberColumn("G this MD", help="Games the club plays in this matchday"),
+    "games_md_team": st.column_config.NumberColumn("G this MD", help="Games the club plays in this matchday (one per round; two only in a genuine double round)"),
     "games_h": st.column_config.NumberColumn("G horizon", help="Games the club plays in the selected horizon"),
     "home_h": st.column_config.NumberColumn("Home", help="Home games in the horizon"),
     "rest": st.column_config.NumberColumn("Rest days", help="Days between the club's last game and its first game of this matchday"),
@@ -162,8 +162,13 @@ def current_rounds_and_nights(sched: pd.DataFrame) -> tuple[list[int], list[str]
     else:
         rounds, nights = [], []
     if not rounds and len(sched):
-        nxt = sched[~sched.played]["round"]
-        rounds = [int(nxt.min())] if len(nxt) else []
+        # one fantasy matchday == one EuroLeague round; fall back to the next unplayed round if that one is over
+        md = D.latest_matchday()
+        if md and (~sched[sched["round"] == md].played).any():
+            rounds = [md]
+        else:
+            nxt = sched[~sched.played]["round"]
+            rounds = [int(nxt.min())] if len(nxt) else []
     if rounds and not nights and len(sched):
         nights = sorted(sched[sched["round"].isin(rounds)].date_utc.dt.strftime("%Y-%m-%d").unique().tolist())
     return rounds, nights
@@ -563,7 +568,7 @@ def page_captain(proj: pd.DataFrame, md: int, mode: str):
     f1, f2, f3 = st.columns(3)
     rank_by = f1.selectbox("Rank by", ["Expected pts (ceiling play)", "Floor p10 (safe play)", "p90 (max ceiling)"],
                            help="Doubling the captain adds exactly his matchday points: the expected gain is his expected points, the risk is his spread.")
-    min_games = f2.selectbox("Games this matchday", ["any", "2 (double round only)"]) if field.games_md.max() > 1 else "any"
+    min_games = f2.selectbox("Games this matchday", ["any", "2+"]) if field.games_md.max() > 1 else "any"
     only_mine = f3.checkbox("Only my squad", value=False) if mode == "team" else False
     df = field
     if min_games.startswith("2"):
@@ -633,7 +638,7 @@ def page_fixtures(proj: pd.DataFrame, md: int):
         cur = cur.merge(od[["home", "away", "home_win_prob", "home_spread", "total"]], on=["home", "away"], how="left")
         cur["home_win"] = (cur.home_win_prob * 100).round(0)
         cur = cur.rename(columns={"home_spread": "spread"})
-    st.subheader(f"Matchday {md} — rounds {' + '.join(f'R{r}' for r in rounds)} · {len(nights)} game night(s)")
+    st.subheader(f"Matchday {md} — {' + '.join(f'round {r}' for r in rounds)} · {len(nights)} game night(s)")
     st.caption("Tip-off times in Athens. Field↔bench swaps and captain changes are allowed between nights, for players who have not played yet.")
     cols = ["night", "local", "home", "away"] + (["home_win", "spread", "total"] if len(od) else []) + ["venue"]
     show(cur[cols], height=min(60 + 36 * len(cur), 560))
@@ -650,7 +655,7 @@ def page_fixtures(proj: pd.DataFrame, md: int):
     st.dataframe(grid.sort_values("games_md_team", ascending=False), width="stretch", column_config={"games_md_team": COL["games_md_team"]})
 
     st.divider()
-    n_rounds = st.slider("Horizon (rounds ahead)", 2, 10, 6, help="Two rounds ≈ one double matchday. The optimiser looks three matchdays ahead.")
+    n_rounds = st.slider("Horizon (rounds ahead)", 2, 10, 5, help="One fantasy matchday = one EuroLeague round. The optimiser looks three matchdays ahead.")
     start = min(rounds) if rounds else int(sched[~sched.played]["round"].min())
     hor = sched[(sched["round"] >= start) & (sched["round"] < start + n_rounds) & (sched.phase == "RS")].copy()
     st.subheader(f"Horizon — rounds {start} to {start + n_rounds - 1}")
