@@ -23,6 +23,43 @@ st.set_page_config(page_title="EuroLeague Fantasy Agent", page_icon="🏀", layo
 
 SLOT = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
 
+# Column titles with explanations (hover the header)
+COL = {
+    "slot": st.column_config.TextColumn("Slot", help="Starters, 6th man and coach score 100%; bench scores 50%. Captain (C) scores 200%."),
+    "player": st.column_config.TextColumn("Player"),
+    "name": st.column_config.TextColumn("Player"),
+    "pos": st.column_config.TextColumn("Pos", help="Fantasy position: Guard / Forward / Center / Head Coach"),
+    "team": st.column_config.TextColumn("Team"),
+    "club": st.column_config.TextColumn("Club"),
+    "price": st.column_config.NumberColumn("Price", help="Current credits on the platform", format="%.1f"),
+    "quotation": st.column_config.NumberColumn("Price", help="Current credits on the platform", format="%.1f"),
+    "nights": st.column_config.TextColumn("Nights", help="Game nights of this matchday the player plays (T1 = first night). Later-night bench players can be promoted after earlier nights."),
+    "prob_play": st.column_config.NumberColumn("P(play)", help="Platform availability: 1.0 = fit, lower = doubtful; expected points are multiplied by it", format="%.2f"),
+    "min": st.column_config.NumberColumn("Min", help="Projected minutes per game: 20% last game, 30% last-3 mean, 50% last-5 mean, discounted for tiny samples", format="%.0f"),
+    "min_hat": st.column_config.NumberColumn("Min", help="Projected minutes per game: 20% last game, 30% last-3 mean, 50% last-5 mean, discounted for tiny samples", format="%.0f"),
+    "PIR/min": st.column_config.NumberColumn("PIR/min", help="Projected PIR per minute: 60% last-5 games, 40% season, shrunk toward the league average", format="%.2f"),
+    "rate_hat": st.column_config.NumberColumn("PIR/min", help="Projected PIR per minute: 60% last-5 games, 40% season, shrunk toward the league average", format="%.2f"),
+    "exp": st.column_config.NumberColumn("Exp pts", help="Expected fantasy points this matchday: all games summed, PIR + 10% win bonus, home/away, pace and DvP adjustments, elite-consensus tilt", format="%.1f"),
+    "md_pts": st.column_config.NumberColumn("Exp pts", help="Expected fantasy points this matchday: all games summed, PIR + 10% win bonus, home/away, pace and DvP adjustments, elite-consensus tilt", format="%.1f"),
+    "p90": st.column_config.NumberColumn("p90", help="90th-percentile outcome — the ceiling. Used for captain choice.", format="%.1f"),
+    "md_p90": st.column_config.NumberColumn("p90", help="90th-percentile outcome — the ceiling. Used for captain choice.", format="%.1f"),
+    "md_sd": st.column_config.NumberColumn("±", help="Uncertainty (standard deviation) of the matchday projection", format="%.1f"),
+    "value": st.column_config.NumberColumn("Pts/credit", help="Expected points per credit of price", format="%.2f"),
+    "horizon_pts": st.column_config.NumberColumn("3-wk value", help="Weighted expected points over this matchday and the next two (1.0 / 0.6 / 0.3)", format="%.1f"),
+    "popularity": st.column_config.NumberColumn("Global own", help="Share of all managers owning the player", format="%.0f%%"),
+    "elite_own": st.column_config.NumberColumn("Top-100 own", help="Share of the top-100 managers owning the player (last played matchday)", format="%d%%"),
+    "in_roster": st.column_config.CheckboxColumn("Mine", help="Currently in your squad"),
+    "flags": st.column_config.TextColumn("Flags", help="Data warnings: few games, DNP last game, no game this matchday"),
+    "justification": st.column_config.TextColumn("Why", help="Minutes × rate, then each game: night, opponent, DvP tilt, win probability → points", width="large"),
+    "why": st.column_config.TextColumn("Why", help="Minutes × rate, then each game: night, opponent, DvP tilt, win probability → points", width="large"),
+    "games_md": st.column_config.NumberColumn("G", help="Games this matchday"),
+}
+
+
+def show(df: pd.DataFrame, **kw):
+    cfg = {c: COL[c] for c in df.columns if c in COL}
+    st.dataframe(df, column_config=cfg, width="stretch", hide_index=True, **kw)
+
 
 @st.cache_data(ttl=600)
 def _proj():
@@ -116,7 +153,7 @@ elif page == "What-if optimiser":
             m3.metric("In-round gain (sim)", plan.gain)
             m4.metric("Status", sol.status)
             st.write(f"**OUT:** {', '.join(sol.trades_out) or '—'}  →  **IN:** {', '.join(sol.trades_in) or '—'}  ·  Captain **{sol.captain}**, coach **{sol.coach}**")
-            st.dataframe(_squad_table(sol.squad), width="stretch", hide_index=True)
+            show(_squad_table(sol.squad))
             for n in plan.notes:
                 st.caption("• " + n)
 
@@ -140,8 +177,8 @@ elif page == "Projections":
         if q:
             df = df[df.name.str.contains(q, case=False)]
         cols = ["name", "pos", "team", "quotation", "nights", "prob_play", "min_hat", "rate_hat", "md_pts", "md_p90", "value", "horizon_pts", "popularity", "in_roster", "flags"]
-        st.dataframe(df[cols].sort_values("md_pts", ascending=False).rename(columns={"quotation": "price", "min_hat": "min", "rate_hat": "PIR/min", "md_pts": "exp", "md_p90": "p90"}),
-                     width="stretch", hide_index=True, height=600)
+        pop_pct = df.assign(popularity=(df.popularity.fillna(0) * 100).round(0))
+        show(pop_pct[cols].sort_values("md_pts", ascending=False), height=600)
         st.caption("Scatter: price vs expected points (size = p90).")
         ch = alt.Chart(df[df.pos != "Head Coach"]).mark_circle().encode(
             x=alt.X("quotation", title="price"), y=alt.Y("md_pts", title="expected pts"),
@@ -156,8 +193,42 @@ elif page == "Defence vs position":
     if dvp.empty:
         st.warning("No DvP yet.")
     else:
-        st.subheader("PIR over expectation conceded per game, this season (shrunk to league mean)")
-        st.caption("Positive = the team leaks PIR to that position; negative = it stifles it. n = games.")
+        st.subheader(f"Who to target in matchday {md}")
+        st.caption("Each row is a game this matchday where the opponent leaks PIR to a position. Pick players of that position from the listed team. "
+                   "DvP = PIR over expectation conceded per game (shrunk toward 0 with only a few games played); + means the defence is weak there.")
+        if not proj.empty:
+            dvp_idx = dvp.set_index(["team", "fpos"])
+            rows = []
+            seen = set()
+            for r in proj[proj.pos != "Head Coach"].itertuples():
+                for g in r.games:
+                    key = (r.team_off, g["opp"], g["turn"], r.pos)
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    try:
+                        d = dvp_idx.loc[(g["opp"], r.pos)]
+                    except KeyError:
+                        continue
+                    cands = proj[(proj.team_off == r.team_off) & (proj.pos == r.pos)].nlargest(3, "md_pts")
+                    rows.append({"night": f"T{g['turn']}", "team": r.team, "opponent": g["opp"], "home": "home" if g["home"] else "away",
+                                 "position": r.pos, "DvP": round(float(d.piroe_shrunk), 1), "rank": int(d.rank_weak_to_strong), "games": int(d.games),
+                                 "win %": round(100 * g["pw"]), "best options": ", ".join(f"{c.name} ({c.quotation}, {c.md_pts:.0f})" for c in cands.itertuples())})
+            tgt = pd.DataFrame(rows).sort_values("DvP", ascending=False)
+            good = tgt[tgt.DvP >= 1.0]
+            bad = tgt[tgt.DvP <= -1.5].sort_values("DvP")
+            st.markdown("**Target** (opponent leaks to this position):")
+            st.dataframe(good.head(12), width="stretch", hide_index=True,
+                column_config={"DvP": st.column_config.NumberColumn("DvP", help="PIR over expectation the opponent concedes to this position per game (+ = weak defence)", format="%+.1f"),
+                               "rank": st.column_config.NumberColumn("Rank", help="1 = weakest defence in the league at this position, 20 = strongest"),
+                               "games": st.column_config.NumberColumn("n", help="Games the opponent has played — sample size"),
+                               "win %": st.column_config.NumberColumn("Win %", help="Probability this team wins the game (bookmakers when available) — the 10% bonus", format="%d%%"),
+                               "best options": st.column_config.TextColumn("Best options", help="Top three players of that team and position by expected points (price, expected)", width="large")})
+            st.markdown("**Avoid** (opponent stifles this position):")
+            st.dataframe(bad.head(8), width="stretch", hide_index=True)
+        st.divider()
+        st.subheader("Full matrix — PIR over expectation conceded per game (this season)")
+        st.caption("Red = the team leaks PIR to that position (target its opponents' players of that position); blue = it stifles it. Hover a cell for games played.")
         piv = dvp.pivot(index="team", columns="fpos", values="piroe_shrunk")[["Guard", "Forward", "Center"]]
         heat = dvp.copy()
         ch = alt.Chart(heat).mark_rect().encode(

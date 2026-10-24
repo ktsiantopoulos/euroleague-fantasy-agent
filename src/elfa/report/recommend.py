@@ -16,6 +16,8 @@ from elfa.model.optimise_bridge import run_optimiser
 from elfa.model.projection import Params, project
 from elfa.model.teams import load_schedule, team_ratings, upcoming_rounds
 
+ELITE_TILT = 0.04   # 4% at 100% top-100 ownership
+
 
 def _fmt_squad(sq: pd.DataFrame) -> str:
     cols = ["slot", "name", "pos", "team", "quotation", "nights", "md_pts", "md_p90", "elite_own", "why"]
@@ -75,6 +77,12 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         proj["elite_own"] = proj.name.map(dict(zip(own.player, own.own_pct))).fillna(0).astype(int)
     else:
         proj["elite_own"] = 0
+    # consensus prior from managers who demonstrably beat the market: up to +ELITE_TILT at 100% ownership
+    proj["md_pts_model"] = proj.md_pts
+    tilt = 1 + ELITE_TILT * proj.elite_own / 100.0
+    proj["md_pts"] = (proj.md_pts * tilt).round(2)
+    proj["horizon_pts"] = (proj.horizon_pts * tilt).round(2)
+    proj["md_p90"] = (proj.md_p90 * tilt).round(2)
     proj.to_csv(PROCESSED / f"projection_md{md_number:02d}.csv", index=False)
 
     hold = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=True)
@@ -135,6 +143,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "- Coach: win by 21+ set to +25 (user-provided; not yet observed in API data).",
         "- Starting five constrained to 1–3 players per position (covers the platform's formations).",
         "- Price-change term inactive (μ = 0) until the price log has two or more matchdays.",
+        "- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 ownership (raw model value kept as md_pts_model).",
+        "- Soft rules from the top-100 study: 3 points penalty per player above 3 from one club; 1 point per credit for bench players under 6.0.",
         f"- Optimiser status: {best.status} / {hold.status}.",
     ]
     out = ROOT / "reports" / f"recommendation_md{md_number:02d}.md"

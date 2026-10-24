@@ -18,6 +18,11 @@ FUTURE_FACTOR = 0.75        # average multiplier of a squad player in future mat
 CAPTAIN_SD_TILT = 0.4       # prefer high-ceiling captains
 MIN_PROMOTABLE_BENCH = 2    # bench players whose first game is after night 1 (swap options)
 MIN_FIRST_NIGHT_FIELD = 3   # field players who play on night 1 (information before the swap window)
+SOFT_CLUB_CAP = 3           # top-100 managers hold at most 2-3 per club; each player above this costs ...
+CLUB_CAP_PENALTY = 3.0      # ... this many expected points in the objective
+BENCH_OPTION_WEIGHT = 1.0   # weight of the promotion option (0.5 = my conservative sim; elite promote ~35% of field slots)
+BENCH_PRICE_FLOOR = 6.0     # top-100 bench averages 7.4 credits; each credit below this costs ...
+BENCH_FLOOR_PENALTY = 1.0   # ... this many expected points
 
 
 def _pos_part(mu: float, sd: float) -> float:
@@ -39,7 +44,7 @@ def bench_value(df: pd.DataFrame) -> dict[str, float]:
         base = BENCH_FACTOR * r.md_pts
         prem = 0.0
         if r.pos != "Head Coach" and r.first_turn >= 2 and len(ref.get(r.pos, [])):
-            prem = 0.5 * float(sum(_pos_part(r.md_pts - f.md_pts, f.md_sd) for f in ref[r.pos].itertuples()) / len(ref[r.pos]))
+            prem = BENCH_OPTION_WEIGHT * 0.5 * float(sum(_pos_part(r.md_pts - f.md_pts, f.md_sd) for f in ref[r.pos].itertuples()) / len(ref[r.pos]))
         out[r.platform_id] = base + prem
     return out
 
@@ -91,12 +96,18 @@ def optimise(
 
     x, s, m, b, c = _bin("x", ids), _bin("s", players), _bin("m", players), _bin("b", players), _bin("c", players)
 
+    clubs = sorted(set(club.values()))
+    over = {cl: pulp.LpVariable(f"over_{k}", lowBound=0) for k, cl in enumerate(clubs)}
     prob += (
         pulp.lpSum((s[i] + m[i]) * md[i] + b[i] * bval[i] + c[i] * (md[i] + CAPTAIN_SD_TILT * sd[i]) for i in players)
         + pulp.lpSum(x[i] * md[i] for i in coaches)
         + pulp.lpSum(x[i] * FUTURE_FACTOR * fut[i] for i in ids)
         + mu_price * pulp.lpSum(x[i] * exp_price_change.get(i, 0.0) for i in ids)
+        - CLUB_CAP_PENALTY * pulp.lpSum(over[cl] for cl in clubs)
+        - BENCH_FLOOR_PENALTY * pulp.lpSum(b[i] * max(BENCH_PRICE_FLOOR - q[i], 0.0) for i in players)
     )
+    for cl in clubs:
+        prob += over[cl] >= pulp.lpSum(x[i] for i in ids if club[i] == cl) - SOFT_CLUB_CAP
 
     for p_, n in POS_QUOTA.items():
         prob += pulp.lpSum(x[i] for i in ids if pos[i] == p_) == n
