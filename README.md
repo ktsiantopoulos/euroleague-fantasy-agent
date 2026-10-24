@@ -50,3 +50,12 @@ Never commit `.env`. For the scheduled GitHub Actions relay, store `FANTAKING_TO
 ## Status
 
 Phase 0 — data foundation. First target: matchday 8 (double round), deadline 2026-10-27 15:59 UTC.
+
+## Phase 0 run order (on your PC)
+
+```bash
+elfa pull-official                 # ~140 box scores, public API, a few minutes
+elfa pull-platform --history       # market + roster + price log; --history adds per-player pts (358 × 7 calls)
+elfa build                         # player_games.parquet, team_map.csv, player_map.csv
+elfa reconcile                     # gate: platform pts == official PIR
+```
