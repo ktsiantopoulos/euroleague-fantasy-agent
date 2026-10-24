@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.54 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.47 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -66,7 +66,7 @@ learn: hold-out R7 MAE current 6.46 vs candidate 6.45 (w=(0.2, 0.3, 0.5), λ=0.3
 γ=1.0) → kept current
 
 ## top-100
-top-100: 175 roster previews fetched now
+top-100: 0 roster previews fetched now
 # Top-25 managers — matchdays 1–7
 
 ## Ownership in the top 25, matchday 7
