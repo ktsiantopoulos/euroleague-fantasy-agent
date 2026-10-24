@@ -8,8 +8,10 @@ on:
         type: boolean
         default: false
   schedule:
-    # daily 09:00 UTC (12:00 Athens): refreshes injuries, prices and the recommendation before any deadline
-    - cron: "0 9 * * *"
+    # hourly check; the "Deadline gate" step decides whether to actually run:
+    #   - daily at ~09:00 UTC (fresh prices/injuries), and
+    #   - in the windows 4-5 h and 1-2 h before the matchday deadline (final odds, late injuries)
+    - cron: "7 * * * *"
 
 permissions:
   contents: write
@@ -41,7 +43,41 @@ jobs:
           echo "::add-mask::$T"
           echo "FANTAKING_TOKEN=$T" >> "$GITHUB_ENV"
 
+      - name: Deadline gate
+        id: gate
+        env:
+          FORCE: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import os, datetime as dt, requests
+          force = os.environ.get("FORCE") == "true"
+          now = dt.datetime.now(dt.timezone.utc)
+          why = []
+          if force:
+              why.append("manual")
+          if now.hour == 9:
+              why.append("daily")
+          tok = os.environ.get("FANTAKING_TOKEN", "")
+          if tok:
+              try:
+                  r = requests.get("https://fantaking-api.dunkest.com/api/v1/leagues/10/config",
+                                   headers={"Authorization": f"Bearer {tok}", "Accept": "application/json"}, timeout=30)
+                  started = r.json()["data"]["current_round"]["started_at"]
+                  deadline = dt.datetime.fromisoformat(started.replace("Z", "+00:00"))
+                  hours = (deadline - now).total_seconds() / 3600
+                  print(f"deadline={deadline.isoformat()}")
+                  print(f"hours_to_deadline={hours:.2f}")
+                  if 4 <= hours < 5 or 1 <= hours < 2:
+                      why.append(f"pre-deadline ({hours:.1f}h)")
+              except Exception as e:  # noqa: BLE001
+                  print(f"gate_error={type(e).__name__}")
+          print("run=" + ("true" if why else "false"))
+          print("why=" + ", ".join(why))
+          PY
+          cat "$GITHUB_OUTPUT"
+
       - name: Restore raw cache
+        if: steps.gate.outputs.run == 'true'
         uses: actions/cache@v4
         with:
           path: data/raw
@@ -49,13 +85,15 @@ jobs:
           restore-keys: raw-
 
       - name: Pull official box scores
+        if: steps.gate.outputs.run == 'true'
         run: |
           mkdir -p reports
-          echo "## pull-official" | tee reports/latest.md
+          echo "## run reason: ${{ steps.gate.outputs.why }}  (deadline ${{ steps.gate.outputs.deadline }}, ${{ steps.gate.outputs.hours_to_deadline }} h away)" | tee reports/latest.md
+          echo "## pull-official" | tee -a reports/latest.md
           elfa pull-official 2>&1 | tee -a reports/latest.md
 
       - name: Pull platform market and team
-        if: env.FANTAKING_TOKEN != ''
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         run: |
           echo -e "\n## pull-platform" | tee -a reports/latest.md
           if [ "${{ inputs.history }}" = "true" ]; then
@@ -65,29 +103,29 @@ jobs:
           fi
 
       - name: Platform step skipped
-        if: env.FANTAKING_TOKEN == ''
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN == '')
         run: echo -e "\n## pull-platform\nSKIPPED - add FANTAKING_TOKEN as a repository secret" | tee -a reports/latest.md
 
       - name: Build features and maps
-        if: env.FANTAKING_TOKEN != ''
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         run: |
           echo -e "\n## build" | tee -a reports/latest.md
           elfa build 2>&1 | tee -a reports/latest.md
 
       - name: Reconcile (Phase 0 gate)
-        if: env.FANTAKING_TOKEN != ''
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         run: |
           echo -e "\n## reconcile" | tee -a reports/latest.md
           elfa reconcile 2>&1 | tee -a reports/latest.md || true
 
       - name: Backtest (P1 gate)
-        if: env.FANTAKING_TOKEN != ''
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         run: |
           echo -e "\n## backtest" | tee -a reports/latest.md
           elfa backtest 2>&1 | tee -a reports/latest.md || true
 
       - name: Recommend
-        if: env.FANTAKING_TOKEN != ''
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
@@ -95,14 +133,14 @@ jobs:
           elfa recommend 2>&1 | tail -n 5 | tee -a reports/latest.md || true
 
       - name: Job summary
-        if: always()
+        if: always() && steps.gate.outputs.run == 'true'
         run: |
           echo '```' >> "$GITHUB_STEP_SUMMARY"
           cat reports/latest.md >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit results
-        if: always()
+        if: always() && steps.gate.outputs.run == 'true'
         run: |
           git config user.name "elfa-bot"
           git config user.email "elfa-bot@users.noreply.github.com"

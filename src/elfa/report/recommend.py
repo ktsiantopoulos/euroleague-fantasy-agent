@@ -77,12 +77,15 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     best = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=False, keep_ids=keep_ids)
 
     rounds_txt = ", ".join(sorted({f"R{g.round}" for g in first}))
+    deadline = (cfg.get("current_round") or {}).get("started_at", "")[:16].replace("T", " ") + " UTC" if cfg.get("current_round") else "unknown"
     nights = sorted({g.date_utc[:10] for g in first})
     nights_txt = ", ".join(f"T{i + 1}={d[5:]}" for i, d in enumerate(nights))
     plan_best = simulate(best.squad)
     plan_hold = simulate(hold.squad)
     lines = [
         f"# Recommendation — matchday {md_number} ({rounds_txt})",
+        "",
+        f"**Deadline: {deadline}** (first tip-off of the matchday; trades close then).",
         "",
         (f"Generated {time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())} · team **{tmd['name']}** · budget {budget} · trades left {trades_left} · "
          f"odds {'ON (' + str(len(odds)) + ' games)' if odds else 'OFF (model margins)'}"),
