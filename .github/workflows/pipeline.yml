@@ -113,6 +113,12 @@ jobs:
         if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN == '')
         run: echo -e "\n## pull-platform\nSKIPPED - add FANTAKING_TOKEN as a repository secret" | tee -a reports/latest.md
 
+      - name: External reference (season-start prices, cross-source check)
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
+        run: |
+          echo -e "\n## pull-external" | tee -a reports/latest.md
+          elfa pull-external 2>&1 | tee -a reports/latest.md || true
+
       - name: Build features and maps
         if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         run: |
@@ -166,7 +172,7 @@ jobs:
         run: |
           git config user.name "elfa-bot"
           git config user.email "elfa-bot@users.noreply.github.com"
-          git add -A reports data/prices data/raw
+          git add -A reports data/prices data/raw data/external
           for f in data/processed/*.csv data/processed/*.md data/processed/*.json; do [ -f "$f" ] && git add -f "$f"; done; true
           git diff --cached --quiet || git commit -m "pipeline: $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_number }}"
           git push

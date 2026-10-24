@@ -28,7 +28,8 @@ data/
   raw/        JSON as fetched, one folder per matchday (gitignored)
   processed/  parquet feature tables (gitignored) + committed CSVs; matchdays.csv = matchday → round → game nights (turns), with the
               platform's turn split and deadline once seen (built by `elfa build`; the dashboard and the report read it first)
-  prices/     price log, one CSV per matchday (committed — not available historically)
+  prices/     price log, one CSV per matchday (committed); price_base.csv = season-start price per player (never overwritten)
+  external/   slim copy of the Fantasy Edge IQ player CSV (season-start prices + cross-source check only; never a model input)
 docs/
   data-sources.md   endpoints, IDs, rules, scoring (verified 24 Oct 2026)
 tests/
@@ -58,7 +59,9 @@ One fantasy matchday is one EuroLeague round; the platform's `num_rounds` counts
 ```bash
 elfa pull-official                 # ~140 box scores, public API, a few minutes
 elfa pull-platform --history       # market + roster + price log; --history adds per-player pts (358 × 7 calls)
-elfa build                         # player_games.parquet, team_map.csv, player_map.csv
+elfa pull-external                 # Fantasy Edge IQ CSV -> data/external + price_base.csv (network; CI does this daily)
+elfa build                         # player_games.parquet, maps, team_context / usage / fdr / matchdays CSVs, price_base fallback
+elfa probe-trend                   # dump raw /trend /profile /upcoming-matches for 3 players (looking for a price series)
 elfa reconcile                     # gate: platform pts == official PIR
 ```
 
@@ -69,7 +72,7 @@ Two Streamlit apps share one page library (`app/pages_lib.py`) over the committe
 | app | file | pages | audience |
 |---|---|---|---|
 | **Fantasy Agent** (private) | `app/streamlit_app.py` | Recommendation, What-if optimiser + all scouting pages | me — shows my squad, credits, trades, pipeline log |
-| **Fantasy Scout** (shareable) | `app/scout_app.py` | Projections, Captain, Fixtures & schedule, Game script (odds), Defence vs position, Player, Top 100 managers, Market & prices, Model health | anyone picking players — never loads my roster/team files |
+| **Fantasy Scout** (shareable) | `app/scout_app.py` | Overview, Projections, Captain, Fixtures & schedule, Game script (odds), Defence vs position, Team context, Player, Top 100 managers, Market & prices, Model health | anyone picking players — never loads my roster/team files |
 
 Locally: `pip install -r requirements.txt && streamlit run app/streamlit_app.py` (or `app/scout_app.py`).
 Both are hosted on Streamlit Community Cloud from this repo (main branch) as two separate apps, one per main file.

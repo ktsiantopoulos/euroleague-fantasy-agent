@@ -63,12 +63,63 @@ def build(seasons: str = typer.Option("E2026")):
         rprint(bad.to_string(index=False))
     pm = map_players(market, df, tm)
     rprint(pm.method.value_counts().to_string())
+    from elfa.features.context import write_context
+    from elfa.features.dvp import attach_positions
     from elfa.features.matchdays import write_matchdays
+    from elfa.ingest.external import update_price_base
+    from elfa.ingest.odds import consensus, latest_snapshot, odds_dir
+    from elfa.model.teams import team_ratings
 
+    cur = df[df.season == df.season.max()]
+    cur = attach_positions(cur, pm, market)
+    snap = latest_snapshot(odds_dir(), max_age_h=24 * 14)
+    odds = consensus(snap[0], games) if snap else {}
+    ctx, usage, fdr = write_context(cur, games, team_ratings(cur, games), odds, from_round=_md)
+    rprint(f"team context: {len(ctx)} clubs · usage: {len(usage)} players · FDR: {fdr.team.nunique() if len(fdr) else 0} clubs x next {int(fdr.n.max()) if len(fdr) else 0}")
+    pb = update_price_base(market, _md)
+    rprint("price base: " + ", ".join(f"{k} {v}" for k, v in pb.source.value_counts().items()))
     mds = write_matchdays(games, cfg, market, tm)
     cur = mds[mds.deadline_utc.notna()]
     rprint(f"matchdays: {mds.matchday.nunique()} (one per round) · current "
            + (f"MD {int(cur.matchday.iloc[0])} = R{int(cur['round'].iloc[0])}, nights " + ", ".join(f"T{int(r.turn)}={r.date_utc}" for r in cur.itertuples()) if len(cur) else "unknown"))
+
+
+@app.command("pull-external")
+def pull_external():
+    """Download the Fantasy Edge IQ player CSV (season-start prices, cross-source check) and update price_base.csv."""
+    from elfa.features.mapping import load_latest_market
+    from elfa.ingest.external import fetch_fantasyedge, update_price_base
+
+    fetch_fantasyedge()
+    md, market, _cfg = load_latest_market()
+    pb = update_price_base(market, md)
+    rprint("price base: " + ", ".join(f"{k} {v}" for k, v in pb.source.value_counts().items()))
+
+
+@app.command("probe-trend")
+def probe_trend(ids: str = typer.Option("3766,7424,3850", help="comma-separated platform player ids")):
+    """Dump raw /trend, /profile and /upcoming-matches responses for a few players (looking for a price series)."""
+    from elfa.config import RAW, Settings
+    from elfa.ingest.fantaking import FantakingClient
+
+    s = Settings.load()
+    c = FantakingClient(s)
+    out = RAW / "fantaking" / "probe"
+    out.mkdir(parents=True, exist_ok=True)
+    for pid in [i.strip() for i in ids.split(",") if i.strip()]:
+        for name, path, params in (("trend", f"/api/v1/players/{pid}/trend", {"league": s.league_id}),
+                                   ("profile", f"/api/v1/players/{pid}/profile", {"league": s.league_id, "lang": "en"}),
+                                   ("upcoming", f"/api/v1/players/{pid}/upcoming-matches", {"league": s.league_id})):
+            try:
+                data = c.get(path, **params)
+            except Exception as e:  # noqa: BLE001 - a probe reports and moves on
+                rprint(f"{pid} {name}: {type(e).__name__} {str(e)[:80]}")
+                continue
+            fp = out / f"{pid}_{name}.json"
+            fp.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+            keys = list(data.get("data", data).keys()) if isinstance(data.get("data", data), dict) else type(data.get("data", data)).__name__
+            rprint(f"{pid} {name}: {fp.name} keys={keys}")
+    rprint("look for quotation/price arrays in the trend and profile files")
 
 
 @app.command()

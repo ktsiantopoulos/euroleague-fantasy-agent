@@ -45,7 +45,54 @@ def load_projection() -> tuple[int, pd.DataFrame]:
     df["games"] = df.games_json.map(lambda j: json.loads(j) if isinstance(j, str) else [])
     df["nights"] = df.games.map(lambda gs: "/".join(f"T{g['turn']}" for g in gs))
     md_file = int(files[-1].stem.split("md")[1])
-    return md_file, df
+    return md_file, enrich_projection(df)
+
+
+def load_market() -> list[dict]:
+    md = latest_matchday()
+    fp = RAW / "fantaking" / f"md_{md:02d}" / "market.json"
+    return json.loads(fp.read_text(encoding="utf-8")) if fp.exists() else []
+
+
+def enrich_projection(df: pd.DataFrame) -> pd.DataFrame:
+    """Add the decision columns the pages show on top of the model output: floor, usage / role signal,
+    fouls drawn and blocks against, season-start price and change, platform bench flag, risk badges."""
+    df = df.copy()
+    df["floor"] = (df.md_pts - 1.2816 * df.md_sd).round(1)
+    pm = load_csv("player_map.csv", dtype={"platform_id": str, "person_code": str})
+    u = load_csv("usage.csv", dtype={"player_code": str})
+    if len(pm) and len(u):
+        code = dict(zip(pm.platform_id.astype(str), pm.person_code))
+        u = u.set_index("player_code")
+        for col, name in (("shot_share", "shot_share"), ("fga_per_min", "fga_per_min"), ("usage_delta_last3", "usage_delta"),
+                          ("min_delta_last3", "min_delta"), ("role_signal", "role_signal"), ("fd_pg", "fd_pg"), ("blka_pg", "blka_pg"),
+                          ("starter_last", "starter_last")):
+            df[name] = df.platform_id.astype(str).map(code).map(u[col])
+    pb = load_csv("../prices/price_base.csv", dtype={"player_id": str}) if (PRICES / "price_base.csv").exists() else pd.DataFrame()
+    if len(pb):
+        df["price_base"] = df.platform_id.astype(str).map(dict(zip(pb.player_id, pb.price_base)))
+        df["price_delta"] = (df.quotation - df.price_base).round(1)
+    bench = {str(m["id"]): bool(m.get("started_from_bench")) for m in load_market()}
+    if bench:
+        df["bench_platform"] = df.platform_id.astype(str).map(bench)
+
+    def _risk(r) -> str:
+        tags = []
+        if r.get("prob_play", 1) < 1:
+            tags.append("doubtful")
+        fl = str(r.get("flags") or "")
+        if "DNP" in fl:
+            tags.append("DNP last")
+        if "only" in fl:
+            tags.append("few games")
+        if r.get("role_signal") == "falling":
+            tags.append("usage falling")
+        if r.get("role_signal") == "rising":
+            tags.append("usage rising")
+        return " · ".join(tags)
+
+    df["risk"] = df.apply(_risk, axis=1)
+    return df
 
 
 def load_roster_state() -> tuple[dict, dict]:
