@@ -5,7 +5,7 @@ E2026: 70 games played, 0 box scores fetched now
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_08
-team: UnderTakers86  credits: 105.9  trades used: 0/4
+team: UnderTakers86  credits: 105.9  trades used: 1/4
 
 ## build
         games  rows  mismatches
@@ -55,6 +55,16 @@ official_min team_won  expected_pts   status
 20.083333    False          19.0 MISMATCH
        8808         4      014207         38           7.7           5.0     
 19.366667     True           5.5 MISMATCH
+
+## backtest
+             subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
+mae_base_last3  corr_base_last3
+all dressed players 935       5.52       0.412           5.82           0.389   
+5.97            0.371
+projected >= 15 min 512       6.20       0.311           6.58           0.284   
+6.80            0.262
+   >= 3 prior games 857       5.55       0.416           5.82           0.398   
+5.98            0.378
 
 ## recommend
 - Starting five constrained to 1–3 players per position (covers the platform's 

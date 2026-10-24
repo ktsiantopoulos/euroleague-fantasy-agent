@@ -1,12 +1,12 @@
 # Recommendation — matchday 8 (R8, R9)
 
-Generated 2026-10-24 18:03 UTC · team **UnderTakers86** · budget 105.9 · trades left 4 · odds OFF (model margins)
+Generated 2026-10-24 18:04 UTC · team **UnderTakers86** · budget 105.9 · trades left 3 · odds OFF (model margins)
 
 ## Decision
 - Game nights: T1=10-27, T2=10-28, T3=10-29, T4=10-30. Bench players with later nights are swap options; captain can move to a not-yet-played starter.
-- Current squad, best lineup: **276.0 pts** expected; in-round swaps add +0.0 (simulated).
-- With trades: **314.2 pts** expected (+38.2); in-round swaps add +0.0 (simulated); cost 105.8/105.9.
-- Trades: OUT Mfiondu Kabengele, Kendrick Nunn, Arijan Lakic, Tomas Masiulis → IN TJ Shorts, Semi Ojeleye, Kevarrius Hayes, Ibon Navarro
+- Current squad, best lineup: **292.5 pts** expected; in-round swaps add +0.0 (simulated).
+- With trades: **314.2 pts** expected (+21.7); in-round swaps add +0.0 (simulated); cost 105.8/105.9.
+- Trades: OUT Kendrick Nunn, Arijan Lakic, Mfiondu Kabengele → IN TJ Shorts, Semi Ojeleye, Kevarrius Hayes
 - Captain **Sasha Vezenkov**, coach **Ibon Navarro**.
 
 ## Recommended squad (with trades)
@@ -41,7 +41,7 @@ Generated 2026-10-24 18:03 UTC · team **UnderTakers86** · budget 105.9 · trad
 | Bench (50%) | Kendrick Nunn | Guard | PAO | 13.7 | T1/T4 | 13.05 | 27.07 | 13 min proj (bench, last 20), 0.44 PIR/min over 1 g · T1 vs MIL (DvP +4.0, win 90%) → 7.1 · T4 @ IST (DvP +0.4, win 67%) → 6.0 · ⚠ only 1 game(s) |
 | Bench (50%) | Arijan Lakic | Forward | PAR | 4.0 | T2/T4 | 7.78 | 16.05 | 15 min proj (bench, last 21), 0.22 PIR/min over 7 g · T2 @ ASV (DvP +5.0, win 56%) → 4.4 · T4 @ ZAL (DvP +0.4, win 41%) → 3.3 |
 | Bench (50%) | Berk Ugurlu | Guard | BJK | 4.0 | T2/T4 | 7.25 | 16.64 | 15 min proj (bench, last 19), 0.26 PIR/min over 7 g · T2 vs OLY (DvP -1.3, win 45%) → 4.0 · T4 @ VIR (DvP -3.6, win 38%) → 3.3 |
-| Coach | Tomas Masiulis | Head Coach | ZAL | 6.6 | T2/T4 | 5.76 | 27.51 | @ VIR: margin -3, win 39% → EV +0.0 · vs PAR: margin +3, win 59% → EV +5.7 |
+| Coach | Ibon Navarro | Head Coach | CZV | 6.7 | T1/T3 | 22.31 | 44.06 | vs TEL: margin +8, win 76% → EV +11.1 · vs MUN: margin +9, win 76% → EV +11.2 |
 
 ## Defence vs position (this season, shrunk to league mean; +PIR = concedes more)
 ```

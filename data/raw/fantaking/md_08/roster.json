@@ -1,5 +1,5 @@
 {
- "formation_id": 29,
+ "formation_id": 31,
  "latest_snapshot": {
   "formation_id": 29,
   "players": [
@@ -119,49 +119,6 @@
  ],
  "players": [
   {
-   "id": 4233,
-   "first_name": "Mfiondu",
-   "last_name": "Kabengele",
-   "position": {
-    "id": 30,
-    "name": "Center"
-   },
-   "team": {
-    "id": 311,
-    "name": "Dubai Basketball",
-    "abbreviation": "DUB",
-    "position": "home"
-   },
-   "opponent": {
-    "id": 150,
-    "name": "Paris Basketball",
-    "abbreviation": "PBB"
-   },
-   "quotation": 15.6,
-   "is_on_fire": true,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "17",
-   "face_path": null,
-   "active": true,
-   "court_position": 1,
-   "is_captain": false,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2540,
-    "number": 1
-   },
-   "is_on_trade": false,
-   "started_from_bench": false,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
    "id": 7424,
    "first_name": "Aliou",
    "last_name": "Diarra",
@@ -188,6 +145,49 @@
    "jersey": "31",
    "face_path": null,
    "active": true,
+   "court_position": 1,
+   "is_captain": false,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": false,
+   "round": {
+    "id": 2541,
+    "number": 2
+   },
+   "is_on_trade": false,
+   "started_from_bench": true,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 3976,
+   "first_name": "Arijan",
+   "last_name": "Lakic",
+   "position": {
+    "id": 29,
+    "name": "Forward"
+   },
+   "team": {
+    "id": 152,
+    "name": "Partizan Mozzart Bet Belgrade",
+    "abbreviation": "PAR",
+    "position": "away"
+   },
+   "opponent": {
+    "id": 139,
+    "name": "LDLC ASVEL Villeurbanne",
+    "abbreviation": "ASV"
+   },
+   "quotation": 4,
+   "is_on_fire": false,
+   "pts": 0,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "19",
+   "face_path": null,
+   "active": true,
    "court_position": 2,
    "is_captain": false,
    "captain_multiplier": 2,
@@ -199,92 +199,6 @@
    },
    "is_on_trade": false,
    "started_from_bench": true,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
-   "id": 3948,
-   "first_name": "Mbaye",
-   "last_name": "Ndiaye",
-   "position": {
-    "id": 29,
-    "name": "Forward"
-   },
-   "team": {
-    "id": 149,
-    "name": "Olympiacos Piraeus",
-    "abbreviation": "OLY",
-    "position": "away"
-   },
-   "opponent": {
-    "id": 158,
-    "name": "Besiktas Istanbul",
-    "abbreviation": "BJK"
-   },
-   "quotation": 8.9,
-   "is_on_fire": false,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "24",
-   "face_path": null,
-   "active": true,
-   "court_position": 3,
-   "is_captain": false,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2541,
-    "number": 2
-   },
-   "is_on_trade": false,
-   "started_from_bench": true,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
-   "id": 3766,
-   "first_name": "Sasha",
-   "last_name": "Vezenkov",
-   "position": {
-    "id": 29,
-    "name": "Forward"
-   },
-   "team": {
-    "id": 149,
-    "name": "Olympiacos Piraeus",
-    "abbreviation": "OLY",
-    "position": "away"
-   },
-   "opponent": {
-    "id": 158,
-    "name": "Besiktas Istanbul",
-    "abbreviation": "BJK"
-   },
-   "quotation": 18.4,
-   "is_on_fire": true,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "14",
-   "face_path": null,
-   "active": true,
-   "court_position": 4,
-   "is_captain": true,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2541,
-    "number": 2
-   },
-   "is_on_trade": false,
-   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -317,7 +231,7 @@
    "jersey": "25",
    "face_path": null,
    "active": true,
-   "court_position": 5,
+   "court_position": 3,
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
@@ -328,49 +242,6 @@
    },
    "is_on_trade": false,
    "started_from_bench": true,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
-   "id": 3851,
-   "first_name": "Andres",
-   "last_name": "Feliz",
-   "position": {
-    "id": 28,
-    "name": "Guard"
-   },
-   "team": {
-    "id": 153,
-    "name": "Real Madrid",
-    "abbreviation": "RMB",
-    "position": "away"
-   },
-   "opponent": {
-    "id": 143,
-    "name": "Kosner Baskonia Vitoria-Gasteiz",
-    "abbreviation": "KBA"
-   },
-   "quotation": 8.6,
-   "is_on_fire": true,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "24",
-   "face_path": null,
-   "active": true,
-   "court_position": 6,
-   "is_captain": false,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2540,
-    "number": 1
-   },
-   "is_on_trade": false,
-   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -403,6 +274,135 @@
    "jersey": "12",
    "face_path": null,
    "active": true,
+   "court_position": 4,
+   "is_captain": true,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": false,
+   "round": {
+    "id": 2540,
+    "number": 1
+   },
+   "is_on_trade": false,
+   "started_from_bench": false,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 3851,
+   "first_name": "Andres",
+   "last_name": "Feliz",
+   "position": {
+    "id": 28,
+    "name": "Guard"
+   },
+   "team": {
+    "id": 153,
+    "name": "Real Madrid",
+    "abbreviation": "RMB",
+    "position": "away"
+   },
+   "opponent": {
+    "id": 143,
+    "name": "Kosner Baskonia Vitoria-Gasteiz",
+    "abbreviation": "KBA"
+   },
+   "quotation": 8.6,
+   "is_on_fire": true,
+   "pts": 0,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "24",
+   "face_path": null,
+   "active": true,
+   "court_position": 5,
+   "is_captain": false,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": false,
+   "round": {
+    "id": 2540,
+    "number": 1
+   },
+   "is_on_trade": false,
+   "started_from_bench": false,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 3766,
+   "first_name": "Sasha",
+   "last_name": "Vezenkov",
+   "position": {
+    "id": 29,
+    "name": "Forward"
+   },
+   "team": {
+    "id": 149,
+    "name": "Olympiacos Piraeus",
+    "abbreviation": "OLY",
+    "position": "away"
+   },
+   "opponent": {
+    "id": 158,
+    "name": "Besiktas Istanbul",
+    "abbreviation": "BJK"
+   },
+   "quotation": 18.4,
+   "is_on_fire": true,
+   "pts": 0,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "14",
+   "face_path": null,
+   "active": true,
+   "court_position": 6,
+   "is_captain": false,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": false,
+   "round": {
+    "id": 2541,
+    "number": 2
+   },
+   "is_on_trade": false,
+   "started_from_bench": false,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 4233,
+   "first_name": "Mfiondu",
+   "last_name": "Kabengele",
+   "position": {
+    "id": 30,
+    "name": "Center"
+   },
+   "team": {
+    "id": 311,
+    "name": "Dubai Basketball",
+    "abbreviation": "DUB",
+    "position": "home"
+   },
+   "opponent": {
+    "id": 150,
+    "name": "Paris Basketball",
+    "abbreviation": "PBB"
+   },
+   "quotation": 15.6,
+   "is_on_fire": true,
+   "pts": 0,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "17",
+   "face_path": null,
+   "active": true,
    "court_position": 7,
    "is_captain": false,
    "captain_multiplier": 2,
@@ -420,30 +420,30 @@
    "stats_items": []
   },
   {
-   "id": 3976,
-   "first_name": "Arijan",
-   "last_name": "Lakic",
+   "id": 3948,
+   "first_name": "Mbaye",
+   "last_name": "Ndiaye",
    "position": {
     "id": 29,
     "name": "Forward"
    },
    "team": {
-    "id": 152,
-    "name": "Partizan Mozzart Bet Belgrade",
-    "abbreviation": "PAR",
+    "id": 149,
+    "name": "Olympiacos Piraeus",
+    "abbreviation": "OLY",
     "position": "away"
    },
    "opponent": {
-    "id": 139,
-    "name": "LDLC ASVEL Villeurbanne",
-    "abbreviation": "ASV"
+    "id": 158,
+    "name": "Besiktas Istanbul",
+    "abbreviation": "BJK"
    },
-   "quotation": 4,
+   "quotation": 8.9,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "19",
+   "jersey": "24",
    "face_path": null,
    "active": true,
    "court_position": 8,
@@ -549,25 +549,25 @@
    "stats_items": []
   },
   {
-   "id": 4006,
-   "first_name": "Tomas",
-   "last_name": "Masiulis",
+   "id": 3938,
+   "first_name": "Ibon",
+   "last_name": "Navarro",
    "position": {
     "id": 31,
     "name": "Head Coach"
    },
    "team": {
-    "id": 155,
-    "name": "Zalgiris Kaunas",
-    "abbreviation": "ZAL",
-    "position": "away"
+    "id": 144,
+    "name": "Crvena Zvezda Meridianbet Belgrade",
+    "abbreviation": "CZV",
+    "position": "home"
    },
    "opponent": {
-    "id": 154,
-    "name": "Virtus Bologna",
-    "abbreviation": "VIR"
+    "id": 148,
+    "name": "Maccabi Rapyd Tel Aviv",
+    "abbreviation": "MTA"
    },
-   "quotation": 6.6,
+   "quotation": 6.7,
    "is_on_fire": null,
    "pts": 0,
    "is_injured": false,
@@ -581,8 +581,8 @@
    "captain_config": null,
    "match_played": false,
    "round": {
-    "id": 2541,
-    "number": 2
+    "id": 2540,
+    "number": 1
    },
    "is_on_trade": false,
    "started_from_bench": true,
