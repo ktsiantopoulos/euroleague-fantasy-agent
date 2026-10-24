@@ -37,7 +37,6 @@ class Settings:
     fantasy_team_id: int
     el_base: str
     season: str
-    prior_season: str
 
     @classmethod
     def load(cls) -> Settings:
@@ -50,7 +49,6 @@ class Settings:
             fantasy_team_id=int(_env("FANTASY_TEAM_ID")),
             el_base=_env("EUROLEAGUE_API_BASE", "https://api-live.euroleague.net"),
             season=_env("SEASON_CODE", "E2026"),
-            prior_season=_env("PRIOR_SEASON_CODE", "E2025"),
         )
 
     @classmethod
@@ -65,5 +63,4 @@ class Settings:
             fantasy_team_id=0,
             el_base=os.getenv("EUROLEAGUE_API_BASE", "https://api-live.euroleague.net"),
             season=os.getenv("SEASON_CODE", "E2026"),
-            prior_season=os.getenv("PRIOR_SEASON_CODE", "E2025"),
         )

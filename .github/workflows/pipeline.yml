@@ -84,6 +84,13 @@ jobs:
           key: raw-${{ github.run_id }}
           restore-keys: raw-
 
+      - name: Current season only
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          # the raw cache may still hold older seasons from earlier runs; never let them back into the repo
+          find data/raw/euroleague -mindepth 1 -maxdepth 1 -type d ! -name E2026 -exec rm -rf {} + 2>/dev/null || true
+          ls data/raw/euroleague
+
       - name: Pull official box scores
         if: steps.gate.outputs.run == 'true'
         run: |

@@ -50,7 +50,7 @@ Coach: margin buckets win 1-10 +10, 11-20 +20, 21+ +25 (user); loss 1-10 −5, 1
 
 ## 4. Official stats API (public, no auth)
 - Base: `https://api-live.euroleague.net/v3`
-- Season code: `E2026` (2026-27), `E2025` (2025-26) for history
+- Season code: `E2026` (2026-27). Only the current season is pulled and used; no prior-season data is kept in the repo.
 - Player traditional/advanced stats: `/competitions/E/statistics/players/traditional?seasonMode=Range&fromSeasonCode=E2026&toSeasonCode=E2026`
 - Game box score: `/competitions/E/seasons/E2026/games/{gameCode}/stats`
 - Schedule: `/competitions/E/seasons/E2026/games`
