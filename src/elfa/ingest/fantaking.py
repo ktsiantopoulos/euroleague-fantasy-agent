@@ -141,11 +141,15 @@ def pull_matchday(client: FantakingClient, md_id: int | None = None, with_histor
         w.writeheader()
         w.writerows(rows)
 
-    if with_history:
-        past = [m for m in cfg["matchdays"] if m["number"] < md_number]
-        hist_dir = RAW / "fantaking" / "fantasy_pts"
+    # per-player fantasy points: always keep the previous matchday current (needed by `elfa evaluate`);
+    # --history backfills every past matchday
+    hist_dir = RAW / "fantaking" / "fantasy_pts"
+    prev = cfg.get("previous_matchday") or {}
+    targets = [m for m in cfg["matchdays"] if m["number"] < md_number] if with_history else (
+        [m for m in cfg["matchdays"] if m["id"] == prev.get("id")] if prev else [])
+    if targets:
         for p in market:
-            for m in past:
+            for m in targets:
                 fp = hist_dir / f"{p['id']}_md{m['number']:02d}.json"
                 if fp.exists():
                     continue

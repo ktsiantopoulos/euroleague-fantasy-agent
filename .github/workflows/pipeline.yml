@@ -118,6 +118,21 @@ jobs:
           echo -e "\n## reconcile" | tee -a reports/latest.md
           elfa reconcile 2>&1 | tee -a reports/latest.md || true
 
+      - name: Evaluate and learn (post-round)
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
+        run: |
+          echo -e "\n## evaluate" | tee -a reports/latest.md
+          elfa evaluate 2>&1 | tee -a reports/latest.md || true
+          echo -e "\n## learn" | tee -a reports/latest.md
+          elfa learn 2>&1 | tail -n 3 | tee -a reports/latest.md || true
+
+      - name: Top-100 managers
+        if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '') && contains(steps.gate.outputs.why, 'daily') || (steps.gate.outputs.run == 'true' && env.FANTAKING_TOKEN != '' && github.event_name == 'workflow_dispatch')
+        run: |
+          echo -e "\n## top-100" | tee -a reports/latest.md
+          elfa pull-top 2>&1 | tee -a reports/latest.md || true
+          elfa top-analyse 2>&1 | head -n 12 | tee -a reports/latest.md || true
+
       - name: Backtest (P1 gate)
         if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '')
         run: |
@@ -146,5 +161,7 @@ jobs:
           git config user.email "elfa-bot@users.noreply.github.com"
           git add -A reports data/prices data/raw
           ls data/processed/*.csv >/dev/null 2>&1 && git add data/processed/*.csv
+          ls data/processed/*.md >/dev/null 2>&1 && git add data/processed/*.md
+          ls data/processed/*.json >/dev/null 2>&1 && git add data/processed/*.json
           git diff --cached --quiet || git commit -m "pipeline: $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_number }}"
           git push

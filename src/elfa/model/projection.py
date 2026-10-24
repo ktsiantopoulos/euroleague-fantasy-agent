@@ -9,7 +9,8 @@ All parameters live in `Params` so the backtest can grid-search them.
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -31,6 +32,26 @@ class Params:
     dnp_recent_penalty: float = 0.5                            # multiply minutes if last game was a DNP
     minutes_sample_prior: float = 0.5                          # n/(n+0.5): 1 game -> 0.67, 7 games -> 0.93
     flags: dict = field(default_factory=dict)
+
+    @classmethod
+    def load(cls, path: Path | None = None) -> Params:
+        """Current tuned parameters (data/processed/params.json), falling back to the defaults."""
+        from elfa.config import PROCESSED
+
+        path = path or PROCESSED / "params.json"
+        if path.exists():
+            d = json.loads(path.read_text(encoding="utf-8"))
+            d.pop("adopted_at", None); d.pop("note", None)
+            d = {k: (tuple(v) if isinstance(v, list) else v) for k, v in d.items() if k in cls.__dataclass_fields__}
+            return cls(**d)
+        return cls()
+
+    def save(self, note: str, path: Path | None = None) -> None:
+        from elfa.config import PROCESSED
+
+        path = path or PROCESSED / "params.json"
+        d = asdict(self); d["note"] = note
+        path.write_text(json.dumps(d, indent=1), encoding="utf-8")
 
 
 def _player_form(pg: pd.DataFrame, league_rate: float, league_sd: float, p: Params) -> pd.DataFrame:
@@ -69,7 +90,7 @@ def project(
     odds: dict | None = None,
     p: Params | None = None,
 ) -> pd.DataFrame:
-    p = p or Params()
+    p = p or Params.load()
     odds = odds or {}
     played = pg[pg.played]
     league_rate = played.pir.sum() / played.minutes.sum()

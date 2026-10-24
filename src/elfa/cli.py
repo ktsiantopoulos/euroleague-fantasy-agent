@@ -102,6 +102,63 @@ def backtest(rounds: str = typer.Option("4,5,6,7"), grid: bool = typer.Option(Fa
     res.table.to_csv(PROCESSED / "backtest_rounds.csv", index=False)
 
 
+@app.command("pull-top")
+def pull_top_cmd(n: int = typer.Option(100), tournament: int = typer.Option(191896, help="Global league id")):
+    """Crawl the top-N teams' public rosters for every played matchday (cached; only new files are fetched)."""
+    from elfa.features.mapping import load_latest_market
+    from elfa.ingest.fantaking import FantakingClient
+    from elfa.ingest.top_teams import pull_top
+
+    s = Settings.load()
+    md, _market, cfg = load_latest_market()
+    played = [m for m in cfg["matchdays"] if m["number"] < md]
+    try:
+        k = pull_top(FantakingClient(s, sleep=0.3), played, tournament, n)
+    except Exception as e:  # noqa: BLE001
+        rprint(f"[red]pull-top failed:[/] {type(e).__name__}: {_redact(str(e), s.fantaking_token)}")
+        raise typer.Exit(1)
+    rprint(f"top-{n}: {k} roster previews fetched now")
+
+
+@app.command("top-analyse")
+def top_analyse():
+    """Summarise what the top managers do (ownership, captains, trades, swaps, budget)."""
+    from elfa.features.mapping import load_latest_market
+    from elfa.features.top_analysis import analyse, load_top_rosters
+
+    _md, market, _cfg = load_latest_market()
+    rprint(analyse(load_top_rosters(), market))
+
+
+@app.command()
+def evaluate():
+    """Score past projections against actual platform points; write evaluation.md."""
+    from elfa.model.evaluate import evaluate as _ev
+
+    _df, txt = _ev()
+    rprint(txt)
+
+
+@app.command()
+def learn():
+    """Guarded parameter update: adopt a new grid optimum only if it wins on the newest round."""
+    import pandas as pd
+
+    from elfa.features.dvp import attach_positions
+    from elfa.features.mapping import load_latest_market
+    from elfa.model.evaluate import learn as _learn
+    from elfa.model.teams import load_schedule
+
+    pg = pd.read_parquet(PROCESSED / "player_games.parquet")
+    pg = pg[pg.season == pg.season.max()]
+    _md, market, _cfg = load_latest_market()
+    pm = pd.read_csv(PROCESSED / "player_map.csv", dtype={"platform_id": str, "person_code": str})
+    pg = attach_positions(pg, pm, market)
+    rounds = sorted(pg["round"].unique().tolist())
+    rounds = [r for r in rounds if r >= 4]
+    rprint(_learn(pg, load_schedule(pg.season.max()), rounds))
+
+
 @app.command()
 def recommend(
     mu_price: float = typer.Option(0.0, help="weight of expected price change (PIR per credit)"),
