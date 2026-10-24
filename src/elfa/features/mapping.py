@@ -17,7 +17,7 @@ from elfa.config import PROCESSED, RAW
 # Seed: platform abbreviation -> official code. Verified by name matching at build time;
 # anything that disagrees is reported, not silently trusted.
 TEAM_SEED = {
-    "EFS": "IST", "MIL": "MIL", "BJK": "BJK", "CZV": "RED", "DUB": "DUB", "BAR": "BAR",
+    "EFS": "IST", "MIL": "MIL", "BJK": "BES", "CZV": "RED", "DUB": "DUB", "BAR": "BAR",
     "BAY": "MUN", "FBT": "ULK", "HTA": "HTA", "KBA": "BAS", "ASV": "ASV", "MTA": "TEL",
     "OLY": "OLY", "PAO": "PAN", "PBB": "PRS", "PAR": "PAR", "RMB": "MAD", "VBC": "PAM",
     "VIR": "VIR", "ZAL": "ZAL",
@@ -66,20 +66,29 @@ def map_teams(platform_teams: list[dict], official_games: list[dict]) -> pd.Data
     return df
 
 
+_SUFFIX = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
 def _surname_key(last_name: str) -> str:
-    return norm(last_name).replace(" ", "")
+    toks = [t for t in norm(last_name).split() if t not in _SUFFIX]
+    return "".join(toks)
 
 
 def map_players(market: list[dict], player_games: pd.DataFrame, team_map: pd.DataFrame) -> pd.DataFrame:
     """Match platform players to official person codes by surname + team (current season only)."""
     t2o = dict(zip(team_map.platform_abbr, team_map.official_code))
-    cur = player_games[player_games.season == player_games.season.max()]
-    # official surname = part before the comma in "SURNAME, NAME"
-    off = (
-        cur.assign(surname=cur.player_name.str.split(",").str[0].map(_surname_key))
-        .groupby(["team", "surname", "player_code", "player_name"], as_index=False)
-        .agg(games=("game_code", "nunique"), minutes=("minutes", "sum"))
-    )
+    cur_season = player_games.season.max()
+
+    def _index(df):
+        # official surname = part before the comma in "SURNAME, NAME"
+        return (
+            df.assign(surname=df.player_name.str.split(",").str[0].map(_surname_key))
+            .groupby(["team", "surname", "player_code", "player_name"], as_index=False)
+            .agg(games=("game_code", "nunique"), minutes=("minutes", "sum"))
+        )
+
+    off = _index(player_games[player_games.season == cur_season])
+    off_any = _index(player_games)  # all seasons, for injured/transferred players with 0 games now
     overrides_fp = PROCESSED / "player_overrides.csv"
     overrides = {}
     if overrides_fp.exists():
@@ -94,6 +103,9 @@ def map_players(market: list[dict], player_games: pd.DataFrame, team_map: pd.Dat
         if pid in overrides:
             rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, overrides[pid], "override"))
             continue
+        if (p.get("position") or {}).get("name") == "Head Coach":
+            rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, None, "coach"))
+            continue
         cand = off[(off.team == team_off) & (off.surname == key)]
         if len(cand) == 1:
             rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, cand.player_code.iloc[0], "surname+team"))
@@ -106,8 +118,16 @@ def map_players(market: list[dict], player_games: pd.DataFrame, team_map: pd.Dat
             else:
                 rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, None, "AMBIGUOUS"))
         else:
-            # coaches and players with 0 games so far will land here
-            rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, None, "UNMATCHED"))
+            # no games this season: look across all seasons/teams, disambiguate by first name
+            fn = norm(p.get("first_name", "")).split()[:1]
+            c3 = off_any[off_any.surname == key]
+            if fn and len(c3) > 1:
+                c3 = c3[c3.player_name.map(norm).str.contains(fn[0])]
+            codes = c3.player_code.unique()
+            if len(codes) == 1:
+                rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, codes[0], "surname+prior-season"))
+            else:
+                rows.append((pid, p.get("first_name"), p.get("last_name"), team_off, None, "UNMATCHED"))
     df = pd.DataFrame(rows, columns=["platform_id", "first_name", "last_name", "official_team", "person_code", "method"])
     df.to_csv(PROCESSED / "player_map.csv", index=False)
     return df

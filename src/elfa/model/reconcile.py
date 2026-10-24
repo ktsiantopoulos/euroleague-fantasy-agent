@@ -51,12 +51,15 @@ def reconcile() -> pd.DataFrame:
                 ),
             }
         )
-    df = pd.DataFrame(rows)
+    df = pd.DataFrame(rows, columns=["platform_id", "matchday", "person_code", "game_code", "platform_pts",
+                                     "official_pir", "official_min", "status"])
     df.to_csv(PROCESSED / "reconcile.csv", index=False)
     return df
 
 
 def gate_report(df: pd.DataFrame) -> str:
+    if df.empty:
+        return "no fantasy-pts history found - run `elfa pull-platform --history` first"
     counts = df.status.value_counts().to_dict()
     total = len(df)
     ok = counts.get("ok", 0)
