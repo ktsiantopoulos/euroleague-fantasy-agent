@@ -203,16 +203,25 @@ def load_odds_snapshots() -> pd.DataFrame:
 
 
 def team_names() -> dict[str, str]:
-    """Full club name for every code in use: platform abbreviations (BJK, PAO) and official codes (BES, PAN)."""
-    names: dict[str, str] = {}
-    tm = load_csv("team_map.csv")
-    for r in tm.itertuples():
-        names[str(r.platform_abbr)] = str(r.official_name)
-        names[str(r.official_code)] = str(r.official_name)
+    """Club name for every code in use — platform abbreviations (BJK, PAO) and official codes (BES, PAN).
+
+    Uses the official API's short form ("Baskonia", "Crvena Zvezda") rather than the full sponsored name,
+    so grid cells and cards stay readable on a phone.
+    """
+    short: dict[str, str] = {}
+    full: dict[str, str] = {}
     for g in load_schedule():
         for side in ("local", "road"):
             c = g[side]["club"]
-            names.setdefault(c["code"], c["name"])
+            short.setdefault(c["code"], c.get("abbreviatedName") or c["name"])
+            full.setdefault(c["code"], c["name"])
+    names: dict[str, str] = dict(short)
+    tm = load_csv("team_map.csv")
+    for r in tm.itertuples():
+        code = str(r.official_code)
+        label = short.get(code) or str(r.official_name)
+        names[str(r.platform_abbr)] = label
+        names.setdefault(code, label)
     return names
 
 
