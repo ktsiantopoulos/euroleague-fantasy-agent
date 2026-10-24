@@ -80,6 +80,14 @@ jobs:
           echo -e "\n## reconcile" | tee -a reports/latest.md
           elfa reconcile 2>&1 | tee -a reports/latest.md || true
 
+      - name: Recommend
+        if: env.FANTAKING_TOKEN != ''
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: |
+          echo -e "\n## recommend" | tee -a reports/latest.md
+          elfa recommend 2>&1 | tail -n 5 | tee -a reports/latest.md || true
+
       - name: Job summary
         if: always()
         run: |
@@ -92,7 +100,7 @@ jobs:
         run: |
           git config user.name "elfa-bot"
           git config user.email "elfa-bot@users.noreply.github.com"
-          git add -A reports data/prices
+          git add -A reports data/prices data/raw
           ls data/processed/*.csv >/dev/null 2>&1 && git add data/processed/*.csv
           git diff --cached --quiet || git commit -m "pipeline: $(date -u +%Y-%m-%dT%H:%MZ) run ${{ github.run_number }}"
           git push

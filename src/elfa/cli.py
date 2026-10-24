@@ -75,9 +75,12 @@ def reconcile():
 
 
 @app.command()
-def recommend(horizon: int = 3):
-    """Project, optimise and print the recommended lineup and trades (Phase 1)."""
-    rprint("[yellow]not implemented yet - Phase 1[/]")
+def recommend(mu_price: float = typer.Option(0.0, help="weight of expected price change (PIR per credit)")):
+    """Project, optimise and write reports/recommendation_mdXX.md."""
+    from elfa.report.recommend import recommend as _rec
+
+    out = _rec(mu_price=mu_price)
+    rprint(out.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

@@ -13,8 +13,7 @@ dist/
 .mypy_cache/
 .ruff_cache/
 
-# data (raw/processed are reproducible; prices are committed)
-data/raw/
+# data (raw JSON is committed for reproducible backtests; parquet is rebuilt)
 data/processed/*
 !data/processed/*.csv
 notebooks/.ipynb_checkpoints/
