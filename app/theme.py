@@ -20,6 +20,17 @@ TOKENS = {
     "G": "#4DA3FF", "F": "#2EE59D", "C": "#B57BFF", "HC": "#FFC43D",
 }
 POS_KEY = {"Guard": "G", "Forward": "F", "Center": "C", "Head Coach": "HC"}
+TEAM_NAMES: dict[str, str] = {}
+
+
+def set_team_names(names: dict[str, str]) -> None:
+    TEAM_NAMES.clear()
+    TEAM_NAMES.update(names)
+
+
+def tn(code) -> str:
+    """Full club name for a code (platform or official); unknown codes pass through."""
+    return TEAM_NAMES.get(str(code), str(code) if code is not None else "")
 
 CSS = f"""
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -184,7 +195,7 @@ def player_card(p: dict, bench: bool = False, small: bool = False) -> str:
     if flags and flags != "coach":
         why += f' <span style="color:{TOKENS["gold"]}">⚠ {_e(flags)}</span>'
     cls = "elf-pc" + (" cap" if cap else "") + (" bench" if bench else "")
-    return (f'<div class="{cls}"><div class="top">{pos_chip(p["pos"])}<span class="nm">{name}</span><span class="tm">{_e(p["team"])}</span></div>'
+    return (f'<div class="{cls}"><div class="top">{pos_chip(p["pos"])}<span class="nm">{name}</span><span class="tm">{_e(tn(p["team"]))}</span></div>'
             f'<div class="num"><span class="exp">{exp}</span><span class="sm">p90 {p["md_p90"]:.0f}<br>{p["quotation"]:.1f} cr</span></div>'
             f'<div class="why" title="{_e(why_full)}"><span>{why}</span><span>{tags}</span></div></div>')
 
@@ -212,7 +223,7 @@ def target_rows(title: str, rows: list[dict]) -> str:
     body = ""
     for r in rows:
         v = float(r["DvP"])
-        body += (f'<div class="elf-row">{pos_chip(r["position"])}<span style="font-weight:600">{_e(r["team"])} {"vs" if r["home"] == "home" else "@"} {_e(r["opponent"])}</span>'
+        body += (f'<div class="elf-row">{pos_chip(r["position"])}<span style="font-weight:600">{_e(tn(r["team"]))} {"vs" if r["home"] == "home" else "@"} {_e(tn(r["opponent"]))}</span>'
                  f'<span class="elf-tag">{_e(r["night"])}</span><span class="elf-grow"></span><span class="val{" neg" if v < 0 else ""}">{v:+.1f}</span><span class="mut">{_e(" · ".join(x.split(" (")[0] for x in str(r["best options"]).split(", ")[:2]))}</span></div>')
     return f'<div class="elf-card"><div class="elf-label orange">{_e(title)}</div>{body or "<div class=elf-sub>none</div>"}</div>'
 

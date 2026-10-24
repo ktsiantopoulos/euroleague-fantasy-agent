@@ -202,6 +202,20 @@ def load_odds_snapshots() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def team_names() -> dict[str, str]:
+    """Full club name for every code in use: platform abbreviations (BJK, PAO) and official codes (BES, PAN)."""
+    names: dict[str, str] = {}
+    tm = load_csv("team_map.csv")
+    for r in tm.itertuples():
+        names[str(r.platform_abbr)] = str(r.official_name)
+        names[str(r.official_code)] = str(r.official_name)
+    for g in load_schedule():
+        for side in ("local", "road"):
+            c = g[side]["club"]
+            names.setdefault(c["code"], c["name"])
+    return names
+
+
 def pipeline_status() -> dict:
     txt = load_report("latest.md")
     first = txt.splitlines()[0] if txt else ""

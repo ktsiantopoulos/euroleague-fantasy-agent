@@ -114,9 +114,48 @@ DVP_COL = {
 }
 
 
+TEAM_COLS = {"team", "club", "home", "away", "opponent", "team_off", "opp", "team_abbr"}
+TEXT_COLS = {"why", "justification", "games_txt", "opponents", "best options", "top players", "why_sell", "game", "favourite"}
+
+
+@st.cache_data(ttl=600)
+def team_names() -> dict[str, str]:
+    return D.team_names()
+
+
+def _code_pattern() -> re.Pattern | None:
+    nm = team_names()
+    return re.compile(r"\b(" + "|".join(sorted(map(re.escape, nm), key=len, reverse=True)) + r")\b") if nm else None
+
+
+def N(df: pd.DataFrame) -> pd.DataFrame:
+    """Display copy with club codes replaced by full names: team-like columns, the index when it holds codes,
+    and codes embedded in text columns (why-strings, fixture grid cells, opponent lists)."""
+    nm = team_names()
+    if not nm or not isinstance(df, pd.DataFrame) or df.empty:
+        return df
+    out = df.copy()
+    pat = _code_pattern()
+    for c in out.columns:
+        name = str(c)
+        if name in TEAM_COLS:
+            out[c] = out[c].map(lambda v: nm.get(str(v), v) if pd.notna(v) else v)
+        elif pat is not None and (name in TEXT_COLS or re.fullmatch(r"[RT]\d+", name)) and not pd.api.types.is_numeric_dtype(out[c]):
+            out[c] = out[c].map(lambda v: pat.sub(lambda m: nm[m.group(1)], v) if isinstance(v, str) else v)
+    if not isinstance(out.index, pd.MultiIndex) and not pd.api.types.is_numeric_dtype(out.index) and out.index.isin(list(nm)).any():
+        out.index = out.index.map(lambda v: nm.get(str(v), v))
+    if not isinstance(out.columns, pd.MultiIndex) and out.columns.isin(list(nm)).any():
+        out.columns = out.columns.map(lambda v: nm.get(str(v), v))
+    return out
+
+
+def _df(df: pd.DataFrame, **kw):
+    st.dataframe(N(df), **kw)
+
+
 def show(df: pd.DataFrame, **kw):
     cfg = {c: COL[c] for c in df.columns if c in COL}
-    st.dataframe(df, column_config=cfg, width="stretch", hide_index=True, **kw)
+    _df(df, column_config=cfg, width="stretch", hide_index=True, **kw)
 
 
 # ------------------------------------------------------------------------------------------ cached loaders
@@ -273,7 +312,7 @@ def page_recommendation(proj: pd.DataFrame, md: int):
     sc = sell_candidates(proj)
     if len(sc):
         st.markdown("**Sell candidates in your squad** — low 3-week value per credit, price already up, hard run of fixtures")
-        st.dataframe(sc, width="stretch", hide_index=True, column_config={
+        _df(sc, width="stretch", hide_index=True, column_config={
             **{c: COL[c] for c in sc.columns if c in COL},
             "sell": st.column_config.NumberColumn("Sell score", help="0–100 rank blend: 50% low 3-week points per credit, 25% price gain since start, 25% hard next-5", format="%.0f"),
             "why_sell": st.column_config.TextColumn("Why", width="large")})
@@ -360,7 +399,7 @@ def page_whatif(proj: pd.DataFrame):
         coaches["gain_per_credit"] = (coaches.gain / coaches.extra_cost.where(coaches.extra_cost > 0)).round(2)
         coaches["mine"] = coaches.in_roster
         cols = ["name", "team", "quotation", "md_pts", "horizon_pts", "gain", "extra_cost", "gain_per_credit", "why", "mine"]
-        st.dataframe(coaches.sort_values("md_pts", ascending=False)[cols], width="stretch", hide_index=True, height=420, column_config={
+        _df(coaches.sort_values("md_pts", ascending=False)[cols], width="stretch", hide_index=True, height=420, column_config={
             **{c: COL[c] for c in cols if c in COL},
             "gain": st.column_config.NumberColumn("Gain vs mine", help="Expected points this matchday minus your current coach's", format="%+.1f"),
             "extra_cost": st.column_config.NumberColumn("Extra cost", help="Price minus your current coach's price", format="%+.1f"),
@@ -376,7 +415,7 @@ def page_projections(proj: pd.DataFrame, md: int, mode: str):
         return
     f1, f2, f3, f4 = st.columns(4)
     pos = f1.multiselect("Position", ["Guard", "Forward", "Center", "Head Coach"], default=["Guard", "Forward", "Center"])
-    teams = f2.multiselect("Team", sorted(proj.team.dropna().unique()))
+    teams = f2.multiselect("Team", sorted(proj.team.dropna().unique()), format_func=lambda c: team_names().get(c, c))
     pmax = f3.slider("Max price", 4.0, float(proj.quotation.max()), float(proj.quotation.max()), 0.1)
     only_playing = f4.checkbox("Only players with a game", value=True)
     g1, g2, g3 = st.columns([2, 1, 1])
@@ -407,7 +446,7 @@ def page_projections(proj: pd.DataFrame, md: int, mode: str):
     pop_pct = df.assign(popularity=(df.popularity.fillna(0) * 100).round(0))
     show(pop_pct[cols].sort_values("md_pts", ascending=False), height=600)
     st.caption("Scatter: price vs expected points (size = p90).")
-    ch = alt.Chart(df[df.pos != "Head Coach"]).mark_circle().encode(
+    ch = alt.Chart(N(df[df.pos != "Head Coach"])).mark_circle().encode(
         x=alt.X("quotation", title="price"), y=alt.Y("md_pts", title="expected pts"),
         size=alt.Size("md_p90", legend=None), color="pos",
         tooltip=["name", "team", "quotation", "md_pts", "md_p90", "nights", "flags"],
@@ -452,30 +491,30 @@ def page_dvp(proj: pd.DataFrame, md: int):
         good = tgt[tgt.DvP >= 1.0]
         bad = tgt[tgt.DvP <= -1.5].sort_values("DvP")
         st.markdown("**Target** (opponent leaks to this position):")
-        st.dataframe(good.head(12), width="stretch", hide_index=True, column_config=DVP_COL)
+        _df(good.head(12), width="stretch", hide_index=True, column_config=DVP_COL)
         st.markdown("**Avoid** (opponent stifles this position):")
-        st.dataframe(bad.head(8), width="stretch", hide_index=True, column_config=DVP_COL)
+        _df(bad.head(8), width="stretch", hide_index=True, column_config=DVP_COL)
     st.divider()
     st.subheader("Full matrix — PIR over expectation conceded per game (this season)")
     st.caption("Red = the team leaks PIR to that position (target its opponents' players of that position); blue = it stifles it. Hover a cell for games played.")
     piv = dvp.pivot(index="team", columns="fpos", values="piroe_shrunk")[["Guard", "Forward", "Center"]]
     heat = dvp.copy()
-    ch = alt.Chart(heat).mark_rect().encode(
+    ch = alt.Chart(N(heat)).mark_rect().encode(
         x=alt.X("fpos:N", title=None, sort=["Guard", "Forward", "Center"]),
         y=alt.Y("team:N", sort=alt.EncodingSortField("piroe_shrunk", op="mean", order="descending")),
         color=alt.Color("piroe_shrunk:Q", scale=alt.Scale(scheme="redblue", domainMid=0, reverse=True), title="PIRoE"),
         tooltip=["team", "fpos", alt.Tooltip("piroe_shrunk", format=".1f"), alt.Tooltip("pir_allowed", format=".1f"), "games"],
     ).properties(height=520)
-    text = alt.Chart(heat).mark_text(fontSize=11).encode(
+    text = alt.Chart(N(heat)).mark_text(fontSize=11).encode(
         x=alt.X("fpos:N", sort=["Guard", "Forward", "Center"]),
         y=alt.Y("team:N", sort=alt.EncodingSortField("piroe_shrunk", op="mean", order="descending")),
         text=alt.Text("piroe_shrunk:Q", format="+.1f"))
     st.altair_chart(ch + text, width="stretch")
-    st.dataframe(piv.round(1), width="stretch")
+    _df(piv.round(1), width="stretch")
     split = csv("dvp_split.csv")
     if not split.empty:
         st.subheader("Starters vs bench split (stronger shrinkage)")
-        st.dataframe(split.pivot_table(index="team", columns=["fpos", "unit"], values="piroe_shrunk").round(1), width="stretch")
+        _df(split.pivot_table(index="team", columns=["fpos", "unit"], values="piroe_shrunk").round(1), width="stretch")
 
 
 def page_player(proj: pd.DataFrame, mode: str):
@@ -505,23 +544,23 @@ def page_player(proj: pd.DataFrame, mode: str):
         st.warning(row["flags"])
     hist = pg[pg.player_code.astype(str) == code].sort_values("date_utc") if code else pd.DataFrame()
     if len(hist):
-        hist = hist.assign(game=lambda d: "R" + d["round"].astype(str) + " " + d.apply(lambda r: ("vs " if r.home else "@ ") + r.opponent, axis=1))
+        hist = hist.assign(game=lambda d: "R" + d["round"].astype(str) + " " + d.apply(lambda r: ("vs " if r.home else "@ ") + team_names().get(r.opponent, r.opponent), axis=1))
         base = alt.Chart(hist).encode(x=alt.X("game:N", sort=None, title=None))
         bars = base.mark_bar().encode(y=alt.Y("pir:Q", title="PIR"), color=alt.condition(alt.datum.starter, alt.value("#1f77b4"), alt.value("#aec7e8")),
                                       tooltip=["game", "minutes", "pir", "pts", "reb", "ast", "starter"])
         line = base.mark_line(color="#d62728", point=True).encode(y=alt.Y("minutes:Q", title="minutes"))
         st.altair_chart(alt.layer(bars, line).resolve_scale(y="independent").properties(height=320), width="stretch")
-        st.dataframe(hist[["round", "game", "minutes", "starter", "pts", "reb", "ast", "stl", "blk", "tov", "pf", "fd", "pir"]].round(1), width="stretch", hide_index=True)
+        _df(hist[["round", "game", "minutes", "starter", "pts", "reb", "ast", "stl", "blk", "tov", "pf", "fd", "pir"]].round(1), width="stretch", hide_index=True)
     else:
         st.info("No box-score rows matched this player this season.")
     st.caption("Game log: 2026-27 season only (earlier seasons are not used anywhere in the model).")
     st.subheader("Upcoming games in this matchday")
-    st.table(pd.DataFrame(row.games))
+    st.table(N(pd.DataFrame(row.games)))
     pr = prices()
     if len(pr):
         ph = pr[pr.player_id == row.platform_id][["matchday", "quotation", "avg_pts", "popularity"]]
         st.subheader("Price log")
-        st.dataframe(ph, hide_index=True)
+        _df(ph, hide_index=True)
 
 
 def page_top100():
@@ -534,11 +573,11 @@ def page_top100():
     st.subheader("Elite ownership vs the crowd")
     st.caption("Above the diagonal = the top-100 managers own the player more than the crowd does — that is where their edge is.")
     if "global_pct" in own:
-        ch = alt.Chart(own[own.teams >= 5]).mark_circle(size=80).encode(
+        ch = alt.Chart(N(own[own.teams >= 5])).mark_circle(size=80).encode(
             x=alt.X("global_pct", title="global ownership %"), y=alt.Y("own_pct", title="top-100 ownership %"),
             color="pos", tooltip=["player", "club", "price", "own_pct", "global_pct", "captain"]).interactive().properties(height=380)
         st.altair_chart(ch, width="stretch")
-    st.dataframe(own.head(40), width="stretch", hide_index=True, column_config={
+    _df(own.head(40), width="stretch", hide_index=True, column_config={
         "player": COL["player"], "pos": COL["pos"], "club": COL["club"], "price": COL["price"],
         "teams": st.column_config.NumberColumn("Teams", help="Number of top-100 teams owning the player"),
         "field": st.column_config.NumberColumn("On field", help="Of those, how many had him in the starting six (not bench)"),
@@ -569,7 +608,7 @@ def page_market(proj: pd.DataFrame):
         b = pr[pr.matchday == last_two[1]].set_index("player_id")
         j = b[["first_name", "last_name", "position", "team", "quotation", "avg_pts", "popularity"]].join(a[["quotation"]].rename(columns={"quotation": "prev"}), how="left")
         j["change"] = (j.quotation - j.prev).round(1)
-        st.dataframe(j.sort_values("change", ascending=False), width="stretch", column_config={
+        _df(j.sort_values("change", ascending=False), width="stretch", column_config={
             "quotation": COL["quotation"], "prev": st.column_config.NumberColumn("Prev price", format="%.1f"),
             "avg_pts": st.column_config.NumberColumn("Avg pts", help="Platform average fantasy points per matchday", format="%.1f"),
             "popularity": st.column_config.NumberColumn("Global own", help="Share of all managers owning the player (0–1)", format="%.2f"),
@@ -580,7 +619,7 @@ def page_market(proj: pd.DataFrame):
     st.subheader("Ownership vs expected points")
     st.caption("Bottom-right = popular but projected low (fade); top-left = unpopular but projected high (differential).")
     if not proj.empty:
-        ch = alt.Chart(proj[proj.pos != "Head Coach"]).mark_circle().encode(
+        ch = alt.Chart(N(proj[proj.pos != "Head Coach"])).mark_circle().encode(
             x=alt.X("popularity", title="ownership"), y=alt.Y("md_pts", title="expected pts"), color="pos",
             tooltip=["name", "team", "quotation", "md_pts", "popularity"]).interactive().properties(height=380)
         st.altair_chart(ch, width="stretch")
@@ -596,7 +635,7 @@ def page_model_health(mode: str):
             summ.append({"round": r, "n": len(g), "MAE model": (g.model - g.actual_pir).abs().mean(),
                          "MAE season-mean": (g.base_mean - g.actual_pir).abs().mean(), "MAE last-3": (g.base_last3 - g.actual_pir).abs().mean()})
         s = pd.DataFrame(summ).round(2)
-        st.dataframe(s, hide_index=True)
+        _df(s, hide_index=True)
         long = s.melt(id_vars=["round", "n"], var_name="estimator", value_name="MAE")
         st.altair_chart(alt.Chart(long).mark_line(point=True).encode(x="round:O", y="MAE:Q", color="estimator:N").properties(height=300), width="stretch")
     ev = D.PROCESSED / "evaluation.md"
@@ -622,7 +661,7 @@ def page_model_health(mode: str):
             k1.metric("Players matched", len(m))
             k2.metric("Correlation", f"{m[['md_pts', 'theirs']].corr().iloc[0, 1]:.2f}")
             k3.metric("Mean abs gap", f"{m.gap.abs().mean():.1f}")
-            st.dataframe(m.sort_values("gap", key=lambda s_: s_.abs(), ascending=False).head(15)[["name", "pos", "team", "quotation", "md_pts", "theirs", "gap", "min_hat", "risk"]],
+            _df(m.sort_values("gap", key=lambda s_: s_.abs(), ascending=False).head(15)[["name", "pos", "team", "quotation", "md_pts", "theirs", "gap", "min_hat", "risk"]],
                          width="stretch", hide_index=True, column_config={**{c: COL[c] for c in ("name", "pos", "team", "quotation", "md_pts", "min_hat", "risk")},
                          "theirs": st.column_config.NumberColumn("Theirs (proj PIR)", format="%.1f"), "gap": st.column_config.NumberColumn("Ours − theirs", format="%+.1f")})
             st.caption(f"Their file pulled {fe.pulled_at.iloc[0] if 'pulled_at' in fe else '—'}.")
@@ -678,7 +717,7 @@ def page_overview(proj: pd.DataFrame, md: int, mode: str):
 
     def board(title: str, df: pd.DataFrame, cols: list[str], cfg: dict | None = None):
         st.markdown(f"**{title}**")
-        st.dataframe(df[cols].head(8), width="stretch", hide_index=True, height=320,
+        _df(df[cols].head(8), width="stretch", hide_index=True, height=320,
                      column_config={**{c: COL[c] for c in cols if c in COL}, **(cfg or {})})
 
     c1, c2 = st.columns(2)
@@ -725,7 +764,7 @@ def page_overview(proj: pd.DataFrame, md: int, mode: str):
     if len(u) and (u.role_signal.fillna("") != "").any():
         st.markdown("**Role changes (last 3 games vs season)**")
         rc = u[u.role_signal.fillna("") != ""].rename(columns={"player_name": "player"})
-        st.dataframe(rc[["player", "team", "role_signal", "min_pg", "min_delta_last3", "fga_per_min", "usage_delta_last3", "shot_share"]], width="stretch", hide_index=True, column_config={
+        _df(rc[["player", "team", "role_signal", "min_pg", "min_delta_last3", "fga_per_min", "usage_delta_last3", "shot_share"]], width="stretch", hide_index=True, column_config={
             "role_signal": COL["role_signal"], "shot_share": COL["shot_share"], "fga_per_min": COL["fga_per_min"],
             "min_pg": st.column_config.NumberColumn("Min/G", format="%.1f"), "min_delta_last3": COL["min_delta"], "usage_delta_last3": COL["usage_delta"]})
 
@@ -750,13 +789,13 @@ def page_team_context():
         if c not in cfg and c not in ("team", "games"):
             label = c.replace("_allowed", " allowed").replace("_", " ").upper() if not c.startswith(("efg", "ts")) else c.replace("_allowed", " allowed").replace("efg", "eFG%").replace("ts", "TS%")
             cfg[c] = st.column_config.NumberColumn(label, format="%.1f" if not c.startswith(("efg", "ts")) else "%.3f")
-    st.dataframe(ctx[cols].sort_values("fdr" if "fdr" in cols else cols[2]), width="stretch", hide_index=True, column_config=cfg, height=760)
+    _df(ctx[cols].sort_values("fdr" if "fdr" in cols else cols[2]), width="stretch", hide_index=True, column_config=cfg, height=760)
     st.caption("PIR allowed vs pace: top-right clubs are the fantasy-friendly matchups (fast and leaky).")
-    ch = alt.Chart(ctx).mark_circle(size=120).encode(
+    ch = alt.Chart(N(ctx)).mark_circle(size=120).encode(
         x=alt.X("pace", title="pace (possessions/game)"), y=alt.Y("pir_allowed", title="PIR allowed per game"),
         color=alt.Color("fdr", scale=alt.Scale(scheme="redyellowgreen", reverse=True), title="FDR"),
         tooltip=["team", "pace", "pir_allowed", "pts_allowed", "fdr"]).properties(height=380)
-    text = alt.Chart(ctx).mark_text(dy=-12, fontSize=11).encode(x="pace", y="pir_allowed", text="team")
+    text = alt.Chart(N(ctx)).mark_text(dy=-12, fontSize=11).encode(x="pace", y="pir_allowed", text="team")
     st.altair_chart(ch + text, width="stretch")
 
 
@@ -810,7 +849,7 @@ def page_captain(proj: pd.DataFrame, md: int, mode: str):
     show(df.sort_values(key, ascending=False)[cols].head(40), height=520)
 
     st.caption("Expected points vs uncertainty. Top-left = high and steady (safe captain); top-right = high but volatile (ceiling captain). Size = p90.")
-    ch = alt.Chart(df.nlargest(60, "md_pts")).mark_circle().encode(
+    ch = alt.Chart(N(df.nlargest(60, "md_pts"))).mark_circle().encode(
         x=alt.X("md_sd", title="uncertainty (±)"), y=alt.Y("md_pts", title="expected pts"),
         size=alt.Size("md_p90", legend=None), color="pos",
         tooltip=["name", "team", "quotation", "md_pts", "md_sd", "floor", "md_p90", "nights", "elite_cap"],
@@ -820,13 +859,13 @@ def page_captain(proj: pd.DataFrame, md: int, mode: str):
     tabs = st.tabs(["Night by night", "Elite choices"])
     with tabs[0]:
         st.caption("Best single-game options per night. Use this to move the armband after night 1: it may only go to a starter who has NOT yet played.")
-        rows = [{"night": f"T{g['turn']}", "name": r.name, "pos": r.pos, "team": r.team, "opp": ("vs " if g["home"] else "@ ") + g["opp"],
+        rows = [{"night": f"T{g['turn']}", "name": r.name, "pos": r.pos, "team": r.team, "opp": ("vs " if g["home"] else "@ ") + team_names().get(g["opp"], g["opp"]),
                  "exp": g["fp"], "win %": round(100 * g["pw"]), "quotation": r.quotation}
                 for r in df.itertuples() for g in r.games]
         nb = pd.DataFrame(rows)
         if len(nb):
             nb = nb.sort_values(["night", "exp"], ascending=[True, False]).groupby("night").head(8)
-            st.dataframe(nb, width="stretch", hide_index=True, column_config={
+            _df(nb, width="stretch", hide_index=True, column_config={
                 "night": COL["night"], "name": COL["name"], "pos": COL["pos"], "team": COL["team"], "quotation": COL["quotation"],
                 "exp": st.column_config.NumberColumn("Exp pts (game)", format="%.1f"), "win %": DVP_COL["win %"]})
     with tabs[1]:
@@ -840,7 +879,7 @@ def page_captain(proj: pd.DataFrame, md: int, mode: str):
             st.caption("Who the top-100 managers captained, per matchday (teams). The crowd's default is Vezenkov; the elite move the armband to the matchup.")
             st.altair_chart(alt.Chart(top).mark_bar().encode(
                 x="matchday:O", y="teams:Q", color="player:N", tooltip=["matchday", "player", "teams"]).properties(height=300), width="stretch")
-            st.dataframe(top.pivot(index="matchday", columns="player", values="teams").fillna(0).astype(int), width="stretch")
+            _df(top.pivot(index="matchday", columns="player", values="teams").fillna(0).astype(int), width="stretch")
     TH.md(TH.notes("Captain rules", [
         ("×2", "The captain scores double. He must be one of the five starters (not the sixth man or bench)."),
         ("NIGHTS", "On multi-night matchdays the captain's games are summed; after a night the armband can move only to a starter who has not played yet."),
@@ -874,7 +913,7 @@ def page_fixtures(proj: pd.DataFrame, md: int):
     st.caption("Tip-off times in Athens. Field↔bench swaps and captain changes are allowed between nights, for players who have not played yet. "
                "FDR = how hard the fixture is for that side's players to score fantasy points (1 easy – 5 hard).")
     cols = ["night", "local", "home", "away"] + (["home_win", "spread", "total"] if len(od) else []) + (["fdr_home", "fdr_away"] if fdr_of else []) + ["venue"]
-    st.dataframe(cur[cols], width="stretch", hide_index=True, height=min(60 + 36 * len(cur), 560), column_config={
+    _df(cur[cols], width="stretch", hide_index=True, height=min(60 + 36 * len(cur), 560), column_config={
         **{c: COL[c] for c in cols if c in COL},
         "fdr_home": st.column_config.NumberColumn("FDR home side", help="Fixture difficulty for the home team's players (1 easy – 5 hard)", format="%.1f"),
         "fdr_away": st.column_config.NumberColumn("FDR away side", help="Fixture difficulty for the away team's players (1 easy – 5 hard)", format="%.1f")})
@@ -888,7 +927,7 @@ def page_fixtures(proj: pd.DataFrame, md: int):
             grid.loc[r.away, r.night] = f"@ {r.home}"
     grid["games_md_team"] = (grid != "").sum(axis=1)
     st.markdown("**Who plays when** — balance your squad across nights so you can react after T1:")
-    st.dataframe(grid.sort_values("games_md_team", ascending=False), width="stretch", column_config={"games_md_team": COL["games_md_team"]})
+    _df(grid.sort_values("games_md_team", ascending=False), width="stretch", column_config={"games_md_team": COL["games_md_team"]})
 
     st.divider()
     n_rounds = st.slider("Horizon (rounds ahead)", 2, 10, 5, help="One fantasy matchday = one EuroLeague round. The optimiser looks three matchdays ahead.")
@@ -918,7 +957,7 @@ def page_fixtures(proj: pd.DataFrame, md: int):
         gap[t] = int(h.diff().dt.days.min()) if len(h) > 1 else None
     cal["rest"] = pd.Series(rest)
     cal["gap"] = pd.Series(gap)
-    st.dataframe(cal.sort_values(["next_n_avg", "games_h"] if "next_n_avg" in cal else ["games_h", "home_h"], ascending=[True, False]), width="stretch",
+    _df(cal.sort_values(["next_n_avg", "games_h"] if "next_n_avg" in cal else ["games_h", "home_h"], ascending=[True, False]), width="stretch",
                  column_config={k: COL[k] for k in ("games_h", "home_h", "rest", "gap", "next_n_avg") if k in cal})
     st.markdown("**Results so far** (for context — the model uses the box scores, not the scores):")
     done = sched[sched.played].copy()
@@ -926,7 +965,7 @@ def page_fixtures(proj: pd.DataFrame, md: int):
         done["score"] = done.home_score.astype(int).astype(str) + "–" + done.away_score.astype(int).astype(str)
         done["local"] = done.date_utc.map(_local)
         with st.expander(f"{len(done)} games played"):
-            st.dataframe(done[["round", "local", "home", "score", "away"]].sort_values(["round", "local"], ascending=[False, True]), width="stretch", hide_index=True)
+            _df(done[["round", "local", "home", "score", "away"]].sort_values(["round", "local"], ascending=[False, True]), width="stretch", hide_index=True)
 
 
 # ------------------------------------------------------------------------------------------ game script (odds)
@@ -973,7 +1012,7 @@ def page_game_script(proj: pd.DataFrame, md: int):
                              "spread": -r.spread if side == "home" else r.spread, "blowout": r.blowout,
                              "top players": ", ".join(f"{p.name} ({p.md_pts:.0f})" for p in pl.itertuples())})
         wb = pd.DataFrame(rows)
-        st.dataframe(wb.sort_values(["night", "win %"], ascending=[True, False]), width="stretch", hide_index=True, column_config={
+        _df(wb.sort_values(["night", "win %"], ascending=[True, False]), width="stretch", hide_index=True, column_config={
             "night": COL["night"], "team": COL["team"], "win %": DVP_COL["win %"], "blowout": COL["blowout"],
             "spread": st.column_config.NumberColumn("Margin", help="Expected margin for this team (positive = expected to win by)", format="%+.1f"),
             "top players": st.column_config.TextColumn("Top players (exp pts)", width="large")})
@@ -988,7 +1027,8 @@ def page_game_script(proj: pd.DataFrame, md: int):
         mv = mv.reset_index()
         st.caption(f"Change from the first snapshot ({_local(od.snapshot.min())}) to the latest. A moving line usually means injury or rotation news the market has priced in.")
         show(mv.sort_values("d_win", key=lambda s: s.abs(), ascending=False)[["night", "home", "away", "home_win", "d_win", "spread", "d_spread", "total", "d_total"]])
-        hist = od.assign(game=od.home + " – " + od.away, home_win=od.home_win_prob * 100)
+        nm = team_names()
+        hist = od.assign(game=od.home.map(lambda c: nm.get(c, c)) + " – " + od.away.map(lambda c: nm.get(c, c)), home_win=od.home_win_prob * 100)
         st.altair_chart(alt.Chart(hist).mark_line(point=True).encode(
             x=alt.X("snapshot:T", title="pull (UTC)"), y=alt.Y("home_win:Q", title="home win %"), color=alt.Color("game:N", legend=alt.Legend(columns=2)),
             tooltip=["game", alt.Tooltip("snapshot:T", format="%d %b %H:%M"), alt.Tooltip("home_win:Q", format=".0f"), alt.Tooltip("home_spread:Q", format="+.1f"), alt.Tooltip("total:Q", format=".1f")],
@@ -1001,6 +1041,7 @@ def page_game_script(proj: pd.DataFrame, md: int):
 def render(mode: str):
     TH.inject_css()
     TH.altair_theme()
+    TH.set_team_names(team_names())
     md, proj = proj_data()
     header(mode, md)
     pages = (TEAM_PAGES + SCOUT_PAGES) if mode == "team" else SCOUT_PAGES
