@@ -276,7 +276,26 @@ def _squad_table(sq: pd.DataFrame) -> pd.DataFrame:
     return sq[cols].rename(columns={"quotation": "price", "md_pts": "exp", "md_p90": "p90", "why": "justification"})
 
 
+def refresh_bar():
+    """'Refresh my team' — pulls the roster/market from the platform and re-runs the recommendation here."""
+    c1, c2 = st.columns([1, 4])
+    if c1.button("↻ Refresh my team", help="Pull your current squad, credits and trades from the platform and recompute the recommendation. "
+                 "Takes ~20-40 s. Local to this app until the pipeline next commits."):
+        with st.spinner("pulling your team from the platform and re-running the recommendation…"):
+            res = D.refresh_team()
+        if res.get("ok"):
+            st.cache_data.clear()
+            st.session_state["refreshed"] = res
+            st.rerun()
+        else:
+            st.error(res.get("msg", "refresh failed"))
+    if st.session_state.get("refreshed"):
+        r = st.session_state["refreshed"]
+        c2.success(f"{r['msg']} · {r['pulled_at']}")
+
+
 def page_recommendation(proj: pd.DataFrame, md: int):
+    refresh_bar()
     rec = rec_json()
     if not rec:
         st.markdown(D.load_report("recommendation_latest.md"))

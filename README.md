@@ -44,6 +44,13 @@ pip install -e ".[dev]"
 cp .env.example .env   # then fill in FANTAKING_TOKEN (see docs/data-sources.md §1)
 ```
 
+## Refresh from the app
+
+The private app's Recommendation page has a **Refresh my team** button: it pulls your squad, credits, trades and the
+market from the platform and re-runs the recommendation inside the app (~20-40 s). It needs `FANTAKING_TOKEN`
+(and optionally `ODDS_API_KEY`, `FANTASY_TEAM_ID`) in the app's Streamlit secrets. The result lives in that app
+container only — the next pipeline run or redeploy replaces it with the committed state.
+
 ## Secrets
 
 Never commit `.env`. For the scheduled GitHub Actions relay, store `FANTAKING_TOKEN` and

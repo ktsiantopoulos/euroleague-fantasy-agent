@@ -202,6 +202,67 @@ def load_odds_snapshots() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def platform_token() -> str:
+    """FANTAKING_TOKEN from Streamlit secrets (Cloud) or the environment (.env locally); empty if absent."""
+    import os
+
+    tok = ""
+    try:
+        import streamlit as st
+
+        tok = str(st.secrets.get("FANTAKING_TOKEN", "")) if hasattr(st, "secrets") else ""
+    except Exception:  # noqa: BLE001 - no secrets file locally
+        tok = ""
+    return (tok or os.getenv("FANTAKING_TOKEN", "")).strip()
+
+
+def refresh_team() -> dict:
+    """Pull my team, roster and the market from the platform now and re-run the recommendation in-process.
+
+    Writes into this container's data/ and reports/ (not committed): the dashboard shows the fresh state until
+    the next pipeline run or redeploy replaces it. Returns a short status dict.
+    """
+    import os
+    import time
+
+    tok = platform_token()
+    if not tok:
+        return {"ok": False, "msg": "No FANTAKING_TOKEN in the app secrets (Streamlit Cloud → Manage app → Settings → Secrets)."}
+    os.environ["FANTAKING_TOKEN"] = tok
+    try:
+        import streamlit as st
+
+        for k in ("ODDS_API_KEY", "FANTASY_TEAM_ID"):
+            if k in st.secrets:
+                os.environ[k] = str(st.secrets[k])
+    except Exception:  # noqa: BLE001, S110 - optional secrets
+        pass
+    os.environ.setdefault("FANTASY_TEAM_ID", "2787922")
+    t0 = time.time()
+    Settings = elfa_attr("elfa.config", "Settings")
+    FantakingClient = elfa_attr("elfa.ingest.fantaking", "FantakingClient")
+    pull_matchday = elfa_attr("elfa.ingest.fantaking", "pull_matchday")
+    try:
+        pull_matchday(FantakingClient(Settings.load()))
+    except Exception as e:  # noqa: BLE001 - surface the reason in the page
+        return {"ok": False, "msg": f"Platform pull failed: {type(e).__name__}: {str(e)[:160]}"}
+    # the optimiser reads the parquet; rebuild it from the committed box scores if this container has none
+    pq = PROCESSED / "player_games.parquet"
+    if not pq.exists():
+        build_player_games = elfa_attr("elfa.features.boxscores", "build_player_games")
+        seasons = sorted(p.name for p in (RAW / "euroleague").glob("E*") if (p / "games.json").exists())
+        build_player_games(seasons[-1:]).to_parquet(pq, index=False)
+    try:
+        recommend = elfa_attr("elfa.report.recommend", "recommend")
+        recommend()
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "msg": f"Roster refreshed but the recommendation failed: {type(e).__name__}: {str(e)[:160]}"}
+    tmd, roster = load_roster_state()
+    coach = next((f"{p['first_name']} {p['last_name']}" for p in roster.get("players", []) if (p.get("position") or {}).get("name") == "Head Coach"), "—")
+    return {"ok": True, "msg": f"Refreshed in {time.time() - t0:.0f}s · credits {tmd.get('credits')} · trades used {tmd.get('trades')}/{tmd.get('max_num_trades_per_matchday')} · coach {coach}",
+            "pulled_at": time.strftime("%H:%M:%S UTC", time.gmtime())}
+
+
 def team_names() -> dict[str, str]:
     """Club name for every code in use — platform abbreviations (BJK, PAO) and official codes (BES, PAN).
 
