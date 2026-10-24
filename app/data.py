@@ -1,6 +1,7 @@
 """Data access for the dashboard: everything comes from files the pipeline commits."""
 from __future__ import annotations
 
+import importlib
 import json
 import sys
 from pathlib import Path
@@ -16,6 +17,18 @@ PROCESSED = DATA / "processed"
 RAW = DATA / "raw"
 PRICES = DATA / "prices"
 REPORTS = ROOT / "reports"
+
+
+def elfa_attr(module: str, name: str):
+    """Import `name` from an elfa module, reloading the module when it is stale.
+
+    Streamlit Cloud re-imports app/*.py on every push but keeps the src/elfa modules already in
+    sys.modules, so a new function in elfa raises ImportError until the app is rebooted.
+    """
+    mod = importlib.import_module(module)
+    if not hasattr(mod, name):
+        mod = importlib.reload(mod)
+    return getattr(mod, name)
 
 
 def latest_matchday() -> int:
@@ -75,8 +88,7 @@ def load_player_games() -> pd.DataFrame:
         except Exception:  # noqa: BLE001, S110 - fall through to a rebuild from raw
             pass
     if df.empty:
-        from elfa.features.boxscores import build_player_games
-
+        build_player_games = elfa_attr("elfa.features.boxscores", "build_player_games")
         df = build_player_games(seasons[-1:])
     return df[df.season == df.season.max()].reset_index(drop=True) if "season" in df else df
 
@@ -117,8 +129,7 @@ def load_odds_snapshots() -> pd.DataFrame:
     files = sorted((RAW / "odds").glob("odds_*.json"))
     if not files:
         return pd.DataFrame()
-    from elfa.ingest.odds import consensus
-
+    consensus = elfa_attr("elfa.ingest.odds", "consensus")
     schedule = load_schedule()
     rows = []
     for fp in files:

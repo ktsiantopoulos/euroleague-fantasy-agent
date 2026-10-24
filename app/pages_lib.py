@@ -155,8 +155,7 @@ def current_rounds_and_nights(sched: pd.DataFrame) -> tuple[list[int], list[str]
     From the committed matchday calendar (data/processed/matchdays.csv, built by `elfa build`), then the
     recommendation JSON, then the schedule (the matchday's own round, or the next unplayed one).
     """
-    from elfa.features.matchdays import matchday_turns
-
+    matchday_turns = D.elfa_attr("elfa.features.matchdays", "matchday_turns")
     rounds, nights = matchday_turns(D.latest_matchday(), csv("matchdays.csv"))
     rec = rec_json()
     if not rounds and rec.get("rounds"):
@@ -266,8 +265,8 @@ def page_whatif(proj: pd.DataFrame):
     if proj.empty:
         st.warning("No projection yet.")
         return
-    from elfa.model.inround import simulate
-    from elfa.optimise.lineup import optimise
+    simulate = D.elfa_attr("elfa.model.inround", "simulate")
+    optimise = D.elfa_attr("elfa.optimise.lineup", "optimise")
 
     names = sorted(proj.name.tolist())
     in_squad = sorted(proj[proj.in_roster].name.tolist())
