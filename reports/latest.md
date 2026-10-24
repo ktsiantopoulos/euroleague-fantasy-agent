@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.44 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.05 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -66,19 +66,19 @@ learn: hold-out R7 MAE current 6.46 vs candidate 6.45 (w=(0.2, 0.3, 0.5), λ=0.3
 γ=1.0) → kept current
 
 ## top-100
-top-100: 525 roster previews fetched now
+top-100: 0 roster previews fetched now
 # Top-100 managers — matchdays 1–7
 
 ## Ownership in the top 100, matchday 7
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 9.3 | 91 |  | 7 |
-| Theo Maledon | G | RMB | 12.3 | 81 |  | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 73 |  | 34 |
-| Andres Feliz | G | RMB | 8.2 | 66 |  | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 63 |  | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 |  | 8 |
+| Aliou Diarra | C | VIR | 9.3 | 91 | 37 | 7 |
+| Theo Maledon | G | RMB | 12.3 | 81 | 38 | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 73 | 44 | 34 |
+| Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
+| Tomas Masiulis | H | ZAL | 6.3 | 63 | 22 | 0 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 11 | 8 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
@@ -91,8 +91,8 @@ projected >= 15 min 512       6.20       0.311           6.58           0.284
 5.98            0.378
 
 ## recommend
-- Starting five constrained to 1–3 players per position (covers the platform's 
-formations).
-- Price-change term inactive (μ = 0) until the price log has two or more 
-matchdays.
+- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 
+ownership (raw model value kept as md_pts_model).
+- Soft rules from the top-100 study: 3 points penalty per player above 3 from 
+one club; 1 point per credit for bench players under 6.0.
 - Optimiser status: Optimal / Optimal.
