@@ -9,7 +9,7 @@
 | Sasha Vezenkov | F | OLY | 18.4 | 73 | 44 | 34 |
 | Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
 | Tomas Masiulis | H | ZAL | 6.3 | 63 | 22 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 11 | 8 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 12 | 8 |
 | Arijan Lakic | F | PAR | 4.0 | 40 | 28 | 0 |
 | Elijah Bryant | G | HTA | 17.4 | 39 | 16 | 0 |
 | TJ Shorts | G | VBC | 15.5 | 35 | 15 | 15 |
@@ -21,11 +21,11 @@
 | Zach Leday | F | HTA | 13.5 | 20 | 8 | 20 |
 | Kostas Papanikolaou | F | OLY | 4.2 | 20 | 17 | 0 |
 | Dejan Davidovac | F | CZV | 4.6 | 19 | 12 | 0 |
-| Edwin Jackson | F | ASV | 4.5 | 17 | 9 | 0 |
+| Edwin Jackson | F | ASV | 4.5 | 17 | 8 | 0 |
 | Konstantinos Mitoglou | F | PAO | 6.2 | 16 | 13 | 0 |
 | Matthew Strazel | G | EFS | 10.5 | 16 | 4 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Aliou Diarra (+54 pp), Theo Maledon (+43 pp), Tomas Masiulis (+41 pp), Andres Feliz (+34 pp), Mfiondu Kabengele (+33 pp), Sasha Vezenkov (+29 pp), Collin Malcolm (+27 pp), Elijah Bryant (+23 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Aliou Diarra (+54 pp), Theo Maledon (+43 pp), Tomas Masiulis (+41 pp), Andres Feliz (+34 pp), Mfiondu Kabengele (+32 pp), Sasha Vezenkov (+29 pp), Collin Malcolm (+27 pp), Elijah Bryant (+23 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (59), Jonas Valanciunas (11), Mathias Lessort (9)

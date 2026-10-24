@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 68.05 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 67.05 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -78,7 +78,7 @@ top-100: 0 roster previews fetched now
 | Sasha Vezenkov | F | OLY | 18.4 | 73 | 44 | 34 |
 | Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
 | Tomas Masiulis | H | ZAL | 6.3 | 63 | 22 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 11 | 8 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 12 | 8 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
