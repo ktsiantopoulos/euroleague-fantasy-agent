@@ -8,6 +8,7 @@ All parameters live in `Params` so the backtest can grid-search them.
 """
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 
 import numpy as np
@@ -93,6 +94,10 @@ def project(
             mu, pw = -mu, 1 - pw
         return mu, pw, home, opp
 
+    # turn index = order of game night within the current matchday (1 = first night)
+    nights = sorted({g.date_utc[:10] for g in horizon[0]})
+    turn_of = {d: i + 1 for i, d in enumerate(nights)}
+
     rows = []
     for m in market:
         pid = str(m["id"])
@@ -106,6 +111,7 @@ def project(
         f = form.loc[code] if isinstance(code, str) and code in form.index else None
         flags = []
         why = []
+        games_detail = []
         md_pts, md_var, horizon_pts, games_md = 0.0, 0.0, 0.0, 0
         min_hat = rate_hat = 0.0
         if pos == "Head Coach":
@@ -120,6 +126,7 @@ def project(
                         md_pts += ev
                         md_var += 12.0 ** 2
                         games_md += 1
+                        games_detail.append({"turn": turn_of.get(g.date_utc[:10], 1), "opp": opp, "home": home, "fp": round(ev, 2), "sd": 12.0, "pw": round(pw, 3)})
                         why.append(f"{'vs' if home else '@'} {opp}: margin {mu:+.0f}, win {pw:.0%} → EV {ev:+.1f}")
             flags.append("coach")
         else:
@@ -144,7 +151,9 @@ def project(
                     horizon_pts += p.horizon_weights[h_i] * fp
                     if h_i == 0:
                         dv = dvp_idx.get((opp, pos), 0.0)
-                        why.append(f"{'vs' if home else '@'} {opp} (DvP {dv:+.1f}, win {pw:.0%}) → {fp:.1f}")
+                        g_sd = float(np.sqrt((prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)))
+                        games_detail.append({"turn": turn_of.get(g.date_utc[:10], 1), "opp": opp, "home": home, "fp": round(fp, 2), "sd": round(g_sd, 2), "pw": round(pw, 3)})
+                        why.append(f"T{turn_of.get(g.date_utc[:10], 1)} {'vs' if home else '@'} {opp} (DvP {dv:+.1f}, win {pw:.0%}) → {fp:.1f}")
                         md_pts += fp
                         md_var += (prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)
                         games_md += 1
@@ -164,6 +173,8 @@ def project(
                 "horizon_pts": round(horizon_pts, 2),
                 "value": round(md_pts / float(m["quotation"]), 3) if float(m["quotation"]) > 0 else 0.0,
                 "in_roster": pid in roster_ids, "flags": "; ".join(flags), "why": " · ".join(why),
+                "first_turn": min((d["turn"] for d in games_detail), default=99),
+                "games_json": json.dumps(games_detail),
             }
         )
     return pd.DataFrame(rows)

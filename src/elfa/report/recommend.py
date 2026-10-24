@@ -11,16 +11,18 @@ from elfa.config import PROCESSED, RAW, ROOT
 from elfa.features.dvp import attach_positions, compute_dvp, dvp_summary
 from elfa.features.mapping import load_latest_market
 from elfa.ingest.odds import fetch_odds, odds_dir
+from elfa.model.inround import simulate
 from elfa.model.optimise_bridge import run_optimiser
 from elfa.model.projection import Params, project
 from elfa.model.teams import load_schedule, team_ratings, upcoming_rounds
 
 
 def _fmt_squad(sq: pd.DataFrame) -> str:
-    cols = ["slot", "name", "pos", "team", "quotation", "md_pts", "md_p90", "why"]
+    cols = ["slot", "name", "pos", "team", "quotation", "nights", "md_pts", "md_p90", "why"]
     sq = sq.copy()
     slot_names = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
     sq["slot"] = sq.role.map(slot_names)
+    sq["nights"] = sq.games_json.map(lambda j: "/".join(f"T{g['turn']}" for g in json.loads(j)) if isinstance(j, str) else "")
     sq["name"] = sq.apply(lambda r: f"**{r['name']}** (C)" if r.captain else r["name"], axis=1)
     sq["why"] = sq.apply(lambda r: (r["why"] + (f" · ⚠ {r['flags']}" if r["flags"] and r["flags"] != "coach" else "")), axis=1)
     sq = sq[cols].rename(columns={"quotation": "price", "md_pts": "exp pts", "md_p90": "p90", "why": "justification"})
@@ -75,6 +77,10 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     best = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=False, keep_ids=keep_ids)
 
     rounds_txt = ", ".join(sorted({f"R{g.round}" for g in first}))
+    nights = sorted({g.date_utc[:10] for g in first})
+    nights_txt = ", ".join(f"T{i + 1}={d[5:]}" for i, d in enumerate(nights))
+    plan_best = simulate(best.squad)
+    plan_hold = simulate(hold.squad)
     lines = [
         f"# Recommendation — matchday {md_number} ({rounds_txt})",
         "",
@@ -82,13 +88,18 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
          f"odds {'ON (' + str(len(odds)) + ' games)' if odds else 'OFF (model margins)'}"),
         "",
         "## Decision",
-        f"- Current squad, best lineup: **{hold.expected_md_pts} pts** expected this matchday.",
-        f"- With trades: **{best.expected_md_pts} pts** expected (+{round(best.expected_md_pts - hold.expected_md_pts, 1)}), cost {best.cost}/{budget}.",
+        f"- Game nights: {nights_txt}. Bench players with later nights are swap options; captain can move to a not-yet-played starter.",
+        f"- Current squad, best lineup: **{hold.expected_md_pts} pts** expected; in-round swaps add {plan_hold.gain:+.1f} (simulated).",
+        f"- With trades: **{best.expected_md_pts} pts** expected (+{round(best.expected_md_pts - hold.expected_md_pts, 1)}); in-round swaps add {plan_best.gain:+.1f} (simulated); cost {best.cost}/{budget}.",
         f"- Trades: OUT {', '.join(best.trades_out) or '—'} → IN {', '.join(best.trades_in) or '—'}",
         f"- Captain **{best.captain}**, coach **{best.coach}**." + (f" Kept by request: {', '.join(keep)}." if keep else ""),
         "",
         "## Recommended squad (with trades)",
         _fmt_squad(best.squad),
+        "",
+        "### In-round plan (from 3,000 simulations)",
+        "- " + ("\n- ".join(plan_best.notes) if plan_best.notes else "no frequent swaps — the lineup is mostly set-and-forget"),
+        "- Rule of thumb after each night: promote a not-yet-played bench player over a field player of the same position whose realised score is below the bench player's expectation; move the captaincy to the not-yet-played starter with the highest expectation if it beats the captain's realised total.",
         "",
         "## Current squad, best lineup (no trades)",
         _fmt_squad(hold.squad),

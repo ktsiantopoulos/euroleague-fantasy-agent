@@ -17,7 +17,8 @@ def _market(seed=1):
             q = round(random.uniform(4, 18), 1) if pos != "Head Coach" else round(random.uniform(4, 8), 1)
             md = round(q * random.uniform(0.6, 1.6), 1) if pos != "Head Coach" else round(random.uniform(-5, 15), 1)
             rows.append({"platform_id": str(i), "name": f"P{i}", "pos": pos, "team": teams[i % 10], "quotation": q,
-                         "md_pts": md, "md_sd": 6.0, "horizon_pts": md * 1.5, "games_md": 1})
+                         "md_pts": md, "md_sd": 6.0, "horizon_pts": md * 1.5, "games_md": 1,
+                         "first_turn": 1 + (i % 2), "games_json": "[]"})
     return pd.DataFrame(rows)
 
 
@@ -33,6 +34,8 @@ def test_optimiser_respects_rules():
     assert sq.pos.value_counts().to_dict() == {"Guard": 4, "Forward": 4, "Center": 2, "Head Coach": 1}
     assert sq.role.value_counts().to_dict() == {"starter": 5, "sixth": 1, "bench": 4, "coach": 1}
     assert sq.captain.sum() == 1 and sq[sq.captain].role.iloc[0] == "starter"
+    assert sq[sq.role == "sixth"].pos.iloc[0] != "Center"
+    assert (sq[(sq.role == "bench") & (sq.first_turn >= 2)].shape[0]) >= 2
     assert sq.team.value_counts().max() <= 6
     assert len(sol.trades_in) <= 4
     hold = optimise(df, budget=100.0, prev_ids=prev, max_trades=4, lock_squad=True)

@@ -67,3 +67,15 @@ Credits 105.9 · Total pts 1012.5 · Trades used 0/4
 - Token lifetime unknown — expect to refresh manually when the agent gets 401.
 - Rate limits unknown — pull the market once per matchday (4 pages at per_page=100), player detail only for shortlist.
 - Dunkest ToS: personal, read-only use only; no automated trades.
+
+## 8. Rules verified from the official rulebook and EuroLeague articles (24 Oct 2026)
+Sources: Fantaking rulebook (fantaking.gitbook.io/euroleague-fantasy-challenge-rules — Initial team, Managing your team,
+Players scoring, Coach scoring), euroleaguebasketball.net "In-round management is critical", Dunkest "How the Classic Mode works".
+- Roster 2 C / 4 F / 4 G / 1 HC; budget 100 (+0.3 per round for late registration); max 6 per club.
+- Formations: 2-2-1, 1-2-2, 2-1-2, 1-3-1, 3-1-1 (G-F-C). Captain from the starting five, x2. Sixth man 100%, bench 50%, coach 100%.
+- A Round is split into Turns (game nights). Between turns: field↔bench swaps and captain changes allowed only if the
+  incoming player has NOT yet played; a demoted player's score is halved; formation can change; a reset button exists.
+- Trades: 4 per round (coach counts as one of the 4). Unlimited-trade windows 2026-27: after R6 (Oct 16-21), R13 (Nov 21-24),
+  R18 (Dec 19-22), R23 (Jan 16-21), R28 (Feb 13-Mar 4), R34 (Mar 27-31). Unlimited in play-ins/playoffs/F4.
+- Postponed game with average score awarded: captain does NOT double.
+- House rule (user): never a center as sixth man.

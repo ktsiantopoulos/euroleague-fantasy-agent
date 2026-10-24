@@ -5,6 +5,7 @@ Scoring weights verified on the platform: starters, 6th man, coach x1; bench x0.
 """
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 
 import pandas as pd
@@ -15,6 +16,32 @@ MAX_SAME_CLUB = 6
 BENCH_FACTOR = 0.5
 FUTURE_FACTOR = 0.75        # average multiplier of a squad player in future matchdays
 CAPTAIN_SD_TILT = 0.4       # prefer high-ceiling captains
+MIN_PROMOTABLE_BENCH = 2    # bench players whose first game is after night 1 (swap options)
+MIN_FIRST_NIGHT_FIELD = 3   # field players who play on night 1 (information before the swap window)
+
+
+def _pos_part(mu: float, sd: float) -> float:
+    """E[max(X,0)] for X ~ N(mu, sd)."""
+    if sd <= 0:
+        return max(mu, 0.0)
+    z = mu / sd
+    return sd * math.exp(-0.5 * z * z) / math.sqrt(2 * math.pi) + mu * 0.5 * (1 + math.erf(z / math.sqrt(2)))
+
+
+def bench_value(df: pd.DataFrame) -> dict[str, float]:
+    """Expected contribution of each player if he sits on the bench: 50% of his points plus the
+    option of being promoted after night 1 in place of a same-position field player who has played.
+    The reference field player is the average of the top-3 first-night players at that position."""
+    out = {}
+    first = df[(df.first_turn == 1) & (df.pos != "Head Coach")]
+    ref = {p_: first[first.pos == p_].nlargest(3, "md_pts")[["md_pts", "md_sd"]] for p_ in ("Guard", "Forward", "Center")}
+    for r in df.itertuples():
+        base = BENCH_FACTOR * r.md_pts
+        prem = 0.0
+        if r.pos != "Head Coach" and r.first_turn >= 2 and len(ref.get(r.pos, [])):
+            prem = 0.5 * float(sum(_pos_part(r.md_pts - f.md_pts, f.md_sd) for f in ref[r.pos].itertuples()) / len(ref[r.pos]))
+        out[r.platform_id] = base + prem
+    return out
 
 
 @dataclass
@@ -39,6 +66,7 @@ def optimise(
     exp_price_change: dict[str, float] | None = None,
     lock_squad: bool = False,
     keep_ids: set[str] | None = None,
+    balance: bool = True,
 ) -> Solution:
     exp_price_change = exp_price_change or {}
     df = proj.copy()
@@ -49,6 +77,10 @@ def optimise(
     q = dict(zip(df.platform_id, df.quotation))
     md = dict(zip(df.platform_id, df.md_pts))
     sd = dict(zip(df.platform_id, df.md_sd))
+    if "first_turn" not in df:
+        df["first_turn"] = 1
+    bval = bench_value(df)
+    ft = dict(zip(df.platform_id, df.first_turn))
     fut = {i: max(h - m_, 0.0) for i, h, m_ in zip(df.platform_id, df.horizon_pts, df.md_pts)}
     players = [i for i in ids if pos[i] != "Head Coach"]
     coaches = [i for i in ids if pos[i] == "Head Coach"]
@@ -60,7 +92,7 @@ def optimise(
     x, s, m, b, c = _bin("x", ids), _bin("s", players), _bin("m", players), _bin("b", players), _bin("c", players)
 
     prob += (
-        pulp.lpSum((s[i] + m[i]) * md[i] + BENCH_FACTOR * b[i] * md[i] + c[i] * (md[i] + CAPTAIN_SD_TILT * sd[i]) for i in players)
+        pulp.lpSum((s[i] + m[i]) * md[i] + b[i] * bval[i] + c[i] * (md[i] + CAPTAIN_SD_TILT * sd[i]) for i in players)
         + pulp.lpSum(x[i] * md[i] for i in coaches)
         + pulp.lpSum(x[i] * FUTURE_FACTOR * fut[i] for i in ids)
         + mu_price * pulp.lpSum(x[i] * exp_price_change.get(i, 0.0) for i in ids)
@@ -75,10 +107,19 @@ def optimise(
     prob += pulp.lpSum(m[i] for i in players) == 1
     prob += pulp.lpSum(b[i] for i in players) == 4
     prob += pulp.lpSum(c[i] for i in players) == 1
-    # starting five must be a legal formation: at least one and at most three of each position
+    # starting five must be a legal formation (2-2-1, 1-2-2, 2-1-2, 1-3-1, 3-1-1): 1-3 of each position
     for p_ in ("Guard", "Forward", "Center"):
         prob += pulp.lpSum(s[i] for i in players if pos[i] == p_) >= 1
         prob += pulp.lpSum(s[i] for i in players if pos[i] == p_) <= 3
+    # house rule: never a center as sixth man
+    for i in players:
+        if pos[i] == "Center":
+            prob += m[i] == 0
+    # balance across game nights (only meaningful when the matchday has more than one night)
+    multi_night = any(v >= 2 for v in ft.values() if v < 99)
+    if multi_night and balance:
+        prob += pulp.lpSum(b[i] for i in players if 2 <= ft[i] < 99) >= MIN_PROMOTABLE_BENCH
+        prob += pulp.lpSum(s[i] + m[i] for i in players if ft[i] == 1) >= MIN_FIRST_NIGHT_FIELD
     for cl in set(club.values()):
         prob += pulp.lpSum(x[i] for i in ids if club[i] == cl) <= MAX_SAME_CLUB
     prob += pulp.lpSum(x[i] * q[i] for i in ids) <= budget
@@ -95,6 +136,8 @@ def optimise(
                 prob += x[i] == 1
     prob.solve(pulp.PULP_CBC_CMD(msg=False, timeLimit=60))
     status = pulp.LpStatus[prob.status]
+    if status != "Optimal" and balance:
+        return optimise(proj, budget, prev_ids, max_trades, mu_price, exp_price_change, lock_squad, keep_ids, balance=False)
 
     chosen = [i for i in ids if x[i].value() and x[i].value() > 0.5]
     role = {}
@@ -115,6 +158,7 @@ def optimise(
     squad = squad.sort_values(["role", "md_pts"], key=lambda col: col.map(order) if col.name == "role" else -col).reset_index(drop=True)
     mult = squad.role.map({"starter": 1, "sixth": 1, "bench": BENCH_FACTOR, "coach": 1}) + squad.captain.astype(int)
     expected = float((squad.md_pts * mult).sum())
+    status = status + ("" if balance else " (night-balance relaxed)")
     names = dict(zip(df.platform_id, df.name))
     return Solution(
         squad=squad,
