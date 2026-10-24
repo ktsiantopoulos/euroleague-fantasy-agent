@@ -1,0 +1,21 @@
+platform_abbr,platform_name,official_code,official_name,method
+EFS,Anadolu Efes Istanbul,IST,Anadolu Efes Istanbul,seed
+MIL,Armani Olimpia Milan,MIL,Armani Olimpia Milan,seed
+BJK,Besiktas Istanbul,BES,Besiktas Istanbul,name (seed BJK disagreed)
+CZV,Crvena Zvezda Meridianbet Belgrade,RED,Crvena Zvezda Meridianbet Belgrade,seed
+DUB,Dubai Basketball,DUB,Dubai Basketball,seed
+BAR,FC Barcelona,BAR,FC Barcelona,seed
+BAY,FC Bayern Munich,MUN,FC Bayern Munich,seed
+FBT,Fenerbahce Tarfin Istanbul,ULK,Fenerbahce Tarfin Istanbul,seed
+HTA,Hapoel IBI Tel Aviv,HTA,Hapoel IBI Tel Aviv,seed
+KBA,Kosner Baskonia Vitoria-Gasteiz,BAS,Kosner Baskonia Vitoria-Gasteiz,seed
+ASV,LDLC ASVEL Villeurbanne,ASV,LDLC ASVEL Villeurbanne,seed
+MTA,Maccabi Rapyd Tel Aviv,TEL,Maccabi Rapyd Tel Aviv,seed
+OLY,Olympiacos Piraeus,OLY,Olympiacos Piraeus,seed
+PAO,Panathinaikos AKTOR Athens,PAN,Panathinaikos AKTOR Athens,seed
+PBB,Paris Basketball,PRS,Paris Basketball,seed
+PAR,Partizan Mozzart Bet Belgrade,PAR,Partizan Mozzart Bet Belgrade,seed
+RMB,Real Madrid,MAD,Real Madrid,seed
+VBC,Valencia Basket,PAM,Valencia Basket,seed
+VIR,Virtus Bologna,VIR,Virtus Bologna,seed
+ZAL,Zalgiris Kaunas,ZAL,Zalgiris Kaunas,seed
