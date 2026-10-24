@@ -180,7 +180,7 @@ elif page == "Defence vs position":
 # ------------------------------------------------------------------------------------------
 elif page == "Player":
     pg = _pg()
-    pm = _csv("player_map.csv")
+    pm = D.load_csv("player_map.csv", dtype={"platform_id": str, "person_code": str})
     if proj.empty or pg.empty:
         st.warning("No data yet.")
     else:
