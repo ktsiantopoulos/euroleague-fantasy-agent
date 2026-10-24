@@ -64,7 +64,7 @@ def load_player_games() -> pd.DataFrame:
             df = pd.read_parquet(pq)
             if len(df):
                 return df
-        except Exception:  # noqa: BLE001
+        except Exception:  # noqa: BLE001, S110 - fall through to a rebuild from raw
             pass
     from elfa.features.boxscores import build_player_games
 

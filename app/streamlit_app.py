@@ -5,10 +5,17 @@ Reads the files the GitHub Actions pipeline commits; the what-if page runs the r
 from __future__ import annotations
 
 import re
+import sys
+from pathlib import Path
 
 import altair as alt
 import pandas as pd
 import streamlit as st
+
+_ROOT = Path(__file__).resolve().parents[1]
+for _p in (str(_ROOT), str(_ROOT / "src")):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
 from app import data as D
 
