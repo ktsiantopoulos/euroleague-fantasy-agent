@@ -20,6 +20,8 @@ for _p in (RAW, PROCESSED, PRICES):
 
 def _env(name: str, default: str | None = None) -> str:
     v = os.getenv(name, default)
+    if v is not None:
+        v = v.strip()
     if v is None or v == "":
         raise RuntimeError(f"Missing env var {name} (see .env.example)")
     return v

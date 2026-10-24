@@ -35,6 +35,12 @@ jobs:
       - name: Install
         run: pip install -e ".[dev]"
 
+      - name: Normalise secrets
+        run: |
+          T="$(printf '%s' "$FANTAKING_TOKEN" | tr -d '[:space:]')"
+          echo "::add-mask::$T"
+          echo "FANTAKING_TOKEN=$T" >> "$GITHUB_ENV"
+
       - name: Restore raw cache
         uses: actions/cache@v4
         with:

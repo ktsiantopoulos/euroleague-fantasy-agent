@@ -8,7 +8,12 @@ from rich import print as rprint
 
 from elfa.config import PROCESSED, Settings
 
-app = typer.Typer(help="EuroLeague Fantasy Agent", no_args_is_help=True)
+
+def _redact(msg: str, secret: str) -> str:
+    return msg.replace(secret, "***") if secret else msg
+
+
+app = typer.Typer(help="EuroLeague Fantasy Agent", no_args_is_help=True, pretty_exceptions_enable=False)
 
 
 @app.command("pull-official")
@@ -31,7 +36,11 @@ def pull_platform(
     from elfa.ingest.fantaking import FantakingClient, pull_matchday
 
     s = Settings.load()
-    out = pull_matchday(FantakingClient(s), matchday_id, with_history=history)
+    try:
+        out = pull_matchday(FantakingClient(s), matchday_id, with_history=history)
+    except Exception as e:  # noqa: BLE001 - never print request objects/headers
+        rprint(f"[red]pull-platform failed:[/] {type(e).__name__}: {_redact(str(e), s.fantaking_token)}")
+        raise typer.Exit(1)
     tmd = json.loads((out / "team_matchday.json").read_text(encoding="utf-8"))
     rprint(f"[green]pulled[/] -> {out}")
     rprint(f"team: {tmd['name']}  credits: {tmd['credits']}  trades used: {tmd['trades']}/{tmd['max_num_trades_per_matchday']}")
