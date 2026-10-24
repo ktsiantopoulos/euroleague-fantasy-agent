@@ -9,6 +9,7 @@ from __future__ import annotations
 import re
 import sys
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import altair as alt
 import pandas as pd
@@ -25,7 +26,9 @@ from app import theme as TH
 SLOT = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
 
 TEAM_PAGES = ["Recommendation", "What-if optimiser"]
-SCOUT_PAGES = ["Projections", "Defence vs position", "Player", "Top 100 managers", "Market & prices", "Model health"]
+SCOUT_PAGES = ["Projections", "Captain", "Fixtures & schedule", "Game script (odds)", "Defence vs position", "Player",
+               "Top 100 managers", "Market & prices", "Model health"]
+ATHENS = ZoneInfo("Europe/Athens")
 
 # Column titles with explanations (hover the header)
 COL = {
@@ -57,6 +60,32 @@ COL = {
     "justification": st.column_config.TextColumn("Why", help="Minutes × rate, then each game: night, opponent, DvP tilt, win probability → points", width="large"),
     "why": st.column_config.TextColumn("Why", help="Minutes × rate, then each game: night, opponent, DvP tilt, win probability → points", width="large"),
     "games_md": st.column_config.NumberColumn("G", help="Games this matchday"),
+    # captain page
+    "floor": st.column_config.NumberColumn("Floor (p10)", help="10th-percentile outcome — what a bad night looks like. Sort by this for a safe captain.", format="%.1f"),
+    "games_txt": st.column_config.TextColumn("Games (exp pts, win %)", help="Each game this matchday: night, opponent, expected points and the team's win probability", width="large"),
+    "elite_cap": st.column_config.NumberColumn("Top-100 C", help="How many of the top-100 managers captained him in the last played matchday"),
+    "elite_cap_mds": st.column_config.NumberColumn("C in MDs", help="Number of matchdays this season in which at least one top-100 manager captained him"),
+    "captain_now": st.column_config.CheckboxColumn("Your C", help="Your current captain on the platform"),
+    # fixtures / odds pages
+    "night": st.column_config.TextColumn("Night", help="Game night of the matchday (T1 = first). In-round swaps are allowed between nights."),
+    "local": st.column_config.TextColumn("Tip-off (Athens)", help="Local time in Athens"),
+    "home": st.column_config.TextColumn("Home"),
+    "away": st.column_config.TextColumn("Away"),
+    "favourite": st.column_config.TextColumn("Favourite", help="Bookmaker favourite and its win probability (vig removed, consensus across books)"),
+    "home_win": st.column_config.NumberColumn("Home win %", help="Consensus implied probability that the home team wins", format="%d%%"),
+    "spread": st.column_config.NumberColumn("Spread", help="Consensus handicap for the home team (negative = home favourite). The projection uses −spread as the expected margin.", format="%+.1f"),
+    "total": st.column_config.NumberColumn("Total", help="Consensus over/under points line — a pace and scoring-environment signal", format="%.1f"),
+    "books": st.column_config.NumberColumn("Books", help="Bookmakers quoting the game"),
+    "blowout": st.column_config.TextColumn("Blowout risk", help="|spread| ≥ 12 high, ≥ 8 medium. In a blowout the favourite's starters sit the fourth quarter — fewer minutes, lower PIR."),
+    "pace": st.column_config.TextColumn("Scoring env.", help="Total vs the median total of the matchday: fast (≥ +4), slow (≤ −4), average"),
+    "d_win": st.column_config.NumberColumn("Δ win pp", help="Change in home win probability since the first odds snapshot (percentage points)", format="%+.1f"),
+    "d_spread": st.column_config.NumberColumn("Δ spread", help="Change in the home spread since the first snapshot", format="%+.1f"),
+    "d_total": st.column_config.NumberColumn("Δ total", help="Change in the total since the first snapshot", format="%+.1f"),
+    "games_md_team": st.column_config.NumberColumn("G this MD", help="Games the club plays in this matchday"),
+    "games_h": st.column_config.NumberColumn("G horizon", help="Games the club plays in the selected horizon"),
+    "home_h": st.column_config.NumberColumn("Home", help="Home games in the horizon"),
+    "rest": st.column_config.NumberColumn("Rest days", help="Days between the club's last game and its first game of this matchday"),
+    "gap": st.column_config.NumberColumn("Min gap", help="Shortest gap in days between consecutive games in the horizon (1 = back-to-back)"),
 }
 
 DVP_COL = {
@@ -108,6 +137,50 @@ def scrub_team(text: str) -> str:
 @st.cache_data(ttl=600)
 def rec_json():
     return D.load_recommendation()
+
+
+@st.cache_data(ttl=600)
+def schedule_df():
+    return D.load_schedule_df()
+
+
+@st.cache_data(ttl=600)
+def odds_df():
+    return D.load_odds_snapshots()
+
+
+def current_rounds_and_nights(sched: pd.DataFrame) -> tuple[list[int], list[str]]:
+    """Rounds and game-night dates (UTC, YYYY-MM-DD) of the matchday the dashboard is showing.
+
+    Taken from the recommendation when one exists (it knows the platform's matchday → rounds mapping);
+    otherwise the next unplayed round of the schedule.
+    """
+    rec = rec_json()
+    if rec.get("rounds"):
+        rounds = [int(r) for r in rec["rounds"]]
+        nights = list(rec.get("nights") or [])
+    else:
+        rounds, nights = [], []
+    if not rounds and len(sched):
+        nxt = sched[~sched.played]["round"]
+        rounds = [int(nxt.min())] if len(nxt) else []
+    if rounds and not nights and len(sched):
+        nights = sorted(sched[sched["round"].isin(rounds)].date_utc.dt.strftime("%Y-%m-%d").unique().tolist())
+    return rounds, nights
+
+
+def _local(ts: pd.Timestamp) -> str:
+    ts = pd.Timestamp(ts)
+    if ts.tzinfo is None:
+        ts = ts.tz_localize("UTC")
+    return ts.tz_convert(ATHENS).strftime("%a %d %b %H:%M")
+
+
+def _latest_odds() -> pd.DataFrame:
+    od = odds_df()
+    if od.empty:
+        return od
+    return od[od.snapshot == od.snapshot.max()].copy()
 
 
 def header(mode: str, md: int):
@@ -455,6 +528,230 @@ def page_model_health(mode: str):
         st.code(re.sub(r"\x1b\[[0-9;]*m", "", D.pipeline_status()["log"])[-6000:])
 
 
+# ------------------------------------------------------------------------------------------ captain
+def _elite_captains() -> tuple[pd.Series, pd.Series]:
+    """(captain count in the last played matchday, number of matchdays captained) per player name, from the top-100 crawl."""
+    rost = csv("top_rosters.csv")
+    if rost.empty or "captain" not in rost:
+        return pd.Series(dtype=int), pd.Series(dtype=int)
+    cap = rost[rost.captain.astype(str).str.lower().isin(["true", "1"])]
+    last = cap[cap.matchday == rost.matchday.max()].groupby("player").team_id.nunique()
+    mds = cap.groupby("player").matchday.nunique()
+    return last, mds
+
+
+def page_captain(proj: pd.DataFrame, md: int, mode: str):
+    st.subheader(f"Captain — matchday {md}")
+    if proj.empty:
+        st.warning("No projection yet.")
+        return
+    field = proj[(proj.pos != "Head Coach") & (proj.games_md > 0)].copy()
+    if field.empty:
+        st.info("Nobody has a game in this matchday yet.")
+        return
+    field["floor"] = (field.md_pts - 1.2816 * field.md_sd).round(1)
+    field["games_txt"] = field.games.map(lambda gs: " · ".join(f"T{g['turn']} {'vs' if g['home'] else '@'} {g['opp']} {g['fp']:.0f} ({g['pw']:.0%})" for g in gs))
+    last, mds = _elite_captains()
+    field["elite_cap"] = field.name.map(last).fillna(0).astype(int)
+    field["elite_cap_mds"] = field.name.map(mds).fillna(0).astype(int)
+    field["popularity"] = (field.popularity.fillna(0) * 100).round(0)
+    if mode == "team":
+        _tmd, roster = roster_state()
+        cap_ids = {str(p["id"]) for p in roster.get("players", []) if p.get("is_captain")}
+        field["captain_now"] = field.platform_id.astype(str).isin(cap_ids)
+
+    f1, f2, f3 = st.columns(3)
+    rank_by = f1.selectbox("Rank by", ["Expected pts (ceiling play)", "Floor p10 (safe play)", "p90 (max ceiling)"],
+                           help="Doubling the captain adds exactly his matchday points: the expected gain is his expected points, the risk is his spread.")
+    min_games = f2.selectbox("Games this matchday", ["any", "2 (double round only)"]) if field.games_md.max() > 1 else "any"
+    only_mine = f3.checkbox("Only my squad", value=False) if mode == "team" else False
+    df = field
+    if min_games.startswith("2"):
+        df = df[df.games_md >= 2]
+    if only_mine:
+        df = df[df.in_roster]
+    key = {"Expected pts (ceiling play)": "md_pts", "Floor p10 (safe play)": "floor", "p90 (max ceiling)": "md_p90"}[rank_by]
+    cols = ["name", "pos", "team", "quotation", "nights", "md_pts", "md_sd", "floor", "md_p90", "games_txt", "elite_cap", "elite_cap_mds", "popularity"]
+    if mode == "team":
+        cols += ["in_roster", "captain_now"]
+    cols.append("flags")
+    show(df.sort_values(key, ascending=False)[cols].head(40), height=520)
+
+    st.caption("Expected points vs uncertainty. Top-left = high and steady (safe captain); top-right = high but volatile (ceiling captain). Size = p90.")
+    ch = alt.Chart(df.nlargest(60, "md_pts")).mark_circle().encode(
+        x=alt.X("md_sd", title="uncertainty (±)"), y=alt.Y("md_pts", title="expected pts"),
+        size=alt.Size("md_p90", legend=None), color="pos",
+        tooltip=["name", "team", "quotation", "md_pts", "md_sd", "floor", "md_p90", "nights", "elite_cap"],
+    ).interactive().properties(height=360)
+    st.altair_chart(ch, width="stretch")
+
+    tabs = st.tabs(["Night by night", "Elite choices"])
+    with tabs[0]:
+        st.caption("Best single-game options per night. Use this to move the armband after night 1: it may only go to a starter who has NOT yet played.")
+        rows = [{"night": f"T{g['turn']}", "name": r.name, "pos": r.pos, "team": r.team, "opp": ("vs " if g["home"] else "@ ") + g["opp"],
+                 "exp": g["fp"], "win %": round(100 * g["pw"]), "quotation": r.quotation}
+                for r in df.itertuples() for g in r.games]
+        nb = pd.DataFrame(rows)
+        if len(nb):
+            nb = nb.sort_values(["night", "exp"], ascending=[True, False]).groupby("night").head(8)
+            st.dataframe(nb, width="stretch", hide_index=True, column_config={
+                "night": COL["night"], "name": COL["name"], "pos": COL["pos"], "team": COL["team"], "quotation": COL["quotation"],
+                "exp": st.column_config.NumberColumn("Exp pts (game)", format="%.1f"), "win %": DVP_COL["win %"]})
+    with tabs[1]:
+        rost = csv("top_rosters.csv")
+        if rost.empty:
+            st.info("Top-100 crawl not run yet.")
+        else:
+            cap = rost[rost.captain.astype(str).str.lower().isin(["true", "1"])]
+            byd = cap.groupby(["matchday", "player"]).team_id.nunique().reset_index(name="teams")
+            top = byd.sort_values(["matchday", "teams"], ascending=[True, False]).groupby("matchday").head(3)
+            st.caption("Who the top-100 managers captained, per matchday (teams). The crowd's default is Vezenkov; the elite move the armband to the matchup.")
+            st.altair_chart(alt.Chart(top).mark_bar().encode(
+                x="matchday:O", y="teams:Q", color="player:N", tooltip=["matchday", "player", "teams"]).properties(height=300), width="stretch")
+            st.dataframe(top.pivot(index="matchday", columns="player", values="teams").fillna(0).astype(int), width="stretch")
+    TH.md(TH.notes("Captain rules", [
+        ("×2", "The captain scores double. He must be one of the five starters (not the sixth man or bench)."),
+        ("NIGHTS", "On multi-night matchdays the captain's games are summed; after a night the armband can move only to a starter who has not played yet."),
+        ("AVERAGE", "A postponed game credited with the player's average does not double."),
+        ("MODEL", "Expected gain of captaining = expected points; floor = 10th percentile of the projection; p90 = ceiling."),
+    ]))
+
+
+# ------------------------------------------------------------------------------------------ fixtures & schedule
+def page_fixtures(proj: pd.DataFrame, md: int):
+    sched = schedule_df()
+    if sched.empty:
+        st.warning("No schedule yet.")
+        return
+    rounds, nights = current_rounds_and_nights(sched)
+    night_of = {d: i + 1 for i, d in enumerate(nights)}
+    cur = sched[sched["round"].isin(rounds)].copy()
+    cur["night"] = cur.date_utc.dt.strftime("%Y-%m-%d").map(night_of).map(lambda t: f"T{int(t)}" if pd.notna(t) else "")
+    cur["local"] = cur.date_utc.map(_local)
+    od = _latest_odds()
+    if len(od):
+        cur = cur.merge(od[["home", "away", "home_win_prob", "home_spread", "total"]], on=["home", "away"], how="left")
+        cur["home_win"] = (cur.home_win_prob * 100).round(0)
+        cur = cur.rename(columns={"home_spread": "spread"})
+    st.subheader(f"Matchday {md} — rounds {' + '.join(f'R{r}' for r in rounds)} · {len(nights)} game night(s)")
+    st.caption("Tip-off times in Athens. Field↔bench swaps and captain changes are allowed between nights, for players who have not played yet.")
+    cols = ["night", "local", "home", "away"] + (["home_win", "spread", "total"] if len(od) else []) + ["venue"]
+    show(cur[cols], height=min(60 + 36 * len(cur), 560))
+
+    # team × night grid
+    teams = sorted(set(sched.home) | set(sched.away))
+    grid = pd.DataFrame(index=teams, columns=[f"T{i + 1}" for i in range(len(nights))]).fillna("")
+    for r in cur.itertuples():
+        if r.night:
+            grid.loc[r.home, r.night] = f"vs {r.away}"
+            grid.loc[r.away, r.night] = f"@ {r.home}"
+    grid["games_md_team"] = (grid != "").sum(axis=1)
+    st.markdown("**Who plays when** — balance your squad across nights so you can react after T1:")
+    st.dataframe(grid.sort_values("games_md_team", ascending=False), width="stretch", column_config={"games_md_team": COL["games_md_team"]})
+
+    st.divider()
+    n_rounds = st.slider("Horizon (rounds ahead)", 2, 10, 6, help="Two rounds ≈ one double matchday. The optimiser looks three matchdays ahead.")
+    start = min(rounds) if rounds else int(sched[~sched.played]["round"].min())
+    hor = sched[(sched["round"] >= start) & (sched["round"] < start + n_rounds) & (sched.phase == "RS")].copy()
+    st.subheader(f"Horizon — rounds {start} to {start + n_rounds - 1}")
+    st.caption("Each cell is the club's opponent in that round (vs = home, @ = away). Rest = days between the club's last played game and its first game of this matchday; min gap = shortest gap between consecutive games in the horizon.")
+    cal = pd.DataFrame(index=teams, columns=[f"R{r}" for r in range(start, start + n_rounds)]).fillna("—")
+    for g in hor.itertuples():
+        cal.loc[g.home, f"R{g.round}"] = f"vs {g.away}"
+        cal.loc[g.away, f"R{g.round}"] = f"@ {g.home}"
+    cal["games_h"] = (cal != "—").sum(axis=1)
+    cal["home_h"] = cal.apply(lambda r: sum(str(v).startswith("vs") for v in r.values[:n_rounds]), axis=1)
+    # rest and gaps
+    long = pd.concat([sched[["date_utc", "played", "round"]].assign(team=sched.home), sched[["date_utc", "played", "round"]].assign(team=sched.away)])
+    rest, gap = {}, {}
+    for t, g in long.groupby("team"):
+        g = g.sort_values("date_utc")
+        last_played = g[g.played].date_utc.max()
+        first_cur = g[g["round"].isin(rounds)].date_utc.min()
+        rest[t] = (first_cur - last_played).days if pd.notna(last_played) and pd.notna(first_cur) else None
+        h = g[(g["round"] >= start) & (g["round"] < start + n_rounds)].date_utc.sort_values()
+        gap[t] = int(h.diff().dt.days.min()) if len(h) > 1 else None
+    cal["rest"] = pd.Series(rest)
+    cal["gap"] = pd.Series(gap)
+    st.dataframe(cal.sort_values(["games_h", "home_h"], ascending=False), width="stretch",
+                 column_config={k: COL[k] for k in ("games_h", "home_h", "rest", "gap")})
+    st.markdown("**Results so far** (for context — the model uses the box scores, not the scores):")
+    done = sched[sched.played].copy()
+    if len(done):
+        done["score"] = done.home_score.astype(int).astype(str) + "–" + done.away_score.astype(int).astype(str)
+        done["local"] = done.date_utc.map(_local)
+        with st.expander(f"{len(done)} games played"):
+            st.dataframe(done[["round", "local", "home", "score", "away"]].sort_values(["round", "local"], ascending=[False, True]), width="stretch", hide_index=True)
+
+
+# ------------------------------------------------------------------------------------------ game script (odds)
+def page_game_script(proj: pd.DataFrame, md: int):
+    od = odds_df()
+    st.subheader(f"Game script — bookmaker view of matchday {md}")
+    if od.empty:
+        st.warning("No odds pulled yet (ODDS_API_KEY not set, or no pull since the last deadline). The projection falls back to model margins.")
+        return
+    sched = schedule_df()
+    _rounds, nights = current_rounds_and_nights(sched)
+    night_of = {d: i + 1 for i, d in enumerate(nights)}
+    latest = _latest_odds()
+    latest = latest.merge(sched[["home", "away", "round", "date_utc"]], on=["home", "away"], how="left")
+    latest["night"] = latest.date_utc.dt.strftime("%Y-%m-%d").map(night_of).map(lambda t: f"T{int(t)}" if pd.notna(t) else "")
+    latest["local"] = latest.commence.map(_local)
+    latest["home_win"] = (latest.home_win_prob * 100).round(0)
+    latest["favourite"] = latest.apply(lambda r: (f"{r.home} {r.home_win_prob:.0%}" if r.home_win_prob >= 0.5 else f"{r.away} {1 - r.home_win_prob:.0%}") if pd.notna(r.home_win_prob) else "", axis=1)
+    latest = latest.rename(columns={"home_spread": "spread"})
+    abs_sp = latest.spread.abs()
+    latest["blowout"] = pd.cut(abs_sp, [-1, 8, 12, 99], labels=["low", "medium", "HIGH"]).astype(str).replace("nan", "")
+    med = latest.total.median()
+    latest["pace"] = pd.cut(latest.total - med, [-99, -4, 4, 99], labels=["slow", "average", "fast"]).astype(str).replace("nan", "")
+    snaps = od.snapshot.nunique()
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("Games priced", len(latest))
+    k2.metric("Snapshots", snaps, help="Odds pulls on disk — the line-movement section compares the first and the latest")
+    k3.metric("Latest pull", _local(od.snapshot.max()))
+    k4.metric("Median total", f"{med:.1f}" if pd.notna(med) else "—")
+    st.caption("How the projection uses this: −spread is the expected margin (drives the coach EV and minutes in lopsided games), the h2h probability is the 10% win bonus. "
+               "The total is shown as a scoring-environment signal; it is not in the model yet (pace comes from the box scores).")
+    cols = ["night", "local", "home", "away", "favourite", "home_win", "spread", "total", "blowout", "pace", "books"]
+    show(latest.sort_values(["date_utc", "spread"])[cols], height=min(60 + 36 * len(latest), 560))
+
+    st.subheader("Who benefits")
+    st.caption("Underdog starters in close games keep their minutes; heavy favourites rest starters late. Players listed = top expected points of each side this matchday.")
+    if not proj.empty:
+        rows = []
+        for r in latest.itertuples():
+            for side, code in (("home", r.home), ("away", r.away)):
+                pl = proj[(proj.team_off == code) & (proj.pos != "Head Coach")].nlargest(3, "md_pts")
+                wp = r.home_win_prob if side == "home" else 1 - r.home_win_prob
+                rows.append({"night": r.night, "team": code, "role": "favourite" if wp >= 0.5 else "underdog", "win %": round(100 * wp) if pd.notna(wp) else None,
+                             "spread": -r.spread if side == "home" else r.spread, "blowout": r.blowout,
+                             "top players": ", ".join(f"{p.name} ({p.md_pts:.0f})" for p in pl.itertuples())})
+        wb = pd.DataFrame(rows)
+        st.dataframe(wb.sort_values(["night", "win %"], ascending=[True, False]), width="stretch", hide_index=True, column_config={
+            "night": COL["night"], "team": COL["team"], "win %": DVP_COL["win %"], "blowout": COL["blowout"],
+            "spread": st.column_config.NumberColumn("Margin", help="Expected margin for this team (positive = expected to win by)", format="%+.1f"),
+            "top players": st.column_config.TextColumn("Top players (exp pts)", width="large")})
+
+    if snaps > 1:
+        st.subheader("Line movement")
+        first = od[od.snapshot == od.snapshot.min()].set_index(["home", "away"])
+        mv = latest.set_index(["home", "away"])
+        mv["d_win"] = ((mv.home_win_prob - first.home_win_prob) * 100).round(1)
+        mv["d_spread"] = (mv.spread - first.home_spread).round(1)
+        mv["d_total"] = (mv.total - first.total).round(1)
+        mv = mv.reset_index()
+        st.caption(f"Change from the first snapshot ({_local(od.snapshot.min())}) to the latest. A moving line usually means injury or rotation news the market has priced in.")
+        show(mv.sort_values("d_win", key=lambda s: s.abs(), ascending=False)[["night", "home", "away", "home_win", "d_win", "spread", "d_spread", "total", "d_total"]])
+        hist = od.assign(game=od.home + " – " + od.away, home_win=od.home_win_prob * 100)
+        st.altair_chart(alt.Chart(hist).mark_line(point=True).encode(
+            x=alt.X("snapshot:T", title="pull (UTC)"), y=alt.Y("home_win:Q", title="home win %"), color=alt.Color("game:N", legend=alt.Legend(columns=2)),
+            tooltip=["game", alt.Tooltip("snapshot:T", format="%d %b %H:%M"), alt.Tooltip("home_win:Q", format=".0f"), alt.Tooltip("home_spread:Q", format="+.1f"), alt.Tooltip("total:Q", format=".1f")],
+        ).properties(height=340), width="stretch")
+    else:
+        st.info("One odds snapshot so far — line movement appears once the pipeline has pulled again (daily and 4 h / 1 h before the deadline).")
+
+
 # ------------------------------------------------------------------------------------------ router
 def render(mode: str):
     TH.inject_css()
@@ -472,6 +769,12 @@ def render(mode: str):
         page_whatif(proj)
     elif page == "Projections":
         page_projections(proj, md, mode)
+    elif page == "Captain":
+        page_captain(proj, md, mode)
+    elif page == "Fixtures & schedule":
+        page_fixtures(proj, md)
+    elif page == "Game script (odds)":
+        page_game_script(proj, md)
     elif page == "Defence vs position":
         page_dvp(proj, md)
     elif page == "Player":

@@ -67,7 +67,7 @@ Two Streamlit apps share one page library (`app/pages_lib.py`) over the committe
 | app | file | pages | audience |
 |---|---|---|---|
 | **Fantasy Agent** (private) | `app/streamlit_app.py` | Recommendation, What-if optimiser + all scouting pages | me — shows my squad, credits, trades, pipeline log |
-| **Fantasy Scout** (shareable) | `app/scout_app.py` | Projections, Defence vs position, Player, Top 100 managers, Market & prices, Model health | anyone picking players — never loads my roster/team files |
+| **Fantasy Scout** (shareable) | `app/scout_app.py` | Projections, Captain, Fixtures & schedule, Game script (odds), Defence vs position, Player, Top 100 managers, Market & prices, Model health | anyone picking players — never loads my roster/team files |
 
 Locally: `pip install -r requirements.txt && streamlit run app/streamlit_app.py` (or `app/scout_app.py`).
 Both are hosted on Streamlit Community Cloud from this repo (main branch) as two separate apps, one per main file.
