@@ -80,6 +80,12 @@ jobs:
           echo -e "\n## reconcile" | tee -a reports/latest.md
           elfa reconcile 2>&1 | tee -a reports/latest.md || true
 
+      - name: Backtest (P1 gate)
+        if: env.FANTAKING_TOKEN != ''
+        run: |
+          echo -e "\n## backtest" | tee -a reports/latest.md
+          elfa backtest 2>&1 | tee -a reports/latest.md || true
+
       - name: Recommend
         if: env.FANTAKING_TOKEN != ''
         env:

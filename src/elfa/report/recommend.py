@@ -26,6 +26,12 @@ def _fmt_squad(sq: pd.DataFrame) -> str:
     return head + "\n" + body
 
 
+def _flags_section(proj: pd.DataFrame) -> str:
+    fl = proj["flags"].astype(str).str.strip()
+    f = proj[proj.in_roster & fl.ne("") & fl.ne("coach")]
+    return "\n".join(f"- {r.name}: {r.flags}" for r in f.itertuples()) if len(f) else "- none"
+
+
 def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float = 0.0, params: Params | None = None) -> Path:
     md_number, market, cfg = load_latest_market()
     md_dir = RAW / "fantaking" / f"md_{md_number:02d}"
@@ -93,7 +99,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     lines += [
         "",
         "## Flags",
-        "- " + "\n- ".join(f"{r.name}: {r.flags}" for r in proj[proj.in_roster & (proj.flags != '') & (proj.flags != 'coach')].itertuples()) if (proj.in_roster & (proj.flags != "") & (proj.flags != "coach")).any() else "- none",
+        _flags_section(proj),
         "",
         "## Assumptions still to confirm",
         "- Coach: win by 21+ assumed +30 (not yet observed).",

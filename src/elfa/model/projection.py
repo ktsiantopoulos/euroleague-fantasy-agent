@@ -20,14 +20,15 @@ WIN_BONUS = 0.10
 
 @dataclass
 class Params:
-    w_minutes: tuple[float, float, float] = (0.5, 0.3, 0.2)   # last, mean3, mean5
+    w_minutes: tuple[float, float, float] = (0.2, 0.3, 0.5)   # last, mean3, mean5 (grid, R4-7)
     rate_prior_minutes: float = 40.0                           # shrinkage toward league PIR/min
     lam_recent: float = 0.6                                    # weight of last-5 rate vs season rate
     eta_home: float = 0.04
-    gamma_dvp: float = 0.6
+    gamma_dvp: float = 1.0                                     # grid, R4-7
     sd_prior_games: float = 4.0
     horizon_weights: tuple[float, ...] = (1.0, 0.6, 0.3)
     dnp_recent_penalty: float = 0.5                            # multiply minutes if last game was a DNP
+    minutes_sample_prior: float = 0.5                          # n/(n+0.5): 1 game -> 0.67, 7 games -> 0.93
     flags: dict = field(default_factory=dict)
 
 
@@ -43,6 +44,7 @@ def _player_form(pg: pd.DataFrame, league_rate: float, league_sd: float, p: Para
         min_hat = w1 * last + w3 * m3 + w5 * m5
         if last == 0 and n >= 2:
             min_hat *= p.dnp_recent_penalty
+        min_hat *= n / (n + p.minutes_sample_prior)   # small samples: discount toward 0
         tot_min, tot_pir = mins.sum(), pirs.sum()
         rate_season = (tot_pir + p.rate_prior_minutes * league_rate) / (tot_min + p.rate_prior_minutes)
         m5s, p5s = mins[-5:].sum(), pirs[-5:].sum()

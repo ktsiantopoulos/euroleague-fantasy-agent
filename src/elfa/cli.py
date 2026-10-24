@@ -75,6 +75,34 @@ def reconcile():
 
 
 @app.command()
+def backtest(rounds: str = typer.Option("4,5,6,7"), grid: bool = typer.Option(False, "--grid")):
+    """P1 gate: walk-forward backtest of the projection vs season-mean and last-3 baselines."""
+    import pandas as pd
+
+    from elfa.features.dvp import attach_positions
+    from elfa.features.mapping import load_latest_market
+    from elfa.model.backtest import backtest as _bt
+    from elfa.model.backtest import grid_search
+    from elfa.model.teams import load_schedule
+
+    pg = pd.read_parquet(PROCESSED / "player_games.parquet")
+    pg = pg[pg.season == pg.season.max()]
+    _md, market, _cfg = load_latest_market()
+    pm = pd.read_csv(PROCESSED / "player_map.csv", dtype={"platform_id": str, "person_code": str})
+    pg = attach_positions(pg, pm, market)
+    sched = load_schedule(pg.season.max())
+    rs = [int(x) for x in rounds.split(",")]
+    if grid:
+        g = grid_search(pg, sched, rs)
+        rprint(g.head(10).to_string(index=False))
+        g.to_csv(PROCESSED / "backtest_grid.csv", index=False)
+        return
+    res = _bt(pg, sched, rs)
+    rprint(res.summary.to_string(index=False))
+    res.table.to_csv(PROCESSED / "backtest_rounds.csv", index=False)
+
+
+@app.command()
 def recommend(mu_price: float = typer.Option(0.0, help="weight of expected price change (PIR per credit)")):
     """Project, optimise and write reports/recommendation_mdXX.md."""
     from elfa.report.recommend import recommend as _rec
