@@ -19,15 +19,26 @@ PRICES = DATA / "prices"
 REPORTS = ROOT / "reports"
 
 
+_ELFA_MTIME: dict[str, float] = {}
+
+
 def elfa_attr(module: str, name: str):
-    """Import `name` from an elfa module, reloading the module when it is stale.
+    """Import `name` from an elfa module, reloading the module when its source changed on disk.
 
     Streamlit Cloud re-imports app/*.py on every push but keeps the src/elfa modules already in
-    sys.modules, so a new function in elfa raises ImportError until the app is rebooted.
+    sys.modules, so a new function or a changed signature in elfa breaks until the app is rebooted.
+    The module is reloaded on first use after each import of this file and whenever its source mtime changes.
     """
     mod = importlib.import_module(module)
-    if not hasattr(mod, name):
+    try:
+        mtime = Path(mod.__file__).stat().st_mtime
+    except (AttributeError, OSError):
+        mtime = None
+    # first sighting after a (re)deploy counts as stale too: data.py was re-imported but the elfa module was not
+    if _ELFA_MTIME.get(module) != mtime or not hasattr(mod, name):
         mod = importlib.reload(mod)
+    if mtime is not None:
+        _ELFA_MTIME[module] = mtime
     return getattr(mod, name)
 
 
