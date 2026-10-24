@@ -1,0 +1,24 @@
+# secrets
+.env
+*.token
+
+# python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# data (raw/processed are reproducible; prices are committed)
+data/raw/
+data/processed/
+notebooks/.ipynb_checkpoints/
+
+# os / ide
+.DS_Store
+.idea/
+.vscode/
