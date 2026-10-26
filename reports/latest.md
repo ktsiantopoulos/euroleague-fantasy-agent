@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 65.38 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 32.70 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -6,7 +6,7 @@ E2026: 70 games played, 0 box scores fetched now
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_08
-team: UnderTakers86  credits: 105.9  trades used: 1/4
+team: UnderTakers86  credits: 105.9  trades used: 4/4
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
@@ -82,11 +82,11 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Aliou Diarra | C | VIR | 9.3 | 91 | 37 | 7 |
-| Theo Maledon | G | RMB | 12.3 | 81 | 38 | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 73 | 44 | 34 |
+| Theo Maledon | G | RMB | 12.3 | 81 | 37 | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 73 | 45 | 34 |
 | Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 63 | 22 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 12 | 8 |
+| Tomas Masiulis | H | ZAL | 6.3 | 63 | 20 | 0 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 13 | 8 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  

@@ -5,27 +5,27 @@
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Aliou Diarra | C | VIR | 9.3 | 91 | 37 | 7 |
-| Theo Maledon | G | RMB | 12.3 | 81 | 38 | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 73 | 44 | 34 |
+| Theo Maledon | G | RMB | 12.3 | 81 | 37 | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 73 | 45 | 34 |
 | Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 63 | 22 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 12 | 8 |
+| Tomas Masiulis | H | ZAL | 6.3 | 63 | 20 | 0 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 13 | 8 |
 | Arijan Lakic | F | PAR | 4.0 | 40 | 28 | 0 |
-| Elijah Bryant | G | HTA | 17.4 | 39 | 16 | 0 |
+| Elijah Bryant | G | HTA | 17.4 | 39 | 15 | 0 |
 | TJ Shorts | G | VBC | 15.5 | 35 | 15 | 15 |
-| Collin Malcolm | F | EFS | 8.7 | 34 | 7 | 0 |
-| Zeljko Obradovic | H | PAO | 11.1 | 29 | 16 | 0 |
-| Yam Madar | G | MTA | 10.3 | 29 | 14 | 0 |
-| Kevarrius Hayes | C | PAR | 7.5 | 27 | 9 | 0 |
-| Carlik Jones | G | PAR | 14.2 | 26 | 23 | 12 |
-| Zach Leday | F | HTA | 13.5 | 20 | 8 | 20 |
+| Collin Malcolm | F | EFS | 8.7 | 34 | 6 | 0 |
+| Zeljko Obradovic | H | PAO | 11.1 | 29 | 15 | 0 |
+| Yam Madar | G | MTA | 10.3 | 29 | 15 | 0 |
+| Kevarrius Hayes | C | PAR | 7.5 | 27 | 10 | 0 |
+| Carlik Jones | G | PAR | 14.2 | 26 | 24 | 12 |
+| Zach Leday | F | HTA | 13.5 | 20 | 9 | 20 |
 | Kostas Papanikolaou | F | OLY | 4.2 | 20 | 17 | 0 |
 | Dejan Davidovac | F | CZV | 4.6 | 19 | 12 | 0 |
 | Edwin Jackson | F | ASV | 4.5 | 17 | 8 | 0 |
 | Konstantinos Mitoglou | F | PAO | 6.2 | 16 | 13 | 0 |
-| Matthew Strazel | G | EFS | 10.5 | 16 | 4 | 0 |
+| Matthew Strazel | G | EFS | 10.5 | 16 | 3 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Aliou Diarra (+54 pp), Theo Maledon (+43 pp), Tomas Masiulis (+41 pp), Andres Feliz (+34 pp), Mfiondu Kabengele (+32 pp), Sasha Vezenkov (+29 pp), Collin Malcolm (+27 pp), Elijah Bryant (+23 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Aliou Diarra (+54 pp), Theo Maledon (+44 pp), Tomas Masiulis (+43 pp), Andres Feliz (+34 pp), Mfiondu Kabengele (+31 pp), Sasha Vezenkov (+28 pp), Collin Malcolm (+28 pp), Elijah Bryant (+24 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (59), Jonas Valanciunas (11), Mathias Lessort (9)

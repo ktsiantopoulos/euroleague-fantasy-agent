@@ -162,9 +162,9 @@
    "stats_items": []
   },
   {
-   "id": 3976,
-   "first_name": "Arijan",
-   "last_name": "Lakic",
+   "id": 7209,
+   "first_name": "Lamar",
+   "last_name": "Stevens",
    "position": {
     "id": 29,
     "name": "Forward"
@@ -180,12 +180,12 @@
     "name": "LDLC ASVEL Villeurbanne",
     "abbreviation": "ASV"
    },
-   "quotation": 4,
+   "quotation": 8.6,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "19",
+   "jersey": "8",
    "face_path": null,
    "active": true,
    "court_position": 2,
@@ -205,25 +205,25 @@
    "stats_items": []
   },
   {
-   "id": 3805,
-   "first_name": "Kendrick",
-   "last_name": "Nunn",
+   "id": 4096,
+   "first_name": "Mckinley",
+   "last_name": "Wright",
    "position": {
     "id": 28,
     "name": "Guard"
    },
    "team": {
-    "id": 151,
-    "name": "Panathinaikos AKTOR Athens",
-    "abbreviation": "PAO",
+    "id": 311,
+    "name": "Dubai Basketball",
+    "abbreviation": "DUB",
     "position": "home"
    },
    "opponent": {
-    "id": 145,
-    "name": "Armani Olimpia Milan",
-    "abbreviation": "MIL"
+    "id": 150,
+    "name": "Paris Basketball",
+    "abbreviation": "PBB"
    },
-   "quotation": 13.7,
+   "quotation": 12.6,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
@@ -241,7 +241,7 @@
     "number": 1
    },
    "is_on_trade": false,
-   "started_from_bench": true,
+   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -377,30 +377,30 @@
    "stats_items": []
   },
   {
-   "id": 4233,
-   "first_name": "Mfiondu",
-   "last_name": "Kabengele",
+   "id": 3785,
+   "first_name": "Josh",
+   "last_name": "Nebo",
    "position": {
     "id": 30,
     "name": "Center"
    },
    "team": {
-    "id": 311,
-    "name": "Dubai Basketball",
-    "abbreviation": "DUB",
-    "position": "home"
+    "id": 140,
+    "name": "FC Barcelona",
+    "abbreviation": "BAR",
+    "position": "away"
    },
    "opponent": {
-    "id": 150,
-    "name": "Paris Basketball",
-    "abbreviation": "PBB"
+    "id": 141,
+    "name": "FC Bayern Munich",
+    "abbreviation": "BAY"
    },
-   "quotation": 15.6,
-   "is_on_fire": true,
+   "quotation": 12.1,
+   "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "17",
+   "jersey": "32",
    "face_path": null,
    "active": true,
    "court_position": 7,
@@ -413,16 +413,16 @@
     "number": 1
    },
    "is_on_trade": false,
-   "started_from_bench": false,
+   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
    "stats_items": []
   },
   {
-   "id": 3948,
-   "first_name": "Mbaye",
-   "last_name": "Ndiaye",
+   "id": 3867,
+   "first_name": "Kostas",
+   "last_name": "Papanikolaou",
    "position": {
     "id": 29,
     "name": "Forward"
@@ -438,12 +438,12 @@
     "name": "Besiktas Istanbul",
     "abbreviation": "BJK"
    },
-   "quotation": 8.9,
+   "quotation": 4.1,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "24",
+   "jersey": "16",
    "face_path": null,
    "active": true,
    "court_position": 8,
@@ -456,7 +456,7 @@
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": true,
+   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -506,9 +506,9 @@
    "stats_items": []
   },
   {
-   "id": 3867,
-   "first_name": "Kostas",
-   "last_name": "Papanikolaou",
+   "id": 3948,
+   "first_name": "Mbaye",
+   "last_name": "Ndiaye",
    "position": {
     "id": 29,
     "name": "Forward"
@@ -524,12 +524,12 @@
     "name": "Besiktas Istanbul",
     "abbreviation": "BJK"
    },
-   "quotation": 4.1,
+   "quotation": 8.9,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "16",
+   "jersey": "24",
    "face_path": null,
    "active": true,
    "court_position": 10,
@@ -542,7 +542,7 @@
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": false,
+   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
