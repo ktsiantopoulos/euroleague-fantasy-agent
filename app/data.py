@@ -114,6 +114,24 @@ def load_roster_state() -> tuple[dict, dict]:
     return tmd, roster
 
 
+def load_locked_roster() -> dict:
+    """The squad the platform last locked (previous matchday); {"players": []} if the pull predates this feature."""
+    d = RAW / "fantaking" / f"md_{latest_matchday():02d}"
+    f = d / "roster_locked.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {"players": []}
+
+
+def trade_baseline():
+    """Baseline squad + trade allowance for the what-if page (same rule as the recommender)."""
+    md = latest_matchday()
+    d = RAW / "fantaking" / f"md_{md:02d}"
+    tmd, _ = load_roster_state()
+    cfg = json.loads((d / "league_config.json").read_text(encoding="utf-8")) if (d / "league_config.json").exists() else {}
+    market = json.loads((d / "market.json").read_text(encoding="utf-8")) if (d / "market.json").exists() else []
+    fn = elfa_attr("elfa.model.baseline", "trade_baseline")
+    return fn(d, tmd, cfg, {str(p["id"]) for p in market})
+
+
 def load_report(name: str = "recommendation_latest.md") -> str:
     p = REPORTS / name
     return p.read_text(encoding="utf-8") if p.exists() else "_no report yet_"
@@ -259,7 +277,7 @@ def refresh_team() -> dict:
         return {"ok": False, "msg": f"Roster refreshed but the recommendation failed: {type(e).__name__}: {str(e)[:160]}"}
     tmd, roster = load_roster_state()
     coach = next((f"{p['first_name']} {p['last_name']}" for p in roster.get("players", []) if (p.get("position") or {}).get("name") == "Head Coach"), "—")
-    return {"ok": True, "msg": f"Refreshed in {time.time() - t0:.0f}s · credits {tmd.get('credits')} · trades used {tmd.get('trades')}/{tmd.get('max_num_trades_per_matchday')} · coach {coach}",
+    return {"ok": True, "msg": f"Refreshed in {time.time() - t0:.0f}s · credits {tmd.get('credits')} · {tmd.get('trades')}/{tmd.get('max_num_trades_per_matchday')} trades pending (reversible until the deadline) · coach {coach}",
             "pulled_at": time.strftime("%H:%M:%S UTC", time.gmtime())}
 
 

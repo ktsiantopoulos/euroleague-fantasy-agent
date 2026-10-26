@@ -25,6 +25,13 @@
 | My teams | `/api/v1/user/fantasy-teams?league=10&game_mode=1` | |
 | My team state for a matchday (credits, trades, pts) | `/api/v1/fantasy-teams/{team}/matchdays/{md}` | `credits`, `trades`, `max_num_trades_per_matchday`, `wildcards` |
 | My roster for a matchday | `/api/v1/fantasy-teams/{team}/matchdays/{md}/roster` | 11 players, `quotation`, `is_captain`, `active`, `court_position`, `opponent`, `probability_of_playing`, `is_injured` |
+
+**Trades are reversible until the deadline.** For the current matchday `roster` returns the *pending* squad (trades
+included) and `team_matchday.trades` counts those pending changes, not spent ones — every one of them can be undone
+until the first tip-off. The pull therefore also stores the previous matchday's roster as `roster_locked.json`
+(the squad the platform last locked); the optimiser starts from that squad with the full `max_num_trades_per_matchday`
+allowance while the window is open, and only switches to the pending squad with 0 trades once the deadline has passed
+(`elfa.model.baseline`). The report lists both the trades vs the locked squad and the remove/add steps vs the pending one.
 | **Player market** (358 players, paginated) | `/api/v1/players-lists/49/matchdays/{md}/players?per_page=100&page=N&sort_by=quotation&sort_order=desc` | fields: `id, first_name, last_name, quotation, avg_pts, popularity, position{id,name}, team{abbr,position home/away}, opponent, round, is_injured, probability_of_playing, is_on_fire` |
 | Player profile | `/api/v1/players/{id}/profile?league=10&lang=en` | |
 | Player fantasy pts per matchday (with stat breakdown) | `/api/v1/players/{id}/fantasy-pts?league=10&matchday={md}&lang=en` | **gives per-stat fantasy points → scoring formula** |

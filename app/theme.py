@@ -174,13 +174,14 @@ def kpis(items: list[tuple[str, str, str, str]]) -> str:
     return f'<div class="elf-grid" style="grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));">{cards}</div>'
 
 
-def trades(out: list[dict], inn: list[dict], footer: str) -> str:
+def trades(out: list[dict], inn: list[dict], footer: str, title: str = "Recommended trades",
+           labels: tuple[str, str] = ("OUT", "IN"), empty: str = "No trades — hold the squad") -> str:
     def tg(p, cls):
         pr = f'<span class="pr">{p["price"]:.1f}</span>' if "price" in p else ""
         return f'<span class="elf-tg {cls}">{pos_chip(p.get("pos", ""))}{_e(p["name"])}{pr}</span>'
-    body = (f'<span class="elf-label" style="color:{TOKENS["neg"]}">OUT</span>' + "".join(tg(p, "out") for p in out)
-            + '<span class="elf-arrow">→</span>' + f'<span class="elf-label" style="color:{TOKENS["pos"]}">IN</span>' + "".join(tg(p, "in") for p in inn)) if out or inn else "<span class='elf-sub'>No trades — hold the squad</span>"
-    return f'<div class="elf-card elev"><div class="elf-label orange">Recommended trades</div><div class="elf-trades">{body}</div><div class="elf-foot">{_e(footer)}</div></div>'
+    body = (f'<span class="elf-label" style="color:{TOKENS["neg"]}">{_e(labels[0])}</span>' + "".join(tg(p, "out") for p in out)
+            + '<span class="elf-arrow">→</span>' + f'<span class="elf-label" style="color:{TOKENS["pos"]}">{_e(labels[1])}</span>' + "".join(tg(p, "in") for p in inn)) if out or inn else f"<span class='elf-sub'>{_e(empty)}</span>"
+    return f'<div class="elf-card elev"><div class="elf-label orange">{_e(title)}</div><div class="elf-trades">{body}</div><div class="elf-foot">{_e(footer)}</div></div>'
 
 
 def player_card(p: dict, bench: bool = False, small: bool = False) -> str:

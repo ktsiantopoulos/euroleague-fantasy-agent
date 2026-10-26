@@ -130,6 +130,14 @@ def pull_matchday(client: FantakingClient, md_id: int | None = None, with_histor
     _dump(out / "league_config.json", cfg)
     _dump(out / "team_matchday.json", client.team_matchday(md_id))
     _dump(out / "roster.json", client.roster(md_id))
+    # The squad the platform last locked (previous matchday). Until this matchday's deadline every trade on
+    # roster.json is reversible, so the optimiser's baseline is this squad with the full trade allowance.
+    prev_md = cfg.get("previous_matchday") or {}
+    if prev_md.get("id"):
+        try:
+            _dump(out / "roster_locked.json", client.roster(prev_md["id"]))
+        except requests.HTTPError as e:  # first matchday of a phase etc. - the recommender falls back to roster.json
+            _dump(out / "roster_locked.json", {"error": str(e), "players": []})
     market = client.market(md_id)
     _dump(out / "market.json", market)
 

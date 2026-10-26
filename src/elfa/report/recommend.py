@@ -12,6 +12,7 @@ from elfa.features.dvp import attach_positions, compute_dvp, dvp_summary
 from elfa.features.mapping import load_latest_market
 from elfa.features.matchdays import matchday_turns
 from elfa.ingest.odds import fetch_odds, odds_dir
+from elfa.model.baseline import changes_between, trade_baseline
 from elfa.model.inround import simulate
 from elfa.model.optimise_bridge import run_optimiser
 from elfa.model.projection import Params, project
@@ -54,9 +55,12 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     md_dir = RAW / "fantaking" / f"md_{md_number:02d}"
     roster = json.loads((md_dir / "roster.json").read_text(encoding="utf-8"))
     tmd = json.loads((md_dir / "team_matchday.json").read_text(encoding="utf-8"))
-    roster_ids = {str(p["id"]) for p in roster["players"]}
+    roster_ids = {str(p["id"]) for p in roster["players"]}          # pending squad (what the platform shows now)
     budget = float(tmd["credits"])
-    trades_left = int(tmd["max_num_trades_per_matchday"]) - int(tmd.get("trades", 0))
+    market_ids = {str(p["id"]) for p in market}
+    base = trade_baseline(md_dir, tmd, cfg, market_ids)              # locked squad + full allowance while the window is open
+    trades_left = base.trades_left
+    print(f"  baseline: {base.label} ({len(base.ids)} ids), trades left {trades_left} - {base.note}")
 
     pg = pd.read_parquet(PROCESSED / "player_games.parquet")
     season = pg.season.max()
@@ -97,12 +101,21 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     proj["md_p90"] = (proj.md_p90 * tilt).round(2)
     proj.to_csv(PROCESSED / f"projection_md{md_number:02d}.csv", index=False)
 
-    hold = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=True)
+    # hold = the squad the optimiser trades away from (locked squad while the window is open), best lineup, no trades
+    hold = run_optimiser(proj, budget, base.ids, trades_left, mu_price, lock_squad=True)
+    # pending = what is selected on the platform right now (differs from hold only while trades are pending)
+    pending = run_optimiser(proj, budget, roster_ids, 0, mu_price, lock_squad=True) if roster_ids != base.ids else hold
     keep_ids = set()
     for k in keep or []:
         hit = proj[proj.name.str.lower().str.contains(k.lower())]
         keep_ids |= set(hit.platform_id)
-    best = run_optimiser(proj, budget, roster_ids, trades_left, mu_price, lock_squad=False, keep_ids=keep_ids)
+    best = run_optimiser(proj, budget, base.ids, trades_left, mu_price, lock_squad=False, keep_ids=keep_ids)
+    # what to change on the platform to get from the pending squad to the recommended one
+    best_ids = set(best.squad.platform_id)
+    undo_ids, add_ids = changes_between(roster_ids, best_ids)
+    names = dict(zip(proj.platform_id, proj.name))
+    to_undo = [names.get(i, i) for i in sorted(undo_ids)]
+    to_add = [names.get(i, i) for i in sorted(add_ids)]
 
     rounds_txt = ", ".join(sorted({f"R{g.round}" for g in first}))
     deadline = (cfg.get("current_round") or {}).get("started_at", "")[:16].replace("T", " ") + " UTC" if cfg.get("current_round") else "unknown"
@@ -124,14 +137,23 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "",
         f"**Deadline: {deadline}** (first tip-off of the matchday; trades close then).",
         "",
-        (f"Generated {time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())} · team **{tmd['name']}** · budget {budget} · trades left {trades_left} · "
+        (f"Generated {time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())} · team **{tmd['name']}** · budget {budget} · "
+         f"trades {trades_left} vs the {base.label} ({base.pending_trades} pending on the platform) · "
          f"odds {'ON (' + str(len(odds)) + ' games)' if odds else 'OFF (model margins)'}"),
+        f"_{base.note}_",
         "",
         "## Decision",
         f"- Game nights: {nights_txt}. Bench players with later nights are swap options; captain can move to a not-yet-played starter.",
-        f"- Current squad, best lineup: **{hold.expected_md_pts} pts** expected; in-round swaps add {plan_hold.gain:+.1f} (simulated).",
-        f"- With trades: **{best.expected_md_pts} pts** expected (+{round(best.expected_md_pts - hold.expected_md_pts, 1)}); in-round swaps add {plan_best.gain:+.1f} (simulated); cost {best.cost}/{budget}.",
-        f"- Trades: OUT {', '.join(best.trades_out) or '—'} → IN {', '.join(best.trades_in) or '—'}",
+        f"- {base.label.capitalize()}, best lineup: **{hold.expected_md_pts} pts** expected; in-round swaps add {plan_hold.gain:+.1f} (simulated).",
+    ] + ([f"- Pending squad (your {base.pending_trades} current trade(s)), best lineup: **{pending.expected_md_pts} pts** expected "
+          f"({pending.expected_md_pts - hold.expected_md_pts:+.1f} vs the locked squad)."] if pending is not hold else []) + [
+        f"- Recommended with ≤{trades_left} trade(s): **{best.expected_md_pts} pts** expected (+{round(best.expected_md_pts - hold.expected_md_pts, 1)} vs {base.label}"
+        + (f", {best.expected_md_pts - pending.expected_md_pts:+.1f} vs pending" if pending is not hold else "")
+        + f"); in-round swaps add {plan_best.gain:+.1f} (simulated); cost {best.cost}/{budget}.",
+        f"- Trades vs the {base.label}: OUT {', '.join(best.trades_out) or '—'} → IN {', '.join(best.trades_in) or '—'}",
+    ] + ([f"- **To do on the platform** (from what you have selected now): remove {', '.join(to_undo) or '—'} → add {', '.join(to_add) or '—'}"
+          if (to_undo or to_add) else "- **Nothing to change on the platform** — your pending squad is already the recommendation."]
+         if base.open else []) + [
         f"- Captain **{best.captain}**, coach **{best.coach}**." + (f" Kept by request: {', '.join(keep)}." if keep else ""),
         "",
         "## Recommended squad (with trades)",
@@ -141,8 +163,10 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "- " + ("\n- ".join(plan_best.notes) if plan_best.notes else "no frequent swaps — the lineup is mostly set-and-forget"),
         "- Rule of thumb after each night: promote a not-yet-played bench player over a field player of the same position whose realised score is below the bench player's expectation; move the captaincy to the not-yet-played starter with the highest expectation if it beats the captain's realised total.",
         "",
-        "## Current squad, best lineup (no trades)",
+        f"## {base.label.capitalize()}, best lineup (no trades)",
         _fmt_squad(hold.squad),
+    ] + (["", f"## Pending squad on the platform ({base.pending_trades} trade(s) made, reversible), best lineup",
+          _fmt_squad(pending.squad)] if pending is not hold else []) + [
         "",
         "## Defence vs position (this season, shrunk to league mean; +PIR = concedes more)",
         "```",
@@ -197,6 +221,11 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "matchday": md_number, "rounds": sorted({g.round for g in first}), "deadline_utc": (cfg.get("current_round") or {}).get("started_at"),
         "nights": nights, "generated_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "team": tmd["name"], "budget": budget,
         "trades_left": trades_left, "odds_games": len(odds), "kept": keep or [],
+        "baseline": {"label": base.label, "open": base.open, "note": base.note, "max_trades": base.max_trades,
+                     "pending_trades": base.pending_trades, "locked_known": bool(base.locked_ids)},
+        "pending": {"expected": pending.expected_md_pts, "cost": pending.cost, "status": pending.status, "captain": pending.captain,
+                    "coach": pending.coach, "squad": _records(pending.squad), "differs": pending is not hold},
+        "changes_vs_pending": {"remove": _pl(to_undo), "add": _pl(to_add)},
         "hold": {"expected": hold.expected_md_pts, "inround_gain": round(plan_hold.gain, 1), "cost": hold.cost, "status": hold.status, "captain": hold.captain, "coach": hold.coach, "squad": _records(hold.squad)},
         "best": {"expected": best.expected_md_pts, "inround_gain": round(plan_best.gain, 1), "cost": best.cost, "status": best.status, "captain": best.captain, "coach": best.coach,
                  "trades_out": _pl(best.trades_out), "trades_in": _pl(best.trades_in), "squad": _records(best.squad), "plan": plan_best.notes},

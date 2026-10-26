@@ -251,13 +251,23 @@ def header(mode: str, md: int):
     if mode == "team":
         tmd, _roster = roster_state()
         TH.md(TH.header("Fantasy Agent", f"{tmd.get('name', '')}  ·  matchday {md or '—'}", deadline))
-        trades_left = f"{int(tmd.get('max_num_trades_per_matchday', 0)) - int(tmd.get('trades', 0))}" if tmd else "—"
-        items = [("Credits", str(tmd.get("credits", "—")), "", "text"), ("Trades left", trades_left, "of 4 · coach counts", "text"),
+        base = rec.get("baseline") or {}
+        pend = int(tmd.get("trades", 0)) if tmd else 0
+        if base.get("open") and base.get("locked_known"):
+            trades_left, trades_sub = str(rec.get("trades_left", 4)), f"vs locked squad · {pend} pending, reversible"
+        elif base and not base.get("open"):
+            trades_left, trades_sub = "0", "window closed"
+        else:
+            trades_left, trades_sub = (f"{int(tmd.get('max_num_trades_per_matchday', 0)) - pend}" if tmd else "—"), "of 4 · coach counts"
+        items = [("Credits", str(tmd.get("credits", "—")), "", "text"), ("Trades", trades_left, trades_sub, "text"),
                  ("Total pts", str(tmd.get("total_pts", "—")), "", "text")]
         if rec:
-            h, b = rec["hold"], rec["best"]
-            items += [("Current squad", f"{h['expected']:.1f}", "best lineup, no trades", "muted"),
-                      ("With trades", f"{b['expected']:.1f}", f"▲ +{b['expected'] - h['expected']:.1f} expected", "pos"),
+            h, b, pq = rec["hold"], rec["best"], rec.get("pending") or {}
+            items += [(base.get("label", "current squad").capitalize(), f"{h['expected']:.1f}", "best lineup, no trades", "muted")]
+            if pq.get("differs"):
+                items += [("Pending squad", f"{pq['expected']:.1f}", f"your {pend} trade(s) as selected", "muted")]
+            ref = pq["expected"] if pq.get("differs") else h["expected"]
+            items += [("Recommended", f"{b['expected']:.1f}", f"▲ +{b['expected'] - ref:.1f} vs {'pending' if pq.get('differs') else 'current'}", "pos"),
                       ("Managed in-round", f"{b['inround_gain']:+.1f}", "swaps & captain moves, simulated", "gold")]
         TH.md(TH.kpis(items))
         st.caption(f"{status['generated']}  ·  last run: {status['run_reason']}")
@@ -306,15 +316,33 @@ def page_recommendation(proj: pd.DataFrame, md: int):
     odds = TH.chip(f"ODDS ON · {rec['odds_games']} GAMES", "pos") if rec.get("odds_games") else TH.chip("ODDS OFF · MODEL MARGINS", "neg")
     TH.md(f'<div class="elf-h1">Matchday {rec["matchday"]}</div><div class="elf-sub" style="margin-bottom:10px">{rounds} · {len(rec.get("nights", []))} night(s) · {nights} &nbsp; {odds}</div>')
     kept = f" · kept by request: {', '.join(rec['kept'])}" if rec.get("kept") else ""
-    TH.md(TH.trades(b["trades_out"], b["trades_in"], f"Cost {b['cost']} / {rec['budget']}  ·  Captain {b['captain'].upper()}  ·  Coach {b['coach'].upper()}  ·  {b['status']}{kept}"))
+    base = rec.get("baseline") or {}
+    pq = rec.get("pending") or {}
+    chg = rec.get("changes_vs_pending") or {}
+    if base.get("open") and pq.get("differs"):
+        # the platform shows a squad with reversible trades: tell the user what to change from *that*, not from the locked squad
+        TH.md(TH.trades(chg.get("remove", []), chg.get("add", []),
+                        f"From your pending squad ({pq['expected']:.1f} pts) to the recommendation ({b['expected']:.1f} pts, {b['expected'] - pq['expected']:+.1f})  ·  "
+                        f"Cost {b['cost']} / {rec['budget']}  ·  Captain {b['captain'].upper()}  ·  Coach {b['coach'].upper()}  ·  {b['status']}{kept}",
+                        title="To do on the platform", labels=("REMOVE", "ADD"), empty="Nothing to change — your pending squad is already the recommendation"))
+        st.write("")
+        with st.expander(f"Trades vs the locked squad ({len(b['trades_in'])} of {rec.get('trades_left', 4)} used)"):
+            TH.md(TH.trades(b["trades_out"], b["trades_in"], f"Locked squad {h['expected']:.1f} → recommended {b['expected']:.1f} pts", title="Trades vs the locked squad"))
+    else:
+        TH.md(TH.trades(b["trades_out"], b["trades_in"], f"Cost {b['cost']} / {rec['budget']}  ·  Captain {b['captain'].upper()}  ·  Coach {b['coach'].upper()}  ·  {b['status']}{kept}"))
+    if base.get("note"):
+        st.caption(base["note"])
     st.write("")
     left, right = st.columns([2.2, 1])
     with left:
         multi = len(rec.get("nights", [])) > 1
         badges = [TH.chip("NIGHT BALANCE " + ("RELAXED" if "relaxed" in b["status"] else "OK"), "gold" if "relaxed" in b["status"] else "pos")] if multi else []
         TH.md(TH.lineup_board(b["squad"], "Recommended squad", badges))
-        with st.expander("Current squad, best lineup (no trades)"):
-            TH.md(TH.lineup_board(h["squad"], f"Current squad · {h['expected']:.1f} pts"))
+        if pq.get("differs"):
+            with st.expander(f"Pending squad on the platform ({base.get('pending_trades', 0)} trade(s) made, reversible) · {pq['expected']:.1f} pts"):
+                TH.md(TH.lineup_board(pq["squad"], f"Pending squad · {pq['expected']:.1f} pts"))
+        with st.expander(f"{base.get('label', 'current squad').capitalize()}, best lineup (no trades) · {h['expected']:.1f} pts"):
+            TH.md(TH.lineup_board(h["squad"], f"{base.get('label', 'current squad').capitalize()} · {h['expected']:.1f} pts"))
     with right:
         plan = [("AFTER T1", n) for n in b.get("plan", [])] or [("INFO", "no frequent swaps — the lineup is mostly set-and-forget")]
         plan.append(("RULE", "After each night: promote a not-yet-played bench player over a same-position field player whose realised score is below the bench expectation; move the captaincy to the best not-yet-played starter if it beats the captain's realised total."))
@@ -346,7 +374,13 @@ def page_recommendation(proj: pd.DataFrame, md: int):
 
 def page_whatif(proj: pd.DataFrame):
     tmd, roster = roster_state()
-    roster_ids = {str(p["id"]) for p in roster.get("players", [])}
+    pending_ids = {str(p["id"]) for p in roster.get("players", [])}
+    try:
+        base = D.trade_baseline()
+        roster_ids, trades_default = set(base.ids), int(base.trades_left)
+        st.caption(f"Baseline: {base.label} · {base.note}")
+    except Exception:  # noqa: BLE001 - old pull without a locked roster
+        roster_ids, trades_default = pending_ids, (int(tmd.get("max_num_trades_per_matchday", 4)) - int(tmd.get("trades", 0)) if tmd else 4)
     st.subheader("Run the optimiser with your constraints")
     if proj.empty:
         st.warning("No projection yet.")
@@ -355,12 +389,12 @@ def page_whatif(proj: pd.DataFrame):
     optimise = D.elfa_attr("elfa.optimise.lineup", "optimise")
 
     names = sorted(proj.name.tolist())
-    in_squad = sorted(proj[proj.in_roster].name.tolist())
+    in_squad = sorted(proj[proj.in_roster | proj.platform_id.isin(roster_ids)].name.tolist())
     colA, colB = st.columns(2)
     keep = colA.multiselect("Must keep", in_squad)
     exclude = colB.multiselect("Exclude from consideration", names)
     colC, colD, colE, colF = st.columns(4)
-    trades = colC.slider("Max trades", 0, 4, int(tmd.get("max_num_trades_per_matchday", 4)) - int(tmd.get("trades", 0)) if tmd else 4)
+    trades = colC.slider("Max trades", 0, 4, trades_default, help="Counted against the baseline squad above, not against what is pending on the platform")
     budget = colD.number_input("Budget", value=float(tmd.get("credits", 100.0)), step=0.1)
     balance = colE.checkbox("Night balance rule", value=True,
                             help="On multi-night matchdays keep ≥3 field players on night 1 and ≥2 bench players with later games, so you can react after the first night.")
@@ -400,7 +434,13 @@ def page_whatif(proj: pd.DataFrame):
         if lam:
             st.caption(f"Status {sol.status} · optimised on expected − {lam:+.2f} × uncertainty, then re-scored on the plain expectation.")
         pl = lambda names: [{"name": n, "pos": proj.loc[proj.name == n, "pos"].iloc[0], "price": float(proj.loc[proj.name == n, "quotation"].iloc[0])} for n in names if (proj.name == n).any()]
-        TH.md(TH.trades(pl(sol.trades_out), pl(sol.trades_in), f"Cost {sol.cost} / {budget} · Captain {sol.captain.upper()} · Coach {sol.coach.upper()} · {sol.status}"))
+        TH.md(TH.trades(pl(sol.trades_out), pl(sol.trades_in), f"Cost {sol.cost} / {budget} · Captain {sol.captain.upper()} · Coach {sol.coach.upper()} · {sol.status}",
+                        title="Trades vs the baseline squad"))
+        if pending_ids != roster_ids:
+            rm = [n for n in proj[proj.platform_id.isin(pending_ids - set(sol.squad.platform_id))].name]
+            ad = [n for n in proj[proj.platform_id.isin(set(sol.squad.platform_id) - pending_ids)].name]
+            TH.md(TH.trades(pl(rm), pl(ad), "From what is selected on the platform right now", title="To do on the platform", labels=("REMOVE", "ADD"),
+                            empty="Nothing to change — your pending squad already matches"))
         st.write("")
         TH.md(TH.lineup_board(sol.squad.to_dict("records"), "What-if squad"))
         if plan.notes:
