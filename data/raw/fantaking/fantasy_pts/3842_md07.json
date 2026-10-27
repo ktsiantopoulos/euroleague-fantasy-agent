@@ -1,0 +1,68 @@
+{
+ "matchday": {
+  "id": 1534,
+  "number": 7
+ },
+ "round": {
+  "id": 2538,
+  "number": 2
+ },
+ "match": {
+  "id": 11988,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-22T17:30:00.000000Z",
+  "home_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 89
+  },
+  "away_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 80
+  }
+ },
+ "fantasy_pts": 14,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 10,
+   "fantasy_pts": 10
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 9,
+   "fantasy_pts": -9
+  }
+ ],
+ "label": "opponent"
+}

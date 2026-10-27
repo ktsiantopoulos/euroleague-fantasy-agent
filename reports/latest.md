@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 32.70 h away)
+## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 3.20 h away)
 ## pull-official
 E2026: 70 games played, 0 box scores fetched now
 
@@ -10,7 +10,7 @@ team: UnderTakers86  credits: 105.9  trades used: 4/4
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
-price base: fantasyedge 228, top100_md1 122, first_seen 8
+price base: fantasyedge 229, top100_md1 122, first_seen 11
 
 ## build
         games  rows  mismatches
@@ -19,16 +19,16 @@ E2026      70  1678           0
 teams mapped: 20; needs attention: 0
 method
 surname+team    284
-UNMATCHED        54
+UNMATCHED        57
 coach            20
 team context: 20 clubs · usage: 276 players · FDR: 20 clubs x next 5
-price base: fantasyedge 228, top100_md1 122, first_seen 8
+price base: fantasyedge 229, top100_md1 122, first_seen 11
 matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
 T2=2026-10-28
 
 ## reconcile
-player-games compared: 2474
-exact matches: 1652 (66.8%)
+player-games compared: 2475
+exact matches: 1653 (66.8%)
   no_player: 507
   no_boxscore_row: 301
   MISMATCH: 14
@@ -82,11 +82,11 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Aliou Diarra | C | VIR | 9.3 | 91 | 37 | 7 |
-| Theo Maledon | G | RMB | 12.3 | 81 | 37 | 0 |
+| Theo Maledon | G | RMB | 12.3 | 81 | 35 | 0 |
 | Sasha Vezenkov | F | OLY | 18.4 | 73 | 45 | 34 |
-| Andres Feliz | G | RMB | 8.2 | 66 | 32 | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 63 | 20 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 13 | 8 |
+| Andres Feliz | G | RMB | 8.2 | 66 | 34 | 0 |
+| Tomas Masiulis | H | ZAL | 6.3 | 63 | 15 | 0 |
+| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 15 | 8 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  

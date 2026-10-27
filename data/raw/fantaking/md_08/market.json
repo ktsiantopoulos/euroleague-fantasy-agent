@@ -8,7 +8,7 @@
   "face_path": null,
   "avg_pts": 24.53,
   "is_on_fire": true,
-  "popularity": 0.446,
+  "popularity": 0.452,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -43,7 +43,7 @@
   "face_path": null,
   "avg_pts": 24.16,
   "is_on_fire": false,
-  "popularity": 0.152,
+  "popularity": 0.14,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -78,7 +78,7 @@
   "face_path": null,
   "avg_pts": 22.03,
   "is_on_fire": true,
-  "popularity": 0.146,
+  "popularity": 0.14,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -113,7 +113,7 @@
   "face_path": null,
   "avg_pts": 22.63,
   "is_on_fire": false,
-  "popularity": 0.137,
+  "popularity": 0.144,
   "position": {
    "id": 30,
    "name": "Center"
@@ -148,7 +148,7 @@
   "face_path": null,
   "avg_pts": 19.17,
   "is_on_fire": false,
-  "popularity": 0.133,
+  "popularity": 0.124,
   "position": {
    "id": 30,
    "name": "Center"
@@ -183,7 +183,7 @@
   "face_path": null,
   "avg_pts": 19.8,
   "is_on_fire": true,
-  "popularity": 0.126,
+  "popularity": 0.151,
   "position": {
    "id": 30,
    "name": "Center"
@@ -253,7 +253,7 @@
   "face_path": null,
   "avg_pts": 18,
   "is_on_fire": false,
-  "popularity": 0.117,
+  "popularity": 0.114,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -288,7 +288,7 @@
   "face_path": null,
   "avg_pts": 17.23,
   "is_on_fire": true,
-  "popularity": 0.039,
+  "popularity": 0.037,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -323,7 +323,7 @@
   "face_path": null,
   "avg_pts": 16,
   "is_on_fire": false,
-  "popularity": 0.03,
+  "popularity": 0.031,
   "position": {
    "id": 30,
    "name": "Center"
@@ -358,7 +358,7 @@
   "face_path": null,
   "avg_pts": 14.11,
   "is_on_fire": false,
-  "popularity": 0.033,
+  "popularity": 0.031,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -393,7 +393,7 @@
   "face_path": null,
   "avg_pts": 20.29,
   "is_on_fire": false,
-  "popularity": 0.243,
+  "popularity": 0.275,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -428,7 +428,7 @@
   "face_path": null,
   "avg_pts": 14.13,
   "is_on_fire": false,
-  "popularity": 0.022,
+  "popularity": 0.023,
   "position": {
    "id": 30,
    "name": "Center"
@@ -463,7 +463,7 @@
   "face_path": null,
   "avg_pts": 22.23,
   "is_on_fire": false,
-  "popularity": 0.09,
+  "popularity": 0.073,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -483,10 +483,10 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -498,7 +498,7 @@
   "face_path": null,
   "avg_pts": 17.23,
   "is_on_fire": false,
-  "popularity": 0.077,
+  "popularity": 0.065,
   "position": {
    "id": 30,
    "name": "Center"
@@ -533,7 +533,7 @@
   "face_path": null,
   "avg_pts": 18.64,
   "is_on_fire": true,
-  "popularity": 0.09,
+  "popularity": 0.102,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -588,8 +588,8 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
   "started_from_bench": false,
   "label": "opponent"
@@ -638,7 +638,7 @@
   "face_path": null,
   "avg_pts": 19.3,
   "is_on_fire": false,
-  "popularity": 0.174,
+  "popularity": 0.157,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -673,7 +673,7 @@
   "face_path": null,
   "avg_pts": 8.8,
   "is_on_fire": false,
-  "popularity": 0.047,
+  "popularity": 0.045,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -735,41 +735,6 @@
   "label": "opponent"
  },
  {
-  "id": 3812,
-  "first_name": "Jaylen",
-  "last_name": "Hoard",
-  "quotation": 13.6,
-  "jersey": "1",
-  "face_path": null,
-  "avg_pts": 11.03,
-  "is_on_fire": false,
-  "popularity": 0.006,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 148,
-   "name": "Maccabi Rapyd Tel Aviv",
-   "abbreviation": "MTA",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 144,
-   "name": "Crvena Zvezda Meridianbet Belgrade",
-   "abbreviation": "CZV"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
   "id": 11526,
   "first_name": "Guerschon",
   "last_name": "Yabusele",
@@ -805,6 +770,41 @@
   "label": "opponent"
  },
  {
+  "id": 3812,
+  "first_name": "Jaylen",
+  "last_name": "Hoard",
+  "quotation": 13.6,
+  "jersey": "1",
+  "face_path": null,
+  "avg_pts": 11.03,
+  "is_on_fire": false,
+  "popularity": 0.006,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 3772,
   "first_name": "Facundo",
   "last_name": "Campazzo",
@@ -813,7 +813,7 @@
   "face_path": null,
   "avg_pts": 13.7,
   "is_on_fire": false,
-  "popularity": 0.016,
+  "popularity": 0.017,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -848,7 +848,7 @@
   "face_path": null,
   "avg_pts": 14.47,
   "is_on_fire": false,
-  "popularity": 0.08,
+  "popularity": 0.082,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -883,7 +883,7 @@
   "face_path": null,
   "avg_pts": 12.11,
   "is_on_fire": false,
-  "popularity": 0.044,
+  "popularity": 0.042,
   "position": {
    "id": 30,
    "name": "Center"
@@ -910,41 +910,6 @@
   "label": "opponent"
  },
  {
-  "id": 3775,
-  "first_name": "Shavon",
-  "last_name": "Shields",
-  "quotation": 13.1,
-  "jersey": "31",
-  "face_path": null,
-  "avg_pts": 15.46,
-  "is_on_fire": true,
-  "popularity": 0.037,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 147,
-   "name": "Fenerbahce Tarfin Istanbul",
-   "abbreviation": "FBT",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 174,
-   "name": "Valencia Basket",
-   "abbreviation": "VBC"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
   "id": 3787,
   "first_name": "Nigel",
   "last_name": "Hayes-davis",
@@ -953,7 +918,7 @@
   "face_path": null,
   "avg_pts": 13.98,
   "is_on_fire": false,
-  "popularity": 0.054,
+  "popularity": 0.056,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -980,6 +945,41 @@
   "label": "opponent"
  },
  {
+  "id": 3775,
+  "first_name": "Shavon",
+  "last_name": "Shields",
+  "quotation": 13.1,
+  "jersey": "31",
+  "face_path": null,
+  "avg_pts": 15.46,
+  "is_on_fire": true,
+  "popularity": 0.048,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 3807,
   "first_name": "Elie",
   "last_name": "Okobo",
@@ -988,7 +988,7 @@
   "face_path": null,
   "avg_pts": 15.46,
   "is_on_fire": true,
-  "popularity": 0.032,
+  "popularity": 0.046,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1023,7 +1023,7 @@
   "face_path": null,
   "avg_pts": 10.27,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.007,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1058,7 +1058,7 @@
   "face_path": null,
   "avg_pts": 16,
   "is_on_fire": false,
-  "popularity": 0.06,
+  "popularity": 0.043,
   "position": {
    "id": 30,
    "name": "Center"
@@ -1085,41 +1085,6 @@
   "label": "opponent"
  },
  {
-  "id": 3790,
-  "first_name": "Dzanan",
-  "last_name": "Musa",
-  "quotation": 12.6,
-  "jersey": "13",
-  "face_path": null,
-  "avg_pts": 0,
-  "is_on_fire": false,
-  "popularity": 0.001,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 311,
-   "name": "Dubai Basketball",
-   "abbreviation": "DUB",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 150,
-   "name": "Paris Basketball",
-   "abbreviation": "PBB"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": true,
-  "probability_of_playing": 0,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
   "id": 4247,
   "first_name": "Chris",
   "last_name": "Jones",
@@ -1128,7 +1093,7 @@
   "face_path": null,
   "avg_pts": 14.79,
   "is_on_fire": false,
-  "popularity": 0.042,
+  "popularity": 0.048,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1155,6 +1120,41 @@
   "label": "opponent"
  },
  {
+  "id": 3790,
+  "first_name": "Dzanan",
+  "last_name": "Musa",
+  "quotation": 12.6,
+  "jersey": "13",
+  "face_path": null,
+  "avg_pts": 0,
+  "is_on_fire": false,
+  "popularity": 0.002,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
   "id": 4096,
   "first_name": "Mckinley",
   "last_name": "Wright",
@@ -1163,7 +1163,7 @@
   "face_path": null,
   "avg_pts": 10.64,
   "is_on_fire": false,
-  "popularity": 0.01,
+  "popularity": 0.011,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1233,7 +1233,7 @@
   "face_path": null,
   "avg_pts": 10.43,
   "is_on_fire": false,
-  "popularity": 0.008,
+  "popularity": 0.009,
   "position": {
    "id": 30,
    "name": "Center"
@@ -1268,7 +1268,7 @@
   "face_path": null,
   "avg_pts": 13.14,
   "is_on_fire": false,
-  "popularity": 0.013,
+  "popularity": 0.014,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1295,41 +1295,6 @@
   "label": "opponent"
  },
  {
-  "id": 3773,
-  "first_name": "Nikola",
-  "last_name": "Mirotic",
-  "quotation": 12.2,
-  "jersey": "33",
-  "face_path": null,
-  "avg_pts": 15.9,
-  "is_on_fire": false,
-  "popularity": 0.053,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 174,
-   "name": "Valencia Basket",
-   "abbreviation": "VBC",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 147,
-   "name": "Fenerbahce Tarfin Istanbul",
-   "abbreviation": "FBT"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
   "id": 11507,
   "first_name": "Amir",
   "last_name": "Coffey",
@@ -1338,7 +1303,7 @@
   "face_path": null,
   "avg_pts": 13.57,
   "is_on_fire": false,
-  "popularity": 0.005,
+  "popularity": 0.004,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1365,6 +1330,41 @@
   "label": "opponent"
  },
  {
+  "id": 3773,
+  "first_name": "Nikola",
+  "last_name": "Mirotic",
+  "quotation": 12.2,
+  "jersey": "33",
+  "face_path": null,
+  "avg_pts": 15.9,
+  "is_on_fire": false,
+  "popularity": 0.045,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 8567,
   "first_name": "Talen",
   "last_name": "Horton-Tucker",
@@ -1373,7 +1373,7 @@
   "face_path": null,
   "avg_pts": 12.93,
   "is_on_fire": false,
-  "popularity": 0.043,
+  "popularity": 0.041,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1408,7 +1408,7 @@
   "face_path": null,
   "avg_pts": 12.15,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.022,
   "position": {
    "id": 30,
    "name": "Center"
@@ -1443,7 +1443,7 @@
   "face_path": null,
   "avg_pts": 12.86,
   "is_on_fire": false,
-  "popularity": 0.019,
+  "popularity": 0.018,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1465,41 +1465,6 @@
   },
   "is_injured": true,
   "probability_of_playing": 0,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 3850,
-  "first_name": "Theo",
-  "last_name": "Maledon",
-  "quotation": 11.9,
-  "jersey": "12",
-  "face_path": null,
-  "avg_pts": 19.93,
-  "is_on_fire": false,
-  "popularity": 0.37,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 153,
-   "name": "Real Madrid",
-   "abbreviation": "RMB",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 143,
-   "name": "Kosner Baskonia Vitoria-Gasteiz",
-   "abbreviation": "KBA"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": false,
   "label": "opponent"
@@ -1540,6 +1505,41 @@
   "label": "opponent"
  },
  {
+  "id": 3850,
+  "first_name": "Theo",
+  "last_name": "Maledon",
+  "quotation": 11.9,
+  "jersey": "12",
+  "face_path": null,
+  "avg_pts": 19.93,
+  "is_on_fire": false,
+  "popularity": 0.354,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 7221,
   "first_name": "Azuolas",
   "last_name": "Tubelis",
@@ -1548,7 +1548,7 @@
   "face_path": null,
   "avg_pts": 15.57,
   "is_on_fire": false,
-  "popularity": 0.087,
+  "popularity": 0.091,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1575,41 +1575,6 @@
   "label": "opponent"
  },
  {
-  "id": 7218,
-  "first_name": "Kameron",
-  "last_name": "Taylor",
-  "quotation": 11.7,
-  "jersey": "1",
-  "face_path": null,
-  "avg_pts": 11.37,
-  "is_on_fire": false,
-  "popularity": 0.027,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 174,
-   "name": "Valencia Basket",
-   "abbreviation": "VBC",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 147,
-   "name": "Fenerbahce Tarfin Istanbul",
-   "abbreviation": "FBT"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
   "id": 4882,
   "first_name": "Daniel",
   "last_name": "Theis",
@@ -1618,7 +1583,7 @@
   "face_path": null,
   "avg_pts": 11.78,
   "is_on_fire": false,
-  "popularity": 0.008,
+  "popularity": 0.009,
   "position": {
    "id": 30,
    "name": "Center"
@@ -1645,6 +1610,41 @@
   "label": "opponent"
  },
  {
+  "id": 7218,
+  "first_name": "Kameron",
+  "last_name": "Taylor",
+  "quotation": 11.7,
+  "jersey": "1",
+  "face_path": null,
+  "avg_pts": 11.37,
+  "is_on_fire": false,
+  "popularity": 0.023,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 3810,
   "first_name": "Bonzie",
   "last_name": "Colson",
@@ -1653,7 +1653,7 @@
   "face_path": null,
   "avg_pts": 13.01,
   "is_on_fire": false,
-  "popularity": 0.016,
+  "popularity": 0.018,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1688,7 +1688,7 @@
   "face_path": null,
   "avg_pts": 11.91,
   "is_on_fire": false,
-  "popularity": 0.04,
+  "popularity": 0.037,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1723,7 +1723,7 @@
   "face_path": null,
   "avg_pts": 13.1,
   "is_on_fire": false,
-  "popularity": 0.047,
+  "popularity": 0.046,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1855,41 +1855,6 @@
   "label": "opponent"
  },
  {
-  "id": 11527,
-  "first_name": "Tj",
-  "last_name": "Warren",
-  "quotation": 11.1,
-  "jersey": "1",
-  "face_path": null,
-  "avg_pts": 11.54,
-  "is_on_fire": false,
-  "popularity": 0.009,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 150,
-   "name": "Paris Basketball",
-   "abbreviation": "PBB",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 311,
-   "name": "Dubai Basketball",
-   "abbreviation": "DUB"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
   "id": 3868,
   "first_name": "Zeljko",
   "last_name": "Obradovic",
@@ -1898,7 +1863,7 @@
   "face_path": null,
   "avg_pts": 16.43,
   "is_on_fire": null,
-  "popularity": 0.152,
+  "popularity": 0.145,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -1925,6 +1890,41 @@
   "label": "opponent"
  },
  {
+  "id": 11527,
+  "first_name": "Tj",
+  "last_name": "Warren",
+  "quotation": 11.1,
+  "jersey": "1",
+  "face_path": null,
+  "avg_pts": 11.54,
+  "is_on_fire": false,
+  "popularity": 0.008,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
   "id": 11528,
   "first_name": "Tyson",
   "last_name": "Etienne",
@@ -1933,7 +1933,7 @@
   "face_path": null,
   "avg_pts": 11.37,
   "is_on_fire": false,
-  "popularity": 0.039,
+  "popularity": 0.027,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1956,7 +1956,42 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
+  "id": 7362,
+  "first_name": "Umoja",
+  "last_name": "Gibson",
+  "quotation": 10.9,
+  "jersey": "2",
+  "face_path": null,
+  "avg_pts": 14.21,
+  "is_on_fire": false,
+  "popularity": 0.007,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -1995,41 +2030,6 @@
   "label": "opponent"
  },
  {
-  "id": 7362,
-  "first_name": "Umoja",
-  "last_name": "Gibson",
-  "quotation": 10.9,
-  "jersey": "2",
-  "face_path": null,
-  "avg_pts": 14.21,
-  "is_on_fire": false,
-  "popularity": 0.006,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 140,
-   "name": "FC Barcelona",
-   "abbreviation": "BAR",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 141,
-   "name": "FC Bayern Munich",
-   "abbreviation": "BAY"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
   "id": 3833,
   "first_name": "Armoni",
   "last_name": "Brooks",
@@ -2038,7 +2038,7 @@
   "face_path": null,
   "avg_pts": 13.4,
   "is_on_fire": false,
-  "popularity": 0.021,
+  "popularity": 0.022,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2062,41 +2062,6 @@
   "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": true,
-  "label": "opponent"
- },
- {
-  "id": 11545,
-  "first_name": "Marcus",
-  "last_name": "Carr",
-  "quotation": 10.7,
-  "jersey": "2",
-  "face_path": null,
-  "avg_pts": 14.23,
-  "is_on_fire": false,
-  "popularity": 0.052,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 154,
-   "name": "Virtus Bologna",
-   "abbreviation": "VIR",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 155,
-   "name": "Zalgiris Kaunas",
-   "abbreviation": "ZAL"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -2135,68 +2100,33 @@
   "label": "opponent"
  },
  {
-  "id": 11504,
-  "first_name": "Johannes",
-  "last_name": "Thiemann",
+  "id": 11545,
+  "first_name": "Marcus",
+  "last_name": "Carr",
   "quotation": 10.7,
-  "jersey": "32",
+  "jersey": "2",
   "face_path": null,
-  "avg_pts": 12.64,
+  "avg_pts": 14.23,
   "is_on_fire": false,
-  "popularity": 0.02,
+  "popularity": 0.044,
   "position": {
-   "id": 30,
-   "name": "Center"
+   "id": 28,
+   "name": "Guard"
   },
   "team": {
-   "id": 141,
-   "name": "FC Bayern Munich",
-   "abbreviation": "BAY",
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
    "position": "home"
   },
   "opponent": {
-   "id": 140,
-   "name": "FC Barcelona",
-   "abbreviation": "BAR"
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL"
   },
   "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 7197,
-  "first_name": "Oshae",
-  "last_name": "Brissett",
-  "quotation": 10.7,
-  "jersey": "10",
-  "face_path": null,
-  "avg_pts": 12.43,
-  "is_on_fire": false,
-  "popularity": 0.007,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 148,
-   "name": "Maccabi Rapyd Tel Aviv",
-   "abbreviation": "MTA",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 144,
-   "name": "Crvena Zvezda Meridianbet Belgrade",
-   "abbreviation": "CZV"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
+   "id": 2541,
+   "number": 2
   },
   "is_injured": false,
   "probability_of_playing": 1,
@@ -2240,6 +2170,76 @@
   "label": "opponent"
  },
  {
+  "id": 7197,
+  "first_name": "Oshae",
+  "last_name": "Brissett",
+  "quotation": 10.7,
+  "jersey": "10",
+  "face_path": null,
+  "avg_pts": 12.43,
+  "is_on_fire": false,
+  "popularity": 0.007,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 11504,
+  "first_name": "Johannes",
+  "last_name": "Thiemann",
+  "quotation": 10.7,
+  "jersey": "32",
+  "face_path": null,
+  "avg_pts": 12.64,
+  "is_on_fire": false,
+  "popularity": 0.019,
+  "position": {
+   "id": 30,
+   "name": "Center"
+  },
+  "team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 3930,
   "first_name": "Yam",
   "last_name": "Madar",
@@ -2248,7 +2248,7 @@
   "face_path": null,
   "avg_pts": 16.53,
   "is_on_fire": true,
-  "popularity": 0.149,
+  "popularity": 0.16,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2283,7 +2283,7 @@
   "face_path": null,
   "avg_pts": 12.06,
   "is_on_fire": false,
-  "popularity": 0.034,
+  "popularity": 0.028,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2307,41 +2307,6 @@
   "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": true,
-  "label": "opponent"
- },
- {
-  "id": 3808,
-  "first_name": "Codi",
-  "last_name": "Miller-Mcintyre",
-  "quotation": 10.4,
-  "jersey": "11",
-  "face_path": null,
-  "avg_pts": 9.09,
-  "is_on_fire": false,
-  "popularity": 0.05,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 149,
-   "name": "Olympiacos Piraeus",
-   "abbreviation": "OLY",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 158,
-   "name": "Besiktas Istanbul",
-   "abbreviation": "BJK"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -2403,6 +2368,41 @@
    "id": 149,
    "name": "Olympiacos Piraeus",
    "abbreviation": "OLY"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 3808,
+  "first_name": "Codi",
+  "last_name": "Miller-Mcintyre",
+  "quotation": 10.4,
+  "jersey": "11",
+  "face_path": null,
+  "avg_pts": 9.09,
+  "is_on_fire": false,
+  "popularity": 0.048,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK"
   },
   "round": {
    "id": 2541,
@@ -2563,7 +2563,7 @@
   "face_path": null,
   "avg_pts": 2.7,
   "is_on_fire": false,
-  "popularity": 0.03,
+  "popularity": 0.034,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -2578,6 +2578,76 @@
    "id": 143,
    "name": "Kosner Baskonia Vitoria-Gasteiz",
    "abbreviation": "KBA"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
+  "id": 11511,
+  "first_name": "Chris",
+  "last_name": "Duarte",
+  "quotation": 10,
+  "jersey": "27",
+  "face_path": null,
+  "avg_pts": 11.95,
+  "is_on_fire": false,
+  "popularity": 0.005,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
+  "id": 4884,
+  "first_name": "Jimmy",
+  "last_name": "Clark III",
+  "quotation": 10,
+  "jersey": "2",
+  "face_path": null,
+  "avg_pts": 11.57,
+  "is_on_fire": false,
+  "popularity": 0.011,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV"
   },
   "round": {
    "id": 2540,
@@ -2618,10 +2688,10 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -2633,7 +2703,7 @@
   "face_path": null,
   "avg_pts": 13.15,
   "is_on_fire": false,
-  "popularity": 0.021,
+  "popularity": 0.022,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -2660,111 +2730,6 @@
   "label": "opponent"
  },
  {
-  "id": 11511,
-  "first_name": "Chris",
-  "last_name": "Duarte",
-  "quotation": 10,
-  "jersey": "27",
-  "face_path": null,
-  "avg_pts": 11.95,
-  "is_on_fire": false,
-  "popularity": 0.006,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 143,
-   "name": "Kosner Baskonia Vitoria-Gasteiz",
-   "abbreviation": "KBA",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 153,
-   "name": "Real Madrid",
-   "abbreviation": "RMB"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
-  "id": 4884,
-  "first_name": "Jimmy",
-  "last_name": "Clark III",
-  "quotation": 10,
-  "jersey": "2",
-  "face_path": null,
-  "avg_pts": 11.57,
-  "is_on_fire": false,
-  "popularity": 0.01,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 148,
-   "name": "Maccabi Rapyd Tel Aviv",
-   "abbreviation": "MTA",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 144,
-   "name": "Crvena Zvezda Meridianbet Belgrade",
-   "abbreviation": "CZV"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 11515,
-  "first_name": "Tremont",
-  "last_name": "Waters",
-  "quotation": 9.9,
-  "jersey": "51",
-  "face_path": null,
-  "avg_pts": 10.47,
-  "is_on_fire": false,
-  "popularity": 0.002,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 139,
-   "name": "LDLC ASVEL Villeurbanne",
-   "abbreviation": "ASV",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 152,
-   "name": "Partizan Mozzart Bet Belgrade",
-   "abbreviation": "PAR"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
   "id": 3885,
   "first_name": "Georgios",
   "last_name": "Bartzokas",
@@ -2773,7 +2738,7 @@
   "face_path": null,
   "avg_pts": 9.29,
   "is_on_fire": null,
-  "popularity": 0.035,
+  "popularity": 0.036,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -2800,99 +2765,29 @@
   "label": "opponent"
  },
  {
-  "id": 3792,
-  "first_name": "Jordan",
-  "last_name": "Loyd",
-  "quotation": 9.8,
-  "jersey": "3",
+  "id": 11515,
+  "first_name": "Tremont",
+  "last_name": "Waters",
+  "quotation": 9.9,
+  "jersey": "51",
   "face_path": null,
-  "avg_pts": 9.27,
+  "avg_pts": 10.47,
   "is_on_fire": false,
-  "popularity": 0.009,
+  "popularity": 0.002,
   "position": {
    "id": 28,
    "name": "Guard"
   },
   "team": {
-   "id": 146,
-   "name": "Anadolu Efes Istanbul",
-   "abbreviation": "EFS",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 165,
-   "name": "Hapoel IBI Tel Aviv",
-   "abbreviation": "HTA"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 11503,
-  "first_name": "Marjon",
-  "last_name": "Beauchamp",
-  "quotation": 9.8,
-  "jersey": "3",
-  "face_path": null,
-  "avg_pts": 6,
-  "is_on_fire": false,
-  "popularity": 0.003,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 141,
-   "name": "FC Bayern Munich",
-   "abbreviation": "BAY",
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
    "position": "home"
   },
   "opponent": {
-   "id": 140,
-   "name": "FC Barcelona",
-   "abbreviation": "BAR"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 8808,
-  "first_name": "Eugene",
-  "last_name": "Omoruyi",
-  "quotation": 9.8,
-  "jersey": "20",
-  "face_path": null,
-  "avg_pts": 8.7,
-  "is_on_fire": false,
-  "popularity": 0.007,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 158,
-   "name": "Besiktas Istanbul",
-   "abbreviation": "BJK",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 149,
-   "name": "Olympiacos Piraeus",
-   "abbreviation": "OLY"
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR"
   },
   "round": {
    "id": 2541,
@@ -2940,38 +2835,178 @@
   "label": "opponent"
  },
  {
-  "id": 13930,
-  "first_name": "Christian",
-  "last_name": "Koloko",
-  "quotation": 9.7,
+  "id": 8808,
+  "first_name": "Eugene",
+  "last_name": "Omoruyi",
+  "quotation": 9.8,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 8.7,
   "is_on_fire": false,
-  "popularity": 0.001,
+  "popularity": 0.007,
   "position": {
-   "id": 30,
-   "name": "Center"
+   "id": 29,
+   "name": "Forward"
   },
   "team": {
-   "id": 144,
-   "name": "Crvena Zvezda Meridianbet Belgrade",
-   "abbreviation": "CZV",
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
    "position": "home"
   },
   "opponent": {
-   "id": 148,
-   "name": "Maccabi Rapyd Tel Aviv",
-   "abbreviation": "MTA"
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
+  "id": 11503,
+  "first_name": "Marjon",
+  "last_name": "Beauchamp",
+  "quotation": 9.8,
+  "jersey": "3",
+  "face_path": null,
+  "avg_pts": 6,
+  "is_on_fire": false,
+  "popularity": 0.003,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR"
   },
   "round": {
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 3792,
+  "first_name": "Jordan",
+  "last_name": "Loyd",
+  "quotation": 9.8,
+  "jersey": "3",
+  "face_path": null,
+  "avg_pts": 9.27,
+  "is_on_fire": false,
+  "popularity": 0.008,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 4675,
+  "first_name": "Antonio",
+  "last_name": "Blakeney",
+  "quotation": 9.7,
+  "jersey": "2",
+  "face_path": null,
+  "avg_pts": 11.2,
+  "is_on_fire": false,
+  "popularity": 0.01,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
+  "id": 3821,
+  "first_name": "Donta",
+  "last_name": "Hall",
+  "quotation": 9.7,
+  "jersey": "45",
+  "face_path": null,
+  "avg_pts": 6.53,
+  "is_on_fire": false,
+  "popularity": 0.016,
+  "position": {
+   "id": 30,
+   "name": "Center"
+  },
+  "team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -2983,7 +3018,7 @@
   "face_path": null,
   "avg_pts": 13.61,
   "is_on_fire": false,
-  "popularity": 0.014,
+  "popularity": 0.013,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -3005,6 +3040,41 @@
   },
   "is_injured": false,
   "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 7237,
+  "first_name": "Nathan",
+  "last_name": "Reuvers",
+  "quotation": 9.7,
+  "jersey": "3",
+  "face_path": null,
+  "avg_pts": 8.71,
+  "is_on_fire": false,
+  "popularity": 0.005,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
   "started_from_bench": false,
   "label": "opponent"
@@ -3045,71 +3115,36 @@
   "label": "opponent"
  },
  {
-  "id": 7237,
-  "first_name": "Nathan",
-  "last_name": "Reuvers",
+  "id": 13930,
+  "first_name": "Christian",
+  "last_name": "Koloko",
   "quotation": 9.7,
-  "jersey": "3",
+  "jersey": "20",
   "face_path": null,
-  "avg_pts": 8.71,
+  "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.007,
+  "popularity": 0.001,
   "position": {
-   "id": 29,
-   "name": "Forward"
+   "id": 30,
+   "name": "Center"
   },
   "team": {
-   "id": 174,
-   "name": "Valencia Basket",
-   "abbreviation": "VBC",
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
    "position": "home"
   },
   "opponent": {
-   "id": 147,
-   "name": "Fenerbahce Tarfin Istanbul",
-   "abbreviation": "FBT"
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA"
   },
   "round": {
    "id": 2540,
    "number": 1
   },
   "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
-  "id": 4675,
-  "first_name": "Antonio",
-  "last_name": "Blakeney",
-  "quotation": 9.7,
-  "jersey": "2",
-  "face_path": null,
-  "avg_pts": 11.2,
-  "is_on_fire": false,
-  "popularity": 0.011,
-  "position": {
-   "id": 28,
-   "name": "Guard"
-  },
-  "team": {
-   "id": 165,
-   "name": "Hapoel IBI Tel Aviv",
-   "abbreviation": "HTA",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 146,
-   "name": "Anadolu Efes Istanbul",
-   "abbreviation": "EFS"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
   "started_from_bench": true,
   "label": "opponent"
@@ -3138,76 +3173,6 @@
    "id": 140,
    "name": "FC Barcelona",
    "abbreviation": "BAR"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 3821,
-  "first_name": "Donta",
-  "last_name": "Hall",
-  "quotation": 9.7,
-  "jersey": "45",
-  "face_path": null,
-  "avg_pts": 6.53,
-  "is_on_fire": false,
-  "popularity": 0.016,
-  "position": {
-   "id": 30,
-   "name": "Center"
-  },
-  "team": {
-   "id": 149,
-   "name": "Olympiacos Piraeus",
-   "abbreviation": "OLY",
-   "position": "away"
-  },
-  "opponent": {
-   "id": 158,
-   "name": "Besiktas Istanbul",
-   "abbreviation": "BJK"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
-  "id": 8730,
-  "first_name": "Kenneth",
-  "last_name": "Faried",
-  "quotation": 9.6,
-  "jersey": "35",
-  "face_path": null,
-  "avg_pts": 10.84,
-  "is_on_fire": false,
-  "popularity": 0.009,
-  "position": {
-   "id": 30,
-   "name": "Center"
-  },
-  "team": {
-   "id": 143,
-   "name": "Kosner Baskonia Vitoria-Gasteiz",
-   "abbreviation": "KBA",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 153,
-   "name": "Real Madrid",
-   "abbreviation": "RMB"
   },
   "round": {
    "id": 2540,
@@ -3255,6 +3220,41 @@
   "label": "opponent"
  },
  {
+  "id": 8730,
+  "first_name": "Kenneth",
+  "last_name": "Faried",
+  "quotation": 9.6,
+  "jersey": "35",
+  "face_path": null,
+  "avg_pts": 10.84,
+  "is_on_fire": false,
+  "popularity": 0.009,
+  "position": {
+   "id": 30,
+   "name": "Center"
+  },
+  "team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
   "id": 8815,
   "first_name": "Cameron",
   "last_name": "Payne",
@@ -3263,10 +3263,45 @@
   "face_path": null,
   "avg_pts": 13.55,
   "is_on_fire": false,
-  "popularity": 0.04,
+  "popularity": 0.047,
   "position": {
    "id": 28,
    "name": "Guard"
+  },
+  "team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 4808,
+  "first_name": "Bruno",
+  "last_name": "Fernando",
+  "quotation": 9.5,
+  "jersey": "20",
+  "face_path": null,
+  "avg_pts": 7.89,
+  "is_on_fire": false,
+  "popularity": 0.015,
+  "position": {
+   "id": 30,
+   "name": "Center"
   },
   "team": {
    "id": 146,
@@ -3325,29 +3360,64 @@
   "label": "opponent"
  },
  {
-  "id": 4808,
-  "first_name": "Bruno",
-  "last_name": "Fernando",
-  "quotation": 9.5,
-  "jersey": "20",
+  "id": 3934,
+  "first_name": "Isaac",
+  "last_name": "Bonga",
+  "quotation": 9.4,
+  "jersey": "32",
   "face_path": null,
-  "avg_pts": 7.89,
+  "avg_pts": 2.46,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.022,
   "position": {
-   "id": 30,
-   "name": "Center"
+   "id": 29,
+   "name": "Forward"
   },
   "team": {
-   "id": 146,
-   "name": "Anadolu Efes Istanbul",
-   "abbreviation": "EFS",
-   "position": "away"
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "position": "home"
   },
   "opponent": {
-   "id": 165,
-   "name": "Hapoel IBI Tel Aviv",
-   "abbreviation": "HTA"
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL"
+  },
+  "round": {
+   "id": 2540,
+   "number": 1
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
+  "id": 11492,
+  "first_name": "Jaylen",
+  "last_name": "Nowell",
+  "quotation": 9.4,
+  "jersey": "24",
+  "face_path": null,
+  "avg_pts": 9.43,
+  "is_on_fire": false,
+  "popularity": 0.004,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "position": "home"
+  },
+  "opponent": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY"
   },
   "round": {
    "id": 2541,
@@ -3395,15 +3465,15 @@
   "label": "opponent"
  },
  {
-  "id": 11492,
-  "first_name": "Jaylen",
-  "last_name": "Nowell",
-  "quotation": 9.4,
-  "jersey": "24",
+  "id": 3842,
+  "first_name": "Scottie",
+  "last_name": "Wilbekin",
+  "quotation": 9.3,
+  "jersey": "12",
   "face_path": null,
-  "avg_pts": 9.43,
+  "avg_pts": 14.89,
   "is_on_fire": false,
-  "popularity": 0.004,
+  "popularity": 0.103,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -3426,76 +3496,6 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
-  "label": "opponent"
- },
- {
-  "id": 3934,
-  "first_name": "Isaac",
-  "last_name": "Bonga",
-  "quotation": 9.4,
-  "jersey": "32",
-  "face_path": null,
-  "avg_pts": 2.46,
-  "is_on_fire": false,
-  "popularity": 0.021,
-  "position": {
-   "id": 29,
-   "name": "Forward"
-  },
-  "team": {
-   "id": 151,
-   "name": "Panathinaikos AKTOR Athens",
-   "abbreviation": "PAO",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 145,
-   "name": "Armani Olimpia Milan",
-   "abbreviation": "MIL"
-  },
-  "round": {
-   "id": 2540,
-   "number": 1
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
-  "started_from_bench": true,
-  "label": "opponent"
- },
- {
-  "id": 11546,
-  "first_name": "Bobi",
-  "last_name": "Klintman",
-  "quotation": 9.3,
-  "jersey": "34",
-  "face_path": null,
-  "avg_pts": 8.11,
-  "is_on_fire": false,
-  "popularity": 0.002,
-  "position": {
-   "id": 30,
-   "name": "Center"
-  },
-  "team": {
-   "id": 154,
-   "name": "Virtus Bologna",
-   "abbreviation": "VIR",
-   "position": "home"
-  },
-  "opponent": {
-   "id": 155,
-   "name": "Zalgiris Kaunas",
-   "abbreviation": "ZAL"
-  },
-  "round": {
-   "id": 2541,
-   "number": 2
-  },
-  "is_injured": false,
-  "probability_of_playing": 1,
-  "fantasy_team": null,
   "started_from_bench": true,
   "label": "opponent"
  },
@@ -3508,7 +3508,7 @@
   "face_path": null,
   "avg_pts": 14.62,
   "is_on_fire": false,
-  "popularity": 0.024,
+  "popularity": 0.02,
   "position": {
    "id": 30,
    "name": "Center"
@@ -3578,7 +3578,7 @@
   "face_path": null,
   "avg_pts": 10.71,
   "is_on_fire": null,
-  "popularity": 0.034,
+  "popularity": 0.033,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -3613,7 +3613,7 @@
   "face_path": null,
   "avg_pts": 4.43,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.005,
   "position": {
    "id": 30,
    "name": "Center"
@@ -3648,7 +3648,7 @@
   "face_path": null,
   "avg_pts": 12.33,
   "is_on_fire": false,
-  "popularity": 0.011,
+  "popularity": 0.009,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -3753,7 +3753,7 @@
   "face_path": null,
   "avg_pts": 13.93,
   "is_on_fire": false,
-  "popularity": 0.107,
+  "popularity": 0.114,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3788,7 +3788,7 @@
   "face_path": null,
   "avg_pts": 10.5,
   "is_on_fire": false,
-  "popularity": 0.012,
+  "popularity": 0.011,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3893,7 +3893,7 @@
   "face_path": null,
   "avg_pts": 7.53,
   "is_on_fire": false,
-  "popularity": 0.008,
+  "popularity": 0.007,
   "position": {
    "id": 30,
    "name": "Center"
@@ -3928,7 +3928,7 @@
   "face_path": null,
   "avg_pts": 6.43,
   "is_on_fire": null,
-  "popularity": 0.056,
+  "popularity": 0.059,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -3963,7 +3963,7 @@
   "face_path": null,
   "avg_pts": 8.09,
   "is_on_fire": false,
-  "popularity": 0.016,
+  "popularity": 0.019,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3998,7 +3998,7 @@
   "face_path": null,
   "avg_pts": 6.2,
   "is_on_fire": false,
-  "popularity": 0.007,
+  "popularity": 0.006,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4033,7 +4033,7 @@
   "face_path": null,
   "avg_pts": 13.5,
   "is_on_fire": false,
-  "popularity": 0.132,
+  "popularity": 0.12,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4088,10 +4088,10 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -4103,7 +4103,7 @@
   "face_path": null,
   "avg_pts": 8.27,
   "is_on_fire": false,
-  "popularity": 0.04,
+  "popularity": 0.036,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4208,7 +4208,7 @@
   "face_path": null,
   "avg_pts": 9.27,
   "is_on_fire": false,
-  "popularity": 0.016,
+  "popularity": 0.023,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4313,7 +4313,7 @@
   "face_path": null,
   "avg_pts": 11.17,
   "is_on_fire": false,
-  "popularity": 0.064,
+  "popularity": 0.057,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4418,7 +4418,7 @@
   "face_path": null,
   "avg_pts": 6.23,
   "is_on_fire": false,
-  "popularity": 0.045,
+  "popularity": 0.046,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4511,7 +4511,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -4628,7 +4628,7 @@
   "face_path": null,
   "avg_pts": 11.57,
   "is_on_fire": false,
-  "popularity": 0.021,
+  "popularity": 0.019,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4768,7 +4768,7 @@
   "face_path": null,
   "avg_pts": 15.6,
   "is_on_fire": true,
-  "popularity": 0.322,
+  "popularity": 0.337,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4803,7 +4803,7 @@
   "face_path": null,
   "avg_pts": 12.36,
   "is_on_fire": false,
-  "popularity": 0.033,
+  "popularity": 0.035,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4838,7 +4838,7 @@
   "face_path": null,
   "avg_pts": 8.39,
   "is_on_fire": false,
-  "popularity": 0.008,
+  "popularity": 0.007,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4873,7 +4873,7 @@
   "face_path": null,
   "avg_pts": 4.66,
   "is_on_fire": false,
-  "popularity": 0.007,
+  "popularity": 0.008,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4897,6 +4897,41 @@
   "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": false,
+  "label": "opponent"
+ },
+ {
+  "id": 3788,
+  "first_name": "Keenan",
+  "last_name": "Evans",
+  "quotation": 8.5,
+  "jersey": "34",
+  "face_path": null,
+  "avg_pts": 0,
+  "is_on_fire": null,
+  "popularity": 0.001,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -5188,7 +5223,7 @@
   "face_path": null,
   "avg_pts": 6.43,
   "is_on_fire": null,
-  "popularity": 0.045,
+  "popularity": 0.04,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -5258,7 +5293,7 @@
   "face_path": null,
   "avg_pts": 8.81,
   "is_on_fire": false,
-  "popularity": 0.013,
+  "popularity": 0.012,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -5328,7 +5363,7 @@
   "face_path": null,
   "avg_pts": 10.94,
   "is_on_fire": false,
-  "popularity": 0.09,
+  "popularity": 0.085,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -5363,7 +5398,7 @@
   "face_path": null,
   "avg_pts": 6.46,
   "is_on_fire": false,
-  "popularity": 0.001,
+  "popularity": 0.002,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -5398,7 +5433,7 @@
   "face_path": null,
   "avg_pts": 8.59,
   "is_on_fire": false,
-  "popularity": 0.001,
+  "popularity": 0.002,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -5468,7 +5503,7 @@
   "face_path": null,
   "avg_pts": 7.86,
   "is_on_fire": null,
-  "popularity": 0.075,
+  "popularity": 0.115,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -5608,7 +5643,7 @@
   "face_path": null,
   "avg_pts": 10.59,
   "is_on_fire": false,
-  "popularity": 0.099,
+  "popularity": 0.109,
   "position": {
    "id": 30,
    "name": "Center"
@@ -5748,7 +5783,7 @@
   "face_path": null,
   "avg_pts": 7.45,
   "is_on_fire": false,
-  "popularity": 0.007,
+  "popularity": 0.008,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -5818,7 +5853,7 @@
   "face_path": null,
   "avg_pts": 5.56,
   "is_on_fire": false,
-  "popularity": 0.002,
+  "popularity": 0.001,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -6028,7 +6063,7 @@
   "face_path": null,
   "avg_pts": 9.66,
   "is_on_fire": false,
-  "popularity": 0.046,
+  "popularity": 0.045,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -6063,7 +6098,7 @@
   "face_path": null,
   "avg_pts": 5.74,
   "is_on_fire": false,
-  "popularity": 0.005,
+  "popularity": 0.006,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -6098,7 +6133,7 @@
   "face_path": null,
   "avg_pts": 7.73,
   "is_on_fire": false,
-  "popularity": 0.009,
+  "popularity": 0.008,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -6133,7 +6168,7 @@
   "face_path": null,
   "avg_pts": 12.14,
   "is_on_fire": null,
-  "popularity": 0.039,
+  "popularity": 0.032,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -6273,7 +6308,7 @@
   "face_path": null,
   "avg_pts": 10.05,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.023,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -6370,6 +6405,41 @@
   "label": "opponent"
  },
  {
+  "id": 13935,
+  "first_name": "Antonio",
+  "last_name": "Reeves",
+  "quotation": 7.8,
+  "jersey": "12",
+  "face_path": null,
+  "avg_pts": 0,
+  "is_on_fire": null,
+  "popularity": 0.004,
+  "position": {
+   "id": 28,
+   "name": "Guard"
+  },
+  "team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 1,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
   "id": 3846,
   "first_name": "Tyson",
   "last_name": "Ward",
@@ -6378,7 +6448,7 @@
   "face_path": null,
   "avg_pts": 9.1,
   "is_on_fire": false,
-  "popularity": 0.04,
+  "popularity": 0.042,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -6448,7 +6518,7 @@
   "face_path": null,
   "avg_pts": 7.9,
   "is_on_fire": false,
-  "popularity": 0.018,
+  "popularity": 0.017,
   "position": {
    "id": 30,
    "name": "Center"
@@ -6580,6 +6650,41 @@
   "label": "opponent"
  },
  {
+  "id": 13936,
+  "first_name": "Robert",
+  "last_name": "Franks",
+  "quotation": 7.5,
+  "jersey": "22",
+  "face_path": null,
+  "avg_pts": 0,
+  "is_on_fire": null,
+  "popularity": 0,
+  "position": {
+   "id": 29,
+   "name": "Forward"
+  },
+  "team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "position": "away"
+  },
+  "opponent": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV"
+  },
+  "round": {
+   "id": 2541,
+   "number": 2
+  },
+  "is_injured": false,
+  "probability_of_playing": 0.5,
+  "fantasy_team": null,
+  "started_from_bench": true,
+  "label": "opponent"
+ },
+ {
   "id": 3780,
   "first_name": "Furkan",
   "last_name": "Korkmaz",
@@ -6693,7 +6798,7 @@
   "face_path": null,
   "avg_pts": 6.69,
   "is_on_fire": false,
-  "popularity": 0.019,
+  "popularity": 0.017,
   "position": {
    "id": 30,
    "name": "Center"
@@ -6798,7 +6903,7 @@
   "face_path": null,
   "avg_pts": 8.89,
   "is_on_fire": false,
-  "popularity": 0.038,
+  "popularity": 0.039,
   "position": {
    "id": 30,
    "name": "Center"
@@ -6868,7 +6973,7 @@
   "face_path": null,
   "avg_pts": 5.45,
   "is_on_fire": false,
-  "popularity": 0.01,
+  "popularity": 0.008,
   "position": {
    "id": 30,
    "name": "Center"
@@ -6973,7 +7078,7 @@
   "face_path": null,
   "avg_pts": 7.3,
   "is_on_fire": false,
-  "popularity": 0.02,
+  "popularity": 0.021,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -7008,7 +7113,7 @@
   "face_path": null,
   "avg_pts": 7.13,
   "is_on_fire": false,
-  "popularity": 0.06,
+  "popularity": 0.059,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -7043,7 +7148,7 @@
   "face_path": null,
   "avg_pts": 5.88,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.005,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -7238,10 +7343,10 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -7308,10 +7413,10 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -7393,7 +7498,7 @@
   "face_path": null,
   "avg_pts": 7.68,
   "is_on_fire": false,
-  "popularity": 0.012,
+  "popularity": 0.011,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -7498,7 +7603,7 @@
   "face_path": null,
   "avg_pts": 5,
   "is_on_fire": null,
-  "popularity": 0.096,
+  "popularity": 0.118,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7603,7 +7708,7 @@
   "face_path": null,
   "avg_pts": 1.43,
   "is_on_fire": null,
-  "popularity": 0.204,
+  "popularity": 0.147,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7638,7 +7743,7 @@
   "face_path": null,
   "avg_pts": 0.71,
   "is_on_fire": null,
-  "popularity": 0.021,
+  "popularity": 0.017,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7778,7 +7883,7 @@
   "face_path": null,
   "avg_pts": 9.49,
   "is_on_fire": false,
-  "popularity": 0.128,
+  "popularity": 0.127,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -7813,7 +7918,7 @@
   "face_path": null,
   "avg_pts": 6.24,
   "is_on_fire": false,
-  "popularity": 0.028,
+  "popularity": 0.029,
   "position": {
    "id": 30,
    "name": "Center"
@@ -8023,7 +8128,7 @@
   "face_path": null,
   "avg_pts": 5.71,
   "is_on_fire": null,
-  "popularity": 0.076,
+  "popularity": 0.09,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -8093,7 +8198,7 @@
   "face_path": null,
   "avg_pts": 6.5,
   "is_on_fire": false,
-  "popularity": 0.022,
+  "popularity": 0.021,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -8163,7 +8268,7 @@
   "face_path": null,
   "avg_pts": 7.66,
   "is_on_fire": false,
-  "popularity": 0.06,
+  "popularity": 0.058,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -8408,7 +8513,7 @@
   "face_path": null,
   "avg_pts": 4.66,
   "is_on_fire": false,
-  "popularity": 0.022,
+  "popularity": 0.027,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -8513,7 +8618,7 @@
   "face_path": null,
   "avg_pts": 7.76,
   "is_on_fire": false,
-  "popularity": 0.06,
+  "popularity": 0.059,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -8618,7 +8723,7 @@
   "face_path": null,
   "avg_pts": 4.55,
   "is_on_fire": false,
-  "popularity": 0.025,
+  "popularity": 0.026,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -8638,10 +8743,10 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -8968,7 +9073,7 @@
   "face_path": null,
   "avg_pts": 6.34,
   "is_on_fire": false,
-  "popularity": 0.068,
+  "popularity": 0.069,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -9073,7 +9178,7 @@
   "face_path": null,
   "avg_pts": 1.43,
   "is_on_fire": null,
-  "popularity": 0.034,
+  "popularity": 0.031,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -9178,7 +9283,7 @@
   "face_path": null,
   "avg_pts": -4.29,
   "is_on_fire": null,
-  "popularity": 0.01,
+  "popularity": 0.009,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -9248,7 +9353,7 @@
   "face_path": null,
   "avg_pts": 4.3,
   "is_on_fire": false,
-  "popularity": 0.033,
+  "popularity": 0.035,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9283,7 +9388,7 @@
   "face_path": null,
   "avg_pts": -2.86,
   "is_on_fire": null,
-  "popularity": 0.026,
+  "popularity": 0.027,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -9318,7 +9423,7 @@
   "face_path": null,
   "avg_pts": 6.34,
   "is_on_fire": false,
-  "popularity": 0.087,
+  "popularity": 0.095,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9388,7 +9493,7 @@
   "face_path": null,
   "avg_pts": 6.25,
   "is_on_fire": false,
-  "popularity": 0.008,
+  "popularity": 0.013,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9458,7 +9563,7 @@
   "face_path": null,
   "avg_pts": 11.37,
   "is_on_fire": false,
-  "popularity": 0.034,
+  "popularity": 0.032,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9478,10 +9583,10 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -9528,7 +9633,7 @@
   "face_path": null,
   "avg_pts": 5.89,
   "is_on_fire": false,
-  "popularity": 0.037,
+  "popularity": 0.036,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9563,7 +9668,7 @@
   "face_path": null,
   "avg_pts": 5.74,
   "is_on_fire": false,
-  "popularity": 0.022,
+  "popularity": 0.023,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -9598,7 +9703,7 @@
   "face_path": null,
   "avg_pts": 6.12,
   "is_on_fire": false,
-  "popularity": 0.037,
+  "popularity": 0.04,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -9633,7 +9738,7 @@
   "face_path": null,
   "avg_pts": 3.57,
   "is_on_fire": null,
-  "popularity": 0.03,
+  "popularity": 0.032,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -9668,7 +9773,7 @@
   "face_path": null,
   "avg_pts": 7.15,
   "is_on_fire": false,
-  "popularity": 0.108,
+  "popularity": 0.102,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9773,7 +9878,7 @@
   "face_path": null,
   "avg_pts": 4.83,
   "is_on_fire": false,
-  "popularity": 0.077,
+  "popularity": 0.075,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9843,7 +9948,7 @@
   "face_path": null,
   "avg_pts": 4.86,
   "is_on_fire": false,
-  "popularity": 0.023,
+  "popularity": 0.022,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9913,7 +10018,7 @@
   "face_path": null,
   "avg_pts": 3.67,
   "is_on_fire": false,
-  "popularity": 0.024,
+  "popularity": 0.023,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -9948,7 +10053,7 @@
   "face_path": null,
   "avg_pts": 2.97,
   "is_on_fire": false,
-  "popularity": 0.037,
+  "popularity": 0.039,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -9983,7 +10088,7 @@
   "face_path": null,
   "avg_pts": 6.08,
   "is_on_fire": false,
-  "popularity": 0.118,
+  "popularity": 0.113,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10018,7 +10123,7 @@
   "face_path": null,
   "avg_pts": 14,
   "is_on_fire": false,
-  "popularity": 0.082,
+  "popularity": 0.074,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10158,7 +10263,7 @@
   "face_path": null,
   "avg_pts": 3.03,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.018,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10193,7 +10298,7 @@
   "face_path": null,
   "avg_pts": 2.9,
   "is_on_fire": false,
-  "popularity": 0.084,
+  "popularity": 0.1,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10298,7 +10403,7 @@
   "face_path": null,
   "avg_pts": 4.42,
   "is_on_fire": false,
-  "popularity": 0.038,
+  "popularity": 0.039,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10333,7 +10438,7 @@
   "face_path": null,
   "avg_pts": 3.36,
   "is_on_fire": false,
-  "popularity": 0.204,
+  "popularity": 0.206,
   "position": {
    "id": 30,
    "name": "Center"
@@ -10368,7 +10473,7 @@
   "face_path": null,
   "avg_pts": -5,
   "is_on_fire": null,
-  "popularity": 0.016,
+  "popularity": 0.018,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -10403,7 +10508,7 @@
   "face_path": null,
   "avg_pts": 4.66,
   "is_on_fire": false,
-  "popularity": 0.042,
+  "popularity": 0.044,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10438,7 +10543,7 @@
   "face_path": null,
   "avg_pts": 4.43,
   "is_on_fire": false,
-  "popularity": 0.173,
+  "popularity": 0.176,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10473,7 +10578,7 @@
   "face_path": null,
   "avg_pts": 3.27,
   "is_on_fire": false,
-  "popularity": 0.078,
+  "popularity": 0.076,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10543,7 +10648,7 @@
   "face_path": null,
   "avg_pts": 2.55,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.018,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10683,7 +10788,7 @@
   "face_path": null,
   "avg_pts": 2.03,
   "is_on_fire": false,
-  "popularity": 0.285,
+  "popularity": 0.281,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10788,7 +10893,7 @@
   "face_path": null,
   "avg_pts": 1,
   "is_on_fire": false,
-  "popularity": 0.019,
+  "popularity": 0.022,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10823,7 +10928,7 @@
   "face_path": null,
   "avg_pts": -5,
   "is_on_fire": null,
-  "popularity": 0.016,
+  "popularity": 0.015,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -10998,7 +11103,7 @@
   "face_path": null,
   "avg_pts": 1,
   "is_on_fire": false,
-  "popularity": 0.157,
+  "popularity": 0.155,
   "position": {
    "id": 30,
    "name": "Center"
@@ -11103,7 +11208,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.031,
+  "popularity": 0.03,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -11138,7 +11243,7 @@
   "face_path": null,
   "avg_pts": 2.78,
   "is_on_fire": false,
-  "popularity": 0.154,
+  "popularity": 0.151,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -11453,7 +11558,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.009,
+  "popularity": 0.01,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -11578,10 +11683,10 @@
    "id": 2540,
    "number": 1
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 0.5,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -11698,7 +11803,7 @@
   "face_path": null,
   "avg_pts": 2,
   "is_on_fire": false,
-  "popularity": 0.009,
+  "popularity": 0.01,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -11733,7 +11838,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.001,
+  "popularity": 0.002,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -11803,7 +11908,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.005,
+  "popularity": 0.006,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -12083,7 +12188,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.038,
+  "popularity": 0.037,
   "position": {
    "id": 30,
    "name": "Center"
@@ -12153,7 +12258,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.049,
+  "popularity": 0.048,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -12188,7 +12293,7 @@
   "face_path": null,
   "avg_pts": 1.28,
   "is_on_fire": false,
-  "popularity": 0.083,
+  "popularity": 0.081,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -12258,7 +12363,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.026,
+  "popularity": 0.025,
   "position": {
    "id": 29,
    "name": "Forward"
