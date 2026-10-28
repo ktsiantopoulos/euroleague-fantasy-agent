@@ -31,7 +31,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 3767,Shane,Larkin,ULK,007200,surname+team
 3898,Ante,Zizic,BES,004554,surname+team
 4247,Chris,Jones,RED,010568,surname+team
-3790,Dzanan,Musa,DUB,,UNMATCHED
+3790,Dzanan,Musa,DUB,006540,surname+team
 4096,Mckinley,Wright,DUB,012606,surname+team
 11514,Patty,Mills,ASV,015163,surname+team
 3910,Roman,Sorkin,TEL,011219,surname+team
@@ -75,7 +75,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 3864,Timothé,Luwawu-Cabarrot,MAD,012080,surname+team
 11511,Chris,Duarte,BAS,014735,surname+team
 4884,Jimmy,Clark III,TEL,013699,surname+team
-3779,Kostas,Sloukas,PAN,,UNMATCHED
+3779,Kostas,Sloukas,PAN,001926,surname+team
 11516,Jae,Crowder,ASV,015166,surname+team
 3885,Georgios,Bartzokas,OLY,,coach
 11515,Tremont,Waters,ASV,015165,surname+team
@@ -88,7 +88,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 11547,Wendell,Moore,VIR,014737,surname+team
 7237,Nathan,Reuvers,PAM,012738,surname+team
 11519,Hugo,Besson,ASV,015164,surname+team
-13930,Christian,Koloko,RED,,UNMATCHED
+13930,Christian,Koloko,RED,015396,surname+team
 3946,Andreas,Obst,MUN,004508,surname+team
 8368,Mamadi,Diakite,DUB,014027,surname+team
 8730,Kenneth,Faried,BAS,011284,surname+team
@@ -171,7 +171,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 4081,Conor,Morgan,BES,009680,surname+team
 11500,Stanley,Umude,BAR,015139,surname+team
 11536,Damian,Jones,MAD,015103,surname+team
-11538,Mo,Gueye,PAM,,UNMATCHED
+11538,Mo,Gueye,PAM,014739,surname+team
 3824,Luca,Vildoza,PAR,007947,surname+team
 3831,Darius,Thompson,MIL,011078,surname+team
 3905,Iffe,Lundberg,TEL,010781,surname+team
@@ -199,7 +199,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 7229,Mouhamed,Faye,PRS,012403,surname+team
 12145,Nick,Smith Jr,MAD,015244,surname+team
 3797,Moustapha,Fall,PAN,008811,surname+team
-11535,Max,Shulga,MAD,,UNMATCHED
+11535,Max,Shulga,MAD,015102,surname+team
 11488,Santi,Yusta,IST,005368,surname+team
 3963,Alessandro,Pajola,PAR,006739,surname+team
 3973,Joel,Parra,BAR,007464,surname+team
@@ -356,7 +356,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 12466,Yagiz,Aksu,BES,,UNMATCHED
 12467,Andrija,Susic,MUN,,UNMATCHED
 12468,Niko,Jerkic,MUN,,UNMATCHED
-12469,Thierry Henry,Alves de Souza,BAS,,UNMATCHED
+12469,Thierry Henry,Alves de Souza,BAS,014506,surname+team
 12470,Georgios,Bourneles,OLY,013141,surname+team
 12471,Iason,Varvaritis,PAN,,UNMATCHED
 12517,Abdu,Kone,BAR,,UNMATCHED

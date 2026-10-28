@@ -3,16 +3,16 @@
  "rounds": [
   8
  ],
- "deadline_utc": "2026-10-27T15:59:00.000000Z",
+ "deadline_utc": "2026-10-28T17:29:00.000000Z",
  "nights": [
   "2026-10-27",
   "2026-10-28"
  ],
- "generated_utc": "2026-10-27T12:48:14Z",
+ "generated_utc": "2026-10-28T15:58:35Z",
  "team": "UnderTakers86",
  "budget": 105.9,
  "trades_left": 4,
- "odds_games": 16,
+ "odds_games": 14,
  "kept": [],
  "baseline": {
   "label": "locked squad",
@@ -23,7 +23,7 @@
   "locked_known": true
  },
  "pending": {
-  "expected": 146.3,
+  "expected": 154.4,
   "cost": 105.7,
   "status": "Optimal",
   "captain": "Sasha Vezenkov",
@@ -35,31 +35,15 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 18.4,
-    "md_pts": 23.05,
-    "md_p90": 34.51,
+    "md_pts": 22.75,
+    "md_p90": 34.21,
     "md_sd": 8.69,
     "elite_own": 73,
-    "why": "28 min proj (starter, last 34), 0.73 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 22.4",
+    "why": "28 min proj (starter, last 34), 0.73 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 22.1",
     "flags": "",
     "captain": true,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 22.4, \"sd\": 8.69, \"pw\": 0.675}]"
-   },
-   {
-    "role": "starter",
-    "name": "Theo Maledon",
-    "pos": "Guard",
-    "team": "RMB",
-    "quotation": 11.9,
-    "md_pts": 19.29,
-    "md_p90": 32.21,
-    "md_sd": 9.78,
-    "elite_own": 81,
-    "why": "22 min proj (starter, last 24), 0.77 PIR/min over 7 g · T1 @ BAS (DvP +2.4, win 78%) → 18.7",
-    "flags": "",
-    "captain": false,
-    "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 18.68, \"sd\": 9.78, \"pw\": 0.78}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 22.1, \"sd\": 8.69, \"pw\": 0.557}]"
    },
    {
     "role": "starter",
@@ -67,15 +51,31 @@
     "pos": "Center",
     "team": "VIR",
     "quotation": 9.8,
-    "md_pts": 16.65,
+    "md_pts": 16.67,
     "md_p90": 25.32,
     "md_sd": 6.52,
     "elite_own": 91,
-    "why": "17 min proj (bench, last 19), 0.89 PIR/min over 7 g · T2 vs ZAL (DvP -1.0, win 46%) → 16.1",
+    "why": "17 min proj (bench, last 19), 0.89 PIR/min over 7 g · T2 vs ZAL (DvP -1.1, win 53%) → 16.1",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 16.07, \"sd\": 6.52, \"pw\": 0.459}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 16.08, \"sd\": 6.52, \"pw\": 0.526}]"
+   },
+   {
+    "role": "starter",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "team": "RMB",
+    "quotation": 11.9,
+    "md_pts": 16.65,
+    "md_p90": 29.13,
+    "md_sd": 9.43,
+    "elite_own": 81,
+    "why": "22 min proj (starter, last 23), 0.68 PIR/min over 8 g · T1 @ BAS (DvP +1.3, win 72%) → 16.1",
+    "flags": "",
+    "captain": false,
+    "first_turn": 1,
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 16.13, \"sd\": 9.43, \"pw\": 0.718}]"
    },
    {
     "role": "starter",
@@ -83,15 +83,15 @@
     "pos": "Guard",
     "team": "RMB",
     "quotation": 8.6,
-    "md_pts": 14.88,
-    "md_p90": 27.16,
-    "md_sd": 9.33,
+    "md_pts": 16.14,
+    "md_p90": 28.06,
+    "md_sd": 9.07,
     "elite_own": 66,
-    "why": "19 min proj (starter, last 21), 0.69 PIR/min over 7 g · T1 @ BAS (DvP +2.4, win 78%) → 14.5",
+    "why": "21 min proj (starter, last 22), 0.71 PIR/min over 8 g · T1 @ BAS (DvP +1.3, win 72%) → 15.7",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 14.5, \"sd\": 9.33, \"pw\": 0.78}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 15.72, \"sd\": 9.07, \"pw\": 0.718}]"
    },
    {
     "role": "starter",
@@ -99,15 +99,15 @@
     "pos": "Center",
     "team": "BAR",
     "quotation": 12.1,
-    "md_pts": 12.39,
-    "md_p90": 22.02,
-    "md_sd": 7.51,
+    "md_pts": 15.34,
+    "md_p90": 25.09,
+    "md_sd": 7.6,
     "elite_own": 0,
-    "why": "19 min proj (bench, last 25), 0.54 PIR/min over 4 g · T1 @ MUN (DvP +3.8, win 49%) → 12.4",
+    "why": "22 min proj (starter, last 26), 0.58 PIR/min over 5 g · T1 @ MUN (DvP +4.3, win 56%) → 15.3",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"MUN\", \"home\": false, \"fp\": 12.39, \"sd\": 7.51, \"pw\": 0.495}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"MUN\", \"home\": false, \"fp\": 15.34, \"sd\": 7.6, \"pw\": 0.559}]"
    },
    {
     "role": "sixth",
@@ -115,15 +115,15 @@
     "pos": "Guard",
     "team": "DUB",
     "quotation": 12.6,
-    "md_pts": 11.34,
-    "md_p90": 20.95,
-    "md_sd": 7.5,
+    "md_pts": 13.5,
+    "md_p90": 23.03,
+    "md_sd": 7.44,
     "elite_own": 0,
-    "why": "22 min proj (starter, last 23), 0.41 PIR/min over 7 g · T1 vs PRS (DvP +6.0, win 79%) → 11.3",
+    "why": "25 min proj (starter, last 32), 0.43 PIR/min over 8 g · T1 vs PRS (DvP +5.5, win 71%) → 13.5",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": true, \"fp\": 11.34, \"sd\": 7.5, \"pw\": 0.792}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": true, \"fp\": 13.5, \"sd\": 7.44, \"pw\": 0.712}]"
    },
    {
     "role": "bench",
@@ -131,15 +131,15 @@
     "pos": "Forward",
     "team": "PAR",
     "quotation": 8.6,
-    "md_pts": 11.89,
-    "md_p90": 17.97,
+    "md_pts": 11.92,
+    "md_p90": 18.0,
     "md_sd": 4.73,
     "elite_own": 3,
-    "why": "21 min proj (bench, last 24), 0.50 PIR/min over 5 g · T2 @ ASV (DvP +5.0, win 48%) → 11.9",
+    "why": "21 min proj (bench, last 24), 0.50 PIR/min over 5 g · T2 @ ASV (DvP +5.0, win 52%) → 11.9",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"ASV\", \"home\": false, \"fp\": 11.88, \"sd\": 4.73, \"pw\": 0.477}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"ASV\", \"home\": false, \"fp\": 11.91, \"sd\": 4.73, \"pw\": 0.516}]"
    },
    {
     "role": "bench",
@@ -147,15 +147,15 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 8.9,
-    "md_pts": 11.82,
-    "md_p90": 25.07,
-    "md_sd": 10.33,
+    "md_pts": 11.66,
+    "md_p90": 24.91,
+    "md_sd": 10.32,
     "elite_own": 4,
-    "why": "16 min proj (bench, last 8), 0.68 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 11.8",
+    "why": "16 min proj (bench, last 8), 0.68 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 11.6",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 11.8, \"sd\": 10.33, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 11.64, \"sd\": 10.32, \"pw\": 0.557}]"
    },
    {
     "role": "bench",
@@ -163,15 +163,15 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 4.1,
-    "md_pts": 6.78,
-    "md_p90": 14.09,
+    "md_pts": 6.68,
+    "md_p90": 13.99,
     "md_sd": 5.66,
     "elite_own": 20,
-    "why": "19 min proj (starter, last 28), 0.29 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 6.7",
+    "why": "19 min proj (starter, last 28), 0.29 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 6.6",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 6.73, \"sd\": 5.66, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 6.63, \"sd\": 5.66, \"pw\": 0.557}]"
    },
    {
     "role": "bench",
@@ -179,15 +179,15 @@
     "pos": "Guard",
     "team": "BJK",
     "quotation": 4.0,
-    "md_pts": 3.94,
-    "md_p90": 10.58,
+    "md_pts": 4.01,
+    "md_p90": 10.65,
     "md_sd": 5.18,
     "elite_own": 0,
-    "why": "15 min proj (bench, last 19), 0.26 PIR/min over 7 g · T2 vs OLY (DvP -1.3, win 32%) → 3.9",
+    "why": "15 min proj (bench, last 19), 0.26 PIR/min over 7 g · T2 vs OLY (DvP -1.1, win 44%) → 4.0",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"OLY\", \"home\": true, \"fp\": 3.94, \"sd\": 5.18, \"pw\": 0.325}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"OLY\", \"home\": true, \"fp\": 4.01, \"sd\": 5.18, \"pw\": 0.443}]"
    },
    {
     "role": "coach",
@@ -195,15 +195,15 @@
     "pos": "Head Coach",
     "team": "CZV",
     "quotation": 6.7,
-    "md_pts": 8.46,
-    "md_p90": 23.83,
+    "md_pts": 13.44,
+    "md_p90": 28.82,
     "md_sd": 12.0,
     "elite_own": 0,
-    "why": "vs TEL: margin +6, win 67% → EV +8.5",
+    "why": "vs TEL: margin +11, win 82% → EV +13.4",
     "flags": "coach",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"TEL\", \"home\": true, \"fp\": 8.46, \"sd\": 12.0, \"pw\": 0.67}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"TEL\", \"home\": true, \"fp\": 13.44, \"sd\": 12.0, \"pw\": 0.824}]"
    }
   ],
   "differs": true
@@ -215,78 +215,64 @@
     "pos": "Center",
     "team": "BAR",
     "price": 12.1,
-    "md_pts": 12.39
-   },
-   {
-    "name": "Ibon Navarro",
-    "pos": "Head Coach",
-    "team": "CZV",
-    "price": 6.7,
-    "md_pts": 8.46
+    "md_pts": 15.34
    },
    {
     "name": "Berk Ugurlu",
     "pos": "Guard",
     "team": "BJK",
     "price": 4.0,
-    "md_pts": 3.94
+    "md_pts": 4.01
    },
    {
     "name": "Mckinley Wright",
     "pos": "Guard",
     "team": "DUB",
     "price": 12.6,
-    "md_pts": 11.34
+    "md_pts": 13.5
    },
    {
     "name": "Lamar Stevens",
     "pos": "Forward",
     "team": "PAR",
     "price": 8.6,
-    "md_pts": 11.89
+    "md_pts": 11.92
    }
   ],
   "add": [
    {
-    "name": "Scottie Wilbekin",
+    "name": "Marcus Carr",
     "pos": "Guard",
-    "team": "BJK",
-    "price": 9.3,
-    "md_pts": 13.32
+    "team": "VIR",
+    "price": 10.7,
+    "md_pts": 13.0
    },
    {
-    "name": "Kevarrius Hayes",
-    "pos": "Center",
-    "team": "PAR",
-    "price": 8.1,
-    "md_pts": 12.47
-   },
-   {
-    "name": "Yam Madar",
-    "pos": "Guard",
-    "team": "MTA",
-    "price": 10.6,
-    "md_pts": 14.31
-   },
-   {
-    "name": "Tomas Masiulis",
-    "pos": "Head Coach",
-    "team": "ZAL",
-    "price": 6.6,
-    "md_pts": 5.15
-   },
-   {
-    "name": "Semi Ojeleye",
+    "name": "Edwin Jackson",
     "pos": "Forward",
+    "team": "ASV",
+    "price": 4.4,
+    "md_pts": 9.01
+   },
+   {
+    "name": "Mfiondu Kabengele",
+    "pos": "Center",
+    "team": "DUB",
+    "price": 15.6,
+    "md_pts": 20.75
+   },
+   {
+    "name": "Tyson Carter",
+    "pos": "Guard",
     "team": "CZV",
-    "price": 9.0,
-    "md_pts": 16.45
+    "price": 6.4,
+    "md_pts": 9.01
    }
   ]
  },
  "hold": {
-  "expected": 143.1,
-  "inround_gain": 0.4,
+  "expected": 143.6,
+  "inround_gain": 0.7,
   "cost": 105.6,
   "status": "Optimal",
   "captain": "Sasha Vezenkov",
@@ -298,15 +284,15 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 18.4,
-    "md_pts": 23.05,
-    "md_p90": 34.51,
+    "md_pts": 22.75,
+    "md_p90": 34.21,
     "md_sd": 8.69,
     "elite_own": 73,
-    "why": "28 min proj (starter, last 34), 0.73 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 22.4",
+    "why": "28 min proj (starter, last 34), 0.73 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 22.1",
     "flags": "",
     "captain": true,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 22.4, \"sd\": 8.69, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 22.1, \"sd\": 8.69, \"pw\": 0.557}]"
    },
    {
     "role": "starter",
@@ -314,15 +300,15 @@
     "pos": "Center",
     "team": "DUB",
     "quotation": 15.6,
-    "md_pts": 18.07,
-    "md_p90": 27.38,
-    "md_sd": 7.14,
+    "md_pts": 20.75,
+    "md_p90": 29.97,
+    "md_sd": 7.07,
     "elite_own": 44,
-    "why": "22 min proj (starter, last 26), 0.72 PIR/min over 7 g · T1 vs PRS (DvP +0.8, win 79%) → 17.8",
+    "why": "24 min proj (starter, last 30), 0.75 PIR/min over 8 g · T1 vs PRS (DvP +0.6, win 71%) → 20.4",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": true, \"fp\": 17.76, \"sd\": 7.14, \"pw\": 0.792}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": true, \"fp\": 20.39, \"sd\": 7.07, \"pw\": 0.712}]"
    },
    {
     "role": "starter",
@@ -330,15 +316,15 @@
     "pos": "Center",
     "team": "VIR",
     "quotation": 9.8,
-    "md_pts": 16.65,
+    "md_pts": 16.67,
     "md_p90": 25.32,
     "md_sd": 6.52,
     "elite_own": 91,
-    "why": "17 min proj (bench, last 19), 0.89 PIR/min over 7 g · T2 vs ZAL (DvP -1.0, win 46%) → 16.1",
+    "why": "17 min proj (bench, last 19), 0.89 PIR/min over 7 g · T2 vs ZAL (DvP -1.1, win 53%) → 16.1",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 16.07, \"sd\": 6.52, \"pw\": 0.459}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 16.08, \"sd\": 6.52, \"pw\": 0.526}]"
    },
    {
     "role": "starter",
@@ -346,31 +332,31 @@
     "pos": "Guard",
     "team": "RMB",
     "quotation": 8.6,
-    "md_pts": 14.88,
-    "md_p90": 27.16,
-    "md_sd": 9.33,
+    "md_pts": 16.14,
+    "md_p90": 28.06,
+    "md_sd": 9.07,
     "elite_own": 66,
-    "why": "19 min proj (starter, last 21), 0.69 PIR/min over 7 g · T1 @ BAS (DvP +2.4, win 78%) → 14.5",
+    "why": "21 min proj (starter, last 22), 0.71 PIR/min over 8 g · T1 @ BAS (DvP +1.3, win 72%) → 15.7",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 14.5, \"sd\": 9.33, \"pw\": 0.78}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 15.72, \"sd\": 9.07, \"pw\": 0.718}]"
    },
    {
     "role": "starter",
-    "name": "Mbaye Ndiaye",
-    "pos": "Forward",
-    "team": "OLY",
-    "quotation": 8.9,
-    "md_pts": 11.82,
-    "md_p90": 25.07,
-    "md_sd": 10.33,
-    "elite_own": 4,
-    "why": "16 min proj (bench, last 8), 0.68 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 11.8",
-    "flags": "",
+    "name": "Kendrick Nunn",
+    "pos": "Guard",
+    "team": "PAO",
+    "quotation": 13.7,
+    "md_pts": 12.63,
+    "md_p90": 23.1,
+    "md_sd": 8.15,
+    "elite_own": 5,
+    "why": "17 min proj (bench, last 23), 0.64 PIR/min over 2 g · T1 vs MIL (DvP +2.8, win 90%) → 12.6",
+    "flags": "only 2 game(s)",
     "captain": false,
-    "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 11.8, \"sd\": 10.33, \"pw\": 0.675}]"
+    "first_turn": 1,
+    "games_json": "[{\"turn\": 1, \"opp\": \"MIL\", \"home\": true, \"fp\": 12.6, \"sd\": 8.15, \"pw\": 0.896}]"
    },
    {
     "role": "sixth",
@@ -378,31 +364,31 @@
     "pos": "Guard",
     "team": "RMB",
     "quotation": 11.9,
-    "md_pts": 19.29,
-    "md_p90": 32.21,
-    "md_sd": 9.78,
+    "md_pts": 16.65,
+    "md_p90": 29.13,
+    "md_sd": 9.43,
     "elite_own": 81,
-    "why": "22 min proj (starter, last 24), 0.77 PIR/min over 7 g · T1 @ BAS (DvP +2.4, win 78%) → 18.7",
+    "why": "22 min proj (starter, last 23), 0.68 PIR/min over 8 g · T1 @ BAS (DvP +1.3, win 72%) → 16.1",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 18.68, \"sd\": 9.78, \"pw\": 0.78}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 16.13, \"sd\": 9.43, \"pw\": 0.718}]"
    },
    {
     "role": "bench",
-    "name": "Kendrick Nunn",
-    "pos": "Guard",
-    "team": "PAO",
-    "quotation": 13.7,
-    "md_pts": 7.04,
-    "md_p90": 16.97,
-    "md_sd": 7.74,
-    "elite_own": 5,
-    "why": "13 min proj (bench, last 20), 0.44 PIR/min over 1 g · T1 vs MIL (DvP +4.0, win 86%) → 7.0",
-    "flags": "only 1 game(s)",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "team": "OLY",
+    "quotation": 8.9,
+    "md_pts": 11.66,
+    "md_p90": 24.91,
+    "md_sd": 10.32,
+    "elite_own": 4,
+    "why": "16 min proj (bench, last 8), 0.68 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 11.6",
+    "flags": "",
     "captain": false,
-    "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"MIL\", \"home\": true, \"fp\": 7.03, \"sd\": 7.74, \"pw\": 0.861}]"
+    "first_turn": 2,
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 11.64, \"sd\": 10.32, \"pw\": 0.557}]"
    },
    {
     "role": "bench",
@@ -410,15 +396,15 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 4.1,
-    "md_pts": 6.78,
-    "md_p90": 14.09,
+    "md_pts": 6.68,
+    "md_p90": 13.99,
     "md_sd": 5.66,
     "elite_own": 20,
-    "why": "19 min proj (starter, last 28), 0.29 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 6.7",
+    "why": "19 min proj (starter, last 28), 0.29 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 6.6",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 6.73, \"sd\": 5.66, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 6.63, \"sd\": 5.66, \"pw\": 0.557}]"
    },
    {
     "role": "bench",
@@ -426,15 +412,15 @@
     "pos": "Forward",
     "team": "PAR",
     "quotation": 4.0,
-    "md_pts": 4.48,
-    "md_p90": 10.42,
+    "md_pts": 4.5,
+    "md_p90": 10.43,
     "md_sd": 4.56,
     "elite_own": 40,
-    "why": "15 min proj (bench, last 21), 0.22 PIR/min over 7 g · T2 @ ASV (DvP +5.0, win 48%) → 4.4",
+    "why": "15 min proj (bench, last 21), 0.22 PIR/min over 7 g · T2 @ ASV (DvP +5.0, win 52%) → 4.4",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"ASV\", \"home\": false, \"fp\": 4.41, \"sd\": 4.56, \"pw\": 0.477}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"ASV\", \"home\": false, \"fp\": 4.43, \"sd\": 4.56, \"pw\": 0.516}]"
    },
    {
     "role": "bench",
@@ -442,15 +428,15 @@
     "pos": "Guard",
     "team": "BJK",
     "quotation": 4.0,
-    "md_pts": 3.94,
-    "md_p90": 10.58,
+    "md_pts": 4.01,
+    "md_p90": 10.65,
     "md_sd": 5.18,
     "elite_own": 0,
-    "why": "15 min proj (bench, last 19), 0.26 PIR/min over 7 g · T2 vs OLY (DvP -1.3, win 32%) → 3.9",
+    "why": "15 min proj (bench, last 19), 0.26 PIR/min over 7 g · T2 vs OLY (DvP -1.1, win 44%) → 4.0",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"OLY\", \"home\": true, \"fp\": 3.94, \"sd\": 5.18, \"pw\": 0.325}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"OLY\", \"home\": true, \"fp\": 4.01, \"sd\": 5.18, \"pw\": 0.443}]"
    },
    {
     "role": "coach",
@@ -458,83 +444,83 @@
     "pos": "Head Coach",
     "team": "ZAL",
     "quotation": 6.6,
-    "md_pts": 5.15,
-    "md_p90": 20.91,
+    "md_pts": 1.86,
+    "md_p90": 17.62,
     "md_sd": 12.0,
     "elite_own": 63,
-    "why": "@ VIR: margin +2, win 54% → EV +5.0",
+    "why": "@ VIR: margin -2, win 47% → EV +1.8",
     "flags": "coach",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"VIR\", \"home\": false, \"fp\": 5.02, \"sd\": 12.0, \"pw\": 0.541}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"VIR\", \"home\": false, \"fp\": 1.81, \"sd\": 12.0, \"pw\": 0.474}]"
    }
   ]
  },
  "best": {
-  "expected": 155.0,
-  "inround_gain": 3.3,
-  "cost": 105.3,
+  "expected": 158.3,
+  "inround_gain": 2.1,
+  "cost": 105.5,
   "status": "Optimal",
   "captain": "Sasha Vezenkov",
-  "coach": "Tomas Masiulis",
+  "coach": "Ibon Navarro",
   "trades_out": [
-   {
-    "name": "Arijan Lakic",
-    "pos": "Forward",
-    "team": "PAR",
-    "price": 4.0,
-    "md_pts": 4.48
-   },
    {
     "name": "Kendrick Nunn",
     "pos": "Guard",
     "team": "PAO",
     "price": 13.7,
-    "md_pts": 7.04
+    "md_pts": 12.63
+   },
+   {
+    "name": "Tomas Masiulis",
+    "pos": "Head Coach",
+    "team": "ZAL",
+    "price": 6.6,
+    "md_pts": 1.86
    },
    {
     "name": "Berk Ugurlu",
     "pos": "Guard",
     "team": "BJK",
     "price": 4.0,
-    "md_pts": 3.94
+    "md_pts": 4.01
    },
    {
-    "name": "Mfiondu Kabengele",
-    "pos": "Center",
-    "team": "DUB",
-    "price": 15.6,
-    "md_pts": 18.07
+    "name": "Arijan Lakic",
+    "pos": "Forward",
+    "team": "PAR",
+    "price": 4.0,
+    "md_pts": 4.5
    }
   ],
   "trades_in": [
    {
-    "name": "Yam Madar",
+    "name": "Marcus Carr",
     "pos": "Guard",
-    "team": "MTA",
-    "price": 10.6,
-    "md_pts": 14.31
+    "team": "VIR",
+    "price": 10.7,
+    "md_pts": 13.0
    },
    {
-    "name": "Scottie Wilbekin",
-    "pos": "Guard",
-    "team": "BJK",
-    "price": 9.3,
-    "md_pts": 13.32
-   },
-   {
-    "name": "Semi Ojeleye",
-    "pos": "Forward",
+    "name": "Ibon Navarro",
+    "pos": "Head Coach",
     "team": "CZV",
-    "price": 9.0,
-    "md_pts": 16.45
+    "price": 6.7,
+    "md_pts": 13.44
    },
    {
-    "name": "Kevarrius Hayes",
-    "pos": "Center",
-    "team": "PAR",
-    "price": 8.1,
-    "md_pts": 12.47
+    "name": "Tyson Carter",
+    "pos": "Guard",
+    "team": "CZV",
+    "price": 6.4,
+    "md_pts": 9.01
+   },
+   {
+    "name": "Edwin Jackson",
+    "pos": "Forward",
+    "team": "ASV",
+    "price": 4.4,
+    "md_pts": 9.01
    }
   ],
   "squad": [
@@ -544,31 +530,31 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 18.4,
-    "md_pts": 23.05,
-    "md_p90": 34.51,
+    "md_pts": 22.75,
+    "md_p90": 34.21,
     "md_sd": 8.69,
     "elite_own": 73,
-    "why": "28 min proj (starter, last 34), 0.73 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 22.4",
+    "why": "28 min proj (starter, last 34), 0.73 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 22.1",
     "flags": "",
     "captain": true,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 22.4, \"sd\": 8.69, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 22.1, \"sd\": 8.69, \"pw\": 0.557}]"
    },
    {
     "role": "starter",
-    "name": "Theo Maledon",
-    "pos": "Guard",
-    "team": "RMB",
-    "quotation": 11.9,
-    "md_pts": 19.29,
-    "md_p90": 32.21,
-    "md_sd": 9.78,
-    "elite_own": 81,
-    "why": "22 min proj (starter, last 24), 0.77 PIR/min over 7 g · T1 @ BAS (DvP +2.4, win 78%) → 18.7",
+    "name": "Mfiondu Kabengele",
+    "pos": "Center",
+    "team": "DUB",
+    "quotation": 15.6,
+    "md_pts": 20.75,
+    "md_p90": 29.97,
+    "md_sd": 7.07,
+    "elite_own": 44,
+    "why": "24 min proj (starter, last 30), 0.75 PIR/min over 8 g · T1 vs PRS (DvP +0.6, win 71%) → 20.4",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 18.68, \"sd\": 9.78, \"pw\": 0.78}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": true, \"fp\": 20.39, \"sd\": 7.07, \"pw\": 0.712}]"
    },
    {
     "role": "starter",
@@ -576,95 +562,79 @@
     "pos": "Center",
     "team": "VIR",
     "quotation": 9.8,
-    "md_pts": 16.65,
+    "md_pts": 16.67,
     "md_p90": 25.32,
     "md_sd": 6.52,
     "elite_own": 91,
-    "why": "17 min proj (bench, last 19), 0.89 PIR/min over 7 g · T2 vs ZAL (DvP -1.0, win 46%) → 16.1",
+    "why": "17 min proj (bench, last 19), 0.89 PIR/min over 7 g · T2 vs ZAL (DvP -1.1, win 53%) → 16.1",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 16.07, \"sd\": 6.52, \"pw\": 0.459}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 16.08, \"sd\": 6.52, \"pw\": 0.526}]"
    },
    {
     "role": "starter",
-    "name": "Semi Ojeleye",
-    "pos": "Forward",
-    "team": "CZV",
-    "quotation": 9.0,
-    "md_pts": 16.45,
-    "md_p90": 23.06,
-    "md_sd": 5.13,
-    "elite_own": 13,
-    "why": "26 min proj (starter, last 34), 0.51 PIR/min over 7 g · T1 vs TEL (DvP +3.7, win 67%) → 16.4",
-    "flags": "",
-    "captain": false,
-    "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"TEL\", \"home\": true, \"fp\": 16.36, \"sd\": 5.13, \"pw\": 0.67}]"
-   },
-   {
-    "role": "starter",
-    "name": "Yam Madar",
+    "name": "Theo Maledon",
     "pos": "Guard",
-    "team": "MTA",
-    "quotation": 10.6,
-    "md_pts": 14.31,
-    "md_p90": 25.32,
-    "md_sd": 8.49,
-    "elite_own": 29,
-    "why": "22 min proj (starter, last 26), 0.68 PIR/min over 7 g · T1 @ RED (DvP -2.2, win 33%) → 14.1",
+    "team": "RMB",
+    "quotation": 11.9,
+    "md_pts": 16.65,
+    "md_p90": 29.13,
+    "md_sd": 9.43,
+    "elite_own": 81,
+    "why": "22 min proj (starter, last 23), 0.68 PIR/min over 8 g · T1 @ BAS (DvP +1.3, win 72%) → 16.1",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"RED\", \"home\": false, \"fp\": 14.15, \"sd\": 8.49, \"pw\": 0.33}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 16.13, \"sd\": 9.43, \"pw\": 0.718}]"
    },
    {
-    "role": "sixth",
+    "role": "starter",
     "name": "Andres Feliz",
     "pos": "Guard",
     "team": "RMB",
     "quotation": 8.6,
-    "md_pts": 14.88,
-    "md_p90": 27.16,
-    "md_sd": 9.33,
+    "md_pts": 16.14,
+    "md_p90": 28.06,
+    "md_sd": 9.07,
     "elite_own": 66,
-    "why": "19 min proj (starter, last 21), 0.69 PIR/min over 7 g · T1 @ BAS (DvP +2.4, win 78%) → 14.5",
+    "why": "21 min proj (starter, last 22), 0.71 PIR/min over 8 g · T1 @ BAS (DvP +1.3, win 72%) → 15.7",
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 14.5, \"sd\": 9.33, \"pw\": 0.78}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": false, \"fp\": 15.72, \"sd\": 9.07, \"pw\": 0.718}]"
+   },
+   {
+    "role": "sixth",
+    "name": "Edwin Jackson",
+    "pos": "Forward",
+    "team": "ASV",
+    "quotation": 4.4,
+    "md_pts": 9.01,
+    "md_p90": 18.99,
+    "md_sd": 7.73,
+    "elite_own": 17,
+    "why": "17 min proj (bench, last 26), 0.49 PIR/min over 1 g · T2 vs PAR (DvP -1.3, win 48%) → 9.0",
+    "flags": "only 1 game(s)",
+    "captain": false,
+    "first_turn": 2,
+    "games_json": "[{\"turn\": 2, \"opp\": \"PAR\", \"home\": true, \"fp\": 8.95, \"sd\": 7.73, \"pw\": 0.484}]"
    },
    {
     "role": "bench",
-    "name": "Scottie Wilbekin",
+    "name": "Marcus Carr",
     "pos": "Guard",
-    "team": "BJK",
-    "quotation": 9.3,
-    "md_pts": 13.32,
-    "md_p90": 20.59,
-    "md_sd": 5.65,
-    "elite_own": 11,
-    "why": "23 min proj (bench, last 26), 0.54 PIR/min over 7 g · T2 vs OLY (DvP -1.3, win 32%) → 13.3",
+    "team": "VIR",
+    "quotation": 10.7,
+    "md_pts": 13.0,
+    "md_p90": 23.87,
+    "md_sd": 8.47,
+    "elite_own": 4,
+    "why": "20 min proj (starter, last 20), 0.60 PIR/min over 7 g · T2 vs ZAL (DvP -1.7, win 53%) → 13.0",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"OLY\", \"home\": true, \"fp\": 13.26, \"sd\": 5.65, \"pw\": 0.325}]"
-   },
-   {
-    "role": "bench",
-    "name": "Kevarrius Hayes",
-    "pos": "Center",
-    "team": "PAR",
-    "quotation": 8.1,
-    "md_pts": 12.47,
-    "md_p90": 21.64,
-    "md_sd": 7.07,
-    "elite_own": 27,
-    "why": "23 min proj (bench, last 33), 0.51 PIR/min over 7 g · T2 @ ASV (DvP +0.7, win 48%) → 12.3",
-    "flags": "",
-    "captain": false,
-    "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"ASV\", \"home\": false, \"fp\": 12.34, \"sd\": 7.07, \"pw\": 0.477}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"ZAL\", \"home\": true, \"fp\": 12.98, \"sd\": 8.47, \"pw\": 0.526}]"
    },
    {
     "role": "bench",
@@ -672,15 +642,31 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 8.9,
-    "md_pts": 11.82,
-    "md_p90": 25.07,
-    "md_sd": 10.33,
+    "md_pts": 11.66,
+    "md_p90": 24.91,
+    "md_sd": 10.32,
     "elite_own": 4,
-    "why": "16 min proj (bench, last 8), 0.68 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 11.8",
+    "why": "16 min proj (bench, last 8), 0.68 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 11.6",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 11.8, \"sd\": 10.33, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 11.64, \"sd\": 10.32, \"pw\": 0.557}]"
+   },
+   {
+    "role": "bench",
+    "name": "Tyson Carter",
+    "pos": "Guard",
+    "team": "CZV",
+    "quotation": 6.4,
+    "md_pts": 9.01,
+    "md_p90": 19.04,
+    "md_sd": 7.82,
+    "elite_own": 0,
+    "why": "16 min proj (starter, last 22), 0.48 PIR/min over 8 g · T1 vs TEL (DvP +1.9, win 82%) → 9.0",
+    "flags": "",
+    "captain": false,
+    "first_turn": 1,
+    "games_json": "[{\"turn\": 1, \"opp\": \"TEL\", \"home\": true, \"fp\": 9.01, \"sd\": 7.82, \"pw\": 0.824}]"
    },
    {
     "role": "bench",
@@ -688,78 +674,77 @@
     "pos": "Forward",
     "team": "OLY",
     "quotation": 4.1,
-    "md_pts": 6.78,
-    "md_p90": 14.09,
+    "md_pts": 6.68,
+    "md_p90": 13.99,
     "md_sd": 5.66,
     "elite_own": 20,
-    "why": "19 min proj (starter, last 28), 0.29 PIR/min over 7 g · T2 @ BES (DvP +2.8, win 68%) → 6.7",
+    "why": "19 min proj (starter, last 28), 0.29 PIR/min over 7 g · T2 @ BES (DvP +2.7, win 56%) → 6.6",
     "flags": "",
     "captain": false,
     "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 6.73, \"sd\": 5.66, \"pw\": 0.675}]"
+    "games_json": "[{\"turn\": 2, \"opp\": \"BES\", \"home\": false, \"fp\": 6.63, \"sd\": 5.66, \"pw\": 0.557}]"
    },
    {
     "role": "coach",
-    "name": "Tomas Masiulis",
+    "name": "Ibon Navarro",
     "pos": "Head Coach",
-    "team": "ZAL",
-    "quotation": 6.6,
-    "md_pts": 5.15,
-    "md_p90": 20.91,
+    "team": "CZV",
+    "quotation": 6.7,
+    "md_pts": 13.44,
+    "md_p90": 28.82,
     "md_sd": 12.0,
-    "elite_own": 63,
-    "why": "@ VIR: margin +2, win 54% → EV +5.0",
+    "elite_own": 0,
+    "why": "vs TEL: margin +11, win 82% → EV +13.4",
     "flags": "coach",
     "captain": false,
-    "first_turn": 2,
-    "games_json": "[{\"turn\": 2, \"opp\": \"VIR\", \"home\": false, \"fp\": 5.02, \"sd\": 12.0, \"pw\": 0.541}]"
+    "first_turn": 1,
+    "games_json": "[{\"turn\": 1, \"opp\": \"TEL\", \"home\": true, \"fp\": 13.44, \"sd\": 12.0, \"pw\": 0.824}]"
    }
   ],
   "plan": [
-   "Scottie Wilbekin (G, T2) is promoted from the bench in 78% of simulations",
-   "Mbaye Ndiaye (F, T2) is promoted from the bench in 20% of simulations"
+   "Marcus Carr (G, T2) is promoted from the bench in 61% of simulations"
   ]
  },
  "top_value": {
   "Guard": [
    {
-    "name": "Scottie Wilbekin",
-    "team": "BJK",
-    "price": 9.3,
-    "md_pts": 13.32,
-    "elite_own": 11,
-    "flags": ""
-   },
-   {
     "name": "Damion Baugh",
     "team": "KBA",
     "price": 8.3,
-    "md_pts": 11.7,
+    "md_pts": 12.31,
     "elite_own": 0,
     "flags": ""
    },
    {
-    "name": "Yam Madar",
-    "team": "MTA",
-    "price": 10.6,
-    "md_pts": 14.31,
-    "elite_own": 29,
+    "name": "Scottie Wilbekin",
+    "team": "BJK",
+    "price": 9.3,
+    "md_pts": 13.52,
+    "elite_own": 11,
     "flags": ""
    },
    {
-    "name": "Josep Puerto",
-    "team": "VBC",
-    "price": 5.9,
-    "md_pts": 7.39,
-    "elite_own": 6,
+    "name": "Sebastian Herrera",
+    "team": "PBB",
+    "price": 5.3,
+    "md_pts": 7.54,
+    "elite_own": 7,
     "flags": ""
    },
    {
-    "name": "Wendell Moore",
-    "team": "VIR",
-    "price": 9.7,
-    "md_pts": 12.09,
-    "elite_own": 1,
+    "name": "Tyson Carter",
+    "team": "CZV",
+    "price": 6.4,
+    "md_pts": 9.01,
+    "elite_own": 0,
+    "flags": ""
+   },
+   {
+    "name": "Aj Lawson",
+    "team": "KBA",
+    "price": 8.8,
+    "md_pts": 12.13,
+    "elite_own": 0,
     "flags": ""
    }
   ],
@@ -768,82 +753,82 @@
     "name": "Edwin Jackson",
     "team": "ASV",
     "price": 4.4,
-    "md_pts": 9.04,
+    "md_pts": 9.01,
     "elite_own": 17,
     "flags": "only 1 game(s)"
-   },
-   {
-    "name": "Semi Ojeleye",
-    "team": "CZV",
-    "price": 9.0,
-    "md_pts": 16.45,
-    "elite_own": 13,
-    "flags": ""
-   },
-   {
-    "name": "Oscar Da Silva",
-    "team": "BAY",
-    "price": 7.8,
-    "md_pts": 11.46,
-    "elite_own": 1,
-    "flags": ""
    },
    {
     "name": "Alberto Abalde",
     "team": "RMB",
     "price": 5.0,
-    "md_pts": 7.16,
+    "md_pts": 9.32,
     "elite_own": 11,
+    "flags": ""
+   },
+   {
+    "name": "Stefan Joksimovic",
+    "team": "KBA",
+    "price": 4.3,
+    "md_pts": 6.28,
+    "elite_own": 4,
+    "flags": ""
+   },
+   {
+    "name": "Dwayne Bacon",
+    "team": "DUB",
+    "price": 13.9,
+    "md_pts": 19.41,
+    "elite_own": 9,
     "flags": ""
    },
    {
     "name": "Dejan Davidovac",
     "team": "CZV",
     "price": 4.4,
-    "md_pts": 5.93,
+    "md_pts": 6.11,
     "elite_own": 19,
     "flags": ""
    }
   ],
   "Center": [
    {
-    "name": "Kevarrius Hayes",
-    "team": "PAR",
-    "price": 8.1,
-    "md_pts": 12.47,
-    "elite_own": 27,
-    "flags": ""
-   },
-   {
     "name": "Mouhamed Faye",
     "team": "PBB",
     "price": 7.4,
-    "md_pts": 10.26,
+    "md_pts": 12.45,
     "elite_own": 7,
     "flags": ""
    },
    {
-    "name": "Allan Dokossi",
-    "team": "PBB",
-    "price": 8.4,
-    "md_pts": 10.48,
-    "elite_own": 3,
-    "flags": ""
-   },
-   {
-    "name": "Ante Zizic",
-    "team": "BJK",
-    "price": 12.7,
-    "md_pts": 14.82,
-    "elite_own": 2,
+    "name": "Kevarrius Hayes",
+    "team": "PAR",
+    "price": 8.1,
+    "md_pts": 12.27,
+    "elite_own": 27,
     "flags": ""
    },
    {
     "name": "Mfiondu Kabengele",
     "team": "DUB",
     "price": 15.6,
-    "md_pts": 18.07,
+    "md_pts": 20.75,
     "elite_own": 44,
+    "flags": ""
+   },
+   {
+    "name": "Allan Dokossi",
+    "team": "PBB",
+    "price": 8.4,
+    "md_pts": 10.4,
+    "elite_own": 3,
+    "flags": ""
+   },
+   {
+    "name": "Mathias Lessort",
+    "team": "PAO",
+    "price": 16.1,
+    "md_pts": 19.64,
+    "elite_own": 6,
     "flags": ""
    }
   ]

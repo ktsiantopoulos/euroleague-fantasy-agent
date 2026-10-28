@@ -1,6 +1,6 @@
-## run reason: manual  (deadline 2026-10-27T15:59:00+00:00, 3.20 h away)
+## run reason: pre-deadline (1.5h)  (deadline 2026-10-28T17:29:00+00:00, 1.52 h away)
 ## pull-official
-E2026: 70 games played, 0 box scores fetched now
+E2026: 76 games played, 6 box scores fetched now
 
 ## pull-platform
 pulled -> 
@@ -15,13 +15,13 @@ price base: fantasyedge 229, top100_md1 122, first_seen 11
 ## build
         games  rows  mismatches
 season                         
-E2026      70  1678           0
+E2026      76  1821           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    284
-UNMATCHED        57
+surname+team    290
+UNMATCHED        51
 coach            20
-team context: 20 clubs · usage: 276 players · FDR: 20 clubs x next 5
+team context: 20 clubs · usage: 281 players · FDR: 20 clubs x next 5
 price base: fantasyedge 229, top100_md1 122, first_seen 11
 matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
 T2=2026-10-28
@@ -29,8 +29,8 @@ T2=2026-10-28
 ## reconcile
 player-games compared: 2475
 exact matches: 1653 (66.8%)
-  no_player: 507
-  no_boxscore_row: 301
+  no_player: 471
+  no_boxscore_row: 337
   MISMATCH: 14
 
 first mismatches:
@@ -70,23 +70,8 @@ no completed matchday with a stored projection yet - evaluation starts after the
 first played matchday
 
 ## learn
-learn: hold-out R7 MAE current 6.46 vs candidate 6.45 (w=(0.2, 0.3, 0.5), λ=0.3,
+learn: hold-out R8 MAE current 6.02 vs candidate 6.00 (w=(0.2, 0.3, 0.5), λ=0.3,
 γ=1.0) → kept current
-
-## top-100
-top-100: 0 roster previews fetched now
-# Top-100 managers — matchdays 1–7
-
-## Ownership in the top 100, matchday 7
-
-| player | pos | club | price | top own% | global% | captain # |
-|---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 9.3 | 91 | 37 | 7 |
-| Theo Maledon | G | RMB | 12.3 | 81 | 35 | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 73 | 45 | 34 |
-| Andres Feliz | G | RMB | 8.2 | 66 | 34 | 0 |
-| Tomas Masiulis | H | ZAL | 6.3 | 63 | 15 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.0 | 44 | 15 | 8 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
