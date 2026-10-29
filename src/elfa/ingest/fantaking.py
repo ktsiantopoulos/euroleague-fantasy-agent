@@ -6,7 +6,9 @@ data/raw/fantaking/md_<number>/ so a run is reproducible and a failed run leaves
 from __future__ import annotations
 
 import csv
+import datetime as dt
 import json
+import os
 import time
 from pathlib import Path
 from typing import Any
@@ -114,22 +116,86 @@ def market_to_rows(market: list[dict], md_number: int, pulled_at: str) -> list[d
     return rows
 
 
+def _load_schedule() -> list[dict]:
+    """Official schedule pulled by `elfa pull-official` (runs before pull-platform); empty if absent."""
+    fp = RAW / "euroleague" / os.getenv("SEASON_CODE", "E2026") / "games.json"
+    try:
+        return json.loads(fp.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return []
+
+
+def resolve_rollover(cfg: dict, schedule: list[dict], now: dt.datetime | None = None) -> tuple[dict, str | None]:
+    """Detect a platform that has not yet rolled over to the next matchday.
+
+    One fantasy matchday == one EuroLeague RS round. If every game of the platform's current matchday is
+    already played and the next matchday exists, the platform is lagging: return a copy of the config pointed
+    at the next matchday (previous_matchday = the finished one, deadline = first tip-off of the next round
+    minus one minute, the platform's own convention) plus a note. Otherwise return (cfg, None) unchanged.
+    """
+    cur = cfg.get("current_matchday") or {}
+    n = cur.get("number")
+    if not n:
+        return cfg, None
+    rs = [g for g in schedule if (g.get("phaseType") or {}).get("code") == "RS"]
+    this_round = [g for g in rs if g["round"] == n]
+    if not this_round or not all(g.get("played") for g in this_round):
+        return cfg, None
+    nxt = next((m for m in cfg.get("matchdays", []) if m["number"] == n + 1), None)
+    next_round = sorted((g for g in rs if g["round"] == n + 1), key=lambda g: g["utcDate"])
+    if not nxt or not next_round:
+        return cfg, None
+    tip = dt.datetime.fromisoformat(next_round[0]["utcDate"].replace("Z", "+00:00"))
+    if tip.tzinfo is None:
+        tip = tip.replace(tzinfo=dt.UTC)
+    now = now or dt.datetime.now(dt.UTC)
+    if now >= tip:  # next round already under way - the platform should have rolled; don't guess
+        return cfg, None
+    deadline = (tip - dt.timedelta(minutes=1)).strftime("%Y-%m-%dT%H:%M:%S.000000Z")
+    eff = dict(cfg)
+    eff["current_matchday"] = {"id": nxt["id"], "number": nxt["number"],
+                               "num_rounds": len({g["utcDate"][:10] for g in next_round})}
+    eff["previous_matchday"] = {k: cur[k] for k in ("id", "number") if k in cur}
+    eff["current_round"] = {"started_at": deadline, "derived_from": "schedule"}
+    eff["rollover"] = {"platform_current": n, "used": n + 1, "deadline_utc": deadline}
+    note = (f"platform still reports MD {n} (all games played) - rolled over to MD {n + 1}, "
+            f"deadline {deadline[:16].replace('T', ' ')} UTC from the schedule")
+    return eff, note
+
+
 def pull_matchday(client: FantakingClient, md_id: int | None = None, with_history: bool = False) -> Path:
     """Pull league config, my team state, roster and the full market for one matchday.
 
     with_history=True also pulls each market player's fantasy-pts for every past matchday
     (358 players x N matchdays requests - run once, then incrementally).
     """
-    cfg = client.league_config()
+    raw_cfg = client.league_config()
+    cfg = raw_cfg
+    tmd = roster = market = None
     if md_id is None:
+        eff, note = resolve_rollover(raw_cfg, _load_schedule())
+        if note:
+            new_id = eff["current_matchday"]["id"]
+            try:  # fetch everything for the next matchday in memory first, so a failure leaves no half-written md_ dir
+                tmd, roster, market = client.team_matchday(new_id), client.roster(new_id), client.market(new_id)
+                if not market:
+                    raise ValueError("empty market")
+                cfg = eff
+                print(f"  ! {note}")
+            except (requests.HTTPError, ValueError, KeyError) as e:
+                tmd = roster = market = None
+                print(f"  ! platform lags (MD {raw_cfg['current_matchday']['number']} finished) but MD "
+                      f"{eff['current_matchday']['number']} is not served yet ({type(e).__name__}) - pulling the stale matchday")
         md_id = cfg["current_matchday"]["id"]
     md_number = next((m["number"] for m in cfg["matchdays"] if m["id"] == md_id), md_id)
     out = RAW / "fantaking" / f"md_{md_number:02d}"
     pulled_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
 
     _dump(out / "league_config.json", cfg)
-    _dump(out / "team_matchday.json", client.team_matchday(md_id))
-    _dump(out / "roster.json", client.roster(md_id))
+    if cfg is not raw_cfg:
+        _dump(out / "league_config_platform.json", raw_cfg)
+    _dump(out / "team_matchday.json", tmd if tmd is not None else client.team_matchday(md_id))
+    _dump(out / "roster.json", roster if roster is not None else client.roster(md_id))
     # The squad the platform last locked (previous matchday). Until this matchday's deadline every trade on
     # roster.json is reversible, so the optimiser's baseline is this squad with the full trade allowance.
     prev_md = cfg.get("previous_matchday") or {}
@@ -138,7 +204,8 @@ def pull_matchday(client: FantakingClient, md_id: int | None = None, with_histor
             _dump(out / "roster_locked.json", client.roster(prev_md["id"]))
         except requests.HTTPError as e:  # first matchday of a phase etc. - the recommender falls back to roster.json
             _dump(out / "roster_locked.json", {"error": str(e), "players": []})
-    market = client.market(md_id)
+    if market is None:
+        market = client.market(md_id)
     _dump(out / "market.json", market)
 
     # price log: committed to git, one file per matchday pull

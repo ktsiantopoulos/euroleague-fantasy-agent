@@ -7,12 +7,17 @@ from elfa.config import RAW
 from elfa.model.teams import matchday_games, turns_from_market
 
 
-def _schedule():
-    return json.loads((RAW / "euroleague" / "E2026" / "games.json").read_text(encoding="utf-8"))
+def _schedule(as_of_round: int | None = None):
+    """Committed schedule; `as_of_round` replays it as it stood before that round tipped off (rounds >= it unplayed),
+    so the tests don't break as the season advances."""
+    sched = json.loads((RAW / "euroleague" / "E2026" / "games.json").read_text(encoding="utf-8"))
+    if as_of_round:
+        sched = [dict(g, played=g.get("played") and g["round"] < as_of_round) for g in sched]
+    return sched
 
 
 def test_matchday_is_exactly_one_round():
-    sched = _schedule()
+    sched = _schedule(as_of_round=8)
     games = matchday_games(sched, 8)
     assert {g.round for g in games} == {8}
     assert len(games) == 10
@@ -32,7 +37,7 @@ def test_platform_turns_match_game_nights():
     turns = turns_from_market(market, team_map)
     assert set(turns.values()) == {1, 2}
     night = {"2026-10-27": 1, "2026-10-28": 2}
-    for g in matchday_games(_schedule(), 8):
+    for g in matchday_games(_schedule(as_of_round=8), 8):
         assert turns[g.home] == turns[g.away] == night[g.date_utc[:10]]
 
 

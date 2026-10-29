@@ -49,6 +49,21 @@ def _flags_section(proj: pd.DataFrame) -> str:
     return "\n".join(f"- {r.name}: {r.flags}" for r in f.itertuples()) if len(f) else "- none"
 
 
+
+def _stale_warning(md_number: int, first: list, cfg: dict) -> list[str]:
+    """Banner lines when the matchday was rolled over from the schedule, or when its own round is already
+    played and the fixtures fell back to the next round (a stale platform pull - do not act on it)."""
+    out = []
+    ro = cfg.get("rollover")
+    if isinstance(ro, dict):
+        out.append(f"> ℹ️ Platform still reported MD {ro['platform_current']} (finished); this report uses MD {ro['used']} "
+                   f"with the deadline taken from the schedule ({ro['deadline_utc'][:16].replace('T', ' ')} UTC).")
+    rounds = sorted({g.round for g in first})
+    if rounds and rounds != [md_number]:
+        out.append(f"> ⚠️ **Stale pull:** MD {md_number} is fully played, so the fixtures below are R{', R'.join(map(str, rounds))} "
+                   f"but the squad, trades and deadline are still MD {md_number}'s. Re-run once the platform rolls over before acting.")
+    return out
+
 def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float = 0.0, params: Params | None = None,
               keep: list[str] | None = None) -> Path:
     md_number, market, cfg = load_latest_market()
@@ -141,6 +156,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
          f"trades {trades_left} vs the {base.label} ({base.pending_trades} pending on the platform) · "
          f"odds {'ON (' + str(len(odds)) + ' games)' if odds else 'OFF (model margins)'}"),
         f"_{base.note}_",
+    ] + _stale_warning(md_number, first, cfg) + [
         "",
         "## Decision",
         f"- Game nights: {nights_txt}. Bench players with later nights are swap options; captain can move to a not-yet-played starter.",
