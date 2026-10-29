@@ -8,7 +8,7 @@ learn: train R4-R6, hold-out R7, R8
 - current core + new bias: hold-out MAE R7 6.40, R8 6.16 vs current 6.46, 6.11 (gain +0.00)
 → kept current core
 - shadow challenger 202610290458 ('new core', since R8) - would be promoted after 3 straight newest-round wins
-→ sd scale 1.0 → 1.096 (hold-out 80% band 73% → 77%)
+- sd scale kept at 1.096 (hold-out 80% band 77%; candidate ×1.096 → 77%)
 
 ## Calibration (walk-forward)
 - 80% band holds 79% of outcomes (above p90 14%, below p10 7%; n=1134) → sd scale that would make it 80%: ×1.029

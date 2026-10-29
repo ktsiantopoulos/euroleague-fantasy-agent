@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -11.47 h away)
+## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -16.54 h away)
 ## pull-official
 E2026: 80 games played, 0 box scores fetched now
 
@@ -87,7 +87,7 @@ every round)
 → kept current core
 - shadow challenger 202610290458 ('new core', since R8) - would be promoted 
 after 3 straight newest-round wins
-→ sd scale 1.0 → 1.096 (hold-out 80% band 73% → 77%)
+- sd scale kept at 1.096 (hold-out 80% band 77%; candidate ×1.096 → 77%)
 health: no drift flags
 
 ## top-100

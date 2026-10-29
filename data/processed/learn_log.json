@@ -1,1 +1,9 @@
-[]
+[
+ {
+  "round":8,
+  "challenger":"202610290458",
+  "mae_champion":6.108,
+  "mae_challenger":6.094,
+  "challenger_wins":true
+ }
+]
