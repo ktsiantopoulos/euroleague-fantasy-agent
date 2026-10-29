@@ -1,0 +1,264 @@
+{
+ "matchday": 9,
+ "frozen_utc": "2026-10-29T04:58:40Z",
+ "lock_utc": "2026-10-29T18:59:00Z",
+ "budget": 107.3,
+ "trades_left": 4,
+ "baseline_ids": [
+  "3766",
+  "3785",
+  "3850",
+  "3851",
+  "3867",
+  "3938",
+  "3948",
+  "4088",
+  "4096",
+  "7209",
+  "7424"
+ ],
+ "hold": {
+  "expected": 138.6,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 21.58,
+    "md_sd": 9.21
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.86,
+    "md_sd": 6.89
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.69,
+    "md_sd": 10.35
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.32,
+    "md_sd": 9.95
+   },
+   {
+    "platform_id": "3948",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 11.6,
+    "md_sd": 11.06
+   },
+   {
+    "platform_id": "3867",
+    "name": "Kostas Papanikolaou",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 6.68,
+    "md_sd": 5.9
+   },
+   {
+    "platform_id": "3785",
+    "name": "Josh Nebo",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 13.75,
+    "md_sd": 8.34
+   },
+   {
+    "platform_id": "4096",
+    "name": "Mckinley Wright",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.12,
+    "md_sd": 8.16
+   },
+   {
+    "platform_id": "7209",
+    "name": "Lamar Stevens",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.4,
+    "md_sd": 4.85
+   },
+   {
+    "platform_id": "4088",
+    "name": "Berk Ugurlu",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 2.59,
+    "md_sd": 5.41
+   },
+   {
+    "platform_id": "3938",
+    "name": "Ibon Navarro",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 10.37,
+    "md_sd": 13.15
+   }
+  ]
+ },
+ "best": {
+  "expected": 150.0,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 21.58,
+    "md_sd": 9.21
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.86,
+    "md_sd": 6.89
+   },
+   {
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.72,
+    "md_sd": 9.81
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.69,
+    "md_sd": 10.35
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.32,
+    "md_sd": 9.95
+   },
+   {
+    "platform_id": "4005",
+    "name": "Edwin Jackson",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 9.77,
+    "md_sd": 8.5
+   },
+   {
+    "platform_id": "11515",
+    "name": "Tremont Waters",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 13.42,
+    "md_sd": 8.89
+   },
+   {
+    "platform_id": "3948",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.6,
+    "md_sd": 11.06
+   },
+   {
+    "platform_id": "3911",
+    "name": "Kevarrius Hayes",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.77,
+    "md_sd": 8.13
+   },
+   {
+    "platform_id": "7209",
+    "name": "Lamar Stevens",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.4,
+    "md_sd": 4.85
+   },
+   {
+    "platform_id": "3938",
+    "name": "Ibon Navarro",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 10.37,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Josh Nebo",
+   "Mckinley Wright",
+   "Kostas Papanikolaou",
+   "Berk Ugurlu"
+  ],
+  "trades_in": [
+   "Tremont Waters",
+   "Yam Madar",
+   "Kevarrius Hayes",
+   "Edwin Jackson"
+  ]
+ },
+ "params": {
+  "w_minutes": [
+   0.2,
+   0.3,
+   0.5
+  ],
+  "rate_prior_minutes": 40.0,
+  "lam_recent": 0.6,
+  "eta_home": 0.04,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.5,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.096,
+  "bias": {},
+  "flags": {}
+ }
+}

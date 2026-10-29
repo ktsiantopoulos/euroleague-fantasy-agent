@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -10.83 h away)
+## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -11.47 h away)
 ## pull-official
 E2026: 80 games played, 0 box scores fetched now
 
@@ -69,31 +69,29 @@ official_min team_won  expected_pts   status
 19.366667     True           5.5 MISMATCH
 
 ## evaluate
-# Projection evaluation
+no completed matchday with a pre-lock snapshot yet (first one: MD 9) - 
+evaluation starts once it is played
 
-- MD8: 296 players · MAE 4.49 (platform avg_pts baseline 5.08) · bias -0.05 · 
-corr 0.681
-
-## Bias by segment (mean projected − actual; positive = we over-project)
-- position: Center -2.1 (n=56), Forward +0.6 (n=105), Guard +0.3 (n=135)
-- projected minutes: <10 +0.7 (n=61), 10-20 +0.1 (n=151), 20-30 -1.0 (n=73)
-- price: ≤6 +1.0 (n=73), 6-9 -0.4 (n=121), 9-13 +0.4 (n=74), 13+ -2.5 (n=28)
-- availability: doubtful +0.3 (n=20), fit -0.1 (n=276)
-
-## Biggest misses
-- under-projected: Antonio Blakeney (12→38), Elijah Bryant (19→38), Tyson Carter
-(9→29), Donta Hall (8→25), Kendrick Nunn (12→29)
-- over-projected: Sylvain Francisco (13→-1), Yam Madar (16→2), Tadas Sedekerskis
-(13→0), Dario Saric (12→0), Marcus Carr (11→-1)
-
-## Coaches: MAE 9.7, bias +0.9 (n=19)
+## scorecard
+no matchday with a pre-lock decision snapshot and final results yet (first one: 
+MD 9)
 
 ## learn
-learn: hold-out R8 MAE current 6.11 vs candidate 6.10 (w=(0.2, 0.3, 0.5), λ=0.3,
-γ=1.0) → kept current
+learn: train R4-R6, hold-out R7, R8
+- new core + bias: hold-out MAE R7 6.45, R8 6.13 vs current 6.46, 6.11 (gain 
+-0.01)
+- new core: hold-out MAE R7 6.45, R8 6.09 vs current 6.46, 6.11 (gain +0.01, 
+every round)
+- current core + new bias: hold-out MAE R7 6.40, R8 6.16 vs current 6.46, 6.11 
+(gain +0.00)
+→ kept current core
+- shadow challenger 202610290458 ('new core', since R8) - would be promoted 
+after 3 straight newest-round wins
+→ sd scale 1.0 → 1.096 (hold-out 80% band 73% → 77%)
+health: no drift flags
 
 ## top-100
-top-100: 100 roster previews fetched now
+top-100: 0 roster previews fetched now
 # Top-140 managers — matchdays 1–8
 
 ## Ownership in the top 140, matchday 8
@@ -108,14 +106,14 @@ top-100: 100 roster previews fetched now
 | Elijah Bryant | G | HTA | 17.2 | 39 | 13 | 14 |
 
 ## backtest
-             subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
+             subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
 mae_base_last3  corr_base_last3
-all dressed players 935       5.52       0.412           5.82           0.389   
-5.97            0.371
-projected >= 15 min 512       6.20       0.311           6.58           0.284   
-6.80            0.262
-   >= 3 prior games 857       5.55       0.416           5.82           0.398   
-5.98            0.378
+all dressed players 1159       5.56       0.412           5.81           0.397  
+6.02            0.366
+projected >= 15 min  651       6.18       0.312           6.49           0.296  
+6.80            0.253
+   >= 3 prior games 1076       5.59       0.412           5.81           0.402  
+6.04            0.368
 
 ## recommend
 - Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 

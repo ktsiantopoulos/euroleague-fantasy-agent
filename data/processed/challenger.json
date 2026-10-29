@@ -1,0 +1,27 @@
+{
+ "id": "202610290458",
+ "since_round": 8,
+ "name": "new core",
+ "params": {
+  "w_minutes": [
+   0.1,
+   0.3,
+   0.6
+  ],
+  "rate_prior_minutes": 40.0,
+  "lam_recent": 0.3,
+  "eta_home": 0.02,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.8,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.0,
+  "bias": {},
+  "flags": {}
+ }
+}

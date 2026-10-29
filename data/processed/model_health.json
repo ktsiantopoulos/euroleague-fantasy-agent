@@ -1,0 +1,101 @@
+{
+ "generated_utc": "2026-10-29T04:58:33Z",
+ "drift": false,
+ "reasons": [],
+ "per_round": [
+  {
+   "round": 4,
+   "mae_model": 6.2,
+   "mae_best_baseline": 6.84,
+   "model_wins": true
+  },
+  {
+   "round": 5,
+   "mae_model": 6.03,
+   "mae_best_baseline": 6.46,
+   "model_wins": true
+  },
+  {
+   "round": 6,
+   "mae_model": 6.1,
+   "mae_best_baseline": 6.38,
+   "model_wins": true
+  },
+  {
+   "round": 7,
+   "mae_model": 6.46,
+   "mae_best_baseline": 6.65,
+   "model_wins": true
+  },
+  {
+   "round": 8,
+   "mae_model": 6.11,
+   "mae_best_baseline": 6.17,
+   "model_wins": true
+  }
+ ],
+ "calibration": {
+  "n": 1134,
+  "above_p90": 0.144,
+  "below_p10": 0.069,
+  "inside_80": 0.787,
+  "z_sd": 1.067,
+  "sd_scale": 1.029
+ },
+ "attribution": {
+  "n": 1127,
+  "minutes_mae": 5.01,
+  "minutes_share": 0.319,
+  "rate_share": 0.681,
+  "dnp_misses": 8,
+  "dnp_cost": 42.6
+ },
+ "params": {
+  "w_minutes": [
+   0.2,
+   0.3,
+   0.5
+  ],
+  "rate_prior_minutes": 40.0,
+  "lam_recent": 0.6,
+  "eta_home": 0.04,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.5,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.096,
+  "bias": {}
+ },
+ "challenger": {
+  "id": "202610290458",
+  "since_round": 8,
+  "name": "new core",
+  "params": {
+   "w_minutes": [
+    0.1,
+    0.3,
+    0.6
+   ],
+   "rate_prior_minutes": 40.0,
+   "lam_recent": 0.3,
+   "eta_home": 0.02,
+   "gamma_dvp": 1.0,
+   "sd_prior_games": 4.0,
+   "horizon_weights": [
+    1.0,
+    0.6,
+    0.3
+   ],
+   "dnp_recent_penalty": 0.8,
+   "minutes_sample_prior": 0.5,
+   "sd_scale": 1.0,
+   "bias": {},
+   "flags": {}
+  }
+ }
+}

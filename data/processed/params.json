@@ -1,0 +1,23 @@
+{
+ "w_minutes": [
+  0.2,
+  0.3,
+  0.5
+ ],
+ "rate_prior_minutes": 40.0,
+ "lam_recent": 0.6,
+ "eta_home": 0.04,
+ "gamma_dvp": 1.0,
+ "sd_prior_games": 4.0,
+ "horizon_weights": [
+  1.0,
+  0.6,
+  0.3
+ ],
+ "dnp_recent_penalty": 0.5,
+ "minutes_sample_prior": 0.5,
+ "sd_scale": 1.096,
+ "bias": {},
+ "flags": {},
+ "note": "2026-10-29: sd scale 1.0 \u2192 1.096 (hold-out 80% band 73% \u2192 77%)"
+}
