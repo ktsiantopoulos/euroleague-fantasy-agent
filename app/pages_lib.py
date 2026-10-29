@@ -684,7 +684,52 @@ def page_market(proj: pd.DataFrame):
         st.altair_chart(ch, width="stretch")
 
 
+def _health_section(mode: str):
+    """Self-correction status: drift flags, calibration, error attribution, learning decisions, decision scorecard."""
+    import json as _json
+
+    hp = D.PROCESSED / "model_health.json"
+    if not hp.exists():
+        st.info("Self-correction runs after the next pipeline refresh.")
+        return
+    h = _json.loads(hp.read_text(encoding="utf-8"))
+    if h.get("drift"):
+        st.error("Drift: " + "; ".join(h.get("reasons", [])))
+    else:
+        st.success(f"No drift flags · checked {h.get('generated_utc', '')[:16].replace('T', ' ')} UTC")
+    cal, att, prm = h.get("calibration", {}), h.get("attribution", {}), h.get("params", {})
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("80% band holds", f"{cal.get('inside_80', 0):.0%}", help="Target 80%. Above p90 / below p10 should each be ~10%.")
+    k2.metric("sd scale", f"×{prm.get('sd_scale', 1.0)}", help="Calibration factor on every projected sd, adopted only if hold-out coverage improves.")
+    k3.metric("Error from minutes", f"{(att.get('minutes_share') or 0):.0%}", help="Share of absolute error explained by the minutes forecast; the rest is per-minute rate.")
+    k4.metric("Surprise DNPs", att.get("dnp_misses", 0), help="Projected ≥10 min, played 0 (walk-forward).")
+    if prm.get("bias"):
+        st.caption("Active bias corrections: " + ", ".join(f"{k} ×{v}" for k, v in prm["bias"].items()))
+    if h.get("challenger"):
+        c = h["challenger"]
+        st.caption(f"Shadow challenger '{c.get('name')}' since R{c.get('since_round')} — promoted automatically after 3 straight newest-round wins.")
+    if mode == "team":
+        sc = csv("scorecard.csv")
+        st.subheader("Decision scorecard (per matchday)")
+        if sc.empty:
+            st.caption("Starts with MD 9 — the first matchday with a projection frozen before the lock.")
+        else:
+            _df(sc[["matchday", "expected", "actual", "z", "rec_actual", "hold_actual", "trade_value_rec", "trade_value_you", "hindsight", "regret", "captain", "captain_regret"]],
+                hide_index=True, column_config={
+                    "z": st.column_config.NumberColumn("z", format="%+.2f", help="(actual − expected) / sd; |z| > 2 is a real miss"),
+                    "rec_actual": st.column_config.NumberColumn("Agent rec (actual)"), "hold_actual": st.column_config.NumberColumn("No trades (actual)"),
+                    "trade_value_rec": st.column_config.NumberColumn("Trade value: agent", format="%+.1f"),
+                    "trade_value_you": st.column_config.NumberColumn("Trade value: you", format="%+.1f"),
+                    "regret": st.column_config.NumberColumn("Regret vs hindsight", format="%.1f")})
+    mh = D.PROCESSED / "model_health.md"
+    if mh.exists():
+        with st.expander("Last recalibration run (learn log, bias by segment)"):
+            st.markdown(mh.read_text(encoding="utf-8"))
+
+
 def page_model_health(mode: str):
+    st.subheader("Self-correction")
+    _health_section(mode)
     st.subheader("Backtest (walk-forward, per round)")
     st.caption("Mean absolute error of the projection vs two naive baselines; lower is better. The model is re-fitted on the rounds before each tested round.")
     bt = csv("backtest_rounds.csv")

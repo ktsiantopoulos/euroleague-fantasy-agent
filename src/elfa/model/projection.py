@@ -31,6 +31,8 @@ class Params:
     horizon_weights: tuple[float, ...] = (1.0, 0.6, 0.3)
     dnp_recent_penalty: float = 0.5                            # multiply minutes if last game was a DNP
     minutes_sample_prior: float = 0.5                          # n/(n+0.5): 1 game -> 0.67, 7 games -> 0.93
+    sd_scale: float = 1.0                                      # calibration: multiplies every sd (fit so 80% intervals hold 80%)
+    bias: dict = field(default_factory=dict)                   # "pos|minutes band" -> multiplier on projected points (shrunk, guarded)
     flags: dict = field(default_factory=dict)
 
     @classmethod
@@ -52,6 +54,21 @@ class Params:
         path = path or PROCESSED / "params.json"
         d = asdict(self); d["note"] = note
         path.write_text(json.dumps(d, indent=1), encoding="utf-8")
+
+
+MINUTE_BANDS = [(0, 10, "<10"), (10, 20, "10-20"), (20, 30, "20-30"), (30, 99, "30+")]
+
+
+def minutes_band(min_hat: float) -> str:
+    for lo, hi, lab in MINUTE_BANDS:
+        if lo <= min_hat < hi:
+            return lab
+    return "30+"
+
+
+def bias_factor(p: "Params", pos: str | None, min_hat: float) -> float:
+    """Learned segment correction (1.0 when no bias has been adopted for that segment)."""
+    return float((p.bias or {}).get(f"{pos}|{minutes_band(min_hat)}", 1.0))
 
 
 def _player_form(pg: pd.DataFrame, league_rate: float, league_sd: float, p: Params) -> pd.DataFrame:
@@ -151,7 +168,7 @@ def project(
                     horizon_pts += p.horizon_weights[h_i] * ev
                     if h_i == 0:
                         md_pts += ev
-                        md_var += 12.0 ** 2
+                        md_var += (12.0 * p.sd_scale) ** 2
                         games_md += 1
                         games_detail.append({"turn": turn_of_game(g), "opp": opp, "home": home, "fp": round(ev, 2), "sd": 12.0, "pw": round(pw, 3)})
                         why.append(f"{'vs' if home else '@'} {opp}: margin {mu:+.0f}, win {pw:.0%} → EV {ev:+.1f}")
@@ -174,15 +191,17 @@ def project(
                     pir = min_hat * rate_hat * (1 + p.eta_home if home else 1 - p.eta_home) * pace_f
                     share = min_hat / max(pos_minutes.get(pos, 80.0), 1.0)
                     pir += p.gamma_dvp * share * dvp_idx.get((opp, pos), 0.0)
+                    pir *= bias_factor(p, pos, min_hat)
                     fp = prob_play * pir * (1 + WIN_BONUS * pw)
                     horizon_pts += p.horizon_weights[h_i] * fp
                     if h_i == 0:
                         dv = dvp_idx.get((opp, pos), 0.0)
-                        g_sd = float(np.sqrt((prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)))
+                        f_sd = float(f.sd) * p.sd_scale
+                        g_sd = float(np.sqrt((prob_play * f_sd) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)))
                         games_detail.append({"turn": turn_of_game(g), "opp": opp, "home": home, "fp": round(fp, 2), "sd": round(g_sd, 2), "pw": round(pw, 3)})
                         why.append(f"T{turn_of_game(g)} {'vs' if home else '@'} {opp} (DvP {dv:+.1f}, win {pw:.0%}) → {fp:.1f}")
                         md_pts += fp
-                        md_var += (prob_play * float(f.sd)) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)
+                        md_var += (prob_play * f_sd) ** 2 + (pir ** 2) * prob_play * (1 - prob_play)
                         games_md += 1
         if games_md == 0 and pos != "Head Coach":
             flags.append("no game this matchday")

@@ -1,6 +1,8 @@
 """Orchestrates projection + optimisation and renders the matchday recommendation."""
 from __future__ import annotations
 
+import dataclasses
+import datetime as dt
 import json
 import time
 from pathlib import Path
@@ -62,6 +64,12 @@ def _stale_warning(md_number: int, first: list, cfg: dict) -> list[str]:
     if rounds and rounds != [md_number]:
         out.append(f"> ⚠️ **Stale pull:** MD {md_number} is fully played, so the fixtures below are R{', R'.join(map(str, rounds))} "
                    f"but the squad, trades and deadline are still MD {md_number}'s. Re-run once the platform rolls over before acting.")
+    try:
+        h = json.loads((PROCESSED / "model_health.json").read_text(encoding="utf-8"))
+        if h.get("drift"):
+            out.append("> ⚠️ **Model drift:** " + "; ".join(h.get("reasons", [])) + " — weigh this recommendation with extra judgement.")
+    except (OSError, ValueError):
+        pass
     return out
 
 def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float = 0.0, params: Params | None = None,
@@ -250,4 +258,48 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     }
     (ROOT / "reports" / f"recommendation_md{md_number:02d}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     (ROOT / "reports" / "recommendation_latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    froze = freeze_if_pre_lock(md_number, proj, first, base, hold, best, budget, trades_left, params=params)
+    print(f"  lock snapshot: {froze}")
     return out
+
+
+def matchday_lock_utc(first: list) -> dt.datetime | None:
+    """Trades lock at the first tip-off of the matchday (one minute before, the platform's convention)."""
+    if not first:
+        return None
+    tip = min(dt.datetime.fromisoformat(g.date_utc.replace("Z", "+00:00")) for g in first)
+    tip = tip if tip.tzinfo else tip.replace(tzinfo=dt.UTC)
+    return tip - dt.timedelta(minutes=1)
+
+
+def _squad_records(sol) -> list[dict]:
+    sq = sol.squad
+    return [{"platform_id": str(r.platform_id), "name": r.name, "pos": r.pos, "role": r.role, "captain": bool(r.captain),
+             "md_pts": float(r.md_pts), "md_sd": float(r.md_sd)} for r in sq.itertuples()]
+
+
+def freeze_if_pre_lock(md_number: int, proj: pd.DataFrame, first: list, base, hold, best, budget: float, trades_left: int,
+                       now: dt.datetime | None = None, params: Params | None = None) -> str:
+    """Keep the last projection made BEFORE the matchday locks - the only honest thing to score afterwards.
+
+    Every pre-lock run overwrites projection_mdXX_locked.csv / decision_mdXX_locked.json; runs after the lock
+    never touch them, so post-lock data (first-night box scores, stale pulls) can't leak into the evaluation.
+    """
+    now = now or dt.datetime.now(dt.UTC)
+    lock = matchday_lock_utc(first)
+    rounds = sorted({g.round for g in first})
+    if lock is None or rounds != [md_number]:
+        return "skipped (fixtures are not this matchday's own round)"
+    if not base.open or now >= lock:
+        return f"kept (matchday locked at {lock:%Y-%m-%d %H:%M} UTC)"
+    proj.to_csv(PROCESSED / f"projection_md{md_number:02d}_locked.csv", index=False)
+    decision = {
+        "matchday": md_number, "frozen_utc": now.strftime("%Y-%m-%dT%H:%M:%SZ"), "lock_utc": lock.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "budget": budget, "trades_left": trades_left, "baseline_ids": sorted(base.ids),
+        "hold": {"expected": float(hold.expected_md_pts), "captain": hold.captain, "squad": _squad_records(hold)},
+        "best": {"expected": float(best.expected_md_pts), "captain": best.captain, "squad": _squad_records(best),
+                 "trades_out": best.trades_out, "trades_in": best.trades_in},
+        "params": dataclasses.asdict(params or Params.load()),
+    }
+    (PROCESSED / f"decision_md{md_number:02d}_locked.json").write_text(json.dumps(decision, indent=1, default=str), encoding="utf-8")
+    return f"written (locks {lock:%Y-%m-%d %H:%M} UTC)"

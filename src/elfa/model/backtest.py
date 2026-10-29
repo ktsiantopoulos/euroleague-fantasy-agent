@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 from elfa.features.dvp import compute_dvp
-from elfa.model.projection import Params, _player_form
+from elfa.model.projection import Params, _player_form, bias_factor
 from elfa.model.teams import margin_mu, team_ratings, win_prob
 
 
@@ -44,19 +44,21 @@ def _project_round(train: pd.DataFrame, test: pd.DataFrame, schedule: list[dict]
         pace_f = ((r.pace.get(g.team, league_pace) + r.pace.get(g.opponent, league_pace)) / 2) / league_pace
         pir = f.min_hat * f.rate_hat * (1 + p.eta_home if g.home else 1 - p.eta_home) * pace_f
         pir += p.gamma_dvp * (f.min_hat / max(pos_minutes.get(g.fpos, 80.0), 1.0)) * dvp_idx.get((g.opponent, g.fpos), 0.0)
+        pir *= bias_factor(p, g.fpos, f.min_hat)
         hist = train[train.player_code == g.player_code].sort_values("date_utc").pir
         rows.append({
             "round": g.round, "player_code": g.player_code, "player_name": g.player_name, "team": g.team,
             "actual_pir": g.pir, "actual_min": g.minutes,
             "model": pir, "model_fp": pir * (1 + 0.10 * pw),
             "base_mean": hist.mean(), "base_last3": hist.tail(3).mean(),
-            "min_hat": f.min_hat, "n_games": f.n_games,
+            "min_hat": f.min_hat, "n_games": f.n_games, "fpos": g.fpos, "rate_hat": f.rate_hat,
+            "sd": float(f.sd) * p.sd_scale, "date_utc": g.date_utc,
         })
     return pd.DataFrame(rows)
 
 
 def backtest(pg: pd.DataFrame, schedule: list[dict], rounds: list[int], p: Params | None = None) -> BacktestResult:
-    p = p or Params()
+    p = p or Params.load()
     parts = []
     for rnd in rounds:
         train = pg[pg["round"] < rnd]

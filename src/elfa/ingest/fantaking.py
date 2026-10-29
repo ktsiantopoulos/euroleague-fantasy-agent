@@ -204,6 +204,10 @@ def pull_matchday(client: FantakingClient, md_id: int | None = None, with_histor
             _dump(out / "roster_locked.json", client.roster(prev_md["id"]))
         except requests.HTTPError as e:  # first matchday of a phase etc. - the recommender falls back to roster.json
             _dump(out / "roster_locked.json", {"error": str(e), "players": []})
+        try:  # final state of that matchday (team points) - scored by `elfa scorecard`
+            _dump(out / "team_matchday_locked.json", client.team_matchday(prev_md["id"]))
+        except requests.HTTPError as e:
+            _dump(out / "team_matchday_locked.json", {"error": str(e)})
     if market is None:
         market = client.market(md_id)
     _dump(out / "market.json", market)

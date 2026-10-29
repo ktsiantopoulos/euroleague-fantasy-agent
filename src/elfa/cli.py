@@ -132,7 +132,7 @@ def reconcile():
 
 
 @app.command()
-def backtest(rounds: str = typer.Option("4,5,6,7"), grid: bool = typer.Option(False, "--grid")):
+def backtest(rounds: str = typer.Option("", help="comma-separated; default = every played round from R4"), grid: bool = typer.Option(False, "--grid")):
     """P1 gate: walk-forward backtest of the projection vs season-mean and last-3 baselines."""
     import pandas as pd
 
@@ -148,7 +148,7 @@ def backtest(rounds: str = typer.Option("4,5,6,7"), grid: bool = typer.Option(Fa
     pm = pd.read_csv(PROCESSED / "player_map.csv", dtype={"platform_id": str, "person_code": str})
     pg = attach_positions(pg, pm, market)
     sched = load_schedule(pg.season.max())
-    rs = [int(x) for x in rounds.split(",")]
+    rs = [int(x) for x in rounds.split(",")] if rounds else sorted(int(r) for r in pg.loc[pg.played, "round"].unique() if r >= 4)
     if grid:
         g = grid_search(pg, sched, rs)
         rprint(g.head(10).to_string(index=False))
@@ -197,8 +197,17 @@ def evaluate():
 
 
 @app.command()
+def scorecard():
+    """Decision scorecard per played matchday: team expected vs actual, regret, captain and trade value."""
+    from elfa.model.scorecard import scorecard as _sc
+
+    _df, txt = _sc()
+    rprint(txt)
+
+
+@app.command()
 def learn():
-    """Guarded parameter update: adopt a new grid optimum only if it wins on the newest round."""
+    """Guarded recalibration: minutes/rate sub-model grids, bias layer, sd calibration, challenger, drift check."""
     import pandas as pd
 
     from elfa.features.dvp import attach_positions

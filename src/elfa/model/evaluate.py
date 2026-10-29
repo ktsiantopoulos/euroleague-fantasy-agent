@@ -28,8 +28,10 @@ def _actuals(md: int) -> pd.DataFrame:
 
 def evaluate() -> tuple[pd.DataFrame, str]:
     parts = []
-    for fp in sorted(PROCESSED.glob("projection_md*.csv")):
-        md = int(fp.stem.split("md")[1])
+    # only snapshots frozen before the lock count: projection_mdXX.csv is rewritten by every run, including
+    # post-lock and stale ones, so scoring it leaks results (MD 8 was scored against R9 fixtures that way)
+    for fp in sorted(PROCESSED.glob("projection_md*_locked.csv")):
+        md = int(fp.stem.split("md")[1].split("_")[0])
         act = _actuals(md)
         if act.empty:
             continue
@@ -38,7 +40,7 @@ def evaluate() -> tuple[pd.DataFrame, str]:
         m["matchday"] = md
         parts.append(m)
     if not parts:
-        return pd.DataFrame(), "no completed matchday with a stored projection yet - evaluation starts after the first played matchday"
+        return pd.DataFrame(), "no completed matchday with a pre-lock snapshot yet (first one: MD 9) - evaluation starts once it is played"
     df = pd.concat(parts, ignore_index=True)
     df["error"] = df.md_pts - df.actual
     df["abs_error"] = df.error.abs()
@@ -48,7 +50,10 @@ def evaluate() -> tuple[pd.DataFrame, str]:
     lines = ["# Projection evaluation", ""]
     for md, g in pl.groupby("matchday"):
         base = (g.avg_pts_platform.fillna(0) * g.games_md - g.actual).abs().mean()
-        lines.append(f"- MD{md}: {len(g)} players · MAE {g.abs_error.mean():.2f} (platform avg_pts baseline {base:.2f}) · bias {g.error.mean():+.2f} · corr {g[['md_pts','actual']].corr().iloc[0,1]:.3f}")
+        hi = (g.actual > g.md_p90).mean()
+        lo = (g.actual < g.md_pts - (g.md_p90 - g.md_pts)).mean()
+        lines.append(f"- MD{md}: {len(g)} players · MAE {g.abs_error.mean():.2f} (platform avg_pts baseline {base:.2f}) · bias {g.error.mean():+.2f} · "
+                     f"corr {g[['md_pts','actual']].corr().iloc[0,1]:.3f} · above p90 {hi:.0%} / below p10 {lo:.0%} (target 10% each)")
     lines += ["", "## Bias by segment (mean projected − actual; positive = we over-project)"]
     seg = {
         "position": pl.groupby("pos").error.agg(["mean", "count"]),
@@ -71,21 +76,7 @@ def evaluate() -> tuple[pd.DataFrame, str]:
 
 
 def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
-    """Guarded parameter update: grid on all rounds but the last, compare current vs candidate on the last."""
-    from elfa.model.backtest import backtest, grid_search
-    from elfa.model.projection import Params
+    """Guarded recalibration - see elfa.model.learning."""
+    from elfa.model.learning import learn as _learn
 
-    if len(rounds) < 3:
-        return "learn: need at least 3 played rounds"
-    train, hold = rounds[:-1], [rounds[-1]]
-    current = Params.load()
-    grid = grid_search(pg, schedule, train)
-    top = grid.iloc[0]
-    cand = Params(w_minutes=tuple(top.w_minutes), lam_recent=float(top.lam_recent), gamma_dvp=float(top.gamma_dvp))
-    cur_mae = backtest(pg, schedule, hold, current).summary.set_index("subset").loc["projected >= 15 min", "mae_model"]
-    cand_mae = backtest(pg, schedule, hold, cand).summary.set_index("subset").loc["projected >= 15 min", "mae_model"]
-    msg = f"learn: hold-out R{hold[0]} MAE current {cur_mae:.2f} vs candidate {cand_mae:.2f} (w={cand.w_minutes}, λ={cand.lam_recent}, γ={cand.gamma_dvp})"
-    if cand_mae + 0.02 < cur_mae:
-        cand.save(note=f"adopted after R{hold[0]}: {cand_mae:.2f} vs {cur_mae:.2f}")
-        return msg + " → ADOPTED"
-    return msg + " → kept current"
+    return _learn(pg, schedule, rounds)

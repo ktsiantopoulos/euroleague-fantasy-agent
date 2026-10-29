@@ -136,8 +136,10 @@ jobs:
         run: |
           echo -e "\n## evaluate" | tee -a reports/latest.md
           elfa evaluate 2>&1 | tee -a reports/latest.md || true
+          echo -e "\n## scorecard" | tee -a reports/latest.md
+          elfa scorecard 2>&1 | tee -a reports/latest.md || true
           echo -e "\n## learn" | tee -a reports/latest.md
-          elfa learn 2>&1 | tail -n 3 | tee -a reports/latest.md || true
+          elfa learn 2>&1 | tail -n 14 | tee -a reports/latest.md || true
 
       - name: Top-100 managers
         if: steps.gate.outputs.run == 'true' && (env.FANTAKING_TOKEN != '') && contains(steps.gate.outputs.why, 'daily') || (steps.gate.outputs.run == 'true' && env.FANTAKING_TOKEN != '' && github.event_name == 'workflow_dispatch')

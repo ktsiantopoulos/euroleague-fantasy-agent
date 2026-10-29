@@ -83,3 +83,13 @@ Two Streamlit apps share one page library (`app/pages_lib.py`) over the committe
 
 Locally: `pip install -r requirements.txt && streamlit run app/streamlit_app.py` (or `app/scout_app.py`).
 Both are hosted on Streamlit Community Cloud from this repo (main branch) as two separate apps, one per main file.
+
+## Self-correction loop (after every refresh)
+
+| Step | Command | What it does |
+|---|---|---|
+| Freeze at lock | `elfa recommend` | Every pre-lock run writes `projection_mdXX_locked.csv` + `decision_mdXX_locked.json`; runs after the first tip-off never touch them, so nothing post-lock leaks into scoring. |
+| Player accuracy | `elfa evaluate` | Locked projection vs actual platform points: MAE, bias, correlation, p10/p90 coverage, bias by segment. |
+| Decision scorecard | `elfa scorecard` | Team expected (±sd, z) vs actual; agent recommendation and no-trade squad on actual points; trade value; regret vs hindsight optimum; captain regret. |
+| Recalibration | `elfa learn` | Minutes sub-model grid (minutes MAE) → rate sub-model grid (PIR MAE) → shrunk segment bias layer → sd calibration. Gate: wins on **every** one of the last 2 rounds and ≥0.03 MAE on average; sd scale gated on hold-out 80% coverage. Non-adopted best candidate runs as a shadow challenger and is promoted after 3 straight newest-round wins. |
+| Health | `elfa learn` | `model_health.json/.md`: drift flag (model loses to a naive baseline 2 rounds running, team total off by >2 sd twice, or 80% band off by >10 pts), calibration, minutes-vs-rate error attribution. Drift shows as a banner on the recommendation and on the Model health page. |
