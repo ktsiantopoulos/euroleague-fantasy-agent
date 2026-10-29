@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -49,7 +50,8 @@ def latest_matchday() -> int:
 
 def load_projection() -> tuple[int, pd.DataFrame]:
     md = latest_matchday()
-    files = sorted(PROCESSED.glob("projection_md*.csv"))
+    # live projections only: projection_mdXX.csv (frozen projection_mdXX_locked.csv files are for evaluation)
+    files = sorted(f for f in PROCESSED.glob("projection_md*.csv") if re.fullmatch(r"projection_md\d+", f.stem))
     if not files:
         return md, pd.DataFrame()
     df = pd.read_csv(files[-1], dtype={"platform_id": str})
