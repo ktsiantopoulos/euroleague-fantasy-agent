@@ -139,7 +139,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 7209,Lamar,Stevens,PAR,014009,surname+team
 7338,Both,Gach,ASV,013900,surname+team
 11532,Ethan,Thompson,PAR,014742,surname+team
-3788,Keenan,Evans,ZAL,,UNMATCHED
+3788,Keenan,Evans,ZAL,011218,surname+team
 3981,Mouhamet,Diouf,VIR,013374,surname+team
 3856,Isaia,Cordinier,IST,,UNMATCHED
 4340,Kyle,Allman,PAR,011924,surname+team
@@ -182,14 +182,14 @@ platform_id,first_name,last_name,official_team,person_code,method
 3957,Oscar,Da Silva,MUN,011244,surname+team
 4124,Kevin,Kokila,VIR,011837,surname+team
 7203,Miles,Norris,MUN,014134,surname+team
-13935,Antonio,Reeves,PAR,,UNMATCHED
+13935,Antonio,Reeves,PAR,015397,surname+team
 3846,Tyson,Ward,OLY,012610,surname+team
 3909,Aleksander,Sekulic,BAR,,coach
 3980,Aleksander,Balcerowski,BAR,007553,surname+team
 4280,Marek,Blazevic,ZAL,008186,surname+team
 7215,Dylan,Osetkowski,PAM,010581,surname+team
 3883,Johannes,Voigtmann,MUN,007201,surname+team
-13936,Robert,Franks,PAR,,UNMATCHED
+13936,Robert,Franks,PAR,015400,surname+team
 3780,Furkan,Korkmaz,BES,005763,surname+team
 3803,Gabriel,Deck,MAD,009005,surname+team
 3880,Derek ,Willis,PAR,009664,surname+team
@@ -211,7 +211,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 3960,Tamir,Blatt,HTA,,UNMATCHED
 11502,Olivier,Nkamhoua,BAR,015140,surname+team
 3826,Frank,Ntilikina,PRS,006591,surname+team
-3828,Georgios,Papagiannis,IST,,UNMATCHED
+3828,Georgios,Papagiannis,IST,005844,surname+team
 3862,Jasiel,Rivero,PAM,011214,surname+team
 3917,Kamar,Baldwin,MUN,012597,surname+team
 3918,Marius,Grigonis,ZAL,002328,surname+team
@@ -240,7 +240,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 3952,Mam,Jaiteh,DUB,,UNMATCHED
 7390,Tobias,Jensen,MUN,010726,surname+team
 7867,Armando,Bacot,TEL,014015,surname+team
-7328,Kaodirichi,Akobundu-Ehiogu,ZAL,,UNMATCHED
+7328,Kaodirichi,Akobundu-Ehiogu,ZAL,013845,surname+team
 11506,Ignas,Sargiunas,ULK,006896,surname+team
 3915,Matteo,Spagnolo,BAS,008173,surname+team
 3942,Maodo,Lo,ZAL,007032,surname+team
@@ -250,7 +250,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 3922,Juhann,Begarin,ASV,,UNMATCHED
 3967,Dario,Brizuela,BAR,009992,surname+team
 7234,Yankuba,Sima,PAM,,UNMATCHED
-11525,Antonis,Karagiannidis,OLY,,UNMATCHED
+11525,Antonis,Karagiannidis,OLY,015126,surname+team
 7219,Amath,M'baye,PRS,,UNMATCHED
 7378,Agustin,Ubal,BAR,010062,surname+team
 3927,Daulton,Hommes,PRS,011949,surname+team
@@ -353,7 +353,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 11540,Mario,Saint-supery,PAM,011706,surname+team
 11542,Lucas,Mari,PAM,,UNMATCHED
 12465,Darius,Karutasu,IST,,UNMATCHED
-12466,Yagiz,Aksu,BES,,UNMATCHED
+12466,Yagiz,Aksu,BES,012233,surname+team
 12467,Andrija,Susic,MUN,,UNMATCHED
 12468,Niko,Jerkic,MUN,,UNMATCHED
 12469,Thierry Henry,Alves de Souza,BAS,014506,surname+team

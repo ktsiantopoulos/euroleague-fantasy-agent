@@ -6,9 +6,9 @@
   "quotation": 18.4,
   "jersey": "14",
   "face_path": null,
-  "avg_pts": 24.53,
+  "avg_pts": 24.08,
   "is_on_fire": true,
-  "popularity": 0.455,
+  "popularity": 0.454,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -41,7 +41,7 @@
   "quotation": 17.2,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 24.16,
+  "avg_pts": 25.95,
   "is_on_fire": false,
   "popularity": 0.133,
   "position": {
@@ -76,7 +76,7 @@
   "quotation": 16.3,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 22.03,
+  "avg_pts": 22.71,
   "is_on_fire": true,
   "popularity": 0.137,
   "position": {
@@ -111,7 +111,7 @@
   "quotation": 16.1,
   "jersey": "26",
   "face_path": null,
-  "avg_pts": 22.63,
+  "avg_pts": 22.83,
   "is_on_fire": false,
   "popularity": 0.147,
   "position": {
@@ -146,7 +146,7 @@
   "quotation": 16,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 19.17,
+  "avg_pts": 19.66,
   "is_on_fire": false,
   "popularity": 0.12,
   "position": {
@@ -181,7 +181,7 @@
   "quotation": 15.6,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 19.8,
+  "avg_pts": 20.45,
   "is_on_fire": true,
   "popularity": 0.166,
   "position": {
@@ -251,7 +251,7 @@
   "quotation": 15.1,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 18,
+  "avg_pts": 15.64,
   "is_on_fire": false,
   "popularity": 0.113,
   "position": {
@@ -286,7 +286,7 @@
   "quotation": 14.9,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 17.23,
+  "avg_pts": 15.08,
   "is_on_fire": true,
   "popularity": 0.036,
   "position": {
@@ -321,7 +321,7 @@
   "quotation": 14.8,
   "jersey": "22",
   "face_path": null,
-  "avg_pts": 16,
+  "avg_pts": 17.03,
   "is_on_fire": false,
   "popularity": 0.033,
   "position": {
@@ -356,7 +356,7 @@
   "quotation": 14.8,
   "jersey": "95",
   "face_path": null,
-  "avg_pts": 14.11,
+  "avg_pts": 13.59,
   "is_on_fire": false,
   "popularity": 0.031,
   "position": {
@@ -391,9 +391,9 @@
   "quotation": 14.8,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 20.29,
+  "avg_pts": 18.38,
   "is_on_fire": false,
-  "popularity": 0.29,
+  "popularity": 0.289,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -448,8 +448,8 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": false,
-  "probability_of_playing": 0.25,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
   "started_from_bench": false,
   "label": "opponent"
@@ -496,9 +496,9 @@
   "quotation": 14.5,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 17.23,
+  "avg_pts": 15.95,
   "is_on_fire": false,
-  "popularity": 0.06,
+  "popularity": 0.059,
   "position": {
    "id": 30,
    "name": "Center"
@@ -531,7 +531,7 @@
   "quotation": 14.4,
   "jersey": "16",
   "face_path": null,
-  "avg_pts": 18.64,
+  "avg_pts": 17.14,
   "is_on_fire": true,
   "popularity": 0.105,
   "position": {
@@ -566,7 +566,7 @@
   "quotation": 14.3,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 14.9,
+  "avg_pts": 15.66,
   "is_on_fire": false,
   "popularity": 0.012,
   "position": {
@@ -601,7 +601,7 @@
   "quotation": 13.9,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 14.64,
+  "avg_pts": 15.69,
   "is_on_fire": false,
   "popularity": 0.018,
   "position": {
@@ -636,7 +636,7 @@
   "quotation": 13.9,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 19.3,
+  "avg_pts": 20.26,
   "is_on_fire": false,
   "popularity": 0.15,
   "position": {
@@ -671,7 +671,7 @@
   "quotation": 13.7,
   "jersey": "25",
   "face_path": null,
-  "avg_pts": 8.8,
+  "avg_pts": 18.7,
   "is_on_fire": false,
   "popularity": 0.045,
   "position": {
@@ -706,7 +706,7 @@
   "quotation": 13.6,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 15.77,
+  "avg_pts": 16.96,
   "is_on_fire": false,
   "popularity": 0.046,
   "position": {
@@ -741,7 +741,7 @@
   "quotation": 13.6,
   "jersey": "28",
   "face_path": null,
-  "avg_pts": 12.79,
+  "avg_pts": 12.43,
   "is_on_fire": false,
   "popularity": 0.034,
   "position": {
@@ -776,7 +776,7 @@
   "quotation": 13.6,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 11.03,
+  "avg_pts": 10.15,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -811,7 +811,7 @@
   "quotation": 13.5,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 13.7,
+  "avg_pts": 12.68,
   "is_on_fire": false,
   "popularity": 0.017,
   "position": {
@@ -846,7 +846,7 @@
   "quotation": 13.2,
   "jersey": "33",
   "face_path": null,
-  "avg_pts": 14.47,
+  "avg_pts": 15,
   "is_on_fire": false,
   "popularity": 0.084,
   "position": {
@@ -881,9 +881,9 @@
   "quotation": 13.2,
   "jersey": "25",
   "face_path": null,
-  "avg_pts": 12.11,
+  "avg_pts": 14.04,
   "is_on_fire": false,
-  "popularity": 0.04,
+  "popularity": 0.041,
   "position": {
    "id": 30,
    "name": "Center"
@@ -916,7 +916,7 @@
   "quotation": 13.1,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 13.98,
+  "avg_pts": 12.38,
   "is_on_fire": false,
   "popularity": 0.057,
   "position": {
@@ -951,9 +951,9 @@
   "quotation": 13.1,
   "jersey": "31",
   "face_path": null,
-  "avg_pts": 15.46,
+  "avg_pts": 16.15,
   "is_on_fire": true,
-  "popularity": 0.053,
+  "popularity": 0.054,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -986,7 +986,7 @@
   "quotation": 12.8,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 15.46,
+  "avg_pts": 13.9,
   "is_on_fire": true,
   "popularity": 0.051,
   "position": {
@@ -1021,7 +1021,7 @@
   "quotation": 12.7,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 10.27,
+  "avg_pts": 8.7,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -1056,7 +1056,7 @@
   "quotation": 12.7,
   "jersey": "41",
   "face_path": null,
-  "avg_pts": 16,
+  "avg_pts": 14.25,
   "is_on_fire": false,
   "popularity": 0.035,
   "position": {
@@ -1091,7 +1091,7 @@
   "quotation": 12.6,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 14.79,
+  "avg_pts": 15.14,
   "is_on_fire": false,
   "popularity": 0.05,
   "position": {
@@ -1126,7 +1126,7 @@
   "quotation": 12.6,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 4,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -1161,7 +1161,7 @@
   "quotation": 12.6,
   "jersey": "25",
   "face_path": null,
-  "avg_pts": 10.64,
+  "avg_pts": 11.44,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -1196,7 +1196,7 @@
   "quotation": 12.4,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 13.87,
+  "avg_pts": 14.09,
   "is_on_fire": false,
   "popularity": 0.014,
   "position": {
@@ -1221,7 +1221,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -1231,7 +1231,7 @@
   "quotation": 12.4,
   "jersey": "9",
   "face_path": null,
-  "avg_pts": 10.43,
+  "avg_pts": 10.63,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -1266,7 +1266,7 @@
   "quotation": 12.3,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 13.14,
+  "avg_pts": 12.6,
   "is_on_fire": false,
   "popularity": 0.014,
   "position": {
@@ -1301,7 +1301,7 @@
   "quotation": 12.2,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 13.57,
+  "avg_pts": 9.95,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -1326,7 +1326,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -1336,7 +1336,7 @@
   "quotation": 12.2,
   "jersey": "33",
   "face_path": null,
-  "avg_pts": 15.9,
+  "avg_pts": 16.11,
   "is_on_fire": false,
   "popularity": 0.042,
   "position": {
@@ -1371,7 +1371,7 @@
   "quotation": 12.2,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 12.93,
+  "avg_pts": 11.81,
   "is_on_fire": false,
   "popularity": 0.04,
   "position": {
@@ -1406,9 +1406,9 @@
   "quotation": 12.1,
   "jersey": "32",
   "face_path": null,
-  "avg_pts": 12.15,
+  "avg_pts": 14.34,
   "is_on_fire": false,
-  "popularity": 0.025,
+  "popularity": 0.026,
   "position": {
    "id": 30,
    "name": "Center"
@@ -1476,7 +1476,7 @@
   "quotation": 11.9,
   "jersey": "30",
   "face_path": null,
-  "avg_pts": 10.23,
+  "avg_pts": 9.91,
   "is_on_fire": false,
   "popularity": 0.012,
   "position": {
@@ -1511,7 +1511,7 @@
   "quotation": 11.9,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 19.93,
+  "avg_pts": 19.64,
   "is_on_fire": false,
   "popularity": 0.348,
   "position": {
@@ -1546,7 +1546,7 @@
   "quotation": 11.8,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 15.57,
+  "avg_pts": 16.51,
   "is_on_fire": false,
   "popularity": 0.093,
   "position": {
@@ -1581,7 +1581,7 @@
   "quotation": 11.7,
   "jersey": "23",
   "face_path": null,
-  "avg_pts": 11.78,
+  "avg_pts": 10.53,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -1616,7 +1616,7 @@
   "quotation": 11.7,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 11.37,
+  "avg_pts": 12.29,
   "is_on_fire": false,
   "popularity": 0.021,
   "position": {
@@ -1651,7 +1651,7 @@
   "quotation": 11.6,
   "jersey": "50",
   "face_path": null,
-  "avg_pts": 13.01,
+  "avg_pts": 12.76,
   "is_on_fire": false,
   "popularity": 0.018,
   "position": {
@@ -1688,7 +1688,7 @@
   "face_path": null,
   "avg_pts": 11.91,
   "is_on_fire": false,
-  "popularity": 0.035,
+  "popularity": 0.034,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1721,7 +1721,7 @@
   "quotation": 11.5,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 13.1,
+  "avg_pts": 12.43,
   "is_on_fire": false,
   "popularity": 0.045,
   "position": {
@@ -1781,7 +1781,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -1791,7 +1791,7 @@
   "quotation": 11.2,
   "jersey": "23",
   "face_path": null,
-  "avg_pts": 3.5,
+  "avg_pts": 4.14,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -1826,7 +1826,7 @@
   "quotation": 11.2,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 8.81,
+  "avg_pts": 9.96,
   "is_on_fire": false,
   "popularity": 0.016,
   "position": {
@@ -1861,9 +1861,9 @@
   "quotation": 11.1,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 16.43,
+  "avg_pts": 15.63,
   "is_on_fire": null,
-  "popularity": 0.142,
+  "popularity": 0.141,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -1966,7 +1966,7 @@
   "quotation": 10.9,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 14.21,
+  "avg_pts": 13.95,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -2036,7 +2036,7 @@
   "quotation": 10.8,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 13.4,
+  "avg_pts": 13.65,
   "is_on_fire": false,
   "popularity": 0.022,
   "position": {
@@ -2071,7 +2071,7 @@
   "quotation": 10.7,
   "jersey": "41",
   "face_path": null,
-  "avg_pts": 9.13,
+  "avg_pts": 10.38,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -2106,7 +2106,7 @@
   "quotation": 10.7,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 14.23,
+  "avg_pts": 12.33,
   "is_on_fire": false,
   "popularity": 0.04,
   "position": {
@@ -2141,7 +2141,7 @@
   "quotation": 10.7,
   "jersey": "30",
   "face_path": null,
-  "avg_pts": 10,
+  "avg_pts": 8.86,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -2176,7 +2176,7 @@
   "quotation": 10.7,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 12.43,
+  "avg_pts": 12.38,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -2211,7 +2211,7 @@
   "quotation": 10.7,
   "jersey": "32",
   "face_path": null,
-  "avg_pts": 12.64,
+  "avg_pts": 11.94,
   "is_on_fire": false,
   "popularity": 0.018,
   "position": {
@@ -2246,7 +2246,7 @@
   "quotation": 10.6,
   "jersey": "26",
   "face_path": null,
-  "avg_pts": 16.53,
+  "avg_pts": 14.71,
   "is_on_fire": true,
   "popularity": 0.164,
   "position": {
@@ -2281,7 +2281,7 @@
   "quotation": 10.5,
   "jersey": "32",
   "face_path": null,
-  "avg_pts": 12.06,
+  "avg_pts": 12.68,
   "is_on_fire": false,
   "popularity": 0.025,
   "position": {
@@ -2338,10 +2338,10 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -2376,7 +2376,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -2386,7 +2386,7 @@
   "quotation": 10.4,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 9.09,
+  "avg_pts": 9.46,
   "is_on_fire": false,
   "popularity": 0.05,
   "position": {
@@ -2421,7 +2421,7 @@
   "quotation": 10.4,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 10.94,
+  "avg_pts": 11.23,
   "is_on_fire": false,
   "popularity": 0.018,
   "position": {
@@ -2456,9 +2456,9 @@
   "quotation": 10.3,
   "jersey": "88",
   "face_path": null,
-  "avg_pts": 6.36,
+  "avg_pts": 8.59,
   "is_on_fire": false,
-  "popularity": 0.014,
+  "popularity": 0.015,
   "position": {
    "id": 30,
    "name": "Center"
@@ -2491,7 +2491,7 @@
   "quotation": 10.2,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 12.32,
+  "avg_pts": 10.27,
   "is_on_fire": false,
   "popularity": 0.019,
   "position": {
@@ -2526,7 +2526,7 @@
   "quotation": 10.1,
   "jersey": "50",
   "face_path": null,
-  "avg_pts": 8.21,
+  "avg_pts": 8.69,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -2561,7 +2561,7 @@
   "quotation": 10.1,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 2.7,
+  "avg_pts": 3.88,
   "is_on_fire": false,
   "popularity": 0.036,
   "position": {
@@ -2631,7 +2631,7 @@
   "quotation": 10,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 11.57,
+  "avg_pts": 11.25,
   "is_on_fire": false,
   "popularity": 0.012,
   "position": {
@@ -2666,7 +2666,7 @@
   "quotation": 10,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 6.6,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -2701,7 +2701,7 @@
   "quotation": 10,
   "jersey": "99",
   "face_path": null,
-  "avg_pts": 13.15,
+  "avg_pts": 12.53,
   "is_on_fire": false,
   "popularity": 0.022,
   "position": {
@@ -2736,7 +2736,7 @@
   "quotation": 9.9,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 9.29,
+  "avg_pts": 9.38,
   "is_on_fire": null,
   "popularity": 0.037,
   "position": {
@@ -2771,7 +2771,7 @@
   "quotation": 9.9,
   "jersey": "51",
   "face_path": null,
-  "avg_pts": 10.47,
+  "avg_pts": 11.96,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -2796,7 +2796,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -2806,9 +2806,9 @@
   "quotation": 9.8,
   "jersey": "31",
   "face_path": null,
-  "avg_pts": 20.44,
+  "avg_pts": 19.89,
   "is_on_fire": false,
-  "popularity": 0.365,
+  "popularity": 0.364,
   "position": {
    "id": 30,
    "name": "Center"
@@ -2841,7 +2841,7 @@
   "quotation": 9.8,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 8.7,
+  "avg_pts": 8.24,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -2866,7 +2866,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -2876,7 +2876,7 @@
   "quotation": 9.8,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 6,
+  "avg_pts": 5.14,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -2911,7 +2911,7 @@
   "quotation": 9.8,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 9.27,
+  "avg_pts": 10.36,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -2946,9 +2946,9 @@
   "quotation": 9.7,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 11.2,
+  "avg_pts": 14.61,
   "is_on_fire": false,
-  "popularity": 0.009,
+  "popularity": 0.01,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2981,9 +2981,9 @@
   "quotation": 9.7,
   "jersey": "45",
   "face_path": null,
-  "avg_pts": 6.53,
+  "avg_pts": 9.21,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.018,
   "position": {
    "id": 30,
    "name": "Center"
@@ -3006,7 +3006,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -3016,7 +3016,7 @@
   "quotation": 9.7,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 13.61,
+  "avg_pts": 12.79,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -3086,7 +3086,7 @@
   "quotation": 9.7,
   "jersey": "25",
   "face_path": null,
-  "avg_pts": 13.24,
+  "avg_pts": 13.1,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -3111,7 +3111,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -3121,7 +3121,7 @@
   "quotation": 9.7,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 8.8,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -3156,7 +3156,7 @@
   "quotation": 9.7,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 9.41,
+  "avg_pts": 9.11,
   "is_on_fire": false,
   "popularity": 0.024,
   "position": {
@@ -3191,7 +3191,7 @@
   "quotation": 9.6,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 8.66,
+  "avg_pts": 7.7,
   "is_on_fire": false,
   "popularity": 0.005,
   "position": {
@@ -3226,7 +3226,7 @@
   "quotation": 9.6,
   "jersey": "35",
   "face_path": null,
-  "avg_pts": 10.84,
+  "avg_pts": 10.99,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -3261,7 +3261,7 @@
   "quotation": 9.6,
   "jersey": "15",
   "face_path": null,
-  "avg_pts": 13.55,
+  "avg_pts": 11.04,
   "is_on_fire": false,
   "popularity": 0.05,
   "position": {
@@ -3296,7 +3296,7 @@
   "quotation": 9.5,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 7.89,
+  "avg_pts": 7.65,
   "is_on_fire": false,
   "popularity": 0.014,
   "position": {
@@ -3331,7 +3331,7 @@
   "quotation": 9.5,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 10.06,
+  "avg_pts": 10.05,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -3366,7 +3366,7 @@
   "quotation": 9.4,
   "jersey": "32",
   "face_path": null,
-  "avg_pts": 2.46,
+  "avg_pts": 2.97,
   "is_on_fire": false,
   "popularity": 0.022,
   "position": {
@@ -3401,7 +3401,7 @@
   "quotation": 9.4,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 9.43,
+  "avg_pts": 9.63,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -3436,7 +3436,7 @@
   "quotation": 9.4,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 7.13,
+  "avg_pts": 8.71,
   "is_on_fire": false,
   "popularity": 0.014,
   "position": {
@@ -3471,7 +3471,7 @@
   "quotation": 9.3,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 14.89,
+  "avg_pts": 12.9,
   "is_on_fire": false,
   "popularity": 0.101,
   "position": {
@@ -3541,7 +3541,7 @@
   "quotation": 9.3,
   "jersey": "34",
   "face_path": null,
-  "avg_pts": 8.11,
+  "avg_pts": 6.98,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -3576,7 +3576,7 @@
   "quotation": 9.2,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 10.71,
+  "avg_pts": 8.75,
   "is_on_fire": null,
   "popularity": 0.033,
   "position": {
@@ -3646,7 +3646,7 @@
   "quotation": 9.2,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 12.33,
+  "avg_pts": 9.53,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -3671,7 +3671,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -3681,7 +3681,7 @@
   "quotation": 9.1,
   "jersey": "9",
   "face_path": null,
-  "avg_pts": 7.59,
+  "avg_pts": 8.01,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -3716,7 +3716,7 @@
   "quotation": 9,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 8.87,
+  "avg_pts": 7.76,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -3751,9 +3751,9 @@
   "quotation": 9,
   "jersey": "37",
   "face_path": null,
-  "avg_pts": 13.93,
+  "avg_pts": 12.33,
   "is_on_fire": false,
-  "popularity": 0.117,
+  "popularity": 0.116,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3786,7 +3786,7 @@
   "quotation": 9,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 10.5,
+  "avg_pts": 10.1,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -3856,7 +3856,7 @@
   "quotation": 9,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 5.39,
+  "avg_pts": 6.34,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -3891,7 +3891,7 @@
   "quotation": 8.9,
   "jersey": "31",
   "face_path": null,
-  "avg_pts": 7.53,
+  "avg_pts": 7.46,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -3926,7 +3926,7 @@
   "quotation": 8.9,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 6.43,
+  "avg_pts": 8.13,
   "is_on_fire": null,
   "popularity": 0.06,
   "position": {
@@ -3961,7 +3961,7 @@
   "quotation": 8.9,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 8.09,
+  "avg_pts": 7.08,
   "is_on_fire": false,
   "popularity": 0.02,
   "position": {
@@ -4031,7 +4031,7 @@
   "quotation": 8.9,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 13.5,
+  "avg_pts": 12.64,
   "is_on_fire": false,
   "popularity": 0.119,
   "position": {
@@ -4136,7 +4136,7 @@
   "quotation": 8.9,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 3.28,
+  "avg_pts": 2.9,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -4171,7 +4171,7 @@
   "quotation": 8.9,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 9.18,
+  "avg_pts": 11.33,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -4206,7 +4206,7 @@
   "quotation": 8.9,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 9.27,
+  "avg_pts": 9.9,
   "is_on_fire": false,
   "popularity": 0.027,
   "position": {
@@ -4276,7 +4276,7 @@
   "quotation": 8.9,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 3.29,
+  "avg_pts": 3.25,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -4311,7 +4311,7 @@
   "quotation": 8.8,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 11.17,
+  "avg_pts": 11.4,
   "is_on_fire": false,
   "popularity": 0.053,
   "position": {
@@ -4346,7 +4346,7 @@
   "quotation": 8.8,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 6.9,
+  "avg_pts": 8.24,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -4381,7 +4381,7 @@
   "quotation": 8.8,
   "jersey": "88",
   "face_path": null,
-  "avg_pts": 9.13,
+  "avg_pts": 9.24,
   "is_on_fire": false,
   "popularity": 0.01,
   "position": {
@@ -4416,9 +4416,9 @@
   "quotation": 8.8,
   "jersey": "6",
   "face_path": null,
-  "avg_pts": 6.23,
+  "avg_pts": 7.93,
   "is_on_fire": false,
-  "popularity": 0.046,
+  "popularity": 0.047,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4451,7 +4451,7 @@
   "quotation": 8.8,
   "jersey": "00",
   "face_path": null,
-  "avg_pts": 9.79,
+  "avg_pts": 11.06,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -4486,7 +4486,7 @@
   "quotation": 8.8,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 3.31,
+  "avg_pts": 2.53,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -4521,7 +4521,7 @@
   "quotation": 8.7,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 4.09,
+  "avg_pts": 3.83,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -4556,7 +4556,7 @@
   "quotation": 8.7,
   "jersey": "22",
   "face_path": null,
-  "avg_pts": 9.41,
+  "avg_pts": 8.38,
   "is_on_fire": false,
   "popularity": 0.015,
   "position": {
@@ -4591,7 +4591,7 @@
   "quotation": 8.7,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 9.16,
+  "avg_pts": 10.21,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -4626,7 +4626,7 @@
   "quotation": 8.7,
   "jersey": "22",
   "face_path": null,
-  "avg_pts": 11.57,
+  "avg_pts": 11.75,
   "is_on_fire": false,
   "popularity": 0.017,
   "position": {
@@ -4696,7 +4696,7 @@
   "quotation": 8.7,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 5.22,
+  "avg_pts": 5.27,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -4731,7 +4731,7 @@
   "quotation": 8.7,
   "jersey": "45",
   "face_path": null,
-  "avg_pts": 9,
+  "avg_pts": 4.5,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -4766,9 +4766,9 @@
   "quotation": 8.6,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 15.6,
+  "avg_pts": 14.89,
   "is_on_fire": true,
-  "popularity": 0.344,
+  "popularity": 0.343,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4801,7 +4801,7 @@
   "quotation": 8.6,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 12.36,
+  "avg_pts": 12.47,
   "is_on_fire": false,
   "popularity": 0.036,
   "position": {
@@ -4826,7 +4826,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -4836,7 +4836,7 @@
   "quotation": 8.6,
   "jersey": "14",
   "face_path": null,
-  "avg_pts": 8.39,
+  "avg_pts": 8.58,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -4871,7 +4871,7 @@
   "quotation": 8.6,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 4.66,
+  "avg_pts": 5.08,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -4941,7 +4941,7 @@
   "quotation": 8.5,
   "jersey": "35",
   "face_path": null,
-  "avg_pts": 6.91,
+  "avg_pts": 6.18,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -4966,7 +4966,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -5011,7 +5011,7 @@
   "quotation": 8.4,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 4.77,
+  "avg_pts": 3.55,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -5046,7 +5046,7 @@
   "quotation": 8.4,
   "jersey": "22",
   "face_path": null,
-  "avg_pts": 1.52,
+  "avg_pts": 1.73,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -5081,7 +5081,7 @@
   "quotation": 8.4,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 10.67,
+  "avg_pts": 10.71,
   "is_on_fire": false,
   "popularity": 0.013,
   "position": {
@@ -5116,7 +5116,7 @@
   "quotation": 8.4,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 7.72,
+  "avg_pts": 6.33,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -5186,7 +5186,7 @@
   "quotation": 8.3,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 7.46,
+  "avg_pts": 7.4,
   "is_on_fire": false,
   "popularity": 0.005,
   "position": {
@@ -5221,7 +5221,7 @@
   "quotation": 8.3,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 6.43,
+  "avg_pts": 8.75,
   "is_on_fire": null,
   "popularity": 0.038,
   "position": {
@@ -5256,7 +5256,7 @@
   "quotation": 8.3,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 7.37,
+  "avg_pts": 7.14,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -5291,7 +5291,7 @@
   "quotation": 8.3,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 8.81,
+  "avg_pts": 9.71,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -5326,7 +5326,7 @@
   "quotation": 8.3,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 7.97,
+  "avg_pts": 8.35,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -5361,9 +5361,9 @@
   "quotation": 8.3,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 10.94,
+  "avg_pts": 9.08,
   "is_on_fire": false,
-  "popularity": 0.083,
+  "popularity": 0.082,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -5396,7 +5396,7 @@
   "quotation": 8.3,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 6.46,
+  "avg_pts": 6.28,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -5431,7 +5431,7 @@
   "quotation": 8.3,
   "jersey": "29",
   "face_path": null,
-  "avg_pts": 8.59,
+  "avg_pts": 9.01,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -5466,7 +5466,7 @@
   "quotation": 8.2,
   "jersey": "15",
   "face_path": null,
-  "avg_pts": 4.34,
+  "avg_pts": 4.72,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -5501,7 +5501,7 @@
   "quotation": 8.2,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 7.86,
+  "avg_pts": 6.25,
   "is_on_fire": null,
   "popularity": 0.138,
   "position": {
@@ -5536,7 +5536,7 @@
   "quotation": 8.2,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 4.28,
+  "avg_pts": 4.52,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -5571,7 +5571,7 @@
   "quotation": 8.1,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 8.09,
+  "avg_pts": 8.45,
   "is_on_fire": false,
   "popularity": 0.016,
   "position": {
@@ -5606,7 +5606,7 @@
   "quotation": 8.1,
   "jersey": "23",
   "face_path": null,
-  "avg_pts": 4.55,
+  "avg_pts": 4.33,
   "is_on_fire": false,
   "popularity": 0.014,
   "position": {
@@ -5641,7 +5641,7 @@
   "quotation": 8.1,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 10.59,
+  "avg_pts": 11.89,
   "is_on_fire": false,
   "popularity": 0.112,
   "position": {
@@ -5676,7 +5676,7 @@
   "quotation": 8.1,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 3.2,
+  "avg_pts": 3.76,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -5711,7 +5711,7 @@
   "quotation": 8.1,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 6.87,
+  "avg_pts": 8.14,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -5746,7 +5746,7 @@
   "quotation": 8.1,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 8.5,
+  "avg_pts": 7.8,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -5781,7 +5781,7 @@
   "quotation": 8.1,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 7.45,
+  "avg_pts": 8.16,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -5816,7 +5816,7 @@
   "quotation": 8.1,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 1.08,
+  "avg_pts": 4.06,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -5851,7 +5851,7 @@
   "quotation": 8.1,
   "jersey": "15",
   "face_path": null,
-  "avg_pts": 5.56,
+  "avg_pts": 4.18,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -5886,7 +5886,7 @@
   "quotation": 8,
   "jersey": "31",
   "face_path": null,
-  "avg_pts": 7.3,
+  "avg_pts": 9.11,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -5921,7 +5921,7 @@
   "quotation": 8,
   "jersey": "9",
   "face_path": null,
-  "avg_pts": 7.5,
+  "avg_pts": 8.06,
   "is_on_fire": false,
   "popularity": 0.005,
   "position": {
@@ -5946,7 +5946,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -5956,7 +5956,7 @@
   "quotation": 8,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 5.3,
+  "avg_pts": 4.78,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -5991,7 +5991,7 @@
   "quotation": 8,
   "jersey": "30",
   "face_path": null,
-  "avg_pts": 5.64,
+  "avg_pts": 7,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -6061,7 +6061,7 @@
   "quotation": 7.9,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 9.66,
+  "avg_pts": 10.08,
   "is_on_fire": false,
   "popularity": 0.045,
   "position": {
@@ -6096,7 +6096,7 @@
   "quotation": 7.9,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 5.74,
+  "avg_pts": 5.9,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -6166,7 +6166,7 @@
   "quotation": 7.9,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 12.14,
+  "avg_pts": 11.88,
   "is_on_fire": null,
   "popularity": 0.029,
   "position": {
@@ -6201,7 +6201,7 @@
   "quotation": 7.9,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 6.35,
+  "avg_pts": 5.06,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -6236,7 +6236,7 @@
   "quotation": 7.9,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 3.67,
+  "avg_pts": 3.09,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -6271,7 +6271,7 @@
   "quotation": 7.9,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 3.27,
+  "avg_pts": 3.94,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -6306,7 +6306,7 @@
   "quotation": 7.8,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 10.05,
+  "avg_pts": 9.33,
   "is_on_fire": false,
   "popularity": 0.025,
   "position": {
@@ -6341,7 +6341,7 @@
   "quotation": 7.8,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 3.75,
+  "avg_pts": 3.2,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -6366,7 +6366,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -6376,7 +6376,7 @@
   "quotation": 7.8,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 4.94,
+  "avg_pts": 6.95,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -6411,7 +6411,7 @@
   "quotation": 7.8,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 1,
   "is_on_fire": null,
   "popularity": 0.006,
   "position": {
@@ -6446,7 +6446,7 @@
   "quotation": 7.7,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 9.1,
+  "avg_pts": 10.16,
   "is_on_fire": false,
   "popularity": 0.043,
   "position": {
@@ -6481,7 +6481,7 @@
   "quotation": 7.7,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 5,
+  "avg_pts": 5.63,
   "is_on_fire": null,
   "popularity": 0.011,
   "position": {
@@ -6516,7 +6516,7 @@
   "quotation": 7.7,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 7.9,
+  "avg_pts": 8.43,
   "is_on_fire": false,
   "popularity": 0.016,
   "position": {
@@ -6586,7 +6586,7 @@
   "quotation": 7.6,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 7.47,
+  "avg_pts": 6.81,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -6621,7 +6621,7 @@
   "quotation": 7.5,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 8.87,
+  "avg_pts": 7.6,
   "is_on_fire": false,
   "popularity": 0.011,
   "position": {
@@ -6656,9 +6656,9 @@
   "quotation": 7.5,
   "jersey": "22",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 9,
   "is_on_fire": null,
-  "popularity": 0,
+  "popularity": 0.001,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -6679,7 +6679,7 @@
    "number": 2
   },
   "is_injured": false,
-  "probability_of_playing": 0.5,
+  "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": true,
   "label": "opponent"
@@ -6713,10 +6713,10 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -6796,7 +6796,7 @@
   "quotation": 7.4,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 6.69,
+  "avg_pts": 7.1,
   "is_on_fire": false,
   "popularity": 0.016,
   "position": {
@@ -6821,7 +6821,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -6831,7 +6831,7 @@
   "quotation": 7.4,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 6.73,
+  "avg_pts": 6.14,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -6866,7 +6866,7 @@
   "quotation": 7.4,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 5.2,
+  "avg_pts": 4.83,
   "is_on_fire": false,
   "popularity": 0.029,
   "position": {
@@ -6901,7 +6901,7 @@
   "quotation": 7.4,
   "jersey": "15",
   "face_path": null,
-  "avg_pts": 8.89,
+  "avg_pts": 10.25,
   "is_on_fire": false,
   "popularity": 0.039,
   "position": {
@@ -6971,7 +6971,7 @@
   "quotation": 7.3,
   "jersey": "93",
   "face_path": null,
-  "avg_pts": 5.45,
+  "avg_pts": 5.46,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -7006,7 +7006,7 @@
   "quotation": 7.3,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": -2.7,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -7041,7 +7041,7 @@
   "quotation": 7.2,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 2.53,
+  "avg_pts": 4.17,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -7076,7 +7076,7 @@
   "quotation": 7.1,
   "jersey": "66",
   "face_path": null,
-  "avg_pts": 7.3,
+  "avg_pts": 7.26,
   "is_on_fire": false,
   "popularity": 0.022,
   "position": {
@@ -7181,7 +7181,7 @@
   "quotation": 7.1,
   "jersey": "77",
   "face_path": null,
-  "avg_pts": 5.01,
+  "avg_pts": 4.8,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -7251,7 +7251,7 @@
   "quotation": 7,
   "jersey": "32",
   "face_path": null,
-  "avg_pts": 3.66,
+  "avg_pts": 3.45,
   "is_on_fire": false,
   "popularity": 0.005,
   "position": {
@@ -7286,7 +7286,7 @@
   "quotation": 7,
   "jersey": "77",
   "face_path": null,
-  "avg_pts": -0.54,
+  "avg_pts": -0.62,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -7343,10 +7343,10 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -7356,7 +7356,7 @@
   "quotation": 6.9,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 5.11,
+  "avg_pts": 5.16,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -7426,7 +7426,7 @@
   "quotation": 6.8,
   "jersey": "9",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 2,
   "is_on_fire": false,
   "popularity": 0,
   "position": {
@@ -7448,10 +7448,10 @@
    "id": 2541,
    "number": 2
   },
-  "is_injured": true,
-  "probability_of_playing": 0,
+  "is_injured": false,
+  "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -7461,7 +7461,7 @@
   "quotation": 6.8,
   "jersey": "41",
   "face_path": null,
-  "avg_pts": 5.77,
+  "avg_pts": 6.15,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -7531,7 +7531,7 @@
   "quotation": 6.8,
   "jersey": "40",
   "face_path": null,
-  "avg_pts": 8.97,
+  "avg_pts": 9.36,
   "is_on_fire": false,
   "popularity": 0.044,
   "position": {
@@ -7601,9 +7601,9 @@
   "quotation": 6.7,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 5,
+  "avg_pts": 7.5,
   "is_on_fire": null,
-  "popularity": 0.13,
+  "popularity": 0.131,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7636,7 +7636,7 @@
   "quotation": 6.7,
   "jersey": "51",
   "face_path": null,
-  "avg_pts": 5.99,
+  "avg_pts": 6.2,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -7671,7 +7671,7 @@
   "quotation": 6.6,
   "jersey": "51",
   "face_path": null,
-  "avg_pts": 2.98,
+  "avg_pts": 5.23,
   "is_on_fire": false,
   "popularity": 0.007,
   "position": {
@@ -7706,9 +7706,9 @@
   "quotation": 6.6,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 1.43,
+  "avg_pts": 3.75,
   "is_on_fire": null,
-  "popularity": 0.117,
+  "popularity": 0.116,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7741,7 +7741,7 @@
   "quotation": 6.5,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 0.71,
+  "avg_pts": -1.88,
   "is_on_fire": null,
   "popularity": 0.015,
   "position": {
@@ -7776,7 +7776,7 @@
   "quotation": 6.5,
   "jersey": "30",
   "face_path": null,
-  "avg_pts": -0.9,
+  "avg_pts": -1.18,
   "is_on_fire": false,
   "popularity": 0.005,
   "position": {
@@ -7811,7 +7811,7 @@
   "quotation": 6.5,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 1.24,
+  "avg_pts": 3.23,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -7846,7 +7846,7 @@
   "quotation": 6.5,
   "jersey": "35",
   "face_path": null,
-  "avg_pts": 3.52,
+  "avg_pts": 2.89,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -7986,7 +7986,7 @@
   "quotation": 6.4,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 1.2,
+  "avg_pts": 1.53,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -8021,7 +8021,7 @@
   "quotation": 6.4,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 6.04,
+  "avg_pts": 8.86,
   "is_on_fire": false,
   "popularity": 0.027,
   "position": {
@@ -8056,7 +8056,7 @@
   "quotation": 6.4,
   "jersey": "15",
   "face_path": null,
-  "avg_pts": 2.83,
+  "avg_pts": 2.48,
   "is_on_fire": false,
   "popularity": 0.001,
   "position": {
@@ -8091,7 +8091,7 @@
   "quotation": 6.3,
   "jersey": "92",
   "face_path": null,
-  "avg_pts": 6.54,
+  "avg_pts": 6.28,
   "is_on_fire": false,
   "popularity": 0.01,
   "position": {
@@ -8126,7 +8126,7 @@
   "quotation": 6.3,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 5.71,
+  "avg_pts": 4.38,
   "is_on_fire": null,
   "popularity": 0.095,
   "position": {
@@ -8161,7 +8161,7 @@
   "quotation": 6.3,
   "jersey": "3",
   "face_path": null,
-  "avg_pts": 4.83,
+  "avg_pts": 5.87,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -8196,7 +8196,7 @@
   "quotation": 6.3,
   "jersey": "14",
   "face_path": null,
-  "avg_pts": 6.5,
+  "avg_pts": 6.65,
   "is_on_fire": false,
   "popularity": 0.02,
   "position": {
@@ -8266,7 +8266,7 @@
   "quotation": 6.2,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 7.66,
+  "avg_pts": 8.63,
   "is_on_fire": false,
   "popularity": 0.058,
   "position": {
@@ -8406,9 +8406,9 @@
   "quotation": 6.1,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 2.9,
+  "avg_pts": 4.42,
   "is_on_fire": false,
-  "popularity": 0.004,
+  "popularity": 0.005,
   "position": {
    "id": 30,
    "name": "Center"
@@ -8441,7 +8441,7 @@
   "quotation": 6,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 4.4,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -8476,7 +8476,7 @@
   "quotation": 6,
   "jersey": "43",
   "face_path": null,
-  "avg_pts": 6.56,
+  "avg_pts": 5.13,
   "is_on_fire": false,
   "popularity": 0.01,
   "position": {
@@ -8511,7 +8511,7 @@
   "quotation": 5.9,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 4.66,
+  "avg_pts": 3.45,
   "is_on_fire": false,
   "popularity": 0.03,
   "position": {
@@ -8546,7 +8546,7 @@
   "quotation": 5.9,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 1.92,
+  "avg_pts": 2.11,
   "is_on_fire": false,
   "popularity": 0.013,
   "position": {
@@ -8581,7 +8581,7 @@
   "quotation": 5.9,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 4.33,
+  "avg_pts": 4.06,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -8616,7 +8616,7 @@
   "quotation": 5.9,
   "jersey": "2",
   "face_path": null,
-  "avg_pts": 7.76,
+  "avg_pts": 6.45,
   "is_on_fire": false,
   "popularity": 0.058,
   "position": {
@@ -8721,7 +8721,7 @@
   "quotation": 5.8,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 4.55,
+  "avg_pts": 3.39,
   "is_on_fire": false,
   "popularity": 0.026,
   "position": {
@@ -8896,7 +8896,7 @@
   "quotation": 5.6,
   "jersey": "34",
   "face_path": null,
-  "avg_pts": 3.93,
+  "avg_pts": 3.44,
   "is_on_fire": false,
   "popularity": 0.005,
   "position": {
@@ -8931,7 +8931,7 @@
   "quotation": 5.6,
   "jersey": "44",
   "face_path": null,
-  "avg_pts": 3.04,
+  "avg_pts": 2.55,
   "is_on_fire": false,
   "popularity": 0.024,
   "position": {
@@ -9001,7 +9001,7 @@
   "quotation": 5.4,
   "jersey": "10",
   "face_path": null,
-  "avg_pts": 3.13,
+  "avg_pts": 4.25,
   "is_on_fire": false,
   "popularity": 0.003,
   "position": {
@@ -9036,7 +9036,7 @@
   "quotation": 5.4,
   "jersey": "34",
   "face_path": null,
-  "avg_pts": 0.77,
+  "avg_pts": 1.91,
   "is_on_fire": false,
   "popularity": 0.032,
   "position": {
@@ -9071,7 +9071,7 @@
   "quotation": 5.3,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 6.34,
+  "avg_pts": 7.48,
   "is_on_fire": false,
   "popularity": 0.069,
   "position": {
@@ -9106,7 +9106,7 @@
   "quotation": 5.3,
   "jersey": "20",
   "face_path": null,
-  "avg_pts": 2.74,
+  "avg_pts": 2.29,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -9141,7 +9141,7 @@
   "quotation": 5.3,
   "jersey": "12",
   "face_path": null,
-  "avg_pts": 1.38,
+  "avg_pts": 1.76,
   "is_on_fire": false,
   "popularity": 0.002,
   "position": {
@@ -9176,7 +9176,7 @@
   "quotation": 5.2,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 1.43,
+  "avg_pts": 0.63,
   "is_on_fire": null,
   "popularity": 0.029,
   "position": {
@@ -9281,7 +9281,7 @@
   "quotation": 5.1,
   "jersey": null,
   "face_path": null,
-  "avg_pts": -4.29,
+  "avg_pts": -4.38,
   "is_on_fire": null,
   "popularity": 0.008,
   "position": {
@@ -9351,7 +9351,7 @@
   "quotation": 5.1,
   "jersey": "8",
   "face_path": null,
-  "avg_pts": 4.3,
+  "avg_pts": 3.54,
   "is_on_fire": false,
   "popularity": 0.036,
   "position": {
@@ -9386,7 +9386,7 @@
   "quotation": 5,
   "jersey": null,
   "face_path": null,
-  "avg_pts": -2.86,
+  "avg_pts": -5,
   "is_on_fire": null,
   "popularity": 0.027,
   "position": {
@@ -9421,7 +9421,7 @@
   "quotation": 5,
   "jersey": "6",
   "face_path": null,
-  "avg_pts": 6.34,
+  "avg_pts": 7.48,
   "is_on_fire": false,
   "popularity": 0.098,
   "position": {
@@ -9491,7 +9491,7 @@
   "quotation": 5,
   "jersey": "25",
   "face_path": null,
-  "avg_pts": 6.25,
+  "avg_pts": 5.4,
   "is_on_fire": false,
   "popularity": 0.015,
   "position": {
@@ -9598,7 +9598,7 @@
   "face_path": null,
   "avg_pts": 3.5,
   "is_on_fire": false,
-  "popularity": 0.015,
+  "popularity": 0.016,
   "position": {
    "id": 30,
    "name": "Center"
@@ -9631,7 +9631,7 @@
   "quotation": 4.9,
   "jersey": "23",
   "face_path": null,
-  "avg_pts": 5.89,
+  "avg_pts": 4.93,
   "is_on_fire": false,
   "popularity": 0.035,
   "position": {
@@ -9666,7 +9666,7 @@
   "quotation": 4.9,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 5.74,
+  "avg_pts": 6.07,
   "is_on_fire": false,
   "popularity": 0.023,
   "position": {
@@ -9701,7 +9701,7 @@
   "quotation": 4.9,
   "jersey": "1",
   "face_path": null,
-  "avg_pts": 6.12,
+  "avg_pts": 5.24,
   "is_on_fire": false,
   "popularity": 0.041,
   "position": {
@@ -9736,7 +9736,7 @@
   "quotation": 4.8,
   "jersey": null,
   "face_path": null,
-  "avg_pts": 3.57,
+  "avg_pts": 1.88,
   "is_on_fire": null,
   "popularity": 0.033,
   "position": {
@@ -9876,7 +9876,7 @@
   "quotation": 4.7,
   "jersey": "13",
   "face_path": null,
-  "avg_pts": 4.83,
+  "avg_pts": 5.09,
   "is_on_fire": false,
   "popularity": 0.074,
   "position": {
@@ -9911,7 +9911,7 @@
   "quotation": 4.7,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 2.74,
+  "avg_pts": 4.12,
   "is_on_fire": false,
   "popularity": 0.004,
   "position": {
@@ -9946,7 +9946,7 @@
   "quotation": 4.6,
   "jersey": "4",
   "face_path": null,
-  "avg_pts": 4.86,
+  "avg_pts": 4.66,
   "is_on_fire": false,
   "popularity": 0.022,
   "position": {
@@ -10051,9 +10051,9 @@
   "quotation": 4.4,
   "jersey": "23",
   "face_path": null,
-  "avg_pts": 2.97,
+  "avg_pts": 3.11,
   "is_on_fire": false,
-  "popularity": 0.04,
+  "popularity": 0.039,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10086,7 +10086,7 @@
   "quotation": 4.4,
   "jersey": "7",
   "face_path": null,
-  "avg_pts": 6.08,
+  "avg_pts": 5.74,
   "is_on_fire": false,
   "popularity": 0.11,
   "position": {
@@ -10261,7 +10261,7 @@
   "quotation": 4.3,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 3.03,
+  "avg_pts": 2.22,
   "is_on_fire": false,
   "popularity": 0.019,
   "position": {
@@ -10296,7 +10296,7 @@
   "quotation": 4.3,
   "jersey": "77",
   "face_path": null,
-  "avg_pts": 2.9,
+  "avg_pts": 3.91,
   "is_on_fire": false,
   "popularity": 0.109,
   "position": {
@@ -10331,7 +10331,7 @@
   "quotation": 4.3,
   "jersey": "24",
   "face_path": null,
-  "avg_pts": 1.58,
+  "avg_pts": 1.26,
   "is_on_fire": false,
   "popularity": 0.006,
   "position": {
@@ -10401,7 +10401,7 @@
   "quotation": 4.3,
   "jersey": "23",
   "face_path": null,
-  "avg_pts": 4.42,
+  "avg_pts": 3.53,
   "is_on_fire": false,
   "popularity": 0.04,
   "position": {
@@ -10436,9 +10436,9 @@
   "quotation": 4.2,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 3.36,
+  "avg_pts": 3.31,
   "is_on_fire": false,
-  "popularity": 0.206,
+  "popularity": 0.205,
   "position": {
    "id": 30,
    "name": "Center"
@@ -10471,7 +10471,7 @@
   "quotation": 4.2,
   "jersey": null,
   "face_path": null,
-  "avg_pts": -5,
+  "avg_pts": -3.13,
   "is_on_fire": null,
   "popularity": 0.019,
   "position": {
@@ -10541,7 +10541,7 @@
   "quotation": 4.1,
   "jersey": "16",
   "face_path": null,
-  "avg_pts": 4.43,
+  "avg_pts": 4.29,
   "is_on_fire": false,
   "popularity": 0.178,
   "position": {
@@ -10576,7 +10576,7 @@
   "quotation": 4.1,
   "jersey": "9",
   "face_path": null,
-  "avg_pts": 3.27,
+  "avg_pts": 3.83,
   "is_on_fire": false,
   "popularity": 0.075,
   "position": {
@@ -10646,7 +10646,7 @@
   "quotation": 4,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 2.55,
+  "avg_pts": 3.53,
   "is_on_fire": false,
   "popularity": 0.019,
   "position": {
@@ -10681,7 +10681,7 @@
   "quotation": 4,
   "jersey": null,
   "face_path": null,
-  "avg_pts": -6.43,
+  "avg_pts": -6.88,
   "is_on_fire": null,
   "popularity": 0.008,
   "position": {
@@ -10716,7 +10716,7 @@
   "quotation": 4,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": -1.48,
+  "avg_pts": 0.62,
   "is_on_fire": false,
   "popularity": 0.009,
   "position": {
@@ -10751,7 +10751,7 @@
   "quotation": 4,
   "jersey": null,
   "face_path": null,
-  "avg_pts": -3.57,
+  "avg_pts": -3.75,
   "is_on_fire": null,
   "popularity": 0.018,
   "position": {
@@ -10926,7 +10926,7 @@
   "quotation": 4,
   "jersey": null,
   "face_path": null,
-  "avg_pts": -5,
+  "avg_pts": -3.13,
   "is_on_fire": null,
   "popularity": 0.014,
   "position": {
@@ -11066,7 +11066,7 @@
   "quotation": 4,
   "jersey": "33",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": 9,
   "is_on_fire": false,
   "popularity": 0.008,
   "position": {
@@ -11101,7 +11101,7 @@
   "quotation": 4,
   "jersey": "6",
   "face_path": null,
-  "avg_pts": 1,
+  "avg_pts": 5.5,
   "is_on_fire": false,
   "popularity": 0.154,
   "position": {
@@ -11136,9 +11136,9 @@
   "quotation": 4,
   "jersey": "17",
   "face_path": null,
-  "avg_pts": 2.25,
+  "avg_pts": 1.2,
   "is_on_fire": false,
-  "popularity": 0.05,
+  "popularity": 0.051,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -11241,7 +11241,7 @@
   "quotation": 4,
   "jersey": "0",
   "face_path": null,
-  "avg_pts": 2.78,
+  "avg_pts": 2.39,
   "is_on_fire": false,
   "popularity": 0.149,
   "position": {
@@ -11346,7 +11346,7 @@
   "quotation": 4,
   "jersey": "6",
   "face_path": null,
-  "avg_pts": 2.33,
+  "avg_pts": 2,
   "is_on_fire": false,
   "popularity": 0.019,
   "position": {
@@ -11371,7 +11371,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -11453,7 +11453,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.005,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -11486,7 +11486,7 @@
   "quotation": 4,
   "jersey": "11",
   "face_path": null,
-  "avg_pts": 0.67,
+  "avg_pts": 1.57,
   "is_on_fire": false,
   "popularity": 0.019,
   "position": {
@@ -11801,7 +11801,7 @@
   "quotation": 4,
   "jersey": "21",
   "face_path": null,
-  "avg_pts": 2,
+  "avg_pts": 0.1,
   "is_on_fire": false,
   "popularity": 0.01,
   "position": {
@@ -11873,7 +11873,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.007,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -12118,7 +12118,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.001,
+  "popularity": 0.002,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -12221,9 +12221,9 @@
   "quotation": 4,
   "jersey": "5",
   "face_path": null,
-  "avg_pts": 0,
+  "avg_pts": -3.6,
   "is_on_fire": false,
-  "popularity": 0.002,
+  "popularity": 0.003,
   "position": {
    "id": 28,
    "name": "Guard"

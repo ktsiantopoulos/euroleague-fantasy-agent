@@ -66,7 +66,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 3930,Yam,Madar,8.8,top100_md1,1
 3993,Matthew,Strazel,10.3,top100_md1,1
 3808,Codi,Miller-Mcintyre,11.0,fantasyedge,1
-4688,Lonnie,Walker IV,10.4,first_seen,8
+4688,Lonnie,Walker IV,10.8,fantasyedge,1
 4180,Devon,Dotson,9.9,fantasyedge,1
 3888,Sterling,Brown,10.6,top100_md1,1
 3870,Tyrique,Jones,12.0,fantasyedge,1
@@ -92,7 +92,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 3821,Donta,Hall,10.9,top100_md1,1
 8730,Kenneth,Faried,9.5,fantasyedge,1
 8368,Mamadi,Diakite,10.1,fantasyedge,1
-8815,Cameron,Payne,9.6,first_seen,8
+8815,Cameron,Payne,9.4,fantasyedge,1
 4210,Anthony,Brown,9.7,top100_md1,1
 4808,Bruno,Fernando,10.3,top100_md1,1
 3822,Joel,Bolomboy,10.4,top100_md1,1
@@ -162,7 +162,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 3911,Kevarrius,Hayes,7.3,top100_md1,1
 3940,Nick,Weiler-Babb,10.0,fantasyedge,1
 4108,Dj,Stewart,8.8,fantasyedge,1
-4192,Marcio,Santos,8.1,first_seen,8
+4192,Marcio,Santos,8.4,fantasyedge,1
 4670,Saben,Lee,8.6,fantasyedge,1
 11491,David,Dejulius,9.9,fantasyedge,1
 11537,Gonzalo,Corbalan,9.0,fantasyedge,1
@@ -244,7 +244,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 4167,Ish,Wainright,6.5,fantasyedge,1
 4258,Josep,Puerto,5.5,top100_md1,1
 3904,Justin,Anderson,6.5,fantasyedge,1
-3922,Juhann,Begarin,5.8,first_seen,8
+3922,Juhann,Begarin,6.2,fantasyedge,1
 3967,Dario,Brizuela,6.4,fantasyedge,1
 7234,Yankuba,Sima,6.5,fantasyedge,1
 11525,Antonis,Karagiannidis,6.5,fantasyedge,1
@@ -270,7 +270,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 7223,Clement,Frisch,5.1,top100_md1,1
 11531,Nobel,Boungou-colo,5.7,fantasyedge,1
 3936,Nikos,Rogkavopoulos,4.5,top100_md1,1
-3947,Bryant,Dunston,4.9,first_seen,8
+3947,Bryant,Dunston,5.6,fantasyedge,1
 3985,David,Lighty,4.8,fantasyedge,1
 4546,Joel,Ayayi,5.0,fantasyedge,1
 11521,Marc-owen,Fodzo Dada,4.8,top100_md1,1
@@ -299,7 +299,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 11548,Tommaso,Baldasso,4.4,fantasyedge,1
 3867,Kostas,Papanikolaou,4.3,top100_md1,1
 3916,Gabriele,Procida,4.1,top100_md1,1
-3968,Bandja,Sy,4.1,first_seen,8
+3968,Bandja,Sy,5.0,fantasyedge,1
 3896,Juan,Nunez,4.6,top100_md1,1
 3955,Velimir,Perasovic,5.0,fantasyedge,1
 3972,Justus,Hollatz,5.1,top100_md1,1
@@ -334,7 +334,7 @@ player_id,first_name,last_name,price_base,source,seen_md
 7250,Ioannis,Kouzeloglou,4.0,fantasyedge,1
 7254,Itay,Segev,4.0,top100_md1,1
 7255,Omiros,Netzipoglou,4.0,fantasyedge,1
-7347,George,Papas,4.0,first_seen,8
+7347,George,Papas,4.4,fantasyedge,1
 8677,Pedro,Souza,4.0,fantasyedge,1
 8681,Aleksej,Nedeljkovic,4.0,fantasyedge,1
 8769,Uros,Danilovic,4.0,fantasyedge,1
@@ -358,6 +358,6 @@ player_id,first_name,last_name,price_base,source,seen_md
 12471,Iason,Varvaritis,4.0,fantasyedge,1
 12517,Abdu,Kone,4.0,fantasyedge,1
 3842,Scottie,Wilbekin,7.5,fantasyedge,1
-3788,Keenan,Evans,8.5,first_seen,8
+3788,Keenan,Evans,8.6,fantasyedge,1
 13935,Antonio,Reeves,7.8,first_seen,8
 13936,Robert,Franks,7.5,first_seen,8

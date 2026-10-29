@@ -1,13 +1,13 @@
 {
  "formation_id": 29,
  "latest_snapshot": {
-  "formation_id": 31,
+  "formation_id": 30,
   "players": [
    {
     "id": 3766,
-    "court_position": 6,
-    "is_captain": false,
-    "active": false
+    "court_position": 3,
+    "is_captain": true,
+    "active": true
    },
    {
     "id": 3785,
@@ -17,21 +17,21 @@
    },
    {
     "id": 3850,
-    "court_position": 4,
-    "is_captain": true,
-    "active": true
-   },
-   {
-    "id": 3851,
     "court_position": 5,
     "is_captain": false,
     "active": true
    },
    {
-    "id": 3867,
+    "id": 3851,
     "court_position": 8,
     "is_captain": false,
-    "active": false
+    "active": true
+   },
+   {
+    "id": 3867,
+    "court_position": 10,
+    "is_captain": false,
+    "active": true
    },
    {
     "id": 3938,
@@ -41,19 +41,19 @@
    },
    {
     "id": 3948,
-    "court_position": 10,
+    "court_position": 4,
     "is_captain": false,
-    "active": false
+    "active": true
    },
    {
     "id": 4088,
     "court_position": 9,
     "is_captain": false,
-    "active": false
+    "active": true
    },
    {
     "id": 4096,
-    "court_position": 3,
+    "court_position": 6,
     "is_captain": false,
     "active": true
    },
@@ -61,13 +61,13 @@
     "id": 7209,
     "court_position": 2,
     "is_captain": false,
-    "active": false
+    "active": true
    },
    {
     "id": 7424,
     "court_position": 1,
     "is_captain": false,
-    "active": false
+    "active": true
    }
   ]
  },
@@ -499,7 +499,7 @@
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": true,
+   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,

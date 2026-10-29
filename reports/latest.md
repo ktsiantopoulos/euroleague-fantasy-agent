@@ -1,36 +1,36 @@
-## run reason: pre-deadline (1.5h)  (deadline 2026-10-28T17:29:00+00:00, 1.52 h away)
+## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -10.68 h away)
 ## pull-official
-E2026: 76 games played, 6 box scores fetched now
+E2026: 80 games played, 4 box scores fetched now
 
 ## pull-platform
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_08
-team: UnderTakers86  credits: 105.9  trades used: 4/4
+team: UnderTakers86  credits: 107.3  trades used: 4/4
 
 ## pull-external
-  fantasyedge: 365 players, 15 columns kept
-price base: fantasyedge 229, top100_md1 122, first_seen 11
+  fantasyedge: 373 players, 15 columns kept
+price base: fantasyedge 237, top100_md1 122, first_seen 3
 
 ## build
         games  rows  mismatches
 season                         
-E2026      76  1821           0
+E2026      80  1915           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    290
-UNMATCHED        51
+surname+team    297
+UNMATCHED        44
 coach            20
-team context: 20 clubs · usage: 281 players · FDR: 20 clubs x next 5
-price base: fantasyedge 229, top100_md1 122, first_seen 11
+team context: 20 clubs · usage: 288 players · FDR: 20 clubs x next 5
+price base: fantasyedge 237, top100_md1 122, first_seen 3
 matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
 T2=2026-10-28
 
 ## reconcile
 player-games compared: 2475
 exact matches: 1653 (66.8%)
-  no_player: 471
-  no_boxscore_row: 337
+  no_player: 443
+  no_boxscore_row: 365
   MISMATCH: 14
 
 first mismatches:
@@ -70,8 +70,23 @@ no completed matchday with a stored projection yet - evaluation starts after the
 first played matchday
 
 ## learn
-learn: hold-out R8 MAE current 6.02 vs candidate 6.00 (w=(0.2, 0.3, 0.5), λ=0.3,
+learn: hold-out R8 MAE current 6.11 vs candidate 6.10 (w=(0.2, 0.3, 0.5), λ=0.3,
 γ=1.0) → kept current
+
+## top-100
+top-100: 280 roster previews fetched now
+# Top-140 managers — matchdays 1–7
+
+## Ownership in the top 140, matchday 7
+
+| player | pos | club | price | top own% | global% | captain # |
+|---|---|---|---|---|---|---|
+| Aliou Diarra | C | VIR | 9.3 | 87 | 36 | 7 |
+| Theo Maledon | G | RMB | 12.3 | 79 | 35 | 0 |
+| Andres Feliz | G | RMB | 8.2 | 71 | 34 | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 70 | 45 | 52 |
+| Tomas Masiulis | H | ZAL | 6.3 | 66 | 12 | 0 |
+| Elijah Bryant | G | HTA | 17.4 | 51 | 13 | 0 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
