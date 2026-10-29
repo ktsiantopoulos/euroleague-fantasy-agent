@@ -1,12 +1,13 @@
-## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -10.68 h away)
+## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -10.83 h away)
 ## pull-official
-E2026: 80 games played, 4 box scores fetched now
+E2026: 80 games played, 0 box scores fetched now
 
 ## pull-platform
+  ! platform still reports MD 8 (all games played) - rolled over to MD 9, deadline 2026-10-29 18:59 UTC from the schedule
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
-taking/md_08
-team: UnderTakers86  credits: 107.3  trades used: 4/4
+taking/md_09
+team: UnderTakers86  credits: 107.3  trades used: 0/4
 
 ## pull-external
   fantasyedge: 373 players, 15 columns kept
@@ -18,20 +19,20 @@ season
 E2026      80  1915           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    297
+surname+team    298
 UNMATCHED        44
-coach            20
+coach            19
 team context: 20 clubs · usage: 288 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 3
 matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
-T2=2026-10-28
+T2=2026-10-28, T1=2026-10-29, T2=2026-10-30
 
 ## reconcile
-player-games compared: 2475
-exact matches: 1653 (66.8%)
-  no_player: 443
-  no_boxscore_row: 365
-  MISMATCH: 14
+player-games compared: 2834
+exact matches: 1881 (66.4%)
+  no_player: 513
+  no_boxscore_row: 425
+  MISMATCH: 15
 
 first mismatches:
 platform_id  matchday person_code  game_code  platform_pts  official_pir  
@@ -46,6 +47,8 @@ official_min team_won  expected_pts   status
 9.033333     True           3.3 MISMATCH
        3769         6      005791         53          15.4          13.0     
 16.983333     True          14.3 MISMATCH
+       3788         8      011218         80           0.0           2.0     
+18.550000     True           2.2 MISMATCH
        3810         6      009783         52          15.4          13.0     
 17.583333     True          14.3 MISMATCH
        3857         7      012788         61           7.7           6.0      
@@ -66,27 +69,43 @@ official_min team_won  expected_pts   status
 19.366667     True           5.5 MISMATCH
 
 ## evaluate
-no completed matchday with a stored projection yet - evaluation starts after the
-first played matchday
+# Projection evaluation
+
+- MD8: 296 players · MAE 4.49 (platform avg_pts baseline 5.08) · bias -0.05 · 
+corr 0.681
+
+## Bias by segment (mean projected − actual; positive = we over-project)
+- position: Center -2.1 (n=56), Forward +0.6 (n=105), Guard +0.3 (n=135)
+- projected minutes: <10 +0.7 (n=61), 10-20 +0.1 (n=151), 20-30 -1.0 (n=73)
+- price: ≤6 +1.0 (n=73), 6-9 -0.4 (n=121), 9-13 +0.4 (n=74), 13+ -2.5 (n=28)
+- availability: doubtful +0.3 (n=20), fit -0.1 (n=276)
+
+## Biggest misses
+- under-projected: Antonio Blakeney (12→38), Elijah Bryant (19→38), Tyson Carter
+(9→29), Donta Hall (8→25), Kendrick Nunn (12→29)
+- over-projected: Sylvain Francisco (13→-1), Yam Madar (16→2), Tadas Sedekerskis
+(13→0), Dario Saric (12→0), Marcus Carr (11→-1)
+
+## Coaches: MAE 9.7, bias +0.9 (n=19)
 
 ## learn
 learn: hold-out R8 MAE current 6.11 vs candidate 6.10 (w=(0.2, 0.3, 0.5), λ=0.3,
 γ=1.0) → kept current
 
 ## top-100
-top-100: 280 roster previews fetched now
-# Top-140 managers — matchdays 1–7
+top-100: 100 roster previews fetched now
+# Top-140 managers — matchdays 1–8
 
-## Ownership in the top 140, matchday 7
+## Ownership in the top 140, matchday 8
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 9.3 | 87 | 36 | 7 |
-| Theo Maledon | G | RMB | 12.3 | 79 | 35 | 0 |
-| Andres Feliz | G | RMB | 8.2 | 71 | 34 | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 70 | 45 | 52 |
-| Tomas Masiulis | H | ZAL | 6.3 | 66 | 12 | 0 |
-| Elijah Bryant | G | HTA | 17.4 | 51 | 13 | 0 |
+| Theo Maledon | G | RMB | 11.9 | 59 | 35 | 0 |
+| Andres Feliz | G | RMB | 8.6 | 56 | 34 | 0 |
+| Sasha Vezenkov | F | OLY | 18.4 | 56 | 45 | 36 |
+| Aliou Diarra | C | VIR | 9.8 | 49 | 36 | 0 |
+| Mfiondu Kabengele | C | DUB | 15.6 | 47 | 17 | 35 |
+| Elijah Bryant | G | HTA | 17.2 | 39 | 13 | 14 |
 
 ## backtest
              subset   n  mae_model  corr_model  mae_base_mean  corr_base_mean  
@@ -103,4 +122,4 @@ projected >= 15 min 512       6.20       0.311           6.58           0.284
 ownership (raw model value kept as md_pts_model).
 - Soft rules from the top-100 study: 3 points penalty per player above 3 from 
 one club; 1 point per credit for bench players under 6.0.
-- Optimiser status: Optimal / Optimal.
+- Optimiser status: Optimal / Optimal (night-balance relaxed).

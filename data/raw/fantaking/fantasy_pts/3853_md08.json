@@ -1,0 +1,44 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2540,
+  "number": 1
+ },
+ "match": {
+  "id": 12000,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-27T19:15:00.000000Z",
+  "home_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 80
+  },
+  "away_team": {
+   "id": 145,
+   "name": "Armani Olimpia Milan",
+   "abbreviation": "MIL",
+   "score": 75
+  }
+ },
+ "fantasy_pts": 1.1,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

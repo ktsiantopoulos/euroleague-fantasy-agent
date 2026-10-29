@@ -10779,3 +10779,1103 @@ team_id,team_name,rank,matchday,team_pts_md,trades,formation_id,player_id,player
 2666509,,,7,205.3,8,27,3991,Alberto Abalde,Forward,RMB,9,B,False,19.8,4.4,True
 2666509,,,7,205.3,8,27,7255,Omiros Netzipoglou,Guard,OLY,10,B,False,2.0,4.0,True
 2666509,,,7,205.3,8,27,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.3,True
+2683290,macavare,21.0,8,163.85,4,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2683290,macavare,21.0,8,163.85,4,27,3775,Shavon Shields,Forward,FBT,2,S,False,21.0,13.1,False
+2683290,macavare,21.0,8,163.85,4,27,3864,Timothé Luwawu-Cabarrot,Forward,RMB,3,S,False,12.1,10.1,True
+2683290,macavare,21.0,8,163.85,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2683290,macavare,21.0,8,163.85,4,27,3903,Elijah Bryant,Guard,HTA,5,S,True,38.5,17.2,False
+2683290,macavare,21.0,8,163.85,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2683290,macavare,21.0,8,163.85,4,27,3807,Elie Okobo,Guard,DUB,7,B,False,3.0,12.8,True
+2683290,macavare,21.0,8,163.85,4,27,3930,Yam Madar,Guard,MTA,8,B,False,2.0,10.6,False
+2683290,macavare,21.0,8,163.85,4,27,3933,Leopold Cavaliere,Forward,PBB,9,B,False,3.3,4.6,False
+2683290,macavare,21.0,8,163.85,4,27,4061,Eleftherios Mantzoukas,Forward,PAO,10,B,False,0.0,4.8,True
+2683290,macavare,21.0,8,163.85,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2738681,Panitsa12,66.0,8,140.1,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2738681,Panitsa12,66.0,8,140.1,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2738681,Panitsa12,66.0,8,140.1,4,27,3799,Zach Leday,Forward,HTA,3,S,False,6.6,14.4,False
+2738681,Panitsa12,66.0,8,140.1,4,27,3805,Kendrick Nunn,Guard,PAO,4,S,False,28.6,13.7,True
+2738681,Panitsa12,66.0,8,140.1,4,27,3771,Wade Baldwin,Guard,FBT,5,S,False,23.0,13.9,True
+2738681,Panitsa12,66.0,8,140.1,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2738681,Panitsa12,66.0,8,140.1,4,27,11540,Mario Saint-supery,Guard,VBC,7,B,False,0.0,4.0,True
+2738681,Panitsa12,66.0,8,140.1,4,27,11495,Nikola Djurisic,Guard,CZV,8,B,False,0.0,4.4,True
+2738681,Panitsa12,66.0,8,140.1,4,27,3986,Niels Giffey,Forward,BAY,9,B,False,0.0,4.0,True
+2738681,Panitsa12,66.0,8,140.1,4,27,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2738681,Panitsa12,66.0,8,140.1,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,3838,Collin Malcolm,Forward,EFS,3,S,False,13.0,8.8,False
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,3805,Kendrick Nunn,Guard,PAO,5,S,False,28.6,13.7,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,3851,Andres Feliz,Guard,RMB,6,6th,False,9.9,8.6,False
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,4246,Semi Ojeleye,Forward,CZV,7,B,False,1.1,9.0,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,4258,Josep Puerto,Guard,VBC,8,B,False,-2.7,5.9,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,7216,Davis Bertans,Forward,DUB,9,B,False,-1.0,5.1,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,3836,Konstantinos Mitoglou,Forward,PAO,10,B,False,0.0,6.4,True
+2685678,ALFZ ZHSE☘️,56.0,8,164.7,2,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2897079,Prasinopoulia,60.0,8,193.3,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,7201,Dwayne Bacon,Forward,DUB,2,S,False,27.0,13.9,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,7217,Tyson Carter,Guard,CZV,4,S,False,28.6,6.4,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2897079,Prasinopoulia,60.0,8,193.3,4,27,3983,Dejan Davidovac,Forward,CZV,7,B,False,4.4,4.4,True
+2897079,Prasinopoulia,60.0,8,193.3,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,4258,Josep Puerto,Guard,VBC,9,B,False,-2.7,5.9,True
+2897079,Prasinopoulia,60.0,8,193.3,4,27,7209,Lamar Stevens,Forward,PAR,10,B,False,13.0,8.6,False
+2897079,Prasinopoulia,60.0,8,193.3,4,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2703235,V i P,91.0,8,158.85,3,31,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2703235,V i P,91.0,8,158.85,3,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2703235,V i P,91.0,8,158.85,3,31,3795,TJ Shorts,Guard,VBC,3,S,False,27.5,16.3,False
+2703235,V i P,91.0,8,158.85,3,31,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2703235,V i P,91.0,8,158.85,3,31,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2703235,V i P,91.0,8,158.85,3,31,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2703235,V i P,91.0,8,158.85,3,31,3973,Joel Parra,Forward,BAR,7,B,False,0.0,7.1,False
+2703235,V i P,91.0,8,158.85,3,31,3836,Konstantinos Mitoglou,Forward,PAO,8,B,False,0.0,6.4,True
+2703235,V i P,91.0,8,158.85,3,31,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2703235,V i P,91.0,8,158.85,3,31,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2703235,V i P,91.0,8,158.85,3,31,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,7209,Lamar Stevens,Forward,PAR,6,6th,False,13.0,8.6,False
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,11495,Nikola Djurisic,Guard,CZV,7,B,False,0.0,4.4,True
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,4246,Semi Ojeleye,Forward,CZV,8,B,False,1.1,9.0,True
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2927476,☘️🧿 ΤΡΕΝΟ 🧿☘️,51.0,8,123.0,3,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2853090,Opaki,65.0,8,176.75,4,27,3768,Mathias Lessort,Center,PAO,1,S,True,24.2,16.1,True
+2853090,Opaki,65.0,8,176.75,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2853090,Opaki,65.0,8,176.75,4,27,3838,Collin Malcolm,Forward,EFS,3,S,False,13.0,8.8,False
+2853090,Opaki,65.0,8,176.75,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2853090,Opaki,65.0,8,176.75,4,27,3925,Devon Hall,Guard,MIL,5,S,False,13.0,8.7,False
+2853090,Opaki,65.0,8,176.75,4,27,3851,Andres Feliz,Guard,RMB,6,6th,False,9.9,8.6,False
+2853090,Opaki,65.0,8,176.75,4,27,8727,Braxton Key,Forward,FBT,7,B,False,-4.0,8.3,False
+2853090,Opaki,65.0,8,176.75,4,27,3911,Kevarrius Hayes,Center,PAR,8,B,False,21.0,8.1,True
+2853090,Opaki,65.0,8,176.75,4,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2853090,Opaki,65.0,8,176.75,4,27,11541,Alvaro Cardenas,Guard,VBC,10,B,False,-0.9,4.3,True
+2853090,Opaki,65.0,8,176.75,4,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2885280,Rubicon 13,93.0,8,155.15,4,29,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2885280,Rubicon 13,93.0,8,155.15,4,29,7218,Kameron Taylor,Forward,VBC,3,S,False,18.7,11.7,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,3799,Zach Leday,Forward,HTA,4,S,False,6.6,14.4,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,3795,TJ Shorts,Guard,VBC,5,S,False,27.5,16.3,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,3869,Mikael Jantunen,Forward,RMB,6,6th,False,15.4,6.2,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,3930,Yam Madar,Guard,MTA,8,B,False,2.0,10.6,False
+2885280,Rubicon 13,93.0,8,155.15,4,29,11548,Tommaso Baldasso,Guard,VIR,9,B,False,0.0,4.2,True
+2885280,Rubicon 13,93.0,8,155.15,4,29,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2885280,Rubicon 13,93.0,8,155.15,4,29,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2706640,Banatpro1,9.0,8,176.95,3,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2706640,Banatpro1,9.0,8,176.95,3,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2706640,Banatpro1,9.0,8,176.95,3,27,3991,Alberto Abalde,Forward,RMB,3,S,False,15.4,5.0,True
+2706640,Banatpro1,9.0,8,176.95,3,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2706640,Banatpro1,9.0,8,176.95,3,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2706640,Banatpro1,9.0,8,176.95,3,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2706640,Banatpro1,9.0,8,176.95,3,27,3896,Juan Nunez,Guard,BAR,7,B,False,5.5,4.0,True
+2706640,Banatpro1,9.0,8,176.95,3,27,3950,Ognjen Dobric,Forward,CZV,8,B,False,6.6,4.7,True
+2706640,Banatpro1,9.0,8,176.95,3,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2706640,Banatpro1,9.0,8,176.95,3,27,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2706640,Banatpro1,9.0,8,176.95,3,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2678693,pera10,92.0,8,150.1,4,28,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2678693,pera10,92.0,8,150.1,4,28,4233,Mfiondu Kabengele,Center,DUB,2,S,False,25.0,15.6,False
+2678693,pera10,92.0,8,150.1,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2678693,pera10,92.0,8,150.1,4,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2678693,pera10,92.0,8,150.1,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2678693,pera10,92.0,8,150.1,4,28,3864,Timothé Luwawu-Cabarrot,Forward,RMB,6,6th,False,12.1,10.1,True
+2678693,pera10,92.0,8,150.1,4,28,8993,Cory Joseph,Guard,OLY,7,B,False,8.8,5.4,True
+2678693,pera10,92.0,8,150.1,4,28,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2678693,pera10,92.0,8,150.1,4,28,3915,Matteo Spagnolo,Guard,KBA,9,B,False,-5.0,5.9,True
+2678693,pera10,92.0,8,150.1,4,28,3983,Dejan Davidovac,Forward,CZV,10,B,False,4.4,4.4,True
+2678693,pera10,92.0,8,150.1,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2695427,Koukou U21,71.0,8,196.9,4,27,3785,Josh Nebo,Center,BAR,1,S,False,23.1,12.1,True
+2695427,Koukou U21,71.0,8,196.9,4,27,7221,Azuolas Tubelis,Forward,ZAL,2,S,False,23.1,11.8,False
+2695427,Koukou U21,71.0,8,196.9,4,27,3869,Mikael Jantunen,Forward,RMB,3,S,False,15.4,6.2,False
+2695427,Koukou U21,71.0,8,196.9,4,27,3903,Elijah Bryant,Guard,HTA,4,S,True,38.5,17.2,False
+2695427,Koukou U21,71.0,8,196.9,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2695427,Koukou U21,71.0,8,196.9,4,27,8721,Jared Butler,Guard,CZV,6,6th,False,19.8,8.8,True
+2695427,Koukou U21,71.0,8,196.9,4,27,11501,Tyrese Martin,Forward,BAR,7,B,False,14.3,8.9,False
+2695427,Koukou U21,71.0,8,196.9,4,27,3846,Tyson Ward,Forward,OLY,8,B,False,17.6,7.7,False
+2695427,Koukou U21,71.0,8,196.9,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2695427,Koukou U21,71.0,8,196.9,4,27,4097,Nikola Tanaskovic,Center,PAR,10,B,False,10.0,7.4,True
+2695427,Koukou U21,71.0,8,196.9,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2668452,Apladiana,54.0,8,145.5,3,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2668452,Apladiana,54.0,8,145.5,3,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2668452,Apladiana,54.0,8,145.5,3,28,3799,Zach Leday,Forward,HTA,3,S,False,6.6,14.4,False
+2668452,Apladiana,54.0,8,145.5,3,28,3805,Kendrick Nunn,Guard,PAO,4,S,True,28.6,13.7,True
+2668452,Apladiana,54.0,8,145.5,3,28,4247,Chris Jones,Guard,CZV,5,S,False,17.6,12.6,False
+2668452,Apladiana,54.0,8,145.5,3,28,8644,Stefan Joksimovic,Forward,KBA,6,6th,False,10.0,4.3,False
+2668452,Apladiana,54.0,8,145.5,3,28,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2668452,Apladiana,54.0,8,145.5,3,28,7216,Davis Bertans,Forward,DUB,8,B,False,-1.0,5.1,True
+2668452,Apladiana,54.0,8,145.5,3,28,3804,Tadas Sedekerskis,Forward,KBA,9,B,False,0.0,10.9,True
+2668452,Apladiana,54.0,8,145.5,3,28,4258,Josep Puerto,Guard,VBC,10,B,False,-2.7,5.9,True
+2668452,Apladiana,54.0,8,145.5,3,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2901011,CoachBChessClub,83.0,8,207.45,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,8721,Jared Butler,Guard,CZV,3,S,False,19.8,8.8,True
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2901011,CoachBChessClub,83.0,8,207.45,4,31,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3846,Tyson Ward,Forward,OLY,9,B,False,17.6,7.7,False
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2901011,CoachBChessClub,83.0,8,207.45,4,31,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2775677,JohnBalance7,28.0,8,147.05,4,30,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,7201,Dwayne Bacon,Forward,DUB,3,S,True,27.0,13.9,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,3846,Tyson Ward,Forward,OLY,4,S,False,17.6,7.7,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2775677,JohnBalance7,28.0,8,147.05,4,30,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,3915,Matteo Spagnolo,Guard,KBA,8,B,False,-5.0,5.9,True
+2775677,JohnBalance7,28.0,8,147.05,4,30,8727,Braxton Key,Forward,FBT,9,B,False,-4.0,8.3,False
+2775677,JohnBalance7,28.0,8,147.05,4,30,3988,John Dibartolomeo,Guard,MTA,10,B,False,1.0,4.0,True
+2775677,JohnBalance7,28.0,8,147.05,4,30,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3791,Carlik Jones,Guard,PAR,3,S,False,5.0,14.8,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,4096,Mckinley Wright,Guard,DUB,4,S,False,17.0,12.6,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3857,Dan Oturu,Center,HTA,6,6th,False,27.5,13.2,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3867,Kostas Papanikolaou,Forward,OLY,7,B,False,3.3,4.1,False
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,3991,Alberto Abalde,Forward,RMB,9,B,False,15.4,5.0,True
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,11541,Alvaro Cardenas,Guard,VBC,10,B,False,-0.9,4.3,True
+2781905,KK Rade Zagorac,23.0,8,166.9,4,31,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2775631,blue dragon,82.0,8,147.45,3,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2775631,blue dragon,82.0,8,147.45,3,27,3991,Alberto Abalde,Forward,RMB,2,S,False,15.4,5.0,True
+2775631,blue dragon,82.0,8,147.45,3,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2775631,blue dragon,82.0,8,147.45,3,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2775631,blue dragon,82.0,8,147.45,3,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2775631,blue dragon,82.0,8,147.45,3,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2775631,blue dragon,82.0,8,147.45,3,27,3842,Scottie Wilbekin,Guard,BJK,7,B,False,-1.0,9.3,True
+2775631,blue dragon,82.0,8,147.45,3,27,4246,Semi Ojeleye,Forward,CZV,8,B,False,1.1,9.0,True
+2775631,blue dragon,82.0,8,147.45,3,27,3915,Matteo Spagnolo,Guard,KBA,9,B,False,-5.0,5.9,True
+2775631,blue dragon,82.0,8,147.45,3,27,8644,Stefan Joksimovic,Forward,KBA,10,B,False,10.0,4.3,False
+2775631,blue dragon,82.0,8,147.45,3,27,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2670320,Šnala,7.0,8,158.2,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2670320,Šnala,7.0,8,158.2,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2670320,Šnala,7.0,8,158.2,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2670320,Šnala,7.0,8,158.2,4,28,8762,Jared Rhoden,Guard,PBB,4,S,False,24.2,8.9,False
+2670320,Šnala,7.0,8,158.2,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2670320,Šnala,7.0,8,158.2,4,28,3993,Matthew Strazel,Guard,EFS,6,6th,False,17.0,10.5,True
+2670320,Šnala,7.0,8,158.2,4,28,3836,Konstantinos Mitoglou,Forward,PAO,7,B,False,0.0,6.4,True
+2670320,Šnala,7.0,8,158.2,4,28,4246,Semi Ojeleye,Forward,CZV,8,B,False,1.1,9.0,True
+2670320,Šnala,7.0,8,158.2,4,28,3918,Marius Grigonis,Forward,ZAL,9,B,False,12.1,6.8,True
+2670320,Šnala,7.0,8,158.2,4,28,11521,Marc-owen Fodzo Dada,Guard,ASV,10,B,False,0.0,4.9,True
+2670320,Šnala,7.0,8,158.2,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2997526,Alexandros63,100.0,8,126.8,3,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2997526,Alexandros63,100.0,8,126.8,3,27,3991,Alberto Abalde,Forward,RMB,2,S,False,15.4,5.0,True
+2997526,Alexandros63,100.0,8,126.8,3,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2997526,Alexandros63,100.0,8,126.8,3,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2997526,Alexandros63,100.0,8,126.8,3,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2997526,Alexandros63,100.0,8,126.8,3,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2997526,Alexandros63,100.0,8,126.8,3,27,4258,Josep Puerto,Guard,VBC,7,B,False,-2.7,5.9,True
+2997526,Alexandros63,100.0,8,126.8,3,27,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2997526,Alexandros63,100.0,8,126.8,3,27,3948,Mbaye Ndiaye,Forward,OLY,9,B,False,6.6,8.9,True
+2997526,Alexandros63,100.0,8,126.8,3,27,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2997526,Alexandros63,100.0,8,126.8,3,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3991,Alberto Abalde,Forward,RMB,2,S,False,15.4,5.0,True
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3867,Kostas Papanikolaou,Forward,OLY,8,B,False,3.3,4.1,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3985,David Lighty,Forward,ASV,9,B,False,-1.8,4.9,True
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2711162,OgnjenDobrić13,41.0,8,122.5,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2693646,stfnnnn,2.0,8,124.15,4,27,11549,Jonas Valanciunas,Center,ZAL,1,S,False,23.1,16.0,False
+2693646,stfnnnn,2.0,8,124.15,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2693646,stfnnnn,2.0,8,124.15,4,27,3991,Alberto Abalde,Forward,RMB,3,S,False,15.4,5.0,True
+2693646,stfnnnn,2.0,8,124.15,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2693646,stfnnnn,2.0,8,124.15,4,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2693646,stfnnnn,2.0,8,124.15,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2693646,stfnnnn,2.0,8,124.15,4,27,11495,Nikola Djurisic,Guard,CZV,7,B,False,0.0,4.4,True
+2693646,stfnnnn,2.0,8,124.15,4,27,3983,Dejan Davidovac,Forward,CZV,8,B,False,4.4,4.4,True
+2693646,stfnnnn,2.0,8,124.15,4,27,8567,Talen Horton-Tucker,Guard,FBT,9,B,False,4.0,12.2,False
+2693646,stfnnnn,2.0,8,124.15,4,27,3918,Marius Grigonis,Forward,ZAL,10,B,False,12.1,6.8,True
+2693646,stfnnnn,2.0,8,124.15,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2661380,mwlo☘️,15.0,8,188.7,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2661380,mwlo☘️,15.0,8,188.7,4,27,11501,Tyrese Martin,Forward,BAR,2,S,False,14.3,8.9,False
+2661380,mwlo☘️,15.0,8,188.7,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2661380,mwlo☘️,15.0,8,188.7,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2661380,mwlo☘️,15.0,8,188.7,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2661380,mwlo☘️,15.0,8,188.7,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2661380,mwlo☘️,15.0,8,188.7,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2661380,mwlo☘️,15.0,8,188.7,4,27,11540,Mario Saint-supery,Guard,VBC,8,B,False,0.0,4.0,True
+2661380,mwlo☘️,15.0,8,188.7,4,27,4246,Semi Ojeleye,Forward,CZV,9,B,False,1.1,9.0,True
+2661380,mwlo☘️,15.0,8,188.7,4,27,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2661380,mwlo☘️,15.0,8,188.7,4,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3785,Josh Nebo,Center,BAR,1,S,False,23.1,12.1,True
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3975,Sebastian Herrera,Guard,PBB,3,S,False,15.4,5.3,True
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3864,Timothé Luwawu-Cabarrot,Forward,RMB,6,6th,False,12.1,10.1,True
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3983,Dejan Davidovac,Forward,CZV,8,B,False,4.4,4.4,True
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3916,Gabriele Procida,Forward,RMB,9,B,False,5.5,4.1,False
+2685457,Gucci Guilty,57.0,8,186.4,3,31,7424,Aliou Diarra,Center,VIR,10,B,False,16.0,9.8,True
+2685457,Gucci Guilty,57.0,8,186.4,3,31,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,7229,Mouhamed Faye,Center,PBB,1,S,False,19.8,7.4,True
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,3791,Carlik Jones,Guard,PAR,3,S,False,5.0,14.8,False
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,3805,Kendrick Nunn,Guard,PAO,4,S,False,28.6,13.7,True
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,4247,Chris Jones,Guard,CZV,5,S,False,17.6,12.6,False
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,3864,Timothé Luwawu-Cabarrot,Forward,RMB,6,6th,False,12.1,10.1,True
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,3911,Kevarrius Hayes,Center,PAR,7,B,False,21.0,8.1,True
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,7223,Clement Frisch,Forward,KBA,8,B,False,2.0,5.0,False
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,4084,Dustin Sleva,Forward,ZAL,9,B,False,7.7,6.3,True
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2793297,G*@*L*I*N*@*R*I,22.0,8,165.2,4,31,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2706993,juzuni,85.0,8,134.1,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2706993,juzuni,85.0,8,134.1,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2706993,juzuni,85.0,8,134.1,4,31,3791,Carlik Jones,Guard,PAR,3,S,False,5.0,14.8,False
+2706993,juzuni,85.0,8,134.1,4,31,3805,Kendrick Nunn,Guard,PAO,4,S,False,28.6,13.7,True
+2706993,juzuni,85.0,8,134.1,4,31,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2706993,juzuni,85.0,8,134.1,4,31,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2706993,juzuni,85.0,8,134.1,4,31,3976,Arijan Lakic,Forward,PAR,7,B,False,0.0,4.0,True
+2706993,juzuni,85.0,8,134.1,4,31,8644,Stefan Joksimovic,Forward,KBA,8,B,False,10.0,4.3,False
+2706993,juzuni,85.0,8,134.1,4,31,3986,Niels Giffey,Forward,BAY,9,B,False,0.0,4.0,True
+2706993,juzuni,85.0,8,134.1,4,31,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2706993,juzuni,85.0,8,134.1,4,31,3964,Alex Mumbru,Head Coach,VIR,11,HC,False,-10.0,4.8,True
+2923422,Billy Mak 3,72.0,8,161.25,4,29,7229,Mouhamed Faye,Center,PBB,1,S,False,19.8,7.4,True
+2923422,Billy Mak 3,72.0,8,161.25,4,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2923422,Billy Mak 3,72.0,8,161.25,4,29,3799,Zach Leday,Forward,HTA,3,S,False,6.6,14.4,False
+2923422,Billy Mak 3,72.0,8,161.25,4,29,7201,Dwayne Bacon,Forward,DUB,4,S,True,27.0,13.9,False
+2923422,Billy Mak 3,72.0,8,161.25,4,29,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2923422,Billy Mak 3,72.0,8,161.25,4,29,3851,Andres Feliz,Guard,RMB,6,6th,False,9.9,8.6,False
+2923422,Billy Mak 3,72.0,8,161.25,4,29,11541,Alvaro Cardenas,Guard,VBC,7,B,False,-0.9,4.3,True
+2923422,Billy Mak 3,72.0,8,161.25,4,29,3918,Marius Grigonis,Forward,ZAL,8,B,False,12.1,6.8,True
+2923422,Billy Mak 3,72.0,8,161.25,4,29,3787,Nigel Hayes-davis,Forward,PAO,9,B,False,4.4,13.1,False
+2923422,Billy Mak 3,72.0,8,161.25,4,29,4258,Josep Puerto,Guard,VBC,10,B,False,-2.7,5.9,True
+2923422,Billy Mak 3,72.0,8,161.25,4,29,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2925371,GoingDark,61.0,8,150.95,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2925371,GoingDark,61.0,8,150.95,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2925371,GoingDark,61.0,8,150.95,4,31,3903,Elijah Bryant,Guard,HTA,3,S,False,38.5,17.2,False
+2925371,GoingDark,61.0,8,150.95,4,31,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2925371,GoingDark,61.0,8,150.95,4,31,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2925371,GoingDark,61.0,8,150.95,4,31,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2925371,GoingDark,61.0,8,150.95,4,31,3911,Kevarrius Hayes,Center,PAR,7,B,False,21.0,8.1,True
+2925371,GoingDark,61.0,8,150.95,4,31,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2925371,GoingDark,61.0,8,150.95,4,31,3988,John Dibartolomeo,Guard,MTA,9,B,False,1.0,4.0,True
+2925371,GoingDark,61.0,8,150.95,4,31,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2925371,GoingDark,61.0,8,150.95,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2923752,DJ2,96.0,8,201.85,3,27,7229,Mouhamed Faye,Center,PBB,1,S,False,19.8,7.4,True
+2923752,DJ2,96.0,8,201.85,3,27,3991,Alberto Abalde,Forward,RMB,2,S,False,15.4,5.0,True
+2923752,DJ2,96.0,8,201.85,3,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2923752,DJ2,96.0,8,201.85,3,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2923752,DJ2,96.0,8,201.85,3,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2923752,DJ2,96.0,8,201.85,3,27,7221,Azuolas Tubelis,Forward,ZAL,6,6th,False,23.1,11.8,False
+2923752,DJ2,96.0,8,201.85,3,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2923752,DJ2,96.0,8,201.85,3,27,8993,Cory Joseph,Guard,OLY,8,B,False,8.8,5.4,True
+2923752,DJ2,96.0,8,201.85,3,27,7424,Aliou Diarra,Center,VIR,9,B,False,16.0,9.8,True
+2923752,DJ2,96.0,8,201.85,3,27,3948,Mbaye Ndiaye,Forward,OLY,10,B,False,6.6,8.9,True
+2923752,DJ2,96.0,8,201.85,3,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2806159,Dućela,29.0,8,149.2,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2806159,Dućela,29.0,8,149.2,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2806159,Dućela,29.0,8,149.2,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2806159,Dućela,29.0,8,149.2,4,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2806159,Dućela,29.0,8,149.2,4,28,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2806159,Dućela,29.0,8,149.2,4,28,3948,Mbaye Ndiaye,Forward,OLY,6,6th,False,6.6,8.9,True
+2806159,Dućela,29.0,8,149.2,4,28,3916,Gabriele Procida,Forward,RMB,7,B,False,5.5,4.1,False
+2806159,Dućela,29.0,8,149.2,4,28,3946,Andreas Obst,Guard,BAY,8,B,False,7.0,9.7,False
+2806159,Dućela,29.0,8,149.2,4,28,3918,Marius Grigonis,Forward,ZAL,9,B,False,12.1,6.8,True
+2806159,Dućela,29.0,8,149.2,4,28,11540,Mario Saint-supery,Guard,VBC,10,B,False,0.0,4.0,True
+2806159,Dućela,29.0,8,149.2,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2696953,Lydekiniai,33.0,8,141.4,4,29,7229,Mouhamed Faye,Center,PBB,1,S,False,19.8,7.4,True
+2696953,Lydekiniai,33.0,8,141.4,4,29,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2696953,Lydekiniai,33.0,8,141.4,4,29,3799,Zach Leday,Forward,HTA,3,S,False,6.6,14.4,False
+2696953,Lydekiniai,33.0,8,141.4,4,29,3766,Sasha Vezenkov,Forward,OLY,4,S,True,20.9,18.4,False
+2696953,Lydekiniai,33.0,8,141.4,4,29,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2696953,Lydekiniai,33.0,8,141.4,4,29,3791,Carlik Jones,Guard,PAR,6,6th,False,5.0,14.8,False
+2696953,Lydekiniai,33.0,8,141.4,4,29,4005,Edwin Jackson,Forward,ASV,7,B,False,0.0,4.4,True
+2696953,Lydekiniai,33.0,8,141.4,4,29,3915,Matteo Spagnolo,Guard,KBA,8,B,False,-5.0,5.9,True
+2696953,Lydekiniai,33.0,8,141.4,4,29,11501,Tyrese Martin,Forward,BAR,9,B,False,14.3,8.9,False
+2696953,Lydekiniai,33.0,8,141.4,4,29,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2696953,Lydekiniai,33.0,8,141.4,4,29,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2669755,Velebit,48.0,8,121.65,3,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2669755,Velebit,48.0,8,121.65,3,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2669755,Velebit,48.0,8,121.65,3,27,8644,Stefan Joksimovic,Forward,KBA,3,S,False,10.0,4.3,False
+2669755,Velebit,48.0,8,121.65,3,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2669755,Velebit,48.0,8,121.65,3,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2669755,Velebit,48.0,8,121.65,3,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2669755,Velebit,48.0,8,121.65,3,27,3787,Nigel Hayes-davis,Forward,PAO,7,B,False,4.4,13.1,False
+2669755,Velebit,48.0,8,121.65,3,27,11495,Nikola Djurisic,Guard,CZV,8,B,False,0.0,4.4,True
+2669755,Velebit,48.0,8,121.65,3,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2669755,Velebit,48.0,8,121.65,3,27,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2669755,Velebit,48.0,8,121.65,3,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2686076,KK Bangladeš,75.0,8,158.45,4,27,3911,Kevarrius Hayes,Center,PAR,1,S,False,21.0,8.1,True
+2686076,KK Bangladeš,75.0,8,158.45,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,7201,Dwayne Bacon,Forward,DUB,3,S,True,27.0,13.9,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,3851,Andres Feliz,Guard,RMB,6,6th,False,9.9,8.6,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,11541,Alvaro Cardenas,Guard,VBC,7,B,False,-0.9,4.3,True
+2686076,KK Bangladeš,75.0,8,158.45,4,27,7223,Clement Frisch,Forward,KBA,8,B,False,2.0,5.0,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2686076,KK Bangladeš,75.0,8,158.45,4,27,4712,Marcus Bingham,Center,FBT,10,B,False,2.0,10.7,False
+2686076,KK Bangladeš,75.0,8,158.45,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2662880,Basquet Girona,17.0,8,172.35,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2662880,Basquet Girona,17.0,8,172.35,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,11512,Aj Lawson,Guard,KBA,6,6th,False,20.0,8.8,True
+2662880,Basquet Girona,17.0,8,172.35,4,28,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,8644,Stefan Joksimovic,Forward,KBA,8,B,False,10.0,4.3,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,3867,Kostas Papanikolaou,Forward,OLY,9,B,False,3.3,4.1,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,3916,Gabriele Procida,Forward,RMB,10,B,False,5.5,4.1,False
+2662880,Basquet Girona,17.0,8,172.35,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,7221,Azuolas Tubelis,Forward,ZAL,2,S,False,23.1,11.8,False
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3838,Collin Malcolm,Forward,EFS,3,S,False,13.0,8.8,False
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3807,Elie Okobo,Guard,DUB,7,B,False,3.0,12.8,True
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,3836,Konstantinos Mitoglou,Forward,PAO,10,B,False,0.0,6.4,True
+2661446,Stas 🇧🇷🇬🇷,35.0,8,126.15,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,8644,Stefan Joksimovic,Forward,KBA,3,S,False,10.0,4.3,False
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,3957,Oscar Da Silva,Forward,BAY,7,B,False,5.0,7.8,True
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,4019,Panagiotis Kalaitzakis,Guard,PAO,10,B,False,0.0,4.0,True
+2658395,ЦЗВ ШАМПИОН,68.0,8,185.45,4,27,4172,Dimitris Itoudis,Head Coach,HTA,11,HC,False,25.0,8.3,True
+2940325,Ponja2403,31.0,8,186.3,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3775,Shavon Shields,Forward,FBT,3,S,False,21.0,13.1,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3795,TJ Shorts,Guard,VBC,4,S,False,27.5,16.3,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2940325,Ponja2403,31.0,8,186.3,4,27,3886,Daniel Hackett,Guard,VIR,7,B,False,4.0,4.4,True
+2940325,Ponja2403,31.0,8,186.3,4,27,3862,Jasiel Rivero,Center,VBC,8,B,False,8.8,6.8,True
+2940325,Ponja2403,31.0,8,186.3,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2940325,Ponja2403,31.0,8,186.3,4,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2660348,pilatos b.c,94.0,8,198.25,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2660348,pilatos b.c,94.0,8,198.25,4,27,7221,Azuolas Tubelis,Forward,ZAL,2,S,False,23.1,11.8,False
+2660348,pilatos b.c,94.0,8,198.25,4,27,3948,Mbaye Ndiaye,Forward,OLY,3,S,False,6.6,8.9,True
+2660348,pilatos b.c,94.0,8,198.25,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2660348,pilatos b.c,94.0,8,198.25,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2660348,pilatos b.c,94.0,8,198.25,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2660348,pilatos b.c,94.0,8,198.25,4,27,3988,John Dibartolomeo,Guard,MTA,7,B,False,1.0,4.0,True
+2660348,pilatos b.c,94.0,8,198.25,4,27,11501,Tyrese Martin,Forward,BAR,8,B,False,14.3,8.9,False
+2660348,pilatos b.c,94.0,8,198.25,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2660348,pilatos b.c,94.0,8,198.25,4,27,4084,Dustin Sleva,Forward,ZAL,10,B,False,7.7,6.3,True
+2660348,pilatos b.c,94.0,8,198.25,4,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2705078,kna kna,55.0,8,203.3,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2705078,kna kna,55.0,8,203.3,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2705078,kna kna,55.0,8,203.3,4,28,3869,Mikael Jantunen,Forward,RMB,3,S,False,15.4,6.2,False
+2705078,kna kna,55.0,8,203.3,4,28,3795,TJ Shorts,Guard,VBC,4,S,True,27.5,16.3,False
+2705078,kna kna,55.0,8,203.3,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2705078,kna kna,55.0,8,203.3,4,28,3903,Elijah Bryant,Guard,HTA,6,6th,False,38.5,17.2,False
+2705078,kna kna,55.0,8,203.3,4,28,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2705078,kna kna,55.0,8,203.3,4,28,3957,Oscar Da Silva,Forward,BAY,8,B,False,5.0,7.8,True
+2705078,kna kna,55.0,8,203.3,4,28,3948,Mbaye Ndiaye,Forward,OLY,9,B,False,6.6,8.9,True
+2705078,kna kna,55.0,8,203.3,4,28,11496,Andrej Bjelic,Guard,CZV,10,B,False,0.0,4.0,True
+2705078,kna kna,55.0,8,203.3,4,28,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2681119,Zerlef,62.0,8,128.6,3,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2681119,Zerlef,62.0,8,128.6,3,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2681119,Zerlef,62.0,8,128.6,3,27,7212,Derrick Alston Jr.,Forward,VIR,3,S,False,16.0,8.3,False
+2681119,Zerlef,62.0,8,128.6,3,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2681119,Zerlef,62.0,8,128.6,3,27,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2681119,Zerlef,62.0,8,128.6,3,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2681119,Zerlef,62.0,8,128.6,3,27,3930,Yam Madar,Guard,MTA,7,B,False,2.0,10.6,False
+2681119,Zerlef,62.0,8,128.6,3,27,3787,Nigel Hayes-davis,Forward,PAO,8,B,False,4.4,13.1,False
+2681119,Zerlef,62.0,8,128.6,3,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2681119,Zerlef,62.0,8,128.6,3,27,11540,Mario Saint-supery,Guard,VBC,10,B,False,0.0,4.0,True
+2681119,Zerlef,62.0,8,128.6,3,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2775093,Cibirkauliai,90.0,8,165.7,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,7212,Derrick Alston Jr.,Forward,VIR,2,S,False,16.0,8.3,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2775093,Cibirkauliai,90.0,8,165.7,4,27,3983,Dejan Davidovac,Forward,CZV,7,B,False,4.4,4.4,True
+2775093,Cibirkauliai,90.0,8,165.7,4,27,8644,Stefan Joksimovic,Forward,KBA,8,B,False,10.0,4.3,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2775093,Cibirkauliai,90.0,8,165.7,4,27,11541,Alvaro Cardenas,Guard,VBC,10,B,False,-0.9,4.3,True
+2775093,Cibirkauliai,90.0,8,165.7,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2800477,crno&beli,73.0,8,156.45,4,29,3768,Mathias Lessort,Center,PAO,1,S,False,24.2,16.1,True
+2800477,crno&beli,73.0,8,156.45,4,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2800477,crno&beli,73.0,8,156.45,4,29,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2800477,crno&beli,73.0,8,156.45,4,29,3869,Mikael Jantunen,Forward,RMB,4,S,False,15.4,6.2,False
+2800477,crno&beli,73.0,8,156.45,4,29,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2800477,crno&beli,73.0,8,156.45,4,29,3791,Carlik Jones,Guard,PAR,6,6th,False,5.0,14.8,False
+2800477,crno&beli,73.0,8,156.45,4,29,11540,Mario Saint-supery,Guard,VBC,7,B,False,0.0,4.0,True
+2800477,crno&beli,73.0,8,156.45,4,29,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2800477,crno&beli,73.0,8,156.45,4,29,3838,Collin Malcolm,Forward,EFS,9,B,False,13.0,8.8,False
+2800477,crno&beli,73.0,8,156.45,4,29,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2800477,crno&beli,73.0,8,156.45,4,29,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2926441,pggoated,53.0,8,169.4,4,28,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2926441,pggoated,53.0,8,169.4,4,28,4233,Mfiondu Kabengele,Center,DUB,2,S,False,25.0,15.6,False
+2926441,pggoated,53.0,8,169.4,4,28,3773,Nikola Mirotic,Forward,VBC,3,S,False,17.6,12.2,True
+2926441,pggoated,53.0,8,169.4,4,28,3903,Elijah Bryant,Guard,HTA,4,S,True,38.5,17.2,False
+2926441,pggoated,53.0,8,169.4,4,28,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2926441,pggoated,53.0,8,169.4,4,28,3850,Theo Maledon,Guard,RMB,6,6th,False,17.6,11.9,False
+2926441,pggoated,53.0,8,169.4,4,28,3986,Niels Giffey,Forward,BAY,7,B,False,0.0,4.0,True
+2926441,pggoated,53.0,8,169.4,4,28,3867,Kostas Papanikolaou,Forward,OLY,8,B,False,3.3,4.1,False
+2926441,pggoated,53.0,8,169.4,4,28,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2926441,pggoated,53.0,8,169.4,4,28,11541,Alvaro Cardenas,Guard,VBC,10,B,False,-0.9,4.3,True
+2926441,pggoated,53.0,8,169.4,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,7201,Dwayne Bacon,Forward,DUB,2,S,True,27.0,13.9,False
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,3799,Zach Leday,Forward,HTA,3,S,False,6.6,14.4,False
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,7221,Azuolas Tubelis,Forward,ZAL,4,S,False,23.1,11.8,False
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,3967,Dario Brizuela,Guard,BAR,7,B,False,-3.6,5.8,True
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,11495,Nikola Djurisic,Guard,CZV,9,B,False,0.0,4.4,True
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,7424,Aliou Diarra,Center,VIR,10,B,False,16.0,9.8,True
+2980828,ΟΑΚΑ 2026,98.0,8,160.25,4,30,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2873811,VDIM2,32.0,8,117.2,4,27,3768,Mathias Lessort,Center,PAO,1,S,False,24.2,16.1,True
+2873811,VDIM2,32.0,8,117.2,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2873811,VDIM2,32.0,8,117.2,4,27,3869,Mikael Jantunen,Forward,RMB,3,S,False,15.4,6.2,False
+2873811,VDIM2,32.0,8,117.2,4,27,3791,Carlik Jones,Guard,PAR,4,S,True,5.0,14.8,False
+2873811,VDIM2,32.0,8,117.2,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2873811,VDIM2,32.0,8,117.2,4,27,3792,Jordan Loyd,Guard,EFS,6,6th,False,18.0,9.8,False
+2873811,VDIM2,32.0,8,117.2,4,27,4251,Brancou Badio,Guard,PAO,7,B,False,2.2,7.4,False
+2873811,VDIM2,32.0,8,117.2,4,27,4073,Tai Odiase,Center,HTA,8,B,False,0.0,6.4,True
+2873811,VDIM2,32.0,8,117.2,4,27,4005,Edwin Jackson,Forward,ASV,9,B,False,0.0,4.4,True
+2873811,VDIM2,32.0,8,117.2,4,27,4061,Eleftherios Mantzoukas,Forward,PAO,10,B,False,0.0,4.8,True
+2873811,VDIM2,32.0,8,117.2,4,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2673397,marioo_,40.0,8,136.7,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2673397,marioo_,40.0,8,136.7,4,28,3857,Dan Oturu,Center,HTA,2,S,False,27.5,13.2,False
+2673397,marioo_,40.0,8,136.7,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2673397,marioo_,40.0,8,136.7,4,28,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2673397,marioo_,40.0,8,136.7,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2673397,marioo_,40.0,8,136.7,4,28,8993,Cory Joseph,Guard,OLY,6,6th,False,8.8,5.4,True
+2673397,marioo_,40.0,8,136.7,4,28,3918,Marius Grigonis,Forward,ZAL,7,B,False,12.1,6.8,True
+2673397,marioo_,40.0,8,136.7,4,28,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2673397,marioo_,40.0,8,136.7,4,28,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2673397,marioo_,40.0,8,136.7,4,28,8644,Stefan Joksimovic,Forward,KBA,10,B,False,10.0,4.3,False
+2673397,marioo_,40.0,8,136.7,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2662496,Tašmania,63.0,8,159.1,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2662496,Tašmania,63.0,8,159.1,4,28,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2662496,Tašmania,63.0,8,159.1,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2662496,Tašmania,63.0,8,159.1,4,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2662496,Tašmania,63.0,8,159.1,4,28,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2662496,Tašmania,63.0,8,159.1,4,28,8644,Stefan Joksimovic,Forward,KBA,6,6th,False,10.0,4.3,False
+2662496,Tašmania,63.0,8,159.1,4,28,3930,Yam Madar,Guard,MTA,7,B,False,2.0,10.6,False
+2662496,Tašmania,63.0,8,159.1,4,28,4012,Giampaolo Ricci,Forward,MIL,8,B,False,-3.0,4.0,True
+2662496,Tašmania,63.0,8,159.1,4,28,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2662496,Tašmania,63.0,8,159.1,4,28,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2662496,Tašmania,63.0,8,159.1,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2707022,JD0,44.0,8,136.15,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2707022,JD0,44.0,8,136.15,4,27,8644,Stefan Joksimovic,Forward,KBA,2,S,False,10.0,4.3,False
+2707022,JD0,44.0,8,136.15,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2707022,JD0,44.0,8,136.15,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2707022,JD0,44.0,8,136.15,4,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2707022,JD0,44.0,8,136.15,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2707022,JD0,44.0,8,136.15,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2707022,JD0,44.0,8,136.15,4,27,8623,Kosta Kondic,Guard,DUB,8,B,False,-1.0,4.3,True
+2707022,JD0,44.0,8,136.15,4,27,4246,Semi Ojeleye,Forward,CZV,9,B,False,1.1,9.0,True
+2707022,JD0,44.0,8,136.15,4,27,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2707022,JD0,44.0,8,136.15,4,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2666156,Honeymilk,5.0,8,138.9,4,30,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2666156,Honeymilk,5.0,8,138.9,4,30,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2666156,Honeymilk,5.0,8,138.9,4,30,7201,Dwayne Bacon,Forward,DUB,3,S,False,27.0,13.9,False
+2666156,Honeymilk,5.0,8,138.9,4,30,3948,Mbaye Ndiaye,Forward,OLY,4,S,False,6.6,8.9,True
+2666156,Honeymilk,5.0,8,138.9,4,30,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2666156,Honeymilk,5.0,8,138.9,4,30,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2666156,Honeymilk,5.0,8,138.9,4,30,4129,Myles Cale,Guard,ASV,7,B,False,0.0,6.4,True
+2666156,Honeymilk,5.0,8,138.9,4,30,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2666156,Honeymilk,5.0,8,138.9,4,30,4258,Josep Puerto,Guard,VBC,9,B,False,-2.7,5.9,True
+2666156,Honeymilk,5.0,8,138.9,4,30,3852,Edgaras Ulanovas,Forward,ZAL,10,B,False,4.4,6.3,True
+2666156,Honeymilk,5.0,8,138.9,4,30,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2884134,Puh,43.0,8,210.35,4,31,3769,Walter Tavares,Center,RMB,1,S,False,24.2,14.8,False
+2884134,Puh,43.0,8,210.35,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2884134,Puh,43.0,8,210.35,4,31,7217,Tyson Carter,Guard,CZV,3,S,False,28.6,6.4,False
+2884134,Puh,43.0,8,210.35,4,31,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2884134,Puh,43.0,8,210.35,4,31,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2884134,Puh,43.0,8,210.35,4,31,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2884134,Puh,43.0,8,210.35,4,31,3846,Tyson Ward,Forward,OLY,7,B,False,17.6,7.7,False
+2884134,Puh,43.0,8,210.35,4,31,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2884134,Puh,43.0,8,210.35,4,31,3836,Konstantinos Mitoglou,Forward,PAO,9,B,False,0.0,6.4,True
+2884134,Puh,43.0,8,210.35,4,31,3911,Kevarrius Hayes,Center,PAR,10,B,False,21.0,8.1,True
+2884134,Puh,43.0,8,210.35,4,31,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2922599,Vouza SZN,18.0,8,169.1,3,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,3991,Alberto Abalde,Forward,RMB,3,S,False,15.4,5.0,True
+2922599,Vouza SZN,18.0,8,169.1,3,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,3808,Codi Miller-Mcintyre,Guard,OLY,6,6th,False,12.1,10.4,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,8644,Stefan Joksimovic,Forward,KBA,8,B,False,10.0,4.3,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,7424,Aliou Diarra,Center,VIR,9,B,False,16.0,9.8,True
+2922599,Vouza SZN,18.0,8,169.1,3,27,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2922599,Vouza SZN,18.0,8,169.1,3,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2703147,aniffd,45.0,8,152.65,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2703147,aniffd,45.0,8,152.65,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2703147,aniffd,45.0,8,152.65,4,27,11501,Tyrese Martin,Forward,BAR,3,S,False,14.3,8.9,False
+2703147,aniffd,45.0,8,152.65,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2703147,aniffd,45.0,8,152.65,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2703147,aniffd,45.0,8,152.65,4,27,7209,Lamar Stevens,Forward,PAR,6,6th,False,13.0,8.6,False
+2703147,aniffd,45.0,8,152.65,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2703147,aniffd,45.0,8,152.65,4,27,3911,Kevarrius Hayes,Center,PAR,8,B,False,21.0,8.1,True
+2703147,aniffd,45.0,8,152.65,4,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2703147,aniffd,45.0,8,152.65,4,27,3988,John Dibartolomeo,Guard,MTA,10,B,False,1.0,4.0,True
+2703147,aniffd,45.0,8,152.65,4,27,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3768,Mathias Lessort,Center,PAO,1,S,True,24.2,16.1,True
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3850,Theo Maledon,Guard,RMB,3,S,False,17.6,11.9,False
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3808,Codi Miller-Mcintyre,Guard,OLY,4,S,False,12.1,10.4,False
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,4012,Giampaolo Ricci,Forward,MIL,8,B,False,-3.0,4.0,True
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,3986,Niels Giffey,Forward,BAY,10,B,False,0.0,4.0,True
+2784466,Buvlja pijaca,24.0,8,161.95,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2726066,lavirint,37.0,8,220.25,4,27,3785,Josh Nebo,Center,BAR,1,S,False,23.1,12.1,True
+2726066,lavirint,37.0,8,220.25,4,27,7201,Dwayne Bacon,Forward,DUB,2,S,False,27.0,13.9,False
+2726066,lavirint,37.0,8,220.25,4,27,7221,Azuolas Tubelis,Forward,ZAL,3,S,False,23.1,11.8,False
+2726066,lavirint,37.0,8,220.25,4,27,3903,Elijah Bryant,Guard,HTA,4,S,True,38.5,17.2,False
+2726066,lavirint,37.0,8,220.25,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2726066,lavirint,37.0,8,220.25,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2726066,lavirint,37.0,8,220.25,4,27,8815,Cameron Payne,Guard,EFS,7,B,False,1.0,9.6,False
+2726066,lavirint,37.0,8,220.25,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2726066,lavirint,37.0,8,220.25,4,27,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2726066,lavirint,37.0,8,220.25,4,27,7223,Clement Frisch,Forward,KBA,10,B,False,2.0,5.0,False
+2726066,lavirint,37.0,8,220.25,4,27,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2797218,PDW,81.0,8,181.25,1,28,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2797218,PDW,81.0,8,181.25,1,28,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2797218,PDW,81.0,8,181.25,1,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2797218,PDW,81.0,8,181.25,1,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2797218,PDW,81.0,8,181.25,1,28,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2797218,PDW,81.0,8,181.25,1,28,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2797218,PDW,81.0,8,181.25,1,28,3948,Mbaye Ndiaye,Forward,OLY,7,B,False,6.6,8.9,True
+2797218,PDW,81.0,8,181.25,1,28,3975,Sebastian Herrera,Guard,PBB,8,B,False,15.4,5.3,True
+2797218,PDW,81.0,8,181.25,1,28,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2797218,PDW,81.0,8,181.25,1,28,8644,Stefan Joksimovic,Forward,KBA,10,B,False,10.0,4.3,False
+2797218,PDW,81.0,8,181.25,1,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2973066,CecenijaBC,97.0,8,130.3,4,29,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2973066,CecenijaBC,97.0,8,130.3,4,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2973066,CecenijaBC,97.0,8,130.3,4,29,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2973066,CecenijaBC,97.0,8,130.3,4,29,3838,Collin Malcolm,Forward,EFS,4,S,False,13.0,8.8,False
+2973066,CecenijaBC,97.0,8,130.3,4,29,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2973066,CecenijaBC,97.0,8,130.3,4,29,3850,Theo Maledon,Guard,RMB,6,6th,False,17.6,11.9,False
+2973066,CecenijaBC,97.0,8,130.3,4,29,3930,Yam Madar,Guard,MTA,7,B,False,2.0,10.6,False
+2973066,CecenijaBC,97.0,8,130.3,4,29,8993,Cory Joseph,Guard,OLY,8,B,False,8.8,5.4,True
+2973066,CecenijaBC,97.0,8,130.3,4,29,3836,Konstantinos Mitoglou,Forward,PAO,9,B,False,0.0,6.4,True
+2973066,CecenijaBC,97.0,8,130.3,4,29,3957,Oscar Da Silva,Forward,BAY,10,B,False,5.0,7.8,True
+2973066,CecenijaBC,97.0,8,130.3,4,29,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2794097,Padinjak,20.0,8,181.75,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2794097,Padinjak,20.0,8,181.75,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2794097,Padinjak,20.0,8,181.75,4,31,3903,Elijah Bryant,Guard,HTA,3,S,True,38.5,17.2,False
+2794097,Padinjak,20.0,8,181.75,4,31,3805,Kendrick Nunn,Guard,PAO,4,S,False,28.6,13.7,True
+2794097,Padinjak,20.0,8,181.75,4,31,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2794097,Padinjak,20.0,8,181.75,4,31,4084,Dustin Sleva,Forward,ZAL,6,6th,False,7.7,6.3,True
+2794097,Padinjak,20.0,8,181.75,4,31,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2794097,Padinjak,20.0,8,181.75,4,31,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2794097,Padinjak,20.0,8,181.75,4,31,4009,Ousmane Diop,Center,MIL,9,B,False,10.0,4.0,True
+2794097,Padinjak,20.0,8,181.75,4,31,3986,Niels Giffey,Forward,BAY,10,B,False,0.0,4.0,True
+2794097,Padinjak,20.0,8,181.75,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3799,Zach Leday,Forward,HTA,4,S,False,6.6,14.4,False
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3850,Theo Maledon,Guard,RMB,6,6th,False,17.6,11.9,False
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3942,Maodo Lo,Guard,ZAL,7,B,False,3.3,5.9,True
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3957,Oscar Da Silva,Forward,BAY,8,B,False,5.0,7.8,True
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,7223,Clement Frisch,Forward,KBA,10,B,False,2.0,5.0,False
+2660211,KK PEKARA PAHULJA SAJKAS,49.0,8,143.1,4,29,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2662045,Raspadori,6.0,8,170.9,4,29,3768,Mathias Lessort,Center,PAO,1,S,False,24.2,16.1,True
+2662045,Raspadori,6.0,8,170.9,4,29,7226,Allan Dokossi,Center,PBB,2,S,False,11.0,8.4,False
+2662045,Raspadori,6.0,8,170.9,4,29,7201,Dwayne Bacon,Forward,DUB,3,S,False,27.0,13.9,False
+2662045,Raspadori,6.0,8,170.9,4,29,3864,Timothé Luwawu-Cabarrot,Forward,RMB,4,S,False,12.1,10.1,True
+2662045,Raspadori,6.0,8,170.9,4,29,3903,Elijah Bryant,Guard,HTA,5,S,True,38.5,17.2,False
+2662045,Raspadori,6.0,8,170.9,4,29,7221,Azuolas Tubelis,Forward,ZAL,6,6th,False,23.1,11.8,False
+2662045,Raspadori,6.0,8,170.9,4,29,11495,Nikola Djurisic,Guard,CZV,7,B,False,0.0,4.4,True
+2662045,Raspadori,6.0,8,170.9,4,29,3807,Elie Okobo,Guard,DUB,8,B,False,3.0,12.8,True
+2662045,Raspadori,6.0,8,170.9,4,29,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2662045,Raspadori,6.0,8,170.9,4,29,11540,Mario Saint-supery,Guard,VBC,10,B,False,0.0,4.0,True
+2662045,Raspadori,6.0,8,170.9,4,29,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2678515,despa86,34.0,8,178.1,3,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2678515,despa86,34.0,8,178.1,3,27,3775,Shavon Shields,Forward,FBT,2,S,False,21.0,13.1,False
+2678515,despa86,34.0,8,178.1,3,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2678515,despa86,34.0,8,178.1,3,27,3903,Elijah Bryant,Guard,HTA,4,S,True,38.5,17.2,False
+2678515,despa86,34.0,8,178.1,3,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2678515,despa86,34.0,8,178.1,3,27,3842,Scottie Wilbekin,Guard,BJK,6,6th,False,-1.0,9.3,True
+2678515,despa86,34.0,8,178.1,3,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2678515,despa86,34.0,8,178.1,3,27,8644,Stefan Joksimovic,Forward,KBA,8,B,False,10.0,4.3,False
+2678515,despa86,34.0,8,178.1,3,27,3933,Leopold Cavaliere,Forward,PBB,9,B,False,3.3,4.6,False
+2678515,despa86,34.0,8,178.1,3,27,4009,Ousmane Diop,Center,MIL,10,B,False,10.0,4.0,True
+2678515,despa86,34.0,8,178.1,3,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2723438,Thanos B,89.0,8,161.45,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2723438,Thanos B,89.0,8,161.45,4,27,3838,Collin Malcolm,Forward,EFS,2,S,False,13.0,8.8,False
+2723438,Thanos B,89.0,8,161.45,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2723438,Thanos B,89.0,8,161.45,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2723438,Thanos B,89.0,8,161.45,4,27,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2723438,Thanos B,89.0,8,161.45,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2723438,Thanos B,89.0,8,161.45,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2723438,Thanos B,89.0,8,161.45,4,27,8644,Stefan Joksimovic,Forward,KBA,8,B,False,10.0,4.3,False
+2723438,Thanos B,89.0,8,161.45,4,27,3988,John Dibartolomeo,Guard,MTA,9,B,False,1.0,4.0,True
+2723438,Thanos B,89.0,8,161.45,4,27,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2723438,Thanos B,89.0,8,161.45,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3768,Mathias Lessort,Center,PAO,1,S,False,24.2,16.1,True
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3991,Alberto Abalde,Forward,RMB,2,S,False,15.4,5.0,True
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3850,Theo Maledon,Guard,RMB,3,S,False,17.6,11.9,False
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3975,Sebastian Herrera,Guard,PBB,4,S,False,15.4,5.3,True
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3903,Elijah Bryant,Guard,HTA,5,S,True,38.5,17.2,False
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3766,Sasha Vezenkov,Forward,OLY,6,6th,False,20.9,18.4,False
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3867,Kostas Papanikolaou,Forward,OLY,7,B,False,3.3,4.1,False
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,7424,Aliou Diarra,Center,VIR,10,B,False,16.0,9.8,True
+2738105,Vesna iz Zeleznika,76.0,8,180.1,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2672584,tarot milan,4.0,8,155.6,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2672584,tarot milan,4.0,8,155.6,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2672584,tarot milan,4.0,8,155.6,4,31,3850,Theo Maledon,Guard,RMB,3,S,False,17.6,11.9,False
+2672584,tarot milan,4.0,8,155.6,4,31,3851,Andres Feliz,Guard,RMB,4,S,False,9.9,8.6,False
+2672584,tarot milan,4.0,8,155.6,4,31,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2672584,tarot milan,4.0,8,155.6,4,31,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2672584,tarot milan,4.0,8,155.6,4,31,3988,John Dibartolomeo,Guard,MTA,7,B,False,1.0,4.0,True
+2672584,tarot milan,4.0,8,155.6,4,31,3846,Tyson Ward,Forward,OLY,8,B,False,17.6,7.7,False
+2672584,tarot milan,4.0,8,155.6,4,31,3957,Oscar Da Silva,Forward,BAY,9,B,False,5.0,7.8,True
+2672584,tarot milan,4.0,8,155.6,4,31,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2672584,tarot milan,4.0,8,155.6,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2737468,ukr mafia,80.0,8,123.9,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2737468,ukr mafia,80.0,8,123.9,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2737468,ukr mafia,80.0,8,123.9,4,27,3838,Collin Malcolm,Forward,EFS,3,S,False,13.0,8.8,False
+2737468,ukr mafia,80.0,8,123.9,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2737468,ukr mafia,80.0,8,123.9,4,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2737468,ukr mafia,80.0,8,123.9,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2737468,ukr mafia,80.0,8,123.9,4,27,3976,Arijan Lakic,Forward,PAR,7,B,False,0.0,4.0,True
+2737468,ukr mafia,80.0,8,123.9,4,27,4019,Panagiotis Kalaitzakis,Guard,PAO,8,B,False,0.0,4.0,True
+2737468,ukr mafia,80.0,8,123.9,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2737468,ukr mafia,80.0,8,123.9,4,27,4246,Semi Ojeleye,Forward,CZV,10,B,False,1.1,9.0,True
+2737468,ukr mafia,80.0,8,123.9,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2841134,slabici,67.0,8,166.75,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2841134,slabici,67.0,8,166.75,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2841134,slabici,67.0,8,166.75,4,28,3957,Oscar Da Silva,Forward,BAY,3,S,False,5.0,7.8,True
+2841134,slabici,67.0,8,166.75,4,28,3903,Elijah Bryant,Guard,HTA,4,S,True,38.5,17.2,False
+2841134,slabici,67.0,8,166.75,4,28,3795,TJ Shorts,Guard,VBC,5,S,False,27.5,16.3,False
+2841134,slabici,67.0,8,166.75,4,28,3791,Carlik Jones,Guard,PAR,6,6th,False,5.0,14.8,False
+2841134,slabici,67.0,8,166.75,4,28,4005,Edwin Jackson,Forward,ASV,7,B,False,0.0,4.4,True
+2841134,slabici,67.0,8,166.75,4,28,4012,Giampaolo Ricci,Forward,MIL,8,B,False,-3.0,4.0,True
+2841134,slabici,67.0,8,166.75,4,28,3896,Juan Nunez,Guard,BAR,9,B,False,5.5,4.0,True
+2841134,slabici,67.0,8,166.75,4,28,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2841134,slabici,67.0,8,166.75,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2744799,bluelagoon,38.0,8,182.15,4,31,7229,Mouhamed Faye,Center,PBB,1,S,False,19.8,7.4,True
+2744799,bluelagoon,38.0,8,182.15,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2744799,bluelagoon,38.0,8,182.15,4,31,3850,Theo Maledon,Guard,RMB,3,S,False,17.6,11.9,False
+2744799,bluelagoon,38.0,8,182.15,4,31,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2744799,bluelagoon,38.0,8,182.15,4,31,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2744799,bluelagoon,38.0,8,182.15,4,31,3808,Codi Miller-Mcintyre,Guard,OLY,6,6th,False,12.1,10.4,False
+2744799,bluelagoon,38.0,8,182.15,4,31,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2744799,bluelagoon,38.0,8,182.15,4,31,3991,Alberto Abalde,Forward,RMB,8,B,False,15.4,5.0,True
+2744799,bluelagoon,38.0,8,182.15,4,31,7424,Aliou Diarra,Center,VIR,9,B,False,16.0,9.8,True
+2744799,bluelagoon,38.0,8,182.15,4,31,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2744799,bluelagoon,38.0,8,182.15,4,31,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+3010224,PAIDAROS,70.0,8,198.0,0,31,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+3010224,PAIDAROS,70.0,8,198.0,0,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+3010224,PAIDAROS,70.0,8,198.0,0,31,3795,TJ Shorts,Guard,VBC,3,S,True,27.5,16.3,False
+3010224,PAIDAROS,70.0,8,198.0,0,31,3851,Andres Feliz,Guard,RMB,4,S,False,9.9,8.6,False
+3010224,PAIDAROS,70.0,8,198.0,0,31,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+3010224,PAIDAROS,70.0,8,198.0,0,31,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+3010224,PAIDAROS,70.0,8,198.0,0,31,4084,Dustin Sleva,Forward,ZAL,7,B,False,7.7,6.3,True
+3010224,PAIDAROS,70.0,8,198.0,0,31,3983,Dejan Davidovac,Forward,CZV,8,B,False,4.4,4.4,True
+3010224,PAIDAROS,70.0,8,198.0,0,31,3867,Kostas Papanikolaou,Forward,OLY,9,B,False,3.3,4.1,False
+3010224,PAIDAROS,70.0,8,198.0,0,31,4019,Panagiotis Kalaitzakis,Guard,PAO,10,B,False,0.0,4.0,True
+3010224,PAIDAROS,70.0,8,198.0,0,31,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2913263,saouG,12.0,8,173.65,4,27,3769,Walter Tavares,Center,RMB,1,S,False,24.2,14.8,False
+2913263,saouG,12.0,8,173.65,4,27,7201,Dwayne Bacon,Forward,DUB,2,S,True,27.0,13.9,False
+2913263,saouG,12.0,8,173.65,4,27,7221,Azuolas Tubelis,Forward,ZAL,3,S,False,23.1,11.8,False
+2913263,saouG,12.0,8,173.65,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2913263,saouG,12.0,8,173.65,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2913263,saouG,12.0,8,173.65,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2913263,saouG,12.0,8,173.65,4,27,4019,Panagiotis Kalaitzakis,Guard,PAO,7,B,False,0.0,4.0,True
+2913263,saouG,12.0,8,173.65,4,27,3846,Tyson Ward,Forward,OLY,8,B,False,17.6,7.7,False
+2913263,saouG,12.0,8,173.65,4,27,8993,Cory Joseph,Guard,OLY,9,B,False,8.8,5.4,True
+2913263,saouG,12.0,8,173.65,4,27,4246,Semi Ojeleye,Forward,CZV,10,B,False,1.1,9.0,True
+2913263,saouG,12.0,8,173.65,4,27,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2893991,ana karenjina,77.0,8,181.4,3,31,3911,Kevarrius Hayes,Center,PAR,1,S,False,21.0,8.1,True
+2893991,ana karenjina,77.0,8,181.4,3,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2893991,ana karenjina,77.0,8,181.4,3,31,3903,Elijah Bryant,Guard,HTA,3,S,True,38.5,17.2,False
+2893991,ana karenjina,77.0,8,181.4,3,31,3795,TJ Shorts,Guard,VBC,4,S,False,27.5,16.3,False
+2893991,ana karenjina,77.0,8,181.4,3,31,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2893991,ana karenjina,77.0,8,181.4,3,31,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2893991,ana karenjina,77.0,8,181.4,3,31,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2893991,ana karenjina,77.0,8,181.4,3,31,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2893991,ana karenjina,77.0,8,181.4,3,31,3984,Sertac Sanli,Center,FBT,9,B,False,3.0,4.2,True
+2893991,ana karenjina,77.0,8,181.4,3,31,4246,Semi Ojeleye,Forward,CZV,10,B,False,1.1,9.0,True
+2893991,ana karenjina,77.0,8,181.4,3,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3795,TJ Shorts,Guard,VBC,4,S,False,27.5,16.3,False
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3975,Sebastian Herrera,Guard,PBB,6,6th,False,15.4,5.3,True
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,4012,Giampaolo Ricci,Forward,MIL,7,B,False,-3.0,4.0,True
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,4005,Edwin Jackson,Forward,ASV,10,B,False,0.0,4.4,True
+2947347,KK *BANANAMEN*,19.0,8,196.75,4,28,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2709736,Prasini Agapi,36.0,8,172.85,4,28,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3911,Kevarrius Hayes,Center,PAR,2,S,False,21.0,8.1,True
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3948,Mbaye Ndiaye,Forward,OLY,3,S,False,6.6,8.9,True
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3903,Elijah Bryant,Guard,HTA,4,S,True,38.5,17.2,False
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2709736,Prasini Agapi,36.0,8,172.85,4,28,11501,Tyrese Martin,Forward,BAR,6,6th,False,14.3,8.9,False
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3930,Yam Madar,Guard,MTA,7,B,False,2.0,10.6,False
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3787,Nigel Hayes-davis,Forward,PAO,9,B,False,4.4,13.1,False
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3983,Dejan Davidovac,Forward,CZV,10,B,False,4.4,4.4,True
+2709736,Prasini Agapi,36.0,8,172.85,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2698416,Koukou U18,10.0,8,159.95,4,28,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2698416,Koukou U18,10.0,8,159.95,4,28,4233,Mfiondu Kabengele,Center,DUB,2,S,False,25.0,15.6,False
+2698416,Koukou U18,10.0,8,159.95,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2698416,Koukou U18,10.0,8,159.95,4,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2698416,Koukou U18,10.0,8,159.95,4,28,3808,Codi Miller-Mcintyre,Guard,OLY,5,S,False,12.1,10.4,False
+2698416,Koukou U18,10.0,8,159.95,4,28,7221,Azuolas Tubelis,Forward,ZAL,6,6th,False,23.1,11.8,False
+2698416,Koukou U18,10.0,8,159.95,4,28,3869,Mikael Jantunen,Forward,RMB,7,B,False,15.4,6.2,False
+2698416,Koukou U18,10.0,8,159.95,4,28,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2698416,Koukou U18,10.0,8,159.95,4,28,3983,Dejan Davidovac,Forward,CZV,9,B,False,4.4,4.4,True
+2698416,Koukou U18,10.0,8,159.95,4,28,8623,Kosta Kondic,Guard,DUB,10,B,False,-1.0,4.3,True
+2698416,Koukou U18,10.0,8,159.95,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2665961,gamewinner,50.0,8,158.1,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2665961,gamewinner,50.0,8,158.1,4,27,3869,Mikael Jantunen,Forward,RMB,2,S,False,15.4,6.2,False
+2665961,gamewinner,50.0,8,158.1,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2665961,gamewinner,50.0,8,158.1,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2665961,gamewinner,50.0,8,158.1,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2665961,gamewinner,50.0,8,158.1,4,27,11501,Tyrese Martin,Forward,BAR,6,6th,False,14.3,8.9,False
+2665961,gamewinner,50.0,8,158.1,4,27,3918,Marius Grigonis,Forward,ZAL,7,B,False,12.1,6.8,True
+2665961,gamewinner,50.0,8,158.1,4,27,7424,Aliou Diarra,Center,VIR,8,B,False,16.0,9.8,True
+2665961,gamewinner,50.0,8,158.1,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2665961,gamewinner,50.0,8,158.1,4,27,4088,Berk Ugurlu,Guard,BJK,10,B,False,0.0,4.0,False
+2665961,gamewinner,50.0,8,158.1,4,27,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2660774,Revolveraši,11.0,8,145.55,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2660774,Revolveraši,11.0,8,145.55,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2660774,Revolveraši,11.0,8,145.55,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2660774,Revolveraši,11.0,8,145.55,4,28,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2660774,Revolveraši,11.0,8,145.55,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2660774,Revolveraši,11.0,8,145.55,4,28,3991,Alberto Abalde,Forward,RMB,6,6th,False,15.4,5.0,True
+2660774,Revolveraši,11.0,8,145.55,4,28,3846,Tyson Ward,Forward,OLY,7,B,False,17.6,7.7,False
+2660774,Revolveraši,11.0,8,145.55,4,28,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2660774,Revolveraši,11.0,8,145.55,4,28,11540,Mario Saint-supery,Guard,VBC,9,B,False,0.0,4.0,True
+2660774,Revolveraši,11.0,8,145.55,4,28,7223,Clement Frisch,Forward,KBA,10,B,False,2.0,5.0,False
+2660774,Revolveraši,11.0,8,145.55,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2693183,Srbijanac,78.0,8,170.35,4,27,3768,Mathias Lessort,Center,PAO,1,S,True,24.2,16.1,True
+2693183,Srbijanac,78.0,8,170.35,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2693183,Srbijanac,78.0,8,170.35,4,27,3948,Mbaye Ndiaye,Forward,OLY,3,S,False,6.6,8.9,True
+2693183,Srbijanac,78.0,8,170.35,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2693183,Srbijanac,78.0,8,170.35,4,27,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2693183,Srbijanac,78.0,8,170.35,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2693183,Srbijanac,78.0,8,170.35,4,27,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2693183,Srbijanac,78.0,8,170.35,4,27,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2693183,Srbijanac,78.0,8,170.35,4,27,11540,Mario Saint-supery,Guard,VBC,9,B,False,0.0,4.0,True
+2693183,Srbijanac,78.0,8,170.35,4,27,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2693183,Srbijanac,78.0,8,170.35,4,27,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2720124,leiva,99.0,8,146.85,4,29,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2720124,leiva,99.0,8,146.85,4,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2720124,leiva,99.0,8,146.85,4,29,8644,Stefan Joksimovic,Forward,KBA,3,S,False,10.0,4.3,False
+2720124,leiva,99.0,8,146.85,4,29,3766,Sasha Vezenkov,Forward,OLY,4,S,False,20.9,18.4,False
+2720124,leiva,99.0,8,146.85,4,29,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2720124,leiva,99.0,8,146.85,4,29,7201,Dwayne Bacon,Forward,DUB,6,6th,False,27.0,13.9,False
+2720124,leiva,99.0,8,146.85,4,29,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2720124,leiva,99.0,8,146.85,4,29,3930,Yam Madar,Guard,MTA,8,B,False,2.0,10.6,False
+2720124,leiva,99.0,8,146.85,4,29,8993,Cory Joseph,Guard,OLY,9,B,False,8.8,5.4,True
+2720124,leiva,99.0,8,146.85,4,29,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2720124,leiva,99.0,8,146.85,4,29,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3975,Sebastian Herrera,Guard,PBB,3,S,False,15.4,5.3,True
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3918,Marius Grigonis,Forward,ZAL,8,B,False,12.1,6.8,True
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2850798,Mes Que Un Club1,86.0,8,169.4,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2970821,TEAM1,39.0,8,167.5,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2970821,TEAM1,39.0,8,167.5,4,27,3957,Oscar Da Silva,Forward,BAY,2,S,False,5.0,7.8,True
+2970821,TEAM1,39.0,8,167.5,4,27,3948,Mbaye Ndiaye,Forward,OLY,3,S,False,6.6,8.9,True
+2970821,TEAM1,39.0,8,167.5,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2970821,TEAM1,39.0,8,167.5,4,27,3903,Elijah Bryant,Guard,HTA,5,S,True,38.5,17.2,False
+2970821,TEAM1,39.0,8,167.5,4,27,3851,Andres Feliz,Guard,RMB,6,6th,False,9.9,8.6,False
+2970821,TEAM1,39.0,8,167.5,4,27,3807,Elie Okobo,Guard,DUB,7,B,False,3.0,12.8,True
+2970821,TEAM1,39.0,8,167.5,4,27,7229,Mouhamed Faye,Center,PBB,8,B,False,19.8,7.4,True
+2970821,TEAM1,39.0,8,167.5,4,27,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2970821,TEAM1,39.0,8,167.5,4,27,3836,Konstantinos Mitoglou,Forward,PAO,10,B,False,0.0,6.4,True
+2970821,TEAM1,39.0,8,167.5,4,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2692445,κκκ10,95.0,8,176.25,4,29,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2692445,κκκ10,95.0,8,176.25,4,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2692445,κκκ10,95.0,8,176.25,4,29,3948,Mbaye Ndiaye,Forward,OLY,3,S,False,6.6,8.9,True
+2692445,κκκ10,95.0,8,176.25,4,29,3838,Collin Malcolm,Forward,EFS,4,S,False,13.0,8.8,False
+2692445,κκκ10,95.0,8,176.25,4,29,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2692445,κκκ10,95.0,8,176.25,4,29,3795,TJ Shorts,Guard,VBC,6,6th,False,27.5,16.3,False
+2692445,κκκ10,95.0,8,176.25,4,29,3930,Yam Madar,Guard,MTA,7,B,False,2.0,10.6,False
+2692445,κκκ10,95.0,8,176.25,4,29,3886,Daniel Hackett,Guard,VIR,8,B,False,4.0,4.4,True
+2692445,κκκ10,95.0,8,176.25,4,29,3867,Kostas Papanikolaou,Forward,OLY,9,B,False,3.3,4.1,False
+2692445,κκκ10,95.0,8,176.25,4,29,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2692445,κκκ10,95.0,8,176.25,4,29,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2660524,Courters I,3.0,8,178.35,3,29,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2660524,Courters I,3.0,8,178.35,3,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2660524,Courters I,3.0,8,178.35,3,29,3869,Mikael Jantunen,Forward,RMB,3,S,False,15.4,6.2,False
+2660524,Courters I,3.0,8,178.35,3,29,3766,Sasha Vezenkov,Forward,OLY,4,S,False,20.9,18.4,False
+2660524,Courters I,3.0,8,178.35,3,29,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2660524,Courters I,3.0,8,178.35,3,29,3903,Elijah Bryant,Guard,HTA,6,6th,False,38.5,17.2,False
+2660524,Courters I,3.0,8,178.35,3,29,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2660524,Courters I,3.0,8,178.35,3,29,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2660524,Courters I,3.0,8,178.35,3,29,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2660524,Courters I,3.0,8,178.35,3,29,11495,Nikola Djurisic,Guard,CZV,10,B,False,0.0,4.4,True
+2660524,Courters I,3.0,8,178.35,3,29,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2747016,Nodas,42.0,8,116.95,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2747016,Nodas,42.0,8,116.95,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2747016,Nodas,42.0,8,116.95,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2747016,Nodas,42.0,8,116.95,4,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2747016,Nodas,42.0,8,116.95,4,28,3791,Carlik Jones,Guard,PAR,5,S,False,5.0,14.8,False
+2747016,Nodas,42.0,8,116.95,4,28,8644,Stefan Joksimovic,Forward,KBA,6,6th,False,10.0,4.3,False
+2747016,Nodas,42.0,8,116.95,4,28,4012,Giampaolo Ricci,Forward,MIL,7,B,False,-3.0,4.0,True
+2747016,Nodas,42.0,8,116.95,4,28,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2747016,Nodas,42.0,8,116.95,4,28,8727,Braxton Key,Forward,FBT,9,B,False,-4.0,8.3,False
+2747016,Nodas,42.0,8,116.95,4,28,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2747016,Nodas,42.0,8,116.95,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2990720,Jorgito,84.0,8,186.85,4,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2990720,Jorgito,84.0,8,186.85,4,27,7201,Dwayne Bacon,Forward,DUB,2,S,False,27.0,13.9,False
+2990720,Jorgito,84.0,8,186.85,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2990720,Jorgito,84.0,8,186.85,4,27,3795,TJ Shorts,Guard,VBC,4,S,True,27.5,16.3,False
+2990720,Jorgito,84.0,8,186.85,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2990720,Jorgito,84.0,8,186.85,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2990720,Jorgito,84.0,8,186.85,4,27,3896,Juan Nunez,Guard,BAR,7,B,False,5.5,4.0,True
+2990720,Jorgito,84.0,8,186.85,4,27,3836,Konstantinos Mitoglou,Forward,PAO,8,B,False,0.0,6.4,True
+2990720,Jorgito,84.0,8,186.85,4,27,3851,Andres Feliz,Guard,RMB,9,B,False,9.9,8.6,False
+2990720,Jorgito,84.0,8,186.85,4,27,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2990720,Jorgito,84.0,8,186.85,4,27,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,7221,Azuolas Tubelis,Forward,ZAL,3,S,False,23.1,11.8,False
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,11545,Marcus Carr,Guard,VIR,6,6th,False,-1.0,10.7,False
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,3836,Konstantinos Mitoglou,Forward,PAO,7,B,False,0.0,6.4,True
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,8993,Cory Joseph,Guard,OLY,8,B,False,8.8,5.4,True
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,11516,Jae Crowder,Forward,ASV,9,B,False,8.8,10.0,False
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2760208,POUTHENIAKOS,74.0,8,148.0,3,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,7209,Lamar Stevens,Forward,PAR,6,6th,False,13.0,8.6,False
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,4246,Semi Ojeleye,Forward,CZV,7,B,False,1.1,9.0,True
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,4019,Panagiotis Kalaitzakis,Guard,PAO,8,B,False,0.0,4.0,True
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2964827,Διαμαντίδης13,59.0,8,138.95,2,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2677300,KK Claude Code,25.0,8,164.55,4,31,3768,Mathias Lessort,Center,PAO,1,S,False,24.2,16.1,True
+2677300,KK Claude Code,25.0,8,164.55,4,31,3775,Shavon Shields,Forward,FBT,2,S,False,21.0,13.1,False
+2677300,KK Claude Code,25.0,8,164.55,4,31,3850,Theo Maledon,Guard,RMB,3,S,False,17.6,11.9,False
+2677300,KK Claude Code,25.0,8,164.55,4,31,3851,Andres Feliz,Guard,RMB,4,S,False,9.9,8.6,False
+2677300,KK Claude Code,25.0,8,164.55,4,31,3903,Elijah Bryant,Guard,HTA,5,S,True,38.5,17.2,False
+2677300,KK Claude Code,25.0,8,164.55,4,31,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2677300,KK Claude Code,25.0,8,164.55,4,31,3787,Nigel Hayes-davis,Forward,PAO,7,B,False,4.4,13.1,False
+2677300,KK Claude Code,25.0,8,164.55,4,31,11495,Nikola Djurisic,Guard,CZV,8,B,False,0.0,4.4,True
+2677300,KK Claude Code,25.0,8,164.55,4,31,3867,Kostas Papanikolaou,Forward,OLY,9,B,False,3.3,4.1,False
+2677300,KK Claude Code,25.0,8,164.55,4,31,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2677300,KK Claude Code,25.0,8,164.55,4,31,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2804018,Bengarbc,8.0,8,167.25,4,30,3785,Josh Nebo,Center,BAR,1,S,False,23.1,12.1,True
+2804018,Bengarbc,8.0,8,167.25,4,30,7201,Dwayne Bacon,Forward,DUB,2,S,True,27.0,13.9,False
+2804018,Bengarbc,8.0,8,167.25,4,30,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2804018,Bengarbc,8.0,8,167.25,4,30,7221,Azuolas Tubelis,Forward,ZAL,4,S,False,23.1,11.8,False
+2804018,Bengarbc,8.0,8,167.25,4,30,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2804018,Bengarbc,8.0,8,167.25,4,30,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2804018,Bengarbc,8.0,8,167.25,4,30,3983,Dejan Davidovac,Forward,CZV,7,B,False,4.4,4.4,True
+2804018,Bengarbc,8.0,8,167.25,4,30,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2804018,Bengarbc,8.0,8,167.25,4,30,8993,Cory Joseph,Guard,OLY,9,B,False,8.8,5.4,True
+2804018,Bengarbc,8.0,8,167.25,4,30,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2804018,Bengarbc,8.0,8,167.25,4,30,3943,Joan Penarroya,Head Coach,PAR,11,HC,False,-5.0,6.3,True
+2660142,OlyZuri,87.0,8,108.5,4,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2660142,OlyZuri,87.0,8,108.5,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2660142,OlyZuri,87.0,8,108.5,4,27,3773,Nikola Mirotic,Forward,VBC,3,S,False,17.6,12.2,True
+2660142,OlyZuri,87.0,8,108.5,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2660142,OlyZuri,87.0,8,108.5,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2660142,OlyZuri,87.0,8,108.5,4,27,11545,Marcus Carr,Guard,VIR,6,6th,False,-1.0,10.7,False
+2660142,OlyZuri,87.0,8,108.5,4,27,3911,Kevarrius Hayes,Center,PAR,7,B,False,21.0,8.1,True
+2660142,OlyZuri,87.0,8,108.5,4,27,3976,Arijan Lakic,Forward,PAR,8,B,False,0.0,4.0,True
+2660142,OlyZuri,87.0,8,108.5,4,27,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2660142,OlyZuri,87.0,8,108.5,4,27,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2660142,OlyZuri,87.0,8,108.5,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2972039,Autsajder33,16.0,8,179.55,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2972039,Autsajder33,16.0,8,179.55,4,27,11501,Tyrese Martin,Forward,BAR,2,S,False,14.3,8.9,False
+2972039,Autsajder33,16.0,8,179.55,4,27,7221,Azuolas Tubelis,Forward,ZAL,3,S,False,23.1,11.8,False
+2972039,Autsajder33,16.0,8,179.55,4,27,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2972039,Autsajder33,16.0,8,179.55,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2972039,Autsajder33,16.0,8,179.55,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2972039,Autsajder33,16.0,8,179.55,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2972039,Autsajder33,16.0,8,179.55,4,27,4246,Semi Ojeleye,Forward,CZV,8,B,False,1.1,9.0,True
+2972039,Autsajder33,16.0,8,179.55,4,27,4005,Edwin Jackson,Forward,ASV,9,B,False,0.0,4.4,True
+2972039,Autsajder33,16.0,8,179.55,4,27,11541,Alvaro Cardenas,Guard,VBC,10,B,False,-0.9,4.3,True
+2972039,Autsajder33,16.0,8,179.55,4,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2676398,KK Gargamel,79.0,8,152.05,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2676398,KK Gargamel,79.0,8,152.05,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,8644,Stefan Joksimovic,Forward,KBA,6,6th,False,10.0,4.3,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,4546,Joel Ayayi,Guard,PBB,7,B,False,7.7,4.9,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,3930,Yam Madar,Guard,MTA,8,B,False,2.0,10.6,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,3867,Kostas Papanikolaou,Forward,OLY,9,B,False,3.3,4.1,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,3933,Leopold Cavaliere,Forward,PBB,10,B,False,3.3,4.6,False
+2676398,KK Gargamel,79.0,8,152.05,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3768,Mathias Lessort,Center,PAO,1,S,True,24.2,16.1,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3773,Nikola Mirotic,Forward,VBC,3,S,False,17.6,12.2,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3851,Andres Feliz,Guard,RMB,4,S,False,9.9,8.6,False
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3983,Dejan Davidovac,Forward,CZV,7,B,False,4.4,4.4,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3950,Ognjen Dobric,Forward,CZV,8,B,False,6.6,4.7,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,8993,Cory Joseph,Guard,OLY,9,B,False,8.8,5.4,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,11540,Mario Saint-supery,Guard,VBC,10,B,False,0.0,4.0,True
+2884308,NEWCASTLE 1,69.0,8,171.2,4,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2729552,Lollobrigida,52.0,8,134.15,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2729552,Lollobrigida,52.0,8,134.15,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,3791,Carlik Jones,Guard,PAR,6,6th,False,5.0,14.8,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,3957,Oscar Da Silva,Forward,BAY,7,B,False,5.0,7.8,True
+2729552,Lollobrigida,52.0,8,134.15,4,28,8623,Kosta Kondic,Guard,DUB,8,B,False,-1.0,4.3,True
+2729552,Lollobrigida,52.0,8,134.15,4,28,3973,Joel Parra,Forward,BAR,9,B,False,0.0,7.1,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,3916,Gabriele Procida,Forward,RMB,10,B,False,5.5,4.1,False
+2729552,Lollobrigida,52.0,8,134.15,4,28,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2841969,Docers,13.0,8,112.35,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2841969,Docers,13.0,8,112.35,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2841969,Docers,13.0,8,112.35,4,27,7221,Azuolas Tubelis,Forward,ZAL,3,S,False,23.1,11.8,False
+2841969,Docers,13.0,8,112.35,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2841969,Docers,13.0,8,112.35,4,27,3842,Scottie Wilbekin,Guard,BJK,5,S,False,-1.0,9.3,True
+2841969,Docers,13.0,8,112.35,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2841969,Docers,13.0,8,112.35,4,27,3915,Matteo Spagnolo,Guard,KBA,7,B,False,-5.0,5.9,True
+2841969,Docers,13.0,8,112.35,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2841969,Docers,13.0,8,112.35,4,27,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2841969,Docers,13.0,8,112.35,4,27,3836,Konstantinos Mitoglou,Forward,PAO,10,B,False,0.0,6.4,True
+2841969,Docers,13.0,8,112.35,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2762479,RandomPotatoes,14.0,8,181.75,4,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3869,Mikael Jantunen,Forward,RMB,2,S,False,15.4,6.2,False
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3807,Elie Okobo,Guard,DUB,8,B,False,3.0,12.8,True
+2762479,RandomPotatoes,14.0,8,181.75,4,27,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2762479,RandomPotatoes,14.0,8,181.75,4,27,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2732137,ВавПас,88.0,8,130.35,4,29,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2732137,ВавПас,88.0,8,130.35,4,29,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2732137,ВавПас,88.0,8,130.35,4,29,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2732137,ВавПас,88.0,8,130.35,4,29,3838,Collin Malcolm,Forward,EFS,4,S,False,13.0,8.8,False
+2732137,ВавПас,88.0,8,130.35,4,29,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2732137,ВавПас,88.0,8,130.35,4,29,4670,Saben Lee,Guard,ZAL,6,6th,False,11.0,8.1,False
+2732137,ВавПас,88.0,8,130.35,4,29,8644,Stefan Joksimovic,Forward,KBA,7,B,False,10.0,4.3,False
+2732137,ВавПас,88.0,8,130.35,4,29,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2732137,ВавПас,88.0,8,130.35,4,29,3973,Joel Parra,Forward,BAR,9,B,False,0.0,7.1,False
+2732137,ВавПас,88.0,8,130.35,4,29,3930,Yam Madar,Guard,MTA,10,B,False,2.0,10.6,False
+2732137,ВавПас,88.0,8,130.35,4,29,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2948545,Movie Star +,27.0,8,163.9,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2948545,Movie Star +,27.0,8,163.9,4,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2948545,Movie Star +,27.0,8,163.9,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2948545,Movie Star +,27.0,8,163.9,4,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2948545,Movie Star +,27.0,8,163.9,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2948545,Movie Star +,27.0,8,163.9,4,28,3808,Codi Miller-Mcintyre,Guard,OLY,6,6th,False,12.1,10.4,False
+2948545,Movie Star +,27.0,8,163.9,4,28,3983,Dejan Davidovac,Forward,CZV,7,B,False,4.4,4.4,True
+2948545,Movie Star +,27.0,8,163.9,4,28,3867,Kostas Papanikolaou,Forward,OLY,8,B,False,3.3,4.1,False
+2948545,Movie Star +,27.0,8,163.9,4,28,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2948545,Movie Star +,27.0,8,163.9,4,28,3851,Andres Feliz,Guard,RMB,10,B,False,9.9,8.6,False
+2948545,Movie Star +,27.0,8,163.9,4,28,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2668308,sb02,58.0,8,136.25,4,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2668308,sb02,58.0,8,136.25,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,True,20.9,18.4,False
+2668308,sb02,58.0,8,136.25,4,27,7201,Dwayne Bacon,Forward,DUB,3,S,False,27.0,13.9,False
+2668308,sb02,58.0,8,136.25,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2668308,sb02,58.0,8,136.25,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2668308,sb02,58.0,8,136.25,4,27,11501,Tyrese Martin,Forward,BAR,6,6th,False,14.3,8.9,False
+2668308,sb02,58.0,8,136.25,4,27,7255,Omiros Netzipoglou,Guard,OLY,7,B,False,-1.8,4.0,True
+2668308,sb02,58.0,8,136.25,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2668308,sb02,58.0,8,136.25,4,27,8644,Stefan Joksimovic,Forward,KBA,9,B,False,10.0,4.3,False
+2668308,sb02,58.0,8,136.25,4,27,3911,Kevarrius Hayes,Center,PAR,10,B,False,21.0,8.1,True
+2668308,sb02,58.0,8,136.25,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,7424,Aliou Diarra,Center,VIR,2,S,False,16.0,9.8,True
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3766,Sasha Vezenkov,Forward,OLY,3,S,False,20.9,18.4,False
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3903,Elijah Bryant,Guard,HTA,6,6th,False,38.5,17.2,False
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3950,Ognjen Dobric,Forward,CZV,7,B,False,6.6,4.7,True
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3973,Joel Parra,Forward,BAR,8,B,False,0.0,7.1,False
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3836,Konstantinos Mitoglou,Forward,PAO,9,B,False,0.0,6.4,True
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3988,John Dibartolomeo,Guard,MTA,10,B,False,1.0,4.0,True
+2907872,šikijevi tigrovi,47.0,8,181.7,3,28,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3785,Josh Nebo,Center,BAR,2,S,False,23.1,12.1,True
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3851,Andres Feliz,Guard,RMB,5,S,False,9.9,8.6,False
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3918,Marius Grigonis,Forward,ZAL,6,6th,False,12.1,6.8,True
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,4246,Semi Ojeleye,Forward,CZV,7,B,False,1.1,9.0,True
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,8993,Cory Joseph,Guard,OLY,8,B,False,8.8,5.4,True
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3930,Yam Madar,Guard,MTA,9,B,False,2.0,10.6,False
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,3976,Arijan Lakic,Forward,PAR,10,B,False,0.0,4.0,True
+2661213,KK PNEUMATIČAR,46.0,8,142.85,4,28,4006,Tomas Masiulis,Head Coach,ZAL,11,HC,False,20.0,6.6,True
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3768,Mathias Lessort,Center,PAO,1,S,False,24.2,16.1,True
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,4233,Mfiondu Kabengele,Center,DUB,2,S,False,25.0,15.6,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3903,Elijah Bryant,Guard,HTA,4,S,False,38.5,17.2,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3851,Andres Feliz,Guard,RMB,6,6th,False,9.9,8.6,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,7223,Clement Frisch,Forward,KBA,7,B,False,2.0,5.0,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,4012,Giampaolo Ricci,Forward,MIL,8,B,False,-3.0,4.0,True
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,8993,Cory Joseph,Guard,OLY,9,B,False,8.8,5.4,True
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2888016,JUICE 🍊🍊,1.0,8,187.55,4,28,3938,Ibon Navarro,Head Coach,CZV,11,HC,False,25.0,6.7,True
+2744967,kAIdia,26.0,8,197.45,4,31,4233,Mfiondu Kabengele,Center,DUB,1,S,False,25.0,15.6,False
+2744967,kAIdia,26.0,8,197.45,4,31,3799,Zach Leday,Forward,HTA,2,S,False,6.6,14.4,False
+2744967,kAIdia,26.0,8,197.45,4,31,3903,Elijah Bryant,Guard,HTA,3,S,True,38.5,17.2,False
+2744967,kAIdia,26.0,8,197.45,4,31,3795,TJ Shorts,Guard,VBC,4,S,False,27.5,16.3,False
+2744967,kAIdia,26.0,8,197.45,4,31,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2744967,kAIdia,26.0,8,197.45,4,31,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2744967,kAIdia,26.0,8,197.45,4,31,4019,Panagiotis Kalaitzakis,Guard,PAO,7,B,False,0.0,4.0,True
+2744967,kAIdia,26.0,8,197.45,4,31,3916,Gabriele Procida,Forward,RMB,8,B,False,5.5,4.1,False
+2744967,kAIdia,26.0,8,197.45,4,31,3976,Arijan Lakic,Forward,PAR,9,B,False,0.0,4.0,True
+2744967,kAIdia,26.0,8,197.45,4,31,8769,Uros Danilovic,Forward,PAR,10,B,False,0.0,4.0,True
+2744967,kAIdia,26.0,8,197.45,4,31,3872,Pedro Martinez,Head Coach,RMB,11,HC,False,20.0,8.9,True
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,7424,Aliou Diarra,Center,VIR,1,S,False,16.0,9.8,True
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3869,Mikael Jantunen,Forward,RMB,2,S,False,15.4,6.2,False
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3766,Sasha Vezenkov,Forward,OLY,3,S,True,20.9,18.4,False
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3850,Theo Maledon,Guard,RMB,4,S,False,17.6,11.9,False
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3903,Elijah Bryant,Guard,HTA,5,S,False,38.5,17.2,False
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3911,Kevarrius Hayes,Center,PAR,6,6th,False,21.0,8.1,True
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3915,Matteo Spagnolo,Guard,KBA,7,B,False,-5.0,5.9,True
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3851,Andres Feliz,Guard,RMB,8,B,False,9.9,8.6,False
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3867,Kostas Papanikolaou,Forward,OLY,9,B,False,3.3,4.1,False
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3957,Oscar Da Silva,Forward,BAY,10,B,False,5.0,7.8,True
+2662335,Pretorijanska Garda,64.0,8,166.9,4,27,3868,Zeljko Obradovic,Head Coach,PAO,11,HC,False,10.0,11.1,True
+2664771,IKER BC 1,30.0,8,125.95,4,27,4233,Mfiondu Kabengele,Center,DUB,1,S,True,25.0,15.6,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,3766,Sasha Vezenkov,Forward,OLY,2,S,False,20.9,18.4,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,11501,Tyrese Martin,Forward,BAR,3,S,False,14.3,8.9,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,3791,Carlik Jones,Guard,PAR,4,S,False,5.0,14.8,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,3850,Theo Maledon,Guard,RMB,5,S,False,17.6,11.9,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,7424,Aliou Diarra,Center,VIR,6,6th,False,16.0,9.8,True
+2664771,IKER BC 1,30.0,8,125.95,4,27,3851,Andres Feliz,Guard,RMB,7,B,False,9.9,8.6,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,4246,Semi Ojeleye,Forward,CZV,8,B,False,1.1,9.0,True
+2664771,IKER BC 1,30.0,8,125.95,4,27,4019,Panagiotis Kalaitzakis,Guard,PAO,9,B,False,0.0,4.0,True
+2664771,IKER BC 1,30.0,8,125.95,4,27,3867,Kostas Papanikolaou,Forward,OLY,10,B,False,3.3,4.1,False
+2664771,IKER BC 1,30.0,8,125.95,4,27,7235,Xavi Pascual,Head Coach,DUB,11,HC,False,-5.0,8.2,True

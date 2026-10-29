@@ -1,0 +1,68 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2540,
+  "number": 1
+ },
+ "match": {
+  "id": 11998,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-27T19:00:00.000000Z",
+  "home_team": {
+   "id": 141,
+   "name": "FC Bayern Munich",
+   "abbreviation": "BAY",
+   "score": 84
+  },
+  "away_team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "score": 88
+  }
+ },
+ "fantasy_pts": 12,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 10,
+   "fantasy_pts": 10
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 8,
+   "fantasy_pts": 8
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 4,
+   "fantasy_pts": -4
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

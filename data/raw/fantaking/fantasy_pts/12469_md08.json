@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2540,
+  "number": 1
+ },
+ "match": {
+  "id": 11997,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-27T20:00:00.000000Z",
+  "home_team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "score": 86
+  },
+  "away_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 104
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2540,
+  "number": 1
+ },
+ "match": {
+  "id": 11999,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-27T19:30:00.000000Z",
+  "home_team": {
+   "id": 174,
+   "name": "Valencia Basket",
+   "abbreviation": "VBC",
+   "score": 86
+  },
+  "away_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 78
+  }
+ },
+ "fantasy_pts": -2.7,
+ "stats_items": [
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 4,
+   "fantasy_pts": -4
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

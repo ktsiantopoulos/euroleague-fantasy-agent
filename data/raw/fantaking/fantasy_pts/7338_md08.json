@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2541,
+  "number": 2
+ },
+ "match": {
+  "id": 12002,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-28T19:00:00.000000Z",
+  "home_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 82
+  },
+  "away_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 75
+  }
+ },
+ "fantasy_pts": 9.9,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 8,
+   "fantasy_pts": 8
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 4,
+   "fantasy_pts": -4
+  }
+ ],
+ "label": "opponent"
+}

@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2541,
+  "number": 2
+ },
+ "match": {
+  "id": 12001,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-28T18:00:00.000000Z",
+  "home_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 118
+  },
+  "away_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 88
+  }
+ },
+ "fantasy_pts": 10,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 8,
+   "fantasy_pts": 8
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

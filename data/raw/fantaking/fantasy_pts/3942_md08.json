@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1535,
+  "number": 8
+ },
+ "round": {
+  "id": 2541,
+  "number": 2
+ },
+ "match": {
+  "id": 12004,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-28T19:30:00.000000Z",
+  "home_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 74
+  },
+  "away_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 91
+  }
+ },
+ "fantasy_pts": 3.3,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}
