@@ -140,7 +140,6 @@ platform_id,first_name,last_name,official_team,person_code,method
 7226,Allan,Dokossi,PRS,014010,surname+team
 11529,Alize,Johnson,PRS,015160,surname+team
 11532,Ethan,Thompson,PAR,014742,surname+team
-3788,Keenan,Evans,ZAL,011218,surname+team
 3815,Trent,Forrest,ULK,013367,surname+team
 3853,Jerian,Grant,PAN,011204,surname+team
 4108,Dj,Stewart,BAS,012700,surname+team
@@ -152,6 +151,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 11530,Maozinha,Pereira,PRS,014801,surname+team
 11534,Olivier,Sarr,MAD,006833,surname+team
 11536,Damian,Jones,MAD,015103,surname+team
+3788,Keenan,Evans,ZAL,011218,surname+team
 3801,Nicolo,Melli,ULK,002849,surname+team
 3881,Leandro,Bolmaro,MIL,008985,surname+team
 3981,Mouhamet,Diouf,VIR,013374,surname+team

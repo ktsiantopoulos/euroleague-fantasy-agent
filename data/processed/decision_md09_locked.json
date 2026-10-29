@@ -1,6 +1,6 @@
 {
  "matchday": 9,
- "frozen_utc": "2026-10-29T10:03:19Z",
+ "frozen_utc": "2026-10-29T14:12:39Z",
  "lock_utc": "2026-10-29T18:59:00Z",
  "budget": 107.3,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "7424"
  ],
  "hold": {
-  "expected": 138.7,
+  "expected": 138.8,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -36,7 +36,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.87,
+    "md_pts": 16.96,
     "md_sd": 6.89
    },
    {
@@ -45,7 +45,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.7,
+    "md_pts": 15.72,
     "md_sd": 10.35
    },
    {
@@ -54,7 +54,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.33,
+    "md_pts": 15.35,
     "md_sd": 9.95
    },
    {
@@ -81,7 +81,7 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 13.76,
+    "md_pts": 13.78,
     "md_sd": 8.34
    },
    {
@@ -90,7 +90,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 11.12,
+    "md_pts": 11.14,
     "md_sd": 8.16
    },
    {
@@ -99,7 +99,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.39,
+    "md_pts": 10.38,
     "md_sd": 4.85
    },
    {
@@ -108,7 +108,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 2.59,
+    "md_pts": 2.58,
     "md_sd": 5.41
    },
    {
@@ -141,17 +141,8 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.87,
+    "md_pts": 16.96,
     "md_sd": 6.89
-   },
-   {
-    "platform_id": "3930",
-    "name": "Yam Madar",
-    "pos": "Guard",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 15.72,
-    "md_sd": 9.81
    },
    {
     "platform_id": "3850",
@@ -159,26 +150,35 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.7,
+    "md_pts": 15.72,
     "md_sd": 10.35
    },
    {
-    "platform_id": "4005",
-    "name": "Edwin Jackson",
-    "pos": "Forward",
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 9.8,
-    "md_sd": 8.5
+    "md_pts": 15.65,
+    "md_sd": 9.81
    },
    {
     "platform_id": "3851",
     "name": "Andres Feliz",
     "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.35,
+    "md_sd": 9.95
+   },
+   {
+    "platform_id": "4005",
+    "name": "Edwin Jackson",
+    "pos": "Forward",
     "role": "sixth",
     "captain": false,
-    "md_pts": 15.33,
-    "md_sd": 9.95
+    "md_pts": 9.8,
+    "md_sd": 8.5
    },
    {
     "platform_id": "11515",
@@ -213,7 +213,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.39,
+    "md_pts": 10.38,
     "md_sd": 4.85
    },
    {
@@ -227,10 +227,10 @@
    }
   ],
   "trades_out": [
-   "Josh Nebo",
-   "Kostas Papanikolaou",
    "Mckinley Wright",
-   "Berk Ugurlu"
+   "Kostas Papanikolaou",
+   "Berk Ugurlu",
+   "Josh Nebo"
   ],
   "trades_in": [
    "Tremont Waters",

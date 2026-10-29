@@ -1,13 +1,12 @@
-## run reason: manual  (deadline 2026-10-28T17:29:00+00:00, -16.54 h away)
+## run reason: pre-deadline (4.8h)  (deadline 2026-10-29T18:59:00+00:00, 4.80 h away)
 ## pull-official
 E2026: 80 games played, 0 box scores fetched now
 
 ## pull-platform
-  ! platform still reports MD 8 (all games played) - rolled over to MD 9, deadline 2026-10-29 18:59 UTC from the schedule
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_09
-team: UnderTakers86  credits: 107.3  trades used: 0/4
+team: UnderTakers86  credits: 107.3  trades used: 4/4
 
 ## pull-external
   fantasyedge: 373 players, 15 columns kept
@@ -89,21 +88,6 @@ every round)
 after 3 straight newest-round wins
 - sd scale kept at 1.096 (hold-out 80% band 77%; candidate ×1.096 → 77%)
 health: no drift flags
-
-## top-100
-top-100: 0 roster previews fetched now
-# Top-140 managers — matchdays 1–8
-
-## Ownership in the top 140, matchday 8
-
-| player | pos | club | price | top own% | global% | captain # |
-|---|---|---|---|---|---|---|
-| Theo Maledon | G | RMB | 11.9 | 59 | 35 | 0 |
-| Andres Feliz | G | RMB | 8.6 | 56 | 34 | 0 |
-| Sasha Vezenkov | F | OLY | 18.4 | 56 | 45 | 36 |
-| Aliou Diarra | C | VIR | 9.8 | 49 | 36 | 0 |
-| Mfiondu Kabengele | C | DUB | 15.6 | 47 | 17 | 35 |
-| Elijah Bryant | G | HTA | 17.2 | 39 | 13 | 14 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  

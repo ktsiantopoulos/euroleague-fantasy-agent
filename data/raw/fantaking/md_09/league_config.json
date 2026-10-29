@@ -1,5 +1,5 @@
 {
- "status_id": 4,
+ "status_id": 1,
  "maintenance": false,
  "players_list_limitations_enabled": false,
  "denied_free_agent_trade_creation_offset": 180,
@@ -13,8 +13,9 @@
   "num_rounds": 2
  },
  "current_round": {
-  "started_at": "2026-10-29T18:59:00.000000Z",
-  "derived_from": "schedule"
+  "id": 2542,
+  "number": 1,
+  "started_at": "2026-10-29T18:59:00.000000Z"
  },
  "previous_matchday": {
   "id": 1535,
@@ -542,7 +543,7 @@
  ],
  "predictions": null,
  "match_predictor": {
-  "starts_at": "2026-10-27T16:00:00.000000Z",
+  "starts_at": "2026-10-29T19:00:00.000000Z",
   "configs": {
    "add_matchups": true,
    "predictions": [
@@ -563,10 +564,5 @@
  "make_predictions_list_public_offset": null,
  "reader_tournament": null,
  "has_palmares": false,
- "has_badge": false,
- "rollover": {
-  "platform_current": 8,
-  "used": 9,
-  "deadline_utc": "2026-10-29T18:59:00.000000Z"
- }
+ "has_badge": false
 }

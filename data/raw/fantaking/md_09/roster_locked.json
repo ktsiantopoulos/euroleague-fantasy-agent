@@ -149,7 +149,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2541,
     "number": 2
@@ -192,13 +192,13 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2541,
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": false,
+   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -235,7 +235,7 @@
    "is_captain": true,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2541,
     "number": 2
@@ -278,7 +278,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2541,
     "number": 2
@@ -321,7 +321,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2540,
     "number": 1
@@ -364,7 +364,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2540,
     "number": 1
@@ -407,7 +407,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2540,
     "number": 1
@@ -450,7 +450,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2540,
     "number": 1
@@ -493,13 +493,13 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2541,
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": false,
+   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -536,7 +536,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2541,
     "number": 2
@@ -579,7 +579,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2540,
     "number": 1
