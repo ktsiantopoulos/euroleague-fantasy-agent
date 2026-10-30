@@ -1,6 +1,6 @@
-## run reason: pre-deadline (4.8h)  (deadline 2026-10-29T18:59:00+00:00, 4.80 h away)
+## run reason: pre-deadline (1.9h)  (deadline 2026-10-30T15:59:00+00:00, 1.94 h away)
 ## pull-official
-E2026: 80 games played, 0 box scores fetched now
+E2026: 83 games played, 3 box scores fetched now
 
 ## pull-platform
 pulled -> 
@@ -9,17 +9,17 @@ taking/md_09
 team: UnderTakers86  credits: 107.3  trades used: 4/4
 
 ## pull-external
-  fantasyedge: 373 players, 15 columns kept
+  fantasyedge: 376 players, 15 columns kept
 price base: fantasyedge 237, top100_md1 122, first_seen 3
 
 ## build
         games  rows  mismatches
 season                         
-E2026      80  1915           0
+E2026      83  1987           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    298
-UNMATCHED        44
+surname+team    299
+UNMATCHED        43
 coach            19
 team context: 20 clubs · usage: 288 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 3
@@ -29,8 +29,8 @@ T2=2026-10-28, T1=2026-10-29, T2=2026-10-30
 ## reconcile
 player-games compared: 2834
 exact matches: 1881 (66.4%)
-  no_player: 513
-  no_boxscore_row: 425
+  no_player: 505
+  no_boxscore_row: 433
   MISMATCH: 15
 
 first mismatches:
@@ -76,28 +76,26 @@ no matchday with a pre-lock decision snapshot and final results yet (first one:
 MD 9)
 
 ## learn
-learn: train R4-R6, hold-out R7, R8
-- new core + bias: hold-out MAE R7 6.45, R8 6.13 vs current 6.46, 6.11 (gain 
--0.01)
-- new core: hold-out MAE R7 6.45, R8 6.09 vs current 6.46, 6.11 (gain +0.01, 
+learn: train R4-R7, hold-out R8, R9
+- new core + bias: hold-out MAE R8 6.15, R9 5.68 vs current 6.11, 6.04 (gain 
++0.16)
+- new core: hold-out MAE R8 6.09, R9 5.84 vs current 6.11, 6.04 (gain +0.10, 
 every round)
-- current core + new bias: hold-out MAE R7 6.40, R8 6.16 vs current 6.46, 6.11 
-(gain +0.00)
-→ kept current core
-- shadow challenger 202610290458 ('new core', since R8) - would be promoted 
-after 3 straight newest-round wins
-- sd scale kept at 1.096 (hold-out 80% band 77%; candidate ×1.096 → 77%)
+- current core + new bias: hold-out MAE R8 6.19, R9 5.85 vs current 6.11, 6.04 
+(gain +0.05)
+→ ADOPTED 'new core' (gain +0.10 on every hold-out round)
+- sd scale kept at 1.096 (hold-out 80% band 79%; candidate ×1.122 → 79%)
 health: no drift flags
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
 mae_base_last3  corr_base_last3
-all dressed players 1159       5.56       0.412           5.81           0.397  
-6.02            0.366
-projected >= 15 min  651       6.18       0.312           6.49           0.296  
-6.80            0.253
-   >= 3 prior games 1076       5.59       0.412           5.81           0.402  
-6.04            0.368
+all dressed players 1230       5.55       0.426           5.77           0.407  
+6.02            0.373
+projected >= 15 min  699       6.13       0.323           6.42           0.301  
+6.78            0.254
+   >= 3 prior games 1143       5.58       0.426           5.77           0.411  
+6.05            0.373
 
 ## recommend
 - Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 

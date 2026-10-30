@@ -1,36 +1,36 @@
 {
- "formation_id": 31,
+ "formation_id": 28,
  "latest_snapshot": {
-  "formation_id": 30,
+  "formation_id": 31,
   "players": [
    {
     "id": 3766,
-    "court_position": 3,
-    "is_captain": true,
-    "active": true
-   },
-   {
-    "id": 3785,
-    "court_position": 7,
+    "court_position": 10,
     "is_captain": false,
-    "active": true
+    "active": false
    },
    {
     "id": 3850,
-    "court_position": 5,
+    "court_position": 3,
     "is_captain": false,
     "active": true
    },
    {
     "id": 3851,
-    "court_position": 8,
+    "court_position": 4,
     "is_captain": false,
     "active": true
    },
    {
-    "id": 3867,
-    "court_position": 10,
+    "id": 3911,
+    "court_position": 7,
     "is_captain": false,
+    "active": false
+   },
+   {
+    "id": 3930,
+    "court_position": 5,
+    "is_captain": true,
     "active": true
    },
    {
@@ -41,43 +41,39 @@
    },
    {
     "id": 3948,
-    "court_position": 4,
-    "is_captain": false,
-    "active": true
-   },
-   {
-    "id": 4088,
     "court_position": 9,
     "is_captain": false,
-    "active": true
+    "active": false
    },
    {
-    "id": 4096,
-    "court_position": 6,
-    "is_captain": false,
-    "active": true
-   },
-   {
-    "id": 7209,
+    "id": 3983,
     "court_position": 2,
     "is_captain": false,
     "active": true
    },
    {
+    "id": 7209,
+    "court_position": 6,
+    "is_captain": false,
+    "active": false
+   },
+   {
     "id": 7424,
     "court_position": 1,
     "is_captain": false,
-    "active": true
+    "active": false
+   },
+   {
+    "id": 11515,
+    "court_position": 8,
+    "is_captain": false,
+    "active": false
    }
   ]
  },
  "snapshot_players_current_status": [
   {
    "id": 3766,
-   "active": true
-  },
-  {
-   "id": 3785,
    "active": true
   },
   {
@@ -89,7 +85,11 @@
    "active": true
   },
   {
-   "id": 3867,
+   "id": 3911,
+   "active": true
+  },
+  {
+   "id": 3930,
    "active": true
   },
   {
@@ -101,11 +101,7 @@
    "active": true
   },
   {
-   "id": 4088,
-   "active": true
-  },
-  {
-   "id": 4096,
+   "id": 3983,
    "active": true
   },
   {
@@ -114,6 +110,10 @@
   },
   {
    "id": 7424,
+   "active": true
+  },
+  {
+   "id": 11515,
    "active": true
   }
  ],
@@ -162,30 +162,30 @@
    "stats_items": []
   },
   {
-   "id": 3983,
-   "first_name": "Dejan",
-   "last_name": "Davidovac",
+   "id": 3911,
+   "first_name": "Kevarrius",
+   "last_name": "Hayes",
    "position": {
-    "id": 29,
-    "name": "Forward"
+    "id": 30,
+    "name": "Center"
    },
    "team": {
-    "id": 144,
-    "name": "Crvena Zvezda Meridianbet Belgrade",
-    "abbreviation": "CZV",
-    "position": "home"
+    "id": 152,
+    "name": "Partizan Mozzart Bet Belgrade",
+    "abbreviation": "PAR",
+    "position": "away"
    },
    "opponent": {
-    "id": 141,
-    "name": "FC Bayern Munich",
-    "abbreviation": "BAY"
+    "id": 155,
+    "name": "Zalgiris Kaunas",
+    "abbreviation": "ZAL"
    },
-   "quotation": 4.4,
+   "quotation": 8.6,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "7",
+   "jersey": "13",
    "face_path": null,
    "active": true,
    "court_position": 2,
@@ -194,8 +194,51 @@
    "captain_config": null,
    "match_played": false,
    "round": {
-    "id": 2542,
-    "number": 1
+    "id": 2543,
+    "number": 2
+   },
+   "is_on_trade": false,
+   "started_from_bench": true,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 3766,
+   "first_name": "Sasha",
+   "last_name": "Vezenkov",
+   "position": {
+    "id": 29,
+    "name": "Forward"
+   },
+   "team": {
+    "id": 149,
+    "name": "Olympiacos Piraeus",
+    "abbreviation": "OLY",
+    "position": "home"
+   },
+   "opponent": {
+    "id": 145,
+    "name": "Armani Olimpia Milan",
+    "abbreviation": "MIL"
+   },
+   "quotation": 18.4,
+   "is_on_fire": true,
+   "pts": 0,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "14",
+   "face_path": null,
+   "active": true,
+   "court_position": 3,
+   "is_captain": true,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": false,
+   "round": {
+    "id": 2543,
+    "number": 2
    },
    "is_on_trade": false,
    "started_from_bench": false,
@@ -225,60 +268,17 @@
    },
    "quotation": 12.1,
    "is_on_fire": false,
-   "pts": 0,
+   "pts": 38.5,
    "is_injured": false,
    "probability_of_playing": 1,
    "jersey": "12",
-   "face_path": null,
-   "active": true,
-   "court_position": 3,
-   "is_captain": false,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2542,
-    "number": 1
-   },
-   "is_on_trade": false,
-   "started_from_bench": false,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
-   "id": 3851,
-   "first_name": "Andres",
-   "last_name": "Feliz",
-   "position": {
-    "id": 28,
-    "name": "Guard"
-   },
-   "team": {
-    "id": 153,
-    "name": "Real Madrid",
-    "abbreviation": "RMB",
-    "position": "home"
-   },
-   "opponent": {
-    "id": 147,
-    "name": "Fenerbahce Tarfin Istanbul",
-    "abbreviation": "FBT"
-   },
-   "quotation": 8.6,
-   "is_on_fire": true,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "24",
    "face_path": null,
    "active": true,
    "court_position": 4,
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": false,
+   "match_played": true,
    "round": {
     "id": 2542,
     "number": 1
@@ -311,109 +311,23 @@
    },
    "quotation": 10.2,
    "is_on_fire": false,
-   "pts": 0,
+   "pts": 17,
    "is_injured": false,
    "probability_of_playing": 1,
    "jersey": "26",
    "face_path": null,
    "active": true,
    "court_position": 5,
-   "is_captain": true,
+   "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": false,
+   "match_played": true,
    "round": {
     "id": 2542,
     "number": 1
    },
    "is_on_trade": false,
    "started_from_bench": false,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
-   "id": 7209,
-   "first_name": "Lamar",
-   "last_name": "Stevens",
-   "position": {
-    "id": 29,
-    "name": "Forward"
-   },
-   "team": {
-    "id": 152,
-    "name": "Partizan Mozzart Bet Belgrade",
-    "abbreviation": "PAR",
-    "position": "away"
-   },
-   "opponent": {
-    "id": 155,
-    "name": "Zalgiris Kaunas",
-    "abbreviation": "ZAL"
-   },
-   "quotation": 8.7,
-   "is_on_fire": false,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "8",
-   "face_path": null,
-   "active": true,
-   "court_position": 6,
-   "is_captain": false,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2543,
-    "number": 2
-   },
-   "is_on_trade": false,
-   "started_from_bench": true,
-   "label": "opponent",
-   "match_live": false,
-   "has_scored": null,
-   "stats_items": []
-  },
-  {
-   "id": 3911,
-   "first_name": "Kevarrius",
-   "last_name": "Hayes",
-   "position": {
-    "id": 30,
-    "name": "Center"
-   },
-   "team": {
-    "id": 152,
-    "name": "Partizan Mozzart Bet Belgrade",
-    "abbreviation": "PAR",
-    "position": "away"
-   },
-   "opponent": {
-    "id": 155,
-    "name": "Zalgiris Kaunas",
-    "abbreviation": "ZAL"
-   },
-   "quotation": 8.6,
-   "is_on_fire": false,
-   "pts": 0,
-   "is_injured": false,
-   "probability_of_playing": 1,
-   "jersey": "13",
-   "face_path": null,
-   "active": true,
-   "court_position": 7,
-   "is_captain": false,
-   "captain_multiplier": 2,
-   "captain_config": null,
-   "match_played": false,
-   "round": {
-    "id": 2543,
-    "number": 2
-   },
-   "is_on_trade": false,
-   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -446,7 +360,7 @@
    "jersey": "51",
    "face_path": null,
    "active": true,
-   "court_position": 8,
+   "court_position": 6,
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
@@ -457,6 +371,92 @@
    },
    "is_on_trade": false,
    "started_from_bench": true,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 3983,
+   "first_name": "Dejan",
+   "last_name": "Davidovac",
+   "position": {
+    "id": 29,
+    "name": "Forward"
+   },
+   "team": {
+    "id": 144,
+    "name": "Crvena Zvezda Meridianbet Belgrade",
+    "abbreviation": "CZV",
+    "position": "home"
+   },
+   "opponent": {
+    "id": 141,
+    "name": "FC Bayern Munich",
+    "abbreviation": "BAY"
+   },
+   "quotation": 4.4,
+   "is_on_fire": false,
+   "pts": 13.2,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "7",
+   "face_path": null,
+   "active": true,
+   "court_position": 7,
+   "is_captain": false,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": true,
+   "round": {
+    "id": 2542,
+    "number": 1
+   },
+   "is_on_trade": false,
+   "started_from_bench": true,
+   "label": "opponent",
+   "match_live": false,
+   "has_scored": null,
+   "stats_items": []
+  },
+  {
+   "id": 3851,
+   "first_name": "Andres",
+   "last_name": "Feliz",
+   "position": {
+    "id": 28,
+    "name": "Guard"
+   },
+   "team": {
+    "id": 153,
+    "name": "Real Madrid",
+    "abbreviation": "RMB",
+    "position": "home"
+   },
+   "opponent": {
+    "id": 147,
+    "name": "Fenerbahce Tarfin Istanbul",
+    "abbreviation": "FBT"
+   },
+   "quotation": 8.6,
+   "is_on_fire": true,
+   "pts": 6.6,
+   "is_injured": false,
+   "probability_of_playing": 1,
+   "jersey": "24",
+   "face_path": null,
+   "active": true,
+   "court_position": 8,
+   "is_captain": false,
+   "captain_multiplier": 2,
+   "captain_config": null,
+   "match_played": true,
+   "round": {
+    "id": 2542,
+    "number": 1
+   },
+   "is_on_trade": false,
+   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -506,30 +506,30 @@
    "stats_items": []
   },
   {
-   "id": 3766,
-   "first_name": "Sasha",
-   "last_name": "Vezenkov",
+   "id": 7209,
+   "first_name": "Lamar",
+   "last_name": "Stevens",
    "position": {
     "id": 29,
     "name": "Forward"
    },
    "team": {
-    "id": 149,
-    "name": "Olympiacos Piraeus",
-    "abbreviation": "OLY",
-    "position": "home"
+    "id": 152,
+    "name": "Partizan Mozzart Bet Belgrade",
+    "abbreviation": "PAR",
+    "position": "away"
    },
    "opponent": {
-    "id": 145,
-    "name": "Armani Olimpia Milan",
-    "abbreviation": "MIL"
+    "id": 155,
+    "name": "Zalgiris Kaunas",
+    "abbreviation": "ZAL"
    },
-   "quotation": 18.4,
-   "is_on_fire": true,
+   "quotation": 8.7,
+   "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "14",
+   "jersey": "8",
    "face_path": null,
    "active": true,
    "court_position": 10,
@@ -542,7 +542,7 @@
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": false,
+   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -569,7 +569,7 @@
    },
    "quotation": 7.2,
    "is_on_fire": null,
-   "pts": 0,
+   "pts": 25,
    "is_injured": false,
    "probability_of_playing": 1,
    "jersey": null,
@@ -579,7 +579,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": false,
+   "match_played": true,
    "round": {
     "id": 2542,
     "number": 1
