@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1536,
+  "number": 9
+ },
+ "round": {
+  "id": 2543,
+  "number": 2
+ },
+ "match": {
+  "id": 12010,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-30T18:00:00.000000Z",
+  "home_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 87
+  },
+  "away_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 80
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

@@ -1,0 +1,2 @@
+matchday,expected,actual,sd,z,rec_expected,rec_actual,hold_actual,trade_value_rec,trade_value_you,hindsight,regret,captain,captain_regret,followed_rec
+9,147.6,166.6,31.3,0.61,150.1,158.0,164.9,-6.9,1.7,272.3,105.8,Sasha Vezenkov,14.3,False

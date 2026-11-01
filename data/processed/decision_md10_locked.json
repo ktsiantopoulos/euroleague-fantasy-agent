@@ -1,0 +1,264 @@
+{
+ "matchday": 10,
+ "frozen_utc": "2026-11-01T14:26:07Z",
+ "lock_utc": "2026-11-04T19:44:00Z",
+ "budget": 108.6,
+ "trades_left": 4,
+ "baseline_ids": [
+  "11515",
+  "3766",
+  "3850",
+  "3851",
+  "3911",
+  "3930",
+  "3938",
+  "3948",
+  "3983",
+  "7209",
+  "7424"
+ ],
+ "hold": {
+  "expected": 127.9,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 24.12,
+    "md_sd": 8.87
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.07,
+    "md_sd": 6.92
+   },
+   {
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 13.54,
+    "md_sd": 9.49
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 12.51,
+    "md_sd": 9.83
+   },
+   {
+    "platform_id": "3911",
+    "name": "Kevarrius Hayes",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 11.46,
+    "md_sd": 8.02
+   },
+   {
+    "platform_id": "11515",
+    "name": "Tremont Waters",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 11.47,
+    "md_sd": 8.72
+   },
+   {
+    "platform_id": "3948",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.56,
+    "md_sd": 10.83
+   },
+   {
+    "platform_id": "7209",
+    "name": "Lamar Stevens",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.24,
+    "md_sd": 5.26
+   },
+   {
+    "platform_id": "3983",
+    "name": "Dejan Davidovac",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 5.51,
+    "md_sd": 6.11
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 0.0,
+    "md_sd": 0.0
+   },
+   {
+    "platform_id": "3938",
+    "name": "Ibon Navarro",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 1.41,
+    "md_sd": 13.15
+   }
+  ]
+ },
+ "best": {
+  "expected": 149.1,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 24.12,
+    "md_sd": 8.87
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.07,
+    "md_sd": 6.92
+   },
+   {
+    "platform_id": "3833",
+    "name": "Armoni Brooks",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 14.31,
+    "md_sd": 8.14
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 12.51,
+    "md_sd": 9.83
+   },
+   {
+    "platform_id": "7194",
+    "name": "Chuma Okeke",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 10.05,
+    "md_sd": 6.55
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 8.36,
+    "md_sd": 6.89
+   },
+   {
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 13.54,
+    "md_sd": 9.49
+   },
+   {
+    "platform_id": "11515",
+    "name": "Tremont Waters",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.47,
+    "md_sd": 8.72
+   },
+   {
+    "platform_id": "3911",
+    "name": "Kevarrius Hayes",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.46,
+    "md_sd": 8.02
+   },
+   {
+    "platform_id": "3948",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.56,
+    "md_sd": 10.83
+   },
+   {
+    "platform_id": "3897",
+    "name": "Saras Jasikevicius",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 16.04,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Theo Maledon",
+   "Lamar Stevens",
+   "Ibon Navarro",
+   "Dejan Davidovac"
+  ],
+  "trades_in": [
+   "Armoni Brooks",
+   "Chuma Okeke",
+   "Saras Jasikevicius",
+   "Alberto Abalde"
+  ]
+ },
+ "params": {
+  "w_minutes": [
+   0.1,
+   0.3,
+   0.6
+  ],
+  "rate_prior_minutes": 40.0,
+  "lam_recent": 0.3,
+  "eta_home": 0.02,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.8,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.096,
+  "bias": {},
+  "flags": {}
+ }
+}

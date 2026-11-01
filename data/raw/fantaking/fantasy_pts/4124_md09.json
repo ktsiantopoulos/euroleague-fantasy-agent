@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1536,
+  "number": 9
+ },
+ "round": {
+  "id": 2543,
+  "number": 2
+ },
+ "match": {
+  "id": 12013,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-30T19:30:00.000000Z",
+  "home_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 101
+  },
+  "away_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 103
+  }
+ },
+ "fantasy_pts": 13,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 11,
+   "fantasy_pts": 11
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 3,
+   "fantasy_pts": -3
+  }
+ ],
+ "label": "opponent"
+}

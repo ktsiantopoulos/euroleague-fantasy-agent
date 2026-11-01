@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1536,
+  "number": 9
+ },
+ "round": {
+  "id": 2543,
+  "number": 2
+ },
+ "match": {
+  "id": 12012,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-10-30T17:30:00.000000Z",
+  "home_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 83
+  },
+  "away_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 68
+  }
+ },
+ "fantasy_pts": 20,
+ "stats_items": [
+  {
+   "id": 203,
+   "name": "win_11-20",
+   "value": 1,
+   "fantasy_pts": 20
+  }
+ ],
+ "label": "opponent"
+}

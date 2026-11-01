@@ -1,0 +1,18 @@
+{
+ "name": "UnderTakers86",
+ "credits": 108.6,
+ "created_on_matchday_id": 1528,
+ "total_pts": 1334.2,
+ "total_plus": 8.6,
+ "wildcards": 0,
+ "wildcards_used": 0,
+ "extra_credits": 0,
+ "max_num_same_team_players": 6,
+ "is_mvp": false,
+ "pts": 166.55,
+ "plus": 1.3,
+ "wildcard_used": false,
+ "trades": 4,
+ "max_num_trades_per_matchday": 4,
+ "defense_modifier": null
+}

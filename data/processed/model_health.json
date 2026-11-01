@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-10-30T14:05:40Z",
+ "generated_utc": "2026-11-01T14:22:24Z",
  "drift": false,
  "reasons": [],
  "per_round": [
@@ -35,26 +35,26 @@
   },
   {
    "round": 9,
-   "mae_model": 5.84,
-   "mae_best_baseline": 5.4,
-   "model_wins": false
+   "mae_model": 6.05,
+   "mae_best_baseline": 6.12,
+   "model_wins": true
   }
  ],
  "calibration": {
-  "n": 1206,
-  "above_p90": 0.141,
-  "below_p10": 0.068,
-  "inside_80": 0.791,
-  "z_sd": 1.056,
-  "sd_scale": 1.024
+  "n": 1363,
+  "above_p90": 0.139,
+  "below_p10": 0.066,
+  "inside_80": 0.795,
+  "z_sd": 1.054,
+  "sd_scale": 1.022
  },
  "attribution": {
-  "n": 1199,
+  "n": 1356,
   "minutes_mae": 4.95,
-  "minutes_share": 0.317,
-  "rate_share": 0.683,
-  "dnp_misses": 8,
-  "dnp_cost": 48.3
+  "minutes_share": 0.316,
+  "rate_share": 0.684,
+  "dnp_misses": 12,
+  "dnp_cost": 67.0
  },
  "params": {
   "w_minutes": [
