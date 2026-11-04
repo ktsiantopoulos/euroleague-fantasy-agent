@@ -1,5 +1,9 @@
 {
  "status_id": 1,
+ "standings_calculations": {
+  "updated_at": null,
+  "is_outdated": false
+ },
  "maintenance": false,
  "players_list_limitations_enabled": false,
  "denied_free_agent_trade_creation_offset": 180,

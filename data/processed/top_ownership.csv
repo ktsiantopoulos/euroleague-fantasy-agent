@@ -1,29 +1,29 @@
 player,pos,club,teams,field,captain,price,own_pct,global_pct,edge
-Alberto Abalde,Forward,RMB,26,0,0,5.4,14.0,13,1.0
+Alberto Abalde,Forward,RMB,26,0,0,5.4,14.0,14,0.0
 Aleksej Nedeljkovic,Forward,CZV,1,0,0,4.0,1.0,1,0.0
-Alex Mumbru,Head Coach,VIR,1,1,0,4.4,1.0,4,-3.0
+Alex Mumbru,Head Coach,VIR,1,1,0,4.4,1.0,3,-2.0
 Aliou Diarra,Center,VIR,87,85,0,10.0,48.0,36,12.0
 Allan Dokossi,Center,PBB,2,2,0,8.5,1.0,2,-1.0
-Alvaro Cardenas,Guard,VBC,5,0,0,4.1,3.0,4,-1.0
+Alvaro Cardenas,Guard,VBC,5,0,0,4.1,3.0,5,-2.0
 Amit Ebo,Guard,MTA,1,0,0,4.0,1.0,0,1.0
 Andrej Bjelic,Guard,CZV,1,0,0,4.0,1.0,1,0.0
-Andres Feliz,Guard,RMB,55,1,0,8.6,31.0,29,2.0
+Andres Feliz,Guard,RMB,55,1,0,8.6,31.0,31,0.0
 Arijan Lakic,Forward,PAR,17,0,0,4.0,9.0,26,-17.0
 Armando Bacot,Center,MTA,1,1,0,6.3,1.0,1,0.0
-Azuolas Tubelis,Forward,ZAL,25,24,0,12.2,14.0,13,1.0
+Azuolas Tubelis,Forward,ZAL,25,24,0,12.2,14.0,14,0.0
 Bandja Sy,Forward,PAR,1,0,0,4.0,1.0,1,0.0
 Berk Ugurlu,Guard,BJK,1,0,0,4.0,1.0,2,-1.0
 Bodian Massa,Forward,ASV,1,0,0,5.7,1.0,0,1.0
-Bonzie Colson,Forward,MTA,9,7,0,11.5,5.0,3,2.0
+Bonzie Colson,Forward,MTA,9,7,0,11.5,5.0,2,3.0
 Braxton Key,Forward,FBT,8,0,0,7.8,4.0,7,-3.0
-Cameron Payne,Guard,EFS,1,1,0,9.2,1.0,4,-3.0
-Carlik Jones,Guard,PAR,10,10,0,14.4,6.0,21,-15.0
-Chima Moneke,Forward,CZV,1,1,1,14.5,1.0,4,-3.0
-Chris Jones,Guard,CZV,4,0,0,12.8,2.0,7,-5.0
-Christian Koloko,Center,CZV,1,1,0,9.6,1.0,3,-2.0
+Cameron Payne,Guard,EFS,1,1,0,9.2,1.0,5,-4.0
+Carlik Jones,Guard,PAR,10,10,0,14.4,6.0,22,-16.0
+Chima Moneke,Forward,CZV,1,1,1,14.5,1.0,3,-2.0
+Chris Jones,Guard,CZV,4,0,0,12.8,2.0,6,-4.0
+Christian Koloko,Center,CZV,1,1,0,9.6,1.0,4,-3.0
 Clement Frisch,Forward,KBA,6,1,0,4.9,3.0,2,1.0
-Codi Miller-Mcintyre,Guard,OLY,5,4,0,10.4,3.0,7,-4.0
-Collin Malcolm,Forward,EFS,13,10,0,8.9,7.0,8,-1.0
+Codi Miller-Mcintyre,Guard,OLY,5,4,0,10.4,3.0,8,-5.0
+Collin Malcolm,Forward,EFS,13,10,0,8.9,7.0,10,-3.0
 Cory Joseph,Guard,OLY,11,2,0,5.5,6.0,4,2.0
 Dan Oturu,Center,HTA,2,2,0,13.7,1.0,4,-3.0
 Daniel Hackett,Guard,VIR,4,0,0,4.4,2.0,5,-3.0
@@ -36,21 +36,21 @@ Dustin Sleva,Forward,ZAL,3,1,0,6.3,2.0,2,0.0
 Dwayne Bacon,Forward,DUB,10,10,0,14.4,6.0,16,-10.0
 Edwin Jackson,Forward,ASV,3,0,0,4.3,2.0,5,-3.0
 Elie Okobo,Guard,DUB,1,1,0,12.4,1.0,3,-2.0
-Elijah Bryant,Guard,HTA,40,40,1,18.0,22.0,15,7.0
+Elijah Bryant,Guard,HTA,40,40,1,18.0,22.0,14,8.0
 Erkan Yilmaz,Forward,EFS,1,0,0,4.2,1.0,2,-1.0
 Eugene Omoruyi,Forward,BJK,1,1,0,9.6,1.0,1,0.0
 Gabriele Procida,Forward,RMB,3,0,0,4.1,2.0,8,-6.0
 Georgios Bartzokas,Head Coach,OLY,7,7,0,9.9,4.0,5,-1.0
 Giampaolo Ricci,Forward,MIL,1,0,0,4.0,1.0,5,-4.0
-Ibon Navarro,Head Coach,CZV,76,76,0,7.2,42.0,17,25.0
+Ibon Navarro,Head Coach,CZV,76,76,0,7.2,42.0,11,31.0
 Jared Butler,Guard,CZV,2,0,0,9.2,1.0,5,-4.0
-Jared Rhoden,Guard,PBB,6,0,0,9.5,3.0,2,1.0
+Jared Rhoden,Guard,PBB,6,0,0,9.5,3.0,1,2.0
 Jaylen Hoard,Forward,MTA,1,0,0,13.2,1.0,1,0.0
 Jeremy Morgan,Forward,PBB,1,0,0,5.0,1.0,0,1.0
 Jimmy Clark III,Guard,MTA,5,1,0,9.9,3.0,2,1.0
 Joel Ayayi,Guard,PBB,7,0,0,5.0,4.0,4,0.0
 John Dibartolomeo,Guard,MTA,6,0,0,4.0,3.0,2,1.0
-Jonas Valanciunas,Center,ZAL,10,10,0,16.2,6.0,14,-8.0
+Jonas Valanciunas,Center,ZAL,10,10,0,16.2,6.0,15,-9.0
 Jordan Nwora,Forward,CZV,4,4,0,13.4,2.0,10,-8.0
 Josep Puerto,Guard,VBC,4,0,0,5.5,2.0,4,-2.0
 Josh Nebo,Center,BAR,11,10,0,12.5,6.0,3,3.0
@@ -58,9 +58,9 @@ Juan Nunez,Guard,BAR,3,0,0,4.0,2.0,3,-1.0
 Kameron Taylor,Forward,VBC,2,2,0,11.9,1.0,3,-2.0
 Kendrick Nunn,Guard,PAO,6,6,0,14.199999999999998,3.0,9,-6.0
 Kenneth Faried,Center,KBA,1,1,0,9.7,1.0,1,0.0
-Kevarrius Hayes,Center,PAR,7,4,0,8.6,4.0,9,-5.0
+Kevarrius Hayes,Center,PAR,7,4,0,8.6,4.0,10,-6.0
 Kilian Fischer,Forward,BAY,1,0,0,4.0,1.0,3,-2.0
-Konstantinos Mitoglou,Forward,PAO,1,0,0,6.3,1.0,9,-8.0
+Konstantinos Mitoglou,Forward,PAO,1,0,0,6.3,1.0,8,-7.0
 Kosta Kondic,Guard,DUB,2,0,0,4.1,1.0,2,-1.0
 Kostas Papanikolaou,Forward,OLY,30,0,0,4.1,17.0,19,-2.0
 Lamar Stevens,Forward,PAR,3,0,0,8.7,2.0,4,-2.0
@@ -71,43 +71,43 @@ Mario Saint-supery,Guard,VBC,3,0,0,4.0,2.0,8,-6.0
 Marius Grigonis,Forward,ZAL,10,2,0,7.0,6.0,5,1.0
 Mathias Lessort,Center,PAO,9,9,0,16.4,5.0,14,-9.0
 Matteo Spagnolo,Guard,KBA,6,1,0,5.400000000000001,3.0,2,1.0
-Mbaye Ndiaye,Forward,OLY,4,2,0,8.8,2.0,8,-6.0
+Mbaye Ndiaye,Forward,OLY,4,2,0,8.8,2.0,7,-5.0
 Mfiondu Kabengele,Center,DUB,24,24,0,15.9,13.0,12,1.0
-Mikael Jantunen,Forward,RMB,9,0,0,6.5,5.0,5,0.0
+Mikael Jantunen,Forward,RMB,9,0,0,6.5,5.0,3,2.0
 Miles Norris,Forward,BAY,1,0,0,8.1,1.0,0,1.0
 Mouhamed Faye,Center,PBB,31,5,0,7.9,17.0,7,10.0
-Nadir Hifi,Guard,PBB,8,8,8,14.4,4.0,4,0.0
+Nadir Hifi,Guard,PBB,8,8,8,14.4,4.0,5,-1.0
 Nicolo Melli,Forward,FBT,1,0,0,8.2,1.0,2,-1.0
 Niels Giffey,Forward,BAY,1,0,0,4.0,1.0,3,-2.0
 Nikola Djurisic,Guard,CZV,2,0,0,4.3,1.0,6,-5.0
-Oded Kattash,Head Coach,MTA,1,1,0,4.4,1.0,4,-3.0
+Oded Kattash,Head Coach,MTA,1,1,0,4.4,1.0,3,-2.0
 Ognjen Dobric,Forward,CZV,4,0,0,4.8,2.0,8,-6.0
 Omiros Netzipoglou,Guard,OLY,1,0,0,4.0,1.0,1,0.0
 Oscar Da Silva,Forward,BAY,3,0,0,7.7,2.0,2,0.0
 Oshae Brissett,Forward,MTA,6,2,0,10.699999999999998,3.0,1,2.0
 Ousmane Diop,Center,MIL,1,0,0,4.2,1.0,16,-15.0
-Panagiotis Kalaitzakis,Guard,PAO,4,0,0,4.0,2.0,14,-12.0
+Panagiotis Kalaitzakis,Guard,PAO,4,0,0,4.0,2.0,13,-11.0
 Pedro Martinez,Head Coach,RMB,1,1,0,9.2,1.0,3,-2.0
 Saben Lee,Guard,ZAL,2,0,0,8.2,1.0,1,0.0
 Sasha Vezenkov,Forward,OLY,93,93,21,18.4,52.0,46,6.0
 Scottie Wilbekin,Guard,BJK,3,1,0,8.9,2.0,8,-6.0
-Sebastian Herrera,Guard,PBB,13,6,0,5.700000000000001,7.0,10,-3.0
-Semi Ojeleye,Forward,CZV,15,5,0,8.7,8.0,8,0.0
+Sebastian Herrera,Guard,PBB,13,6,0,5.700000000000001,7.0,11,-4.0
+Semi Ojeleye,Forward,CZV,15,5,0,8.7,8.0,7,1.0
 Sertac Sanli,Center,FBT,3,0,0,4.1,2.0,19,-17.0
-Shavon Shields,Forward,FBT,5,2,0,13.4,3.0,8,-5.0
+Shavon Shields,Forward,FBT,5,2,0,13.4,3.0,9,-6.0
 Stefan Joksimovic,Forward,KBA,40,1,0,4.5,22.0,14,8.0
-TJ Shorts,Guard,VBC,29,29,1,16.7,16.0,21,-5.0
-Theo Maledon,Guard,RMB,89,89,68,12.099999999999998,49.0,20,29.0
-Timothé Luwawu-Cabarrot,Forward,RMB,1,0,0,10.1,1.0,3,-2.0
-Tomas Masiulis,Head Coach,ZAL,8,8,0,6.9,4.0,11,-7.0
+TJ Shorts,Guard,VBC,29,29,1,16.7,16.0,23,-7.0
+Theo Maledon,Guard,RMB,89,89,68,12.099999999999998,49.0,12,37.0
+Timothé Luwawu-Cabarrot,Forward,RMB,1,0,0,10.1,1.0,4,-3.0
+Tomas Masiulis,Head Coach,ZAL,8,8,0,6.9,4.0,10,-6.0
 Tomer Ginat,Forward,HTA,1,0,0,4.0,1.0,0,1.0
-Tony Parker,Head Coach,ASV,4,4,0,4.4,2.0,7,-5.0
-Tyrese Martin,Forward,BAR,8,6,0,9.1,4.0,3,1.0
+Tony Parker,Head Coach,ASV,4,4,0,4.4,2.0,8,-6.0
+Tyrese Martin,Forward,BAR,8,6,0,9.1,4.0,2,2.0
 Tyson Carter,Guard,CZV,7,6,0,7.3,4.0,6,-2.0
 Tyson Ward,Forward,OLY,10,5,0,8.1,6.0,7,-1.0
 Tyty Washington,Guard,ASV,1,1,0,8.8,1.0,1,0.0
 Uros Danilovic,Forward,PAR,1,0,0,4.0,1.0,2,-1.0
 Vladimir Lucic,Forward,BAY,1,1,0,8.6,1.0,1,0.0
 Walter Tavares,Center,RMB,9,9,0,15.100000000000001,5.0,4,1.0
-Yam Madar,Guard,MTA,45,45,0,10.2,25.0,14,11.0
-Zeljko Obradovic,Head Coach,PAO,2,2,0,11.1,1.0,10,-9.0
+Yam Madar,Guard,MTA,45,45,0,10.2,25.0,13,12.0
+Zeljko Obradovic,Head Coach,PAO,2,2,0,11.1,1.0,9,-8.0

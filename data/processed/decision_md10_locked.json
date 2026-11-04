@@ -1,6 +1,6 @@
 {
  "matchday": 10,
- "frozen_utc": "2026-11-01T14:26:07Z",
+ "frozen_utc": "2026-11-04T09:05:57Z",
  "lock_utc": "2026-11-04T19:44:00Z",
  "budget": 108.6,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "7424"
  ],
  "hold": {
-  "expected": 127.9,
+  "expected": 123.8,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -27,7 +27,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 24.12,
+    "md_pts": 24.41,
     "md_sd": 8.87
    },
    {
@@ -36,7 +36,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.07,
+    "md_pts": 16.01,
     "md_sd": 6.92
    },
    {
@@ -45,17 +45,17 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.54,
+    "md_pts": 13.69,
     "md_sd": 9.49
    },
    {
-    "platform_id": "3851",
-    "name": "Andres Feliz",
+    "platform_id": "11515",
+    "name": "Tremont Waters",
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 12.51,
-    "md_sd": 9.83
+    "md_pts": 11.49,
+    "md_sd": 8.72
    },
    {
     "platform_id": "3911",
@@ -63,17 +63,17 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 11.46,
+    "md_pts": 11.35,
     "md_sd": 8.02
    },
    {
-    "platform_id": "11515",
-    "name": "Tremont Waters",
+    "platform_id": "3851",
+    "name": "Andres Feliz",
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 11.47,
-    "md_sd": 8.72
+    "md_pts": 12.41,
+    "md_sd": 9.83
    },
    {
     "platform_id": "3948",
@@ -81,7 +81,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.56,
+    "md_pts": 10.68,
     "md_sd": 10.83
    },
    {
@@ -90,7 +90,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.24,
+    "md_pts": 10.14,
     "md_sd": 5.26
    },
    {
@@ -99,7 +99,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 5.51,
+    "md_pts": 5.45,
     "md_sd": 6.11
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 1.41,
+    "md_pts": -3.06,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 149.1,
+  "expected": 149.5,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -132,7 +132,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 24.12,
+    "md_pts": 24.41,
     "md_sd": 8.87
    },
    {
@@ -141,17 +141,8 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.07,
+    "md_pts": 16.01,
     "md_sd": 6.92
-   },
-   {
-    "platform_id": "3833",
-    "name": "Armoni Brooks",
-    "pos": "Guard",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 14.31,
-    "md_sd": 8.14
    },
    {
     "platform_id": "3851",
@@ -159,7 +150,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 12.51,
+    "md_pts": 12.41,
     "md_sd": 9.83
    },
    {
@@ -168,17 +159,26 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 10.05,
+    "md_pts": 9.97,
     "md_sd": 6.55
    },
    {
     "platform_id": "3991",
     "name": "Alberto Abalde",
     "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 8.29,
+    "md_sd": 6.89
+   },
+   {
+    "platform_id": "3833",
+    "name": "Armoni Brooks",
+    "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 8.36,
-    "md_sd": 6.89
+    "md_pts": 14.32,
+    "md_sd": 8.14
    },
    {
     "platform_id": "3930",
@@ -186,7 +186,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 13.54,
+    "md_pts": 13.69,
     "md_sd": 9.49
    },
    {
@@ -195,7 +195,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 11.47,
+    "md_pts": 11.49,
     "md_sd": 8.72
    },
    {
@@ -204,7 +204,7 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 11.46,
+    "md_pts": 11.35,
     "md_sd": 8.02
    },
    {
@@ -213,7 +213,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.56,
+    "md_pts": 10.68,
     "md_sd": 10.83
    },
    {
@@ -227,10 +227,10 @@
    }
   ],
   "trades_out": [
-   "Theo Maledon",
+   "Dejan Davidovac",
    "Lamar Stevens",
-   "Ibon Navarro",
-   "Dejan Davidovac"
+   "Theo Maledon",
+   "Ibon Navarro"
   ],
   "trades_in": [
    "Armoni Brooks",

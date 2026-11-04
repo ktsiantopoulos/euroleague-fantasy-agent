@@ -5,27 +5,27 @@
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 18.4 | 52 | 46 | 21 |
-| Theo Maledon | G | RMB | 12.1 | 49 | 20 | 68 |
+| Theo Maledon | G | RMB | 12.1 | 49 | 12 | 68 |
 | Aliou Diarra | C | VIR | 10.0 | 48 | 36 | 0 |
-| Ibon Navarro | H | CZV | 7.2 | 42 | 17 | 0 |
-| Andres Feliz | G | RMB | 8.6 | 31 | 29 | 0 |
-| Yam Madar | G | MTA | 10.2 | 25 | 14 | 0 |
+| Ibon Navarro | H | CZV | 7.2 | 42 | 11 | 0 |
+| Andres Feliz | G | RMB | 8.6 | 31 | 31 | 0 |
+| Yam Madar | G | MTA | 10.2 | 25 | 13 | 0 |
 | Stefan Joksimovic | F | KBA | 4.5 | 22 | 14 | 0 |
-| Elijah Bryant | G | HTA | 18.0 | 22 | 15 | 1 |
+| Elijah Bryant | G | HTA | 18.0 | 22 | 14 | 1 |
 | Mouhamed Faye | C | PBB | 7.9 | 17 | 7 | 0 |
 | Kostas Papanikolaou | F | OLY | 4.1 | 17 | 19 | 0 |
-| TJ Shorts | G | VBC | 16.7 | 16 | 21 | 1 |
-| Alberto Abalde | F | RMB | 5.4 | 14 | 13 | 0 |
-| Azuolas Tubelis | F | ZAL | 12.2 | 14 | 13 | 0 |
+| TJ Shorts | G | VBC | 16.7 | 16 | 23 | 1 |
+| Alberto Abalde | F | RMB | 5.4 | 14 | 14 | 0 |
+| Azuolas Tubelis | F | ZAL | 12.2 | 14 | 14 | 0 |
 | Mfiondu Kabengele | C | DUB | 15.9 | 13 | 12 | 0 |
 | Arijan Lakic | F | PAR | 4.0 | 9 | 26 | 0 |
-| Semi Ojeleye | F | CZV | 8.7 | 8 | 8 | 0 |
-| Sebastian Herrera | G | PBB | 5.7 | 7 | 10 | 0 |
-| Collin Malcolm | F | EFS | 8.9 | 7 | 8 | 0 |
+| Semi Ojeleye | F | CZV | 8.7 | 8 | 7 | 0 |
+| Sebastian Herrera | G | PBB | 5.7 | 7 | 11 | 0 |
+| Collin Malcolm | F | EFS | 8.9 | 7 | 10 | 0 |
 | Cory Joseph | G | OLY | 5.5 | 6 | 4 | 0 |
 | Josh Nebo | C | BAR | 12.5 | 6 | 3 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Theo Maledon (+29 pp), Ibon Navarro (+25 pp), Aliou Diarra (+12 pp), Yam Madar (+11 pp), Mouhamed Faye (+10 pp), Stefan Joksimovic (+8 pp), Elijah Bryant (+7 pp), Sasha Vezenkov (+6 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Theo Maledon (+37 pp), Ibon Navarro (+31 pp), Aliou Diarra (+12 pp), Yam Madar (+12 pp), Mouhamed Faye (+10 pp), Elijah Bryant (+8 pp), Stefan Joksimovic (+8 pp), Sasha Vezenkov (+6 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (111), Mathias Lessort (17), Jonas Valanciunas (16)
