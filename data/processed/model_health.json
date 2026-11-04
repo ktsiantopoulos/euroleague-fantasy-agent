@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-04T16:45:02Z",
+ "generated_utc": "2026-11-04T21:47:45Z",
  "drift": false,
  "reasons": [],
  "per_round": [
@@ -11,50 +11,50 @@
   },
   {
    "round": 5,
-   "mae_model": 5.98,
+   "mae_model": 6.01,
    "mae_best_baseline": 6.47,
    "model_wins": true
   },
   {
    "round": 6,
-   "mae_model": 6.12,
+   "mae_model": 6.17,
    "mae_best_baseline": 6.4,
    "model_wins": true
   },
   {
    "round": 7,
-   "mae_model": 6.45,
+   "mae_model": 6.44,
    "mae_best_baseline": 6.65,
    "model_wins": true
   },
   {
    "round": 8,
-   "mae_model": 6.09,
+   "mae_model": 6.13,
    "mae_best_baseline": 6.2,
    "model_wins": true
   },
   {
    "round": 9,
-   "mae_model": 6.05,
+   "mae_model": 6.06,
    "mae_best_baseline": 6.12,
    "model_wins": true
   }
  ],
  "calibration": {
   "n": 1363,
-  "above_p90": 0.139,
-  "below_p10": 0.066,
+  "above_p90": 0.127,
+  "below_p10": 0.078,
   "inside_80": 0.795,
-  "z_sd": 1.054,
-  "sd_scale": 1.022
+  "z_sd": 1.057,
+  "sd_scale": 1.009
  },
  "attribution": {
   "n": 1356,
   "minutes_mae": 4.95,
-  "minutes_share": 0.316,
-  "rate_share": 0.684,
+  "minutes_share": 0.336,
+  "rate_share": 0.664,
   "dnp_misses": 12,
-  "dnp_cost": 67.0
+  "dnp_cost": 71.1
  },
  "params": {
   "w_minutes": [
@@ -75,7 +75,17 @@
   "dnp_recent_penalty": 0.8,
   "minutes_sample_prior": 0.5,
   "sd_scale": 1.096,
-  "bias": {}
+  "bias": {
+   "Center|10-15": 1.078,
+   "Center|15-20": 1.048,
+   "Center|<10": 1.131,
+   "Forward|10-15": 1.203,
+   "Forward|15-20": 1.069,
+   "Forward|<10": 1.284,
+   "Guard|10-15": 1.042,
+   "Guard|15-20": 1.092,
+   "Guard|<10": 1.6
+  }
  },
  "challenger": {
   "id": "202610290458",

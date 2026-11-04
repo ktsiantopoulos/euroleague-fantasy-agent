@@ -22,10 +22,15 @@ import pandas as pd
 
 from elfa.config import PROCESSED
 from elfa.model.backtest import backtest
-from elfa.model.calibrate import attribution, calibration, coverage_with, fit_bias, report
+from elfa.model.calibrate import _dressed, attribution, calibration, coverage_with, fit_bias, report
 from elfa.model.projection import Params, _player_form
 
 MIN_GAIN = 0.03
+# Bias layer gate. Judged on mean error and RMSE over every dressed player - not on MAE for 15+ min: PIR is
+# right-skewed, so MAE rewards projecting the median (below the mean) and rejected corrections that fix the
+# mean, which is what squad totals add up; and the 15+ min filter hid exactly the segments being corrected.
+BIAS_MIN_GAIN = 0.10    # mean |bias| per player-game must drop by at least this (PIR)
+BIAS_RMSE_TOL = 0.01    # ... while hold-out RMSE gets no worse than this
 PROMOTE_STREAK = 3
 MINUTES_GRID = {
     "w_minutes": [(0.5, 0.3, 0.2), (0.3, 0.4, 0.3), (0.2, 0.3, 0.5), (0.1, 0.3, 0.6), (0.0, 0.5, 0.5)],
@@ -58,6 +63,32 @@ def minutes_mae(pg: pd.DataFrame, rounds: list[int], p: Params) -> float:
         m = m[(m.minutes > 0) | (m.min_hat >= 5)]
         errs.append((m.min_hat - m.minutes).abs())
     return float(pd.concat(errs).mean()) if errs else float("inf")
+
+
+def bias_gate(pg, schedule, train, hold, p: Params) -> tuple[Params, str]:
+    """Refit the bias layer on `train` residuals of p's core and keep it only if it lowers hold-out mean |bias|
+    without making RMSE worse (see BIAS_MIN_GAIN / BIAS_RMSE_TOL)."""
+    core = _replace(p, bias={})
+    cand = _replace(p, bias=fit_bias(backtest(pg, schedule, train, _replace(core, sd_scale=1.0)).table))
+    if cand.bias == (p.bias or {}):
+        return p, f"- bias layer unchanged ({len(p.bias or {})} segment(s))"
+
+    def stats(q):
+        t = _dressed(backtest(pg, schedule, hold, q).table)
+        e = t.model - t.actual_pir
+        return {int(r): (float(g.mean()), float(np.sqrt((g ** 2).mean()))) for r, g in e.groupby(t["round"])}
+
+    cur, new = stats(p), stats(cand)
+    rs = [r for r in hold if r in cur and r in new]
+    if not rs:
+        return p, "- bias layer: no hold-out data"
+    b_cur, b_new = np.mean([abs(cur[r][0]) for r in rs]), np.mean([abs(new[r][0]) for r in rs])
+    d_rmse = float(np.mean([new[r][1] - cur[r][1] for r in rs]))
+    msg = (f"bias layer ({len(cand.bias)} segment(s)): hold-out mean |bias| {b_cur:.2f} → {b_new:.2f}, "
+           f"RMSE {d_rmse:+.3f}")
+    if b_cur - b_new >= BIAS_MIN_GAIN and d_rmse <= BIAS_RMSE_TOL:
+        return cand, f"→ ADOPTED {msg}"
+    return p, f"- kept {msg}"
 
 
 def round_mae(pg, schedule, rounds, p) -> dict[int, float]:
@@ -147,10 +178,8 @@ def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
     # 1-2: core sub-models (fitted without the bias/sd layers)
     core0 = _replace(current, bias={}, sd_scale=1.0)
     core = _grid_rate(pg, schedule, train, _grid_minutes(pg, train, core0))
-    # 3: bias on the training residuals, for both the current core and the new core
-    def with_bias(p):
-        return _replace(p, bias=fit_bias(backtest(pg, schedule, train, p).table))
-    cands = {"new core + bias": with_bias(core), "new core": core, "current core + new bias": with_bias(core0)}
+    # the bias layer has its own gate (step 3, below); cores are compared with the current bias carried over
+    cands = {"new core": _replace(core, bias=current.bias)}
 
     cur_mae = round_mae(pg, schedule, hold, current)
     best_name, best_p, best_gain = None, None, -np.inf
@@ -184,7 +213,7 @@ def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
                                                        "mae_challenger": round(m_ch, 3), "challenger_wins": m_ch < m_cu}])], ignore_index=True)
             mine = log[log.challenger == ch["id"]].sort_values("round") if not log.empty else log
             if len(mine) >= PROMOTE_STREAK and mine.challenger_wins.tail(PROMOTE_STREAK).all():
-                adopted = _replace(chp, sd_scale=current.sd_scale)
+                adopted = _replace(chp, sd_scale=current.sd_scale, bias=current.bias)
                 out.append(f"→ PROMOTED shadow challenger {ch['id']} (won {PROMOTE_STREAK} newest rounds in a row)")
                 ch = {}
             elif len(mine) >= 2 and not mine.challenger_wins.tail(2).any():
@@ -194,14 +223,18 @@ def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
             ch = {"id": dt.datetime.now(dt.UTC).strftime("%Y%m%d%H%M"), "since_round": newest, "name": best_name,
                   "params": dataclasses.asdict(p)}
         elif not ch and adopted is current:
-            p = cands["new core + bias"]
+            p = cands["new core"]
             if _key(p) != _key(_replace(current, sd_scale=1.0)):
-                ch = {"id": dt.datetime.now(dt.UTC).strftime("%Y%m%d%H%M"), "since_round": newest, "name": "new core + bias",
+                ch = {"id": dt.datetime.now(dt.UTC).strftime("%Y%m%d%H%M"), "since_round": newest, "name": "new core",
                       "params": dataclasses.asdict(p)}
         if ch:
             out.append(f"- shadow challenger {ch['id']} ('{ch['name']}', since R{ch['since_round']}) - would be promoted after {PROMOTE_STREAK} straight newest-round wins")
     (PROCESSED / "challenger.json").write_text(json.dumps(ch, indent=1, default=str), encoding="utf-8")
     (PROCESSED / "learn_log.json").write_text(log.to_json(orient="records", indent=1) if not log.empty else "[]", encoding="utf-8")
+
+    # 3: bias layer, own gate
+    adopted, msg = bias_gate(pg, schedule, train, hold, adopted)
+    out.append(msg)
 
     # 4: sd calibration, own gate: fit k on train, keep it only if hold-out coverage gets closer to 80%
     t_train = backtest(pg, schedule, train, _replace(adopted, sd_scale=1.0)).table

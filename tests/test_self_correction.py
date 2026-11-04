@@ -90,15 +90,49 @@ def test_calibration_widens_narrow_bands():
 
 def test_bias_is_shrunk_and_clipped():
     b = fit_bias(_table(np.random.default_rng(1), bias=1.3))
-    assert all(1.0 < v <= 1.15 for v in b.values())
-    assert fit_bias(_table(np.random.default_rng(2), bias=1.0)) == {} or all(abs(v - 1) < 0.05 for v in fit_bias(_table(np.random.default_rng(2))).values())
+    assert b and all(1.15 < v < 1.4 for v in b.values())         # near the true 1.3, after shrinkage and noise
+    assert all(1.0 < v <= 1.6 for v in fit_bias(_table(np.random.default_rng(4), n=4000, bias=3.0)).values())
+    assert all(int(k.split("|")[1].split("-")[0].lstrip("<")) < 20 for k in b)   # nothing fitted at 20+ min
+    # null case: no true bias -> only noise-sized factors (prior N=30 trades a wider noise floor for speed;
+    # the hold-out gate in learning.bias_gate is what keeps a noise-only layer out)
+    assert all(abs(v - 1) < 0.08 for v in fit_bias(_table(np.random.default_rng(2), bias=1.0)).values())
 
 
 def test_bias_factor_lookup():
-    p = Params(bias={"Guard|10-20": 1.1})
-    assert minutes_band(15) == "10-20" and bias_factor(p, "Guard", 15) == 1.1 and bias_factor(p, "Center", 15) == 1.0
+    p = Params(bias={"Guard|15-20": 1.1})
+    assert minutes_band(15) == "15-20" and minutes_band(12) == "10-15" and minutes_band(9.9) == "<10"
+    assert bias_factor(p, "Guard", 15) == 1.1 and bias_factor(p, "Center", 15) == 1.0 and bias_factor(p, "Guard", 25) == 1.0
+
+
+def test_bias_skips_starter_minutes():
+    t = _table(np.random.default_rng(5), bias=1.4)
+    t["min_hat"] = t.min_hat + 10          # every player projected 22-38 min
+    assert fit_bias(t) == {}
 
 
 def test_attribution_shares_sum_to_one():
     a = attribution(_table(np.random.default_rng(3)))
     assert abs(a["minutes_share"] + a["rate_share"] - 1) < 1e-6 and a["minutes_mae"] > 0
+
+
+def test_bias_gate_adopts_real_bias_and_rejects_noise(monkeypatch):
+    import elfa.model.learning as L
+
+    def fake_backtest(true_bias):
+        def bt(pg, schedule, rounds, p):
+            rng = np.random.default_rng(sum(rounds) * 7)
+            t = _table(rng, n=900, bias=true_bias)
+            t["min_hat"] = rng.uniform(4, 19, len(t))
+            t["model"] = t.min_hat * 0.6
+            t["actual_pir"] = t.model * true_bias + rng.normal(0, 6, len(t))
+            t["round"] = rng.choice(rounds, len(t))
+            t["model"] = t.model * t.fpos.astype(str).str.cat(t.min_hat.map(minutes_band), sep="|").map(p.bias or {}).fillna(1.0)
+            return SimpleNamespace(table=t)
+        return bt
+
+    monkeypatch.setattr(L, "backtest", fake_backtest(1.4))
+    p, msg = L.bias_gate(None, None, [4, 5, 6, 7], [8, 9], Params())
+    assert p.bias and msg.startswith("→ ADOPTED")
+    monkeypatch.setattr(L, "backtest", fake_backtest(1.0))
+    p, msg = L.bias_gate(None, None, [4, 5, 6, 7], [8, 9], Params())
+    assert p.bias == {} and "ADOPTED" not in msg

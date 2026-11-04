@@ -2,7 +2,7 @@
 so nothing here sees the result it is scored on).
 
 - calibration: are the uncertainty bands honest? coverage of the 80% interval and an sd scale factor;
-- bias:        shrunk, recency-weighted multipliers per (position x projected-minutes band);
+- bias:        shrunk, recency-weighted multipliers per (position x projected-minutes band), below 20 min only;
 - attribution: how much of each miss is a minutes miss vs a per-minute (rate) miss.
 """
 from __future__ import annotations
@@ -13,9 +13,10 @@ import pandas as pd
 from elfa.model.projection import minutes_band
 
 Z80 = 1.2816
-BIAS_PRIOR_N = 60.0      # a segment needs ~60 player-games before its own ratio gets half the weight
+BIAS_PRIOR_N = 30.0      # a segment needs ~30 player-games before its own ratio gets half the weight
 BIAS_DECAY = 0.7         # per-round weight decay: last round 1.0, the one before 0.7, ...
-BIAS_CLIP = (0.85, 1.15)
+BIAS_CLIP = (0.7, 1.6)   # walk-forward R5-R9: <10-min players score 1.5-2.0x projection; +-15% could not reach it
+BIAS_MAX_MINUTES = 20.0  # correct only bench/rotation bands - at 20+ min the correction overshot (bias -0.63 -> +0.28)
 SD_CLIP = (0.7, 1.6)
 
 
@@ -55,7 +56,9 @@ def fit_bias(t: pd.DataFrame, current: dict | None = None) -> dict:
     """
     current = current or {}
     t = _dressed(t)
-    t = t[t.model > 0.5]
+    t = t[(t.model > 0.5) & (t.min_hat < BIAS_MAX_MINUTES)]
+    if t.empty:
+        return {}
     t["seg"] = t.fpos.astype(str) + "|" + t.min_hat.map(minutes_band)
     last = t["round"].max()
     out = {}

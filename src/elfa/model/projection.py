@@ -56,7 +56,7 @@ class Params:
         path.write_text(json.dumps(d, indent=1), encoding="utf-8")
 
 
-MINUTE_BANDS = [(0, 10, "<10"), (10, 20, "10-20"), (20, 30, "20-30"), (30, 99, "30+")]
+MINUTE_BANDS = [(0, 10, "<10"), (10, 15, "10-15"), (15, 20, "15-20"), (20, 30, "20-30"), (30, 99, "30+")]
 
 
 def minutes_band(min_hat: float) -> str:

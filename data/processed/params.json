@@ -17,7 +17,17 @@
  "dnp_recent_penalty": 0.8,
  "minutes_sample_prior": 0.5,
  "sd_scale": 1.096,
- "bias": {},
+ "bias": {
+  "Center|10-15": 1.078,
+  "Center|15-20": 1.048,
+  "Center|<10": 1.131,
+  "Forward|10-15": 1.203,
+  "Forward|15-20": 1.069,
+  "Forward|<10": 1.284,
+  "Guard|10-15": 1.042,
+  "Guard|15-20": 1.092,
+  "Guard|<10": 1.6
+ },
  "flags": {},
- "note": "2026-10-30: ADOPTED 'new core' (gain +0.10 on every hold-out round)"
+ "note": "2026-11-04: ADOPTED bias layer (9 segment(s)): hold-out mean |bias| 0.86 \u2192 0.41, RMSE -0.044"
 }
