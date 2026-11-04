@@ -6,6 +6,7 @@ Scoring weights verified on the platform: starters, 6th man, coach x1; bench x0.
 from __future__ import annotations
 
 import math
+import re
 from dataclasses import dataclass
 
 import pandas as pd
@@ -23,6 +24,15 @@ CLUB_CAP_PENALTY = 3.0      # ... this many expected points in the objective
 BENCH_OPTION_WEIGHT = 1.0   # weight of the promotion option (0.5 = my conservative sim; elite promote ~35% of field slots)
 BENCH_PRICE_FLOOR = 6.0     # top-100 bench averages 7.4 credits; each credit below this costs ...
 BENCH_FLOOR_PENALTY = 1.0   # ... this many expected points
+# Trade discipline (decision layer). MD 8-9 review: the agent's trade-ins scored 14 below projection and the
+# players it sold 32 above; across the replay grid the predicted trade gain overshot the realised one by ~6
+# points per trade (optimiser's curse). Replay (elfa.model.trade_backtest, MD 8-9 only): the availability gate
+# was the one consistent gain; hurdle and sd penalty showed no reliable signal yet, so the hurdle is kept
+# small and the sd penalty off until more matchdays are scored.
+TRADE_HURDLE = 2.0          # expected points a new player must beat the one he replaces by (per trade)
+TRADE_SD_PENALTY = 0.0      # extra discount per point of matchday sd for an incoming player (off; see above)
+MIN_GAMES_TRADE_IN = 3      # never buy a player with fewer season games (Edwin Jackson: 1 g, 0 pts twice)
+MIN_PROB_PLAY_TRADE_IN = 0.7  # never buy a player the platform rates below this chance to play
 
 
 def _pos_part(mu: float, sd: float) -> float:
@@ -49,6 +59,26 @@ def bench_value(df: pd.DataFrame) -> dict[str, float]:
     return out
 
 
+_GAMES_RE = re.compile(r"over (\d+) g\b")
+
+
+def games_played(df: pd.DataFrame) -> dict[str, int]:
+    """Season games behind each projection (``n_games``; parsed from ``why`` for older projection files)."""
+    if "n_games" in df:
+        return {i: int(n) if pd.notna(n) else 0 for i, n in zip(df.platform_id, df.n_games)}
+    if "why" not in df:
+        return {}   # no sample-size information at all: the games gate does not apply
+    out = {}
+    for i, w in zip(df.platform_id, df.why):
+        m_ = _GAMES_RE.search(str(w))
+        out[i] = int(m_.group(1)) if m_ else 0
+    return out
+
+
+def trade_in_cost(md_sd: float, hurdle: float, sd_penalty: float) -> float:
+    return hurdle + sd_penalty * max(float(md_sd or 0.0), 0.0)
+
+
 @dataclass
 class Solution:
     squad: pd.DataFrame
@@ -60,6 +90,7 @@ class Solution:
     cost: float
     budget: float
     status: str
+    trade_penalty: float = 0.0   # objective discount charged for the incoming players (not in expected_md_pts)
 
 
 def optimise(
@@ -73,9 +104,17 @@ def optimise(
     keep_ids: set[str] | None = None,
     balance: bool = True,
     future_factor: float | None = None,
+    trade_hurdle: float | None = None,
+    trade_sd_penalty: float | None = None,
+    min_games_in: int | None = None,
+    min_prob_play_in: float | None = None,
 ) -> Solution:
     """`future_factor` weights the points expected beyond this matchday (default FUTURE_FACTOR; 0 = this
-    matchday only). The coach counts as one of the `max_trades` like any player."""
+    matchday only). The coach counts as one of the `max_trades` like any player.
+
+    Trade discipline: every player not in `prev_ids` costs `trade_hurdle + trade_sd_penalty * md_sd` in the
+    objective, and players below `min_games_in` season games or `min_prob_play_in` are not buyable
+    (coaches are exempt from the games/availability gate). `keep_ids` overrides the gate."""
     exp_price_change = exp_price_change or {}
     ff = FUTURE_FACTOR if future_factor is None else float(future_factor)
     df = proj.copy()
@@ -88,6 +127,14 @@ def optimise(
     sd = dict(zip(df.platform_id, df.md_sd))
     if "first_turn" not in df:
         df["first_turn"] = 1
+    hurdle = TRADE_HURDLE if trade_hurdle is None else float(trade_hurdle)
+    sd_pen = TRADE_SD_PENALTY if trade_sd_penalty is None else float(trade_sd_penalty)
+    min_g = MIN_GAMES_TRADE_IN if min_games_in is None else int(min_games_in)
+    min_pp = MIN_PROB_PLAY_TRADE_IN if min_prob_play_in is None else float(min_prob_play_in)
+    n_g = games_played(df)
+    pplay = dict(zip(df.platform_id, df.prob_play)) if "prob_play" in df else {}
+    new_ids = [i for i in ids if i not in prev_ids]
+    tcost = {i: trade_in_cost(sd.get(i, 0.0), hurdle, sd_pen) for i in new_ids}
     bval = bench_value(df)
     ft = dict(zip(df.platform_id, df.first_turn))
     fut = {i: max(h - m_, 0.0) for i, h, m_ in zip(df.platform_id, df.horizon_pts, df.md_pts)}
@@ -109,6 +156,7 @@ def optimise(
         + mu_price * pulp.lpSum(x[i] * exp_price_change.get(i, 0.0) for i in ids)
         - CLUB_CAP_PENALTY * pulp.lpSum(over[cl] for cl in clubs)
         - BENCH_FLOOR_PENALTY * pulp.lpSum(b[i] * max(BENCH_PRICE_FLOOR - q[i], 0.0) for i in players)
+        - pulp.lpSum(x[i] * tcost[i] for i in new_ids)
     )
     for cl in clubs:
         prob += over[cl] >= pulp.lpSum(x[i] for i in ids if club[i] == cl) - SOFT_CLUB_CAP
@@ -149,10 +197,18 @@ def optimise(
         for i in (keep_ids or set()):
             if i in x:
                 prob += x[i] == 1
+        # availability gate for incoming players
+        for i in new_ids:
+            if pos[i] == "Head Coach" or i in (keep_ids or set()):
+                continue
+            if n_g.get(i, min_g) < min_g or float(pplay.get(i, 1.0)) < min_pp:
+                prob += x[i] == 0
     prob.solve(pulp.PULP_CBC_CMD(msg=False, timeLimit=60))
     status = pulp.LpStatus[prob.status]
     if status != "Optimal" and balance:
-        return optimise(proj, budget, prev_ids, max_trades, mu_price, exp_price_change, lock_squad, keep_ids, balance=False, future_factor=ff)
+        return optimise(proj, budget, prev_ids, max_trades, mu_price, exp_price_change, lock_squad, keep_ids, balance=False,
+                        future_factor=ff, trade_hurdle=hurdle, trade_sd_penalty=sd_pen, min_games_in=min_g,
+                        min_prob_play_in=min_pp)
 
     chosen = [i for i in ids if x[i].value() and x[i].value() > 0.5]
     role = {}
@@ -185,4 +241,5 @@ def optimise(
         cost=round(float(squad.quotation.sum()), 1),
         budget=budget,
         status=status,
+        trade_penalty=round(sum(tcost[i] for i in chosen if i in tcost), 1),
     )

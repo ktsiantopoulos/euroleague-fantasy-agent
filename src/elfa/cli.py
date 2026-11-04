@@ -205,6 +205,14 @@ def scorecard():
     rprint(txt)
 
 
+@app.command("trade-backtest")
+def trade_backtest():
+    """Replay frozen matchdays under trade-discipline settings (hurdle, sd discount, availability gate)."""
+    from elfa.model.trade_backtest import report
+
+    rprint(report())
+
+
 @app.command()
 def learn():
     """Guarded recalibration: minutes/rate sub-model grids, bias layer, sd calibration, challenger, drift check."""

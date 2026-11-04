@@ -214,6 +214,7 @@ def project(
                 "pos": pos, "team": team_pl, "team_off": team, "quotation": float(m["quotation"]),
                 "avg_pts_platform": m.get("avg_pts"), "popularity": m.get("popularity"),
                 "prob_play": prob_play, "min_hat": round(min_hat, 1), "rate_hat": round(rate_hat, 3),
+                "n_games": int(f.n_games) if f is not None else 0,
                 "games_md": games_md, "md_pts": round(md_pts, 2), "md_sd": round(float(np.sqrt(md_var)), 2),
                 "md_p90": round(md_pts + 1.2816 * float(np.sqrt(md_var)), 2),
                 "horizon_pts": round(horizon_pts, 2),

@@ -41,3 +41,45 @@ def test_optimiser_respects_rules():
     hold = optimise(df, budget=100.0, prev_ids=prev, max_trades=4, lock_squad=True)
     assert set(hold.squad.platform_id) == prev
     assert sol.expected_md_pts >= hold.expected_md_pts
+
+
+def _prev(df):
+    cheap = df.sort_values("quotation")
+    return set(cheap[cheap.pos == "Guard"].platform_id.head(4)) | set(cheap[cheap.pos == "Forward"].platform_id.head(4)) \
+        | set(cheap[cheap.pos == "Center"].platform_id.head(2)) | set(cheap[cheap.pos == "Head Coach"].platform_id.head(1))
+
+
+def test_availability_gate_blocks_thin_sample_trade_ins():
+    df = _market()
+    df["n_games"] = 9
+    df["prob_play"] = 1.0
+    prev = _prev(df)
+    star = df[(df.pos == "Guard") & ~df.platform_id.isin(prev)].platform_id.iloc[0]
+    df.loc[df.platform_id == star, ["md_pts", "horizon_pts", "quotation"]] = [60.0, 90.0, 5.0]
+    assert star in set(optimise(df, 100.0, prev, 4).squad.platform_id)
+    df.loc[df.platform_id == star, "n_games"] = 1
+    assert star not in set(optimise(df, 100.0, prev, 4).squad.platform_id)
+    df.loc[df.platform_id == star, ["n_games", "prob_play"]] = [9, 0.4]
+    assert star not in set(optimise(df, 100.0, prev, 4).squad.platform_id)
+    # an owned player is never forced out by the gate
+    df.loc[df.platform_id == star, "prob_play"] = 1.0
+    prev2 = (prev - {sorted(p for p in prev if df.set_index("platform_id").pos[p] == "Guard")[0]}) | {star}
+    df.loc[df.platform_id == star, "n_games"] = 1
+    assert star in set(optimise(df, 100.0, prev2, 4).squad.platform_id)
+
+
+def test_trade_hurdle_reduces_trades_and_parses_games_from_why():
+    df = _market()
+    df["why"] = "20 min proj (starter, last 20), 0.60 PIR/min over 7 g · T1"
+    prev = _prev(df)
+    free = optimise(df, 100.0, prev, 4, trade_hurdle=0.0, min_games_in=3)
+    strict = optimise(df, 100.0, prev, 4, trade_hurdle=100.0, min_games_in=3)
+    # the synthetic baseline may need one trade to satisfy the night-balance rule, so compare counts
+    assert len(strict.trades_in) < len(free.trades_in)
+    assert free.trade_penalty == 0.0 and strict.trade_penalty == 100.0 * len(strict.trades_in)
+    taxed = optimise(df, 100.0, prev, 4, trade_hurdle=1.0, min_games_in=3)
+    assert taxed.trade_penalty == len(taxed.trades_in) * 1.0
+    df["why"] = "over 2 g"
+    gated = optimise(df, 100.0, prev, 4, min_games_in=3)
+    pos = dict(zip(df.name, df.pos))
+    assert all(pos[n] == "Head Coach" for n in gated.trades_in)  # only coaches (exempt) are buyable

@@ -138,6 +138,8 @@ jobs:
           elfa evaluate 2>&1 | tee -a reports/latest.md || true
           echo -e "\n## scorecard" | tee -a reports/latest.md
           elfa scorecard 2>&1 | tee -a reports/latest.md || true
+          echo -e "\n## trade backtest" | tee -a reports/latest.md
+          elfa trade-backtest 2>&1 | head -n 12 | tee -a reports/latest.md || true
           echo -e "\n## learn" | tee -a reports/latest.md
           elfa learn 2>&1 | tail -n 14 | tee -a reports/latest.md || true
 

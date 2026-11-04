@@ -18,6 +18,7 @@ from elfa.model.baseline import changes_between, trade_baseline
 from elfa.model.inround import simulate
 from elfa.model.optimise_bridge import run_optimiser
 from elfa.model.projection import Params, project
+from elfa.optimise import lineup as L
 from elfa.model.teams import (
     load_schedule,
     matchday_games,
@@ -214,6 +215,9 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "- Price-change term inactive (μ = 0) until the price log has two or more matchdays.",
         "- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 ownership (raw model value kept as md_pts_model).",
         "- Soft rules from the top-100 study: 3 points penalty per player above 3 from one club; 1 point per credit for bench players under 6.0.",
+        f"- Trade discipline: each incoming player must clear {L.TRADE_HURDLE:.1f} pts + {L.TRADE_SD_PENALTY:.2f}×sd; "
+        f"no trade-ins with < {L.MIN_GAMES_TRADE_IN} season games or < {L.MIN_PROB_PLAY_TRADE_IN:.0%} to play "
+        f"(objective discount on this squad: {best.trade_penalty:.1f}; not deducted from the expected points).",
         f"- Optimiser status: {best.status} / {hold.status}.",
     ]
     out = ROOT / "reports" / f"recommendation_md{md_number:02d}.md"
