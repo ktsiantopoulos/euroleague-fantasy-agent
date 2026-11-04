@@ -1,66 +1,6 @@
-## run reason: daily  (deadline 2026-11-04T19:44:00+00:00, 10.69 h away)
+## run reason: manual  (deadline 2026-11-04T19:44:00+00:00, 3.03 h away)
 ## pull-official
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1116, in json
-    return complexjson.loads(self.text, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/__init__.py", line 346, in loads
-    return _default_decoder.decode(s)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 338, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/json/decoder.py", line 356, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/bin/elfa", line 6, in <module>
-    sys.exit(app())
-             ^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/main.py", line 1154, in __call__
-    raise e
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/main.py", line 1137, in __call__
-    return get_command(self)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/_click/core.py", line 802, in __call__
-    return self.main(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/core.py", line 1197, in main
-    return _main(
-           ^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/core.py", line 187, in _main
-    rv = self.invoke(ctx)
-         ^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/core.py", line 1119, in invoke
-    return _process_result(sub_ctx.command.invoke(sub_ctx))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/_click/core.py", line 741, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/_click/core.py", line 483, in invoke
-    return callback(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/typer/main.py", line 1524, in wrapper
-    return callback(**use_params)
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/src/elfa/cli.py", line 26, in pull_official
-    played, fetched = pull_season(client, season)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/src/elfa/ingest/euroleague.py", line 58, in pull_season
-    games = client.games(season)
-            ^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/src/elfa/ingest/euroleague.py", line 32, in games
-    return self._get(f"/v2/competitions/E/seasons/{season}/games")["data"]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/src/elfa/ingest/euroleague.py", line 29, in _get
-    return r.json()
-           ^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/models.py", line 1120, in json
-    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
-requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+E2026: 90 games played, 0 box scores fetched now
 
 ## pull-platform
 pulled -> 
@@ -182,11 +122,11 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 18.4 | 52 | 46 | 21 |
-| Theo Maledon | G | RMB | 12.1 | 49 | 12 | 68 |
-| Aliou Diarra | C | VIR | 10.0 | 48 | 36 | 0 |
-| Ibon Navarro | H | CZV | 7.2 | 42 | 11 | 0 |
-| Andres Feliz | G | RMB | 8.6 | 31 | 31 | 0 |
-| Yam Madar | G | MTA | 10.2 | 25 | 13 | 0 |
+| Theo Maledon | G | RMB | 12.1 | 49 | 9 | 68 |
+| Aliou Diarra | C | VIR | 10.0 | 48 | 35 | 0 |
+| Ibon Navarro | H | CZV | 7.2 | 42 | 8 | 0 |
+| Andres Feliz | G | RMB | 8.6 | 31 | 32 | 0 |
+| Yam Madar | G | MTA | 10.2 | 25 | 12 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
