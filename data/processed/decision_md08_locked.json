@@ -1,0 +1,244 @@
+{
+ "matchday": 8,
+ "frozen_utc": "2026-10-28T15:58:35Z",
+ "lock_utc": "2026-10-28T17:29:00Z",
+ "budget": 105.9,
+ "trades_left": 4,
+ "baseline_ids": [
+  "3766",
+  "3805",
+  "3850",
+  "3851",
+  "3867",
+  "3948",
+  "3976",
+  "4006",
+  "4088",
+  "4233",
+  "7424"
+ ],
+ "hold": {
+  "expected": 143.6,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 22.75,
+    "md_sd": 8.69
+   },
+   {
+    "platform_id": "4233",
+    "name": "Mfiondu Kabengele",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.75,
+    "md_sd": 7.07
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.67,
+    "md_sd": 6.52
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.14,
+    "md_sd": 9.07
+   },
+   {
+    "platform_id": "3805",
+    "name": "Kendrick Nunn",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 12.63,
+    "md_sd": 8.15
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 16.65,
+    "md_sd": 9.43
+   },
+   {
+    "platform_id": "3948",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.66,
+    "md_sd": 10.32
+   },
+   {
+    "platform_id": "3867",
+    "name": "Kostas Papanikolaou",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 6.68,
+    "md_sd": 5.66
+   },
+   {
+    "platform_id": "3976",
+    "name": "Arijan Lakic",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 4.5,
+    "md_sd": 4.56
+   },
+   {
+    "platform_id": "4088",
+    "name": "Berk Ugurlu",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 4.01,
+    "md_sd": 5.18
+   },
+   {
+    "platform_id": "4006",
+    "name": "Tomas Masiulis",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 1.86,
+    "md_sd": 12.0
+   }
+  ]
+ },
+ "best": {
+  "expected": 158.3,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 22.75,
+    "md_sd": 8.69
+   },
+   {
+    "platform_id": "4233",
+    "name": "Mfiondu Kabengele",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.75,
+    "md_sd": 7.07
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.67,
+    "md_sd": 6.52
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.65,
+    "md_sd": 9.43
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.14,
+    "md_sd": 9.07
+   },
+   {
+    "platform_id": "4005",
+    "name": "Edwin Jackson",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 9.01,
+    "md_sd": 7.73
+   },
+   {
+    "platform_id": "11545",
+    "name": "Marcus Carr",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 13.0,
+    "md_sd": 8.47
+   },
+   {
+    "platform_id": "3948",
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.66,
+    "md_sd": 10.32
+   },
+   {
+    "platform_id": "7217",
+    "name": "Tyson Carter",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.01,
+    "md_sd": 7.82
+   },
+   {
+    "platform_id": "3867",
+    "name": "Kostas Papanikolaou",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 6.68,
+    "md_sd": 5.66
+   },
+   {
+    "platform_id": "3938",
+    "name": "Ibon Navarro",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 13.44,
+    "md_sd": 12.0
+   }
+  ],
+  "trades_out": [
+   "Kendrick Nunn",
+   "Tomas Masiulis",
+   "Berk Ugurlu",
+   "Arijan Lakic"
+  ],
+  "trades_in": [
+   "Marcus Carr",
+   "Ibon Navarro",
+   "Tyson Carter",
+   "Edwin Jackson"
+  ]
+ },
+ "params": null,
+ "backfilled_from": "commit cb97957 (last pipeline run before the MD 8 lock; freeze-at-lock started at MD 9; params.json did not exist yet)"
+}
