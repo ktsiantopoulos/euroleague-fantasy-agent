@@ -1,6 +1,6 @@
 {
- "id": "202610290458",
- "since_round": 8,
+ "id": "202611051527",
+ "since_round": 10,
  "name": "new core",
  "params": {
   "w_minutes": [
@@ -8,7 +8,7 @@
    0.3,
    0.6
   ],
-  "rate_prior_minutes": 40.0,
+  "rate_prior_minutes": 80.0,
   "lam_recent": 0.3,
   "eta_home": 0.02,
   "gamma_dvp": 1.0,
@@ -21,7 +21,17 @@
   "dnp_recent_penalty": 0.8,
   "minutes_sample_prior": 0.5,
   "sd_scale": 1.0,
-  "bias": {},
+  "bias": {
+   "Center|10-15": 1.078,
+   "Center|15-20": 1.048,
+   "Center|<10": 1.131,
+   "Forward|10-15": 1.203,
+   "Forward|15-20": 1.069,
+   "Forward|<10": 1.284,
+   "Guard|10-15": 1.042,
+   "Guard|15-20": 1.092,
+   "Guard|<10": 1.6
+  },
   "flags": {}
  }
 }

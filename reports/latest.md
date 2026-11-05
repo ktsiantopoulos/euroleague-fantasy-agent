@@ -1,12 +1,12 @@
-## run reason: manual  (deadline 2026-11-04T19:44:00+00:00, 3.03 h away)
+## run reason: pre-deadline (1.8h)  (deadline 2026-11-05T17:14:00+00:00, 1.83 h away)
 ## pull-official
-E2026: 90 games played, 0 box scores fetched now
+E2026: 91 games played, 1 box scores fetched now
 
 ## pull-platform
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_10
-team: UnderTakers86  credits: 108.6  trades used: 0/4
+team: UnderTakers86  credits: 108.6  trades used: 4/4
 
 ## pull-external
   fantasyedge: 376 players, 15 columns kept
@@ -15,13 +15,13 @@ price base: fantasyedge 237, top100_md1 122, first_seen 5
 ## build
         games  rows  mismatches
 season                         
-E2026      90  2153           0
+E2026      91  2177           0
 teams mapped: 20; needs attention: 0
 method
 surname+team    299
-UNMATCHED        44
+UNMATCHED        41
 coach            20
-team context: 20 clubs · usage: 288 players · FDR: 20 clubs x next 5
+team context: 20 clubs · usage: 289 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 5
 matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
 T2=2026-10-28, T1=2026-10-29, T2=2026-10-30, T1=2026-11-04, T2=2026-11-05, 
@@ -71,22 +71,24 @@ official_min team_won  expected_pts   status
 ## evaluate
 # Projection evaluation
 
+- MD8: 289 players · MAE 4.81 (platform avg_pts baseline 6.02) · bias -0.06 · 
+corr 0.608 · above p90 11% / below p10 8% (target 10% each)
 - MD9: 298 players · MAE 5.24 (platform avg_pts baseline 5.92) · bias -0.22 · 
 corr 0.498 · above p90 11% / below p10 6% (target 10% each)
 
 ## Bias by segment (mean projected − actual; positive = we over-project)
-- position: Center -0.3 (n=56), Forward +0.1 (n=105), Guard -0.4 (n=137)
-- projected minutes: <10 +0.1 (n=61), 10-20 -0.4 (n=152), 20-30 -0.0 (n=74)
-- price: ≤6 +0.8 (n=74), 6-9 -1.1 (n=117), 9-13 +0.1 (n=80), 13+ -0.2 (n=27)
-- availability: doubtful -1.4 (n=21), fit -0.1 (n=277)
+- position: Center -1.3 (n=109), Forward +0.4 (n=209), Guard -0.1 (n=269)
+- projected minutes: <10 -0.1 (n=119), 10-20 -0.0 (n=304), 20-30 -0.4 (n=142)
+- price: ≤6 +0.9 (n=144), 6-9 -0.8 (n=234), 9-13 +0.2 (n=154), 13+ -1.0 (n=55)
+- availability: doubtful -0.5 (n=41), fit -0.1 (n=546)
 
 ## Biggest misses
-- under-projected: Lonnie Walker IV (0→40), Theo Maledon (16→38), Tyty 
-Washington (10→32), Filip Petrusev (8→29), Nadir Hifi (13→33)
-- over-projected: Elijah Bryant (19→-6), Tyrese Martin (13→-4), Tadas 
-Sedekerskis (13→0), Anthony Brown (11→-2), Mfiondu Kabengele (22→9)
+- under-projected: Lonnie Walker IV (0→40), Antonio Blakeney (9→38), Theo 
+Maledon (16→38), Tyty Washington (10→32), Donta Hall (4→25)
+- over-projected: Elijah Bryant (19→-6), Tyrese Martin (13→-4), Sylvain 
+Francisco (14→-1), Scottie Wilbekin (14→-1), Marcus Carr (13→-1)
 
-## Coaches: MAE 9.8, bias +0.4 (n=19)
+## Coaches: MAE 9.8, bias +0.6 (n=38)
 
 ## scorecard
 # Decision scorecard
@@ -94,53 +96,51 @@ Sedekerskis (13→0), Anthony Brown (11→-2), Mfiondu Kabengele (22→9)
 | MD | expected | actual | z | agent rec (actual) | no trades (actual) | trades:
 agent / you | hindsight | regret | captain regret |
 |---|---|---|---|---|---|---|---|---|---|
+| 8 | 150.4 ± 28.5 | 155.2 | +0.17 | 154.05 | 163.85 | -9.8 / -8.7 | 248.25 | 
+93.1 | 0.0 (Sasha Vezenkov) |
 | 9 | 147.6 ± 31.3 | 166.6 | +0.61 | 158.0 | 164.9 | -6.9 / +1.7 | 272.3 | 105.8
 | 14.3 (Sasha Vezenkov) |
 
-Mean z +0.61 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
-mean regret 105.8 · cumulative trade value agent -6.9 / you +1.7
+Mean z +0.39 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
+mean regret 99.4 · cumulative trade value agent -16.7 / you -7.0
+
+## trade backtest
+# Trade-discipline replay
+
+Matchdays: 8, 9 · realised gain = recommended squad minus no-trade squad, both 
+on actual points
+
+| setting | MD | trades | predicted gain | realised gain |
+|---|---|---|---|---|
+| current defaults | 8 | 4 | +17.4 | -2.6 |
+| current defaults | 9 | 4 | +15.2 | +4.3 |
+| no discipline | 8 | 4 | +14.7 | -9.8 |
+| no discipline | 9 | 4 | +11.3 | -6.9 |
+
 
 ## learn
-learn: train R4-R7, hold-out R8, R9
-- new core + bias: hold-out MAE R8 6.15, R9 6.05 vs current 6.09, 6.05 (gain 
--0.03)
-- new core: hold-out MAE R8 6.09, R9 6.05 vs current 6.09, 6.05 (gain +0.00)
-- current core + new bias: hold-out MAE R8 6.15, R9 6.05 vs current 6.09, 6.05 
-(gain -0.03)
+learn: train R4-R8, hold-out R9, R10
+- new core: hold-out MAE R9 6.02, R10 8.51 vs current 6.06, 8.29 (gain -0.09)
 → kept current core
-- shadow challenger 202610290458 ('new core', since R8) - would be promoted 
+- shadow challenger 202611051527 ('new core', since R10) - would be promoted 
 after 3 straight newest-round wins
-- sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.122 → 81%)
+- kept bias layer (8 segment(s)): hold-out mean |bias| 1.70 → 1.71, RMSE -0.003
+- sd scale kept at 1.096 (hold-out 80% band 81%; candidate ×1.12 → 82%)
 health: no drift flags
-
-## top-100
-top-100: 0 roster previews fetched now
-# Top-180 managers — matchdays 1–9
-
-## Ownership in the top 180, matchday 9
-
-| player | pos | club | price | top own% | global% | captain # |
-|---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 18.4 | 52 | 46 | 21 |
-| Theo Maledon | G | RMB | 12.1 | 49 | 9 | 68 |
-| Aliou Diarra | C | VIR | 10.0 | 48 | 35 | 0 |
-| Ibon Navarro | H | CZV | 7.2 | 42 | 8 | 0 |
-| Andres Feliz | G | RMB | 8.6 | 31 | 32 | 0 |
-| Yam Madar | G | MTA | 10.2 | 25 | 12 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
 mae_base_last3  corr_base_last3
-all dressed players 1395       5.55       0.420           5.78           0.400  
-6.03            0.367
-projected >= 15 min  792       6.14       0.309           6.43           0.288  
-6.78            0.245
-   >= 3 prior games 1295       5.58       0.422           5.78           0.405  
-6.05            0.369
+all dressed players 1419       5.61       0.420           5.80           0.402  
+6.05            0.370
+projected >= 15 min  804       6.19       0.313           6.45           0.293  
+6.80            0.249
+   >= 3 prior games 1315       5.65       0.422           5.81           0.408  
+6.07            0.373
 
 ## recommend
-- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 
-ownership (raw model value kept as md_pts_model).
-- Soft rules from the top-100 study: 3 points penalty per player above 3 from 
 one club; 1 point per credit for bench players under 6.0.
+- Trade discipline: each incoming player must clear 2.0 pts + 0.00×sd; no 
+trade-ins with < 3 season games or < 70% to play (objective discount on this 
+squad: 8.0; not deducted from the expected points).
 - Optimiser status: Optimal / Optimal (night-balance relaxed).

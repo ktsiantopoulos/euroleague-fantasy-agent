@@ -2,28 +2,28 @@
 
 No drift flags.
 
-learn: train R4-R7, hold-out R8, R9
-- new core: hold-out MAE R8 6.09, R9 6.05 vs current 6.09, 6.05 (gain +0.00)
+learn: train R4-R8, hold-out R9, R10
+- new core: hold-out MAE R9 6.02, R10 8.51 vs current 6.06, 8.29 (gain -0.09)
 → kept current core
-- shadow challenger 202610290458 ('new core', since R8) - would be promoted after 3 straight newest-round wins
-→ ADOPTED bias layer (9 segment(s)): hold-out mean |bias| 0.86 → 0.41, RMSE -0.044
-- sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.113 → 81%)
+- shadow challenger 202611051527 ('new core', since R10) - would be promoted after 3 straight newest-round wins
+- kept bias layer (8 segment(s)): hold-out mean |bias| 1.70 → 1.71, RMSE -0.003
+- sd scale kept at 1.096 (hold-out 80% band 81%; candidate ×1.12 → 82%)
 
 ## Calibration (walk-forward)
-- 80% band holds 80% of outcomes (above p90 13%, below p10 8%; n=1363) → sd scale that would make it 80%: ×1.009
+- 80% band holds 80% of outcomes (above p90 13%, below p10 8%; n=1387) → sd scale that would make it 80%: ×1.009
 ## Error attribution
-- minutes MAE 4.95 min · share of absolute error from minutes 34%, from rate 66%
-- surprise DNPs (projected ≥10 min, played 0): 12 costing 71.1 projected PIR
+- minutes MAE 4.97 min · share of absolute error from minutes 34%, from rate 66%
+- surprise DNPs (projected ≥10 min, played 0): 13 costing 78.3 projected PIR
 ## Bias by segment (projected − actual PIR per game; ratio = actual/projected)
-- Guard|15-20: n=222, err -0.20, ratio 1.022
-- Forward|15-20: n=163, err +0.03, ratio 0.996
-- Guard|20-30: n=157, err -0.10, ratio 1.009
-- Forward|10-15: n=135, err -0.13, ratio 1.021
-- Guard|10-15: n=125, err +0.08, ratio 0.984
-- Forward|20-30: n=119, err -0.38, ratio 1.034
-- Center|15-20: n=110, err -0.58, ratio 1.057
-- Center|10-15: n=89, err -0.32, ratio 1.048
-- Forward|<10: n=86, err -0.46, ratio 1.145
-- Guard|<10: n=81, err -0.94, ratio 1.273
-- Center|<10: n=55, err -1.63, ratio 1.519
-- Center|20-30: n=21, err -2.52, ratio 1.188
+- Guard|15-20: n=224, err -0.29, ratio 1.033
+- Forward|15-20: n=167, err -0.06, ratio 1.007
+- Guard|20-30: n=159, err -0.22, ratio 1.019
+- Forward|10-15: n=137, err -0.05, ratio 1.008
+- Guard|10-15: n=128, err +0.16, ratio 0.967
+- Forward|20-30: n=121, err -0.27, ratio 1.024
+- Center|15-20: n=111, err -0.60, ratio 1.058
+- Center|10-15: n=90, err -0.46, ratio 1.07
+- Forward|<10: n=88, err -0.56, ratio 1.175
+- Guard|<10: n=83, err -1.09, ratio 1.322
+- Center|<10: n=57, err -1.50, ratio 1.484
+- Center|20-30: n=22, err -3.06, ratio 1.226

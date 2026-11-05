@@ -1,56 +1,56 @@
 matchday,trade_hurdle,trade_sd_penalty,min_games_in,n_trades,trades_in,trades_out,pred_gain,real_gain,rec_actual,hold_actual
-8,0.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",14.7,-9.8,154.05,163.85
-9,0.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
-8,0.0,0.0,3,4,"Scottie Wilbekin, Ibon Navarro, Tyson Carter, Alberto Abalde","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",17.4,-2.6,161.25,163.85
-9,0.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Berk Ugurlu, Ibon Navarro, Josh Nebo",15.2,4.3,169.2,164.9
-8,0.0,0.25,1,4,"Scottie Wilbekin, Dj Stewart, Ibon Navarro, Edwin Jackson","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",15.8,-15.6,148.25,163.85
-9,0.0,0.25,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
-8,0.0,0.25,3,4,"Scottie Wilbekin, Damion Baugh, Ibon Navarro, Stefan Joksimovic","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.9,-7.1,156.75,163.85
-9,0.0,0.25,3,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.7,20.0,184.95,164.9
-8,0.0,0.5,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,0.0,0.5,1,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.7,20.0,184.95,164.9
-8,0.0,0.5,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,0.0,0.5,3,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.7,20.0,184.95,164.9
-8,2.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",14.7,-9.8,154.05,163.85
-9,2.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
-8,2.0,0.0,3,4,"Scottie Wilbekin, Ibon Navarro, Tyson Carter, Alberto Abalde","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",17.4,-2.6,161.25,163.85
-9,2.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Berk Ugurlu, Ibon Navarro, Josh Nebo",15.2,4.3,169.2,164.9
-8,2.0,0.25,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,2.0,0.25,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
-8,2.0,0.25,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,2.0,0.25,3,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.7,20.0,184.95,164.9
-8,2.0,0.5,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
+8,0.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",14.7,-9.8,154.05,163.85
+9,0.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
+8,0.0,0.0,3,4,"Scottie Wilbekin, Ibon Navarro, Tyson Carter, Alberto Abalde","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",17.4,-2.6,161.25,163.85
+9,0.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Josh Nebo, Berk Ugurlu, Ibon Navarro",15.2,4.3,169.2,164.9
+8,0.0,0.25,1,4,"Scottie Wilbekin, Dj Stewart, Ibon Navarro, Edwin Jackson","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",15.8,-15.6,148.25,163.85
+9,0.0,0.25,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
+8,0.0,0.25,3,4,"Scottie Wilbekin, Damion Baugh, Ibon Navarro, Stefan Joksimovic","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",16.9,-7.1,156.75,163.85
+9,0.0,0.25,3,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.7,20.0,184.95,164.9
+8,0.0,0.5,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,0.0,0.5,1,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.7,20.0,184.95,164.9
+8,0.0,0.5,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,0.0,0.5,3,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.7,20.0,184.95,164.9
+8,2.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",14.7,-9.8,154.05,163.85
+9,2.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
+8,2.0,0.0,3,4,"Scottie Wilbekin, Ibon Navarro, Tyson Carter, Alberto Abalde","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",17.4,-2.6,161.25,163.85
+9,2.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Josh Nebo, Berk Ugurlu, Ibon Navarro",15.2,4.3,169.2,164.9
+8,2.0,0.25,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,2.0,0.25,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
+8,2.0,0.25,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,2.0,0.25,3,4,"Yam Madar, Collin Malcolm, Kevarrius Hayes, Sebastian Herrera","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.7,20.0,184.95,164.9
+8,2.0,0.5,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
 9,2.0,0.5,1,2,"Yam Madar, Sebastian Herrera","Mckinley Wright, Berk Ugurlu",9.6,8.2,173.1,164.9
-8,2.0,0.5,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
+8,2.0,0.5,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
 9,2.0,0.5,3,2,"Yam Madar, Sebastian Herrera","Mckinley Wright, Berk Ugurlu",9.6,8.2,173.1,164.9
-8,3.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",14.7,-9.8,154.05,163.85
-9,3.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
-8,3.0,0.0,3,4,"Scottie Wilbekin, Ibon Navarro, Tyson Carter, Alberto Abalde","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",17.4,-2.6,161.25,163.85
-9,3.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Berk Ugurlu, Ibon Navarro, Josh Nebo",15.2,4.3,169.2,164.9
-8,3.0,0.25,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,3.0,0.25,1,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Berk Ugurlu, Josh Nebo",11.6,1.9,166.8,164.9
-8,3.0,0.25,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,3.0,0.25,3,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Berk Ugurlu, Josh Nebo",11.6,1.9,166.8,164.9
-8,3.0,0.5,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
+8,3.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",14.7,-9.8,154.05,163.85
+9,3.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
+8,3.0,0.0,3,4,"Scottie Wilbekin, Ibon Navarro, Tyson Carter, Alberto Abalde","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",17.4,-2.6,161.25,163.85
+9,3.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Josh Nebo, Berk Ugurlu, Ibon Navarro",15.2,4.3,169.2,164.9
+8,3.0,0.25,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,3.0,0.25,1,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Josh Nebo, Berk Ugurlu",11.6,1.9,166.8,164.9
+8,3.0,0.25,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,3.0,0.25,3,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Josh Nebo, Berk Ugurlu",11.6,1.9,166.8,164.9
+8,3.0,0.5,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
 9,3.0,0.5,1,1,Chris Jones,Mckinley Wright,7.4,-7.2,157.75,164.9
-8,3.0,0.5,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
+8,3.0,0.5,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
 9,3.0,0.5,3,1,Chris Jones,Mckinley Wright,7.4,-7.2,157.75,164.9
-8,4.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Berk Ugurlu, Arijan Lakic, Tomas Masiulis, Kendrick Nunn",14.7,-9.8,154.05,163.85
-9,4.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Berk Ugurlu, Josh Nebo, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
-8,4.0,0.0,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,4.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Berk Ugurlu, Ibon Navarro, Josh Nebo",15.2,4.3,169.2,164.9
-8,4.0,0.25,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
+8,4.0,0.0,1,4,"Marcus Carr, Ibon Navarro, Tyson Carter, Edwin Jackson","Tomas Masiulis, Arijan Lakic, Berk Ugurlu, Kendrick Nunn",14.7,-9.8,154.05,163.85
+9,4.0,0.0,1,4,"Tremont Waters, Yam Madar, Kevarrius Hayes, Edwin Jackson","Mckinley Wright, Josh Nebo, Berk Ugurlu, Kostas Papanikolaou",11.3,-6.9,158.0,164.9
+8,4.0,0.0,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,4.0,0.0,3,4,"Mfiondu Kabengele, Yam Madar, Sebastian Herrera, Tony Parker","Mckinley Wright, Josh Nebo, Berk Ugurlu, Ibon Navarro",15.2,4.3,169.2,164.9
+8,4.0,0.25,1,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
 9,4.0,0.25,1,2,"Yam Madar, Sebastian Herrera","Mckinley Wright, Berk Ugurlu",9.6,8.2,173.1,164.9
-8,4.0,0.25,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
+8,4.0,0.25,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
 9,4.0,0.25,3,2,"Yam Madar, Sebastian Herrera","Mckinley Wright, Berk Ugurlu",9.6,8.2,173.1,164.9
 8,4.0,0.5,1,1,Ibon Navarro,Tomas Masiulis,11.6,5.0,168.85,163.85
 9,4.0,0.5,1,1,Chris Jones,Mckinley Wright,7.4,-7.2,157.75,164.9
 8,4.0,0.5,3,1,Ibon Navarro,Tomas Masiulis,11.6,5.0,168.85,163.85
 9,4.0,0.5,3,1,Chris Jones,Mckinley Wright,7.4,-7.2,157.75,164.9
-8,6.0,0.0,1,3,"Chris Jones, Ibon Navarro, Edwin Jackson","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",17.1,-6.0,157.85,163.85
-9,6.0,0.0,1,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Berk Ugurlu, Josh Nebo",11.6,1.9,166.8,164.9
-8,6.0,0.0,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Arijan Lakic, Tomas Masiulis, Kendrick Nunn",16.2,-18.1,145.75,163.85
-9,6.0,0.0,3,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Berk Ugurlu, Josh Nebo",11.6,1.9,166.8,164.9
+8,6.0,0.0,1,3,"Chris Jones, Ibon Navarro, Edwin Jackson","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",17.1,-6.0,157.85,163.85
+9,6.0,0.0,1,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Josh Nebo, Berk Ugurlu",11.6,1.9,166.8,164.9
+8,6.0,0.0,3,3,"Scottie Wilbekin, Lamar Stevens, Ibon Navarro","Tomas Masiulis, Arijan Lakic, Kendrick Nunn",16.2,-18.1,145.75,163.85
+9,6.0,0.0,3,3,"Tremont Waters, Yam Madar, Kevarrius Hayes","Mckinley Wright, Josh Nebo, Berk Ugurlu",11.6,1.9,166.8,164.9
 8,6.0,0.25,1,1,Ibon Navarro,Tomas Masiulis,11.6,5.0,168.85,163.85
 9,6.0,0.25,1,1,Chris Jones,Mckinley Wright,7.4,-7.2,157.75,164.9
 8,6.0,0.25,3,1,Ibon Navarro,Tomas Masiulis,11.6,5.0,168.85,163.85
