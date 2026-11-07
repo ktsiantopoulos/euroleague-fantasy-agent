@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2545,
+  "number": 2
+ },
+ "match": {
+  "id": 12019,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-05T17:15:00.000000Z",
+  "home_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 90
+  },
+  "away_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 95
+  }
+ },
+ "fantasy_pts": 1,
+ "stats_items": [
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 1,
+   "fantasy_pts": 1
+  }
+ ],
+ "label": "opponent"
+}

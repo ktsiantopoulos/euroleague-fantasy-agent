@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2546,
+  "number": 3
+ },
+ "match": {
+  "id": 12021,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-06T17:00:00.000000Z",
+  "home_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 67
+  },
+  "away_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 83
+  }
+ },
+ "fantasy_pts": 20,
+ "stats_items": [
+  {
+   "id": 203,
+   "name": "win_11-20",
+   "value": 1,
+   "fantasy_pts": 20
+  }
+ ],
+ "label": "opponent"
+}

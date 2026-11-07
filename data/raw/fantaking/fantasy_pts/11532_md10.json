@@ -1,0 +1,98 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2546,
+  "number": 3
+ },
+ "match": {
+  "id": 12023,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-06T19:45:00.000000Z",
+  "home_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 88
+  },
+  "away_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 67
+  }
+ },
+ "fantasy_pts": 15.4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 16,
+   "fantasy_pts": 16
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 196,
+   "name": "blk",
+   "value": 1,
+   "fantasy_pts": 1
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 4,
+   "fantasy_pts": -4
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 8,
+   "fantasy_pts": -8
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

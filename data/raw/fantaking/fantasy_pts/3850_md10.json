@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2544,
+  "number": 1
+ },
+ "match": {
+  "id": 12015,
+  "status": "played",
+  "ot": true,
+  "started_at": "2026-11-04T19:45:00.000000Z",
+  "home_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 112
+  },
+  "away_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 115
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

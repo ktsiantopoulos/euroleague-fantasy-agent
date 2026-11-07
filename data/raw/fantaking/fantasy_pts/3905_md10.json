@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2546,
+  "number": 3
+ },
+ "match": {
+  "id": 12023,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-06T19:45:00.000000Z",
+  "home_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 88
+  },
+  "away_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 67
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

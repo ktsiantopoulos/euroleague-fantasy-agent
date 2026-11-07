@@ -1,0 +1,92 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2546,
+  "number": 3
+ },
+ "match": {
+  "id": 12024,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-06T19:15:00.000000Z",
+  "home_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 57
+  },
+  "away_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 62
+  }
+ },
+ "fantasy_pts": 25.3,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 18,
+   "fantasy_pts": 18
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 13,
+   "fantasy_pts": 13
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 194,
+   "name": "stl",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 5,
+   "fantasy_pts": -5
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 8,
+   "fantasy_pts": -8
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

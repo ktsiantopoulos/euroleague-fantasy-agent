@@ -1,12 +1,13 @@
-## run reason: pre-deadline (1.8h)  (deadline 2026-11-05T17:14:00+00:00, 1.83 h away)
+## run reason: manual  (deadline 2026-11-06T16:59:00+00:00, -8.26 h away)
 ## pull-official
-E2026: 91 games played, 1 box scores fetched now
+E2026: 100 games played, 9 box scores fetched now
 
 ## pull-platform
+  ! platform still reports MD 10 (all games played) - rolled over to MD 11, deadline 2026-11-11 19:44 UTC from the schedule
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
-taking/md_10
-team: UnderTakers86  credits: 108.6  trades used: 4/4
+taking/md_11
+team: UnderTakers86  credits: 110.8  trades used: 0/4
 
 ## pull-external
   fantasyedge: 376 players, 15 columns kept
@@ -15,24 +16,24 @@ price base: fantasyedge 237, top100_md1 122, first_seen 5
 ## build
         games  rows  mismatches
 season                         
-E2026      91  2177           0
+E2026     100  2392           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    299
-UNMATCHED        41
+surname+team    303
+UNMATCHED        37
 coach            20
-team context: 20 clubs · usage: 289 players · FDR: 20 clubs x next 5
+team context: 20 clubs · usage: 292 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 5
 matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
 T2=2026-10-28, T1=2026-10-29, T2=2026-10-30, T1=2026-11-04, T2=2026-11-05, 
-T3=2026-11-06
+T3=2026-11-06, T1=2026-11-11, T2=2026-11-12, T3=2026-11-13
 
 ## reconcile
-player-games compared: 3195
-exact matches: 2125 (66.5%)
-  no_player: 561
-  no_boxscore_row: 494
-  MISMATCH: 15
+player-games compared: 3555
+exact matches: 2358 (66.3%)
+  no_player: 591
+  no_boxscore_row: 585
+  MISMATCH: 21
 
 first mismatches:
 platform_id  matchday person_code  game_code  platform_pts  official_pir  
@@ -43,6 +44,8 @@ official_min team_won  expected_pts   status
 11.450000    False          -1.0 MISMATCH
       11546         7      014738         61          14.0          13.0     
 16.033333    False          13.0 MISMATCH
+      11547        10      014737         98          12.0          11.0     
+28.066667    False          11.0 MISMATCH
       12145         6      015244         53           4.4           3.0      
 9.033333     True           3.3 MISMATCH
        3769         6      005791         53          15.4          13.0     
@@ -51,22 +54,20 @@ official_min team_won  expected_pts   status
 18.550000     True           2.2 MISMATCH
        3810         6      009783         52          15.4          13.0     
 17.583333     True          14.3 MISMATCH
+       3810        10      009783         99           7.0           6.0     
+22.266667    False           6.0 MISMATCH
        3857         7      012788         61           7.7           6.0      
 9.366667     True           6.6 MISMATCH
        3884         6      010545         52           3.0           2.0     
 17.766667    False           2.0 MISMATCH
        3905         6      010781         52           6.6           5.0     
 30.416667     True           5.5 MISMATCH
+       3907        10      011231         98          11.0           9.0     
+19.183333     True           9.9 MISMATCH
        4038         2      006544         20           NaN          -3.0     
 11.566667     True          -2.7 MISMATCH
-       4675         7      013402         61          -2.7          -4.0      
-7.016667     True          -3.6 MISMATCH
-       7209         6      014009         54           9.0           8.0     
-20.616667    False           8.0 MISMATCH
-       7268         6      013929         51          20.0          19.0     
-20.083333    False          19.0 MISMATCH
-       8808         4      014207         38           7.7           5.0     
-19.366667     True           5.5 MISMATCH
+       4670        10      013389         97          11.0           9.0     
+21.366667     True           9.9 MISMATCH
 
 ## evaluate
 # Projection evaluation
@@ -75,20 +76,22 @@ official_min team_won  expected_pts   status
 corr 0.608 · above p90 11% / below p10 8% (target 10% each)
 - MD9: 298 players · MAE 5.24 (platform avg_pts baseline 5.92) · bias -0.22 · 
 corr 0.498 · above p90 11% / below p10 6% (target 10% each)
+- MD10: 299 players · MAE 5.28 (platform avg_pts baseline 6.15) · bias +0.32 · 
+corr 0.549 · above p90 12% / below p10 6% (target 10% each)
 
 ## Bias by segment (mean projected − actual; positive = we over-project)
-- position: Center -1.3 (n=109), Forward +0.4 (n=209), Guard -0.1 (n=269)
-- projected minutes: <10 -0.1 (n=119), 10-20 -0.0 (n=304), 20-30 -0.4 (n=142)
-- price: ≤6 +0.9 (n=144), 6-9 -0.8 (n=234), 9-13 +0.2 (n=154), 13+ -1.0 (n=55)
-- availability: doubtful -0.5 (n=41), fit -0.1 (n=546)
+- position: Center -1.0 (n=166), Forward +0.5 (n=315), Guard +0.1 (n=405)
+- projected minutes: <10 -0.0 (n=180), 10-20 +0.1 (n=454), 20-30 -0.1 (n=217)
+- price: ≤6 +0.8 (n=222), 6-9 -0.3 (n=352), 9-13 +0.1 (n=230), 13+ -1.1 (n=82)
+- availability: doubtful +0.3 (n=69), fit -0.0 (n=817)
 
 ## Biggest misses
-- under-projected: Lonnie Walker IV (0→40), Antonio Blakeney (9→38), Theo 
-Maledon (16→38), Tyty Washington (10→32), Donta Hall (4→25)
-- over-projected: Elijah Bryant (19→-6), Tyrese Martin (13→-4), Sylvain 
-Francisco (14→-1), Scottie Wilbekin (14→-1), Marcus Carr (13→-1)
+- under-projected: Lonnie Walker IV (0→40), Antonio Blakeney (9→38), Austin 
+Wiley (7→35), Nadir Hifi (16→43), Theo Maledon (16→38)
+- over-projected: Elijah Bryant (19→-6), Tyrese Martin (13→-4), Scottie Wilbekin
+(11→-5), Tyson Ward (13→-2), Sylvain Francisco (14→-1)
 
-## Coaches: MAE 9.8, bias +0.6 (n=38)
+## Coaches: MAE 10.5, bias +0.3 (n=58)
 
 ## scorecard
 # Decision scorecard
@@ -100,43 +103,60 @@ agent / you | hindsight | regret | captain regret |
 93.1 | 0.0 (Sasha Vezenkov) |
 | 9 | 147.6 ± 31.3 | 166.6 | +0.61 | 158.0 | 164.9 | -6.9 / +1.7 | 272.3 | 105.8
 | 14.3 (Sasha Vezenkov) |
+| 10 | 148.7 ± 30.4 | 176.9 | +0.93 | 189.4 | 155.35 | +34.1 / +21.6 | 279.6 | 
+102.7 | 0.0 (Sasha Vezenkov) |
 
-Mean z +0.39 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
-mean regret 99.4 · cumulative trade value agent -16.7 / you -7.0
+Mean z +0.57 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
+mean regret 100.5 · cumulative trade value agent +17.4 / you +14.6
 
 ## trade backtest
 # Trade-discipline replay
 
-Matchdays: 8, 9 · realised gain = recommended squad minus no-trade squad, both 
-on actual points
+Matchdays: 8, 9, 10 · realised gain = recommended squad minus no-trade squad, 
+both on actual points
 
 | setting | MD | trades | predicted gain | realised gain |
 |---|---|---|---|---|
 | current defaults | 8 | 4 | +17.4 | -2.6 |
 | current defaults | 9 | 4 | +15.2 | +4.3 |
+| current defaults | 10 | 4 | +25.3 | +34.1 |
 | no discipline | 8 | 4 | +14.7 | -9.8 |
 | no discipline | 9 | 4 | +11.3 | -6.9 |
 
-
 ## learn
 learn: train R4-R8, hold-out R9, R10
-- new core: hold-out MAE R9 6.02, R10 8.51 vs current 6.06, 8.29 (gain -0.09)
+- new core: hold-out MAE R9 6.02, R10 6.91 vs current 6.06, 6.91 (gain +0.02)
 → kept current core
 - shadow challenger 202611051527 ('new core', since R10) - would be promoted 
 after 3 straight newest-round wins
-- kept bias layer (8 segment(s)): hold-out mean |bias| 1.70 → 1.71, RMSE -0.003
-- sd scale kept at 1.096 (hold-out 80% band 81%; candidate ×1.12 → 82%)
+- kept bias layer (8 segment(s)): hold-out mean |bias| 0.37 → 0.37, RMSE +0.010
+- sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.12 → 80%)
 health: no drift flags
+
+## top-100
+top-100: 404 roster previews fetched now
+# Top-213 managers — matchdays 1–10
+
+## Ownership in the top 213, matchday 10
+
+| player | pos | club | price | top own% | global% | captain # |
+|---|---|---|---|---|---|---|
+| Aliou Diarra | C | VIR | 10.0 | 43 | 35 | 0 |
+| Sasha Vezenkov | F | OLY | 18.6 | 42 | 46 | 6 |
+| Andres Feliz | G | RMB | 8.5 | 40 | 33 | 57 |
+| Saras Jasikevicius | H | FBT | 8.3 | 39 | 20 | 0 |
+| Elijah Bryant | G | HTA | 17.0 | 25 | 14 | 5 |
+| Alberto Abalde | F | RMB | 5.4 | 22 | 16 | 1 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
 mae_base_last3  corr_base_last3
-all dressed players 1419       5.61       0.420           5.80           0.402  
-6.05            0.370
-projected >= 15 min  804       6.19       0.313           6.45           0.293  
-6.80            0.249
-   >= 3 prior games 1315       5.65       0.422           5.81           0.408  
-6.07            0.373
+all dressed players 1630       5.63       0.424            5.8           0.407  
+6.06            0.375
+projected >= 15 min  935       6.27       0.320            6.5           0.302  
+6.86            0.257
+   >= 3 prior games 1514       5.68       0.427            5.8           0.415  
+6.08            0.379
 
 ## recommend
 one club; 1 point per credit for bench players under 6.0.

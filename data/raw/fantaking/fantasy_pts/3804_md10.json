@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1537,
+  "number": 10
+ },
+ "round": {
+  "id": 2545,
+  "number": 2
+ },
+ "match": {
+  "id": 12016,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-05T18:00:00.000000Z",
+  "home_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 84
+  },
+  "away_team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "score": 65
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

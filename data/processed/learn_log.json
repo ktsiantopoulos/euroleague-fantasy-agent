@@ -19,5 +19,12 @@
   "mae_champion":8.287,
   "mae_challenger":8.467,
   "challenger_wins":false
+ },
+ {
+  "round":10,
+  "challenger":"202611051527",
+  "mae_champion":6.907,
+  "mae_challenger":6.91,
+  "challenger_wins":false
  }
 ]

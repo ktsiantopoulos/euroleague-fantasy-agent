@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-05T15:28:10Z",
+ "generated_utc": "2026-11-07T01:21:17Z",
  "drift": false,
  "reasons": [],
  "per_round": [
@@ -41,26 +41,26 @@
   },
   {
    "round": 10,
-   "mae_model": 8.29,
-   "mae_best_baseline": 7.89,
+   "mae_model": 6.91,
+   "mae_best_baseline": 6.89,
    "model_wins": false
   }
  ],
  "calibration": {
-  "n": 1387,
-  "above_p90": 0.129,
-  "below_p10": 0.076,
-  "inside_80": 0.795,
-  "z_sd": 1.058,
-  "sd_scale": 1.009
+  "n": 1592,
+  "above_p90": 0.13,
+  "below_p10": 0.077,
+  "inside_80": 0.793,
+  "z_sd": 1.057,
+  "sd_scale": 1.017
  },
  "attribution": {
-  "n": 1379,
-  "minutes_mae": 4.97,
-  "minutes_share": 0.336,
-  "rate_share": 0.664,
-  "dnp_misses": 13,
-  "dnp_cost": 78.3
+  "n": 1583,
+  "minutes_mae": 4.94,
+  "minutes_share": 0.333,
+  "rate_share": 0.667,
+  "dnp_misses": 15,
+  "dnp_cost": 86.2
  },
  "params": {
   "w_minutes": [
