@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-07T01:21:17Z",
+ "generated_utc": "2026-11-07T01:44:59Z",
  "drift": false,
  "reasons": [],
  "per_round": [
@@ -91,7 +91,8 @@
    "Guard|10-15": 1.042,
    "Guard|15-20": 1.092,
    "Guard|<10": 1.6
-  }
+  },
+  "tier_bias": {}
  },
  "challenger": {
   "id": "202611051527",

@@ -7,6 +7,7 @@ learn: train R4-R8, hold-out R9, R10
 → kept current core
 - shadow challenger 202611051527 ('new core', since R10) - would be promoted after 3 straight newest-round wins
 - kept bias layer (8 segment(s)): hold-out mean |bias| 0.37 → 0.37, RMSE +0.010
+- kept tier layer (3 segment(s)): hold-out segment |bias| R9 1.63 → 1.56, R10 1.47 → 1.50, RMSE +0.006
 - sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.12 → 80%)
 
 ## Calibration (walk-forward)
@@ -27,3 +28,16 @@ learn: train R4-R8, hold-out R9, R10
 - Guard|<10: n=92, err -0.89, ratio 1.26
 - Center|<10: n=67, err -1.21, ratio 1.368
 - Center|20-30: n=25, err -3.16, ratio 1.229
+## Bias by position x season-start price tier (after all corrections)
+- Guard|9-13: n=271, err -0.32, ratio 1.036
+- Guard|6-9: n=254, err +0.04, ratio 0.994
+- Forward|6-9: n=217, err -0.16, ratio 1.021
+- Forward|9-13: n=194, err -0.51, ratio 1.061
+- Center|9-13: n=131, err -0.35, ratio 1.048
+- Forward|<=6: n=122, err +0.94, ratio 0.797
+- Center|6-9: n=121, err -0.83, ratio 1.121
+- Guard|<=6: n=90, err +0.93, ratio 0.779
+- Guard|13+: n=69, err -1.17, ratio 1.088
+- Center|13+: n=55, err -2.51, ratio 1.2
+- Forward|13+: n=55, err -0.33, ratio 1.028
+- Center|<=6: n=13, err +0.40, ratio 0.861

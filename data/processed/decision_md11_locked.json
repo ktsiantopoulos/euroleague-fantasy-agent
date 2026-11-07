@@ -1,6 +1,6 @@
 {
  "matchday": 11,
- "frozen_utc": "2026-11-07T01:25:03Z",
+ "frozen_utc": "2026-11-07T01:45:08Z",
  "lock_utc": "2026-11-11T19:44:00Z",
  "budget": 110.8,
  "trades_left": 4,
@@ -228,9 +228,9 @@
   ],
   "trades_out": [
    "Chuma Okeke",
-   "Kevarrius Hayes",
    "Tremont Waters",
-   "Mbaye Ndiaye"
+   "Mbaye Ndiaye",
+   "Kevarrius Hayes"
   ],
   "trades_in": [
    "Kenneth Faried",
@@ -269,6 +269,7 @@
    "Guard|15-20": 1.092,
    "Guard|<10": 1.6
   },
+  "tier_bias": {},
   "flags": {}
  }
 }

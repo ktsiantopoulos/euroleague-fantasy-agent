@@ -2,7 +2,7 @@
 
 **Deadline: 2026-11-11 19:44 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-11-07 01:25 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (0 pending on the platform) · odds ON (2 games)
+Generated 2026-11-07 01:45 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (0 pending on the platform) · odds ON (2 games)
 _trade window open - 0 pending change(s) are reversible_
 > ℹ️ Platform still reported MD 10 (finished); this report uses MD 11 with the deadline taken from the schedule (2026-11-11 19:44 UTC).
 
@@ -10,7 +10,7 @@ _trade window open - 0 pending change(s) are reversible_
 - Game nights: T1=11-11, T2=11-12, T3=11-13. Bench players with later nights are swap options; captain can move to a not-yet-played starter.
 - Locked squad, best lineup: **142.3 pts** expected; in-round swaps add +3.1 (simulated).
 - Recommended with ≤4 trade(s): **150.8 pts** expected (+8.5 vs locked squad); in-round swaps add +9.0 (simulated); cost 110.5/110.8.
-- Trades vs the locked squad: OUT Chuma Okeke, Kevarrius Hayes, Tremont Waters, Mbaye Ndiaye → IN Kenneth Faried, Collin Malcolm, Ethan Thompson, Clement Frisch
+- Trades vs the locked squad: OUT Chuma Okeke, Tremont Waters, Mbaye Ndiaye, Kevarrius Hayes → IN Kenneth Faried, Collin Malcolm, Ethan Thompson, Clement Frisch
 - **To do on the platform** (from what you have selected now): remove Tremont Waters, Kevarrius Hayes, Mbaye Ndiaye, Chuma Okeke → add Ethan Thompson, Collin Malcolm, Clement Frisch, Kenneth Faried
 - Captain **Sasha Vezenkov**, coach **Saras Jasikevicius**.
 
@@ -48,7 +48,7 @@ _trade window open - 0 pending change(s) are reversible_
 | Bench (50%) | Chuma Okeke | Forward | RMB | 8.8 | T2 | 10.98 | 19.04 | 0 | 20 min proj (bench, last 27), 0.50 PIR/min over 9 g · T2 vs RED (DvP -0.4, win 57%) → 11.0 |
 | Bench (50%) | Tremont Waters | Guard | ASV | 9.7 | T3 | 9.14 | 20.36 | 0 | 15 min proj (bench, last 8), 0.52 PIR/min over 9 g · T3 vs BES (DvP +2.2, win 57%) → 9.1 |
 | Bench (50%) | Mbaye Ndiaye | Forward | OLY | 8.3 | T2 | 8.66 | 22.39 | 0 | 16 min proj (bench, last 12), 0.52 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 63%) → 8.7 |
-| Bench (50%) | Kevarrius Hayes | Center | PAR | 8.3 | T1 | 0.0 | 0.0 | 3 | 22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 72%) → 0.0 |
+| Bench (50%) | Kevarrius Hayes | Center | PAR | 8.3 | T1 | 0.0 | 0.0 | 3 | 22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 72%) → 0.0 · ⚠ OUT (injured) |
 | Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | T1 | 9.76 | 26.87 | 39 | @ PRS: margin +7, win 70% → EV +9.6 |
 
 ## Defence vs position (this season, shrunk to league mean; +PIR = concedes more)
@@ -67,7 +67,7 @@ Center   leak PIR to: MUN (+4.2, n=10), ASV (+2.8, n=10), BAS (+2.3, n=10), DUB 
 - Center: Jasiel Rivero VBC 7.3 → 11.55 (top100 0%); Neal Sako VBC 9.2 → 14.24 (top100 0%); Nikola Tanaskovic PAR 8.4 → 12.74 (top100 0%); Ousmane Diop MIL 4.5 → 5.91 (top100 1%); Mathias Lessort PAO 16.7 → 21.76 (top100 8%)
 
 ## Flags
-- none
+- Kevarrius Hayes: OUT (injured)
 
 ## Assumptions still to confirm
 - Coach: win by 21+ set to +25 (user-provided; not yet observed in API data).

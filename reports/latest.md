@@ -1,6 +1,6 @@
-## run reason: manual  (deadline 2026-11-06T16:59:00+00:00, -8.26 h away)
+## run reason: manual  (deadline 2026-11-06T16:59:00+00:00, -8.72 h away)
 ## pull-official
-E2026: 100 games played, 9 box scores fetched now
+E2026: 100 games played, 0 box scores fetched now
 
 ## pull-platform
   ! platform still reports MD 10 (all games played) - rolled over to MD 11, deadline 2026-11-11 19:44 UTC from the schedule
@@ -24,9 +24,8 @@ UNMATCHED        37
 coach            20
 team context: 20 clubs · usage: 292 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 5
-matchdays: 38 (one per round) · current MD 8 = R8, nights T1=2026-10-27, 
-T2=2026-10-28, T1=2026-10-29, T2=2026-10-30, T1=2026-11-04, T2=2026-11-05, 
-T3=2026-11-06, T1=2026-11-11, T2=2026-11-12, T3=2026-11-13
+matchdays: 38 (one per round) · current MD 11 = R11, nights T1=2026-11-11, 
+T2=2026-11-12, T3=2026-11-13
 
 ## reconcile
 player-games compared: 3555
@@ -130,11 +129,13 @@ learn: train R4-R8, hold-out R9, R10
 - shadow challenger 202611051527 ('new core', since R10) - would be promoted 
 after 3 straight newest-round wins
 - kept bias layer (8 segment(s)): hold-out mean |bias| 0.37 → 0.37, RMSE +0.010
+- kept tier layer (3 segment(s)): hold-out segment |bias| R9 1.63 → 1.56, R10 
+1.47 → 1.50, RMSE +0.006
 - sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.12 → 80%)
 health: no drift flags
 
 ## top-100
-top-100: 404 roster previews fetched now
+top-100: 0 roster previews fetched now
 # Top-213 managers — matchdays 1–10
 
 ## Ownership in the top 213, matchday 10

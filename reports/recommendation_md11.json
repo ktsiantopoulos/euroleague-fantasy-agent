@@ -9,7 +9,7 @@
   "2026-11-12",
   "2026-11-13"
  ],
- "generated_utc": "2026-11-07T01:25:03Z",
+ "generated_utc": "2026-11-07T01:45:08Z",
  "team": "UnderTakers86",
  "budget": 110.8,
  "trades_left": 4,
@@ -185,7 +185,7 @@
     "md_sd": 0.0,
     "elite_own": 3,
     "why": "22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 72%) → 0.0",
-    "flags": "",
+    "flags": "OUT (injured)",
     "captain": false,
     "first_turn": 1,
     "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 0.0, \"sd\": 0.0, \"pw\": 0.718}]"
@@ -434,7 +434,7 @@
     "md_sd": 0.0,
     "elite_own": 3,
     "why": "22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 72%) → 0.0",
-    "flags": "",
+    "flags": "OUT (injured)",
     "captain": false,
     "first_turn": 1,
     "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 0.0, \"sd\": 0.0, \"pw\": 0.718}]"
@@ -473,13 +473,6 @@
     "md_pts": 10.98
    },
    {
-    "name": "Kevarrius Hayes",
-    "pos": "Center",
-    "team": "PAR",
-    "price": 8.3,
-    "md_pts": 0.0
-   },
-   {
     "name": "Tremont Waters",
     "pos": "Guard",
     "team": "ASV",
@@ -492,6 +485,13 @@
     "team": "OLY",
     "price": 8.3,
     "md_pts": 8.66
+   },
+   {
+    "name": "Kevarrius Hayes",
+    "pos": "Center",
+    "team": "PAR",
+    "price": 8.3,
+    "md_pts": 0.0
    }
   ],
   "trades_in": [
@@ -837,5 +837,10 @@
    }
   ]
  },
- "flags": []
+ "flags": [
+  {
+   "name": "Kevarrius Hayes",
+   "flags": "OUT (injured)"
+  }
+ ]
 }
