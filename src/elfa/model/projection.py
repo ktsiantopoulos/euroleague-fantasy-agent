@@ -33,6 +33,7 @@ class Params:
     minutes_sample_prior: float = 0.5                          # n/(n+0.5): 1 game -> 0.67, 7 games -> 0.93
     sd_scale: float = 1.0                                      # calibration: multiplies every sd (fit so 80% intervals hold 80%)
     bias: dict = field(default_factory=dict)                   # "pos|minutes band" -> multiplier on projected points (shrunk, guarded)
+    tier_bias: dict = field(default_factory=dict)              # season-start price band (cheap/mid/premium) -> multiplier, all minutes (shrunk, guarded)
     flags: dict = field(default_factory=dict)
 
     @classmethod
@@ -57,6 +58,69 @@ class Params:
 
 
 MINUTE_BANDS = [(0, 10, "<10"), (10, 15, "10-15"), (15, 20, "15-20"), (20, 30, "20-30"), (30, 99, "30+")]
+
+
+def availability_flag(is_injured, prob_play: float) -> str | None:
+    """Report flag for a player the platform lists as injured or below 100% to play (None when fit)."""
+    if prob_play <= 0.0:
+        return "OUT (injured)" if is_injured else "OUT (0% to play)"
+    if is_injured:
+        return f"injured, {prob_play:.0%} to play"
+    if prob_play < 1.0:
+        return f"doubtful, {prob_play:.0%} to play"
+    return None
+
+
+PRICE_TIERS = [(0, 6.0, "<=6"), (6.0, 9.0, "6-9"), (9.0, 13.0, "9-13"), (13.0, 99, "13+")]
+
+
+def price_tier(price0) -> str | None:
+    """Tier of the platform's season-start price (a pre-season talent prior that results cannot leak into)."""
+    try:
+        x = float(price0)
+    except (TypeError, ValueError):
+        return None
+    if not np.isfinite(x) or x <= 0:
+        return None
+    for lo, hi, lab in PRICE_TIERS:
+        if lo < x <= hi:
+            return lab
+    return "13+"
+
+
+PRICE_BANDS = {"<=6": "cheap", "6-9": "mid", "9-13": "mid", "13+": "premium"}
+
+
+def price_band(price0) -> str | None:
+    """Layer segment: cheap (<=6) / mid / premium (13+) by season-start price. Coarser than the tiers on purpose:
+    in rolling one-step-ahead tests (R7-R10) position x tier factors flipped sign between fits and lost every round."""
+    tier = price_tier(price0)
+    return PRICE_BANDS.get(tier) if tier else None
+
+
+def tier_factor(p: "Params", pos: str | None, price0) -> float:
+    """Learned season-start price-band correction (1.0 when none adopted or the season-start price is unknown).
+    `pos` is accepted so a position split can be reintroduced without touching the call sites."""
+    band = price_band(price0)
+    return float((p.tier_bias or {}).get(band, 1.0)) if band else 1.0
+
+
+_BASE_PRICES: dict | None = None
+
+
+def base_prices() -> dict[str, float]:
+    """platform_id -> season-start price (data/prices/price_base.csv), cached."""
+    global _BASE_PRICES
+    if _BASE_PRICES is None:
+        from elfa.config import ROOT
+
+        fp = ROOT / "data" / "prices" / "price_base.csv"
+        try:
+            pb = pd.read_csv(fp, dtype={"player_id": str})
+            _BASE_PRICES = dict(zip(pb.player_id, pd.to_numeric(pb.price_base, errors="coerce")))
+        except (OSError, ValueError, KeyError):
+            _BASE_PRICES = {}
+    return _BASE_PRICES
 
 
 def minutes_band(min_hat: float) -> str:
@@ -152,8 +216,11 @@ def project(
         if m.get("is_injured") and prob_play >= 1.0:
             prob_play = 0.25
         code = p2o.get(pid)
+        price0 = base_prices().get(pid)
         f = form.loc[code] if isinstance(code, str) and code in form.index else None
         flags = []
+        if pos != "Head Coach" and (fl := availability_flag(m.get("is_injured"), prob_play)):
+            flags.append(fl)
         why = []
         games_detail = []
         md_pts, md_var, horizon_pts, games_md = 0.0, 0.0, 0.0, 0
@@ -191,7 +258,7 @@ def project(
                     pir = min_hat * rate_hat * (1 + p.eta_home if home else 1 - p.eta_home) * pace_f
                     share = min_hat / max(pos_minutes.get(pos, 80.0), 1.0)
                     pir += p.gamma_dvp * share * dvp_idx.get((opp, pos), 0.0)
-                    pir *= bias_factor(p, pos, min_hat)
+                    pir *= bias_factor(p, pos, min_hat) * tier_factor(p, pos, price0)
                     fp = prob_play * pir * (1 + WIN_BONUS * pw)
                     horizon_pts += p.horizon_weights[h_i] * fp
                     if h_i == 0:

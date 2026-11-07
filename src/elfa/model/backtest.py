@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 from elfa.features.dvp import compute_dvp
-from elfa.model.projection import Params, _player_form, bias_factor
+from elfa.model.projection import Params, _player_form, base_prices, bias_factor, tier_factor
 from elfa.model.teams import margin_mu, team_ratings, win_prob
 
 
@@ -20,6 +20,24 @@ from elfa.model.teams import margin_mu, team_ratings, win_prob
 class BacktestResult:
     table: pd.DataFrame
     summary: pd.DataFrame
+
+
+_CODE_PRICE0: dict | None = None
+
+
+def _code_price0() -> dict[str, float]:
+    """person_code -> season-start price, via the committed player map (cached)."""
+    global _CODE_PRICE0
+    if _CODE_PRICE0 is None:
+        from elfa.config import PROCESSED
+
+        try:
+            pm = pd.read_csv(PROCESSED / "player_map.csv", dtype={"platform_id": str, "person_code": str})
+            bp = base_prices()
+            _CODE_PRICE0 = {c: bp.get(pid) for c, pid in zip(pm.person_code, pm.platform_id) if isinstance(c, str)}
+        except (OSError, ValueError, KeyError):
+            _CODE_PRICE0 = {}
+    return _CODE_PRICE0
 
 
 def _project_round(train: pd.DataFrame, test: pd.DataFrame, schedule: list[dict], p: Params) -> pd.DataFrame:
@@ -44,14 +62,15 @@ def _project_round(train: pd.DataFrame, test: pd.DataFrame, schedule: list[dict]
         pace_f = ((r.pace.get(g.team, league_pace) + r.pace.get(g.opponent, league_pace)) / 2) / league_pace
         pir = f.min_hat * f.rate_hat * (1 + p.eta_home if g.home else 1 - p.eta_home) * pace_f
         pir += p.gamma_dvp * (f.min_hat / max(pos_minutes.get(g.fpos, 80.0), 1.0)) * dvp_idx.get((g.opponent, g.fpos), 0.0)
-        pir *= bias_factor(p, g.fpos, f.min_hat)
+        price0 = _code_price0().get(g.player_code)
+        pir *= bias_factor(p, g.fpos, f.min_hat) * tier_factor(p, g.fpos, price0)
         hist = train[train.player_code == g.player_code].sort_values("date_utc").pir
         rows.append({
             "round": g.round, "player_code": g.player_code, "player_name": g.player_name, "team": g.team,
             "actual_pir": g.pir, "actual_min": g.minutes,
             "model": pir, "model_fp": pir * (1 + 0.10 * pw),
             "base_mean": hist.mean(), "base_last3": hist.tail(3).mean(),
-            "min_hat": f.min_hat, "n_games": f.n_games, "fpos": g.fpos, "rate_hat": f.rate_hat,
+            "min_hat": f.min_hat, "n_games": f.n_games, "fpos": g.fpos, "rate_hat": f.rate_hat, "price0": price0,
             "sd": float(f.sd) * p.sd_scale, "date_utc": g.date_utc,
         })
     return pd.DataFrame(rows)

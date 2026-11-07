@@ -22,7 +22,7 @@ import pandas as pd
 
 from elfa.config import PROCESSED
 from elfa.model.backtest import backtest
-from elfa.model.calibrate import _dressed, attribution, calibration, coverage_with, fit_bias, report
+from elfa.model.calibrate import _dressed, attribution, calibration, coverage_with, fit_bias, fit_tier_bias, report, segment_abs_bias
 from elfa.model.projection import Params, _player_form
 
 MIN_GAIN = 0.03
@@ -31,6 +31,7 @@ MIN_GAIN = 0.03
 # mean, which is what squad totals add up; and the 15+ min filter hid exactly the segments being corrected.
 BIAS_MIN_GAIN = 0.10    # mean |bias| per player-game must drop by at least this (PIR)
 BIAS_RMSE_TOL = 0.01    # ... while hold-out RMSE gets no worse than this
+TIER_MIN_GAIN = 0.10    # tier layer: hold-out player-weighted mean |segment bias| must drop by at least this (PIR)
 PROMOTE_STREAK = 3
 MINUTES_GRID = {
     "w_minutes": [(0.5, 0.3, 0.2), (0.3, 0.4, 0.3), (0.2, 0.3, 0.5), (0.1, 0.3, 0.6), (0.0, 0.5, 0.5)],
@@ -87,6 +88,34 @@ def bias_gate(pg, schedule, train, hold, p: Params) -> tuple[Params, str]:
     msg = (f"bias layer ({len(cand.bias)} segment(s)): hold-out mean |bias| {b_cur:.2f} → {b_new:.2f}, "
            f"RMSE {d_rmse:+.3f}")
     if b_cur - b_new >= BIAS_MIN_GAIN and d_rmse <= BIAS_RMSE_TOL:
+        return cand, f"→ ADOPTED {msg}"
+    return p, f"- kept {msg}"
+
+
+def tier_gate(pg, schedule, train, hold, p: Params) -> tuple[Params, str]:
+    """Refit the position x price-tier layer on `train` residuals of p (minutes bias layer included, tier layer
+    off) and keep it only if hold-out segment bias drops by TIER_MIN_GAIN on every hold-out round without RMSE
+    getting worse by more than BIAS_RMSE_TOL. The overall-mean gate of the minutes layer cannot see this layer:
+    it moves cheap players down and premium ones up, which nets out in the overall mean."""
+    base = _replace(p, tier_bias={})
+    cand = _replace(p, tier_bias=fit_tier_bias(backtest(pg, schedule, train, _replace(base, sd_scale=1.0)).table))
+    if cand.tier_bias == (p.tier_bias or {}):
+        return p, f"- tier layer unchanged ({len(p.tier_bias or {})} segment(s))"
+
+    def stats(q):
+        t = _dressed(backtest(pg, schedule, hold, q).table)
+        return {int(r): (segment_abs_bias(g), float(np.sqrt(((g.model - g.actual_pir) ** 2).mean())))
+                for r, g in t.groupby("round")}
+
+    cur, new = stats(p), stats(cand)
+    rs = [r for r in hold if r in cur and r in new]
+    if not rs:
+        return p, "- tier layer: no hold-out data"
+    gains = [cur[r][0] - new[r][0] for r in rs]
+    d_rmse = float(np.mean([new[r][1] - cur[r][1] for r in rs]))
+    msg = (f"tier layer ({len(cand.tier_bias)} segment(s)): hold-out segment |bias| "
+           + ", ".join(f"R{r} {cur[r][0]:.2f} → {new[r][0]:.2f}" for r in rs) + f", RMSE {d_rmse:+.3f}")
+    if all(g > 0 for g in gains) and float(np.mean(gains)) >= TIER_MIN_GAIN and d_rmse <= BIAS_RMSE_TOL:
         return cand, f"→ ADOPTED {msg}"
     return p, f"- kept {msg}"
 
@@ -176,10 +205,10 @@ def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
     out = [f"learn: train R{train[0]}-R{train[-1]}, hold-out R{', R'.join(map(str, hold))}"]
 
     # 1-2: core sub-models (fitted without the bias/sd layers)
-    core0 = _replace(current, bias={}, sd_scale=1.0)
+    core0 = _replace(current, bias={}, tier_bias={}, sd_scale=1.0)
     core = _grid_rate(pg, schedule, train, _grid_minutes(pg, train, core0))
     # the bias layer has its own gate (step 3, below); cores are compared with the current bias carried over
-    cands = {"new core": _replace(core, bias=current.bias)}
+    cands = {"new core": _replace(core, bias=current.bias, tier_bias=current.tier_bias)}
 
     cur_mae = round_mae(pg, schedule, hold, current)
     best_name, best_p, best_gain = None, None, -np.inf
@@ -213,7 +242,7 @@ def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
                                                        "mae_challenger": round(m_ch, 3), "challenger_wins": m_ch < m_cu}])], ignore_index=True)
             mine = log[log.challenger == ch["id"]].sort_values("round") if not log.empty else log
             if len(mine) >= PROMOTE_STREAK and mine.challenger_wins.tail(PROMOTE_STREAK).all():
-                adopted = _replace(chp, sd_scale=current.sd_scale, bias=current.bias)
+                adopted = _replace(chp, sd_scale=current.sd_scale, bias=current.bias, tier_bias=current.tier_bias)
                 out.append(f"→ PROMOTED shadow challenger {ch['id']} (won {PROMOTE_STREAK} newest rounds in a row)")
                 ch = {}
             elif len(mine) >= 2 and not mine.challenger_wins.tail(2).any():
@@ -232,8 +261,13 @@ def learn(pg: pd.DataFrame, schedule: list[dict], rounds: list[int]) -> str:
     (PROCESSED / "challenger.json").write_text(json.dumps(ch, indent=1, default=str), encoding="utf-8")
     (PROCESSED / "learn_log.json").write_text(log.to_json(orient="records", indent=1) if not log.empty else "[]", encoding="utf-8")
 
-    # 3: bias layer, own gate
-    adopted, msg = bias_gate(pg, schedule, train, hold, adopted)
+    # 3: bias layer, own gate (fitted with the tier layer off, so the two do not chase each other)
+    tier_now = adopted.tier_bias
+    adopted, msg = bias_gate(pg, schedule, train, hold, _replace(adopted, tier_bias={}))
+    adopted = _replace(adopted, tier_bias=tier_now)
+    out.append(msg)
+    # 3b: position x season-start price tier layer, own gate, fitted on top of the minutes layer
+    adopted, msg = tier_gate(pg, schedule, train, hold, adopted)
     out.append(msg)
 
     # 4: sd calibration, own gate: fit k on train, keep it only if hold-out coverage gets closer to 80%

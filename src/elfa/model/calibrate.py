@@ -3,6 +3,9 @@ so nothing here sees the result it is scored on).
 
 - calibration: are the uncertainty bands honest? coverage of the 80% interval and an sd scale factor;
 - bias:        shrunk, recency-weighted multipliers per (position x projected-minutes band), below 20 min only;
+- tier bias:   the same, per season-start price band (cheap <=6 / mid / premium 13+), at every minutes level. Pooled
+               R4-R10 shows cheap players over-projected (~0.79) and premium under (~1.08), but as of 7 Nov no variant
+               beat 'no correction' one round ahead, so it stays behind its gate until it does;
 - attribution: how much of each miss is a minutes miss vs a per-minute (rate) miss.
 """
 from __future__ import annotations
@@ -10,7 +13,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from elfa.model.projection import minutes_band
+from elfa.model.projection import minutes_band, price_band, price_tier
 
 Z80 = 1.2816
 BIAS_PRIOR_N = 30.0      # a segment needs ~30 player-games before its own ratio gets half the weight
@@ -18,6 +21,7 @@ BIAS_DECAY = 0.7         # per-round weight decay: last round 1.0, the one befor
 BIAS_CLIP = (0.7, 1.6)   # walk-forward R5-R9: <10-min players score 1.5-2.0x projection; +-15% could not reach it
 BIAS_MAX_MINUTES = 20.0  # correct only bench/rotation bands - at 20+ min the correction overshot (bias -0.63 -> +0.28)
 SD_CLIP = (0.7, 1.6)
+TIER_CLIP = (0.75, 1.35)  # walk-forward R4-R10 raw ratios ran 0.78 (<=6) to 1.20 (Center 13+)
 
 
 def _dressed(t: pd.DataFrame) -> pd.DataFrame:
@@ -78,6 +82,61 @@ def fit_bias(t: pd.DataFrame, current: dict | None = None) -> dict:
     return out
 
 
+def _segment_ratios(t: pd.DataFrame, seg: pd.Series, current: dict, clip: tuple[float, float]) -> dict:
+    t = t.assign(seg=seg)
+    last = t["round"].max()
+    out = {}
+    for s_, g in t.groupby("seg"):
+        num = den = 0.0
+        for rnd, gr in g.groupby("round"):
+            w = BIAS_DECAY ** (last - rnd)
+            num += w * gr.actual_pir.sum()
+            den += w * gr.model.sum()
+        if den <= 0:
+            continue
+        shrink = len(g) / (len(g) + BIAS_PRIOR_N)
+        f = float(np.clip(current.get(s_, 1.0) * (1 + shrink * (num / den - 1)), *clip))
+        if abs(f - 1) >= 0.01:
+            out[s_] = round(f, 3)
+    return out
+
+
+def tier_segments(t: pd.DataFrame) -> pd.Series:
+    return t.fpos.astype(str) + "|" + t.price0.map(price_tier).astype(str)
+
+
+def fit_tier_bias(t: pd.DataFrame, current: dict | None = None) -> dict:
+    """Multipliers per season-start price band from residuals of a model that already includes `current` factors.
+    Every minutes level; players with an unknown season-start price are left out."""
+    t = _dressed(t)
+    if "price0" not in t:
+        return {}
+    t = t[(t.model > 0.5) & t.price0.map(price_band).notna()]
+    if t.empty:
+        return {}
+    return _segment_ratios(t, t.price0.map(price_band).astype(str), current or {}, TIER_CLIP)
+
+
+def segment_abs_bias(t: pd.DataFrame) -> float:
+    """Player-weighted mean |mean error| over position x price-tier segments (what the tier layer should shrink)."""
+    t = _dressed(t)
+    t = t[t.price0.map(price_tier).notna()] if "price0" in t else t.iloc[0:0]
+    if t.empty:
+        return float("nan")
+    e = (t.model - t.actual_pir).groupby(tier_segments(t))
+    return float((e.mean().abs() * e.size()).sum() / e.size().sum())
+
+
+def tier_table(t: pd.DataFrame) -> pd.DataFrame:
+    t = _dressed(t)
+    t = t[t.price0.map(price_tier).notna()] if "price0" in t else t.iloc[0:0]
+    t = t.assign(seg=tier_segments(t))
+    g = t.groupby("seg").agg(n=("model", "size"), model=("model", "sum"), actual=("actual_pir", "sum"))
+    g["mean_err"] = (t.groupby("seg").model.mean() - t.groupby("seg").actual_pir.mean()).round(2)
+    g["ratio"] = (g.actual / g.model).round(3)
+    return g[["n", "mean_err", "ratio"]].sort_values("n", ascending=False)
+
+
 def bias_table(t: pd.DataFrame) -> pd.DataFrame:
     t = _dressed(t)
     t["seg"] = t.fpos.astype(str) + "|" + t.min_hat.map(minutes_band)
@@ -119,4 +178,8 @@ def report(t: pd.DataFrame) -> str:
              "## Bias by segment (projected − actual PIR per game; ratio = actual/projected)"]
     bt = bias_table(t).head(12)
     lines += [f"- {seg}: n={int(r.n)}, err {r.mean_err:+.2f}, ratio {r.ratio}" for seg, r in bt.iterrows()]
+    tt = tier_table(t)
+    if len(tt):
+        lines += ["## Bias by position x season-start price tier (after all corrections)"]
+        lines += [f"- {seg}: n={int(r.n)}, err {r.mean_err:+.2f}, ratio {r.ratio}" for seg, r in tt.iterrows()]
     return "\n".join(lines)

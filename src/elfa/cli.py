@@ -79,7 +79,9 @@ def build(seasons: str = typer.Option("E2026")):
     pb = update_price_base(market, _md)
     rprint("price base: " + ", ".join(f"{k} {v}" for k, v in pb.source.value_counts().items()))
     mds = write_matchdays(games, cfg, market, tm)
-    cur = mds[mds.deadline_utc.notna()]
+    cur = mds[mds.matchday == int(_md)] if _md else mds.iloc[0:0]
+    if cur.empty and mds.deadline_utc.notna().any():  # past deadlines persist in the table; take the latest
+        cur = mds[mds.matchday == mds.loc[mds.deadline_utc.notna(), "matchday"].max()]
     rprint(f"matchdays: {mds.matchday.nunique()} (one per round) · current "
            + (f"MD {int(cur.matchday.iloc[0])} = R{int(cur['round'].iloc[0])}, nights " + ", ".join(f"T{int(r.turn)}={r.date_utc}" for r in cur.itertuples()) if len(cur) else "unknown"))
 
