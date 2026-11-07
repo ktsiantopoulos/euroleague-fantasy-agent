@@ -149,7 +149,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2546,
     "number": 3
@@ -192,7 +192,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2544,
     "number": 1
@@ -235,7 +235,7 @@
    "is_captain": true,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2546,
     "number": 3
@@ -278,7 +278,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2545,
     "number": 2
@@ -321,7 +321,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2544,
     "number": 1
@@ -364,7 +364,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2546,
     "number": 3
@@ -407,7 +407,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2546,
     "number": 3
@@ -450,7 +450,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2545,
     "number": 2
@@ -493,7 +493,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2546,
     "number": 3
@@ -536,7 +536,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2544,
     "number": 1
@@ -579,7 +579,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": true,
+   "match_played": false,
    "round": {
     "id": 2545,
     "number": 2

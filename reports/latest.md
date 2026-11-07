@@ -1,9 +1,8 @@
-## run reason: manual  (deadline 2026-11-06T16:59:00+00:00, -8.72 h away)
+## run reason: daily  (deadline 2026-11-11T19:44:00+00:00, 105.78 h away)
 ## pull-official
 E2026: 100 games played, 0 box scores fetched now
 
 ## pull-platform
-  ! platform still reports MD 10 (all games played) - rolled over to MD 11, deadline 2026-11-11 19:44 UTC from the schedule
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_11
@@ -145,7 +144,7 @@ top-100: 0 roster previews fetched now
 | Aliou Diarra | C | VIR | 10.0 | 43 | 35 | 0 |
 | Sasha Vezenkov | F | OLY | 18.6 | 42 | 46 | 6 |
 | Andres Feliz | G | RMB | 8.5 | 40 | 33 | 57 |
-| Saras Jasikevicius | H | FBT | 8.3 | 39 | 20 | 0 |
+| Saras Jasikevicius | H | FBT | 8.3 | 39 | 18 | 0 |
 | Elijah Bryant | G | HTA | 17.0 | 25 | 14 | 5 |
 | Alberto Abalde | F | RMB | 5.4 | 22 | 16 | 1 |
 

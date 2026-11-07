@@ -9,7 +9,7 @@
   "2026-11-12",
   "2026-11-13"
  ],
- "generated_utc": "2026-11-07T01:45:08Z",
+ "generated_utc": "2026-11-07T10:02:04Z",
  "team": "UnderTakers86",
  "budget": 110.8,
  "trades_left": 4,
@@ -24,7 +24,7 @@
   "locked_known": true
  },
  "pending": {
-  "expected": 142.3,
+  "expected": 142.2,
   "cost": 110.6,
   "status": "Optimal (night-balance relaxed)",
   "captain": "Sasha Vezenkov",
@@ -188,7 +188,7 @@
     "flags": "OUT (injured)",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 0.0, \"sd\": 0.0, \"pw\": 0.718}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 0.0, \"sd\": 0.0, \"pw\": 0.717}]"
    },
    {
     "role": "coach",
@@ -196,15 +196,15 @@
     "pos": "Head Coach",
     "team": "FBT",
     "quotation": 8.6,
-    "md_pts": 9.76,
-    "md_p90": 26.87,
+    "md_pts": 9.68,
+    "md_p90": 26.8,
     "md_sd": 13.15,
     "elite_own": 39,
-    "why": "@ PRS: margin +7, win 70% → EV +9.6",
+    "why": "@ PRS: margin +7, win 70% → EV +9.5",
     "flags": "coach",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": false, \"fp\": 9.61, \"sd\": 12.0, \"pw\": 0.7}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": false, \"fp\": 9.53, \"sd\": 12.0, \"pw\": 0.702}]"
    }
   ],
   "differs": false
@@ -272,7 +272,7 @@
   ]
  },
  "hold": {
-  "expected": 142.3,
+  "expected": 142.2,
   "inround_gain": 3.1,
   "cost": 110.6,
   "status": "Optimal (night-balance relaxed)",
@@ -437,7 +437,7 @@
     "flags": "OUT (injured)",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 0.0, \"sd\": 0.0, \"pw\": 0.718}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 0.0, \"sd\": 0.0, \"pw\": 0.717}]"
    },
    {
     "role": "coach",
@@ -445,33 +445,26 @@
     "pos": "Head Coach",
     "team": "FBT",
     "quotation": 8.6,
-    "md_pts": 9.76,
-    "md_p90": 26.87,
+    "md_pts": 9.68,
+    "md_p90": 26.8,
     "md_sd": 13.15,
     "elite_own": 39,
-    "why": "@ PRS: margin +7, win 70% → EV +9.6",
+    "why": "@ PRS: margin +7, win 70% → EV +9.5",
     "flags": "coach",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": false, \"fp\": 9.61, \"sd\": 12.0, \"pw\": 0.7}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": false, \"fp\": 9.53, \"sd\": 12.0, \"pw\": 0.702}]"
    }
   ]
  },
  "best": {
-  "expected": 150.8,
+  "expected": 150.7,
   "inround_gain": 9.0,
   "cost": 110.5,
   "status": "Optimal",
   "captain": "Sasha Vezenkov",
   "coach": "Saras Jasikevicius",
   "trades_out": [
-   {
-    "name": "Chuma Okeke",
-    "pos": "Forward",
-    "team": "RMB",
-    "price": 8.8,
-    "md_pts": 10.98
-   },
    {
     "name": "Tremont Waters",
     "pos": "Guard",
@@ -480,18 +473,25 @@
     "md_pts": 9.14
    },
    {
-    "name": "Mbaye Ndiaye",
-    "pos": "Forward",
-    "team": "OLY",
-    "price": 8.3,
-    "md_pts": 8.66
-   },
-   {
     "name": "Kevarrius Hayes",
     "pos": "Center",
     "team": "PAR",
     "price": 8.3,
     "md_pts": 0.0
+   },
+   {
+    "name": "Chuma Okeke",
+    "pos": "Forward",
+    "team": "RMB",
+    "price": 8.8,
+    "md_pts": 10.98
+   },
+   {
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "team": "OLY",
+    "price": 8.3,
+    "md_pts": 8.66
    }
   ],
   "trades_in": [
@@ -587,7 +587,7 @@
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PAR\", \"home\": false, \"fp\": 13.4, \"sd\": 8.83, \"pw\": 0.282}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PAR\", \"home\": false, \"fp\": 13.4, \"sd\": 8.83, \"pw\": 0.283}]"
    },
    {
     "role": "starter",
@@ -603,7 +603,7 @@
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PAR\", \"home\": false, \"fp\": 8.46, \"sd\": 6.13, \"pw\": 0.282}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PAR\", \"home\": false, \"fp\": 8.46, \"sd\": 6.13, \"pw\": 0.283}]"
    },
    {
     "role": "sixth",
@@ -619,7 +619,7 @@
     "flags": "",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 10.63, \"sd\": 8.66, \"pw\": 0.718}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"BAS\", \"home\": true, \"fp\": 10.63, \"sd\": 8.66, \"pw\": 0.717}]"
    },
    {
     "role": "bench",
@@ -691,15 +691,15 @@
     "pos": "Head Coach",
     "team": "FBT",
     "quotation": 8.6,
-    "md_pts": 9.76,
-    "md_p90": 26.87,
+    "md_pts": 9.68,
+    "md_p90": 26.8,
     "md_sd": 13.15,
     "elite_own": 39,
-    "why": "@ PRS: margin +7, win 70% → EV +9.6",
+    "why": "@ PRS: margin +7, win 70% → EV +9.5",
     "flags": "coach",
     "captain": false,
     "first_turn": 1,
-    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": false, \"fp\": 9.61, \"sd\": 12.0, \"pw\": 0.7}]"
+    "games_json": "[{\"turn\": 1, \"opp\": \"PRS\", \"home\": false, \"fp\": 9.53, \"sd\": 12.0, \"pw\": 0.702}]"
    }
   ],
   "plan": [
@@ -728,20 +728,20 @@
     "flags": "only 2 game(s)"
    },
    {
-    "name": "Vanja Marinkovic",
-    "team": "PAR",
-    "price": 4.1,
-    "md_pts": 6.11,
-    "elite_own": 1,
-    "flags": "only 1 game(s)"
-   },
-   {
     "name": "Tyson Carter",
     "team": "CZV",
     "price": 7.4,
     "md_pts": 11.03,
     "elite_own": 1,
     "flags": ""
+   },
+   {
+    "name": "Vanja Marinkovic",
+    "team": "PAR",
+    "price": 4.1,
+    "md_pts": 6.11,
+    "elite_own": 1,
+    "flags": "only 1 game(s)"
    },
    {
     "name": "Cameron Payne",
@@ -815,7 +815,7 @@
     "name": "Nikola Tanaskovic",
     "team": "PAR",
     "price": 8.4,
-    "md_pts": 12.74,
+    "md_pts": 12.73,
     "elite_own": 0,
     "flags": ""
    },

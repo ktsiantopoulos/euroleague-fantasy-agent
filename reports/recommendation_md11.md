@@ -2,15 +2,14 @@
 
 **Deadline: 2026-11-11 19:44 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-11-07 01:45 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (0 pending on the platform) · odds ON (2 games)
+Generated 2026-11-07 10:02 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (0 pending on the platform) · odds ON (2 games)
 _trade window open - 0 pending change(s) are reversible_
-> ℹ️ Platform still reported MD 10 (finished); this report uses MD 11 with the deadline taken from the schedule (2026-11-11 19:44 UTC).
 
 ## Decision
 - Game nights: T1=11-11, T2=11-12, T3=11-13. Bench players with later nights are swap options; captain can move to a not-yet-played starter.
-- Locked squad, best lineup: **142.3 pts** expected; in-round swaps add +3.1 (simulated).
-- Recommended with ≤4 trade(s): **150.8 pts** expected (+8.5 vs locked squad); in-round swaps add +9.0 (simulated); cost 110.5/110.8.
-- Trades vs the locked squad: OUT Chuma Okeke, Tremont Waters, Mbaye Ndiaye, Kevarrius Hayes → IN Kenneth Faried, Collin Malcolm, Ethan Thompson, Clement Frisch
+- Locked squad, best lineup: **142.2 pts** expected; in-round swaps add +3.1 (simulated).
+- Recommended with ≤4 trade(s): **150.7 pts** expected (+8.5 vs locked squad); in-round swaps add +9.0 (simulated); cost 110.5/110.8.
+- Trades vs the locked squad: OUT Tremont Waters, Kevarrius Hayes, Chuma Okeke, Mbaye Ndiaye → IN Kenneth Faried, Collin Malcolm, Ethan Thompson, Clement Frisch
 - **To do on the platform** (from what you have selected now): remove Tremont Waters, Kevarrius Hayes, Mbaye Ndiaye, Chuma Okeke → add Ethan Thompson, Collin Malcolm, Clement Frisch, Kenneth Faried
 - Captain **Sasha Vezenkov**, coach **Saras Jasikevicius**.
 
@@ -27,7 +26,7 @@ _trade window open - 0 pending change(s) are reversible_
 | Bench (50%) | Aliou Diarra | Center | VIR | 10.8 | T3 | 15.63 | 25.27 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 38%) → 15.4 |
 | Bench (50%) | Yam Madar | Guard | MTA | 10.5 | T2 | 12.91 | 24.75 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 32%) → 12.9 |
 | Bench (50%) | Alberto Abalde | Forward | RMB | 6.1 | T2 | 11.22 | 21.73 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 57%) → 11.1 |
-| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | T1 | 9.76 | 26.87 | 39 | @ PRS: margin +7, win 70% → EV +9.6 |
+| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | T1 | 9.68 | 26.8 | 39 | @ PRS: margin +7, win 70% → EV +9.5 |
 
 ### In-round plan (from 3,000 simulations)
 - Armoni Brooks (G, T2) is promoted from the bench in 71% of simulations
@@ -49,7 +48,7 @@ _trade window open - 0 pending change(s) are reversible_
 | Bench (50%) | Tremont Waters | Guard | ASV | 9.7 | T3 | 9.14 | 20.36 | 0 | 15 min proj (bench, last 8), 0.52 PIR/min over 9 g · T3 vs BES (DvP +2.2, win 57%) → 9.1 |
 | Bench (50%) | Mbaye Ndiaye | Forward | OLY | 8.3 | T2 | 8.66 | 22.39 | 0 | 16 min proj (bench, last 12), 0.52 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 63%) → 8.7 |
 | Bench (50%) | Kevarrius Hayes | Center | PAR | 8.3 | T1 | 0.0 | 0.0 | 3 | 22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 72%) → 0.0 · ⚠ OUT (injured) |
-| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | T1 | 9.76 | 26.87 | 39 | @ PRS: margin +7, win 70% → EV +9.6 |
+| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | T1 | 9.68 | 26.8 | 39 | @ PRS: margin +7, win 70% → EV +9.5 |
 
 ## Defence vs position (this season, shrunk to league mean; +PIR = concedes more)
 ```
@@ -62,9 +61,9 @@ Center   leak PIR to: MUN (+4.2, n=10), ASV (+2.8, n=10), BAS (+2.3, n=10), DUB 
 ```
 
 ## Top value outside the squad (exp pts per credit, players with a game this matchday)
-- Guard: Nikola Djurisic CZV 4.0 → 6.45 (top100 1%); Sergio Llull RMB 4.2 → 6.32 (top100 4%, only 2 game(s)); Vanja Marinkovic PAR 4.1 → 6.11 (top100 1%, only 1 game(s)); Tyson Carter CZV 7.4 → 11.03 (top100 1%); Cameron Payne EFS 10.2 → 14.87 (top100 8%)
+- Guard: Nikola Djurisic CZV 4.0 → 6.45 (top100 1%); Sergio Llull RMB 4.2 → 6.32 (top100 4%, only 2 game(s)); Tyson Carter CZV 7.4 → 11.03 (top100 1%); Vanja Marinkovic PAR 4.1 → 6.11 (top100 1%, only 1 game(s)); Cameron Payne EFS 10.2 → 14.87 (top100 8%)
 - Forward: Edwin Jackson ASV 4.1 → 9.09 (top100 1%, only 2 game(s)); Collin Malcolm EFS 9.8 → 18.06 (top100 19%); Gabriele Procida RMB 4.5 → 8.18 (top100 6%); Clement Frisch KBA 5.3 → 8.49 (top100 8%); Metecan Birsen BJK 4.6 → 6.62 (top100 0%)
-- Center: Jasiel Rivero VBC 7.3 → 11.55 (top100 0%); Neal Sako VBC 9.2 → 14.24 (top100 0%); Nikola Tanaskovic PAR 8.4 → 12.74 (top100 0%); Ousmane Diop MIL 4.5 → 5.91 (top100 1%); Mathias Lessort PAO 16.7 → 21.76 (top100 8%)
+- Center: Jasiel Rivero VBC 7.3 → 11.55 (top100 0%); Neal Sako VBC 9.2 → 14.24 (top100 0%); Nikola Tanaskovic PAR 8.4 → 12.73 (top100 0%); Ousmane Diop MIL 4.5 → 5.91 (top100 1%); Mathias Lessort PAO 16.7 → 21.76 (top100 8%)
 
 ## Flags
 - Kevarrius Hayes: OUT (injured)
