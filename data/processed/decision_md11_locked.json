@@ -1,6 +1,6 @@
 {
  "matchday": 11,
- "frozen_utc": "2026-11-09T11:26:44Z",
+ "frozen_utc": "2026-11-09T13:46:43Z",
  "lock_utc": "2026-11-11T19:44:00Z",
  "budget": 110.8,
  "trades_left": 4,
@@ -36,7 +36,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.67,
+    "md_pts": 16.65,
     "md_sd": 10.36
    },
    {
@@ -72,7 +72,7 @@
     "pos": "Forward",
     "role": "sixth",
     "captain": false,
-    "md_pts": 11.37,
+    "md_pts": 11.35,
     "md_sd": 8.13
    },
    {
@@ -81,7 +81,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 11.12,
+    "md_pts": 11.1,
     "md_sd": 6.29
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 10.18,
+    "md_pts": 10.27,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 152.5,
+  "expected": 151.5,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -145,40 +145,40 @@
     "md_sd": 7.5
    },
    {
-    "platform_id": "3851",
-    "name": "Andres Feliz",
-    "pos": "Guard",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 16.67,
-    "md_sd": 10.36
-   },
-   {
-    "platform_id": "4097",
-    "name": "Nikola Tanaskovic",
+    "platform_id": "8730",
+    "name": "Kenneth Faried",
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 12.76,
-    "md_sd": 7.06
-   },
-   {
-    "platform_id": "8762",
-    "name": "Jared Rhoden",
-    "pos": "Guard",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 11.06,
-    "md_sd": 8.15
+    "md_pts": 13.41,
+    "md_sd": 8.83
    },
    {
     "platform_id": "11532",
     "name": "Ethan Thompson",
     "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 10.63,
+    "md_sd": 8.66
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 8.48,
+    "md_sd": 6.13
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 10.65,
-    "md_sd": 8.66
+    "md_pts": 16.65,
+    "md_sd": 10.36
    },
    {
     "platform_id": "7424",
@@ -199,22 +199,22 @@
     "md_sd": 7.87
    },
    {
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.97,
+    "md_sd": 9.19
+   },
+   {
     "platform_id": "3991",
     "name": "Alberto Abalde",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 11.37,
+    "md_pts": 11.35,
     "md_sd": 8.13
-   },
-   {
-    "platform_id": "7194",
-    "name": "Chuma Okeke",
-    "pos": "Forward",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 11.12,
-    "md_sd": 6.29
    },
    {
     "platform_id": "3897",
@@ -222,22 +222,23 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 10.18,
+    "md_pts": 10.27,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
-   "Yam Madar",
-   "Tremont Waters",
    "Kevarrius Hayes",
+   "Chuma Okeke",
+   "Tremont Waters",
    "Mbaye Ndiaye"
   ],
   "trades_in": [
+   "Kenneth Faried",
    "Collin Malcolm",
-   "Jared Rhoden",
    "Ethan Thompson",
-   "Nikola Tanaskovic"
-  ]
+   "Clement Frisch"
+  ],
+  "price_gain": 0.08
  },
  "params": {
   "w_minutes": [
@@ -271,5 +272,124 @@
   },
   "tier_bias": {},
   "flags": {}
+ },
+ "variant": {
+  "mu_price": 8.0,
+  "expected": 152.5,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 23.15,
+    "md_sd": 8.72
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 18.04,
+    "md_sd": 7.5
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.65,
+    "md_sd": 10.36
+   },
+   {
+    "platform_id": "4097",
+    "name": "Nikola Tanaskovic",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 12.74,
+    "md_sd": 7.06
+   },
+   {
+    "platform_id": "11532",
+    "name": "Ethan Thompson",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 10.63,
+    "md_sd": 8.66
+   },
+   {
+    "platform_id": "8762",
+    "name": "Jared Rhoden",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 11.06,
+    "md_sd": 8.15
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 15.65,
+    "md_sd": 7.38
+   },
+   {
+    "platform_id": "3833",
+    "name": "Armoni Brooks",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 15.48,
+    "md_sd": 7.87
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.35,
+    "md_sd": 8.13
+   },
+   {
+    "platform_id": "7194",
+    "name": "Chuma Okeke",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.1,
+    "md_sd": 6.29
+   },
+   {
+    "platform_id": "3897",
+    "name": "Saras Jasikevicius",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 10.27,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Kevarrius Hayes",
+   "Yam Madar",
+   "Tremont Waters",
+   "Mbaye Ndiaye"
+  ],
+  "trades_in": [
+   "Collin Malcolm",
+   "Jared Rhoden",
+   "Ethan Thompson",
+   "Nikola Tanaskovic"
+  ],
+  "price_gain": 0.39
  }
 }

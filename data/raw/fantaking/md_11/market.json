@@ -148,7 +148,7 @@
   "face_path": null,
   "avg_pts": 22.66,
   "is_on_fire": true,
-  "popularity": 0.141,
+  "popularity": 0.142,
   "position": {
    "id": 30,
    "name": "Center"
@@ -183,7 +183,7 @@
   "face_path": null,
   "avg_pts": 22.03,
   "is_on_fire": true,
-  "popularity": 0.076,
+  "popularity": 0.077,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -218,7 +218,7 @@
   "face_path": null,
   "avg_pts": 19.11,
   "is_on_fire": false,
-  "popularity": 0.091,
+  "popularity": 0.09,
   "position": {
    "id": 30,
    "name": "Center"
@@ -323,7 +323,7 @@
   "face_path": null,
   "avg_pts": 20.38,
   "is_on_fire": true,
-  "popularity": 0.124,
+  "popularity": 0.125,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -358,7 +358,7 @@
   "face_path": null,
   "avg_pts": 19.84,
   "is_on_fire": true,
-  "popularity": 0.146,
+  "popularity": 0.145,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -533,7 +533,7 @@
   "face_path": null,
   "avg_pts": 15.03,
   "is_on_fire": true,
-  "popularity": 0.054,
+  "popularity": 0.055,
   "position": {
    "id": 30,
    "name": "Center"
@@ -568,7 +568,7 @@
   "face_path": null,
   "avg_pts": 16.18,
   "is_on_fire": true,
-  "popularity": 0.108,
+  "popularity": 0.109,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -953,7 +953,7 @@
   "face_path": null,
   "avg_pts": 14.57,
   "is_on_fire": false,
-  "popularity": 0.07,
+  "popularity": 0.069,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1128,7 +1128,7 @@
   "face_path": null,
   "avg_pts": 16.95,
   "is_on_fire": true,
-  "popularity": 0.164,
+  "popularity": 0.165,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1233,7 +1233,7 @@
   "face_path": null,
   "avg_pts": 13.17,
   "is_on_fire": false,
-  "popularity": 0.055,
+  "popularity": 0.056,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1758,7 +1758,7 @@
   "face_path": null,
   "avg_pts": 11.91,
   "is_on_fire": false,
-  "popularity": 0.016,
+  "popularity": 0.015,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1828,7 +1828,7 @@
   "face_path": null,
   "avg_pts": 16.2,
   "is_on_fire": false,
-  "popularity": 0.058,
+  "popularity": 0.057,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1968,7 +1968,7 @@
   "face_path": null,
   "avg_pts": 13.89,
   "is_on_fire": true,
-  "popularity": 0.028,
+  "popularity": 0.029,
   "position": {
    "id": 30,
    "name": "Center"
@@ -2108,7 +2108,7 @@
   "face_path": null,
   "avg_pts": 13.1,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.005,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -2213,7 +2213,7 @@
   "face_path": null,
   "avg_pts": 14.77,
   "is_on_fire": false,
-  "popularity": 0.103,
+  "popularity": 0.102,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2493,7 +2493,7 @@
   "face_path": null,
   "avg_pts": 9.46,
   "is_on_fire": false,
-  "popularity": 0.063,
+  "popularity": 0.062,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2528,7 +2528,7 @@
   "face_path": null,
   "avg_pts": 14.39,
   "is_on_fire": false,
-  "popularity": 0.095,
+  "popularity": 0.096,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2563,7 +2563,7 @@
   "face_path": null,
   "avg_pts": 7.37,
   "is_on_fire": false,
-  "popularity": 0.015,
+  "popularity": 0.014,
   "position": {
    "id": 30,
    "name": "Center"
@@ -2808,7 +2808,7 @@
   "face_path": null,
   "avg_pts": 13.53,
   "is_on_fire": false,
-  "popularity": 0.158,
+  "popularity": 0.159,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3228,7 +3228,7 @@
   "face_path": null,
   "avg_pts": 8,
   "is_on_fire": null,
-  "popularity": 0.038,
+  "popularity": 0.037,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -3333,7 +3333,7 @@
   "face_path": null,
   "avg_pts": 15.37,
   "is_on_fire": false,
-  "popularity": 0.345,
+  "popularity": 0.346,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -3613,7 +3613,7 @@
   "face_path": null,
   "avg_pts": 13,
   "is_on_fire": false,
-  "popularity": 0.05,
+  "popularity": 0.051,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -4313,7 +4313,7 @@
   "face_path": null,
   "avg_pts": 8,
   "is_on_fire": null,
-  "popularity": 0.155,
+  "popularity": 0.153,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -4698,7 +4698,7 @@
   "face_path": null,
   "avg_pts": 9.67,
   "is_on_fire": false,
-  "popularity": 0.047,
+  "popularity": 0.048,
   "position": {
    "id": 30,
    "name": "Center"
@@ -5083,7 +5083,7 @@
   "face_path": null,
   "avg_pts": 11.12,
   "is_on_fire": false,
-  "popularity": 0.066,
+  "popularity": 0.065,
   "position": {
    "id": 30,
    "name": "Center"
@@ -5118,7 +5118,7 @@
   "face_path": null,
   "avg_pts": 10.96,
   "is_on_fire": false,
-  "popularity": 0.058,
+  "popularity": 0.057,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -5713,7 +5713,7 @@
   "face_path": null,
   "avg_pts": 11,
   "is_on_fire": null,
-  "popularity": 0.063,
+  "popularity": 0.064,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -6063,7 +6063,7 @@
   "face_path": null,
   "avg_pts": 9.5,
   "is_on_fire": null,
-  "popularity": 0.064,
+  "popularity": 0.063,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -6728,7 +6728,7 @@
   "face_path": null,
   "avg_pts": 5.66,
   "is_on_fire": false,
-  "popularity": 0.028,
+  "popularity": 0.029,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -8093,7 +8093,7 @@
   "face_path": null,
   "avg_pts": 5.5,
   "is_on_fire": null,
-  "popularity": 0.209,
+  "popularity": 0.211,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -8198,7 +8198,7 @@
   "face_path": null,
   "avg_pts": 8.83,
   "is_on_fire": false,
-  "popularity": 0.18,
+  "popularity": 0.181,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -8268,7 +8268,7 @@
   "face_path": null,
   "avg_pts": 5.98,
   "is_on_fire": false,
-  "popularity": 0.018,
+  "popularity": 0.017,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -8408,7 +8408,7 @@
   "face_path": null,
   "avg_pts": 7.74,
   "is_on_fire": false,
-  "popularity": 0.105,
+  "popularity": 0.104,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -9423,7 +9423,7 @@
   "face_path": null,
   "avg_pts": 6.77,
   "is_on_fire": false,
-  "popularity": 0.106,
+  "popularity": 0.107,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -9458,7 +9458,7 @@
   "face_path": null,
   "avg_pts": 0.5,
   "is_on_fire": null,
-  "popularity": 0.033,
+  "popularity": 0.034,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -9843,7 +9843,7 @@
   "face_path": null,
   "avg_pts": 7,
   "is_on_fire": false,
-  "popularity": 0.172,
+  "popularity": 0.173,
   "position": {
    "id": 30,
    "name": "Center"
@@ -11768,7 +11768,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.006,
+  "popularity": 0.007,
   "position": {
    "id": 29,
    "name": "Forward"
