@@ -192,6 +192,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
           if (to_undo or to_add) else "- **Nothing to change on the platform** — your pending squad is already the recommendation."]
          if base.open else []) + [
         f"- Captain **{best.captain}**, coach **{best.coach}**." + (f" Kept by request: {', '.join(keep)}." if keep else ""),
+        f"- Market: recommended squad expected to move **{best.price_gain:+.1f} credits** over the next {HORIZON_TXT} "
+        f"(locked squad {hold.price_gain:+.1f}); valued at μ = {mu:.1f} pts/credit in the objective ({best.price_value:+.1f} pts, not in the expected points).",
         "",
         "## Recommended squad (with trades)",
         _fmt_squad(best.squad),
