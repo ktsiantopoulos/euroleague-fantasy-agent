@@ -7,7 +7,7 @@ from elfa.optimise.lineup import Solution, optimise
 
 
 def run_optimiser(proj: pd.DataFrame, budget: float, prev_ids: set[str], max_trades: int,
-                  mu_price: float = 0.0, lock_squad: bool = False, keep_ids: set[str] | None = None,
-                  balance: bool = True) -> Solution:
-    return optimise(proj, budget, prev_ids, max_trades=max_trades, mu_price=mu_price, lock_squad=lock_squad,
-                    keep_ids=keep_ids, balance=balance)
+                  mu_price: float | None = None, lock_squad: bool = False, keep_ids: set[str] | None = None,
+                  balance: bool = True, exp_price_change: dict[str, float] | None = None) -> Solution:
+    return optimise(proj, budget, prev_ids, max_trades=max_trades, mu_price=mu_price, exp_price_change=exp_price_change,
+                    lock_squad=lock_squad, keep_ids=keep_ids, balance=balance)

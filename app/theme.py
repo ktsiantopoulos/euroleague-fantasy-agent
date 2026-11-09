@@ -184,6 +184,19 @@ def trades(out: list[dict], inn: list[dict], footer: str, title: str = "Recommen
     return f'<div class="elf-card elev"><div class="elf-label orange">{_e(title)}</div><div class="elf-trades">{body}</div><div class="elf-foot">{_e(footer)}</div></div>'
 
 
+def _dprice(p: dict) -> str:
+    """Expected price move over the horizon, coloured; empty when unknown or negligible."""
+    v = p.get("dprice")
+    try:
+        v = float(v)
+    except (TypeError, ValueError):
+        return ""
+    if abs(v) < 0.05:
+        return ""
+    col = TOKENS["pos"] if v > 0 else TOKENS["neg"]
+    return f' <span style="color:{col}">{v:+.1f}</span>'
+
+
 def player_card(p: dict, bench: bool = False, small: bool = False) -> str:
     games = json.loads(p["games_json"]) if isinstance(p.get("games_json"), str) else []
     tags = "".join(f'<span class="elf-tag">T{g["turn"]}</span>' for g in games)
@@ -197,7 +210,7 @@ def player_card(p: dict, bench: bool = False, small: bool = False) -> str:
         why += f' <span style="color:{TOKENS["gold"]}">⚠ {_e(flags)}</span>'
     cls = "elf-pc" + (" cap" if cap else "") + (" bench" if bench else "")
     return (f'<div class="{cls}"><div class="top">{pos_chip(p["pos"])}<span class="nm">{name}</span><span class="tm">{_e(tn(p["team"]))}</span></div>'
-            f'<div class="num"><span class="exp">{exp}</span><span class="sm">p90 {p["md_p90"]:.0f}<br>{p["quotation"]:.1f} cr</span></div>'
+            f'<div class="num"><span class="exp">{exp}</span><span class="sm">p90 {p["md_p90"]:.0f}<br>{p["quotation"]:.1f} cr{_dprice(p)}</span></div>'
             f'<div class="why" title="{_e(why_full)}"><span>{why}</span><span>{tags}</span></div></div>')
 
 

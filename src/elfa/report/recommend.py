@@ -17,8 +17,9 @@ from elfa.ingest.odds import fetch_odds, odds_dir
 from elfa.model.baseline import changes_between, trade_baseline
 from elfa.model.inround import simulate
 from elfa.model.optimise_bridge import run_optimiser
+from elfa.model.prices import HORIZON_DECAY, expected_price_change, fit_price_model
+from elfa.model.prices import summary as price_model_summary
 from elfa.model.projection import Params, project
-from elfa.optimise import lineup as L
 from elfa.model.teams import (
     load_schedule,
     matchday_games,
@@ -26,13 +27,18 @@ from elfa.model.teams import (
     turns_from_market,
     upcoming_rounds,
 )
+from elfa.optimise import lineup as L
 
 ELITE_TILT = 0.04   # 4% at 100% top-100 ownership
+HORIZON_TXT = "3 matchdays"
 
 
 def _fmt_squad(sq: pd.DataFrame) -> str:
-    cols = ["slot", "name", "pos", "team", "quotation", "nights", "md_pts", "md_p90", "elite_own", "why"]
+    cols = ["slot", "name", "pos", "team", "quotation", "dprice", "nights", "md_pts", "md_p90", "elite_own", "why"]
     sq = sq.copy()
+    if "dprice" not in sq:
+        sq["dprice"] = 0.0
+    sq["dprice"] = sq.dprice.map(lambda v: f"{v:+.1f}" if pd.notna(v) and abs(v) >= 0.05 else "0.0")
     slot_names = {"starter": "Starter", "sixth": "6th man", "bench": "Bench (50%)", "coach": "Coach"}
     sq["slot"] = sq.role.map(slot_names)
     sq["nights"] = sq.games_json.map(lambda j: "/".join(f"T{g['turn']}" for g in json.loads(j)) if isinstance(j, str) else "")
@@ -40,7 +46,7 @@ def _fmt_squad(sq: pd.DataFrame) -> str:
     sq["why"] = sq.apply(lambda r: (r["why"] + (f" · ⚠ {r['flags']}" if r["flags"] and r["flags"] != "coach" else "")), axis=1)
     if "elite_own" not in sq:
         sq["elite_own"] = 0
-    sq = sq[cols].rename(columns={"quotation": "price", "md_pts": "exp pts", "md_p90": "p90", "elite_own": "top100 own%", "why": "justification"})
+    sq = sq[cols].rename(columns={"quotation": "price", "dprice": "Δprice", "md_pts": "exp pts", "md_p90": "p90", "elite_own": "top100 own%", "why": "justification"})
     head = "| " + " | ".join(sq.columns) + " |\n|" + "---|" * len(sq.columns)
     body = "\n".join("| " + " | ".join(str(v) for v in row) + " |" for row in sq.itertuples(index=False))
     return head + "\n" + body
@@ -73,7 +79,7 @@ def _stale_warning(md_number: int, first: list, cfg: dict) -> list[str]:
         pass
     return out
 
-def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float = 0.0, params: Params | None = None,
+def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: float | None = None, params: Params | None = None,
               keep: list[str] | None = None) -> Path:
     md_number, market, cfg = load_latest_market()
     md_dir = RAW / "fantaking" / f"md_{md_number:02d}"
@@ -123,17 +129,23 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     proj["md_pts"] = (proj.md_pts * tilt).round(2)
     proj["horizon_pts"] = (proj.horizon_pts * tilt).round(2)
     proj["md_p90"] = (proj.md_p90 * tilt).round(2)
+    # market: expected price move over the horizon from (projection - season average), refit on the price log each run
+    price_model = fit_price_model()
+    epc = expected_price_change(proj, price_model)
+    proj["dprice"] = proj.platform_id.map(epc).fillna(0.0)
+    mu = L.MU_PRICE if mu_price is None else float(mu_price)
+    print(f"  {price_model_summary(price_model)} · μ = {mu:.1f} pts/credit")
     proj.to_csv(PROCESSED / f"projection_md{md_number:02d}.csv", index=False)
 
     # hold = the squad the optimiser trades away from (locked squad while the window is open), best lineup, no trades
-    hold = run_optimiser(proj, budget, base.ids, trades_left, mu_price, lock_squad=True)
+    hold = run_optimiser(proj, budget, base.ids, trades_left, mu, lock_squad=True, exp_price_change=epc)
     # pending = what is selected on the platform right now (differs from hold only while trades are pending)
-    pending = run_optimiser(proj, budget, roster_ids, 0, mu_price, lock_squad=True) if roster_ids != base.ids else hold
+    pending = run_optimiser(proj, budget, roster_ids, 0, mu, lock_squad=True, exp_price_change=epc) if roster_ids != base.ids else hold
     keep_ids = set()
     for k in keep or []:
         hit = proj[proj.name.str.lower().str.contains(k.lower())]
         keep_ids |= set(hit.platform_id)
-    best = run_optimiser(proj, budget, base.ids, trades_left, mu_price, lock_squad=False, keep_ids=keep_ids)
+    best = run_optimiser(proj, budget, base.ids, trades_left, mu, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc)
     # what to change on the platform to get from the pending squad to the recommended one
     best_ids = set(best.squad.platform_id)
     undo_ids, add_ids = changes_between(roster_ids, best_ids)
@@ -212,7 +224,9 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "## Assumptions still to confirm",
         "- Coach: win by 21+ set to +25 (user-provided; not yet observed in API data).",
         "- Starting five constrained to 1–3 players per position (covers the platform's formations).",
-        "- Price-change term inactive (μ = 0) until the price log has two or more matchdays.",
+        (f"- Market term: {price_model_summary(price_model)}; a player's expected move over the horizon is that slope × (projection − season average), "
+         f"decayed ×{HORIZON_DECAY} per matchday, valued at μ = {mu:.1f} expected points per credit (frontier ≈ 0.95 pts/credit/matchday, re-spent every remaining round). "
+         "Δprice column = expected credits over the horizon."),
         "- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 ownership (raw model value kept as md_pts_model).",
         "- Soft rules from the top-100 study: 3 points penalty per player above 3 from one club; 1 point per credit for bench players under 6.0.",
         f"- Trade discipline: each incoming player must clear {L.TRADE_HURDLE:.1f} pts + {L.TRADE_SD_PENALTY:.2f}×sd; "
@@ -227,7 +241,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
 
     # structured copy for the dashboard
     def _records(sq: pd.DataFrame) -> list[dict]:
-        cols = ["role", "name", "pos", "team", "quotation", "md_pts", "md_p90", "md_sd", "elite_own", "why", "flags", "captain", "first_turn", "games_json"]
+        cols = ["role", "name", "pos", "team", "quotation", "dprice", "md_pts", "md_p90", "md_sd", "elite_own", "why", "flags", "captain", "first_turn", "games_json"]
         return [{k: (None if pd.isna(v) else (v.item() if hasattr(v, "item") else v)) for k, v in r.items()} for r in sq[[c for c in cols if c in sq]].to_dict("records")]
 
     def _pl(names: list[str]) -> list[dict]:
@@ -249,6 +263,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "matchday": md_number, "rounds": sorted({g.round for g in first}), "deadline_utc": (cfg.get("current_round") or {}).get("started_at"),
         "nights": nights, "generated_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "team": tmd["name"], "budget": budget,
         "trades_left": trades_left, "odds_games": len(odds), "kept": keep or [],
+        "market": {"mu_price": mu, "model": price_model, "best_price_gain": best.price_gain, "hold_price_gain": hold.price_gain,
+                   "best_price_value": best.price_value},
         "baseline": {"label": base.label, "open": base.open, "note": base.note, "max_trades": base.max_trades,
                      "pending_trades": base.pending_trades, "locked_known": bool(base.locked_ids)},
         "pending": {"expected": pending.expected_md_pts, "cost": pending.cost, "status": pending.status, "captain": pending.captain,

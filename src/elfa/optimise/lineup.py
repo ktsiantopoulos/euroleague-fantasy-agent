@@ -33,6 +33,11 @@ TRADE_HURDLE = 2.0          # expected points a new player must beat the one he 
 TRADE_SD_PENALTY = 0.0      # extra discount per point of matchday sd for an incoming player (off; see above)
 MIN_GAMES_TRADE_IN = 3      # never buy a player with fewer season games (Edwin Jackson: 1 g, 0 pts twice)
 MIN_PROB_PLAY_TRADE_IN = 0.7  # never buy a player the platform rates below this chance to play
+# Market term ("ride the market"). The frontier of the MD 11 market buys ~0.95 expected points per credit per
+# matchday, and a credit of budget growth is re-spent every remaining round, so it is worth several points
+# over the season: 0.95 x sum(0.9^k, k=1..27) ~ 8. MU_PRICE is set below that on purpose - the expected price
+# move is itself a projection (optimiser's curse) - but well above the 3-matchday-neutral value of ~1.
+MU_PRICE = 4.0              # expected points per credit of expected price change over the horizon
 
 
 def _pos_part(mu: float, sd: float) -> float:
@@ -91,6 +96,8 @@ class Solution:
     budget: float
     status: str
     trade_penalty: float = 0.0   # objective discount charged for the incoming players (not in expected_md_pts)
+    price_gain: float = 0.0      # expected budget change (credits) over the horizon if this squad is held
+    price_value: float = 0.0     # that gain as valued in the objective (mu_price x credits; not in expected_md_pts)
 
 
 def optimise(
@@ -98,7 +105,7 @@ def optimise(
     budget: float,
     prev_ids: set[str],
     max_trades: int = 4,
-    mu_price: float = 0.0,
+    mu_price: float | None = None,
     exp_price_change: dict[str, float] | None = None,
     lock_squad: bool = False,
     keep_ids: set[str] | None = None,
@@ -112,10 +119,14 @@ def optimise(
     """`future_factor` weights the points expected beyond this matchday (default FUTURE_FACTOR; 0 = this
     matchday only). The coach counts as one of the `max_trades` like any player.
 
+    Market: every squad player adds `mu_price x exp_price_change[id]` (expected credits over the horizon, see
+    elfa.model.prices) to the objective, so rising players are favoured and falling ones sold; default MU_PRICE.
+
     Trade discipline: every player not in `prev_ids` costs `trade_hurdle + trade_sd_penalty * md_sd` in the
     objective, and players below `min_games_in` season games or `min_prob_play_in` are not buyable
     (coaches are exempt from the games/availability gate). `keep_ids` overrides the gate."""
     exp_price_change = exp_price_change or {}
+    mu_price = MU_PRICE if mu_price is None else float(mu_price)
     ff = FUTURE_FACTOR if future_factor is None else float(future_factor)
     df = proj.copy()
     df = df[df.quotation > 0].reset_index(drop=True)
@@ -242,4 +253,6 @@ def optimise(
         budget=budget,
         status=status,
         trade_penalty=round(sum(tcost[i] for i in chosen if i in tcost), 1),
+        price_gain=round(sum(exp_price_change.get(i, 0.0) for i in chosen), 2),
+        price_value=round(mu_price * sum(exp_price_change.get(i, 0.0) for i in chosen), 1),
     )

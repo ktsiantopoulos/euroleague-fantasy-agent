@@ -51,6 +51,8 @@ COL = {
     "p90": st.column_config.NumberColumn("p90", help="90th-percentile outcome — the ceiling. Used for captain choice.", format="%.1f"),
     "md_p90": st.column_config.NumberColumn("p90", help="90th-percentile outcome — the ceiling. Used for captain choice.", format="%.1f"),
     "md_sd": st.column_config.NumberColumn("±", help="Uncertainty (standard deviation) of the matchday projection", format="%.1f"),
+    "Δprice": st.column_config.NumberColumn("Δprice", help="Expected price move (credits) over the next 3 matchdays: 0.03 × (projection − season average), decayed; fitted on the price log", format="%+.1f"),
+    "dprice": st.column_config.NumberColumn("Δprice", help="Expected price move (credits) over the next 3 matchdays: 0.03 × (projection − season average), decayed; fitted on the price log", format="%+.1f"),
     "value": st.column_config.NumberColumn("Pts/credit", help="Expected points per credit of price", format="%.2f"),
     "horizon_pts": st.column_config.NumberColumn("3-wk value", help="Weighted expected points over this matchday and the next two (1.0 / 0.6 / 0.3)", format="%.1f"),
     "popularity": st.column_config.NumberColumn("Global own", help="Share of all managers owning the player", format="%.0f%%"),
@@ -282,8 +284,10 @@ def _squad_table(sq: pd.DataFrame) -> pd.DataFrame:
     sq = sq.copy()
     sq["slot"] = sq.role.map(SLOT)
     sq["player"] = sq.apply(lambda r: f"{r['name']} (C)" if r.captain else r["name"], axis=1)
-    cols = ["slot", "player", "pos", "team", "quotation", "nights", "md_pts", "md_p90", "why"]
-    return sq[cols].rename(columns={"quotation": "price", "md_pts": "exp", "md_p90": "p90", "why": "justification"})
+    cols = ["slot", "player", "pos", "team", "quotation", "dprice", "nights", "md_pts", "md_p90", "why"]
+    if "dprice" not in sq:
+        sq["dprice"] = 0.0
+    return sq[cols].rename(columns={"quotation": "price", "dprice": "Δprice", "md_pts": "exp", "md_p90": "p90", "why": "justification"})
 
 
 def refresh_bar():
@@ -332,6 +336,14 @@ def page_recommendation(proj: pd.DataFrame, md: int):
         TH.md(TH.trades(b["trades_out"], b["trades_in"], f"Cost {b['cost']} / {rec['budget']}  ·  Captain {b['captain'].upper()}  ·  Coach {b['coach'].upper()}  ·  {b['status']}{kept}"))
     if base.get("note"):
         st.caption(base["note"])
+    mk = rec.get("market") or {}
+    if mk:
+        model = mk.get("model") or {}
+        fit = f"R² {model.get('r2')}, n {model.get('n')}" if model.get("fitted") else "default slope"
+        st.caption(f"Market: recommended squad expected to move {mk.get('best_price_gain', 0):+.1f} credits over the horizon "
+                   f"(locked squad {mk.get('hold_price_gain', 0):+.1f}) · valued at μ = {mk.get('mu_price', 0):.1f} pts/credit "
+                   f"({mk.get('best_price_value', 0):+.1f} pts in the objective, not in the expected points) · "
+                   f"price model Δ = {model.get('slope', 0.03):.3f} × (pts − avg), {fit}")
     st.write("")
     left, right = st.columns([2.2, 1])
     with left:

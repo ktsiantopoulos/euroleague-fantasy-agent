@@ -237,7 +237,7 @@ def learn():
 
 @app.command()
 def recommend(
-    mu_price: float = typer.Option(0.0, help="weight of expected price change (PIR per credit)"),
+    mu_price: float = typer.Option(None, help="expected points per credit of expected price change (default: lineup.MU_PRICE; 0 = ignore the market)"),
     keep: str = typer.Option("", help="comma-separated player names (substring) that must stay in the squad"),
 ):
     """Project, optimise and write reports/recommendation_mdXX.md."""
