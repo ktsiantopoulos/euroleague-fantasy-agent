@@ -1,6 +1,6 @@
 {
  "matchday": 11,
- "frozen_utc": "2026-11-09T10:32:19Z",
+ "frozen_utc": "2026-11-09T11:20:42Z",
  "lock_utc": "2026-11-11T19:44:00Z",
  "budget": 110.8,
  "trades_left": 4,
@@ -123,7 +123,7 @@
   ]
  },
  "best": {
-  "expected": 151.4,
+  "expected": 152.5,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -136,6 +136,15 @@
     "md_sd": 8.72
    },
    {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 18.04,
+    "md_sd": 7.5
+   },
+   {
     "platform_id": "3851",
     "name": "Andres Feliz",
     "pos": "Guard",
@@ -145,40 +154,31 @@
     "md_sd": 10.36
    },
    {
-    "platform_id": "8730",
-    "name": "Kenneth Faried",
+    "platform_id": "4097",
+    "name": "Nikola Tanaskovic",
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.39,
-    "md_sd": 8.83
+    "md_pts": 12.76,
+    "md_sd": 7.06
+   },
+   {
+    "platform_id": "8762",
+    "name": "Jared Rhoden",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 11.06,
+    "md_sd": 8.15
    },
    {
     "platform_id": "11532",
     "name": "Ethan Thompson",
     "pos": "Guard",
-    "role": "starter",
+    "role": "sixth",
     "captain": false,
     "md_pts": 10.65,
     "md_sd": 8.66
-   },
-   {
-    "platform_id": "7223",
-    "name": "Clement Frisch",
-    "pos": "Forward",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 8.47,
-    "md_sd": 6.13
-   },
-   {
-    "platform_id": "3838",
-    "name": "Collin Malcolm",
-    "pos": "Forward",
-    "role": "sixth",
-    "captain": false,
-    "md_pts": 18.04,
-    "md_sd": 7.5
    },
    {
     "platform_id": "7424",
@@ -199,15 +199,6 @@
     "md_sd": 7.87
    },
    {
-    "platform_id": "3930",
-    "name": "Yam Madar",
-    "pos": "Guard",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 12.97,
-    "md_sd": 9.19
-   },
-   {
     "platform_id": "3991",
     "name": "Alberto Abalde",
     "pos": "Forward",
@@ -215,6 +206,15 @@
     "captain": false,
     "md_pts": 11.37,
     "md_sd": 8.13
+   },
+   {
+    "platform_id": "7194",
+    "name": "Chuma Okeke",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.12,
+    "md_sd": 6.29
    },
    {
     "platform_id": "3897",
@@ -228,15 +228,15 @@
   ],
   "trades_out": [
    "Tremont Waters",
-   "Chuma Okeke",
-   "Kevarrius Hayes",
-   "Mbaye Ndiaye"
+   "Mbaye Ndiaye",
+   "Yam Madar",
+   "Kevarrius Hayes"
   ],
   "trades_in": [
-   "Kenneth Faried",
    "Collin Malcolm",
+   "Jared Rhoden",
    "Ethan Thompson",
-   "Clement Frisch"
+   "Nikola Tanaskovic"
   ]
  },
  "params": {

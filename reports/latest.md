@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-11T19:44:00+00:00, 57.25 h away)
+## run reason: manual  (deadline 2026-11-11T19:44:00+00:00, 56.47 h away)
 ## pull-official
 E2026: 100 games played, 0 box scores fetched now
 
@@ -145,7 +145,7 @@ top-100: 0 roster previews fetched now
 | Sasha Vezenkov | F | OLY | 18.6 | 42 | 46 | 6 |
 | Andres Feliz | G | RMB | 8.5 | 40 | 34 | 57 |
 | Saras Jasikevicius | H | FBT | 8.3 | 39 | 16 | 0 |
-| Elijah Bryant | G | HTA | 17.0 | 25 | 15 | 5 |
+| Elijah Bryant | G | HTA | 17.0 | 25 | 16 | 5 |
 | Alberto Abalde | F | RMB | 5.4 | 22 | 18 | 1 |
 
 ## backtest
