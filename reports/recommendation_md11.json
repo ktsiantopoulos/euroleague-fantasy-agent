@@ -9,7 +9,7 @@
   "2026-11-12",
   "2026-11-13"
  ],
- "generated_utc": "2026-11-09T11:20:42Z",
+ "generated_utc": "2026-11-09T11:26:44Z",
  "team": "UnderTakers86",
  "budget": 110.8,
  "trades_left": 4,
@@ -506,20 +506,6 @@
   "coach": "Saras Jasikevicius",
   "trades_out": [
    {
-    "name": "Tremont Waters",
-    "pos": "Guard",
-    "team": "ASV",
-    "price": 9.7,
-    "md_pts": 9.11
-   },
-   {
-    "name": "Mbaye Ndiaye",
-    "pos": "Forward",
-    "team": "OLY",
-    "price": 8.3,
-    "md_pts": 8.67
-   },
-   {
     "name": "Yam Madar",
     "pos": "Guard",
     "team": "MTA",
@@ -527,11 +513,25 @@
     "md_pts": 12.97
    },
    {
+    "name": "Tremont Waters",
+    "pos": "Guard",
+    "team": "ASV",
+    "price": 9.7,
+    "md_pts": 9.11
+   },
+   {
     "name": "Kevarrius Hayes",
     "pos": "Center",
     "team": "PAR",
     "price": 8.3,
     "md_pts": 0.0
+   },
+   {
+    "name": "Mbaye Ndiaye",
+    "pos": "Forward",
+    "team": "OLY",
+    "price": 8.3,
+    "md_pts": 8.67
    }
   ],
   "trades_in": [

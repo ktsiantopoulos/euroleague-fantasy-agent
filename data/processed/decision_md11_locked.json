@@ -1,6 +1,6 @@
 {
  "matchday": 11,
- "frozen_utc": "2026-11-09T11:20:42Z",
+ "frozen_utc": "2026-11-09T11:26:44Z",
  "lock_utc": "2026-11-11T19:44:00Z",
  "budget": 110.8,
  "trades_left": 4,
@@ -227,10 +227,10 @@
    }
   ],
   "trades_out": [
-   "Tremont Waters",
-   "Mbaye Ndiaye",
    "Yam Madar",
-   "Kevarrius Hayes"
+   "Tremont Waters",
+   "Kevarrius Hayes",
+   "Mbaye Ndiaye"
   ],
   "trades_in": [
    "Collin Malcolm",

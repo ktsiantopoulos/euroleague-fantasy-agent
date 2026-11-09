@@ -2,16 +2,17 @@
 
 **Deadline: 2026-11-11 19:44 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-11-09 11:20 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (0 pending on the platform) · odds ON (10 games)
+Generated 2026-11-09 11:26 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (0 pending on the platform) · odds ON (10 games)
 _trade window open - 0 pending change(s) are reversible_
 
 ## Decision
 - Game nights: T1=11-11, T2=11-12, T3=11-13. Bench players with later nights are swap options; captain can move to a not-yet-played starter.
 - Locked squad, best lineup: **143.1 pts** expected; in-round swaps add +2.8 (simulated).
 - Recommended with ≤4 trade(s): **152.5 pts** expected (+9.4 vs locked squad); in-round swaps add +8.6 (simulated); cost 110.8/110.8.
-- Trades vs the locked squad: OUT Tremont Waters, Mbaye Ndiaye, Yam Madar, Kevarrius Hayes → IN Collin Malcolm, Jared Rhoden, Ethan Thompson, Nikola Tanaskovic
+- Trades vs the locked squad: OUT Yam Madar, Tremont Waters, Kevarrius Hayes, Mbaye Ndiaye → IN Collin Malcolm, Jared Rhoden, Ethan Thompson, Nikola Tanaskovic
 - **To do on the platform** (from what you have selected now): remove Tremont Waters, Kevarrius Hayes, Yam Madar, Mbaye Ndiaye → add Ethan Thompson, Collin Malcolm, Nikola Tanaskovic, Jared Rhoden
 - Captain **Sasha Vezenkov**, coach **Saras Jasikevicius**.
+- Market: recommended squad expected to move **+0.4 credits** over the next 3 matchdays (locked squad -1.7); valued at μ = 4.0 pts/credit in the objective (+1.6 pts, not in the expected points).
 
 ## Recommended squad (with trades)
 | slot | name | pos | team | price | Δprice | nights | exp pts | p90 | top100 own% | justification |

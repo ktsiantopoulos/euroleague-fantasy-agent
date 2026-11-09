@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-11T19:44:00+00:00, 56.47 h away)
+## run reason: manual  (deadline 2026-11-11T19:44:00+00:00, 56.37 h away)
 ## pull-official
 E2026: 100 games played, 0 box scores fetched now
 
