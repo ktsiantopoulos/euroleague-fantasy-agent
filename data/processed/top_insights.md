@@ -4,28 +4,28 @@
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 10.0 | 43 | 35 | 0 |
+| Aliou Diarra | C | VIR | 10.0 | 43 | 37 | 0 |
 | Sasha Vezenkov | F | OLY | 18.6 | 42 | 46 | 6 |
-| Andres Feliz | G | RMB | 8.5 | 40 | 33 | 57 |
-| Saras Jasikevicius | H | FBT | 8.3 | 39 | 18 | 0 |
-| Elijah Bryant | G | HTA | 17.0 | 25 | 14 | 5 |
-| Alberto Abalde | F | RMB | 5.4 | 22 | 16 | 1 |
-| Collin Malcolm | F | EFS | 9.4 | 19 | 14 | 0 |
+| Andres Feliz | G | RMB | 8.5 | 40 | 34 | 57 |
+| Saras Jasikevicius | H | FBT | 8.3 | 39 | 16 | 0 |
+| Elijah Bryant | G | HTA | 17.0 | 25 | 15 | 5 |
+| Alberto Abalde | F | RMB | 5.4 | 22 | 18 | 1 |
+| Collin Malcolm | F | EFS | 9.4 | 19 | 16 | 0 |
 | TJ Shorts | G | VBC | 16.7 | 15 | 24 | 0 |
-| Stefan Joksimovic | F | KBA | 4.3 | 15 | 14 | 0 |
-| Azuolas Tubelis | F | ZAL | 12.3 | 13 | 15 | 0 |
-| Carlik Jones | G | PAR | 14.1 | 13 | 24 | 0 |
-| Yam Madar | G | MTA | 10.4 | 12 | 11 | 0 |
-| Kostas Papanikolaou | F | OLY | 4.4 | 11 | 19 | 0 |
-| Mouhamed Faye | C | PBB | 8.0 | 10 | 6 | 0 |
+| Stefan Joksimovic | F | KBA | 4.3 | 15 | 15 | 0 |
+| Azuolas Tubelis | F | ZAL | 12.3 | 13 | 16 | 0 |
+| Carlik Jones | G | PAR | 14.1 | 13 | 23 | 0 |
+| Yam Madar | G | MTA | 10.4 | 12 | 10 | 0 |
+| Kostas Papanikolaou | F | OLY | 4.4 | 11 | 18 | 0 |
+| Mouhamed Faye | C | PBB | 8.0 | 10 | 5 | 0 |
 | Jonas Valanciunas | C | ZAL | 16.6 | 9 | 16 | 0 |
-| Cameron Payne | G | EFS | 9.5 | 8 | 7 | 1 |
+| Cameron Payne | G | EFS | 9.5 | 8 | 9 | 1 |
 | Clement Frisch | F | KBA | 5.0 | 8 | 2 | 0 |
 | Mathias Lessort | C | PAO | 16.1 | 8 | 14 | 16 |
-| Tyson Ward | F | OLY | 8.5 | 8 | 7 | 0 |
-| Sebastian Herrera | G | PBB | 6.0 | 8 | 11 | 0 |
+| Tyson Ward | F | OLY | 8.5 | 8 | 6 | 0 |
+| Sebastian Herrera | G | PBB | 6.0 | 8 | 10 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Saras Jasikevicius (+21 pp), Elijah Bryant (+11 pp), Aliou Diarra (+8 pp), Andres Feliz (+7 pp), Alberto Abalde (+6 pp), Clement Frisch (+6 pp), Collin Malcolm (+5 pp), Mouhamed Faye (+4 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Saras Jasikevicius (+23 pp), Elijah Bryant (+10 pp), Aliou Diarra (+6 pp), Andres Feliz (+6 pp), Clement Frisch (+6 pp), Mouhamed Faye (+5 pp), Alberto Abalde (+4 pp), Collin Malcolm (+3 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (128), Jonas Valanciunas (23), Mathias Lessort (20)
