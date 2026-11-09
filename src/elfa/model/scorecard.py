@@ -86,7 +86,7 @@ def hindsight_best(proj: pd.DataFrame, pts: dict[str, float], budget: float, bas
     players = [i for i in ids if pos[i] != "Head Coach"]
     coaches = [i for i in ids if pos[i] == "Head Coach"]
     pr = pulp.LpProblem("hindsight", pulp.LpMaximize)
-    B = lambda n, ks: {k: pulp.LpVariable(f"{n}_{k}", cat="Binary") for k in ks}  # noqa: E731
+    B = lambda n, ks: {k: pulp.LpVariable(f"{n}_{k}", cat="Binary") for k in ks}
     x, s, m, b, c = B("x", ids), B("s", players), B("m", players), B("b", players), B("c", players)
     pr += pulp.lpSum((s[i] + m[i] + c[i]) * a[i] + 0.5 * b[i] * a[i] for i in players) + pulp.lpSum(x[i] * a[i] for i in coaches)
     for p_, n in QUOTA.items():
@@ -137,6 +137,8 @@ def scorecard() -> tuple[pd.DataFrame, str]:
         expected = score(played, {}, key="md_pts")
         sdv = squad_sd(played, sd)
         rec_act, hold_act = score(dec["best"]["squad"], pts), score(dec["hold"]["squad"], pts)
+        var = dec.get("variant")
+        var_act = score(var["squad"], pts) if var else None
         hs_pts, _hs = hindsight_best(proj, pts, float(dec["budget"]), set(dec["baseline_ids"]), int(dec["trades_left"]))
         starters = [p for p in played if p["role"] == "starter"]
         cap = next((p for p in played if p["captain"]), None)
@@ -147,6 +149,8 @@ def scorecard() -> tuple[pd.DataFrame, str]:
             "z": round((float(actual) - expected) / sdv, 2) if sdv else None,
             "rec_expected": round(dec["best"]["expected"], 1), "rec_actual": rec_act,
             "hold_actual": hold_act, "trade_value_rec": round(rec_act - hold_act, 1),
+            "variant_actual": var_act, "variant_vs_rec": round(var_act - rec_act, 1) if var_act is not None else None,
+            "variant_differs": (sorted(p["platform_id"] for p in var["squad"]) != sorted(p["platform_id"] for p in dec["best"]["squad"])) if var else None,
             "trade_value_you": round(float(actual) - hold_act, 1),
             "hindsight": hs_pts, "regret": round(hs_pts - float(actual), 1),
             "captain": cap["name"] if cap else None, "captain_regret": round(best_starter - cap_act, 1),
@@ -157,13 +161,19 @@ def scorecard() -> tuple[pd.DataFrame, str]:
         return df, "no matchday with a pre-lock decision snapshot and final results yet (first one: MD 9)"
     df.to_csv(PROCESSED / "scorecard.csv", index=False)
     lines = ["# Decision scorecard", "",
-             "| MD | expected | actual | z | agent rec (actual) | no trades (actual) | trades: agent / you | hindsight | regret | captain regret |",
-             "|---|---|---|---|---|---|---|---|---|---|"]
+             "| MD | expected | actual | z | agent rec (actual) | market variant (actual) | no trades (actual) | trades: agent / you | hindsight | regret | captain regret |",
+             "|---|---|---|---|---|---|---|---|---|---|---|"]
     for r in df.itertuples():
-        lines.append(f"| {r.matchday} | {r.expected} ± {r.sd} | {r.actual} | {r.z:+.2f} | {r.rec_actual} | {r.hold_actual} | "
+        va = "—" if r.variant_actual is None or pd.isna(r.variant_actual) else (f"{r.variant_actual} ({r.variant_vs_rec:+.1f})" if r.variant_differs else f"{r.variant_actual} (same)")
+        lines.append(f"| {r.matchday} | {r.expected} ± {r.sd} | {r.actual} | {r.z:+.2f} | {r.rec_actual} | {va} | {r.hold_actual} | "
                      f"{r.trade_value_rec:+.1f} / {r.trade_value_you:+.1f} | {r.hindsight} | {r.regret} | {r.captain_regret} ({r.captain}) |")
     lines += ["", f"Mean z {df.z.mean():+.2f} (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · "
               f"mean regret {df.regret.mean():.1f} · cumulative trade value agent {df.trade_value_rec.sum():+.1f} / you {df.trade_value_you.sum():+.1f}"]
+    vd = df[df.variant_differs.fillna(False).astype(bool)] if "variant_differs" in df else df.iloc[0:0]
+    if len(vd):
+        wins = int((vd.variant_vs_rec > 0).sum())
+        lines.append(f"Market variant vs recommendation (matchdays where they differed): {wins}/{len(vd)} wins, "
+                     f"cumulative {vd.variant_vs_rec.sum():+.1f} pts · raise MU_PRICE only once this is consistently positive.")
     txt = "\n".join(lines)
     (PROCESSED / "scorecard.md").write_text(txt, encoding="utf-8")
     return df, txt

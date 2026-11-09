@@ -83,3 +83,15 @@ def test_trade_hurdle_reduces_trades_and_parses_games_from_why():
     gated = optimise(df, 100.0, prev, 4, min_games_in=3)
     pos = dict(zip(df.name, df.pos))
     assert all(pos[n] == "Head Coach" for n in gated.trades_in)  # only coaches (exempt) are buyable
+
+
+def test_premium_structure_constraints():
+    df = _market()
+    prev = set()
+    sol = optimise(df, budget=100.0, prev_ids=prev, max_trades=11, premium_price=13.0, premium_per_pos=1)
+    pl = sol.squad[sol.squad.pos != "Head Coach"]
+    assert sol.status.startswith("Optimal")
+    for pos in ("Guard", "Forward", "Center"):
+        assert (pl[pl.pos == pos].quotation >= 13.0).sum() >= 1
+    sol2 = optimise(df, budget=100.0, prev_ids=prev, max_trades=11, premium_price=13.0, premium_total=3)
+    assert (sol2.squad[sol2.squad.pos != "Head Coach"].quotation >= 13.0).sum() >= 3

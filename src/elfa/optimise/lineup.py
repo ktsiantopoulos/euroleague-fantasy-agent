@@ -35,9 +35,12 @@ MIN_GAMES_TRADE_IN = 3      # never buy a player with fewer season games (Edwin 
 MIN_PROB_PLAY_TRADE_IN = 0.7  # never buy a player the platform rates below this chance to play
 # Market term ("ride the market"). The frontier of the MD 11 market buys ~0.95 expected points per credit per
 # matchday, and a credit of budget growth is re-spent every remaining round, so it is worth several points
-# over the season: 0.95 x sum(0.9^k, k=1..27) ~ 8. MU_PRICE is set below that on purpose - the expected price
-# move is itself a projection (optimiser's curse) - but well above the 3-matchday-neutral value of ~1.
-MU_PRICE = 4.0              # expected points per credit of expected price change over the horizon
+# over the season: 0.95 x sum(0.9^k, k=1..27) ~ 8. Price moves are small (0.03 credits per point over the
+# season average), so the term is unproven as a weekly lever: the primary recommendation ignores it (MU_PRICE)
+# and a second "market variant" squad is built at MU_PRICE_MARKET, frozen pre-lock and scored by the scorecard
+# alongside the recommendation, so the data decides whether to turn it up or off.
+MU_PRICE = 0.0              # primary recommendation: expected points per credit of expected price change (0 = points only)
+MU_PRICE_MARKET = 8.0       # market variant: season-long value of a credit
 
 
 def _pos_part(mu: float, sd: float) -> float:
@@ -115,6 +118,9 @@ def optimise(
     trade_sd_penalty: float | None = None,
     min_games_in: int | None = None,
     min_prob_play_in: float | None = None,
+    premium_price: float | None = None,
+    premium_per_pos: int = 0,
+    premium_total: int = 0,
 ) -> Solution:
     """`future_factor` weights the points expected beyond this matchday (default FUTURE_FACTOR; 0 = this
     matchday only). The coach counts as one of the `max_trades` like any player.
@@ -124,7 +130,11 @@ def optimise(
 
     Trade discipline: every player not in `prev_ids` costs `trade_hurdle + trade_sd_penalty * md_sd` in the
     objective, and players below `min_games_in` season games or `min_prob_play_in` are not buyable
-    (coaches are exempt from the games/availability gate). `keep_ids` overrides the gate."""
+    (coaches are exempt from the games/availability gate). `keep_ids` overrides the gate.
+
+    Structure (optional): with `premium_price` set, require at least `premium_per_pos` players priced at or above
+    it in each of Guard/Forward/Center and/or `premium_total` such players overall (the top-100 study's
+    "stars" structure; off by default)."""
     exp_price_change = exp_price_change or {}
     mu_price = MU_PRICE if mu_price is None else float(mu_price)
     ff = FUTURE_FACTOR if future_factor is None else float(future_factor)
@@ -197,6 +207,13 @@ def optimise(
     for cl in set(club.values()):
         prob += pulp.lpSum(x[i] for i in ids if club[i] == cl) <= MAX_SAME_CLUB
     prob += pulp.lpSum(x[i] * q[i] for i in ids) <= budget
+    if premium_price is not None:
+        prem = [i for i in players if q[i] >= premium_price]
+        if premium_per_pos:
+            for p_ in ("Guard", "Forward", "Center"):
+                prob += pulp.lpSum(x[i] for i in prem if pos[i] == p_) >= premium_per_pos
+        if premium_total:
+            prob += pulp.lpSum(x[i] for i in prem) >= premium_total
     # trades: new players <= 4, or 3 if the coach also changes
     new_players = pulp.lpSum(x[i] for i in players if i not in prev_ids)
     new_coach = pulp.lpSum(x[i] for i in coaches if i not in prev_ids)
@@ -219,7 +236,8 @@ def optimise(
     if status != "Optimal" and balance:
         return optimise(proj, budget, prev_ids, max_trades, mu_price, exp_price_change, lock_squad, keep_ids, balance=False,
                         future_factor=ff, trade_hurdle=hurdle, trade_sd_penalty=sd_pen, min_games_in=min_g,
-                        min_prob_play_in=min_pp)
+                        min_prob_play_in=min_pp, premium_price=premium_price, premium_per_pos=premium_per_pos,
+                        premium_total=premium_total)
 
     chosen = [i for i in ids if x[i].value() and x[i].value() > 0.5]
     role = {}

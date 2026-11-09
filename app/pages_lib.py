@@ -336,6 +336,22 @@ def page_recommendation(proj: pd.DataFrame, md: int):
         TH.md(TH.trades(b["trades_out"], b["trades_in"], f"Cost {b['cost']} / {rec['budget']}  ·  Captain {b['captain'].upper()}  ·  Coach {b['coach'].upper()}  ·  {b['status']}{kept}"))
     if base.get("note"):
         st.caption(base["note"])
+    var = rec.get("variant") or {}
+    if var:
+        with st.expander(f"Market variant (μ = {var.get('mu_price', 0):.0f} pts/credit) · {var.get('expected', 0):.1f} pts · "
+                         f"{'differs: ' + var.get('summary', '') if var.get('differs') else 'same squad as the recommendation'}"):
+            vt = pd.DataFrame({
+                "": ["Expected pts", "Expected Δbudget (3 MD)", "Trades used", "Captain / coach"],
+                "Recommendation (μ = 0)": [f"{b['expected']:.1f}", f"{(rec.get('market') or {}).get('best_price_gain', 0):+.1f}", str(len(b.get("trades_in", []))), f"{b['captain']} / {b['coach']}"],
+                "Market variant": [f"{var.get('expected', 0):.1f}", f"{var.get('price_gain', 0):+.1f}", str(len(var.get("trades_in", []))), f"{var.get('captain')} / {var.get('coach')}"],
+            })
+            st.table(vt.set_index(""))
+            if var.get("differs"):
+                sw = [s_ for s_ in var.get("swaps", []) if s_.get("out") and s_.get("in")]
+                if sw:
+                    st.dataframe(pd.DataFrame(sw).rename(columns={"out": "Out", "in": "In", "pos": "Pos", "d_pts": "Δ exp pts", "d_price": "Δ credits"}),
+                                 hide_index=True, use_container_width=True)
+            st.caption("Both squads are frozen before the lock and scored after the round — see the 'market variant' column of the scorecard on the Model health page.")
     mk = rec.get("market") or {}
     if mk:
         model = mk.get("model") or {}

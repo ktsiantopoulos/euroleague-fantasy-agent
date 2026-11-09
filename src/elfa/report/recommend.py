@@ -59,6 +59,56 @@ def _flags_section(proj: pd.DataFrame) -> str:
 
 
 
+def variant_diff(best, variant) -> dict:
+    """How the market variant differs from the recommendation: paired swaps (same position where possible)."""
+    b = {str(r.platform_id): r for r in best.squad.itertuples()}
+    v = {str(r.platform_id): r for r in variant.squad.itertuples()}
+    out_ = [b[i] for i in b if i not in v]
+    in_ = [v[i] for i in v if i not in b]
+    swaps = []
+    for o in sorted(out_, key=lambda r: (r.pos, -r.md_pts)):
+        j = next((k for k, r in enumerate(in_) if r.pos == o.pos), None)
+        if j is None and in_:
+            j = 0
+        if j is None:
+            swaps.append({"out": o.name, "in": None, "pos": o.pos})
+            continue
+        r = in_.pop(j)
+        swaps.append({"out": o.name, "in": r.name, "pos": o.pos,
+                      "d_pts": round(float(r.md_pts) - float(o.md_pts), 1),
+                      "d_price": round(float(getattr(r, "dprice", 0.0) or 0.0) - float(getattr(o, "dprice", 0.0) or 0.0), 2)})
+    for r in in_:
+        swaps.append({"out": None, "in": r.name, "pos": r.pos})
+    cap = best.captain != variant.captain
+    differs = bool(swaps) or cap
+    d_pts = round(variant.expected_md_pts - best.expected_md_pts, 1)
+    d_cr = round(variant.price_gain - best.price_gain, 2)
+    parts = [f"{s_['out']} → {s_['in']}" for s_ in swaps if s_["out"] and s_["in"]]
+    if cap:
+        parts.append(f"captain {best.captain} → {variant.captain}")
+    summary = (", ".join(parts) + f" for {d_pts:+.1f} pts and {d_cr:+.1f} credits") if differs else "same squad"
+    return {"differs": differs, "swaps": swaps, "d_pts": d_pts, "d_price": d_cr, "summary": summary}
+
+
+def _fmt_variant(best, variant, vdiff: dict, mu_mkt: float) -> str:
+    rows = [
+        "| | Recommendation (μ = 0) | Market variant |",
+        "|---|---|---|",
+        f"| Expected pts | {best.expected_md_pts} | {variant.expected_md_pts} ({vdiff['d_pts']:+.1f}) |",
+        f"| Expected Δbudget, {HORIZON_TXT} | {best.price_gain:+.1f} | {variant.price_gain:+.1f} ({vdiff['d_price']:+.1f}) |",
+        f"| Trades used | {len(best.trades_in)} | {len(variant.trades_in)} |",
+        f"| Captain / coach | {best.captain} / {best.coach} | {variant.captain} / {variant.coach} |",
+    ]
+    if not vdiff["differs"]:
+        rows.append("| Changes | — | identical squad |")
+        return "\n".join(rows)
+    ch = "; ".join(f"{s_['out']} → {s_['in']} ({s_['d_pts']:+.1f} pts, {s_['d_price']:+.1f} cr)" for s_ in vdiff["swaps"] if s_["out"] and s_["in"])
+    rows.append(f"| Changes | — | {ch or vdiff['summary']} |")
+    rows += ["", "_Both squads are frozen before the lock and scored after the round (scorecard: 'market variant' column); "
+             "once the variant has beaten the recommendation over several matchdays, raise MU_PRICE._"]
+    return "\n".join(rows)
+
+
 def _stale_warning(md_number: int, first: list, cfg: dict) -> list[str]:
     """Banner lines when the matchday was rolled over from the schedule, or when its own round is already
     played and the fixtures fell back to the next round (a stale platform pull - do not act on it)."""
@@ -146,6 +196,10 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         hit = proj[proj.name.str.lower().str.contains(k.lower())]
         keep_ids |= set(hit.platform_id)
     best = run_optimiser(proj, budget, base.ids, trades_left, mu, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc)
+    # market variant: same rules, the market term at its season-long value; shown as a diff and scored alongside
+    mu_mkt = L.MU_PRICE_MARKET
+    variant = run_optimiser(proj, budget, base.ids, trades_left, mu_mkt, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc)
+    vdiff = variant_diff(best, variant)
     # what to change on the platform to get from the pending squad to the recommended one
     best_ids = set(best.squad.platform_id)
     undo_ids, add_ids = changes_between(roster_ids, best_ids)
@@ -193,7 +247,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
          if base.open else []) + [
         f"- Captain **{best.captain}**, coach **{best.coach}**." + (f" Kept by request: {', '.join(keep)}." if keep else ""),
         f"- Market: recommended squad expected to move **{best.price_gain:+.1f} credits** over the next {HORIZON_TXT} "
-        f"(locked squad {hold.price_gain:+.1f}); valued at μ = {mu:.1f} pts/credit in the objective ({best.price_value:+.1f} pts, not in the expected points).",
+        f"(locked squad {hold.price_gain:+.1f}" + (f"; μ = {mu:.1f} pts/credit in the objective, {best.price_value:+.1f} pts" if mu else "; not in the objective") + "). "
+        + (f"Market variant (μ = {mu_mkt:.0f}): {vdiff['summary']} — see below." if vdiff["differs"] else f"The market variant (μ = {mu_mkt:.0f}) picks the same squad."),
         "",
         "## Recommended squad (with trades)",
         _fmt_squad(best.squad),
@@ -201,6 +256,9 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "### In-round plan (from 3,000 simulations)",
         "- " + ("\n- ".join(plan_best.notes) if plan_best.notes else "no frequent swaps — the lineup is mostly set-and-forget"),
         "- Rule of thumb after each night: promote a not-yet-played bench player over a field player of the same position whose realised score is below the bench player's expectation; move the captaincy to the not-yet-played starter with the highest expectation if it beats the captain's realised total.",
+        "",
+        f"## Market variant (μ = {mu_mkt:.0f} pts/credit) vs the recommendation",
+        _fmt_variant(best, variant, vdiff, mu_mkt),
         "",
         f"## {base.label.capitalize()}, best lineup (no trades)",
         _fmt_squad(hold.squad),
@@ -275,12 +333,16 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         "hold": {"expected": hold.expected_md_pts, "inround_gain": round(plan_hold.gain, 1), "cost": hold.cost, "status": hold.status, "captain": hold.captain, "coach": hold.coach, "squad": _records(hold.squad)},
         "best": {"expected": best.expected_md_pts, "inround_gain": round(plan_best.gain, 1), "cost": best.cost, "status": best.status, "captain": best.captain, "coach": best.coach,
                  "trades_out": _pl(best.trades_out), "trades_in": _pl(best.trades_in), "squad": _records(best.squad), "plan": plan_best.notes},
+        "variant": {"mu_price": mu_mkt, "expected": variant.expected_md_pts, "price_gain": variant.price_gain, "cost": variant.cost,
+                    "status": variant.status, "captain": variant.captain, "coach": variant.coach, "differs": vdiff["differs"],
+                    "swaps": vdiff["swaps"], "summary": vdiff["summary"], "trades_out": _pl(variant.trades_out), "trades_in": _pl(variant.trades_in),
+                    "squad": _records(variant.squad)},
         "top_value": top_value,
         "flags": [{"name": r.name, "flags": r.flags} for r in proj[proj.in_roster & proj["flags"].astype(str).str.strip().ne("") & proj["flags"].astype(str).ne("coach")].itertuples()],
     }
     (ROOT / "reports" / f"recommendation_md{md_number:02d}.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
     (ROOT / "reports" / "recommendation_latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-    froze = freeze_if_pre_lock(md_number, proj, first, base, hold, best, budget, trades_left, params=params)
+    froze = freeze_if_pre_lock(md_number, proj, first, base, hold, best, budget, trades_left, params=params, variant=variant)
     print(f"  lock snapshot: {froze}")
     return out
 
@@ -301,7 +363,7 @@ def _squad_records(sol) -> list[dict]:
 
 
 def freeze_if_pre_lock(md_number: int, proj: pd.DataFrame, first: list, base, hold, best, budget: float, trades_left: int,
-                       now: dt.datetime | None = None, params: Params | None = None) -> str:
+                       now: dt.datetime | None = None, params: Params | None = None, variant=None) -> str:
     """Keep the last projection made BEFORE the matchday locks - the only honest thing to score afterwards.
 
     Every pre-lock run overwrites projection_mdXX_locked.csv / decision_mdXX_locked.json; runs after the lock
@@ -320,8 +382,12 @@ def freeze_if_pre_lock(md_number: int, proj: pd.DataFrame, first: list, base, ho
         "budget": budget, "trades_left": trades_left, "baseline_ids": sorted(base.ids),
         "hold": {"expected": float(hold.expected_md_pts), "captain": hold.captain, "squad": _squad_records(hold)},
         "best": {"expected": float(best.expected_md_pts), "captain": best.captain, "squad": _squad_records(best),
-                 "trades_out": best.trades_out, "trades_in": best.trades_in},
+                 "trades_out": best.trades_out, "trades_in": best.trades_in, "price_gain": float(getattr(best, "price_gain", 0.0))},
         "params": dataclasses.asdict(params or Params.load()),
     }
+    if variant is not None:
+        decision["variant"] = {"mu_price": float(L.MU_PRICE_MARKET), "expected": float(variant.expected_md_pts), "captain": variant.captain,
+                               "squad": _squad_records(variant), "trades_out": variant.trades_out, "trades_in": variant.trades_in,
+                               "price_gain": float(getattr(variant, "price_gain", 0.0))}
     (PROCESSED / f"decision_md{md_number:02d}_locked.json").write_text(json.dumps(decision, indent=1, default=str), encoding="utf-8")
     return f"written (locks {lock:%Y-%m-%d %H:%M} UTC)"
