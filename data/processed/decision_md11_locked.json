@@ -1,6 +1,6 @@
 {
  "matchday": 11,
- "frozen_utc": "2026-11-09T13:46:43Z",
+ "frozen_utc": "2026-11-10T09:45:34Z",
  "lock_utc": "2026-11-11T19:44:00Z",
  "budget": 110.8,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "7424"
  ],
  "hold": {
-  "expected": 143.1,
+  "expected": 146.2,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -108,8 +108,8 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 0.0,
-    "md_sd": 0.0
+    "md_pts": 7.12,
+    "md_sd": 7.75
    },
    {
     "platform_id": "3897",
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 10.27,
+    "md_pts": 9.76,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 151.5,
+  "expected": 151.0,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -136,13 +136,13 @@
     "md_sd": 8.72
    },
    {
-    "platform_id": "3838",
-    "name": "Collin Malcolm",
-    "pos": "Forward",
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 18.04,
-    "md_sd": 7.5
+    "md_pts": 16.65,
+    "md_sd": 10.36
    },
    {
     "platform_id": "8730",
@@ -150,7 +150,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.41,
+    "md_pts": 13.39,
     "md_sd": 8.83
    },
    {
@@ -159,7 +159,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 10.63,
+    "md_pts": 10.65,
     "md_sd": 8.66
    },
    {
@@ -168,17 +168,17 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 8.48,
+    "md_pts": 8.47,
     "md_sd": 6.13
    },
    {
-    "platform_id": "3851",
-    "name": "Andres Feliz",
-    "pos": "Guard",
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
     "role": "sixth",
     "captain": false,
-    "md_pts": 16.65,
-    "md_sd": 10.36
+    "md_pts": 18.04,
+    "md_sd": 7.5
    },
    {
     "platform_id": "7424",
@@ -222,14 +222,14 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 10.27,
+    "md_pts": 9.76,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
-   "Kevarrius Hayes",
-   "Chuma Okeke",
    "Tremont Waters",
+   "Chuma Okeke",
+   "Kevarrius Hayes",
    "Mbaye Ndiaye"
   ],
   "trades_in": [
@@ -275,7 +275,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 152.5,
+  "expected": 152.0,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -311,7 +311,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 12.74,
+    "md_pts": 12.76,
     "md_sd": 7.06
    },
    {
@@ -320,7 +320,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 10.63,
+    "md_pts": 10.65,
     "md_sd": 8.66
    },
    {
@@ -329,7 +329,7 @@
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 11.06,
+    "md_pts": 11.08,
     "md_sd": 8.15
    },
    {
@@ -374,14 +374,14 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 10.27,
+    "md_pts": 9.76,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
-   "Kevarrius Hayes",
-   "Yam Madar",
    "Tremont Waters",
+   "Yam Madar",
+   "Kevarrius Hayes",
    "Mbaye Ndiaye"
   ],
   "trades_in": [
