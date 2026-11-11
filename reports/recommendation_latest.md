@@ -2,33 +2,33 @@
 
 **Deadline: 2026-11-11 19:44 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-11-10 09:45 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (4 pending on the platform) · odds ON (10 games)
+Generated 2026-11-11 16:45 UTC · team **UnderTakers86** · budget 110.8 · trades 4 vs the locked squad (4 pending on the platform) · odds ON (10 games)
 _trade window open - 4 pending change(s) are reversible_
 
 ## Decision
 - Game nights: T1=11-11, T2=11-12, T3=11-13. Bench players with later nights are swap options; captain can move to a not-yet-played starter.
-- Locked squad, best lineup: **146.2 pts** expected; in-round swaps add +2.8 (simulated).
-- Pending squad (your 4 current trade(s)), best lineup: **151.0 pts** expected (+4.8 vs the locked squad).
-- Recommended with ≤4 trade(s): **151.0 pts** expected (+4.8 vs locked squad, +0.0 vs pending); in-round swaps add +9.1 (simulated); cost 110.5/110.8.
-- Trades vs the locked squad: OUT Tremont Waters, Chuma Okeke, Kevarrius Hayes, Mbaye Ndiaye → IN Kenneth Faried, Collin Malcolm, Ethan Thompson, Clement Frisch
+- Locked squad, best lineup: **141.7 pts** expected; in-round swaps add +2.8 (simulated).
+- Pending squad (your 4 current trade(s)), best lineup: **150.0 pts** expected (+8.3 vs the locked squad).
+- Recommended with ≤4 trade(s): **150.0 pts** expected (+8.3 vs locked squad, +0.0 vs pending); in-round swaps add +9.1 (simulated); cost 110.5/110.8.
+- Trades vs the locked squad: OUT Kevarrius Hayes, Tremont Waters, Mbaye Ndiaye, Chuma Okeke → IN Kenneth Faried, Collin Malcolm, Ethan Thompson, Clement Frisch
 - **Nothing to change on the platform** — your pending squad is already the recommendation.
 - Captain **Sasha Vezenkov**, coach **Saras Jasikevicius**.
-- Market: recommended squad expected to move **+0.1 credits** over the next 3 matchdays (locked squad -1.1; not in the objective). Market variant (μ = 8): Kenneth Faried → Nikola Tanaskovic, Clement Frisch → Chuma Okeke, Yam Madar → Jared Rhoden for +1.0 pts and +0.3 credits — see below.
+- Market: recommended squad expected to move **+0.1 credits** over the next 3 matchdays (locked squad -1.7; not in the objective). Market variant (μ = 8): Kenneth Faried → Nikola Tanaskovic, Clement Frisch → Chuma Okeke, Yam Madar → Jared Rhoden for +1.2 pts and +0.3 credits — see below.
 
 ## Recommended squad (with trades)
 | slot | name | pos | team | price | Δprice | nights | exp pts | p90 | top100 own% | justification |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.9 | -0.1 | T2 | 23.15 | 34.52 | 42 | 29 min proj (starter, last 34), 0.78 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 64%) → 22.8 |
-| Starter | Andres Feliz | Guard | RMB | 9.3 | +0.1 | T2 | 16.65 | 30.14 | 40 | 25 min proj (starter, last 34), 0.64 PIR/min over 10 g · T2 vs RED (DvP -4.5, win 69%) → 16.4 |
-| Starter | Kenneth Faried | Center | KBA | 10.8 | -0.1 | T1 | 13.39 | 24.71 | 1 | 22 min proj (starter, last 25), 0.63 PIR/min over 10 g · T1 @ PAR (DvP -0.4, win 26%) → 13.4 |
-| Starter | Ethan Thompson | Guard | PAR | 9.1 | +0.2 | T1 | 10.65 | 21.74 | 0 | 24 min proj (starter, last 28), 0.39 PIR/min over 10 g · T1 vs BAS (DvP +1.0, win 74%) → 10.6 |
-| Starter | Clement Frisch | Forward | KBA | 5.3 | +0.1 | T1 | 8.47 | 16.35 | 8 | 21 min proj (starter, last 28), 0.44 PIR/min over 9 g · T1 @ PAR (DvP -2.1, win 26%) → 8.4 |
+| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.9 | -0.1 | T2 | 23.19 | 34.55 | 42 | 29 min proj (starter, last 34), 0.78 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 66%) → 22.8 |
+| Starter | Andres Feliz | Guard | RMB | 9.3 | +0.1 | T2 | 16.66 | 30.15 | 40 | 25 min proj (starter, last 34), 0.64 PIR/min over 10 g · T2 vs RED (DvP -4.5, win 69%) → 16.4 |
+| Starter | Kenneth Faried | Center | KBA | 10.8 | -0.1 | T1 | 13.37 | 24.68 | 1 | 22 min proj (starter, last 25), 0.63 PIR/min over 10 g · T1 @ PAR (DvP -0.4, win 25%) → 13.4 |
+| Starter | Ethan Thompson | Guard | PAR | 9.1 | +0.2 | T1 | 10.67 | 21.76 | 0 | 24 min proj (starter, last 28), 0.39 PIR/min over 10 g · T1 vs BAS (DvP +1.0, win 75%) → 10.7 |
+| Starter | Clement Frisch | Forward | KBA | 5.3 | +0.1 | T1 | 8.46 | 16.34 | 8 | 21 min proj (starter, last 28), 0.44 PIR/min over 9 g · T1 @ PAR (DvP -2.1, win 25%) → 8.4 |
 | 6th man | Collin Malcolm | Forward | EFS | 9.8 | +0.3 | T3 | 18.04 | 27.72 | 19 | 29 min proj (starter, last 32), 0.51 PIR/min over 10 g · T3 vs VIR (DvP +3.5, win 61%) → 17.9 |
-| Bench (50%) | Aliou Diarra | Center | VIR | 10.8 | -0.4 | T3 | 15.65 | 25.28 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 39%) → 15.4 |
-| Bench (50%) | Armoni Brooks | Guard | VBC | 11.3 | 0.0 | T2 | 15.48 | 25.58 | 4 | 21 min proj (bench, last 21), 0.64 PIR/min over 10 g · T2 vs MUN (DvP +3.1, win 74%) → 15.5 |
-| Bench (50%) | Yam Madar | Guard | MTA | 10.5 | -0.2 | T2 | 12.97 | 24.81 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 37%) → 12.9 |
-| Bench (50%) | Alberto Abalde | Forward | RMB | 6.1 | +0.2 | T2 | 11.35 | 21.85 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 69%) → 11.2 |
-| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | 0.0 | T1 | 9.76 | 26.87 | 39 | @ PRS: margin +7, win 69% → EV +9.6 |
+| Bench (50%) | Aliou Diarra | Center | VIR | 10.8 | -0.4 | T3 | 15.64 | 25.28 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 39%) → 15.4 |
+| Bench (50%) | Armoni Brooks | Guard | VBC | 11.3 | 0.0 | T2 | 15.5 | 25.6 | 4 | 21 min proj (bench, last 21), 0.64 PIR/min over 10 g · T2 vs MUN (DvP +3.1, win 75%) → 15.5 |
+| Bench (50%) | Yam Madar | Guard | MTA | 10.5 | -0.2 | T2 | 12.96 | 24.79 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 36%) → 12.9 |
+| Bench (50%) | Alberto Abalde | Forward | RMB | 6.1 | +0.2 | T2 | 11.35 | 21.86 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 69%) → 11.3 |
+| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | 0.0 | T1 | 8.74 | 25.87 | 39 | @ PRS: margin +6, win 68% → EV +8.6 |
 
 ### In-round plan (from 3,000 simulations)
 - Armoni Brooks (G, T2) is promoted from the bench in 72% of simulations
@@ -40,7 +40,7 @@ _trade window open - 4 pending change(s) are reversible_
 ## Market variant (μ = 8 pts/credit) vs the recommendation
 | | Recommendation (μ = 0) | Market variant |
 |---|---|---|
-| Expected pts | 151.0 | 152.0 (+1.0) |
+| Expected pts | 150.0 | 151.2 (+1.2) |
 | Expected Δbudget, 3 matchdays | +0.1 | +0.4 (+0.3) |
 | Trades used | 4 | 4 |
 | Captain / coach | Sasha Vezenkov / Saras Jasikevicius | Sasha Vezenkov / Saras Jasikevicius |
@@ -51,32 +51,32 @@ _Both squads are frozen before the lock and scored after the round (scorecard: '
 ## Locked squad, best lineup (no trades)
 | slot | name | pos | team | price | Δprice | nights | exp pts | p90 | top100 own% | justification |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.9 | -0.1 | T2 | 23.15 | 34.52 | 42 | 29 min proj (starter, last 34), 0.78 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 64%) → 22.8 |
-| Starter | Andres Feliz | Guard | RMB | 9.3 | +0.1 | T2 | 16.65 | 30.14 | 40 | 25 min proj (starter, last 34), 0.64 PIR/min over 10 g · T2 vs RED (DvP -4.5, win 69%) → 16.4 |
-| Starter | Aliou Diarra | Center | VIR | 10.8 | -0.4 | T3 | 15.65 | 25.28 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 39%) → 15.4 |
-| Starter | Armoni Brooks | Guard | VBC | 11.3 | 0.0 | T2 | 15.48 | 25.58 | 4 | 21 min proj (bench, last 21), 0.64 PIR/min over 10 g · T2 vs MUN (DvP +3.1, win 74%) → 15.5 |
-| Starter | Yam Madar | Guard | MTA | 10.5 | -0.2 | T2 | 12.97 | 24.81 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 37%) → 12.9 |
-| 6th man | Alberto Abalde | Forward | RMB | 6.1 | +0.2 | T2 | 11.35 | 21.85 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 69%) → 11.2 |
-| Bench (50%) | Chuma Okeke | Forward | RMB | 8.8 | +0.1 | T2 | 11.1 | 19.17 | 0 | 20 min proj (bench, last 27), 0.50 PIR/min over 9 g · T2 vs RED (DvP -0.4, win 69%) → 11.1 |
+| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.9 | -0.1 | T2 | 23.19 | 34.55 | 42 | 29 min proj (starter, last 34), 0.78 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 66%) → 22.8 |
+| Starter | Andres Feliz | Guard | RMB | 9.3 | +0.1 | T2 | 16.66 | 30.15 | 40 | 25 min proj (starter, last 34), 0.64 PIR/min over 10 g · T2 vs RED (DvP -4.5, win 69%) → 16.4 |
+| Starter | Aliou Diarra | Center | VIR | 10.8 | -0.4 | T3 | 15.64 | 25.28 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 39%) → 15.4 |
+| Starter | Armoni Brooks | Guard | VBC | 11.3 | 0.0 | T2 | 15.5 | 25.6 | 4 | 21 min proj (bench, last 21), 0.64 PIR/min over 10 g · T2 vs MUN (DvP +3.1, win 75%) → 15.5 |
+| Starter | Yam Madar | Guard | MTA | 10.5 | -0.2 | T2 | 12.96 | 24.79 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 36%) → 12.9 |
+| 6th man | Alberto Abalde | Forward | RMB | 6.1 | +0.2 | T2 | 11.35 | 21.86 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 69%) → 11.3 |
+| Bench (50%) | Chuma Okeke | Forward | RMB | 8.8 | +0.1 | T2 | 11.11 | 19.18 | 0 | 20 min proj (bench, last 27), 0.50 PIR/min over 9 g · T2 vs RED (DvP -0.4, win 69%) → 11.1 |
 | Bench (50%) | Tremont Waters | Guard | ASV | 9.7 | -0.1 | T3 | 9.11 | 20.32 | 0 | 15 min proj (bench, last 8), 0.52 PIR/min over 9 g · T3 vs BES (DvP +2.2, win 53%) → 9.1 |
-| Bench (50%) | Mbaye Ndiaye | Forward | OLY | 8.3 | -0.2 | T2 | 8.67 | 22.4 | 0 | 16 min proj (bench, last 12), 0.52 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 64%) → 8.7 |
-| Bench (50%) | Kevarrius Hayes | Center | PAR | 8.3 | -0.4 | T1 | 7.12 | 17.05 | 3 | 22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 74%) → 7.1 · ⚠ doubtful, 50% to play |
-| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | 0.0 | T1 | 9.76 | 26.87 | 39 | @ PRS: margin +7, win 69% → EV +9.6 |
+| Bench (50%) | Mbaye Ndiaye | Forward | OLY | 8.3 | -0.2 | T2 | 8.68 | 22.42 | 0 | 16 min proj (bench, last 12), 0.52 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 66%) → 8.7 |
+| Bench (50%) | Kevarrius Hayes | Center | PAR | 8.3 | -0.9 | T1 | 0.0 | 0.0 | 3 | 22 min proj (bench, last 16), 0.54 PIR/min over 9 g · T1 vs BAS (DvP +2.3, win 75%) → 0.0 · ⚠ OUT (injured) |
+| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | 0.0 | T1 | 8.74 | 25.87 | 39 | @ PRS: margin +6, win 68% → EV +8.6 |
 
 ## Pending squad on the platform (4 trade(s) made, reversible), best lineup
 | slot | name | pos | team | price | Δprice | nights | exp pts | p90 | top100 own% | justification |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.9 | -0.1 | T2 | 23.15 | 34.52 | 42 | 29 min proj (starter, last 34), 0.78 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 64%) → 22.8 |
+| Starter | **Sasha Vezenkov** (C) | Forward | OLY | 18.9 | -0.1 | T2 | 23.19 | 34.55 | 42 | 29 min proj (starter, last 34), 0.78 PIR/min over 10 g · T2 vs DUB (DvP -3.7, win 66%) → 22.8 |
 | Starter | Collin Malcolm | Forward | EFS | 9.8 | +0.3 | T3 | 18.04 | 27.72 | 19 | 29 min proj (starter, last 32), 0.51 PIR/min over 10 g · T3 vs VIR (DvP +3.5, win 61%) → 17.9 |
-| Starter | Kenneth Faried | Center | KBA | 10.8 | -0.1 | T1 | 13.39 | 24.71 | 1 | 22 min proj (starter, last 25), 0.63 PIR/min over 10 g · T1 @ PAR (DvP -0.4, win 26%) → 13.4 |
-| Starter | Ethan Thompson | Guard | PAR | 9.1 | +0.2 | T1 | 10.65 | 21.74 | 0 | 24 min proj (starter, last 28), 0.39 PIR/min over 10 g · T1 vs BAS (DvP +1.0, win 74%) → 10.6 |
-| Starter | Clement Frisch | Forward | KBA | 5.3 | +0.1 | T1 | 8.47 | 16.35 | 8 | 21 min proj (starter, last 28), 0.44 PIR/min over 9 g · T1 @ PAR (DvP -2.1, win 26%) → 8.4 |
-| 6th man | Andres Feliz | Guard | RMB | 9.3 | +0.1 | T2 | 16.65 | 30.14 | 40 | 25 min proj (starter, last 34), 0.64 PIR/min over 10 g · T2 vs RED (DvP -4.5, win 69%) → 16.4 |
-| Bench (50%) | Aliou Diarra | Center | VIR | 10.8 | -0.4 | T3 | 15.65 | 25.28 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 39%) → 15.4 |
-| Bench (50%) | Armoni Brooks | Guard | VBC | 11.3 | 0.0 | T2 | 15.48 | 25.58 | 4 | 21 min proj (bench, last 21), 0.64 PIR/min over 10 g · T2 vs MUN (DvP +3.1, win 74%) → 15.5 |
-| Bench (50%) | Yam Madar | Guard | MTA | 10.5 | -0.2 | T2 | 12.97 | 24.81 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 37%) → 12.9 |
-| Bench (50%) | Alberto Abalde | Forward | RMB | 6.1 | +0.2 | T2 | 11.35 | 21.85 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 69%) → 11.2 |
-| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | 0.0 | T1 | 9.76 | 26.87 | 39 | @ PRS: margin +7, win 69% → EV +9.6 |
+| Starter | Kenneth Faried | Center | KBA | 10.8 | -0.1 | T1 | 13.37 | 24.68 | 1 | 22 min proj (starter, last 25), 0.63 PIR/min over 10 g · T1 @ PAR (DvP -0.4, win 25%) → 13.4 |
+| Starter | Ethan Thompson | Guard | PAR | 9.1 | +0.2 | T1 | 10.67 | 21.76 | 0 | 24 min proj (starter, last 28), 0.39 PIR/min over 10 g · T1 vs BAS (DvP +1.0, win 75%) → 10.7 |
+| Starter | Clement Frisch | Forward | KBA | 5.3 | +0.1 | T1 | 8.46 | 16.34 | 8 | 21 min proj (starter, last 28), 0.44 PIR/min over 9 g · T1 @ PAR (DvP -2.1, win 25%) → 8.4 |
+| 6th man | Andres Feliz | Guard | RMB | 9.3 | +0.1 | T2 | 16.66 | 30.15 | 40 | 25 min proj (starter, last 34), 0.64 PIR/min over 10 g · T2 vs RED (DvP -4.5, win 69%) → 16.4 |
+| Bench (50%) | Aliou Diarra | Center | VIR | 10.8 | -0.4 | T3 | 15.64 | 25.28 | 43 | 17 min proj (bench, last 19), 0.90 PIR/min over 10 g · T3 @ IST (DvP -2.1, win 39%) → 15.4 |
+| Bench (50%) | Armoni Brooks | Guard | VBC | 11.3 | 0.0 | T2 | 15.5 | 25.6 | 4 | 21 min proj (bench, last 21), 0.64 PIR/min over 10 g · T2 vs MUN (DvP +3.1, win 75%) → 15.5 |
+| Bench (50%) | Yam Madar | Guard | MTA | 10.5 | -0.2 | T2 | 12.96 | 24.79 | 12 | 21 min proj (bench, last 21), 0.60 PIR/min over 10 g · T2 vs HTA (DvP -1.0, win 36%) → 12.9 |
+| Bench (50%) | Alberto Abalde | Forward | RMB | 6.1 | +0.2 | T2 | 11.35 | 21.86 | 22 | 21 min proj (starter, last 26), 0.48 PIR/min over 10 g · T2 vs RED (DvP -0.4, win 69%) → 11.3 |
+| Coach | Saras Jasikevicius | Head Coach | FBT | 8.6 | 0.0 | T1 | 8.74 | 25.87 | 39 | @ PRS: margin +6, win 68% → EV +8.6 |
 
 ## Defence vs position (this season, shrunk to league mean; +PIR = concedes more)
 ```
@@ -89,9 +89,9 @@ Center   leak PIR to: MUN (+4.2, n=10), ASV (+2.8, n=10), BAS (+2.3, n=10), DUB 
 ```
 
 ## Top value outside the squad (exp pts per credit, players with a game this matchday)
-- Guard: Nikola Djurisic CZV 4.0 → 6.38 (top100 1%); Sergio Llull RMB 4.2 → 6.39 (top100 4%, only 2 game(s)); Vanja Marinkovic PAR 4.1 → 6.12 (top100 1%, only 1 game(s)); Tyson Carter CZV 7.4 → 10.9 (top100 1%); Cameron Payne EFS 10.2 → 14.86 (top100 8%)
-- Forward: Edwin Jackson ASV 4.1 → 9.05 (top100 1%, only 2 game(s)); Gabriele Procida RMB 4.5 → 8.27 (top100 6%); Metecan Birsen BJK 4.6 → 6.64 (top100 0%); Dejan Davidovac CZV 4.7 → 6.5 (top100 5%); David Lighty ASV 4.5 → 6.15 (top100 0%)
-- Center: Jasiel Rivero VBC 7.3 → 11.44 (top100 0%); Neal Sako VBC 9.2 → 14.11 (top100 0%); Nikola Tanaskovic PAR 8.4 → 12.76 (top100 0%); Ousmane Diop MIL 4.5 → 5.95 (top100 1%); Mathias Lessort PAO 16.7 → 21.9 (top100 8%)
+- Guard: Nikola Djurisic CZV 4.0 → 6.37 (top100 1%); Sergio Llull RMB 4.2 → 6.39 (top100 4%, only 2 game(s)); Vanja Marinkovic PAR 4.1 → 6.13 (top100 1%, only 1 game(s)); Tyson Carter CZV 7.4 → 10.9 (top100 1%); Cameron Payne EFS 10.2 → 14.86 (top100 8%)
+- Forward: Edwin Jackson ASV 4.1 → 9.05 (top100 1%, only 2 game(s)); Gabriele Procida RMB 4.5 → 8.28 (top100 6%); Metecan Birsen BJK 4.6 → 6.64 (top100 0%); Dejan Davidovac CZV 4.7 → 6.5 (top100 5%); David Lighty ASV 4.5 → 6.15 (top100 0%)
+- Center: Jasiel Rivero VBC 7.3 → 11.45 (top100 0%); Neal Sako VBC 9.2 → 14.12 (top100 0%); Nikola Tanaskovic PAR 8.4 → 12.78 (top100 0%); Ousmane Diop MIL 4.5 → 5.96 (top100 1%); Mathias Lessort PAO 16.7 → 21.91 (top100 8%)
 
 ## Flags
 - none

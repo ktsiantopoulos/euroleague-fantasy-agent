@@ -1,4 +1,4 @@
-## run reason: daily  (deadline 2026-11-11T19:44:00+00:00, 34.06 h away)
+## run reason: manual  (deadline 2026-11-11T19:44:00+00:00, 3.03 h away)
 ## pull-official
 E2026: 100 games played, 0 box scores fetched now
 
@@ -141,12 +141,12 @@ top-100: 0 roster previews fetched now
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 10.0 | 43 | 37 | 0 |
+| Aliou Diarra | C | VIR | 10.0 | 43 | 38 | 0 |
 | Sasha Vezenkov | F | OLY | 18.6 | 42 | 46 | 6 |
-| Andres Feliz | G | RMB | 8.5 | 40 | 35 | 57 |
-| Saras Jasikevicius | H | FBT | 8.3 | 39 | 14 | 0 |
+| Andres Feliz | G | RMB | 8.5 | 40 | 36 | 57 |
+| Saras Jasikevicius | H | FBT | 8.3 | 39 | 10 | 0 |
 | Elijah Bryant | G | HTA | 17.0 | 25 | 16 | 5 |
-| Alberto Abalde | F | RMB | 5.4 | 22 | 19 | 1 |
+| Alberto Abalde | F | RMB | 5.4 | 22 | 21 | 1 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
