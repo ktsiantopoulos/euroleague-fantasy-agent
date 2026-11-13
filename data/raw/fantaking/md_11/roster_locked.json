@@ -456,7 +456,7 @@
     "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": true,
+   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,

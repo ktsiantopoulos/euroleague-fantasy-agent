@@ -141,7 +141,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 8463,Kai,Jones,IST,014102,surname+team
 11499,Tosan,Evbuomwan,BAR,015141,surname+team
 11508,Jacob,Toppin,HTA,015151,surname+team
-11518,Mathis,Dossou-yovo,ASV,,UNMATCHED
+11518,Mathis,Dossou-yovo,ASV,007483,surname+team
 11543,Rasheed,Bello,VIR,014802,surname+team
 3860,Devin,Booker,MIL,007056,surname+team
 3911,Kevarrius,Hayes,PAR,010390,surname+team
@@ -341,7 +341,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 8770,Ruzgar,Fenemen,IST,,UNMATCHED
 8830,Francesco,Ferrari,VIR,014219,surname+team
 9006,Caspar,Vossenberg,MUN,,UNMATCHED
-9061,Matteo,Baiocchi,VIR,,UNMATCHED
+9061,Matteo,Baiocchi,VIR,013028,surname+team
 9062,Kilian,Fischer,MUN,,UNMATCHED
 9063,Amit,Ebo,TEL,006020,surname+team
 11495,Nikola,Djurisic,RED,010262,surname+team
@@ -358,4 +358,4 @@ platform_id,first_name,last_name,official_team,person_code,method
 12469,Thierry Henry,Alves de Souza,BAS,014506,surname+team
 12470,Georgios,Bourneles,OLY,013141,surname+team
 12471,Iason,Varvaritis,PAN,,UNMATCHED
-12517,Abdu,Kone,BAR,,UNMATCHED
+12517,Abdu,Kone,BAR,012879,surname+team

@@ -1116,7 +1116,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -1233,7 +1233,7 @@
   "face_path": null,
   "avg_pts": 13.17,
   "is_on_fire": false,
-  "popularity": 0.061,
+  "popularity": 0.062,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1361,7 +1361,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -2376,7 +2376,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -2528,7 +2528,7 @@
   "face_path": null,
   "avg_pts": 14.39,
   "is_on_fire": false,
-  "popularity": 0.124,
+  "popularity": 0.123,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2761,7 +2761,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -3041,7 +3041,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -3111,7 +3111,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -3286,7 +3286,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -3426,7 +3426,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -3543,7 +3543,7 @@
   "face_path": null,
   "avg_pts": 2.91,
   "is_on_fire": false,
-  "popularity": 0.03,
+  "popularity": 0.031,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3578,7 +3578,7 @@
   "face_path": null,
   "avg_pts": 8,
   "is_on_fire": null,
-  "popularity": 0.022,
+  "popularity": 0.023,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -3683,7 +3683,7 @@
   "face_path": null,
   "avg_pts": 4.25,
   "is_on_fire": false,
-  "popularity": 0.022,
+  "popularity": 0.023,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -3706,7 +3706,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -4088,8 +4088,8 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.25,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
   "started_from_bench": false,
   "label": "opponent"
@@ -4161,7 +4161,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -4266,7 +4266,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -4768,7 +4768,7 @@
   "face_path": null,
   "avg_pts": 7.23,
   "is_on_fire": false,
-  "popularity": 0.042,
+  "popularity": 0.043,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4998,10 +4998,10 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -5153,7 +5153,7 @@
   "face_path": null,
   "avg_pts": 10.89,
   "is_on_fire": false,
-  "popularity": 0.039,
+  "popularity": 0.038,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -5211,7 +5211,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": false,
+  "started_from_bench": true,
   "label": "opponent"
  },
  {
@@ -6611,7 +6611,7 @@
   "is_injured": false,
   "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -7414,9 +7414,9 @@
    "number": 3
   },
   "is_injured": false,
-  "probability_of_playing": 0.5,
+  "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -7519,9 +7519,9 @@
    "number": 3
   },
   "is_injured": false,
-  "probability_of_playing": 0.5,
+  "probability_of_playing": 1,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -8778,10 +8778,10 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -8884,7 +8884,7 @@
    "number": 3
   },
   "is_injured": false,
-  "probability_of_playing": 0.5,
+  "probability_of_playing": 1,
   "fantasy_team": null,
   "started_from_bench": true,
   "label": "opponent"
@@ -9583,10 +9583,10 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -9898,10 +9898,10 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -10403,7 +10403,7 @@
   "face_path": null,
   "avg_pts": 3.3,
   "is_on_fire": false,
-  "popularity": 0.037,
+  "popularity": 0.038,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -10528,10 +10528,10 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {
@@ -10823,7 +10823,7 @@
   "face_path": null,
   "avg_pts": 1,
   "is_on_fire": false,
-  "popularity": 0.021,
+  "popularity": 0.022,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -11138,7 +11138,7 @@
   "face_path": null,
   "avg_pts": 0,
   "is_on_fire": false,
-  "popularity": 0.002,
+  "popularity": 0.003,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -12313,10 +12313,10 @@
    "id": 2549,
    "number": 3
   },
-  "is_injured": false,
-  "probability_of_playing": 0.5,
+  "is_injured": true,
+  "probability_of_playing": 0,
   "fantasy_team": null,
-  "started_from_bench": true,
+  "started_from_bench": false,
   "label": "opponent"
  },
  {

@@ -139,7 +139,7 @@
    },
    "quotation": 10.8,
    "is_on_fire": false,
-   "pts": 0,
+   "pts": 11,
    "is_injured": false,
    "probability_of_playing": 1,
    "jersey": "31",
@@ -149,7 +149,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": false,
+   "match_played": true,
    "round": {
     "id": 2549,
     "number": 3
@@ -182,7 +182,7 @@
    },
    "quotation": 9.8,
    "is_on_fire": false,
-   "pts": 0,
+   "pts": 24.2,
    "is_injured": false,
    "probability_of_playing": 1,
    "jersey": "17",
@@ -192,7 +192,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": false,
+   "match_played": true,
    "round": {
     "id": 2549,
     "number": 3
@@ -354,7 +354,7 @@
    },
    "quotation": 7.5,
    "is_on_fire": false,
-   "pts": 0,
+   "pts": 19.8,
    "is_injured": false,
    "probability_of_playing": 1,
    "jersey": "32",
@@ -364,7 +364,7 @@
    "is_captain": false,
    "captain_multiplier": 2,
    "captain_config": null,
-   "match_played": false,
+   "match_played": true,
    "round": {
     "id": 2549,
     "number": 3
