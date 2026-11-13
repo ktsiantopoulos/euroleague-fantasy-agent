@@ -1,6 +1,6 @@
-## run reason: manual  (deadline 2026-11-11T19:44:00+00:00, 3.03 h away)
+## run reason: pre-deadline (1.3h)  (deadline 2026-11-13T17:29:00+00:00, 1.26 h away)
 ## pull-official
-E2026: 100 games played, 0 box scores fetched now
+E2026: 107 games played, 7 box scores fetched now
 
 ## pull-platform
 pulled -> 
@@ -9,19 +9,19 @@ taking/md_11
 team: UnderTakers86  credits: 110.8  trades used: 4/4
 
 ## pull-external
-  fantasyedge: 376 players, 15 columns kept
+  fantasyedge: 365 players, 15 columns kept
 price base: fantasyedge 237, top100_md1 122, first_seen 5
 
 ## build
         games  rows  mismatches
 season                         
-E2026     100  2392           0
+E2026     107  2560           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    303
-UNMATCHED        37
+surname+team    305
+UNMATCHED        35
 coach            20
-team context: 20 clubs · usage: 292 players · FDR: 20 clubs x next 5
+team context: 20 clubs · usage: 294 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 5
 matchdays: 38 (one per round) · current MD 11 = R11, nights T1=2026-11-11, 
 T2=2026-11-12, T3=2026-11-13
@@ -29,8 +29,8 @@ T2=2026-11-12, T3=2026-11-13
 ## reconcile
 player-games compared: 3555
 exact matches: 2358 (66.3%)
-  no_player: 591
-  no_boxscore_row: 585
+  no_boxscore_row: 605
+  no_player: 571
   MISMATCH: 21
 
 first mismatches:
@@ -122,41 +122,26 @@ both on actual points
 | no discipline | 9 | 4 | +11.3 | -6.9 |
 
 ## learn
-learn: train R4-R8, hold-out R9, R10
-- new core: hold-out MAE R9 6.02, R10 6.91 vs current 6.06, 6.91 (gain +0.02)
+learn: train R4-R9, hold-out R10, R11
+- new core: hold-out MAE R10 6.91, R11 6.24 vs current 6.91, 6.21 (gain -0.02)
 → kept current core
-- shadow challenger 202611051527 ('new core', since R10) - would be promoted 
+- shadow challenger 202611131616 ('new core', since R11) - would be promoted 
 after 3 straight newest-round wins
-- kept bias layer (8 segment(s)): hold-out mean |bias| 0.37 → 0.37, RMSE +0.010
-- kept tier layer (3 segment(s)): hold-out segment |bias| R9 1.63 → 1.56, R10 
-1.47 → 1.50, RMSE +0.006
-- sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.12 → 80%)
-health: no drift flags
-
-## top-100
-top-100: 0 roster previews fetched now
-# Top-213 managers — matchdays 1–10
-
-## Ownership in the top 213, matchday 10
-
-| player | pos | club | price | top own% | global% | captain # |
-|---|---|---|---|---|---|---|
-| Aliou Diarra | C | VIR | 10.0 | 43 | 38 | 0 |
-| Sasha Vezenkov | F | OLY | 18.6 | 42 | 46 | 6 |
-| Andres Feliz | G | RMB | 8.5 | 40 | 36 | 57 |
-| Saras Jasikevicius | H | FBT | 8.3 | 39 | 10 | 0 |
-| Elijah Bryant | G | HTA | 17.0 | 25 | 16 | 5 |
-| Alberto Abalde | F | RMB | 5.4 | 22 | 21 | 1 |
+- kept bias layer (9 segment(s)): hold-out mean |bias| 0.24 → 0.25, RMSE +0.008
+- kept tier layer (3 segment(s)): hold-out segment |bias| R10 1.47 → 1.57, R11 
+1.18 → 1.58, RMSE +0.052
+- sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.105 → 80%)
+DRIFT: model lost to a naive baseline in R10 and R11
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
 mae_base_last3  corr_base_last3
-all dressed players 1630       5.63       0.424            5.8           0.407  
-6.06            0.375
-projected >= 15 min  935       6.27       0.320            6.5           0.302  
-6.86            0.257
-   >= 3 prior games 1514       5.68       0.427            5.8           0.415  
-6.08            0.379
+all dressed players 1796       5.61       0.429           5.76           0.411  
+6.05            0.374
+projected >= 15 min 1040       6.26       0.324           6.46           0.310  
+6.84            0.258
+   >= 3 prior games 1670       5.65       0.432           5.76           0.420  
+6.06            0.379
 
 ## recommend
 one club; 1 point per credit for bench players under 6.0.

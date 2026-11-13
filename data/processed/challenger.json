@@ -1,6 +1,6 @@
 {
- "id": "202611051527",
- "since_round": 10,
+ "id": "202611131616",
+ "since_round": 11,
  "name": "new core",
  "params": {
   "w_minutes": [
@@ -32,6 +32,7 @@
    "Guard|15-20": 1.092,
    "Guard|<10": 1.6
   },
+  "tier_bias": {},
   "flags": {}
  }
 }
