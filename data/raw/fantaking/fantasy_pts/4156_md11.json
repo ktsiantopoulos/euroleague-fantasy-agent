@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1538,
+  "number": 11
+ },
+ "round": {
+  "id": 2547,
+  "number": 1
+ },
+ "match": {
+  "id": 12025,
+  "status": "played",
+  "ot": true,
+  "started_at": "2026-11-11T19:45:00.000000Z",
+  "home_team": {
+   "id": 150,
+   "name": "Paris Basketball",
+   "abbreviation": "PBB",
+   "score": 111
+  },
+  "away_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 109
+  }
+ },
+ "fantasy_pts": 2.2,
+ "stats_items": [
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  }
+ ],
+ "label": "opponent"
+}

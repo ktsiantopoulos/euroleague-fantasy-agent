@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-13T22:53:53Z",
+ "generated_utc": "2026-11-14T07:39:25Z",
  "drift": false,
  "reasons": [],
  "per_round": [
@@ -17,25 +17,25 @@
   },
   {
    "round": 6,
-   "mae_model": 6.17,
+   "mae_model": 6.16,
    "mae_best_baseline": 6.4,
    "model_wins": true
   },
   {
    "round": 7,
-   "mae_model": 6.44,
+   "mae_model": 6.43,
    "mae_best_baseline": 6.65,
    "model_wins": true
   },
   {
    "round": 8,
-   "mae_model": 6.13,
+   "mae_model": 6.12,
    "mae_best_baseline": 6.2,
    "model_wins": true
   },
   {
    "round": 9,
-   "mae_model": 6.06,
+   "mae_model": 6.05,
    "mae_best_baseline": 6.12,
    "model_wins": true
   },
@@ -47,16 +47,16 @@
   },
   {
    "round": 11,
-   "mae_model": 6.2,
+   "mae_model": 6.21,
    "mae_best_baseline": 6.23,
    "model_wins": true
   }
  ],
  "calibration": {
   "n": 1816,
-  "above_p90": 0.128,
-  "below_p10": 0.076,
-  "inside_80": 0.796,
+  "above_p90": 0.129,
+  "below_p10": 0.075,
+  "inside_80": 0.795,
   "z_sd": 1.051,
   "sd_scale": 1.009
  },
@@ -66,7 +66,7 @@
   "minutes_share": 0.335,
   "rate_share": 0.665,
   "dnp_misses": 17,
-  "dnp_cost": 99.7
+  "dnp_cost": 99.6
  },
  "params": {
   "w_minutes": [

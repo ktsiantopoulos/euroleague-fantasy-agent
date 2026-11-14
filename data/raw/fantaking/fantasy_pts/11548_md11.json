@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1538,
+  "number": 11
+ },
+ "round": {
+  "id": 2549,
+  "number": 3
+ },
+ "match": {
+  "id": 12033,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-13T17:30:00.000000Z",
+  "home_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 103
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 91
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1538,
+  "number": 11
+ },
+ "round": {
+  "id": 2548,
+  "number": 2
+ },
+ "match": {
+  "id": 12027,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-12T19:05:00.000000Z",
+  "home_team": {
+   "id": 148,
+   "name": "Maccabi Rapyd Tel Aviv",
+   "abbreviation": "MTA",
+   "score": 80
+  },
+  "away_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 73
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

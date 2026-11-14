@@ -1,0 +1,393 @@
+{
+ "matchday": 12,
+ "frozen_utc": "2026-11-14T07:41:09Z",
+ "lock_utc": "2026-11-17T15:59:00Z",
+ "budget": 113.2,
+ "trades_left": 4,
+ "baseline_ids": [
+  "3766",
+  "3776",
+  "3833",
+  "3838",
+  "3851",
+  "3897",
+  "3930",
+  "3991",
+  "7223",
+  "7424",
+  "8567"
+ ],
+ "hold": {
+  "expected": 157.6,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 23.47,
+    "md_sd": 8.46
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.82,
+    "md_sd": 7.48
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.66,
+    "md_sd": 10.1
+   },
+   {
+    "platform_id": "8567",
+    "name": "Talen Horton-Tucker",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.36,
+    "md_sd": 9.79
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 14.36,
+    "md_sd": 7.65
+   },
+   {
+    "platform_id": "3833",
+    "name": "Armoni Brooks",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 13.23,
+    "md_sd": 7.6
+   },
+   {
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.3,
+    "md_sd": 8.93
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.14,
+    "md_sd": 7.85
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.13,
+    "md_sd": 6.05
+   },
+   {
+    "platform_id": "3776",
+    "name": "Wenyen Gabriel",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 8.99,
+    "md_sd": 8.36
+   },
+   {
+    "platform_id": "3897",
+    "name": "Saras Jasikevicius",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 12.91,
+    "md_sd": 13.15
+   }
+  ]
+ },
+ "best": {
+  "expected": 168.9,
+  "captain": "Jonas Valanciunas",
+  "squad": [
+   {
+    "platform_id": "11549",
+    "name": "Jonas Valanciunas",
+    "pos": "Center",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 25.63,
+    "md_sd": 6.98
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.82,
+    "md_sd": 7.48
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.66,
+    "md_sd": 10.1
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 14.36,
+    "md_sd": 7.65
+   },
+   {
+    "platform_id": "3930",
+    "name": "Yam Madar",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 12.3,
+    "md_sd": 8.93
+   },
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 23.47,
+    "md_sd": 8.46
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.14,
+    "md_sd": 7.85
+   },
+   {
+    "platform_id": "3842",
+    "name": "Scottie Wilbekin",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.0,
+    "md_sd": 8.4
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.13,
+    "md_sd": 6.05
+   },
+   {
+    "platform_id": "3975",
+    "name": "Sebastian Herrera",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.03,
+    "md_sd": 5.7
+   },
+   {
+    "platform_id": "3897",
+    "name": "Saras Jasikevicius",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 12.91,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Wenyen Gabriel",
+   "Armoni Brooks",
+   "Talen Horton-Tucker"
+  ],
+  "trades_in": [
+   "Jonas Valanciunas",
+   "Scottie Wilbekin",
+   "Sebastian Herrera"
+  ],
+  "price_gain": -0.07
+ },
+ "params": {
+  "w_minutes": [
+   0.1,
+   0.3,
+   0.6
+  ],
+  "rate_prior_minutes": 40.0,
+  "lam_recent": 0.3,
+  "eta_home": 0.02,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.8,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.096,
+  "bias": {
+   "Center|10-15": 1.078,
+   "Center|15-20": 1.048,
+   "Center|<10": 1.131,
+   "Forward|10-15": 1.203,
+   "Forward|15-20": 1.069,
+   "Forward|<10": 1.284,
+   "Guard|10-15": 1.042,
+   "Guard|15-20": 1.092,
+   "Guard|<10": 1.6
+  },
+  "tier_bias": {},
+  "flags": {}
+ },
+ "variant": {
+  "mu_price": 8.0,
+  "expected": 170.0,
+  "captain": "Jonas Valanciunas",
+  "squad": [
+   {
+    "platform_id": "11549",
+    "name": "Jonas Valanciunas",
+    "pos": "Center",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 25.63,
+    "md_sd": 6.98
+   },
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 23.47,
+    "md_sd": 8.46
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.82,
+    "md_sd": 7.48
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 16.66,
+    "md_sd": 10.1
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 14.36,
+    "md_sd": 7.65
+   },
+   {
+    "platform_id": "3833",
+    "name": "Armoni Brooks",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 13.23,
+    "md_sd": 7.6
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.14,
+    "md_sd": 7.85
+   },
+   {
+    "platform_id": "7217",
+    "name": "Tyson Carter",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.83,
+    "md_sd": 8.06
+   },
+   {
+    "platform_id": "3916",
+    "name": "Gabriele Procida",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.53,
+    "md_sd": 7.83
+   },
+   {
+    "platform_id": "3975",
+    "name": "Sebastian Herrera",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.03,
+    "md_sd": 5.7
+   },
+   {
+    "platform_id": "3897",
+    "name": "Saras Jasikevicius",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 12.91,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Wenyen Gabriel",
+   "Clement Frisch",
+   "Talen Horton-Tucker",
+   "Yam Madar"
+  ],
+  "trades_in": [
+   "Jonas Valanciunas",
+   "Tyson Carter",
+   "Sebastian Herrera",
+   "Gabriele Procida"
+  ],
+  "price_gain": 0.14
+ }
+}

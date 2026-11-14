@@ -1,0 +1,56 @@
+{
+ "matchday": {
+  "id": 1538,
+  "number": 11
+ },
+ "round": {
+  "id": 2549,
+  "number": 3
+ },
+ "match": {
+  "id": 12034,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-13T19:15:00.000000Z",
+  "home_team": {
+   "id": 151,
+   "name": "Panathinaikos AKTOR Athens",
+   "abbreviation": "PAO",
+   "score": 74
+  },
+  "away_team": {
+   "id": 140,
+   "name": "FC Barcelona",
+   "abbreviation": "BAR",
+   "score": 76
+  }
+ },
+ "fantasy_pts": 8,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 8,
+   "fantasy_pts": 8
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 2,
+   "fantasy_pts": 2
+  },
+  {
+   "id": 199,
+   "name": "pf",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}
