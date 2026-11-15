@@ -5,27 +5,27 @@
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 18.9 | 36 | 46 | 62 |
-| Aliou Diarra | C | VIR | 10.8 | 35 | 38 | 0 |
-| Andres Feliz | G | RMB | 9.3 | 35 | 36 | 0 |
-| Joan Penarroya | H | PAR | 6.2 | 31 | 30 | 0 |
-| Collin Malcolm | F | EFS | 9.8 | 25 | 20 | 0 |
+| Aliou Diarra | C | VIR | 10.8 | 35 | 35 | 0 |
+| Andres Feliz | G | RMB | 9.3 | 35 | 38 | 0 |
+| Joan Penarroya | H | PAR | 6.2 | 31 | 23 | 0 |
+| Collin Malcolm | F | EFS | 9.8 | 25 | 22 | 0 |
 | Alberto Abalde | F | RMB | 6.1 | 24 | 22 | 0 |
-| Carlik Jones | G | PAR | 13.7 | 20 | 24 | 0 |
-| Jonas Valanciunas | C | ZAL | 16.9 | 19 | 17 | 6 |
+| Carlik Jones | G | PAR | 13.7 | 20 | 23 | 0 |
+| Jonas Valanciunas | C | ZAL | 16.9 | 19 | 19 | 6 |
 | TJ Shorts | G | VBC | 16.8 | 17 | 24 | 11 |
-| Stefan Joksimovic | F | KBA | 4.2 | 16 | 15 | 0 |
+| Stefan Joksimovic | F | KBA | 4.2 | 16 | 16 | 0 |
 | Elijah Bryant | G | HTA | 17.7 | 15 | 16 | 5 |
 | Azuolas Tubelis | F | ZAL | 12.6 | 10 | 19 | 0 |
-| Kendrick Nunn | G | PAO | 14.8 | 10 | 15 | 2 |
-| Cameron Payne | G | EFS | 10.2 | 8 | 12 | 0 |
+| Kendrick Nunn | G | PAO | 14.8 | 10 | 16 | 2 |
+| Cameron Payne | G | EFS | 10.2 | 8 | 10 | 0 |
 | Clement Frisch | F | KBA | 5.3 | 8 | 3 | 0 |
 | Braxton Key | F | FBT | 7.8 | 8 | 7 | 0 |
-| Xavier Albert | H | VBC | 8.0 | 7 | 9 | 0 |
-| Nikola Tanaskovic | C | PAR | 8.4 | 6 | 8 | 0 |
+| Xavier Albert | H | VBC | 8.0 | 7 | 7 | 0 |
+| Nikola Tanaskovic | C | PAR | 8.4 | 6 | 7 | 0 |
 | Arijan Lakic | F | PAR | 4.0 | 5 | 23 | 0 |
-| Kostas Papanikolaou | F | OLY | 4.2 | 5 | 17 | 0 |
+| Kostas Papanikolaou | F | OLY | 4.2 | 5 | 14 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Collin Malcolm (+5 pp), Clement Frisch (+5 pp), Evan Fournier (+3 pp), Alberto Abalde (+2 pp), Jonas Valanciunas (+2 pp), Braxton Key (+1 pp), Stefan Joksimovic (+1 pp), Joan Penarroya (+1 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Joan Penarroya (+8 pp), Clement Frisch (+5 pp), Collin Malcolm (+3 pp), Evan Fournier (+3 pp), Alberto Abalde (+2 pp), Dwight Powell (+1 pp), Braxton Key (+1 pp), Stefan Joksimovic (+0 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (151), Jonas Valanciunas (29), Mathias Lessort (24)
@@ -45,7 +45,7 @@
 
 ## Most common moves (count of top teams)
 - MD2: IN Xavier Albert (68), Eleftherios Mantzoukas (64), Mathias Lessort (58), Marc-owen Fodzo Dada (49) · OUT Joel Parra (65), Saras Jasikevicius (63), Matteo Spagnolo (53), Jonas Valanciunas (40)
-- MD3: IN Azuolas Tubelis (98), Aliou Diarra (98), Andres Feliz (43), Nikos Rogkavopoulos (38) · OUT Braxton Key (77), Yam Madar (65), Saras Jasikevicius (60), Joel Parra (46)
+- MD3: IN Aliou Diarra (98), Azuolas Tubelis (98), Andres Feliz (43), Nikos Rogkavopoulos (38) · OUT Braxton Key (77), Yam Madar (65), Saras Jasikevicius (60), Joel Parra (46)
 - MD4: IN Aliou Diarra (81), Georgios Bartzokas (72), Theo Maledon (70), Pedro Martinez (59) · OUT Zeljko Obradovic (95), Xavier Albert (90), Carlik Jones (70), Mathias Lessort (56)
 - MD5: IN Dimitris Itoudis (93), Elijah Bryant (89), Semi Ojeleye (83), Mfiondu Kabengele (38) · OUT Azuolas Tubelis (104), Georgios Bartzokas (75), Nadir Hifi (55), Eleftherios Mantzoukas (48)
 - MD6: IN Pedro Martinez (131), TJ Shorts (68), Jean Montero (64), Andres Feliz (61) · OUT Elijah Bryant (132), Dimitris Itoudis (92), Nikos Rogkavopoulos (64), Xavi Pascual (39)

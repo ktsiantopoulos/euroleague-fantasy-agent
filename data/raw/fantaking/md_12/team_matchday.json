@@ -12,7 +12,7 @@
  "pts": 0,
  "plus": 0,
  "wildcard_used": false,
- "trades": 0,
+ "trades": 4,
  "max_num_trades_per_matchday": 4,
  "defense_modifier": null
 }

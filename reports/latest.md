@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-17T15:59:00+00:00, 80.47 h away)
+## run reason: daily  (deadline 2026-11-17T15:59:00+00:00, 54.73 h away)
 ## pull-official
 E2026: 110 games played, 0 box scores fetched now
 
@@ -6,7 +6,7 @@ E2026: 110 games played, 0 box scores fetched now
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_12
-team: UnderTakers86  credits: 113.2  trades used: 0/4
+team: UnderTakers86  credits: 113.2  trades used: 4/4
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
@@ -140,7 +140,7 @@ after 3 straight newest-round wins
 health: no drift flags
 
 ## top-100
-top-100: 196 roster previews fetched now
+top-100: 0 roster previews fetched now
 # Top-251 managers — matchdays 1–11
 
 ## Ownership in the top 251, matchday 11
@@ -148,10 +148,10 @@ top-100: 196 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 18.9 | 36 | 46 | 62 |
-| Aliou Diarra | C | VIR | 10.8 | 35 | 38 | 0 |
-| Andres Feliz | G | RMB | 9.3 | 35 | 36 | 0 |
-| Joan Penarroya | H | PAR | 6.2 | 31 | 30 | 0 |
-| Collin Malcolm | F | EFS | 9.8 | 25 | 20 | 0 |
+| Aliou Diarra | C | VIR | 10.8 | 35 | 35 | 0 |
+| Andres Feliz | G | RMB | 9.3 | 35 | 38 | 0 |
+| Joan Penarroya | H | PAR | 6.2 | 31 | 23 | 0 |
+| Collin Malcolm | F | EFS | 9.8 | 25 | 22 | 0 |
 | Alberto Abalde | F | RMB | 6.1 | 24 | 22 | 0 |
 
 ## backtest
