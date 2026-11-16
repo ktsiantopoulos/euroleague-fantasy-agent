@@ -1,4 +1,4 @@
-## run reason: daily  (deadline 2026-11-17T15:59:00+00:00, 54.73 h away)
+## run reason: daily  (deadline 2026-11-17T15:59:00+00:00, 30.47 h away)
 ## pull-official
 E2026: 110 games played, 0 box scores fetched now
 
@@ -10,7 +10,7 @@ team: UnderTakers86  credits: 113.2  trades used: 4/4
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
-price base: fantasyedge 237, top100_md1 122, first_seen 5
+price base: fantasyedge 237, top100_md1 122, first_seen 6
 
 ## build
         games  rows  mismatches
@@ -18,19 +18,20 @@ season
 E2026     110  2632           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    308
-UNMATCHED        32
-coach            20
+surname+team        307
+UNMATCHED            33
+coach                20
+surname+any-team      1
 team context: 20 clubs · usage: 295 players · FDR: 20 clubs x next 5
-price base: fantasyedge 237, top100_md1 122, first_seen 5
+price base: fantasyedge 237, top100_md1 122, first_seen 6
 matchdays: 38 (one per round) · current MD 12 = R12, nights T1=2026-11-17, 
 T2=2026-11-18
 
 ## reconcile
-player-games compared: 3922
-exact matches: 2597 (66.2%)
-  no_boxscore_row: 700
-  no_player: 604
+player-games compared: 3923
+exact matches: 2605 (66.4%)
+  no_boxscore_row: 703
+  no_player: 594
   MISMATCH: 21
 
 first mismatches:
@@ -76,18 +77,18 @@ corr 0.608 · above p90 11% / below p10 8% (target 10% each)
 corr 0.498 · above p90 11% / below p10 6% (target 10% each)
 - MD10: 299 players · MAE 5.28 (platform avg_pts baseline 6.15) · bias +0.32 · 
 corr 0.549 · above p90 12% / below p10 6% (target 10% each)
-- MD11: 302 players · MAE 5.00 (platform avg_pts baseline 5.76) · bias +0.43 · 
-corr 0.561 · above p90 11% / below p10 7% (target 10% each)
+- MD11: 303 players · MAE 5.06 (platform avg_pts baseline 5.82) · bias +0.35 · 
+corr 0.553 · above p90 11% / below p10 7% (target 10% each)
 
 ## Bias by segment (mean projected − actual; positive = we over-project)
-- position: Center -1.2 (n=225), Forward +0.6 (n=421), Guard +0.2 (n=543)
-- projected minutes: <10 +0.3 (n=251), 10-20 +0.1 (n=595), 20-30 +0.0 (n=295)
-- price: ≤6 +0.8 (n=302), 6-9 -0.1 (n=472), 9-13 +0.2 (n=309), 13+ -0.9 (n=106)
-- availability: doubtful +0.4 (n=99), fit +0.1 (n=1090)
+- position: Center -1.2 (n=225), Forward +0.6 (n=421), Guard +0.2 (n=544)
+- projected minutes: <10 +0.3 (n=251), 10-20 +0.1 (n=595), 20-30 -0.0 (n=296)
+- price: ≤6 +0.8 (n=302), 6-9 -0.2 (n=473), 9-13 +0.2 (n=309), 13+ -0.9 (n=106)
+- availability: doubtful +0.4 (n=99), fit +0.1 (n=1091)
 
 ## Biggest misses
 - under-projected: Lonnie Walker IV (0→40), Antonio Blakeney (9→38), Austin 
-Wiley (7→35), Nadir Hifi (16→43), Theo Maledon (16→38)
+Wiley (7→35), Nadir Hifi (16→43), Evan Fournier (7→31)
 - over-projected: Elijah Bryant (19→-6), Tyrese Martin (13→-4), Scottie Wilbekin
 (11→-5), Tyson Ward (13→-2), Sylvain Francisco (14→-1)
 
@@ -106,10 +107,10 @@ trades (actual) | trades: agent / you | hindsight | regret | captain regret |
 | 10 | 148.7 ± 30.4 | 176.9 | +0.93 | 189.4 | — | 155.35 | +34.1 / +21.6 | 279.6
 | 102.7 | 0.0 (Sasha Vezenkov) |
 | 11 | 151.7 ± 29.8 | 182.6 | +1.03 | 147.7 | 151.2 (+3.5) | 145.3 | +2.4 / 
-+37.3 | 257.35 | 74.8 | 4.4 (Sasha Vezenkov) |
++37.3 | 257.9 | 75.3 | 4.4 (Sasha Vezenkov) |
 
 Mean z +0.69 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
-mean regret 94.1 · cumulative trade value agent +19.8 / you +51.9
+mean regret 94.2 · cumulative trade value agent +19.8 / you +51.9
 Market variant vs recommendation (matchdays where they differed): 1/1 wins, 
 cumulative +3.5 pts · raise MU_PRICE only once this is consistently positive.
 
@@ -129,14 +130,14 @@ squad, both on actual points
 
 ## learn
 learn: train R4-R9, hold-out R10, R11
-- new core: hold-out MAE R10 6.91, R11 6.19 vs current 6.91, 6.21 (gain +0.01)
+- new core: hold-out MAE R10 6.91, R11 6.18 vs current 6.91, 6.20 (gain +0.01)
 → kept current core
 - shadow challenger 202611131616 ('new core', since R11) - would be promoted 
 after 3 straight newest-round wins
-- kept bias layer (9 segment(s)): hold-out mean |bias| 0.25 → 0.25, RMSE +0.008
-- kept tier layer (3 segment(s)): hold-out segment |bias| R10 1.45 → 1.55, R11 
-1.10 → 1.31, RMSE +0.042
-- sd scale kept at 1.096 (hold-out 80% band 79%; candidate ×1.106 → 80%)
+- kept bias layer (9 segment(s)): hold-out mean |bias| 0.24 → 0.25, RMSE +0.008
+- kept tier layer (3 segment(s)): hold-out segment |bias| R10 1.47 → 1.57, R11 
+1.19 → 1.35, RMSE +0.039
+- sd scale kept at 1.096 (hold-out 80% band 80%; candidate ×1.105 → 80%)
 health: no drift flags
 
 ## top-100
@@ -148,9 +149,9 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 18.9 | 36 | 46 | 62 |
-| Aliou Diarra | C | VIR | 10.8 | 35 | 35 | 0 |
+| Aliou Diarra | C | VIR | 10.8 | 35 | 34 | 0 |
 | Andres Feliz | G | RMB | 9.3 | 35 | 38 | 0 |
-| Joan Penarroya | H | PAR | 6.2 | 31 | 23 | 0 |
+| Joan Penarroya | H | PAR | 6.2 | 31 | 20 | 0 |
 | Collin Malcolm | F | EFS | 9.8 | 25 | 22 | 0 |
 | Alberto Abalde | F | RMB | 6.1 | 24 | 22 | 0 |
 
@@ -159,7 +160,7 @@ top-100: 0 roster previews fetched now
 mae_base_last3  corr_base_last3
 all dressed players 1865       5.62       0.428           5.77           0.408  
 6.05            0.375
-projected >= 15 min 1082       6.26       0.320           6.46           0.305  
+projected >= 15 min 1082       6.26       0.321           6.46           0.305  
 6.83            0.259
    >= 3 prior games 1737       5.66       0.430           5.77           0.417  
 6.07            0.379
