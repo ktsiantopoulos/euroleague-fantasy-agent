@@ -1,4 +1,4 @@
-## run reason: daily  (deadline 2026-11-17T15:59:00+00:00, 30.47 h away)
+## run reason: manual  (deadline 2026-11-17T15:59:00+00:00, 22.40 h away)
 ## pull-official
 E2026: 110 games played, 0 box scores fetched now
 
@@ -10,7 +10,7 @@ team: UnderTakers86  credits: 113.2  trades used: 4/4
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
-price base: fantasyedge 237, top100_md1 122, first_seen 6
+price base: fantasyedge 237, top100_md1 122, first_seen 7
 
 ## build
         games  rows  mismatches
@@ -18,12 +18,12 @@ season
 E2026     110  2632           0
 teams mapped: 20; needs attention: 0
 method
-surname+team        307
-UNMATCHED            33
+surname+team        306
+UNMATCHED            34
 coach                20
-surname+any-team      1
+surname+any-team      2
 team context: 20 clubs · usage: 295 players · FDR: 20 clubs x next 5
-price base: fantasyedge 237, top100_md1 122, first_seen 6
+price base: fantasyedge 237, top100_md1 122, first_seen 7
 matchdays: 38 (one per round) · current MD 12 = R12, nights T1=2026-11-17, 
 T2=2026-11-18
 
@@ -148,11 +148,11 @@ top-100: 0 roster previews fetched now
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 18.9 | 36 | 46 | 62 |
-| Aliou Diarra | C | VIR | 10.8 | 35 | 34 | 0 |
+| Sasha Vezenkov | F | OLY | 18.9 | 36 | 47 | 62 |
+| Aliou Diarra | C | VIR | 10.8 | 35 | 33 | 0 |
 | Andres Feliz | G | RMB | 9.3 | 35 | 38 | 0 |
-| Joan Penarroya | H | PAR | 6.2 | 31 | 20 | 0 |
-| Collin Malcolm | F | EFS | 9.8 | 25 | 22 | 0 |
+| Joan Penarroya | H | PAR | 6.2 | 31 | 19 | 0 |
+| Collin Malcolm | F | EFS | 9.8 | 25 | 23 | 0 |
 | Alberto Abalde | F | RMB | 6.1 | 24 | 22 | 0 |
 
 ## backtest
@@ -169,5 +169,5 @@ projected >= 15 min 1082       6.26       0.321           6.46           0.305
 one club; 1 point per credit for bench players under 6.0.
 - Trade discipline: each incoming player must clear 2.0 pts + 0.00×sd; no 
 trade-ins with < 3 season games or < 70% to play (objective discount on this 
-squad: 6.0; not deducted from the expected points).
+squad: 8.0; not deducted from the expected points).
 - Optimiser status: Optimal / Optimal.

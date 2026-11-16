@@ -226,7 +226,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 3921,Pablo,Laso,IST,,coach
 3975,Sebastian,Herrera,PRS,012611,surname+team
 4758,Perry,Dozier,IST,012742,surname+team
-3917,Kamar,Baldwin,MUN,012597,surname+team
+3917,Kamar,Baldwin,TEL,012597,surname+any-team
 7238,Rodions,Kurucs,BAS,005713,surname+team
 7867,Armando,Bacot,TEL,014015,surname+team
 11509,Eugene,German,HTA,015152,surname+team
@@ -260,6 +260,7 @@ platform_id,first_name,last_name,official_team,person_code,method
 11525,Antonis,Karagiannidis,OLY,015126,surname+team
 3916,Gabriele,Procida,MAD,008384,surname+team
 7219,Amath,M'baye,PRS,,UNMATCHED
+10947,Marcelinho,Huertas,DUB,,UNMATCHED
 11506,Ignas,Sargiunas,ULK,006896,surname+team
 3915,Matteo,Spagnolo,BAS,008173,surname+team
 3927,Daulton,Hommes,PRS,011949,surname+team

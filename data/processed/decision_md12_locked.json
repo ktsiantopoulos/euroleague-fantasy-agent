@@ -1,6 +1,6 @@
 {
  "matchday": 12,
- "frozen_utc": "2026-11-16T09:34:15Z",
+ "frozen_utc": "2026-11-16T17:38:20Z",
  "lock_utc": "2026-11-17T15:59:00Z",
  "budget": 113.2,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "8567"
  ],
  "hold": {
-  "expected": 158.1,
+  "expected": 158.2,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -27,7 +27,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 23.51,
+    "md_pts": 23.54,
     "md_sd": 8.46
    },
    {
@@ -45,7 +45,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.69,
+    "md_pts": 16.7,
     "md_sd": 10.1
    },
    {
@@ -54,7 +54,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.43,
+    "md_pts": 15.42,
     "md_sd": 9.79
    },
    {
@@ -63,7 +63,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.95,
+    "md_pts": 13.94,
     "md_sd": 7.65
    },
    {
@@ -81,7 +81,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 12.3,
+    "md_pts": 12.28,
     "md_sd": 8.93
    },
    {
@@ -99,7 +99,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.09,
+    "md_pts": 9.08,
     "md_sd": 6.05
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 13.74,
+    "md_pts": 13.81,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 169.4,
+  "expected": 170.6,
   "captain": "Jonas Valanciunas",
   "squad": [
    {
@@ -132,17 +132,17 @@
     "pos": "Center",
     "role": "starter",
     "captain": true,
-    "md_pts": 25.69,
+    "md_pts": 25.72,
     "md_sd": 6.98
    },
    {
-    "platform_id": "3766",
-    "name": "Sasha Vezenkov",
-    "pos": "Forward",
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 23.51,
-    "md_sd": 8.46
+    "md_pts": 19.89,
+    "md_sd": 10.98
    },
    {
     "platform_id": "7424",
@@ -159,25 +159,34 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.95,
+    "md_pts": 13.94,
     "md_sd": 7.65
    },
    {
-    "platform_id": "3930",
-    "name": "Yam Madar",
-    "pos": "Guard",
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 12.3,
-    "md_sd": 8.93
+    "md_pts": 9.08,
+    "md_sd": 6.05
+   },
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 23.54,
+    "md_sd": 8.46
    },
    {
     "platform_id": "3851",
     "name": "Andres Feliz",
     "pos": "Guard",
-    "role": "sixth",
+    "role": "bench",
     "captain": false,
-    "md_pts": 16.69,
+    "md_pts": 16.7,
     "md_sd": 10.1
    },
    {
@@ -190,31 +199,22 @@
     "md_sd": 7.85
    },
    {
-    "platform_id": "3842",
-    "name": "Scottie Wilbekin",
-    "pos": "Guard",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 11.96,
-    "md_sd": 8.4
-   },
-   {
-    "platform_id": "7223",
-    "name": "Clement Frisch",
-    "pos": "Forward",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 9.09,
-    "md_sd": 6.05
-   },
-   {
     "platform_id": "3975",
     "name": "Sebastian Herrera",
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 8.89,
+    "md_pts": 8.91,
     "md_sd": 5.7
+   },
+   {
+    "platform_id": "8993",
+    "name": "Cory Joseph",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 6.53,
+    "md_sd": 6.1
    },
    {
     "platform_id": "3897",
@@ -222,21 +222,23 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 13.74,
+    "md_pts": 13.81,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
-   "Wenyen Gabriel",
    "Talen Horton-Tucker",
+   "Wenyen Gabriel",
+   "Yam Madar",
    "Armoni Brooks"
   ],
   "trades_in": [
    "Jonas Valanciunas",
-   "Scottie Wilbekin",
-   "Sebastian Herrera"
+   "Theo Maledon",
+   "Sebastian Herrera",
+   "Cory Joseph"
   ],
-  "price_gain": -0.1
+  "price_gain": 0.11
  },
  "params": {
   "w_minutes": [
@@ -273,7 +275,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 170.5,
+  "expected": 174.8,
   "captain": "Jonas Valanciunas",
   "squad": [
    {
@@ -282,17 +284,17 @@
     "pos": "Center",
     "role": "starter",
     "captain": true,
-    "md_pts": 25.69,
+    "md_pts": 25.72,
     "md_sd": 6.98
    },
    {
-    "platform_id": "3766",
-    "name": "Sasha Vezenkov",
-    "pos": "Forward",
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 23.51,
-    "md_sd": 8.46
+    "md_pts": 19.89,
+    "md_sd": 10.98
    },
    {
     "platform_id": "7424",
@@ -309,7 +311,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.69,
+    "md_pts": 16.7,
     "md_sd": 10.1
    },
    {
@@ -318,17 +320,17 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.95,
+    "md_pts": 13.94,
     "md_sd": 7.65
    },
    {
-    "platform_id": "8567",
-    "name": "Talen Horton-Tucker",
-    "pos": "Guard",
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
     "role": "sixth",
     "captain": false,
-    "md_pts": 15.43,
-    "md_sd": 9.79
+    "md_pts": 23.54,
+    "md_sd": 8.46
    },
    {
     "platform_id": "3991",
@@ -340,31 +342,31 @@
     "md_sd": 7.85
    },
    {
-    "platform_id": "3916",
-    "name": "Gabriele Procida",
+    "platform_id": "11491",
+    "name": "David Dejulius",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.45,
+    "md_sd": 7.57
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.57,
-    "md_sd": 7.83
+    "md_pts": 9.08,
+    "md_sd": 6.05
    },
    {
-    "platform_id": "3975",
-    "name": "Sebastian Herrera",
+    "platform_id": "11495",
+    "name": "Nikola Djurisic",
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 8.89,
-    "md_sd": 5.7
-   },
-   {
-    "platform_id": "11509",
-    "name": "Eugene German",
-    "pos": "Guard",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 6.44,
-    "md_sd": 5.76
+    "md_pts": 5.8,
+    "md_sd": 7.23
    },
    {
     "platform_id": "3897",
@@ -372,22 +374,22 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 13.74,
+    "md_pts": 13.81,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
+   "Talen Horton-Tucker",
    "Wenyen Gabriel",
-   "Clement Frisch",
-   "Armoni Brooks",
-   "Yam Madar"
+   "Yam Madar",
+   "Armoni Brooks"
   ],
   "trades_in": [
    "Jonas Valanciunas",
-   "Sebastian Herrera",
-   "Eugene German",
-   "Gabriele Procida"
+   "Theo Maledon",
+   "David Dejulius",
+   "Nikola Djurisic"
   ],
-  "price_gain": 0.4
+  "price_gain": 0.36
  }
 }

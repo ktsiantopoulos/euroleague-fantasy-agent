@@ -4,28 +4,28 @@
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 18.9 | 36 | 46 | 62 |
-| Aliou Diarra | C | VIR | 10.8 | 35 | 34 | 0 |
+| Sasha Vezenkov | F | OLY | 18.9 | 36 | 47 | 62 |
+| Aliou Diarra | C | VIR | 10.8 | 35 | 33 | 0 |
 | Andres Feliz | G | RMB | 9.3 | 35 | 38 | 0 |
-| Joan Penarroya | H | PAR | 6.2 | 31 | 20 | 0 |
-| Collin Malcolm | F | EFS | 9.8 | 25 | 22 | 0 |
+| Joan Penarroya | H | PAR | 6.2 | 31 | 19 | 0 |
+| Collin Malcolm | F | EFS | 9.8 | 25 | 23 | 0 |
 | Alberto Abalde | F | RMB | 6.1 | 24 | 22 | 0 |
 | Carlik Jones | G | PAR | 13.7 | 20 | 22 | 0 |
-| Jonas Valanciunas | C | ZAL | 16.9 | 19 | 20 | 6 |
+| Jonas Valanciunas | C | ZAL | 16.9 | 19 | 21 | 6 |
 | TJ Shorts | G | VBC | 16.8 | 17 | 23 | 11 |
 | Stefan Joksimovic | F | KBA | 4.2 | 16 | 16 | 0 |
 | Elijah Bryant | G | HTA | 17.7 | 15 | 16 | 5 |
 | Azuolas Tubelis | F | ZAL | 12.6 | 10 | 19 | 0 |
 | Kendrick Nunn | G | PAO | 14.8 | 10 | 16 | 2 |
-| Cameron Payne | G | EFS | 10.2 | 8 | 10 | 0 |
+| Cameron Payne | G | EFS | 10.2 | 8 | 9 | 0 |
 | Clement Frisch | F | KBA | 5.3 | 8 | 3 | 0 |
 | Braxton Key | F | FBT | 7.8 | 8 | 6 | 0 |
 | Xavier Albert | H | VBC | 8.0 | 7 | 6 | 0 |
 | Nikola Tanaskovic | C | PAR | 8.4 | 6 | 6 | 0 |
 | Arijan Lakic | F | PAR | 4.0 | 5 | 23 | 0 |
-| Kostas Papanikolaou | F | OLY | 4.2 | 5 | 13 | 0 |
+| Kostas Papanikolaou | F | OLY | 4.2 | 5 | 12 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Joan Penarroya (+11 pp), Clement Frisch (+5 pp), Collin Malcolm (+3 pp), Braxton Key (+2 pp), Alberto Abalde (+2 pp), Aliou Diarra (+1 pp), Xavier Albert (+1 pp), Dwight Powell (+1 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Joan Penarroya (+12 pp), Clement Frisch (+5 pp), Aliou Diarra (+2 pp), Braxton Key (+2 pp), Collin Malcolm (+2 pp), Alberto Abalde (+2 pp), Dwight Powell (+2 pp), Xavier Albert (+1 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (151), Jonas Valanciunas (29), Mathias Lessort (24)
@@ -74,5 +74,5 @@
 - MD7: Tomas Masiulis (164), Zeljko Obradovic (66), Pedro Martinez (8)
 - MD8: Xavi Pascual (88), Ibon Navarro (50), Zeljko Obradovic (39)
 - MD9: Ibon Navarro (136), Tomas Masiulis (18), Georgios Bartzokas (11)
-- MD10: Saras Jasikevicius (121), Joan Penarroya (25), Tony Parker (2)
+- MD10: Saras Jasikevicius (121), Joan Penarroya (25), Xavier Albert (2)
 - MD11: Joan Penarroya (77), Xavier Albert (18), Saras Jasikevicius (2)

@@ -334,30 +334,30 @@
    "stats_items": []
   },
   {
-   "id": 3851,
-   "first_name": "Andres",
-   "last_name": "Feliz",
+   "id": 7223,
+   "first_name": "Clement",
+   "last_name": "Frisch",
    "position": {
-    "id": 28,
-    "name": "Guard"
+    "id": 29,
+    "name": "Forward"
    },
    "team": {
-    "id": 153,
-    "name": "Real Madrid",
-    "abbreviation": "RMB",
-    "position": "away"
+    "id": 143,
+    "name": "Kosner Baskonia Vitoria-Gasteiz",
+    "abbreviation": "KBA",
+    "position": "home"
    },
    "opponent": {
-    "id": 158,
-    "name": "Besiktas Istanbul",
-    "abbreviation": "BJK"
+    "id": 165,
+    "name": "Hapoel IBI Tel Aviv",
+    "abbreviation": "HTA"
    },
-   "quotation": 9.7,
+   "quotation": 5.5,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "24",
+   "jersey": "25",
    "face_path": null,
    "active": true,
    "court_position": 6,
@@ -366,8 +366,8 @@
    "captain_config": null,
    "match_played": false,
    "round": {
-    "id": 2551,
-    "number": 2
+    "id": 2550,
+    "number": 1
    },
    "is_on_trade": false,
    "started_from_bench": false,
@@ -420,30 +420,30 @@
    "stats_items": []
   },
   {
-   "id": 11495,
-   "first_name": "Nikola",
-   "last_name": "Djurisic",
+   "id": 3851,
+   "first_name": "Andres",
+   "last_name": "Feliz",
    "position": {
     "id": 28,
     "name": "Guard"
    },
    "team": {
-    "id": 144,
-    "name": "Crvena Zvezda Meridianbet Belgrade",
-    "abbreviation": "CZV",
+    "id": 153,
+    "name": "Real Madrid",
+    "abbreviation": "RMB",
     "position": "away"
    },
    "opponent": {
-    "id": 145,
-    "name": "Armani Olimpia Milan",
-    "abbreviation": "MIL"
+    "id": 158,
+    "name": "Besiktas Istanbul",
+    "abbreviation": "BJK"
    },
-   "quotation": 4,
+   "quotation": 9.7,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "23",
+   "jersey": "24",
    "face_path": null,
    "active": true,
    "court_position": 8,
@@ -452,11 +452,11 @@
    "captain_config": null,
    "match_played": false,
    "round": {
-    "id": 2550,
-    "number": 1
+    "id": 2551,
+    "number": 2
    },
    "is_on_trade": false,
-   "started_from_bench": true,
+   "started_from_bench": false,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
@@ -506,30 +506,30 @@
    "stats_items": []
   },
   {
-   "id": 7223,
-   "first_name": "Clement",
-   "last_name": "Frisch",
+   "id": 11495,
+   "first_name": "Nikola",
+   "last_name": "Djurisic",
    "position": {
-    "id": 29,
-    "name": "Forward"
+    "id": 28,
+    "name": "Guard"
    },
    "team": {
-    "id": 143,
-    "name": "Kosner Baskonia Vitoria-Gasteiz",
-    "abbreviation": "KBA",
-    "position": "home"
+    "id": 144,
+    "name": "Crvena Zvezda Meridianbet Belgrade",
+    "abbreviation": "CZV",
+    "position": "away"
    },
    "opponent": {
-    "id": 165,
-    "name": "Hapoel IBI Tel Aviv",
-    "abbreviation": "HTA"
+    "id": 145,
+    "name": "Armani Olimpia Milan",
+    "abbreviation": "MIL"
    },
-   "quotation": 5.5,
+   "quotation": 4,
    "is_on_fire": false,
    "pts": 0,
    "is_injured": false,
    "probability_of_playing": 1,
-   "jersey": "25",
+   "jersey": "23",
    "face_path": null,
    "active": true,
    "court_position": 10,
@@ -542,7 +542,7 @@
     "number": 1
    },
    "is_on_trade": false,
-   "started_from_bench": false,
+   "started_from_bench": true,
    "label": "opponent",
    "match_live": false,
    "has_scored": null,
