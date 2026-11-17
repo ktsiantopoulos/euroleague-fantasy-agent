@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-17T15:59:00+00:00, 22.40 h away)
+## run reason: manual  (deadline 2026-11-17T15:59:00+00:00, 3.29 h away)
 ## pull-official
 E2026: 110 games played, 0 box scores fetched now
 
@@ -149,11 +149,11 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 18.9 | 36 | 47 | 62 |
-| Aliou Diarra | C | VIR | 10.8 | 35 | 33 | 0 |
+| Aliou Diarra | C | VIR | 10.8 | 35 | 31 | 0 |
 | Andres Feliz | G | RMB | 9.3 | 35 | 38 | 0 |
-| Joan Penarroya | H | PAR | 6.2 | 31 | 19 | 0 |
-| Collin Malcolm | F | EFS | 9.8 | 25 | 23 | 0 |
-| Alberto Abalde | F | RMB | 6.1 | 24 | 22 | 0 |
+| Joan Penarroya | H | PAR | 6.2 | 31 | 14 | 0 |
+| Collin Malcolm | F | EFS | 9.8 | 25 | 24 | 0 |
+| Alberto Abalde | F | RMB | 6.1 | 24 | 21 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  

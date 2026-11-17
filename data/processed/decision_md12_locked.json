@@ -1,6 +1,6 @@
 {
  "matchday": 12,
- "frozen_utc": "2026-11-16T17:38:20Z",
+ "frozen_utc": "2026-11-17T12:44:14Z",
  "lock_utc": "2026-11-17T15:59:00Z",
  "budget": 113.2,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "8567"
  ],
  "hold": {
-  "expected": 158.2,
+  "expected": 158.6,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -27,7 +27,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 23.54,
+    "md_pts": 23.56,
     "md_sd": 8.46
    },
    {
@@ -36,7 +36,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.75,
+    "md_pts": 16.78,
     "md_sd": 7.48
    },
    {
@@ -45,7 +45,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.7,
+    "md_pts": 16.77,
     "md_sd": 10.1
    },
    {
@@ -54,7 +54,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.42,
+    "md_pts": 15.45,
     "md_sd": 9.79
    },
    {
@@ -63,7 +63,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.94,
+    "md_pts": 13.91,
     "md_sd": 7.65
    },
    {
@@ -72,7 +72,7 @@
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 13.22,
+    "md_pts": 13.19,
     "md_sd": 7.6
    },
    {
@@ -81,7 +81,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 12.28,
+    "md_pts": 12.27,
     "md_sd": 8.93
    },
    {
@@ -90,7 +90,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 12.18,
+    "md_pts": 12.24,
     "md_sd": 7.85
    },
    {
@@ -108,7 +108,7 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 8.97,
+    "md_pts": 8.93,
     "md_sd": 8.36
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 13.81,
+    "md_pts": 14.14,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 170.6,
+  "expected": 171.1,
   "captain": "Jonas Valanciunas",
   "squad": [
    {
@@ -132,7 +132,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": true,
-    "md_pts": 25.72,
+    "md_pts": 25.71,
     "md_sd": 6.98
    },
    {
@@ -141,7 +141,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 19.89,
+    "md_pts": 19.98,
     "md_sd": 10.98
    },
    {
@@ -150,7 +150,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.75,
+    "md_pts": 16.78,
     "md_sd": 7.48
    },
    {
@@ -159,7 +159,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.94,
+    "md_pts": 13.91,
     "md_sd": 7.65
    },
    {
@@ -177,7 +177,7 @@
     "pos": "Forward",
     "role": "sixth",
     "captain": false,
-    "md_pts": 23.54,
+    "md_pts": 23.56,
     "md_sd": 8.46
    },
    {
@@ -186,7 +186,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 16.7,
+    "md_pts": 16.77,
     "md_sd": 10.1
    },
    {
@@ -195,7 +195,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 12.18,
+    "md_pts": 12.24,
     "md_sd": 7.85
    },
    {
@@ -204,7 +204,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 8.91,
+    "md_pts": 8.93,
     "md_sd": 5.7
    },
    {
@@ -213,7 +213,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 6.53,
+    "md_pts": 6.54,
     "md_sd": 6.1
    },
    {
@@ -222,15 +222,15 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 13.81,
+    "md_pts": 14.14,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
    "Talen Horton-Tucker",
-   "Wenyen Gabriel",
    "Yam Madar",
-   "Armoni Brooks"
+   "Armoni Brooks",
+   "Wenyen Gabriel"
   ],
   "trades_in": [
    "Jonas Valanciunas",
@@ -238,7 +238,7 @@
    "Sebastian Herrera",
    "Cory Joseph"
   ],
-  "price_gain": 0.11
+  "price_gain": 0.13
  },
  "params": {
   "w_minutes": [
@@ -275,7 +275,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 174.8,
+  "expected": 175.3,
   "captain": "Jonas Valanciunas",
   "squad": [
    {
@@ -284,17 +284,17 @@
     "pos": "Center",
     "role": "starter",
     "captain": true,
-    "md_pts": 25.72,
+    "md_pts": 25.71,
     "md_sd": 6.98
    },
    {
-    "platform_id": "3850",
-    "name": "Theo Maledon",
-    "pos": "Guard",
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 19.89,
-    "md_sd": 10.98
+    "md_pts": 23.56,
+    "md_sd": 8.46
    },
    {
     "platform_id": "7424",
@@ -302,7 +302,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.75,
+    "md_pts": 16.78,
     "md_sd": 7.48
    },
    {
@@ -311,7 +311,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.7,
+    "md_pts": 16.77,
     "md_sd": 10.1
    },
    {
@@ -320,17 +320,17 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.94,
+    "md_pts": 13.91,
     "md_sd": 7.65
    },
    {
-    "platform_id": "3766",
-    "name": "Sasha Vezenkov",
-    "pos": "Forward",
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 23.54,
-    "md_sd": 8.46
+    "md_pts": 19.98,
+    "md_sd": 10.98
    },
    {
     "platform_id": "3991",
@@ -338,7 +338,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 12.18,
+    "md_pts": 12.24,
     "md_sd": 7.85
    },
    {
@@ -347,7 +347,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 10.45,
+    "md_pts": 10.4,
     "md_sd": 7.57
    },
    {
@@ -374,15 +374,15 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 13.81,
+    "md_pts": 14.14,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
    "Talen Horton-Tucker",
-   "Wenyen Gabriel",
    "Yam Madar",
-   "Armoni Brooks"
+   "Armoni Brooks",
+   "Wenyen Gabriel"
   ],
   "trades_in": [
    "Jonas Valanciunas",
@@ -390,6 +390,6 @@
    "David Dejulius",
    "Nikola Djurisic"
   ],
-  "price_gain": 0.36
+  "price_gain": 0.38
  }
 }
