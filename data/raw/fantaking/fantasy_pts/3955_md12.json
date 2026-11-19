@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1539,
+  "number": 12
+ },
+ "round": {
+  "id": 2550,
+  "number": 1
+ },
+ "match": {
+  "id": 12038,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-17T19:30:00.000000Z",
+  "home_team": {
+   "id": 143,
+   "name": "Kosner Baskonia Vitoria-Gasteiz",
+   "abbreviation": "KBA",
+   "score": 82
+  },
+  "away_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 85
+  }
+ },
+ "fantasy_pts": -5,
+ "stats_items": [
+  {
+   "id": 206,
+   "name": "loss_1-10",
+   "value": 1,
+   "fantasy_pts": -5
+  }
+ ],
+ "label": "opponent"
+}

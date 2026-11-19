@@ -1,0 +1,62 @@
+{
+ "matchday": {
+  "id": 1539,
+  "number": 12
+ },
+ "round": {
+  "id": 2551,
+  "number": 2
+ },
+ "match": {
+  "id": 12044,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-18T17:00:00.000000Z",
+  "home_team": {
+   "id": 158,
+   "name": "Besiktas Istanbul",
+   "abbreviation": "BJK",
+   "score": 83
+  },
+  "away_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 79
+  }
+ },
+ "fantasy_pts": 4.4,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 4,
+   "fantasy_pts": 4
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 195,
+   "name": "tov",
+   "value": 2,
+   "fantasy_pts": -2
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 2,
+   "fantasy_pts": -2
+  }
+ ],
+ "label": "opponent"
+}

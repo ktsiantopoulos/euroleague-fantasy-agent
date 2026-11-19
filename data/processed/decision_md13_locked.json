@@ -1,0 +1,395 @@
+{
+ "matchday": 13,
+ "frozen_utc": "2026-11-19T05:17:37Z",
+ "lock_utc": "2026-11-19T17:14:00Z",
+ "budget": 115.5,
+ "trades_left": 4,
+ "baseline_ids": [
+  "11491",
+  "11495",
+  "11549",
+  "3766",
+  "3838",
+  "3850",
+  "3851",
+  "3897",
+  "3991",
+  "7223",
+  "7424"
+ ],
+ "hold": {
+  "expected": 162.9,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 27.12,
+    "md_sd": 9.43
+   },
+   {
+    "platform_id": "11549",
+    "name": "Jonas Valanciunas",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.55,
+    "md_sd": 6.8
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.21,
+    "md_sd": 10.72
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 17.25,
+    "md_sd": 7.39
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 9.91,
+    "md_sd": 5.83
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 15.59,
+    "md_sd": 9.8
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 17.24,
+    "md_sd": 7.69
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.91,
+    "md_sd": 7.6
+   },
+   {
+    "platform_id": "11491",
+    "name": "David Dejulius",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 7.48,
+    "md_sd": 7.34
+   },
+   {
+    "platform_id": "11495",
+    "name": "Nikola Djurisic",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 3.47,
+    "md_sd": 6.76
+   },
+   {
+    "platform_id": "3897",
+    "name": "Saras Jasikevicius",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 7.07,
+    "md_sd": 13.15
+   }
+  ]
+ },
+ "best": {
+  "expected": 177.5,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 27.12,
+    "md_sd": 9.43
+   },
+   {
+    "platform_id": "3834",
+    "name": "Nadir Hifi",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.98,
+    "md_sd": 10.77
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.21,
+    "md_sd": 10.72
+   },
+   {
+    "platform_id": "11504",
+    "name": "Johannes Thiemann",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 18.42,
+    "md_sd": 9.34
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 17.25,
+    "md_sd": 7.39
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 15.59,
+    "md_sd": 9.8
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 17.24,
+    "md_sd": 7.69
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.91,
+    "md_sd": 7.6
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.91,
+    "md_sd": 5.83
+   },
+   {
+    "platform_id": "3975",
+    "name": "Sebastian Herrera",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.21,
+    "md_sd": 5.52
+   },
+   {
+    "platform_id": "3974",
+    "name": "Anton Gavel",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 9.67,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Saras Jasikevicius",
+   "David Dejulius",
+   "Nikola Djurisic",
+   "Jonas Valanciunas"
+  ],
+  "trades_in": [
+   "Nadir Hifi",
+   "Johannes Thiemann",
+   "Sebastian Herrera",
+   "Anton Gavel"
+  ],
+  "price_gain": 0.22
+ },
+ "params": {
+  "w_minutes": [
+   0.1,
+   0.3,
+   0.6
+  ],
+  "rate_prior_minutes": 40.0,
+  "lam_recent": 0.3,
+  "eta_home": 0.02,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.8,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.096,
+  "bias": {
+   "Center|10-15": 1.078,
+   "Center|15-20": 1.048,
+   "Center|<10": 1.131,
+   "Forward|10-15": 1.203,
+   "Forward|15-20": 1.069,
+   "Forward|<10": 1.284,
+   "Guard|10-15": 1.042,
+   "Guard|15-20": 1.092,
+   "Guard|<10": 1.6
+  },
+  "tier_bias": {},
+  "flags": {}
+ },
+ "variant": {
+  "mu_price": 8.0,
+  "expected": 177.6,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 27.12,
+    "md_sd": 9.43
+   },
+   {
+    "platform_id": "3834",
+    "name": "Nadir Hifi",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.98,
+    "md_sd": 10.77
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.21,
+    "md_sd": 10.72
+   },
+   {
+    "platform_id": "11504",
+    "name": "Johannes Thiemann",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 18.42,
+    "md_sd": 9.34
+   },
+   {
+    "platform_id": "7424",
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 17.25,
+    "md_sd": 7.39
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 15.59,
+    "md_sd": 9.8
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 17.24,
+    "md_sd": 7.69
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.91,
+    "md_sd": 7.6
+   },
+   {
+    "platform_id": "7223",
+    "name": "Clement Frisch",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.91,
+    "md_sd": 5.83
+   },
+   {
+    "platform_id": "8993",
+    "name": "Cory Joseph",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.47,
+    "md_sd": 6.59
+   },
+   {
+    "platform_id": "3974",
+    "name": "Anton Gavel",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 9.67,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Saras Jasikevicius",
+   "David Dejulius",
+   "Nikola Djurisic",
+   "Jonas Valanciunas"
+  ],
+  "trades_in": [
+   "Nadir Hifi",
+   "Johannes Thiemann",
+   "Cory Joseph",
+   "Anton Gavel"
+  ],
+  "price_gain": 0.5
+ }
+}

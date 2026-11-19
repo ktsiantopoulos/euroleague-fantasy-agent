@@ -1,0 +1,38 @@
+{
+ "matchday": {
+  "id": 1539,
+  "number": 12
+ },
+ "round": {
+  "id": 2550,
+  "number": 1
+ },
+ "match": {
+  "id": 12041,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-17T18:00:00.000000Z",
+  "home_team": {
+   "id": 147,
+   "name": "Fenerbahce Tarfin Istanbul",
+   "abbreviation": "FBT",
+   "score": 115
+  },
+  "away_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 81
+  }
+ },
+ "fantasy_pts": 25,
+ "stats_items": [
+  {
+   "id": 204,
+   "name": "win_20",
+   "value": 1,
+   "fantasy_pts": 25
+  }
+ ],
+ "label": "opponent"
+}
