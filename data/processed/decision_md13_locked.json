@@ -1,6 +1,6 @@
 {
  "matchday": 13,
- "frozen_utc": "2026-11-19T05:17:37Z",
+ "frozen_utc": "2026-11-19T12:57:52Z",
  "lock_utc": "2026-11-19T17:14:00Z",
  "budget": 115.5,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "7424"
  ],
  "hold": {
-  "expected": 162.9,
+  "expected": 163.0,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -27,7 +27,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 27.12,
+    "md_pts": 27.14,
     "md_sd": 9.43
    },
    {
@@ -36,7 +36,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 20.55,
+    "md_pts": 20.53,
     "md_sd": 6.8
    },
    {
@@ -45,7 +45,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 19.21,
+    "md_pts": 19.2,
     "md_sd": 10.72
    },
    {
@@ -72,7 +72,7 @@
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 15.59,
+    "md_pts": 15.58,
     "md_sd": 9.8
    },
    {
@@ -81,7 +81,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 17.24,
+    "md_pts": 17.23,
     "md_sd": 7.69
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 7.07,
+    "md_pts": 7.21,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 177.5,
+  "expected": 177.7,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -132,7 +132,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 27.12,
+    "md_pts": 27.14,
     "md_sd": 9.43
    },
    {
@@ -141,17 +141,8 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 19.98,
+    "md_pts": 20.04,
     "md_sd": 10.77
-   },
-   {
-    "platform_id": "3850",
-    "name": "Theo Maledon",
-    "pos": "Guard",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 19.21,
-    "md_sd": 10.72
    },
    {
     "platform_id": "11504",
@@ -175,10 +166,19 @@
     "platform_id": "3851",
     "name": "Andres Feliz",
     "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.58,
+    "md_sd": 9.8
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 15.59,
-    "md_sd": 9.8
+    "md_pts": 19.2,
+    "md_sd": 10.72
    },
    {
     "platform_id": "3838",
@@ -186,7 +186,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 17.24,
+    "md_pts": 17.23,
     "md_sd": 7.69
    },
    {
@@ -213,7 +213,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.21,
+    "md_pts": 9.24,
     "md_sd": 5.52
    },
    {
@@ -222,15 +222,15 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 9.67,
+    "md_pts": 9.74,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
    "Saras Jasikevicius",
+   "Jonas Valanciunas",
    "David Dejulius",
-   "Nikola Djurisic",
-   "Jonas Valanciunas"
+   "Nikola Djurisic"
   ],
   "trades_in": [
    "Nadir Hifi",
@@ -275,7 +275,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 177.6,
+  "expected": 177.8,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -284,7 +284,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 27.12,
+    "md_pts": 27.14,
     "md_sd": 9.43
    },
    {
@@ -293,7 +293,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 19.98,
+    "md_pts": 20.04,
     "md_sd": 10.77
    },
    {
@@ -302,7 +302,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 19.21,
+    "md_pts": 19.2,
     "md_sd": 10.72
    },
    {
@@ -329,7 +329,7 @@
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 15.59,
+    "md_pts": 15.58,
     "md_sd": 9.8
    },
    {
@@ -338,7 +338,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 17.24,
+    "md_pts": 17.23,
     "md_sd": 7.69
    },
    {
@@ -374,15 +374,15 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 9.67,
+    "md_pts": 9.74,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
    "Saras Jasikevicius",
+   "Jonas Valanciunas",
    "David Dejulius",
-   "Nikola Djurisic",
-   "Jonas Valanciunas"
+   "Nikola Djurisic"
   ],
   "trades_in": [
    "Nadir Hifi",

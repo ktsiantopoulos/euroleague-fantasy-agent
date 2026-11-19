@@ -1,5 +1,5 @@
 {
- "status_id": 5,
+ "status_id": 1,
  "standings_calculations": {
   "updated_at": "2026-11-18T21:53:52.000000Z",
   "is_outdated": false
@@ -17,8 +17,9 @@
   "num_rounds": 2
  },
  "current_round": {
-  "started_at": "2026-11-19T17:14:00.000000Z",
-  "derived_from": "schedule"
+  "id": 2552,
+  "number": 1,
+  "started_at": "2026-11-19T17:14:00.000000Z"
  },
  "previous_matchday": {
   "id": 1539,
@@ -546,7 +547,7 @@
  ],
  "predictions": null,
  "match_predictor": {
-  "starts_at": "2026-11-17T16:00:00.000000Z",
+  "starts_at": "2026-11-19T17:15:00.000000Z",
   "configs": {
    "add_matchups": true,
    "predictions": [
@@ -567,10 +568,5 @@
  "make_predictions_list_public_offset": null,
  "reader_tournament": null,
  "has_palmares": false,
- "has_badge": false,
- "rollover": {
-  "platform_current": 12,
-  "used": 13,
-  "deadline_utc": "2026-11-19T17:14:00.000000Z"
- }
+ "has_badge": false
 }

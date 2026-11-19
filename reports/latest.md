@@ -1,9 +1,8 @@
-## run reason: manual  (deadline 2026-11-18T16:59:00+00:00, -12.11 h away)
+## run reason: pre-deadline (4.3h)  (deadline 2026-11-19T17:14:00+00:00, 4.33 h away)
 ## pull-official
-E2026: 120 games played, 10 box scores fetched now
+E2026: 120 games played, 0 box scores fetched now
 
 ## pull-platform
-  ! platform still reports MD 12 (all games played) - rolled over to MD 13, deadline 2026-11-19 17:14 UTC from the schedule
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_13
@@ -11,7 +10,7 @@ team: UnderTakers86  credits: 115.5  trades used: 0/4
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
-price base: fantasyedge 237, top100_md1 122, first_seen 7
+price base: fantasyedge 237, top100_md1 122, first_seen 8
 
 ## build
         games  rows  mismatches
@@ -19,19 +18,20 @@ season
 E2026     120  2871           0
 teams mapped: 20; needs attention: 0
 method
-surname+team    312
-UNMATCHED        30
-coach            20
+surname+team        311
+UNMATCHED            30
+coach                20
+surname+any-team      1
 team context: 20 clubs · usage: 300 players · FDR: 20 clubs x next 5
-price base: fantasyedge 237, top100_md1 122, first_seen 7
+price base: fantasyedge 237, top100_md1 122, first_seen 8
 matchdays: 38 (one per round) · current MD 13 = R13, nights T1=2026-11-19, 
 T2=2026-11-20
 
 ## reconcile
 player-games compared: 4285
-exact matches: 2841 (66.3%)
-  no_boxscore_row: 799
-  no_player: 622
+exact matches: 2835 (66.2%)
+  no_boxscore_row: 794
+  no_player: 633
   MISMATCH: 23
 
 first mismatches:
@@ -140,24 +140,9 @@ learn: train R4-R10, hold-out R11, R12
 after 3 straight newest-round wins
 - kept bias layer (9 segment(s)): hold-out mean |bias| 0.13 → 0.15, RMSE -0.002
 - kept tier layer (3 segment(s)): hold-out segment |bias| R11 1.19 → 1.33, R12 
-1.40 → 1.22, RMSE -0.015
+1.40 → 1.23, RMSE -0.015
 - sd scale kept at 1.096 (hold-out 80% band 82%; candidate ×1.115 → 83%)
 health: no drift flags
-
-## top-100
-top-100: 233 roster previews fetched now
-# Top-261 managers — matchdays 1–12
-
-## Ownership in the top 261, matchday 12
-
-| player | pos | club | price | top own% | global% | captain # |
-|---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 19.2 | 38 | 47 | 90 |
-| Andres Feliz | G | RMB | 9.7 | 33 | 37 | 0 |
-| Theo Maledon | G | RMB | 12.9 | 30 | 15 | 6 |
-| Aliou Diarra | C | VIR | 10.8 | 25 | 30 | 0 |
-| Alberto Abalde | F | RMB | 6.1 | 24 | 21 | 0 |
-| Saras Jasikevicius | H | FBT | 8.3 | 23 | 16 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
