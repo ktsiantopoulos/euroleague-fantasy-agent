@@ -1,6 +1,6 @@
 {
  "matchday": 13,
- "frozen_utc": "2026-11-19T12:57:52Z",
+ "frozen_utc": "2026-11-19T14:32:25Z",
  "lock_utc": "2026-11-19T17:14:00Z",
  "budget": 115.5,
  "trades_left": 4,
@@ -18,7 +18,7 @@
   "7424"
  ],
  "hold": {
-  "expected": 163.0,
+  "expected": 162.9,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 7.21,
+    "md_pts": 7.07,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 177.7,
+  "expected": 177.8,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -150,7 +150,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 18.42,
+    "md_pts": 18.43,
     "md_sd": 9.34
    },
    {
@@ -222,15 +222,15 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 9.74,
+    "md_pts": 9.9,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
+   "Nikola Djurisic",
    "Saras Jasikevicius",
    "Jonas Valanciunas",
-   "David Dejulius",
-   "Nikola Djurisic"
+   "David Dejulius"
   ],
   "trades_in": [
    "Nadir Hifi",
@@ -275,7 +275,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 177.8,
+  "expected": 177.9,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -311,7 +311,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 18.42,
+    "md_pts": 18.43,
     "md_sd": 9.34
    },
    {
@@ -374,15 +374,15 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 9.74,
+    "md_pts": 9.9,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
+   "Nikola Djurisic",
    "Saras Jasikevicius",
    "Jonas Valanciunas",
-   "David Dejulius",
-   "Nikola Djurisic"
+   "David Dejulius"
   ],
   "trades_in": [
    "Nadir Hifi",

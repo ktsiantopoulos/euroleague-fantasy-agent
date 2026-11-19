@@ -1,4 +1,4 @@
-## run reason: pre-deadline (4.3h)  (deadline 2026-11-19T17:14:00+00:00, 4.33 h away)
+## run reason: manual  (deadline 2026-11-19T17:14:00+00:00, 2.75 h away)
 ## pull-official
 E2026: 120 games played, 0 box scores fetched now
 
@@ -143,6 +143,21 @@ after 3 straight newest-round wins
 1.40 → 1.23, RMSE -0.015
 - sd scale kept at 1.096 (hold-out 80% band 82%; candidate ×1.115 → 83%)
 health: no drift flags
+
+## top-100
+top-100: 0 roster previews fetched now
+# Top-261 managers — matchdays 1–12
+
+## Ownership in the top 261, matchday 12
+
+| player | pos | club | price | top own% | global% | captain # |
+|---|---|---|---|---|---|---|
+| Sasha Vezenkov | F | OLY | 19.2 | 38 | 49 | 90 |
+| Andres Feliz | G | RMB | 9.7 | 33 | 34 | 0 |
+| Theo Maledon | G | RMB | 12.9 | 30 | 18 | 6 |
+| Aliou Diarra | C | VIR | 10.8 | 25 | 32 | 0 |
+| Alberto Abalde | F | RMB | 6.1 | 24 | 18 | 0 |
+| Saras Jasikevicius | H | FBT | 8.3 | 23 | 12 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
