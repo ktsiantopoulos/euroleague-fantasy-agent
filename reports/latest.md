@@ -1,12 +1,10 @@
-## run reason: manual  (deadline 2026-11-19T17:14:00+00:00, 2.75 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 81.22 h away)
 ## pull-official
-E2026: 120 games played, 0 box scores fetched now
+E2026: 130 games played, 10 box scores fetched now
 
 ## pull-platform
-pulled -> 
-/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
-taking/md_13
-team: UnderTakers86  credits: 115.5  trades used: 0/4
+pull-platform failed: HTTPError: 500 Server Error: Internal Server Error for 
+url: https://fantaking-api.dunkest.com/api/v1/leagues/10/config
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
@@ -15,14 +13,14 @@ price base: fantasyedge 237, top100_md1 122, first_seen 8
 ## build
         games  rows  mismatches
 season                         
-E2026     120  2871           0
+E2026     130  3111           0
 teams mapped: 20; needs attention: 0
 method
 surname+team        311
 UNMATCHED            30
 coach                20
 surname+any-team      1
-team context: 20 clubs · usage: 300 players · FDR: 20 clubs x next 5
+team context: 20 clubs · usage: 302 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 8
 matchdays: 38 (one per round) · current MD 13 = R13, nights T1=2026-11-19, 
 T2=2026-11-20
@@ -133,45 +131,45 @@ squad, both on actual points
 | current defaults | 12 | 4 | +12.5 | -10.2 |
 
 ## learn
-learn: train R4-R10, hold-out R11, R12
-- new core: hold-out MAE R11 6.18, R12 5.81 vs current 6.20, 5.81 (gain +0.01)
+learn: train R4-R11, hold-out R12, R13
+- new core: hold-out MAE R12 5.81, R13 6.65 vs current 5.81, 6.69 (gain +0.02)
 → kept current core
 - shadow challenger 202611131616 ('new core', since R11) - would be promoted 
 after 3 straight newest-round wins
-- kept bias layer (9 segment(s)): hold-out mean |bias| 0.13 → 0.15, RMSE -0.002
-- kept tier layer (3 segment(s)): hold-out segment |bias| R11 1.19 → 1.33, R12 
-1.40 → 1.23, RMSE -0.015
-- sd scale kept at 1.096 (hold-out 80% band 82%; candidate ×1.115 → 83%)
-health: no drift flags
+- kept bias layer (9 segment(s)): hold-out mean |bias| 0.11 → 0.11, RMSE -0.026
+- kept tier layer (3 segment(s)): hold-out segment |bias| R12 1.40 → 1.30, R13 
+1.04 → 1.08, RMSE -0.011
+- sd scale kept at 1.096 (hold-out 80% band 82%; candidate ×1.106 → 82%)
+DRIFT: model lost to a naive baseline in R12 and R13
 
 ## top-100
-top-100: 0 roster previews fetched now
-# Top-261 managers — matchdays 1–12
+top-100: 268 roster previews fetched now
+# Top-281 managers — matchdays 1–12
 
-## Ownership in the top 261, matchday 12
+## Ownership in the top 281, matchday 12
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 19.2 | 38 | 49 | 90 |
-| Andres Feliz | G | RMB | 9.7 | 33 | 34 | 0 |
-| Theo Maledon | G | RMB | 12.9 | 30 | 18 | 6 |
-| Aliou Diarra | C | VIR | 10.8 | 25 | 32 | 0 |
-| Alberto Abalde | F | RMB | 6.1 | 24 | 18 | 0 |
-| Saras Jasikevicius | H | FBT | 8.3 | 23 | 12 | 0 |
+| Sasha Vezenkov | F | OLY | 19.2 | 47 | 49 | 120 |
+| Andres Feliz | G | RMB | 9.7 | 41 | 34 | 0 |
+| Theo Maledon | G | RMB | 12.9 | 38 | 18 | 8 |
+| Collin Malcolm | F | EFS | 10.3 | 30 | 24 | 0 |
+| Aliou Diarra | C | VIR | 10.8 | 30 | 32 | 0 |
+| Alberto Abalde | F | RMB | 6.1 | 28 | 18 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
 mae_base_last3  corr_base_last3
-all dressed players 2099       5.60       0.433           5.72           0.419  
-6.01            0.381
-projected >= 15 min 1222       6.21       0.334           6.37           0.322  
-6.78            0.269
-   >= 3 prior games 1963       5.62       0.439           5.70           0.430  
-6.01            0.388
+all dressed players 2338       5.61       0.434           5.72           0.421  
+6.01            0.380
+projected >= 15 min 1365       6.26       0.331           6.39           0.323  
+6.82            0.267
+   >= 3 prior games 2195       5.64       0.437           5.71           0.429  
+6.02            0.384
 
 ## recommend
-one club; 1 point per credit for bench players under 6.0.
 - Trade discipline: each incoming player must clear 2.0 pts + 0.00×sd; no 
 trade-ins with < 3 season games or < 70% to play (objective discount on this 
-squad: 8.0; not deducted from the expected points).
-- Optimiser status: Optimal / Optimal.
+squad: 0.0; not deducted from the expected points).
+- Optimiser status: Optimal (night-balance relaxed) / Optimal (night-balance 
+relaxed).

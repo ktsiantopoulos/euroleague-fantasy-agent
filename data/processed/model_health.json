@@ -1,7 +1,9 @@
 {
- "generated_utc": "2026-11-19T14:32:16Z",
- "drift": false,
- "reasons": [],
+ "generated_utc": "2026-11-21T07:50:45Z",
+ "drift": true,
+ "reasons": [
+  "model lost to a naive baseline in R12 and R13"
+ ],
  "per_round": [
   {
    "round": 4,
@@ -56,23 +58,29 @@
    "mae_model": 5.81,
    "mae_best_baseline": 5.66,
    "model_wins": false
+  },
+  {
+   "round": 13,
+   "mae_model": 6.69,
+   "mae_best_baseline": 6.59,
+   "model_wins": false
   }
  ],
  "calibration": {
-  "n": 2043,
+  "n": 2272,
   "above_p90": 0.125,
-  "below_p10": 0.075,
-  "inside_80": 0.8,
-  "z_sd": 1.047,
-  "sd_scale": 0.998
+  "below_p10": 0.074,
+  "inside_80": 0.801,
+  "z_sd": 1.048,
+  "sd_scale": 0.993
  },
  "attribution": {
-  "n": 2034,
-  "minutes_mae": 5.05,
-  "minutes_share": 0.34,
-  "rate_share": 0.66,
-  "dnp_misses": 21,
-  "dnp_cost": 125.1
+  "n": 2262,
+  "minutes_mae": 5.04,
+  "minutes_share": 0.337,
+  "rate_share": 0.663,
+  "dnp_misses": 23,
+  "dnp_cost": 131.3
  },
  "params": {
   "w_minutes": [
