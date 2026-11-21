@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1540,
+  "number": 13
+ },
+ "round": {
+  "id": 2553,
+  "number": 2
+ },
+ "match": {
+  "id": 12051,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-20T17:30:00.000000Z",
+  "home_team": {
+   "id": 146,
+   "name": "Anadolu Efes Istanbul",
+   "abbreviation": "EFS",
+   "score": 107
+  },
+  "away_team": {
+   "id": 139,
+   "name": "LDLC ASVEL Villeurbanne",
+   "abbreviation": "ASV",
+   "score": 81
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

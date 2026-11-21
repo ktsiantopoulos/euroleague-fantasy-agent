@@ -1,31 +1,31 @@
-# Top-281 managers — matchdays 1–12
+# Top-281 managers — matchdays 1–13
 
-## Ownership in the top 281, matchday 12
+## Ownership in the top 281, matchday 13
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 19.2 | 47 | 49 | 120 |
-| Andres Feliz | G | RMB | 9.7 | 41 | 34 | 0 |
-| Theo Maledon | G | RMB | 12.9 | 38 | 18 | 8 |
-| Collin Malcolm | F | EFS | 10.3 | 30 | 24 | 0 |
-| Aliou Diarra | C | VIR | 10.8 | 30 | 32 | 0 |
-| Alberto Abalde | F | RMB | 6.1 | 28 | 18 | 0 |
-| Saras Jasikevicius | H | FBT | 8.3 | 27 | 12 | 0 |
-| Kenan Kamenjas | C | KBA | 4.8 | 25 | 16 | 0 |
-| Jonas Valanciunas | C | ZAL | 17.7 | 21 | 20 | 4 |
-| Elijah Bryant | G | HTA | 17.6 | 19 | 16 | 0 |
-| Azuolas Tubelis | F | ZAL | 12.8 | 19 | 20 | 0 |
-| Tomas Masiulis | H | ZAL | 7.4 | 19 | 11 | 0 |
-| Stefan Joksimovic | F | KBA | 4.1 | 18 | 16 | 0 |
-| Carlik Jones | G | PAR | 13.9 | 15 | 22 | 0 |
-| Evan Fournier | G | OLY | 9.3 | 8 | 9 | 0 |
-| Gabriele Procida | F | RMB | 5.3 | 7 | 13 | 0 |
-| Kendrick Nunn | G | PAO | 14.9 | 7 | 14 | 0 |
-| Justin Robinson | G | BAR | 13.1 | 6 | 9 | 0 |
-| TJ Shorts | G | VBC | 17.1 | 6 | 20 | 0 |
-| Dario Brizuela | G | BAR | 6.0 | 5 | 6 | 0 |
+| Sasha Vezenkov | F | OLY | 20.2 | 35 | 50 | 49 |
+| Kenan Kamenjas | C | KBA | 5.4 | 32 | 20 | 1 |
+| Theo Maledon | G | RMB | 13.4 | 30 | 19 | 1 |
+| Collin Malcolm | F | EFS | 10.1 | 23 | 23 | 0 |
+| Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
+| Carlik Jones | G | PAR | 14.4 | 16 | 23 | 0 |
+| Elijah Bryant | G | HTA | 17.6 | 15 | 16 | 0 |
+| TJ Shorts | G | VBC | 16.8 | 14 | 20 | 22 |
+| Pablo Laso | H | EFS | 6.0 | 14 | 14 | 0 |
+| Andres Feliz | G | RMB | 9.9 | 14 | 31 | 0 |
+| Azuolas Tubelis | F | ZAL | 13.1 | 13 | 20 | 1 |
+| Stefan Joksimovic | F | KBA | 4.0 | 12 | 15 | 0 |
+| Anton Gavel | H | BAY | 4.0 | 9 | 9 | 0 |
+| Alberto Abalde | F | RMB | 6.2 | 9 | 17 | 0 |
+| Oscar Da Silva | F | BAY | 8.2 | 9 | 4 | 0 |
+| Xavier Albert | H | VBC | 8.6 | 8 | 8 | 0 |
+| Nadir Hifi | G | PBB | 16.3 | 7 | 9 | 13 |
+| Jonas Valanciunas | C | ZAL | 17.7 | 7 | 18 | 0 |
+| Clement Frisch | F | KBA | 5.5 | 6 | 5 | 0 |
+| Kendrick Nunn | G | PAO | 14.8 | 6 | 14 | 9 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Theo Maledon (+20 pp), Saras Jasikevicius (+15 pp), Alberto Abalde (+10 pp), Kenan Kamenjas (+9 pp), Tomas Masiulis (+8 pp), Andres Feliz (+7 pp), Collin Malcolm (+6 pp), Elijah Bryant (+3 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Kenan Kamenjas (+12 pp), Theo Maledon (+11 pp), Oscar Da Silva (+5 pp), Clement Frisch (+1 pp), Rodions Kurucs (+1 pp), Pablo Laso (+0 pp), Anton Gavel (+0 pp), Xavier Albert (+0 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (170), Jonas Valanciunas (31), Mathias Lessort (25)
@@ -40,9 +40,10 @@
 - MD10: Andres Feliz (115), Kendrick Nunn (26), Mathias Lessort (20)
 - MD11: Sasha Vezenkov (106), Talen Horton-Tucker (13), TJ Shorts (12)
 - MD12: Sasha Vezenkov (120), Theo Maledon (8), Jonas Valanciunas (4)
+- MD13: Sasha Vezenkov (49), TJ Shorts (22), Nadir Hifi (13)
 
 ## Trades used per team (mean)
-- MD1: 0.0, MD2: 3.63, MD3: 3.48, MD4: 3.74, MD5: 3.85, MD6: 3.7, MD7: 6.36, MD8: 3.63, MD9: 3.64, MD10: 3.9, MD11: 3.65, MD12: 3.84
+- MD1: 0.0, MD2: 3.63, MD3: 3.48, MD4: 3.74, MD5: 3.85, MD6: 3.7, MD7: 6.36, MD8: 3.63, MD9: 3.64, MD10: 3.9, MD11: 3.65, MD12: 3.84, MD13: 3.86
 
 ## Most common moves (count of top teams)
 - MD2: IN Xavier Albert (73), Eleftherios Mantzoukas (71), Mathias Lessort (61), Nikos Rogkavopoulos (55) · OUT Joel Parra (75), Saras Jasikevicius (67), Matteo Spagnolo (61), Bruno Fernando (42)
@@ -56,15 +57,16 @@
 - MD10: IN Saras Jasikevicius (152), Collin Malcolm (60), Carlik Jones (50), Andres Feliz (43) · OUT Theo Maledon (169), Ibon Navarro (141), Yam Madar (47), Tomas Masiulis (19)
 - MD11: IN Joan Penarroya (94), Carlik Jones (32), Nikola Tanaskovic (32), Collin Malcolm (29) · OUT Saras Jasikevicius (122), Mouhamed Faye (32), Yam Madar (27), Kostas Papanikolaou (22)
 - MD12: IN Theo Maledon (107), Saras Jasikevicius (72), Kenan Kamenjas (71), Tomas Masiulis (52) · OUT Joan Penarroya (102), Aliou Diarra (36), TJ Shorts (29), Carlik Jones (27)
+- MD13: IN Pablo Laso (39), Kenan Kamenjas (29), TJ Shorts (29), Anton Gavel (26) · OUT Saras Jasikevicius (57), Andres Feliz (47), Tomas Masiulis (38), Alberto Abalde (33)
 
 ## In-round management
-- Field players promoted from the bench during the round: MD1: 34%, MD2: 37%, MD3: 39%, MD4: 38%, MD5: 38%, MD6: 37%, MD7: 38%, MD8: 35%, MD9: 37%, MD10: 33%, MD11: 34%, MD12: 36%
-- Average points of promoted players: 17.0 vs 21.1 for players who started on the field
+- Field players promoted from the bench during the round: MD1: 34%, MD2: 37%, MD3: 39%, MD4: 38%, MD5: 38%, MD6: 37%, MD7: 38%, MD8: 35%, MD9: 37%, MD10: 33%, MD11: 34%, MD12: 36%, MD13: 26%
+- Average points of promoted players: 17.1 vs 21.1 for players who started on the field
 
-## Budget structure (matchday 12, mean price per slot)
-- 6th: 10.7, B: 7.3, S: 14.0
-- Price of the most expensive player per team: 19.2 · cheapest: 4.3
-- Players per club (max per team): 2.7
+## Budget structure (matchday 13, mean price per slot)
+- 6th: 11.2, B: 8.8, S: 13.6
+- Price of the most expensive player per team: 20.1 · cheapest: 4.4
+- Players per club (max per team): 2.3
 
 ## Coach choices (top 3 per matchday)
 - MD1: Saras Jasikevicius (142), Zeljko Obradovic (47), Oded Kattash (44)
@@ -79,3 +81,4 @@
 - MD10: Saras Jasikevicius (152), Joan Penarroya (33), Tony Parker (2)
 - MD11: Joan Penarroya (119), Xavier Albert (29), Saras Jasikevicius (5)
 - MD12: Saras Jasikevicius (77), Tomas Masiulis (52), Pedro Martinez (1)
+- MD13: Pablo Laso (39), Anton Gavel (26), Xavier Albert (22)

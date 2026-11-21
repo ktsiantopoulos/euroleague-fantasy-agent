@@ -1,10 +1,12 @@
-## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 81.22 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 81.07 h away)
 ## pull-official
-E2026: 130 games played, 10 box scores fetched now
+E2026: 130 games played, 0 box scores fetched now
 
 ## pull-platform
-pull-platform failed: HTTPError: 500 Server Error: Internal Server Error for 
-url: https://fantaking-api.dunkest.com/api/v1/leagues/10/config
+pulled -> 
+/home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
+taking/md_14
+team: UnderTakers86  credits: 116  trades used: 0/11
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
@@ -22,21 +24,25 @@ coach                20
 surname+any-team      1
 team context: 20 clubs · usage: 302 players · FDR: 20 clubs x next 5
 price base: fantasyedge 237, top100_md1 122, first_seen 8
-matchdays: 38 (one per round) · current MD 13 = R13, nights T1=2026-11-19, 
-T2=2026-11-20
+matchdays: 38 (one per round) · current MD 14 = R14, nights T1=2026-11-24, 
+T2=2026-11-25
 
 ## reconcile
-player-games compared: 4285
-exact matches: 2835 (66.2%)
-  no_boxscore_row: 794
-  no_player: 633
-  MISMATCH: 23
+player-games compared: 4647
+exact matches: 3070 (66.1%)
+  no_boxscore_row: 868
+  no_player: 683
+  MISMATCH: 26
 
 first mismatches:
 platform_id  matchday person_code  game_code  platform_pts  official_pir  
 official_min team_won  expected_pts   status
       11498         6      014731         51           0.0          -1.0     
 11.800000     True          -0.9 MISMATCH
+      11503        13      014732        124          19.8          17.0     
+25.933333     True          18.7 MISMATCH
+      11527        13      015168        126           1.1           0.0     
+13.533333     True           0.0 MISMATCH
       11543         7      014802         61           0.0          -1.0     
 11.450000    False          -1.0 MISMATCH
       11546         7      014738         61          14.0          13.0     
@@ -61,10 +67,6 @@ official_min team_won  expected_pts   status
 30.416667     True           5.5 MISMATCH
        3907        10      011231         98          11.0           9.0     
 19.183333     True           9.9 MISMATCH
-       4038         2      006544         20           NaN          -3.0     
-11.566667     True          -2.7 MISMATCH
-       4670        10      013389         97          11.0           9.0     
-21.366667     True           9.9 MISMATCH
 
 ## evaluate
 # Projection evaluation
@@ -79,20 +81,23 @@ corr 0.549 · above p90 12% / below p10 6% (target 10% each)
 corr 0.553 · above p90 11% / below p10 7% (target 10% each)
 - MD12: 308 players · MAE 4.90 (platform avg_pts baseline 5.64) · bias +0.50 · 
 corr 0.567 · above p90 8% / below p10 5% (target 10% each)
+- MD13: 312 players · MAE 5.16 (platform avg_pts baseline 5.99) · bias +0.43 · 
+corr 0.519 · above p90 10% / below p10 7% (target 10% each)
 
 ## Bias by segment (mean projected − actual; positive = we over-project)
-- position: Center -1.0 (n=284), Forward +0.7 (n=530), Guard +0.3 (n=684)
-- projected minutes: <10 +0.3 (n=314), 10-20 +0.1 (n=745), 20-30 +0.2 (n=376)
-- price: ≤6 +1.0 (n=387), 6-9 -0.1 (n=595), 9-13 +0.2 (n=386), 13+ -0.8 (n=130)
-- availability: doubtful +0.6 (n=128), fit +0.1 (n=1370)
+- position: Center -0.9 (n=345), Forward +0.8 (n=638), Guard +0.2 (n=827)
+- projected minutes: <10 +0.5 (n=372), 10-20 +0.2 (n=896), 20-30 +0.1 (n=463), 
+30+ +10.6 (n=1)
+- price: ≤6 +1.0 (n=474), 6-9 -0.2 (n=717), 9-13 +0.4 (n=462), 13+ -0.5 (n=157)
+- availability: doubtful +0.2 (n=160), fit +0.2 (n=1650)
 
 ## Biggest misses
-- under-projected: Lonnie Walker IV (0→40), Antonio Blakeney (9→38), Austin 
-Wiley (7→35), Nadir Hifi (16→43), Johannes Thiemann (9→34)
+- under-projected: Lonnie Walker IV (0→40), Antonio Blakeney (9→38), Moses 
+Wright (11→40), Austin Wiley (7→35), Nadir Hifi (16→43)
 - over-projected: Elijah Bryant (19→-6), Luca Vildoza (10→-7), Tyrese Martin 
 (13→-4), Scottie Wilbekin (11→-5), Elie Okobo (14→-2)
 
-## Coaches: MAE 10.4, bias +0.1 (n=99)
+## Coaches: MAE 10.2, bias +0.1 (n=119)
 
 ## scorecard
 # Decision scorecard
@@ -110,17 +115,19 @@ trades (actual) | trades: agent / you | hindsight | regret | captain regret |
 +37.3 | 257.9 | 75.3 | 4.4 (Sasha Vezenkov) |
 | 12 | 173.6 ± 28.8 | 190.8 | +0.60 | 196.5 | 192.15 (-4.3) | 206.75 | -10.2 / 
 -15.9 | 282.8 | 92.0 | 25.3 (Jonas Valanciunas) |
+| 13 | 170.1 ± 33.2 | 154.2 | -0.48 | 146.0 | 144.9 (-1.1) | 88.6 | +57.4 / 
++65.7 | 238.6 | 84.3 | 0.0 (Nadir Hifi) |
 
-Mean z +0.67 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
-mean regret 93.8 · cumulative trade value agent +9.6 / you +36.0
-Market variant vs recommendation (matchdays where they differed): 1/2 wins, 
-cumulative -0.8 pts · raise MU_PRICE only once this is consistently positive.
+Mean z +0.48 (0 = unbiased; |z| > 2 on a matchday is a miss worth reading) · 
+mean regret 92.2 · cumulative trade value agent +67.0 / you +101.7
+Market variant vs recommendation (matchdays where they differed): 1/3 wins, 
+cumulative -1.9 pts · raise MU_PRICE only once this is consistently positive.
 
 ## trade backtest
 # Trade-discipline replay
 
-Matchdays: 8, 9, 10, 11, 12 · realised gain = recommended squad minus no-trade 
-squad, both on actual points
+Matchdays: 8, 9, 10, 11, 12, 13 · realised gain = recommended squad minus 
+no-trade squad, both on actual points
 
 | setting | MD | trades | predicted gain | realised gain |
 |---|---|---|---|---|
@@ -143,19 +150,19 @@ after 3 straight newest-round wins
 DRIFT: model lost to a naive baseline in R12 and R13
 
 ## top-100
-top-100: 268 roster previews fetched now
-# Top-281 managers — matchdays 1–12
+top-100: 100 roster previews fetched now
+# Top-281 managers — matchdays 1–13
 
-## Ownership in the top 281, matchday 12
+## Ownership in the top 281, matchday 13
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 19.2 | 47 | 49 | 120 |
-| Andres Feliz | G | RMB | 9.7 | 41 | 34 | 0 |
-| Theo Maledon | G | RMB | 12.9 | 38 | 18 | 8 |
-| Collin Malcolm | F | EFS | 10.3 | 30 | 24 | 0 |
-| Aliou Diarra | C | VIR | 10.8 | 30 | 32 | 0 |
-| Alberto Abalde | F | RMB | 6.1 | 28 | 18 | 0 |
+| Sasha Vezenkov | F | OLY | 20.2 | 35 | 50 | 49 |
+| Kenan Kamenjas | C | KBA | 5.4 | 32 | 20 | 1 |
+| Theo Maledon | G | RMB | 13.4 | 30 | 19 | 1 |
+| Collin Malcolm | F | EFS | 10.1 | 23 | 23 | 0 |
+| Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
+| Carlik Jones | G | PAR | 14.4 | 16 | 23 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
@@ -168,8 +175,8 @@ projected >= 15 min 1365       6.26       0.331           6.39           0.323
 6.02            0.384
 
 ## recommend
+one club; 1 point per credit for bench players under 6.0.
 - Trade discipline: each incoming player must clear 2.0 pts + 0.00×sd; no 
 trade-ins with < 3 season games or < 70% to play (objective discount on this 
 squad: 0.0; not deducted from the expected points).
-- Optimiser status: Optimal (night-balance relaxed) / Optimal (night-balance 
-relaxed).
+- Optimiser status: Optimal / Optimal.
