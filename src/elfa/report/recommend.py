@@ -195,10 +195,13 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     for k in keep or []:
         hit = proj[proj.name.str.lower().str.contains(k.lower())]
         keep_ids |= set(hit.platform_id)
-    best = run_optimiser(proj, budget, base.ids, trades_left, mu, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc)
+    hurdle = L.hurdle_for(base.max_trades)
+    best = run_optimiser(proj, budget, base.ids, trades_left, mu, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc,
+                         trade_hurdle=hurdle)
     # market variant: same rules, the market term at its season-long value; shown as a diff and scored alongside
     mu_mkt = L.MU_PRICE_MARKET
-    variant = run_optimiser(proj, budget, base.ids, trades_left, mu_mkt, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc)
+    variant = run_optimiser(proj, budget, base.ids, trades_left, mu_mkt, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc,
+                            trade_hurdle=hurdle)
     vdiff = variant_diff(best, variant)
     # what to change on the platform to get from the pending squad to the recommended one
     best_ids = set(best.squad.platform_id)
@@ -237,7 +240,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         f"- Game nights: {nights_txt}. Bench players with later nights are swap options; captain can move to a not-yet-played starter.",
         f"- {base.label.capitalize()}, best lineup: **{hold.expected_md_pts} pts** expected; in-round swaps add {plan_hold.gain:+.1f} (simulated).",
     ] + ([f"- Pending squad (your {base.pending_trades} current trade(s)), best lineup: **{pending.expected_md_pts} pts** expected "
-          f"({pending.expected_md_pts - hold.expected_md_pts:+.1f} vs the locked squad)."] if pending is not hold else []) + [
+          f"({pending.expected_md_pts - hold.expected_md_pts:+.1f} vs the locked squad)."] if pending is not hold else []) + ([f"- **Extra-trade matchday:** {base.max_trades} changes allowed (normally {L.STANDARD_TRADES}); trade hurdle off."]
+         if base.max_trades > L.STANDARD_TRADES else []) + [
         f"- Recommended with ≤{trades_left} trade(s): **{best.expected_md_pts} pts** expected (+{round(best.expected_md_pts - hold.expected_md_pts, 1)} vs {base.label}"
         + (f", {best.expected_md_pts - pending.expected_md_pts:+.1f} vs pending" if pending is not hold else "")
         + f"); in-round swaps add {plan_best.gain:+.1f} (simulated); cost {best.cost}/{budget}.",
@@ -289,7 +293,9 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
          "Δprice column = expected credits over the horizon."),
         "- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 ownership (raw model value kept as md_pts_model).",
         "- Soft rules from the top-100 study: 3 points penalty per player above 3 from one club; 1 point per credit for bench players under 6.0.",
-        f"- Trade discipline: each incoming player must clear {L.TRADE_HURDLE:.1f} pts + {L.TRADE_SD_PENALTY:.2f}×sd; "
+        f"- Trade discipline: each incoming player must clear {hurdle:.1f} pts + {L.TRADE_SD_PENALTY:.2f}×sd"
+        + (f" (extra-trade matchday: {base.max_trades} changes, hurdle off; normally {L.TRADE_HURDLE:.1f})" if base.max_trades > L.STANDARD_TRADES else "")
+        + "; "
         f"no trade-ins with < {L.MIN_GAMES_TRADE_IN} season games or < {L.MIN_PROB_PLAY_TRADE_IN:.0%} to play "
         f"(objective discount on this squad: {best.trade_penalty:.1f}; not deducted from the expected points).",
         f"- Optimiser status: {best.status} / {hold.status}.",

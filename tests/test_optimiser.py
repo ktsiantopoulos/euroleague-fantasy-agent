@@ -95,3 +95,11 @@ def test_premium_structure_constraints():
         assert (pl[pl.pos == pos].quotation >= 13.0).sum() >= 1
     sol2 = optimise(df, budget=100.0, prev_ids=prev, max_trades=11, premium_price=13.0, premium_total=3)
     assert (sol2.squad[sol2.squad.pos != "Head Coach"].quotation >= 13.0).sum() >= 3
+
+
+def test_hurdle_off_on_extra_trade_matchdays():
+    from elfa.optimise import lineup as L
+
+    assert L.hurdle_for(4) == L.TRADE_HURDLE
+    assert L.hurdle_for(3) == L.TRADE_HURDLE
+    assert L.hurdle_for(11) == L.EXTRA_TRADE_HURDLE == 0.0

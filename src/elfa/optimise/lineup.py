@@ -30,6 +30,8 @@ BENCH_FLOOR_PENALTY = 1.0   # ... this many expected points
 # was the one consistent gain; hurdle and sd penalty showed no reliable signal yet, so the hurdle is kept
 # small and the sd penalty off until more matchdays are scored.
 TRADE_HURDLE = 2.0          # expected points a new player must beat the one he replaces by (per trade)
+STANDARD_TRADES = 4         # normal per-matchday allowance; some matchdays add extra trades (4 + 7 = 11)
+EXTRA_TRADE_HURDLE = 0.0    # hurdle on those extra-trade matchdays (user decision 2026-11-21: no hurdle)
 TRADE_SD_PENALTY = 0.0      # extra discount per point of matchday sd for an incoming player (off; see above)
 MIN_GAMES_TRADE_IN = 3      # never buy a player with fewer season games (Edwin Jackson: 1 g, 0 pts twice)
 MIN_PROB_PLAY_TRADE_IN = 0.7  # never buy a player the platform rates below this chance to play
@@ -81,6 +83,12 @@ def games_played(df: pd.DataFrame) -> dict[str, int]:
         m_ = _GAMES_RE.search(str(w))
         out[i] = int(m_.group(1)) if m_ else 0
     return out
+
+
+def hurdle_for(max_trades: int) -> float:
+    """Trade hurdle for a matchday: TRADE_HURDLE normally, EXTRA_TRADE_HURDLE when the platform grants more
+    than STANDARD_TRADES (extra-trade matchdays, e.g. 11 changes)."""
+    return EXTRA_TRADE_HURDLE if int(max_trades) > STANDARD_TRADES else TRADE_HURDLE
 
 
 def trade_in_cost(md_sd: float, hurdle: float, sd_penalty: float) -> float:
