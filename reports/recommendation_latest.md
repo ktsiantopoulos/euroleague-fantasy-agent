@@ -2,7 +2,7 @@
 
 **Deadline: 2026-11-24 16:59 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-11-21 12:21 UTC · team **UnderTakers86** · budget 116.0 · trades 11 vs the locked squad (6 pending on the platform) · odds ON (10 games)
+Generated 2026-11-21 12:50 UTC · team **UnderTakers86** · budget 116.0 · trades 11 vs the locked squad (6 pending on the platform) · odds ON (10 games)
 _trade window open - 6 pending change(s) are reversible_
 > ⚠️ **Model drift:** model lost to a naive baseline in R12 and R13 — weigh this recommendation with extra judgement.
 
@@ -11,40 +11,39 @@ _trade window open - 6 pending change(s) are reversible_
 - Locked squad, best lineup: **160.6 pts** expected; in-round swaps add +0.0 (simulated).
 - Pending squad (your 6 current trade(s)), best lineup: **170.2 pts** expected (+9.6 vs the locked squad).
 - **Extra-trade matchday:** 11 changes allowed (normally 4); trade hurdle off.
-- Recommended with ≤11 trade(s): **168.6 pts** expected (+8.0 vs locked squad, -1.6 vs pending); in-round swaps add +2.4 (simulated); cost 116.0/116.0.
-- Trades vs the locked squad: OUT Johannes Thiemann, Alberto Abalde, Sebastian Herrera, Clement Frisch, Anton Gavel, Collin Malcolm → IN Scottie Wilbekin, Pedro Martinez, Kevarrius Hayes, Oscar Da Silva, Dejan Davidovac, Edwin Jackson
-- **To do on the platform** (from what you have selected now): remove Kenan Kamenjas → add Kevarrius Hayes
+- Recommended with ≤11 trade(s): **170.3 pts** expected (+9.7 vs locked squad, +0.1 vs pending); in-round swaps add +1.3 (simulated); cost 115.7/116.0.
+- Trades vs the locked squad: OUT Clement Frisch, Johannes Thiemann, Sebastian Herrera, Anton Gavel, Collin Malcolm, Andres Feliz → IN Scottie Wilbekin, Tyson Carter, Pedro Martinez, Oscar Da Silva, Kenan Kamenjas, Rodions Kurucs
+- **To do on the platform** (from what you have selected now): remove Andres Feliz, Dejan Davidovac, Edwin Jackson → add Alberto Abalde, Tyson Carter, Rodions Kurucs
 - Captain **Sasha Vezenkov**, coach **Pedro Martinez**.
-- Market: recommended squad expected to move **-0.2 credits** over the next 3 matchdays (locked squad -0.5; not in the objective). Market variant (μ = 8): Aliou Diarra → Johannes Thiemann, Kevarrius Hayes → Wenyen Gabriel, Dejan Davidovac → Gabriele Procida, Edwin Jackson → Clement Frisch, Andres Feliz → Tyson Carter for -1.0 pts and +1.1 credits — see below.
+- Market: recommended squad expected to move **-0.5 credits** over the next 3 matchdays (locked squad -0.5; not in the objective). Market variant (μ = 8): Aliou Diarra → Johannes Thiemann for -0.7 pts and +0.4 credits — see below.
 
 ## Recommended squad (with trades)
 | slot | name | pos | team | price | Δprice | nights | exp pts | p90 | top100 own% | justification |
 |---|---|---|---|---|---|---|---|---|---|---|
 | Starter | **Sasha Vezenkov** (C) | Forward | OLY | 20.0 | -0.2 | T2 | 24.03 | 36.36 | 35 | 28 min proj (starter, last 26), 0.81 PIR/min over 13 g · T2 vs HTA (DvP -2.6, win 60%) → 23.7 |
 | Starter | Nadir Hifi | Guard | PBB | 16.6 | 0.0 | T1 | 21.24 | 34.68 | 7 | 25 min proj (starter, last 25), 0.77 PIR/min over 10 g · T1 @ BES (DvP +3.8, win 38%) → 21.2 |
+| Starter | Theo Maledon | Guard | RMB | 13.8 | -0.2 | T2 | 20.63 | 34.14 | 30 | 23 min proj (starter, last 24), 0.83 PIR/min over 11 g · T2 vs ZAL (DvP -2.2, win 70%) → 20.4 |
 | Starter | Scottie Wilbekin | Guard | BJK | 9.6 | +0.3 | T1 | 16.51 | 27.64 | 0 | 26 min proj (starter, last 34), 0.51 PIR/min over 13 g · T1 vs PRS (DvP +6.6, win 62%) → 16.5 |
 | Starter | Aliou Diarra | Center | VIR | 11.4 | -0.3 | T1 | 15.91 | 25.25 | 20 | 18 min proj (bench, last 18), 0.87 PIR/min over 13 g · T1 @ RED (DvP -2.2, win 30%) → 15.8 |
-| Starter | Oscar Da Silva | Forward | BAY | 8.5 | +0.2 | T1 | 13.41 | 23.66 | 9 | 19 min proj (bench, last 15), 0.58 PIR/min over 11 g · T1 vs TEL (DvP +3.2, win 53%) → 13.4 |
-| 6th man | Theo Maledon | Guard | RMB | 13.8 | -0.2 | T2 | 20.63 | 34.14 | 30 | 23 min proj (starter, last 24), 0.83 PIR/min over 11 g · T2 vs ZAL (DvP -2.2, win 70%) → 20.4 |
-| Bench (50%) | Andres Feliz | Guard | RMB | 9.6 | -0.1 | T2 | 14.33 | 27.19 | 14 | 22 min proj (starter, last 20), 0.60 PIR/min over 13 g · T2 vs ZAL (DvP -2.2, win 70%) → 14.2 |
-| Bench (50%) | Kevarrius Hayes | Center | PAR | 8.6 | 0.0 | T2 | 12.19 | 22.7 | 0 | 22 min proj (bench, last 25), 0.56 PIR/min over 10 g · T2 @ DUB (DvP +0.2, win 31%) → 12.2 |
-| Bench (50%) | Dejan Davidovac | Forward | CZV | 5.1 | +0.2 | T1 | 9.83 | 17.77 | 2 | 14 min proj (bench, last 17), 0.52 PIR/min over 10 g · T1 vs VIR (DvP +2.5, win 70%) → 9.8 |
-| Bench (50%) | Edwin Jackson | Forward | ASV | 4.2 | 0.0 | T1 | 8.68 | 20.81 | 2 | 15 min proj (bench, last 13), 0.46 PIR/min over 4 g · T1 vs MIL (DvP -0.1, win 49%) → 8.7 |
+| 6th man | Tyson Carter | Guard | CZV | 8.9 | +0.2 | T1 | 14.47 | 26.52 | 0 | 25 min proj (bench, last 29), 0.55 PIR/min over 13 g · T1 vs VIR (DvP -1.2, win 70%) → 14.5 |
+| Bench (50%) | Kenan Kamenjas | Center | KBA | 6.2 | -0.5 | T2 | 15.44 | 24.37 | 32 | 24 min proj (starter, last 30), 0.62 PIR/min over 2 g · T2 vs IST (DvP -1.3, win 49%) → 15.2 · ⚠ only 2 game(s) |
+| Bench (50%) | Oscar Da Silva | Forward | BAY | 8.5 | +0.2 | T1 | 13.41 | 23.66 | 9 | 19 min proj (bench, last 15), 0.58 PIR/min over 11 g · T1 vs TEL (DvP +3.2, win 53%) → 13.4 |
+| Bench (50%) | Alberto Abalde | Forward | RMB | 5.9 | +0.1 | T2 | 9.88 | 19.75 | 9 | 19 min proj (bench, last 16), 0.42 PIR/min over 13 g · T2 vs ZAL (DvP +1.0, win 70%) → 9.8 |
+| Bench (50%) | Rodions Kurucs | Forward | KBA | 6.2 | 0.0 | T2 | 7.75 | 14.49 | 2 | 25 min proj (starter, last 30), 0.35 PIR/min over 10 g · T2 vs IST (DvP -4.1, win 49%) → 7.7 |
 | Coach | Pedro Martinez | Head Coach | RMB | 8.6 | 0.0 | T2 | 10.29 | 27.14 | 0 | vs ZAL: margin +8, win 70% → EV +10.3 |
 
 ### In-round plan (from 3,000 simulations)
-- Andres Feliz (G, T2) is promoted from the bench in 55% of simulations
-- Kevarrius Hayes (C, T2) is promoted from the bench in 31% of simulations
+- Kenan Kamenjas (C, T2) is promoted from the bench in 46% of simulations
 - Rule of thumb after each night: promote a not-yet-played bench player over a field player of the same position whose realised score is below the bench player's expectation; move the captaincy to the not-yet-played starter with the highest expectation if it beats the captain's realised total.
 
 ## Market variant (μ = 8 pts/credit) vs the recommendation
 | | Recommendation (μ = 0) | Market variant |
 |---|---|---|
-| Expected pts | 168.6 | 167.6 (-1.0) |
-| Expected Δbudget, 3 matchdays | -0.2 | +0.9 (+1.1) |
+| Expected pts | 170.3 | 169.6 (-0.7) |
+| Expected Δbudget, 3 matchdays | -0.5 | -0.1 (+0.4) |
 | Trades used | 6 | 6 |
 | Captain / coach | Sasha Vezenkov / Pedro Martinez | Sasha Vezenkov / Pedro Martinez |
-| Changes | — | Aliou Diarra → Johannes Thiemann (-0.7 pts, +0.4 cr); Kevarrius Hayes → Wenyen Gabriel (+0.8 pts, +0.4 cr); Dejan Davidovac → Gabriele Procida (-1.4 pts, -0.0 cr); Edwin Jackson → Clement Frisch (-0.9 pts, +0.1 cr); Andres Feliz → Tyson Carter (+0.1 pts, +0.3 cr) |
+| Changes | — | Aliou Diarra → Johannes Thiemann (-0.7 pts, +0.4 cr) |
 
 _Both squads are frozen before the lock and scored after the round (scorecard: 'market variant' column); once the variant has beaten the recommendation over several matchdays, raise MU_PRICE._
 
@@ -93,6 +92,20 @@ Center   leak PIR to: MUN (+4.0, n=13), BAS (+3.6, n=13), ASV (+3.3, n=13), PRS 
 - Forward: Gabriele Procida RMB 4.8 → 8.39 (top100 2%); Alberto Abalde RMB 5.9 → 9.88 (top100 9%); Nikos Rogkavopoulos PAO 4.2 → 6.08 (top100 1%); Clement Frisch KBA 5.4 → 7.75 (top100 6%); Giampaolo Ricci MIL 4.0 → 5.49 (top100 1%)
 - Center: Ousmane Diop MIL 5.0 → 8.9 (top100 0%); Wenyen Gabriel BJK 8.1 → 12.99 (top100 0%); Kevarrius Hayes PAR 8.6 → 12.19 (top100 0%); Mouhamed Faye PBB 8.5 → 11.78 (top100 0%); Neal Sako VBC 10.3 → 13.66 (top100 0%)
 
+## Blocked by the availability gate (not buyable this matchday)
+- none with a projection of 8+ points (injured / doubtful players are excluded and listed under Flags)
+
+## What each rule costs this matchday (re-solved with that rule off)
+_Positive = switching the rule off would add expected points this matchday. Anything above ~2 pts is worth a look._
+| rule | Δ exp pts | would swap out | would bring in |
+|---|---|---|---|
+| availability gate (games / chance to play) | +0.0 | — | — |
+| trade hurdle | +0.0 | — | — |
+| club cap penalty (>3 per club) | -0.5 | Rodions Kurucs, Tyson Carter | Andres Feliz, Clement Frisch |
+| bench price floor penalty | +2.8 | Rodions Kurucs, Tyson Carter | Edwin Jackson, Lonnie Walker IV |
+| night balance | +0.0 | — | — |
+| 3-matchday horizon (this matchday only) | +3.3 | Pedro Martinez, Rodions Kurucs, Tyson Carter | Dejan Davidovac, Ibon Navarro, Lonnie Walker IV |
+
 ## Flags
 - Kenan Kamenjas: only 2 game(s)
 
@@ -102,5 +115,5 @@ Center   leak PIR to: MUN (+4.0, n=13), BAS (+3.6, n=13), ASV (+3.3, n=13), PRS 
 - Market term: price model: Δprice = -0.008 + 0.0293 × (pts − avg) · R² 0.734 · n 2158 · MD 8→14; a player's expected move over the horizon is that slope × (projection − season average), decayed ×0.9 per matchday, valued at μ = 0.0 expected points per credit (frontier ≈ 0.95 pts/credit/matchday, re-spent every remaining round). Δprice column = expected credits over the horizon.
 - Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 ownership (raw model value kept as md_pts_model).
 - Soft rules from the top-100 study: 3 points penalty per player above 3 from one club; 1 point per credit for bench players under 6.0.
-- Trade discipline: each incoming player must clear 0.0 pts + 0.00×sd (extra-trade matchday: 11 changes, hurdle off; normally 2.0); no trade-ins with < 3 season games or < 70% to play (objective discount on this squad: 0.0; not deducted from the expected points).
+- Trade discipline: each incoming player must clear 0.0 pts + 0.00×sd (extra-trade matchday: 11 changes, hurdle off; normally 2.0); no trade-ins with < 3 season games (unless ≥ 2 games and ≥ 20 projected minutes) or < 70% to play (objective discount on this squad: 0.0; not deducted from the expected points).
 - Optimiser status: Optimal / Optimal.

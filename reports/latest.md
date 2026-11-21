@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 76.73 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 76.26 h away)
 ## pull-official
 E2026: 130 games played, 0 box scores fetched now
 
@@ -161,7 +161,7 @@ top-100: 0 roster previews fetched now
 | Kenan Kamenjas | C | KBA | 5.4 | 32 | 22 | 1 |
 | Theo Maledon | G | RMB | 13.4 | 30 | 21 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 22 | 0 |
-| Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
+| Aliou Diarra | C | VIR | 11.3 | 20 | 32 | 0 |
 | Carlik Jones | G | PAR | 14.4 | 16 | 22 | 0 |
 
 ## backtest
@@ -177,6 +177,6 @@ projected >= 15 min 1365       6.26       0.331           6.39           0.323
 ## recommend
 - Trade discipline: each incoming player must clear 0.0 pts + 0.00×sd 
 (extra-trade matchday: 11 changes, hurdle off; normally 2.0); no trade-ins with 
-< 3 season games or < 70% to play (objective discount on this squad: 0.0; not 
-deducted from the expected points).
+< 3 season games (unless ≥ 2 games and ≥ 20 projected minutes) or < 70% to play 
+(objective discount on this squad: 0.0; not deducted from the expected points).
 - Optimiser status: Optimal / Optimal.

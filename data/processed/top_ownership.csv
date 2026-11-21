@@ -1,6 +1,6 @@
 player,pos,club,teams,field,captain,price,own_pct,global_pct,edge
 Alberto Abalde,Forward,RMB,25,1,0,6.2,9.0,16,-7.0
-Aliou Diarra,Center,VIR,57,36,0,11.3,20.0,33,-13.0
+Aliou Diarra,Center,VIR,57,36,0,11.3,20.0,32,-12.0
 Alvaro Cardenas,Guard,VBC,3,0,0,4.3,1.0,5,-4.0
 Andreas Obst,Guard,BAY,4,0,0,9.4,1.0,3,-2.0
 Andres Feliz,Guard,RMB,38,9,0,9.9,14.0,28,-14.0
@@ -21,15 +21,15 @@ Dario Brizuela,Guard,BAR,7,0,0,6.2,2.0,6,-4.0
 Dario Saric,Forward,EFS,5,5,0,14.4,2.0,4,-2.0
 Darius Thompson,Guard,MIL,4,0,0,8.0,1.0,1,0.0
 David Lighty,Forward,ASV,1,0,0,4.3,0.0,3,-3.0
-Dejan Davidovac,Forward,CZV,7,0,0,4.6,2.0,11,-9.0
-Duane Washington,Guard,BAY,5,5,1,10.1,2.0,4,-2.0
+Dejan Davidovac,Forward,CZV,7,0,0,4.6,2.0,12,-10.0
+Duane Washington,Guard,BAY,5,5,1,10.1,2.0,5,-3.0
 Dustin Sleva,Forward,ZAL,2,0,0,6.2,1.0,2,-1.0
 Dwayne Bacon,Forward,DUB,8,8,0,14.5,3.0,12,-9.0
 Dwight Powell,Center,FBT,1,0,0,8.6,0.0,1,-1.0
 Dylan Osetkowski,Forward,VBC,1,0,0,6.6,0.0,1,-1.0
 Dzanan Musa,Guard,DUB,3,0,0,12.4,1.0,2,-1.0
 Edwin Jackson,Forward,ASV,6,0,0,4.6,2.0,8,-6.0
-Elijah Bryant,Guard,HTA,41,10,0,17.6,15.0,15,0.0
+Elijah Bryant,Guard,HTA,41,10,0,17.6,15.0,14,1.0
 Ercan Osmani,Forward,EFS,1,0,0,6.6,0.0,1,-1.0
 Evan Fournier,Guard,OLY,14,12,1,9.3,5.0,9,-4.0
 Frank Ntilikina,Guard,PBB,1,0,0,6.6,0.0,1,-1.0
@@ -56,7 +56,7 @@ Mathis Dossou-yovo,Forward,ASV,1,0,0,8.9,0.0,1,-1.0
 Matthew Strazel,Guard,EFS,4,2,0,11.1,1.0,6,-5.0
 Metecan Birsen,Forward,BJK,1,0,0,4.2,0.0,1,-1.0
 Mfiondu Kabengele,Center,DUB,9,9,1,16.2,3.0,10,-7.0
-Moses Wright,Center,MIL,1,1,1,13.2,0.0,5,-5.0
+Moses Wright,Center,MIL,1,1,1,13.2,0.0,6,-6.0
 Nadir Hifi,Guard,PBB,21,21,13,16.3,7.0,11,-4.0
 Nigel Hayes-davis,Forward,PAO,1,1,0,12.2,0.0,4,-4.0
 Nikos Rogkavopoulos,Forward,PAO,4,0,0,4.3,1.0,5,-4.0
@@ -83,6 +83,6 @@ Tyson Ward,Forward,OLY,2,0,0,8.3,1.0,5,-4.0
 Vanja Marinkovic,Guard,PAR,18,1,0,4.3,6.0,8,-2.0
 Vasilije Micic,Guard,HTA,5,0,0,12.0,2.0,3,-1.0
 Will Clyburn,Forward,FBT,1,0,0,11.2,0.0,2,-2.0
-Xavier Albert,Head Coach,VBC,22,22,0,8.6,8.0,8,0.0
+Xavier Albert,Head Coach,VBC,22,22,0,8.6,8.0,7,1.0
 Yam Madar,Guard,MTA,1,1,0,10.6,0.0,7,-7.0
 Zach Leday,Forward,HTA,2,1,0,12.9,1.0,4,-3.0

@@ -1,6 +1,6 @@
 {
  "matchday": 14,
- "frozen_utc": "2026-11-21T12:21:01Z",
+ "frozen_utc": "2026-11-21T12:50:53Z",
  "lock_utc": "2026-11-24T16:59:00Z",
  "budget": 116.0,
  "trades_left": 11,
@@ -123,7 +123,7 @@
   ]
  },
  "best": {
-  "expected": 168.6,
+  "expected": 170.3,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -145,6 +145,15 @@
     "md_sd": 10.45
    },
    {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.63,
+    "md_sd": 10.42
+   },
+   {
     "platform_id": "3842",
     "name": "Scottie Wilbekin",
     "pos": "Guard",
@@ -163,58 +172,49 @@
     "md_sd": 7.23
    },
    {
+    "platform_id": "7217",
+    "name": "Tyson Carter",
+    "pos": "Guard",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 14.47,
+    "md_sd": 9.41
+   },
+   {
+    "platform_id": "4094",
+    "name": "Kenan Kamenjas",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 15.44,
+    "md_sd": 6.88
+   },
+   {
     "platform_id": "3957",
     "name": "Oscar Da Silva",
     "pos": "Forward",
-    "role": "starter",
+    "role": "bench",
     "captain": false,
     "md_pts": 13.41,
     "md_sd": 7.98
    },
    {
-    "platform_id": "3850",
-    "name": "Theo Maledon",
-    "pos": "Guard",
-    "role": "sixth",
-    "captain": false,
-    "md_pts": 20.63,
-    "md_sd": 10.42
-   },
-   {
-    "platform_id": "3851",
-    "name": "Andres Feliz",
-    "pos": "Guard",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 14.33,
-    "md_sd": 9.98
-   },
-   {
-    "platform_id": "3911",
-    "name": "Kevarrius Hayes",
-    "pos": "Center",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 12.19,
-    "md_sd": 8.2
-   },
-   {
-    "platform_id": "3983",
-    "name": "Dejan Davidovac",
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.83,
-    "md_sd": 6.2
+    "md_pts": 9.88,
+    "md_sd": 7.67
    },
    {
-    "platform_id": "4005",
-    "name": "Edwin Jackson",
+    "platform_id": "7238",
+    "name": "Rodions Kurucs",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 8.68,
-    "md_sd": 9.45
+    "md_pts": 7.75,
+    "md_sd": 5.26
    },
    {
     "platform_id": "3872",
@@ -227,22 +227,22 @@
    }
   ],
   "trades_out": [
-   "Johannes Thiemann",
-   "Alberto Abalde",
-   "Sebastian Herrera",
    "Clement Frisch",
+   "Johannes Thiemann",
+   "Sebastian Herrera",
    "Anton Gavel",
-   "Collin Malcolm"
+   "Collin Malcolm",
+   "Andres Feliz"
   ],
   "trades_in": [
    "Scottie Wilbekin",
+   "Tyson Carter",
    "Pedro Martinez",
-   "Kevarrius Hayes",
    "Oscar Da Silva",
-   "Dejan Davidovac",
-   "Edwin Jackson"
+   "Kenan Kamenjas",
+   "Rodions Kurucs"
   ],
-  "price_gain": -0.16
+  "price_gain": -0.45
  },
  "params": {
   "w_minutes": [
@@ -279,7 +279,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 167.6,
+  "expected": 169.6,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -337,6 +337,15 @@
     "md_sd": 9.41
    },
    {
+    "platform_id": "4094",
+    "name": "Kenan Kamenjas",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 15.44,
+    "md_sd": 6.88
+   },
+   {
     "platform_id": "3957",
     "name": "Oscar Da Silva",
     "pos": "Forward",
@@ -346,31 +355,22 @@
     "md_sd": 7.98
    },
    {
-    "platform_id": "3776",
-    "name": "Wenyen Gabriel",
-    "pos": "Center",
-    "role": "bench",
-    "captain": false,
-    "md_pts": 12.99,
-    "md_sd": 8.19
-   },
-   {
-    "platform_id": "3916",
-    "name": "Gabriele Procida",
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 8.39,
-    "md_sd": 7.66
+    "md_pts": 9.88,
+    "md_sd": 7.67
    },
    {
-    "platform_id": "7223",
-    "name": "Clement Frisch",
+    "platform_id": "7238",
+    "name": "Rodions Kurucs",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
     "md_pts": 7.75,
-    "md_sd": 5.68
+    "md_sd": 5.26
    },
    {
     "platform_id": "3872",
@@ -383,21 +383,21 @@
    }
   ],
   "trades_out": [
-   "Andres Feliz",
-   "Alberto Abalde",
-   "Aliou Diarra",
+   "Clement Frisch",
    "Sebastian Herrera",
    "Anton Gavel",
-   "Collin Malcolm"
+   "Collin Malcolm",
+   "Andres Feliz",
+   "Aliou Diarra"
   ],
   "trades_in": [
    "Scottie Wilbekin",
    "Tyson Carter",
    "Pedro Martinez",
    "Oscar Da Silva",
-   "Wenyen Gabriel",
-   "Gabriele Procida"
+   "Kenan Kamenjas",
+   "Rodions Kurucs"
   ],
-  "price_gain": 0.91
+  "price_gain": -0.07
  }
 }
