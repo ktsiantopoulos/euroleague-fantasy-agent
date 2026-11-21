@@ -103,3 +103,14 @@ def test_hurdle_off_on_extra_trade_matchdays():
     assert L.hurdle_for(4) == L.TRADE_HURDLE
     assert L.hurdle_for(3) == L.TRADE_HURDLE
     assert L.hurdle_for(11) == L.EXTRA_TRADE_HURDLE == 0.0
+
+
+def test_buyable_gate_allows_small_sample_with_established_role():
+    from elfa.optimise.lineup import buyable
+
+    assert buyable(3, 1.0, 5.0)                  # enough games
+    assert not buyable(1, 1.0, 30.0)             # one game is never enough (Edwin Jackson)
+    assert buyable(2, 1.0, 24.0)                 # two games as a real-minutes player (Kamenjas)
+    assert not buyable(2, 1.0, 12.0)             # two games, fringe minutes
+    assert not buyable(10, 0.5, 30.0)            # unlikely to play
+    assert buyable(1, 1.0, 0.0, min_games=1)     # gate switched off

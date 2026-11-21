@@ -33,7 +33,10 @@ TRADE_HURDLE = 2.0          # expected points a new player must beat the one he 
 STANDARD_TRADES = 4         # normal per-matchday allowance; some matchdays add extra trades (4 + 7 = 11)
 EXTRA_TRADE_HURDLE = 0.0    # hurdle on those extra-trade matchdays (user decision 2026-11-21: no hurdle)
 TRADE_SD_PENALTY = 0.0      # extra discount per point of matchday sd for an incoming player (off; see above)
-MIN_GAMES_TRADE_IN = 3      # never buy a player with fewer season games (Edwin Jackson: 1 g, 0 pts twice)
+MIN_GAMES_TRADE_IN = 3      # never buy a player with fewer season games (Edwin Jackson: 1 g, 0 pts twice) ...
+MIN_GAMES_ROLE = 2          # ... unless he has at least this many games AND an established role:
+ROLE_MINUTES = 20.0         # projected minutes >= this (recent starter minutes). MD 14: Kenan Kamenjas, 2 g as a
+                            # 30-min starter (19, 25) was blocked by the plain games gate; projected 15.4 at 6.2 cr.
 MIN_PROB_PLAY_TRADE_IN = 0.7  # never buy a player the platform rates below this chance to play
 # Market term ("ride the market"). The frontier of the MD 11 market buys ~0.95 expected points per credit per
 # matchday, and a credit of budget growth is re-spent every remaining round, so it is worth several points
@@ -83,6 +86,24 @@ def games_played(df: pd.DataFrame) -> dict[str, int]:
         m_ = _GAMES_RE.search(str(w))
         out[i] = int(m_.group(1)) if m_ else 0
     return out
+
+
+def buyable(n_games: int, prob_play: float, min_hat: float, min_games: int = MIN_GAMES_TRADE_IN,
+            min_prob: float = MIN_PROB_PLAY_TRADE_IN) -> bool:
+    """Availability gate for an incoming player: likely to play, and either enough season games or a small
+    sample with an established role (>= MIN_GAMES_ROLE games and >= ROLE_MINUTES projected minutes)."""
+    if prob_play < min_prob:
+        return False
+    if n_games >= min_games:
+        return True
+    return min_games > 1 and n_games >= MIN_GAMES_ROLE and min_hat >= ROLE_MINUTES
+
+
+def gate_reason(n_games: int, prob_play: float, min_hat: float) -> str:
+    """Why `buyable` said no (for the report)."""
+    if prob_play < MIN_PROB_PLAY_TRADE_IN:
+        return f"{prob_play:.0%} to play"
+    return f"{n_games} game(s), {min_hat:.0f} min projected"
 
 
 def hurdle_for(max_trades: int) -> float:
@@ -162,6 +183,7 @@ def optimise(
     min_pp = MIN_PROB_PLAY_TRADE_IN if min_prob_play_in is None else float(min_prob_play_in)
     n_g = games_played(df)
     pplay = dict(zip(df.platform_id, df.prob_play)) if "prob_play" in df else {}
+    mhat = dict(zip(df.platform_id, df.min_hat)) if "min_hat" in df else {}
     new_ids = [i for i in ids if i not in prev_ids]
     tcost = {i: trade_in_cost(sd.get(i, 0.0), hurdle, sd_pen) for i in new_ids}
     bval = bench_value(df)
@@ -237,7 +259,7 @@ def optimise(
         for i in new_ids:
             if pos[i] == "Head Coach" or i in (keep_ids or set()):
                 continue
-            if n_g.get(i, min_g) < min_g or float(pplay.get(i, 1.0)) < min_pp:
+            if not buyable(n_g.get(i, min_g), float(pplay.get(i, 1.0)), float(mhat.get(i, 0.0) or 0.0), min_g, min_pp):
                 prob += x[i] == 0
     prob.solve(pulp.PULP_CBC_CMD(msg=False, timeLimit=60))
     status = pulp.LpStatus[prob.status]
@@ -282,3 +304,45 @@ def optimise(
         price_gain=round(sum(exp_price_change.get(i, 0.0) for i in chosen), 2),
         price_value=round(mu_price * sum(exp_price_change.get(i, 0.0) for i in chosen), 1),
     )
+
+
+def rule_costs(proj: pd.DataFrame, budget: float, prev_ids: set[str], max_trades: int, base: Solution,
+               trade_hurdle: float | None = None, exp_price_change: dict[str, float] | None = None) -> list[dict]:
+    """What each house rule costs this matchday: re-solve with that one rule off and report the change in
+    expected points and the players it swaps. A rule that hides a better squad shows up here every run,
+    instead of silently (MD 14: the games gate hid Kamenjas)."""
+    import elfa.optimise.lineup as M
+
+    def _solve(**kw):
+        return optimise(proj, budget, prev_ids, max_trades, mu_price=0.0, exp_price_change=exp_price_change,
+                        trade_hurdle=trade_hurdle if "trade_hurdle" not in kw else kw.pop("trade_hurdle"), **kw)
+
+    def _patched(name, value, **kw):
+        old = getattr(M, name)
+        setattr(M, name, value)
+        try:
+            return _solve(**kw)
+        finally:
+            setattr(M, name, old)
+
+    tests = [
+        ("availability gate (games / chance to play)", lambda: _solve(min_games_in=1, min_prob_play_in=0.0)),
+        ("trade hurdle", lambda: _solve(trade_hurdle=0.0)),
+        ("club cap penalty (>3 per club)", lambda: _patched("CLUB_CAP_PENALTY", 0.0)),
+        ("bench price floor penalty", lambda: _patched("BENCH_FLOOR_PENALTY", 0.0)),
+        ("night balance", lambda: _solve(balance=False)),
+        ("3-matchday horizon (this matchday only)", lambda: _solve(future_factor=0.0)),
+    ]
+    b_ids = set(base.squad.platform_id)
+    names = dict(zip(proj.platform_id, proj.name))
+    out = []
+    for label, fn in tests:
+        try:
+            alt = fn()
+        except Exception as e:  # a rule check must never break the recommendation
+            out.append({"rule": label, "d_pts": None, "out": [], "in": [], "error": str(e)})
+            continue
+        a_ids = set(alt.squad.platform_id)
+        out.append({"rule": label, "d_pts": round(alt.expected_md_pts - base.expected_md_pts, 1),
+                    "out": sorted(names.get(i, i) for i in b_ids - a_ids), "in": sorted(names.get(i, i) for i in a_ids - b_ids)})
+    return out

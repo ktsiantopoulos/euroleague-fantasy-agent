@@ -90,6 +90,33 @@ def variant_diff(best, variant) -> dict:
     return {"differs": differs, "swaps": swaps, "d_pts": d_pts, "d_price": d_cr, "summary": summary}
 
 
+def blocked_by_gate(proj: pd.DataFrame, min_pts: float = 8.0) -> pd.DataFrame:
+    """Players with a game this matchday that the gate excludes, best projections first: the places where a
+    rule, not the model, decided. Shown in the report so a strong small-sample pick is never hidden silently."""
+    from elfa.optimise.lineup import buyable, games_played
+
+    n_g = games_played(proj)
+    rows = []
+    for r in proj.itertuples():
+        if r.pos == "Head Coach" or getattr(r, "in_roster", False) or not getattr(r, "games_md", 1):
+            continue
+        pp = float(getattr(r, "prob_play", 1.0) or 0.0)
+        mh = float(getattr(r, "min_hat", 0.0) or 0.0)
+        n = n_g.get(r.platform_id, L.MIN_GAMES_TRADE_IN)
+        model_pts = float(getattr(r, "md_pts_model", r.md_pts) or 0.0)
+        if not buyable(n, pp, mh) and (pp >= L.MIN_PROB_PLAY_TRADE_IN and model_pts >= min_pts):
+            rows.append({"name": r.name, "pos": r.pos, "team": r.team, "quotation": r.quotation, "md_pts": r.md_pts,
+                         "reason": L.gate_reason(n, pp, mh)})
+    return pd.DataFrame(rows).sort_values("md_pts", ascending=False) if rows else pd.DataFrame()
+
+
+def _blocked_lines(proj: pd.DataFrame, best) -> list[str]:
+    b = blocked_by_gate(proj)
+    if b.empty:
+        return ["- none with a projection of 8+ points (injured / doubtful players are excluded and listed under Flags)"]
+    return [f"- {r.name} ({r.pos[0]}, {r.team}, {r.quotation} cr): {r.md_pts} pts projected — {r.reason}" for r in b.head(8).itertuples()]
+
+
 def _fmt_variant(best, variant, vdiff: dict, mu_mkt: float) -> str:
     rows = [
         "| | Recommendation (μ = 0) | Market variant |",
@@ -203,6 +230,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     variant = run_optimiser(proj, budget, base.ids, trades_left, mu_mkt, lock_squad=False, keep_ids=keep_ids, exp_price_change=epc,
                             trade_hurdle=hurdle)
     vdiff = variant_diff(best, variant)
+    rcosts = L.rule_costs(proj, budget, base.ids, trades_left, best, trade_hurdle=hurdle, exp_price_change=epc) if base.open else []
     # what to change on the platform to get from the pending squad to the recommended one
     best_ids = set(best.squad.platform_id)
     undo_ids, add_ids = changes_between(roster_ids, best_ids)
@@ -280,6 +308,15 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
     for pos_ in ("Guard", "Forward", "Center"):
         top = cand[cand.pos == pos_].head(5)
         lines.append(f"- {pos_}: " + "; ".join(f"{r.name} {r.team} {r.quotation} → {r.md_pts} (top100 {r.elite_own}%{', ' + r.flags if r.flags else ''})" for r in top.itertuples()))
+    lines += ["", "## Blocked by the availability gate (not buyable this matchday)"] + _blocked_lines(proj, best)
+    lines += ["", "## What each rule costs this matchday (re-solved with that rule off)",
+              "_Positive = switching the rule off would add expected points this matchday. Anything above ~2 pts is worth a look._",
+              "| rule | Δ exp pts | would swap out | would bring in |", "|---|---|---|---|"]
+    for rc in rcosts:
+        if rc.get("error"):
+            lines.append(f"| {rc['rule']} | — | error: {rc['error'][:60]} | |")
+        else:
+            lines.append(f"| {rc['rule']} | {rc['d_pts']:+.1f} | {', '.join(rc['out']) or '—'} | {', '.join(rc['in']) or '—'} |")
     lines += [
         "",
         "## Flags",
@@ -296,7 +333,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
         f"- Trade discipline: each incoming player must clear {hurdle:.1f} pts + {L.TRADE_SD_PENALTY:.2f}×sd"
         + (f" (extra-trade matchday: {base.max_trades} changes, hurdle off; normally {L.TRADE_HURDLE:.1f})" if base.max_trades > L.STANDARD_TRADES else "")
         + "; "
-        f"no trade-ins with < {L.MIN_GAMES_TRADE_IN} season games or < {L.MIN_PROB_PLAY_TRADE_IN:.0%} to play "
+        f"no trade-ins with < {L.MIN_GAMES_TRADE_IN} season games (unless ≥ {L.MIN_GAMES_ROLE} games and ≥ {L.ROLE_MINUTES:.0f} projected minutes) "
+        f"or < {L.MIN_PROB_PLAY_TRADE_IN:.0%} to play "
         f"(objective discount on this squad: {best.trade_penalty:.1f}; not deducted from the expected points).",
         f"- Optimiser status: {best.status} / {hold.status}.",
     ]
@@ -343,6 +381,8 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
                     "status": variant.status, "captain": variant.captain, "coach": variant.coach, "differs": vdiff["differs"],
                     "swaps": vdiff["swaps"], "summary": vdiff["summary"], "trades_out": _pl(variant.trades_out), "trades_in": _pl(variant.trades_in),
                     "squad": _records(variant.squad)},
+        "rule_costs": rcosts,
+        "blocked": blocked_by_gate(proj).head(8).to_dict("records") if not blocked_by_gate(proj).empty else [],
         "top_value": top_value,
         "flags": [{"name": r.name, "flags": r.flags} for r in proj[proj.in_roster & proj["flags"].astype(str).str.strip().ne("") & proj["flags"].astype(str).ne("coach")].itertuples()],
     }
