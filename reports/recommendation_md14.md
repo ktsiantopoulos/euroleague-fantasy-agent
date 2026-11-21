@@ -2,7 +2,7 @@
 
 **Deadline: 2026-11-24 16:59 UTC** (first tip-off of the matchday; trades close then).
 
-Generated 2026-11-21 08:21 UTC · team **UnderTakers86** · budget 116.0 · trades 11 vs the locked squad (0 pending on the platform) · odds ON (10 games)
+Generated 2026-11-21 09:23 UTC · team **UnderTakers86** · budget 116.0 · trades 11 vs the locked squad (0 pending on the platform) · odds ON (10 games)
 _trade window open - 0 pending change(s) are reversible_
 > ⚠️ **Model drift:** model lost to a naive baseline in R12 and R13 — weigh this recommendation with extra judgement.
 
@@ -11,7 +11,7 @@ _trade window open - 0 pending change(s) are reversible_
 - Locked squad, best lineup: **160.6 pts** expected; in-round swaps add +0.0 (simulated).
 - **Extra-trade matchday:** 11 changes allowed (normally 4); trade hurdle off.
 - Recommended with ≤11 trade(s): **168.6 pts** expected (+8.0 vs locked squad); in-round swaps add +2.4 (simulated); cost 116.0/116.0.
-- Trades vs the locked squad: OUT Johannes Thiemann, Alberto Abalde, Anton Gavel, Sebastian Herrera, Collin Malcolm, Clement Frisch → IN Scottie Wilbekin, Pedro Martinez, Kevarrius Hayes, Oscar Da Silva, Dejan Davidovac, Edwin Jackson
+- Trades vs the locked squad: OUT Alberto Abalde, Collin Malcolm, Clement Frisch, Sebastian Herrera, Anton Gavel, Johannes Thiemann → IN Scottie Wilbekin, Pedro Martinez, Kevarrius Hayes, Oscar Da Silva, Dejan Davidovac, Edwin Jackson
 - **To do on the platform** (from what you have selected now): remove Johannes Thiemann, Collin Malcolm, Anton Gavel, Sebastian Herrera, Alberto Abalde, Clement Frisch → add Scottie Wilbekin, Pedro Martinez, Kevarrius Hayes, Oscar Da Silva, Dejan Davidovac, Edwin Jackson
 - Captain **Sasha Vezenkov**, coach **Pedro Martinez**.
 - Market: recommended squad expected to move **-0.2 credits** over the next 3 matchdays (locked squad -0.5; not in the objective). Market variant (μ = 8): Aliou Diarra → Johannes Thiemann, Kevarrius Hayes → Wenyen Gabriel, Dejan Davidovac → Gabriele Procida, Edwin Jackson → Clement Frisch, Andres Feliz → Tyson Carter for -1.0 pts and +1.1 credits — see below.

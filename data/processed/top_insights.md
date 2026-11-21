@@ -6,26 +6,26 @@
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 20.2 | 35 | 50 | 49 |
 | Kenan Kamenjas | C | KBA | 5.4 | 32 | 20 | 1 |
-| Theo Maledon | G | RMB | 13.4 | 30 | 19 | 1 |
+| Theo Maledon | G | RMB | 13.4 | 30 | 20 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 23 | 0 |
 | Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
 | Carlik Jones | G | PAR | 14.4 | 16 | 22 | 0 |
 | Elijah Bryant | G | HTA | 17.6 | 15 | 16 | 0 |
 | TJ Shorts | G | VBC | 16.8 | 14 | 20 | 22 |
 | Pablo Laso | H | EFS | 6.0 | 14 | 14 | 0 |
-| Andres Feliz | G | RMB | 9.9 | 14 | 31 | 0 |
+| Andres Feliz | G | RMB | 9.9 | 14 | 30 | 0 |
 | Azuolas Tubelis | F | ZAL | 13.1 | 13 | 20 | 1 |
 | Stefan Joksimovic | F | KBA | 4.0 | 12 | 15 | 0 |
 | Anton Gavel | H | BAY | 4.0 | 9 | 9 | 0 |
 | Alberto Abalde | F | RMB | 6.2 | 9 | 17 | 0 |
 | Oscar Da Silva | F | BAY | 8.2 | 9 | 4 | 0 |
 | Xavier Albert | H | VBC | 8.6 | 8 | 8 | 0 |
-| Nadir Hifi | G | PBB | 16.3 | 7 | 9 | 13 |
+| Nadir Hifi | G | PBB | 16.3 | 7 | 10 | 13 |
 | Jonas Valanciunas | C | ZAL | 17.7 | 7 | 18 | 0 |
 | Clement Frisch | F | KBA | 5.5 | 6 | 5 | 0 |
-| Kendrick Nunn | G | PAO | 14.8 | 6 | 14 | 9 |
+| Kendrick Nunn | G | PAO | 14.8 | 6 | 15 | 9 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Kenan Kamenjas (+12 pp), Theo Maledon (+11 pp), Oscar Da Silva (+5 pp), Clement Frisch (+1 pp), Rodions Kurucs (+1 pp), Pablo Laso (+0 pp), Anton Gavel (+0 pp), Xavier Albert (+0 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Kenan Kamenjas (+12 pp), Theo Maledon (+10 pp), Oscar Da Silva (+5 pp), Clement Frisch (+1 pp), Rodions Kurucs (+1 pp), Pablo Laso (+0 pp), Anton Gavel (+0 pp), Xavier Albert (+0 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (170), Jonas Valanciunas (31), Mathias Lessort (25)

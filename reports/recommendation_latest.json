@@ -8,7 +8,7 @@
   "2026-11-24",
   "2026-11-25"
  ],
- "generated_utc": "2026-11-21T08:21:29Z",
+ "generated_utc": "2026-11-21T09:23:43Z",
  "team": "UnderTakers86",
  "budget": 116.0,
  "trades_left": 11,
@@ -536,32 +536,11 @@
   "coach": "Pedro Martinez",
   "trades_out": [
    {
-    "name": "Johannes Thiemann",
-    "pos": "Center",
-    "team": "BAY",
-    "price": 11.6,
-    "md_pts": 15.18
-   },
-   {
     "name": "Alberto Abalde",
     "pos": "Forward",
     "team": "RMB",
     "price": 5.9,
     "md_pts": 9.88
-   },
-   {
-    "name": "Anton Gavel",
-    "pos": "Head Coach",
-    "team": "BAY",
-    "price": 4.4,
-    "md_pts": 5.01
-   },
-   {
-    "name": "Sebastian Herrera",
-    "pos": "Guard",
-    "team": "PBB",
-    "price": 6.3,
-    "md_pts": 9.56
    },
    {
     "name": "Collin Malcolm",
@@ -576,6 +555,27 @@
     "team": "KBA",
     "price": 5.4,
     "md_pts": 7.75
+   },
+   {
+    "name": "Sebastian Herrera",
+    "pos": "Guard",
+    "team": "PBB",
+    "price": 6.3,
+    "md_pts": 9.56
+   },
+   {
+    "name": "Anton Gavel",
+    "pos": "Head Coach",
+    "team": "BAY",
+    "price": 4.4,
+    "md_pts": 5.01
+   },
+   {
+    "name": "Johannes Thiemann",
+    "pos": "Center",
+    "team": "BAY",
+    "price": 11.6,
+    "md_pts": 15.18
    }
   ],
   "trades_in": [
@@ -872,25 +872,11 @@
     "md_pts": 9.88
    },
    {
-    "name": "Anton Gavel",
-    "pos": "Head Coach",
-    "team": "BAY",
-    "price": 4.4,
-    "md_pts": 5.01
-   },
-   {
-    "name": "Sebastian Herrera",
-    "pos": "Guard",
-    "team": "PBB",
-    "price": 6.3,
-    "md_pts": 9.56
-   },
-   {
-    "name": "Andres Feliz",
-    "pos": "Guard",
-    "team": "RMB",
-    "price": 9.6,
-    "md_pts": 14.33
+    "name": "Aliou Diarra",
+    "pos": "Center",
+    "team": "VIR",
+    "price": 11.4,
+    "md_pts": 15.91
    },
    {
     "name": "Collin Malcolm",
@@ -900,11 +886,25 @@
     "md_pts": 13.23
    },
    {
-    "name": "Aliou Diarra",
-    "pos": "Center",
-    "team": "VIR",
-    "price": 11.4,
-    "md_pts": 15.91
+    "name": "Sebastian Herrera",
+    "pos": "Guard",
+    "team": "PBB",
+    "price": 6.3,
+    "md_pts": 9.56
+   },
+   {
+    "name": "Anton Gavel",
+    "pos": "Head Coach",
+    "team": "BAY",
+    "price": 4.4,
+    "md_pts": 5.01
+   },
+   {
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "team": "RMB",
+    "price": 9.6,
+    "md_pts": 14.33
    }
   ],
   "trades_in": [

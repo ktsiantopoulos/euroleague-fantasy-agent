@@ -1,6 +1,6 @@
 {
  "matchday": 14,
- "frozen_utc": "2026-11-21T08:21:29Z",
+ "frozen_utc": "2026-11-21T09:23:43Z",
  "lock_utc": "2026-11-24T16:59:00Z",
  "budget": 116.0,
  "trades_left": 11,
@@ -227,12 +227,12 @@
    }
   ],
   "trades_out": [
-   "Johannes Thiemann",
    "Alberto Abalde",
-   "Anton Gavel",
-   "Sebastian Herrera",
    "Collin Malcolm",
-   "Clement Frisch"
+   "Clement Frisch",
+   "Sebastian Herrera",
+   "Anton Gavel",
+   "Johannes Thiemann"
   ],
   "trades_in": [
    "Scottie Wilbekin",
@@ -384,11 +384,11 @@
   ],
   "trades_out": [
    "Alberto Abalde",
-   "Anton Gavel",
-   "Sebastian Herrera",
-   "Andres Feliz",
+   "Aliou Diarra",
    "Collin Malcolm",
-   "Aliou Diarra"
+   "Sebastian Herrera",
+   "Anton Gavel",
+   "Andres Feliz"
   ],
   "trades_in": [
    "Scottie Wilbekin",
