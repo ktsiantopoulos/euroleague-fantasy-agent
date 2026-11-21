@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 81.07 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 80.75 h away)
 ## pull-official
 E2026: 130 games played, 0 box scores fetched now
 
@@ -150,7 +150,7 @@ after 3 straight newest-round wins
 DRIFT: model lost to a naive baseline in R12 and R13
 
 ## top-100
-top-100: 100 roster previews fetched now
+top-100: 0 roster previews fetched now
 # Top-281 managers — matchdays 1–13
 
 ## Ownership in the top 281, matchday 13
@@ -162,7 +162,7 @@ top-100: 100 roster previews fetched now
 | Theo Maledon | G | RMB | 13.4 | 30 | 19 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 23 | 0 |
 | Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
-| Carlik Jones | G | PAR | 14.4 | 16 | 23 | 0 |
+| Carlik Jones | G | PAR | 14.4 | 16 | 22 | 0 |
 
 ## backtest
              subset    n  mae_model  corr_model  mae_base_mean  corr_base_mean  
@@ -175,8 +175,8 @@ projected >= 15 min 1365       6.26       0.331           6.39           0.323
 6.02            0.384
 
 ## recommend
-one club; 1 point per credit for bench players under 6.0.
-- Trade discipline: each incoming player must clear 2.0 pts + 0.00×sd; no 
-trade-ins with < 3 season games or < 70% to play (objective discount on this 
-squad: 0.0; not deducted from the expected points).
+- Trade discipline: each incoming player must clear 0.0 pts + 0.00×sd 
+(extra-trade matchday: 11 changes, hurdle off; normally 2.0); no trade-ins with 
+< 3 season games or < 70% to play (objective discount on this squad: 0.0; not 
+deducted from the expected points).
 - Optimiser status: Optimal / Optimal.

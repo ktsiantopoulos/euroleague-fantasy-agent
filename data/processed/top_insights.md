@@ -9,7 +9,7 @@
 | Theo Maledon | G | RMB | 13.4 | 30 | 19 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 23 | 0 |
 | Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
-| Carlik Jones | G | PAR | 14.4 | 16 | 23 | 0 |
+| Carlik Jones | G | PAR | 14.4 | 16 | 22 | 0 |
 | Elijah Bryant | G | HTA | 17.6 | 15 | 16 | 0 |
 | TJ Shorts | G | VBC | 16.8 | 14 | 20 | 22 |
 | Pablo Laso | H | EFS | 6.0 | 14 | 14 | 0 |

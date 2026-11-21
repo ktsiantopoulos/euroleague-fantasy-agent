@@ -113,7 +113,7 @@
   "face_path": null,
   "avg_pts": 21.63,
   "is_on_fire": true,
-  "popularity": 0.205,
+  "popularity": 0.204,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -288,7 +288,7 @@
   "face_path": null,
   "avg_pts": 17.82,
   "is_on_fire": true,
-  "popularity": 0.226,
+  "popularity": 0.225,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -603,7 +603,7 @@
   "face_path": null,
   "avg_pts": 22.33,
   "is_on_fire": false,
-  "popularity": 0.193,
+  "popularity": 0.194,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -813,7 +813,7 @@
   "face_path": null,
   "avg_pts": 15,
   "is_on_fire": true,
-  "popularity": 0.102,
+  "popularity": 0.101,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -988,7 +988,7 @@
   "face_path": null,
   "avg_pts": 12.86,
   "is_on_fire": false,
-  "popularity": 0.035,
+  "popularity": 0.036,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -1443,7 +1443,7 @@
   "face_path": null,
   "avg_pts": 14.38,
   "is_on_fire": true,
-  "popularity": 0.042,
+  "popularity": 0.043,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -1688,7 +1688,7 @@
   "face_path": null,
   "avg_pts": 14.95,
   "is_on_fire": false,
-  "popularity": 0.022,
+  "popularity": 0.023,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -2948,7 +2948,7 @@
   "face_path": null,
   "avg_pts": 14.82,
   "is_on_fire": false,
-  "popularity": 0.309,
+  "popularity": 0.308,
   "position": {
    "id": 28,
    "name": "Guard"
@@ -4418,7 +4418,7 @@
   "face_path": null,
   "avg_pts": 10.33,
   "is_on_fire": false,
-  "popularity": 0.044,
+  "popularity": 0.045,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -6413,7 +6413,7 @@
   "face_path": null,
   "avg_pts": 4.23,
   "is_on_fire": null,
-  "popularity": 0.034,
+  "popularity": 0.033,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7218,7 +7218,7 @@
   "face_path": null,
   "avg_pts": 5.77,
   "is_on_fire": null,
-  "popularity": 0.067,
+  "popularity": 0.068,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -7988,7 +7988,7 @@
   "face_path": null,
   "avg_pts": 22,
   "is_on_fire": false,
-  "popularity": 0.197,
+  "popularity": 0.198,
   "position": {
    "id": 30,
    "name": "Center"
@@ -9913,7 +9913,7 @@
   "face_path": null,
   "avg_pts": -2.69,
   "is_on_fire": null,
-  "popularity": 0.089,
+  "popularity": 0.088,
   "position": {
    "id": 31,
    "name": "Head Coach"
@@ -10053,7 +10053,7 @@
   "face_path": null,
   "avg_pts": 3.07,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.018,
   "position": {
    "id": 30,
    "name": "Center"
@@ -10683,7 +10683,7 @@
   "face_path": null,
   "avg_pts": 1.15,
   "is_on_fire": false,
-  "popularity": 0.216,
+  "popularity": 0.215,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -10963,7 +10963,7 @@
   "face_path": null,
   "avg_pts": 2.33,
   "is_on_fire": false,
-  "popularity": 0.017,
+  "popularity": 0.018,
   "position": {
    "id": 29,
    "name": "Forward"
@@ -12153,7 +12153,7 @@
   "face_path": null,
   "avg_pts": 3.08,
   "is_on_fire": false,
-  "popularity": 0.042,
+  "popularity": 0.041,
   "position": {
    "id": 28,
    "name": "Guard"
