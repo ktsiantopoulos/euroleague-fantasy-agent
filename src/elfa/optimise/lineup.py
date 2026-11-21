@@ -311,7 +311,9 @@ def rule_costs(proj: pd.DataFrame, budget: float, prev_ids: set[str], max_trades
     """What each house rule costs this matchday: re-solve with that one rule off and report the change in
     expected points and the players it swaps. A rule that hides a better squad shows up here every run,
     instead of silently (MD 14: the games gate hid Kamenjas)."""
-    import elfa.optimise.lineup as M
+    import sys
+
+    M = sys.modules[__name__]
 
     def _solve(**kw):
         return optimise(proj, budget, prev_ids, max_trades, mu_price=0.0, exp_price_change=exp_price_change,
@@ -339,7 +341,7 @@ def rule_costs(proj: pd.DataFrame, budget: float, prev_ids: set[str], max_trades
     for label, fn in tests:
         try:
             alt = fn()
-        except Exception as e:  # a rule check must never break the recommendation
+        except (ValueError, KeyError, RuntimeError, pulp.PulpError) as e:  # a rule check must never break the recommendation
             out.append({"rule": label, "d_pts": None, "out": [], "in": [], "error": str(e)})
             continue
         a_ids = set(alt.squad.platform_id)
