@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 76.26 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 75.83 h away)
 ## pull-official
 E2026: 130 games played, 0 box scores fetched now
 
@@ -132,10 +132,10 @@ no-trade squad, both on actual points
 | setting | MD | trades | predicted gain | realised gain |
 |---|---|---|---|---|
 | current defaults | 8 | 4 | +17.4 | -2.6 |
-| current defaults | 9 | 4 | +15.2 | +4.3 |
-| current defaults | 10 | 4 | +25.3 | +34.1 |
+| current defaults | 9 | 4 | +11.6 | +5.4 |
+| current defaults | 10 | 4 | +26.9 | +45.4 |
 | current defaults | 11 | 4 | +8.3 | +2.4 |
-| current defaults | 12 | 4 | +12.5 | -10.2 |
+| current defaults | 12 | 4 | +13.8 | -8.8 |
 
 ## learn
 learn: train R4-R11, hold-out R12, R13

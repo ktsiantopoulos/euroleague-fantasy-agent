@@ -13,7 +13,7 @@
 | Elijah Bryant | G | HTA | 17.6 | 15 | 14 | 0 |
 | TJ Shorts | G | VBC | 16.8 | 14 | 20 | 22 |
 | Pablo Laso | H | EFS | 6.0 | 14 | 14 | 0 |
-| Andres Feliz | G | RMB | 9.9 | 14 | 28 | 0 |
+| Andres Feliz | G | RMB | 9.9 | 14 | 27 | 0 |
 | Azuolas Tubelis | F | ZAL | 13.1 | 13 | 21 | 1 |
 | Stefan Joksimovic | F | KBA | 4.0 | 12 | 15 | 0 |
 | Anton Gavel | H | BAY | 4.0 | 9 | 8 | 0 |
