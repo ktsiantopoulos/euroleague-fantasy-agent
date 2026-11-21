@@ -329,7 +329,7 @@ def recommend(horizon_rounds: tuple[int, int, int] | None = None, mu_price: floa
          f"decayed ×{HORIZON_DECAY} per matchday, valued at μ = {mu:.1f} expected points per credit (frontier ≈ 0.95 pts/credit/matchday, re-spent every remaining round). "
          "Δprice column = expected credits over the horizon."),
         "- Elite-consensus tilt: expected points scaled by up to +4% at 100% top-100 ownership (raw model value kept as md_pts_model).",
-        "- Soft rules from the top-100 study: 3 points penalty per player above 3 from one club; 1 point per credit for bench players under 6.0.",
+        f"- Soft rules from the top-100 study: {L.CLUB_CAP_PENALTY:.0f} points penalty per player above {L.SOFT_CLUB_CAP} from one club; {L.BENCH_FLOOR_PENALTY} point per credit for bench players under {L.BENCH_PRICE_FLOOR:.1f}.",
         f"- Trade discipline: each incoming player must clear {hurdle:.1f} pts + {L.TRADE_SD_PENALTY:.2f}×sd"
         + (f" (extra-trade matchday: {base.max_trades} changes, hurdle off; normally {L.TRADE_HURDLE:.1f})" if base.max_trades > L.STANDARD_TRADES else "")
         + "; "

@@ -23,7 +23,8 @@ SOFT_CLUB_CAP = 3           # top-100 managers hold at most 2-3 per club; each p
 CLUB_CAP_PENALTY = 3.0      # ... this many expected points in the objective
 BENCH_OPTION_WEIGHT = 1.0   # weight of the promotion option (0.5 = my conservative sim; elite promote ~35% of field slots)
 BENCH_PRICE_FLOOR = 6.0     # top-100 bench averages 7.4 credits; each credit below this costs ...
-BENCH_FLOOR_PENALTY = 1.0   # ... this many expected points
+BENCH_FLOOR_PENALTY = 0.5   # ... this many expected points. Replay MD 8-13 (frozen projections, actual points):
+                            # 1.0 -> 1010.0, 0.0 -> 1009.0, 0.5 -> 1022.9 (never worse than 1.0 on any matchday)
 # Trade discipline (decision layer). MD 8-9 review: the agent's trade-ins scored 14 below projection and the
 # players it sold 32 above; across the replay grid the predicted trade gain overshot the realised one by ~6
 # points per trade (optimiser's curse). Replay (elfa.model.trade_backtest, MD 8-9 only): the availability gate
