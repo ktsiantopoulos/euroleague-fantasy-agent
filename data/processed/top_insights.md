@@ -5,9 +5,9 @@
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 20.2 | 35 | 50 | 49 |
-| Kenan Kamenjas | C | KBA | 5.4 | 32 | 20 | 1 |
+| Kenan Kamenjas | C | KBA | 5.4 | 32 | 21 | 1 |
 | Theo Maledon | G | RMB | 13.4 | 30 | 20 | 1 |
-| Collin Malcolm | F | EFS | 10.1 | 23 | 23 | 0 |
+| Collin Malcolm | F | EFS | 10.1 | 23 | 22 | 0 |
 | Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
 | Carlik Jones | G | PAR | 14.4 | 16 | 22 | 0 |
 | Elijah Bryant | G | HTA | 17.6 | 15 | 16 | 0 |
@@ -25,7 +25,7 @@
 | Clement Frisch | F | KBA | 5.5 | 6 | 5 | 0 |
 | Kendrick Nunn | G | PAO | 14.8 | 6 | 15 | 9 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Kenan Kamenjas (+12 pp), Theo Maledon (+10 pp), Oscar Da Silva (+5 pp), Clement Frisch (+1 pp), Rodions Kurucs (+1 pp), Pablo Laso (+0 pp), Anton Gavel (+0 pp), Xavier Albert (+0 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Kenan Kamenjas (+11 pp), Theo Maledon (+10 pp), Oscar Da Silva (+5 pp), Clement Frisch (+1 pp), Collin Malcolm (+1 pp), Rodions Kurucs (+1 pp), Pablo Laso (+0 pp), Xavier Albert (+0 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (170), Jonas Valanciunas (31), Mathias Lessort (25)
