@@ -1,4 +1,4 @@
-## run reason: daily  (deadline 2026-11-24T16:59:00+00:00, 79.32 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 76.73 h away)
 ## pull-official
 E2026: 130 games played, 0 box scores fetched now
 
@@ -6,7 +6,7 @@ E2026: 130 games played, 0 box scores fetched now
 pulled -> 
 /home/runner/work/euroleague-fantasy-agent/euroleague-fantasy-agent/data/raw/fan
 taking/md_14
-team: UnderTakers86  credits: 116  trades used: 0/11
+team: UnderTakers86  credits: 116  trades used: 6/11
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
@@ -158,8 +158,8 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 20.2 | 35 | 50 | 49 |
-| Kenan Kamenjas | C | KBA | 5.4 | 32 | 21 | 1 |
-| Theo Maledon | G | RMB | 13.4 | 30 | 20 | 1 |
+| Kenan Kamenjas | C | KBA | 5.4 | 32 | 22 | 1 |
+| Theo Maledon | G | RMB | 13.4 | 30 | 21 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 22 | 0 |
 | Aliou Diarra | C | VIR | 11.3 | 20 | 33 | 0 |
 | Carlik Jones | G | PAR | 14.4 | 16 | 22 | 0 |

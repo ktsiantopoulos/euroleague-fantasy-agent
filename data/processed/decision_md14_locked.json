@@ -1,6 +1,6 @@
 {
  "matchday": 14,
- "frozen_utc": "2026-11-21T09:44:59Z",
+ "frozen_utc": "2026-11-21T12:21:01Z",
  "lock_utc": "2026-11-24T16:59:00Z",
  "budget": 116.0,
  "trades_left": 11,
@@ -36,7 +36,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 21.25,
+    "md_pts": 21.24,
     "md_sd": 10.45
    },
    {
@@ -45,7 +45,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 20.62,
+    "md_pts": 20.63,
     "md_sd": 10.42
    },
    {
@@ -72,7 +72,7 @@
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 14.32,
+    "md_pts": 14.33,
     "md_sd": 9.98
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 5.07,
+    "md_pts": 5.01,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 167.4,
+  "expected": 168.6,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -141,17 +141,17 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 21.25,
+    "md_pts": 21.24,
     "md_sd": 10.45
    },
    {
-    "platform_id": "3850",
-    "name": "Theo Maledon",
+    "platform_id": "3842",
+    "name": "Scottie Wilbekin",
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 20.62,
-    "md_sd": 10.42
+    "md_pts": 16.51,
+    "md_sd": 8.68
    },
    {
     "platform_id": "7424",
@@ -172,13 +172,13 @@
     "md_sd": 7.98
    },
    {
-    "platform_id": "3842",
-    "name": "Scottie Wilbekin",
+    "platform_id": "3850",
+    "name": "Theo Maledon",
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 16.51,
-    "md_sd": 8.68
+    "md_pts": 20.63,
+    "md_sd": 10.42
    },
    {
     "platform_id": "3851",
@@ -186,7 +186,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 14.32,
+    "md_pts": 14.33,
     "md_sd": 9.98
    },
    {
@@ -195,52 +195,54 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 12.2,
+    "md_pts": 12.19,
     "md_sd": 8.2
    },
    {
-    "platform_id": "3918",
-    "name": "Marius Grigonis",
+    "platform_id": "3983",
+    "name": "Dejan Davidovac",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.9,
-    "md_sd": 6.33
+    "md_pts": 9.83,
+    "md_sd": 6.2
    },
    {
-    "platform_id": "3991",
-    "name": "Alberto Abalde",
+    "platform_id": "4005",
+    "name": "Edwin Jackson",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.88,
-    "md_sd": 7.67
+    "md_pts": 8.68,
+    "md_sd": 9.45
    },
    {
-    "platform_id": "4086",
-    "name": "Dusan Alimpijevic",
+    "platform_id": "3872",
+    "name": "Pedro Martinez",
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 8.46,
+    "md_pts": 10.29,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
-   "Collin Malcolm",
-   "Anton Gavel",
-   "Sebastian Herrera",
    "Johannes Thiemann",
-   "Clement Frisch"
+   "Alberto Abalde",
+   "Sebastian Herrera",
+   "Clement Frisch",
+   "Anton Gavel",
+   "Collin Malcolm"
   ],
   "trades_in": [
    "Scottie Wilbekin",
+   "Pedro Martinez",
    "Kevarrius Hayes",
    "Oscar Da Silva",
-   "Marius Grigonis",
-   "Dusan Alimpijevic"
+   "Dejan Davidovac",
+   "Edwin Jackson"
   ],
-  "price_gain": -0.21
+  "price_gain": -0.16
  },
  "params": {
   "w_minutes": [
@@ -295,7 +297,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 21.25,
+    "md_pts": 21.24,
     "md_sd": 10.45
    },
    {
@@ -304,7 +306,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 20.62,
+    "md_pts": 20.63,
     "md_sd": 10.42
    },
    {
@@ -381,12 +383,12 @@
    }
   ],
   "trades_out": [
-   "Collin Malcolm",
-   "Anton Gavel",
-   "Alberto Abalde",
-   "Sebastian Herrera",
    "Andres Feliz",
-   "Aliou Diarra"
+   "Alberto Abalde",
+   "Aliou Diarra",
+   "Sebastian Herrera",
+   "Anton Gavel",
+   "Collin Malcolm"
   ],
   "trades_in": [
    "Scottie Wilbekin",
