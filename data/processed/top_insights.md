@@ -5,27 +5,27 @@
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 20.2 | 35 | 51 | 49 |
-| Kenan Kamenjas | C | KBA | 5.4 | 32 | 30 | 1 |
-| Theo Maledon | G | RMB | 13.4 | 30 | 27 | 1 |
+| Kenan Kamenjas | C | KBA | 5.4 | 32 | 31 | 1 |
+| Theo Maledon | G | RMB | 13.4 | 30 | 28 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 19 | 0 |
-| Aliou Diarra | C | VIR | 11.3 | 20 | 27 | 0 |
+| Aliou Diarra | C | VIR | 11.3 | 20 | 26 | 0 |
 | Carlik Jones | G | PAR | 14.4 | 16 | 20 | 0 |
-| Elijah Bryant | G | HTA | 17.6 | 15 | 10 | 0 |
+| Elijah Bryant | G | HTA | 17.6 | 15 | 9 | 0 |
 | TJ Shorts | G | VBC | 16.8 | 14 | 18 | 22 |
 | Pablo Laso | H | EFS | 6.0 | 14 | 13 | 0 |
-| Andres Feliz | G | RMB | 9.9 | 14 | 19 | 0 |
+| Andres Feliz | G | RMB | 9.9 | 14 | 18 | 0 |
 | Azuolas Tubelis | F | ZAL | 13.1 | 13 | 21 | 1 |
-| Stefan Joksimovic | F | KBA | 4.0 | 12 | 13 | 0 |
+| Stefan Joksimovic | F | KBA | 4.0 | 12 | 12 | 0 |
 | Anton Gavel | H | BAY | 4.0 | 9 | 7 | 0 |
 | Alberto Abalde | F | RMB | 6.2 | 9 | 13 | 0 |
-| Oscar Da Silva | F | BAY | 8.2 | 9 | 8 | 0 |
+| Oscar Da Silva | F | BAY | 8.2 | 9 | 9 | 0 |
 | Xavier Albert | H | VBC | 8.6 | 8 | 4 | 0 |
-| Nadir Hifi | G | PBB | 16.3 | 7 | 16 | 13 |
-| Jonas Valanciunas | C | ZAL | 17.7 | 7 | 14 | 0 |
+| Nadir Hifi | G | PBB | 16.3 | 7 | 17 | 13 |
+| Jonas Valanciunas | C | ZAL | 17.7 | 7 | 13 | 0 |
 | Clement Frisch | F | KBA | 5.5 | 6 | 4 | 0 |
 | Kendrick Nunn | G | PAO | 14.8 | 6 | 16 | 9 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Elijah Bryant (+5 pp), Collin Malcolm (+4 pp), Xavier Albert (+4 pp), Theo Maledon (+3 pp), Kenan Kamenjas (+2 pp), Anton Gavel (+2 pp), Clement Frisch (+2 pp), Oscar Da Silva (+1 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Elijah Bryant (+6 pp), Collin Malcolm (+4 pp), Xavier Albert (+4 pp), Anton Gavel (+2 pp), Clement Frisch (+2 pp), Theo Maledon (+2 pp), Kenan Kamenjas (+1 pp), Pablo Laso (+1 pp)
 
 ## Captain choices (top 3 per matchday)
 - MD1: Sasha Vezenkov (170), Jonas Valanciunas (31), Mathias Lessort (25)

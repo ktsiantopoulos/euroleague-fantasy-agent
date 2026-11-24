@@ -3987,6 +3987,7 @@ platform_id,matchday,person_code,game_code,platform_pts,official_pir,official_mi
 7229,11,012403,101,20.9,19.0,20.2,True,20.9,ok
 7229,12,012403,116,13.2,12.0,22.216666666666665,True,13.2,ok
 7229,13,012403,126,9.9,9.0,20.116666666666667,True,9.9,ok
+7230,13,,122,,,,,,no_player
 7231,1,,4,0.0,,,,,no_player
 7231,2,,11,0.0,,,,,no_player
 7231,3,,21,0.0,,,,,no_player

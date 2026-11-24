@@ -1,4 +1,4 @@
-## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 6.96 h away)
+## run reason: manual  (deadline 2026-11-24T16:59:00+00:00, 3.28 h away)
 ## pull-official
 E2026: 130 games played, 0 box scores fetched now
 
@@ -10,7 +10,7 @@ team: UnderTakers86  credits: 116  trades used: 6/11
 
 ## pull-external
   fantasyedge: 365 players, 15 columns kept
-price base: fantasyedge 237, top100_md1 122, first_seen 8
+price base: fantasyedge 238, top100_md1 122, first_seen 9
 
 ## build
         games  rows  mismatches
@@ -19,19 +19,19 @@ E2026     130  3111           0
 teams mapped: 20; needs attention: 0
 method
 surname+team        311
-UNMATCHED            30
+UNMATCHED            32
 coach                20
 surname+any-team      1
 team context: 20 clubs · usage: 302 players · FDR: 20 clubs x next 5
-price base: fantasyedge 237, top100_md1 122, first_seen 8
+price base: fantasyedge 238, top100_md1 122, first_seen 9
 matchdays: 38 (one per round) · current MD 14 = R14, nights T1=2026-11-24, 
 T2=2026-11-25
 
 ## reconcile
-player-games compared: 4647
-exact matches: 3070 (66.1%)
+player-games compared: 4648
+exact matches: 3070 (66.0%)
   no_boxscore_row: 868
-  no_player: 683
+  no_player: 684
   MISMATCH: 26
 
 first mismatches:
@@ -158,10 +158,10 @@ top-100: 0 roster previews fetched now
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
 | Sasha Vezenkov | F | OLY | 20.2 | 35 | 51 | 49 |
-| Kenan Kamenjas | C | KBA | 5.4 | 32 | 30 | 1 |
-| Theo Maledon | G | RMB | 13.4 | 30 | 27 | 1 |
+| Kenan Kamenjas | C | KBA | 5.4 | 32 | 31 | 1 |
+| Theo Maledon | G | RMB | 13.4 | 30 | 28 | 1 |
 | Collin Malcolm | F | EFS | 10.1 | 23 | 19 | 0 |
-| Aliou Diarra | C | VIR | 11.3 | 20 | 27 | 0 |
+| Aliou Diarra | C | VIR | 11.3 | 20 | 26 | 0 |
 | Carlik Jones | G | PAR | 14.4 | 16 | 20 | 0 |
 
 ## backtest
