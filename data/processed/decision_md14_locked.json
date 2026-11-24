@@ -1,6 +1,6 @@
 {
  "matchday": 14,
- "frozen_utc": "2026-11-22T21:51:59Z",
+ "frozen_utc": "2026-11-24T10:09:07Z",
  "lock_utc": "2026-11-24T16:59:00Z",
  "budget": 116.0,
  "trades_left": 11,
@@ -18,7 +18,7 @@
   "7424"
  ],
  "hold": {
-  "expected": 161.3,
+  "expected": 163.0,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -27,7 +27,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 24.06,
+    "md_pts": 24.24,
     "md_sd": 9.48
    },
    {
@@ -36,7 +36,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 21.29,
+    "md_pts": 21.46,
     "md_sd": 10.45
    },
    {
@@ -45,7 +45,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 20.64,
+    "md_pts": 20.67,
     "md_sd": 10.42
    },
    {
@@ -54,7 +54,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.85,
+    "md_pts": 15.83,
     "md_sd": 7.23
    },
    {
@@ -63,7 +63,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.22,
+    "md_pts": 15.29,
     "md_sd": 9.07
    },
    {
@@ -72,7 +72,7 @@
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 14.33,
+    "md_pts": 14.35,
     "md_sd": 9.98
    },
    {
@@ -81,7 +81,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 13.24,
+    "md_pts": 13.25,
     "md_sd": 7.47
    },
    {
@@ -90,7 +90,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.89,
+    "md_pts": 9.9,
     "md_sd": 7.67
    },
    {
@@ -99,7 +99,7 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.58,
+    "md_pts": 9.65,
     "md_sd": 5.36
    },
    {
@@ -108,7 +108,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 7.75,
+    "md_pts": 7.74,
     "md_sd": 5.68
    },
    {
@@ -117,13 +117,13 @@
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 5.64,
+    "md_pts": 6.69,
     "md_sd": 13.15
    }
   ]
  },
  "best": {
-  "expected": 168.7,
+  "expected": 170.3,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -132,7 +132,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 24.06,
+    "md_pts": 24.24,
     "md_sd": 9.48
    },
    {
@@ -141,17 +141,17 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 21.29,
+    "md_pts": 21.46,
     "md_sd": 10.45
    },
    {
-    "platform_id": "3850",
-    "name": "Theo Maledon",
+    "platform_id": "3842",
+    "name": "Scottie Wilbekin",
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 20.64,
-    "md_sd": 10.42
+    "md_pts": 16.34,
+    "md_sd": 8.68
    },
    {
     "platform_id": "7424",
@@ -159,7 +159,7 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.85,
+    "md_pts": 15.83,
     "md_sd": 7.23
    },
    {
@@ -168,17 +168,17 @@
     "pos": "Forward",
     "role": "starter",
     "captain": false,
-    "md_pts": 13.44,
+    "md_pts": 13.5,
     "md_sd": 7.98
    },
    {
-    "platform_id": "3842",
-    "name": "Scottie Wilbekin",
+    "platform_id": "3850",
+    "name": "Theo Maledon",
     "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 16.47,
-    "md_sd": 8.68
+    "md_pts": 20.67,
+    "md_sd": 10.42
    },
    {
     "platform_id": "4094",
@@ -186,7 +186,7 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 15.44,
+    "md_pts": 15.41,
     "md_sd": 6.88
    },
    {
@@ -195,52 +195,52 @@
     "pos": "Guard",
     "role": "bench",
     "captain": false,
-    "md_pts": 14.33,
+    "md_pts": 14.35,
     "md_sd": 9.98
    },
    {
-    "platform_id": "7238",
-    "name": "Rodions Kurucs",
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 7.75,
-    "md_sd": 5.26
+    "md_pts": 9.9,
+    "md_sd": 7.67
    },
    {
-    "platform_id": "7223",
-    "name": "Clement Frisch",
+    "platform_id": "4005",
+    "name": "Edwin Jackson",
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 7.75,
-    "md_sd": 5.68
+    "md_pts": 8.67,
+    "md_sd": 9.45
    },
    {
-    "platform_id": "3872",
-    "name": "Pedro Martinez",
+    "platform_id": "3885",
+    "name": "Georgios Bartzokas",
     "pos": "Head Coach",
     "role": "coach",
     "captain": false,
-    "md_pts": 10.29,
+    "md_pts": 9.88,
     "md_sd": 13.15
    }
   ],
   "trades_out": [
-   "Alberto Abalde",
-   "Anton Gavel",
+   "Clement Frisch",
+   "Johannes Thiemann",
    "Collin Malcolm",
    "Sebastian Herrera",
-   "Johannes Thiemann"
+   "Anton Gavel"
   ],
   "trades_in": [
+   "Georgios Bartzokas",
    "Scottie Wilbekin",
-   "Pedro Martinez",
    "Oscar Da Silva",
    "Kenan Kamenjas",
-   "Rodions Kurucs"
+   "Edwin Jackson"
   ],
-  "price_gain": -0.77
+  "price_gain": -0.7
  },
  "params": {
   "w_minutes": [
@@ -277,7 +277,7 @@
  },
  "variant": {
   "mu_price": 8.0,
-  "expected": 170.9,
+  "expected": 171.4,
   "captain": "Sasha Vezenkov",
   "squad": [
    {
@@ -286,7 +286,7 @@
     "pos": "Forward",
     "role": "starter",
     "captain": true,
-    "md_pts": 24.06,
+    "md_pts": 24.24,
     "md_sd": 9.48
    },
    {
@@ -295,8 +295,17 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 21.29,
+    "md_pts": 21.46,
     "md_sd": 10.45
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.67,
+    "md_sd": 10.42
    },
    {
     "platform_id": "3842",
@@ -304,7 +313,7 @@
     "pos": "Guard",
     "role": "starter",
     "captain": false,
-    "md_pts": 16.47,
+    "md_pts": 16.34,
     "md_sd": 8.68
    },
    {
@@ -313,26 +322,17 @@
     "pos": "Center",
     "role": "starter",
     "captain": false,
-    "md_pts": 15.22,
+    "md_pts": 15.29,
     "md_sd": 9.07
    },
    {
     "platform_id": "7217",
     "name": "Tyson Carter",
     "pos": "Guard",
-    "role": "starter",
-    "captain": false,
-    "md_pts": 14.52,
-    "md_sd": 9.41
-   },
-   {
-    "platform_id": "3850",
-    "name": "Theo Maledon",
-    "pos": "Guard",
     "role": "sixth",
     "captain": false,
-    "md_pts": 20.64,
-    "md_sd": 10.42
+    "md_pts": 14.54,
+    "md_sd": 9.41
    },
    {
     "platform_id": "4094",
@@ -340,7 +340,7 @@
     "pos": "Center",
     "role": "bench",
     "captain": false,
-    "md_pts": 15.44,
+    "md_pts": 15.41,
     "md_sd": 6.88
    },
    {
@@ -349,7 +349,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 13.44,
+    "md_pts": 13.5,
     "md_sd": 7.98
    },
    {
@@ -358,7 +358,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.89,
+    "md_pts": 9.9,
     "md_sd": 7.67
    },
    {
@@ -367,7 +367,7 @@
     "pos": "Forward",
     "role": "bench",
     "captain": false,
-    "md_pts": 9.87,
+    "md_pts": 9.88,
     "md_sd": 6.2
    },
    {
@@ -381,12 +381,12 @@
    }
   ],
   "trades_out": [
-   "Andres Feliz",
-   "Anton Gavel",
-   "Collin Malcolm",
    "Clement Frisch",
+   "Collin Malcolm",
+   "Aliou Diarra",
    "Sebastian Herrera",
-   "Aliou Diarra"
+   "Andres Feliz",
+   "Anton Gavel"
   ],
   "trades_in": [
    "Scottie Wilbekin",
@@ -396,6 +396,6 @@
    "Kenan Kamenjas",
    "Dejan Davidovac"
   ],
-  "price_gain": 0.09
+  "price_gain": 0.12
  }
 }

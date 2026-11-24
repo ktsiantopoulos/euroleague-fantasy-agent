@@ -1,5 +1,5 @@
 {
- "generated_utc": "2026-11-22T21:51:43Z",
+ "generated_utc": "2026-11-24T10:08:51Z",
  "drift": true,
  "reasons": [
   "model lost to a naive baseline in R12 and R13"
