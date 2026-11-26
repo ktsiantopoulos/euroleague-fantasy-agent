@@ -4,7 +4,7 @@
   0.3,
   0.6
  ],
- "rate_prior_minutes": 40.0,
+ "rate_prior_minutes": 80.0,
  "lam_recent": 0.3,
  "eta_home": 0.02,
  "gamma_dvp": 1.0,
@@ -28,6 +28,7 @@
   "Guard|15-20": 1.092,
   "Guard|<10": 1.6
  },
+ "tier_bias": {},
  "flags": {},
- "note": "2026-11-04: ADOPTED bias layer (9 segment(s)): hold-out mean |bias| 0.86 \u2192 0.41, RMSE -0.044"
+ "note": "2026-11-26: ADOPTED 'new core' (gain +0.06 on every hold-out round)"
 }

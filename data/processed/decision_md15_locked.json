@@ -1,0 +1,395 @@
+{
+ "matchday": 15,
+ "frozen_utc": "2026-11-26T10:12:08Z",
+ "lock_utc": "2026-12-03T17:29:00Z",
+ "budget": 115.7,
+ "trades_left": 4,
+ "baseline_ids": [
+  "3766",
+  "3834",
+  "3838",
+  "3843",
+  "3850",
+  "3938",
+  "3957",
+  "3971",
+  "3991",
+  "4094",
+  "7217"
+ ],
+ "hold": {
+  "expected": 156.3,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 28.56,
+    "md_sd": 9.22
+   },
+   {
+    "platform_id": "3834",
+    "name": "Nadir Hifi",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.18,
+    "md_sd": 10.17
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.32,
+    "md_sd": 10.16
+   },
+   {
+    "platform_id": "3843",
+    "name": "Moses Wright",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 17.31,
+    "md_sd": 11.08
+   },
+   {
+    "platform_id": "3838",
+    "name": "Collin Malcolm",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 13.09,
+    "md_sd": 7.26
+   },
+   {
+    "platform_id": "3957",
+    "name": "Oscar Da Silva",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 12.34,
+    "md_sd": 8.07
+   },
+   {
+    "platform_id": "4094",
+    "name": "Kenan Kamenjas",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.76,
+    "md_sd": 8.88
+   },
+   {
+    "platform_id": "7217",
+    "name": "Tyson Carter",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.22,
+    "md_sd": 9.53
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.07,
+    "md_sd": 7.45
+   },
+   {
+    "platform_id": "3971",
+    "name": "Vanja Marinkovic",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 6.05,
+    "md_sd": 5.41
+   },
+   {
+    "platform_id": "3938",
+    "name": "Ibon Navarro",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": -2.11,
+    "md_sd": 13.15
+   }
+  ]
+ },
+ "best": {
+  "expected": 172.0,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 28.56,
+    "md_sd": 9.22
+   },
+   {
+    "platform_id": "3834",
+    "name": "Nadir Hifi",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.18,
+    "md_sd": 10.17
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.32,
+    "md_sd": 10.16
+   },
+   {
+    "platform_id": "3843",
+    "name": "Moses Wright",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 17.31,
+    "md_sd": 11.08
+   },
+   {
+    "platform_id": "3851",
+    "name": "Andres Feliz",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 15.18,
+    "md_sd": 9.86
+   },
+   {
+    "platform_id": "3957",
+    "name": "Oscar Da Silva",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 12.34,
+    "md_sd": 8.07
+   },
+   {
+    "platform_id": "8993",
+    "name": "Cory Joseph",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.89,
+    "md_sd": 9.23
+   },
+   {
+    "platform_id": "4094",
+    "name": "Kenan Kamenjas",
+    "pos": "Center",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 11.76,
+    "md_sd": 8.88
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.07,
+    "md_sd": 7.45
+   },
+   {
+    "platform_id": "3936",
+    "name": "Nikos Rogkavopoulos",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 7.28,
+    "md_sd": 8.61
+   },
+   {
+    "platform_id": "4172",
+    "name": "Dimitris Itoudis",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 9.58,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Collin Malcolm",
+   "Vanja Marinkovic",
+   "Tyson Carter",
+   "Ibon Navarro"
+  ],
+  "trades_in": [
+   "Andres Feliz",
+   "Cory Joseph",
+   "Dimitris Itoudis",
+   "Nikos Rogkavopoulos"
+  ],
+  "price_gain": -0.12
+ },
+ "params": {
+  "w_minutes": [
+   0.1,
+   0.3,
+   0.6
+  ],
+  "rate_prior_minutes": 80.0,
+  "lam_recent": 0.3,
+  "eta_home": 0.02,
+  "gamma_dvp": 1.0,
+  "sd_prior_games": 4.0,
+  "horizon_weights": [
+   1.0,
+   0.6,
+   0.3
+  ],
+  "dnp_recent_penalty": 0.8,
+  "minutes_sample_prior": 0.5,
+  "sd_scale": 1.096,
+  "bias": {
+   "Center|10-15": 1.078,
+   "Center|15-20": 1.048,
+   "Center|<10": 1.131,
+   "Forward|10-15": 1.203,
+   "Forward|15-20": 1.069,
+   "Forward|<10": 1.284,
+   "Guard|10-15": 1.042,
+   "Guard|15-20": 1.092,
+   "Guard|<10": 1.6
+  },
+  "tier_bias": {},
+  "flags": {}
+ },
+ "variant": {
+  "mu_price": 8.0,
+  "expected": 171.5,
+  "captain": "Sasha Vezenkov",
+  "squad": [
+   {
+    "platform_id": "3766",
+    "name": "Sasha Vezenkov",
+    "pos": "Forward",
+    "role": "starter",
+    "captain": true,
+    "md_pts": 28.56,
+    "md_sd": 9.22
+   },
+   {
+    "platform_id": "3834",
+    "name": "Nadir Hifi",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 20.18,
+    "md_sd": 10.17
+   },
+   {
+    "platform_id": "3850",
+    "name": "Theo Maledon",
+    "pos": "Guard",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 19.32,
+    "md_sd": 10.16
+   },
+   {
+    "platform_id": "3843",
+    "name": "Moses Wright",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 17.31,
+    "md_sd": 11.08
+   },
+   {
+    "platform_id": "4094",
+    "name": "Kenan Kamenjas",
+    "pos": "Center",
+    "role": "starter",
+    "captain": false,
+    "md_pts": 11.76,
+    "md_sd": 8.88
+   },
+   {
+    "platform_id": "3957",
+    "name": "Oscar Da Silva",
+    "pos": "Forward",
+    "role": "sixth",
+    "captain": false,
+    "md_pts": 12.34,
+    "md_sd": 8.07
+   },
+   {
+    "platform_id": "4360",
+    "name": "Evan Fournier",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 15.82,
+    "md_sd": 9.87
+   },
+   {
+    "platform_id": "8993",
+    "name": "Cory Joseph",
+    "pos": "Guard",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 12.89,
+    "md_sd": 9.23
+   },
+   {
+    "platform_id": "3991",
+    "name": "Alberto Abalde",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 10.07,
+    "md_sd": 7.45
+   },
+   {
+    "platform_id": "3916",
+    "name": "Gabriele Procida",
+    "pos": "Forward",
+    "role": "bench",
+    "captain": false,
+    "md_pts": 9.09,
+    "md_sd": 7.42
+   },
+   {
+    "platform_id": "4172",
+    "name": "Dimitris Itoudis",
+    "pos": "Head Coach",
+    "role": "coach",
+    "captain": false,
+    "md_pts": 9.58,
+    "md_sd": 13.15
+   }
+  ],
+  "trades_out": [
+   "Collin Malcolm",
+   "Vanja Marinkovic",
+   "Tyson Carter",
+   "Ibon Navarro"
+  ],
+  "trades_in": [
+   "Evan Fournier",
+   "Cory Joseph",
+   "Dimitris Itoudis",
+   "Gabriele Procida"
+  ],
+  "price_gain": 0.57
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "matchday": {
+  "id": 1541,
+  "number": 14
+ },
+ "round": {
+  "id": 2555,
+  "number": 2
+ },
+ "match": {
+  "id": 12061,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-25T16:00:00.000000Z",
+  "home_team": {
+   "id": 311,
+   "name": "Dubai Basketball",
+   "abbreviation": "DUB",
+   "score": 71
+  },
+  "away_team": {
+   "id": 152,
+   "name": "Partizan Mozzart Bet Belgrade",
+   "abbreviation": "PAR",
+   "score": 84
+  }
+ },
+ "fantasy_pts": 27.5,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 21,
+   "fantasy_pts": 21
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 5,
+   "fantasy_pts": 5
+  },
+  {
+   "id": 193,
+   "name": "ast",
+   "value": 6,
+   "fantasy_pts": 6
+  },
+  {
+   "id": 197,
+   "name": "blka",
+   "value": 1,
+   "fantasy_pts": -1
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  },
+  {
+   "id": 200,
+   "name": "fg_missed",
+   "value": 8,
+   "fantasy_pts": -8
+  },
+  {
+   "id": 201,
+   "name": "ft_missed",
+   "value": 1,
+   "fantasy_pts": -1
+  }
+ ],
+ "label": "opponent"
+}

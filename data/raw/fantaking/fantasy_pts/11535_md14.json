@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1541,
+  "number": 14
+ },
+ "round": {
+  "id": 2555,
+  "number": 2
+ },
+ "match": {
+  "id": 12063,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-25T19:45:00.000000Z",
+  "home_team": {
+   "id": 153,
+   "name": "Real Madrid",
+   "abbreviation": "RMB",
+   "score": 108
+  },
+  "away_team": {
+   "id": 155,
+   "name": "Zalgiris Kaunas",
+   "abbreviation": "ZAL",
+   "score": 93
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

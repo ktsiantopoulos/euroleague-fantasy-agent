@@ -1,84 +1,87 @@
-# Top-281 managers — matchdays 1–13
+# Top-298 managers — matchdays 1–14
 
-## Ownership in the top 281, matchday 13
+## Ownership in the top 298, matchday 14
 
 | player | pos | club | price | top own% | global% | captain # |
 |---|---|---|---|---|---|---|
-| Sasha Vezenkov | F | OLY | 20.2 | 35 | 51 | 49 |
-| Kenan Kamenjas | C | KBA | 5.4 | 32 | 31 | 1 |
-| Theo Maledon | G | RMB | 13.4 | 30 | 28 | 1 |
-| Collin Malcolm | F | EFS | 10.1 | 23 | 19 | 0 |
-| Aliou Diarra | C | VIR | 11.3 | 20 | 26 | 0 |
-| Carlik Jones | G | PAR | 14.4 | 16 | 20 | 0 |
-| Elijah Bryant | G | HTA | 17.6 | 15 | 9 | 0 |
-| TJ Shorts | G | VBC | 16.8 | 14 | 18 | 22 |
-| Pablo Laso | H | EFS | 6.0 | 14 | 13 | 0 |
-| Andres Feliz | G | RMB | 9.9 | 14 | 18 | 0 |
-| Azuolas Tubelis | F | ZAL | 13.1 | 13 | 21 | 1 |
-| Stefan Joksimovic | F | KBA | 4.0 | 12 | 12 | 0 |
-| Anton Gavel | H | BAY | 4.0 | 9 | 7 | 0 |
-| Alberto Abalde | F | RMB | 6.2 | 9 | 13 | 0 |
-| Oscar Da Silva | F | BAY | 8.2 | 9 | 9 | 0 |
-| Xavier Albert | H | VBC | 8.6 | 8 | 4 | 0 |
-| Nadir Hifi | G | PBB | 16.3 | 7 | 17 | 13 |
-| Jonas Valanciunas | C | ZAL | 17.7 | 7 | 13 | 0 |
-| Clement Frisch | F | KBA | 5.5 | 6 | 4 | 0 |
-| Kendrick Nunn | G | PAO | 14.8 | 6 | 16 | 9 |
+| Sasha Vezenkov | F | OLY | 20.0 | 33 | 51 | 71 |
+| Kenan Kamenjas | C | KBA | 6.2 | 33 | 32 | 0 |
+| Theo Maledon | G | RMB | 13.8 | 30 | 29 | 7 |
+| Moses Wright | C | MIL | 14.2 | 24 | 13 | 21 |
+| Nadir Hifi | G | PBB | 16.6 | 24 | 19 | 0 |
+| Ibon Navarro | H | CZV | 6.8 | 19 | 21 | 0 |
+| Collin Malcolm | F | EFS | 10.2 | 15 | 18 | 0 |
+| Giampaolo Ricci | F | MIL | 4.0 | 12 | 6 | 0 |
+| Tyson Carter | G | CZV | 8.9 | 12 | 20 | 0 |
+| DaQuan Jeffries | F | BJK | 7.4 | 10 | 4 | 0 |
+| TJ Shorts | G | VBC | 17.1 | 9 | 17 | 0 |
+| Scottie Wilbekin | G | BJK | 9.6 | 9 | 9 | 0 |
+| Yam Madar | G | MTA | 11.0 | 8 | 8 | 0 |
+| Aliou Diarra | C | VIR | 11.4 | 7 | 26 | 1 |
+| Duane Washington | G | BAY | 11.1 | 7 | 11 | 0 |
+| Kendrick Nunn | G | PAO | 15.2 | 7 | 16 | 0 |
+| Dario Saric | F | EFS | 14.6 | 5 | 6 | 0 |
+| Joel Parra | F | BAR | 7.8 | 5 | 8 | 0 |
+| Andres Feliz | G | RMB | 9.6 | 5 | 16 | 0 |
+| Azuolas Tubelis | F | ZAL | 13.4 | 5 | 22 | 0 |
 
-**Most over-owned by the elite vs the crowd** (where their edge is): Elijah Bryant (+6 pp), Collin Malcolm (+4 pp), Xavier Albert (+4 pp), Anton Gavel (+2 pp), Clement Frisch (+2 pp), Theo Maledon (+2 pp), Kenan Kamenjas (+1 pp), Pablo Laso (+1 pp)
+**Most over-owned by the elite vs the crowd** (where their edge is): Moses Wright (+11 pp), DaQuan Jeffries (+6 pp), Giampaolo Ricci (+6 pp), Nadir Hifi (+5 pp), Metecan Birsen (+2 pp), Theo Maledon (+1 pp), Kenan Kamenjas (+1 pp), Pedro Martinez (+1 pp)
 
 ## Captain choices (top 3 per matchday)
-- MD1: Sasha Vezenkov (170), Jonas Valanciunas (31), Mathias Lessort (25)
-- MD2: Sasha Vezenkov (153), Carlik Jones (46), TJ Shorts (33)
-- MD3: Sasha Vezenkov (158), Azuolas Tubelis (29), Carlik Jones (27)
-- MD4: Sasha Vezenkov (99), Elijah Bryant (47), Mathias Lessort (33)
-- MD5: Elijah Bryant (138), Sasha Vezenkov (72), Jean Montero (21)
-- MD6: Theo Maledon (143), Sasha Vezenkov (91), Jean Montero (20)
-- MD7: Sasha Vezenkov (119), Zach Leday (39), TJ Shorts (36)
-- MD8: Sasha Vezenkov (100), Mfiondu Kabengele (83), Elijah Bryant (23)
-- MD9: Theo Maledon (141), Sasha Vezenkov (41), Nadir Hifi (25)
-- MD10: Andres Feliz (115), Kendrick Nunn (26), Mathias Lessort (20)
-- MD11: Sasha Vezenkov (106), Talen Horton-Tucker (13), TJ Shorts (12)
-- MD12: Sasha Vezenkov (120), Theo Maledon (8), Jonas Valanciunas (4)
-- MD13: Sasha Vezenkov (49), TJ Shorts (22), Nadir Hifi (13)
+- MD1: Sasha Vezenkov (183), Jonas Valanciunas (31), Mathias Lessort (26)
+- MD2: Sasha Vezenkov (166), Carlik Jones (46), TJ Shorts (35)
+- MD3: Sasha Vezenkov (168), Azuolas Tubelis (32), Carlik Jones (30)
+- MD4: Sasha Vezenkov (107), Elijah Bryant (48), Mathias Lessort (36)
+- MD5: Elijah Bryant (147), Sasha Vezenkov (78), Jean Montero (21)
+- MD6: Theo Maledon (151), Sasha Vezenkov (96), Jean Montero (23)
+- MD7: Sasha Vezenkov (129), Zach Leday (40), TJ Shorts (38)
+- MD8: Sasha Vezenkov (107), Mfiondu Kabengele (90), Elijah Bryant (24)
+- MD9: Theo Maledon (151), Sasha Vezenkov (46), Nadir Hifi (28)
+- MD10: Andres Feliz (127), Kendrick Nunn (31), Mathias Lessort (20)
+- MD11: Sasha Vezenkov (125), Talen Horton-Tucker (13), TJ Shorts (13)
+- MD12: Sasha Vezenkov (140), Theo Maledon (9), Jonas Valanciunas (4)
+- MD13: Sasha Vezenkov (64), TJ Shorts (27), Nadir Hifi (14)
+- MD14: Sasha Vezenkov (71), Moses Wright (21), Theo Maledon (7)
 
 ## Trades used per team (mean)
-- MD1: 0.0, MD2: 3.63, MD3: 3.48, MD4: 3.74, MD5: 3.85, MD6: 3.7, MD7: 6.36, MD8: 3.63, MD9: 3.64, MD10: 3.9, MD11: 3.65, MD12: 3.84, MD13: 3.86
+- MD1: 0.0, MD2: 3.62, MD3: 3.47, MD4: 3.75, MD5: 3.86, MD6: 3.7, MD7: 6.35, MD8: 3.62, MD9: 3.66, MD10: 3.9, MD11: 3.67, MD12: 3.81, MD13: 3.83, MD14: 6.57
 
 ## Most common moves (count of top teams)
-- MD2: IN Xavier Albert (73), Eleftherios Mantzoukas (71), Mathias Lessort (61), Nikos Rogkavopoulos (55) · OUT Joel Parra (75), Saras Jasikevicius (67), Matteo Spagnolo (61), Bruno Fernando (42)
-- MD3: IN Azuolas Tubelis (110), Aliou Diarra (109), Andres Feliz (47), Xavier Albert (42) · OUT Braxton Key (91), Yam Madar (69), Saras Jasikevicius (68), Joel Parra (50)
-- MD4: IN Aliou Diarra (94), Georgios Bartzokas (78), Theo Maledon (75), Pedro Martinez (67) · OUT Zeljko Obradovic (104), Xavier Albert (104), Carlik Jones (74), Mathias Lessort (64)
-- MD5: IN Elijah Bryant (103), Dimitris Itoudis (101), Semi Ojeleye (95), Mfiondu Kabengele (38) · OUT Azuolas Tubelis (122), Georgios Bartzokas (81), Nadir Hifi (62), Eleftherios Mantzoukas (53)
-- MD6: IN Pedro Martinez (145), Jean Montero (76), TJ Shorts (75), Andres Feliz (67) · OUT Elijah Bryant (151), Dimitris Itoudis (100), Nikos Rogkavopoulos (69), Xavi Pascual (45)
-- MD7: IN Tomas Masiulis (183), Elijah Bryant (118), Collin Malcolm (106), Kevarrius Hayes (79) · OUT Pedro Martinez (177), Jean Montero (135), Semi Ojeleye (113), Braxton Key (112)
-- MD8: IN Xavi Pascual (102), Stefan Joksimovic (63), Ibon Navarro (59), Mfiondu Kabengele (58) · OUT Tomas Masiulis (151), TJ Shorts (60), Collin Malcolm (48), Edwin Jackson (39)
-- MD9: IN Ibon Navarro (101), Yam Madar (56), Mouhamed Faye (49), TJ Shorts (37) · OUT Xavi Pascual (86), Mfiondu Kabengele (66), Carlik Jones (61), Andres Feliz (51)
-- MD10: IN Saras Jasikevicius (152), Collin Malcolm (60), Carlik Jones (50), Andres Feliz (43) · OUT Theo Maledon (169), Ibon Navarro (141), Yam Madar (47), Tomas Masiulis (19)
-- MD11: IN Joan Penarroya (94), Carlik Jones (32), Nikola Tanaskovic (32), Collin Malcolm (29) · OUT Saras Jasikevicius (122), Mouhamed Faye (32), Yam Madar (27), Kostas Papanikolaou (22)
-- MD12: IN Theo Maledon (107), Saras Jasikevicius (72), Kenan Kamenjas (71), Tomas Masiulis (52) · OUT Joan Penarroya (102), Aliou Diarra (36), TJ Shorts (29), Carlik Jones (27)
-- MD13: IN Pablo Laso (39), Kenan Kamenjas (29), TJ Shorts (29), Anton Gavel (26) · OUT Saras Jasikevicius (57), Andres Feliz (47), Tomas Masiulis (38), Alberto Abalde (33)
+- MD2: IN Xavier Albert (78), Eleftherios Mantzoukas (73), Mathias Lessort (66), Nikos Rogkavopoulos (61) · OUT Joel Parra (78), Saras Jasikevicius (74), Matteo Spagnolo (67), Bruno Fernando (48)
+- MD3: IN Azuolas Tubelis (118), Aliou Diarra (113), Andres Feliz (48), Xavier Albert (44) · OUT Braxton Key (97), Saras Jasikevicius (72), Yam Madar (71), Joel Parra (53)
+- MD4: IN Aliou Diarra (104), Georgios Bartzokas (83), Theo Maledon (81), Pedro Martinez (73) · OUT Zeljko Obradovic (111), Xavier Albert (111), Carlik Jones (79), Mathias Lessort (67)
+- MD5: IN Elijah Bryant (110), Dimitris Itoudis (109), Semi Ojeleye (98), Mfiondu Kabengele (40) · OUT Azuolas Tubelis (128), Georgios Bartzokas (86), Nadir Hifi (65), Eleftherios Mantzoukas (59)
+- MD6: IN Pedro Martinez (156), Jean Montero (82), TJ Shorts (77), Andres Feliz (69) · OUT Elijah Bryant (160), Dimitris Itoudis (108), Nikos Rogkavopoulos (76), Xavi Pascual (47)
+- MD7: IN Tomas Masiulis (193), Elijah Bryant (123), Collin Malcolm (112), Kevarrius Hayes (83) · OUT Pedro Martinez (190), Jean Montero (143), Semi Ojeleye (124), Braxton Key (114)
+- MD8: IN Xavi Pascual (112), Stefan Joksimovic (69), Mfiondu Kabengele (62), Ibon Navarro (61) · OUT Tomas Masiulis (161), TJ Shorts (63), Collin Malcolm (52), Edwin Jackson (40)
+- MD9: IN Ibon Navarro (112), Yam Madar (62), Mouhamed Faye (55), TJ Shorts (45) · OUT Xavi Pascual (98), Mfiondu Kabengele (73), Carlik Jones (69), Andres Feliz (56)
+- MD10: IN Saras Jasikevicius (166), Collin Malcolm (69), Carlik Jones (56), Andres Feliz (50) · OUT Theo Maledon (182), Ibon Navarro (154), Yam Madar (55), Tomas Masiulis (20)
+- MD11: IN Joan Penarroya (106), Nikola Tanaskovic (40), Carlik Jones (37), Collin Malcolm (32) · OUT Saras Jasikevicius (136), Mouhamed Faye (38), Yam Madar (27), Kostas Papanikolaou (26)
+- MD12: IN Theo Maledon (120), Kenan Kamenjas (84), Saras Jasikevicius (80), Tomas Masiulis (62) · OUT Joan Penarroya (119), Aliou Diarra (44), TJ Shorts (36), Nikola Tanaskovic (33)
+- MD13: IN Pablo Laso (52), Kenan Kamenjas (37), TJ Shorts (33), Anton Gavel (30) · OUT Saras Jasikevicius (66), Andres Feliz (57), Tomas Masiulis (51), Alberto Abalde (40)
+- MD14: IN Moses Wright (70), Ibon Navarro (57), Nadir Hifi (52), Tyson Carter (33) · OUT Elijah Bryant (40), Carlik Jones (39), Aliou Diarra (39), Pablo Laso (36)
 
 ## In-round management
-- Field players promoted from the bench during the round: MD1: 34%, MD2: 37%, MD3: 39%, MD4: 38%, MD5: 38%, MD6: 37%, MD7: 38%, MD8: 35%, MD9: 37%, MD10: 33%, MD11: 34%, MD12: 36%, MD13: 26%
-- Average points of promoted players: 17.1 vs 21.1 for players who started on the field
+- Field players promoted from the bench during the round: MD1: 34%, MD2: 37%, MD3: 40%, MD4: 38%, MD5: 38%, MD6: 38%, MD7: 39%, MD8: 36%, MD9: 37%, MD10: 33%, MD11: 34%, MD12: 35%, MD13: 26%, MD14: 22%
+- Average points of promoted players: 16.7 vs 21.1 for players who started on the field
 
-## Budget structure (matchday 13, mean price per slot)
-- 6th: 11.2, B: 8.8, S: 13.6
-- Price of the most expensive player per team: 20.1 · cheapest: 4.4
-- Players per club (max per team): 2.3
+## Budget structure (matchday 14, mean price per slot)
+- 6th: 10.3, B: 7.9, S: 14.5
+- Price of the most expensive player per team: 19.9 · cheapest: 4.6
+- Players per club (max per team): 2.1
 
 ## Coach choices (top 3 per matchday)
-- MD1: Saras Jasikevicius (142), Zeljko Obradovic (47), Oded Kattash (44)
-- MD2: Zeljko Obradovic (85), Saras Jasikevicius (80), Xavier Albert (79)
-- MD3: Zeljko Obradovic (119), Xavier Albert (113), Saras Jasikevicius (12)
-- MD4: Georgios Bartzokas (82), Pedro Martinez (67), Maxime Lefevre (45)
-- MD5: Dimitris Itoudis (101), Xavi Pascual (50), Pedro Martinez (40)
-- MD6: Pedro Martinez (183), Ibon Navarro (37), Alex Mumbru (28)
-- MD7: Tomas Masiulis (184), Zeljko Obradovic (72), Dimitris Itoudis (10)
-- MD8: Xavi Pascual (102), Ibon Navarro (59), Zeljko Obradovic (44)
-- MD9: Ibon Navarro (157), Tomas Masiulis (20), Georgios Bartzokas (15)
-- MD10: Saras Jasikevicius (152), Joan Penarroya (33), Tony Parker (2)
-- MD11: Joan Penarroya (119), Xavier Albert (29), Saras Jasikevicius (5)
-- MD12: Saras Jasikevicius (77), Tomas Masiulis (52), Pedro Martinez (1)
-- MD13: Pablo Laso (39), Anton Gavel (26), Xavier Albert (22)
+- MD1: Saras Jasikevicius (153), Zeljko Obradovic (48), Oded Kattash (47)
+- MD2: Zeljko Obradovic (91), Xavier Albert (84), Saras Jasikevicius (84)
+- MD3: Zeljko Obradovic (126), Xavier Albert (120), Saras Jasikevicius (12)
+- MD4: Georgios Bartzokas (87), Pedro Martinez (73), Maxime Lefevre (48)
+- MD5: Dimitris Itoudis (109), Xavi Pascual (52), Pedro Martinez (42)
+- MD6: Pedro Martinez (196), Ibon Navarro (38), Alex Mumbru (30)
+- MD7: Tomas Masiulis (194), Zeljko Obradovic (79), Dimitris Itoudis (10)
+- MD8: Xavi Pascual (112), Ibon Navarro (61), Zeljko Obradovic (48)
+- MD9: Ibon Navarro (170), Tomas Masiulis (21), Georgios Bartzokas (19)
+- MD10: Saras Jasikevicius (166), Joan Penarroya (38), Tony Parker (3)
+- MD11: Joan Penarroya (136), Xavier Albert (32), Saras Jasikevicius (6)
+- MD12: Saras Jasikevicius (86), Tomas Masiulis (62), Dimitris Itoudis (2)
+- MD13: Pablo Laso (52), Anton Gavel (30), Xavier Albert (27)
+- MD14: Ibon Navarro (57), Pedro Martinez (13), Xavi Pascual (10)

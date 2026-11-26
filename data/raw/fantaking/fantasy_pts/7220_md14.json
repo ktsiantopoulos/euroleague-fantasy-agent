@@ -1,0 +1,31 @@
+{
+ "matchday": {
+  "id": 1541,
+  "number": 14
+ },
+ "round": {
+  "id": 2554,
+  "number": 1
+ },
+ "match": {
+  "id": 12055,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-24T18:00:00.000000Z",
+  "home_team": {
+   "id": 144,
+   "name": "Crvena Zvezda Meridianbet Belgrade",
+   "abbreviation": "CZV",
+   "score": 84
+  },
+  "away_team": {
+   "id": 154,
+   "name": "Virtus Bologna",
+   "abbreviation": "VIR",
+   "score": 108
+  }
+ },
+ "fantasy_pts": 0,
+ "stats_items": [],
+ "label": "opponent"
+}

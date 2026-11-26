@@ -1,43 +1,41 @@
 {
- "generated_utc": "2026-11-24T13:47:19Z",
- "drift": true,
- "reasons": [
-  "model lost to a naive baseline in R12 and R13"
- ],
+ "generated_utc": "2026-11-26T10:09:09Z",
+ "drift": false,
+ "reasons": [],
  "per_round": [
   {
    "round": 4,
-   "mae_model": 6.12,
+   "mae_model": 6.13,
    "mae_best_baseline": 6.75,
    "model_wins": true
   },
   {
    "round": 5,
-   "mae_model": 6.01,
+   "mae_model": 6.03,
    "mae_best_baseline": 6.47,
    "model_wins": true
   },
   {
    "round": 6,
-   "mae_model": 6.17,
+   "mae_model": 6.15,
    "mae_best_baseline": 6.4,
    "model_wins": true
   },
   {
    "round": 7,
-   "mae_model": 6.44,
+   "mae_model": 6.45,
    "mae_best_baseline": 6.65,
    "model_wins": true
   },
   {
    "round": 8,
-   "mae_model": 6.13,
+   "mae_model": 6.07,
    "mae_best_baseline": 6.2,
    "model_wins": true
   },
   {
    "round": 9,
-   "mae_model": 6.06,
+   "mae_model": 6.02,
    "mae_best_baseline": 6.12,
    "model_wins": true
   },
@@ -49,7 +47,7 @@
   },
   {
    "round": 11,
-   "mae_model": 6.2,
+   "mae_model": 6.18,
    "mae_best_baseline": 6.23,
    "model_wins": true
   },
@@ -61,26 +59,32 @@
   },
   {
    "round": 13,
-   "mae_model": 6.69,
+   "mae_model": 6.65,
    "mae_best_baseline": 6.59,
    "model_wins": false
+  },
+  {
+   "round": 14,
+   "mae_model": 6.22,
+   "mae_best_baseline": 6.63,
+   "model_wins": true
   }
  ],
  "calibration": {
-  "n": 2272,
-  "above_p90": 0.125,
-  "below_p10": 0.074,
-  "inside_80": 0.801,
-  "z_sd": 1.048,
-  "sd_scale": 0.993
+  "n": 2497,
+  "above_p90": 0.121,
+  "below_p10": 0.07,
+  "inside_80": 0.809,
+  "z_sd": 1.038,
+  "sd_scale": 0.977
  },
  "attribution": {
-  "n": 2262,
+  "n": 2486,
   "minutes_mae": 5.04,
-  "minutes_share": 0.337,
-  "rate_share": 0.663,
-  "dnp_misses": 23,
-  "dnp_cost": 131.3
+  "minutes_share": 0.343,
+  "rate_share": 0.657,
+  "dnp_misses": 26,
+  "dnp_cost": 164.6
  },
  "params": {
   "w_minutes": [
@@ -88,7 +92,7 @@
    0.3,
    0.6
   ],
-  "rate_prior_minutes": 40.0,
+  "rate_prior_minutes": 80.0,
   "lam_recent": 0.3,
   "eta_home": 0.02,
   "gamma_dvp": 1.0,

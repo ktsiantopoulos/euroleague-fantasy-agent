@@ -1,0 +1,50 @@
+{
+ "matchday": {
+  "id": 1541,
+  "number": 14
+ },
+ "round": {
+  "id": 2555,
+  "number": 2
+ },
+ "match": {
+  "id": 12064,
+  "status": "played",
+  "ot": false,
+  "started_at": "2026-11-25T19:15:00.000000Z",
+  "home_team": {
+   "id": 149,
+   "name": "Olympiacos Piraeus",
+   "abbreviation": "OLY",
+   "score": 104
+  },
+  "away_team": {
+   "id": 165,
+   "name": "Hapoel IBI Tel Aviv",
+   "abbreviation": "HTA",
+   "score": 79
+  }
+ },
+ "fantasy_pts": 20.9,
+ "stats_items": [
+  {
+   "id": 191,
+   "name": "pts",
+   "value": 7,
+   "fantasy_pts": 7
+  },
+  {
+   "id": 192,
+   "name": "reb",
+   "value": 9,
+   "fantasy_pts": 9
+  },
+  {
+   "id": 198,
+   "name": "fd",
+   "value": 3,
+   "fantasy_pts": 3
+  }
+ ],
+ "label": "opponent"
+}
